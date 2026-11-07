@@ -1,0 +1,21 @@
+[
+  {
+    "kind": "source display encoding failure",
+    "command_scope": "Python read DOC003.json and print turns 64:100 without UTF-8 mode",
+    "exit_code": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nUnicodeEncodeError: 'gbk' codec can't encode character '\\xc2' in position 3511: illegal multibyte sequence\n",
+    "repair": "Repeated identical source range with python -X utf8; exit code 0. No source changes."
+  },
+  {
+    "kind": "output truncation",
+    "affected": ["initial combined eight-document display", "DOC003 full text display", "combined DOC003 and DOC020 display"],
+    "repair": "Read bounded document/turn ranges and explicitly reread obscured DOC020 T006-T014 before calibration. This was access repair, not independent sampling."
+  },
+  {
+    "kind": "failure-log shell quoting",
+    "command_scope": "Attempt to serialize this observed source-read failure log using an inline Python command",
+    "exit_code": 1,
+    "stderr": "ParserError: The '<' operator is reserved for future use.",
+    "repair": "Wrote the exact observed failure log with the structured patch tool. No generated document or first-attempt file was changed."
+  }
+]

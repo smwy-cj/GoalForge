@@ -1,0 +1,713 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC024",
+  "input_binding": {
+    "source_input_sha256": "b9dfdbd51467ba233cbe9cef0f527247cd7144fb1cf6680fa29a44e21574824b",
+    "source_sha256": "851189888ff96381e85ea8c11aebd30a4c86e320841f6d27cbf4ed90f2de9eab",
+    "windows_sha256": "fd738f4ccec59ab36bb7b99ddb7283c0d1c62a0530b3a14059ec301502739816",
+    "candidates_sha256": "b4cc30814801280d97070d875773bd0a20b8d06e362e740494758b86ef6105d3",
+    "extraction_sha256": "04074867d485231287d385351334ec7bb676f4a3bd6b79f67349d753314159a2"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "unknown",
+    "temperature": "unknown",
+    "budget": "1 initial pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 1,
+    "stop_reason": "完成一次覆盖全部 17 个窗口的基础提取与全篇校正；补查未发现需要新增 pass 的有据意图，剩余不确定项已保留为问题。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC024:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0009",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0010",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0011",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0012",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0013",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0014",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0015",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0016",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC024:W0017",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "逐轮回读全部 36 轮，核对指代（'it' 指 ChatGPT、'those points' 指实施要点）、条件继承（无 office hours、项目中期、普通用户额度）、让步与自我纠正（'not unlimited, but'）、例外与相反证据（T033 图片使用不频繁、T015 项目中期不愿使用、T013 高层问题难以核对）；窗口只用于定位，未当作语义裁决边界。",
+    "source_ids": [
+      "DOC024:T000",
+      "DOC024:T001",
+      "DOC024:T002",
+      "DOC024:T003",
+      "DOC024:T004",
+      "DOC024:T005",
+      "DOC024:T006",
+      "DOC024:T007",
+      "DOC024:T008",
+      "DOC024:T009",
+      "DOC024:T010",
+      "DOC024:T011",
+      "DOC024:T012",
+      "DOC024:T013",
+      "DOC024:T014",
+      "DOC024:T015",
+      "DOC024:T016",
+      "DOC024:T017",
+      "DOC024:T018",
+      "DOC024:T019",
+      "DOC024:T020",
+      "DOC024:T021",
+      "DOC024:T022",
+      "DOC024:T023",
+      "DOC024:T024",
+      "DOC024:T025",
+      "DOC024:T026",
+      "DOC024:T027",
+      "DOC024:T028",
+      "DOC024:T029",
+      "DOC024:T030",
+      "DOC024:T031",
+      "DOC024:T032",
+      "DOC024:T033",
+      "DOC024:T034",
+      "DOC024:T035"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "仅说明常用工具是 ChatGPT，属工具选择现状，未表达要达到或维持的结果；不因出现频次造目标。"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "用于学习和自己的项目是使用范围背景，具体目的分别由 C003（学习问答）与 C005（项目构思）承接，避免以范围句另造泛化目标。"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "明确在无 office hours 时请 ChatGPT 解释术语与课堂逻辑，保留学习场景与时间条件。"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "同属学习场景的术语解释，并补充基础术语较准、高层较弱的范围限制；与 C003 合并，限制写入 G001 的 context。"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "明确用 ChatGPT 为项目取得创意与不同视角。"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "'可以随时提问'是 C003 同一动作的时间条件，合并保留，不另立泛化的可用性目标。"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "与 C005 同为获取自身想不到的视角，属同一结果，合并。"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "office hours 不可得、需等到明天或下周，是 C003 的障碍情境，已作为 G001 的时间条件，不单独成目标。"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "描述回答多为文本、偶尔为图像，属现状描述，未表达要达到的结果。"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "明确为可视化新产品设计而生成图片并按需求细化。"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "明确以线上书籍/论文为参考核对术语解释是否正确。"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "明确对计算类问题自行计算以核对结果。"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "明确答案正确性很重要、必须小心，尤其高层问题错误难以看出。"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "T015 的 'provide me with some ideas' 与 C005 的创意/视角为同一结果，合并；项目开始前的时机写入 G003 条件。"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "明确在项目开始前取得实施大纲与重要要点。"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "明确项目中期不太愿意使用 ChatGPT，保留软偏好强度。"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "明确会组织语言让 ChatGPT 理解自己的表述与上下文。"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "附图片/文档与组织语言同为使问题被理解的选定方式，合并为一个目标并保留两种方式与 'sometimes' 的可选性。"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "仅描述界面提供多个模型、可按问题选择，未表达具体的取舍结果；实际取舍由 C023（选用 o1 提高逻辑准确性）承接。"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "明确通过历史记录回看此前得到的答案。"
+    },
+    {
+      "candidate_id": "C021",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "与 C020 同为回看历史，补充复习已学内容的用途，合并。"
+    },
+    {
+      "candidate_id": "C022",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G011"
+      ],
+      "reason": "会员提供更高级模型是选用高阶模型的背景条件，与 C023 同一目的，合并并写入 G011 的 context。"
+    },
+    {
+      "candidate_id": "C023",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G011"
+      ],
+      "reason": "明确说明 o1 更擅长逻辑推理、答案更准确，构成选用高阶模型的目标。"
+    },
+    {
+      "candidate_id": "C024",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G012"
+      ],
+      "reason": "明确 plus 版可对高层模型提出更多追问，并保留 'not unlimited' 的自我纠正。"
+    },
+    {
+      "candidate_id": "C025",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "普通用户额度用尽需等次日或数日，是 C024 的对照情境，已写入 G012 的相对额度含义，不另立'等待'目标。"
+    },
+    {
+      "candidate_id": "C026",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G013"
+      ],
+      "reason": "明确陈述生成耗时长、会卡住并需重新生成的痛点。"
+    },
+    {
+      "candidate_id": "C027",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G014"
+      ],
+      "reason": "记录宕机事件与他人慌乱；因仅第三人称、无本人意图，保留为 insufficient。"
+    },
+    {
+      "candidate_id": "C028",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "补充'不常使用'的频率限定，与 C010 同一动作，合并写入 G007 的 context。"
+    },
+    {
+      "candidate_id": "C029",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "高层问题回答较差是能力限制/障碍线索，已写入 G001 与 G010 的范围和判断理由，不单独成目标。"
+    },
+    {
+      "candidate_id": "C031",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G013"
+      ],
+      "reason": "重生成消耗额度是 C026 同一痛点链条的一部分，合并为一个避免目标。"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T005",
+          "quote": "usually when I have some terminology, I don't understand, or some questions after class, and there is no office hours. I will try to ask Chatgpt about to explain some of the terms and the other logic stuff during class.",
+          "role": "basis",
+          "start_char": 627,
+          "end_char": 846
+        }
+      ],
+      "candidate_ids": [
+        "C003"
+      ],
+      "final_goal_ids": [
+        "G001"
+      ],
+      "outcome": "represented",
+      "reason": "学习场景、无 office hours 条件与解释对象均进入 G001。"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T009",
+          "quote": "But with chat gpt it can often explain those basic terms and stuff like very clearly. And you can ask it like at any time.",
+          "role": "basis",
+          "start_char": 1935,
+          "end_char": 2057
+        }
+      ],
+      "candidate_ids": [
+        "C006"
+      ],
+      "final_goal_ids": [
+        "G001"
+      ],
+      "outcome": "represented",
+      "reason": "'可以随时提问'作为 G001 的时间条件保留，基础术语范围也写入。"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T007",
+          "quote": "I think sometimes Chatgpt can provide me with some different perspective.",
+          "role": "basis",
+          "start_char": 1341,
+          "end_char": 1414
+        }
+      ],
+      "candidate_ids": [
+        "C005"
+      ],
+      "final_goal_ids": [
+        "G002"
+      ],
+      "outcome": "represented",
+      "reason": "创意与不同视角进入 G002，保留 hedged 语气。"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T015",
+          "quote": "if I tell, Chat, gpt what what I'm planning to do often it can give me an outline about what you should do. And what are the points that are important?",
+          "role": "basis",
+          "start_char": 4371,
+          "end_char": 4522
+        }
+      ],
+      "candidate_ids": [
+        "C015"
+      ],
+      "final_goal_ids": [
+        "G003"
+      ],
+      "outcome": "represented",
+      "reason": "实施大纲与重要要点进入 G003，'often' 与'项目开始前'均保留。"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T013",
+          "quote": "You can get some reference from the books or papers online, and then you can check if that's correct",
+          "role": "basis",
+          "start_char": 3209,
+          "end_char": 3309
+        }
+      ],
+      "candidate_ids": [
+        "C011"
+      ],
+      "final_goal_ids": [
+        "G004"
+      ],
+      "outcome": "represented",
+      "reason": "术语解释的核对方式进入 G004。"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T013",
+          "quote": "I think you should calculate those by yourself and then check if the result it provides you is correct.",
+          "role": "basis",
+          "start_char": 3421,
+          "end_char": 3524
+        }
+      ],
+      "candidate_ids": [
+        "C012"
+      ],
+      "final_goal_ids": [
+        "G005"
+      ],
+      "outcome": "represented",
+      "reason": "计算类答案的复算核对进入 G005。"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T013",
+          "quote": "Sometimes it's really hard for you to see chat, Gpt gets wrong. So that's that's when we have to be really careful about the answer.",
+          "role": "basis",
+          "start_char": 3674,
+          "end_char": 3806
+        }
+      ],
+      "candidate_ids": [
+        "C013"
+      ],
+      "final_goal_ids": [
+        "G010"
+      ],
+      "outcome": "represented",
+      "reason": "正确性要求与高层问题难辨错误的条件进入 G010。"
+    },
+    {
+      "check_id": "S8",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T015",
+          "quote": "I don't really like to use chat gpt, because when you are halfway done the project can be really complicated.",
+          "role": "basis",
+          "start_char": 4747,
+          "end_char": 4856
+        }
+      ],
+      "candidate_ids": [
+        "C016"
+      ],
+      "final_goal_ids": [
+        "G006"
+      ],
+      "outcome": "represented",
+      "reason": "项目中期不使用的软偏好进入 G006。"
+    },
+    {
+      "check_id": "S9",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T017",
+          "quote": "sometimes I will use images and documents to help Chatgpt understand my questions better.",
+          "role": "basis",
+          "start_char": 6259,
+          "end_char": 6348
+        }
+      ],
+      "candidate_ids": [
+        "C018"
+      ],
+      "final_goal_ids": [
+        "G008"
+      ],
+      "outcome": "represented",
+      "reason": "附图片/文档作为使问题被理解的手段进入 G008，与组织语言合并。"
+    },
+    {
+      "check_id": "S10",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T019",
+          "quote": "so when you want to retrieve some of the chat history to see the answer you got before. You can just click and go back to to check the chat history",
+          "role": "basis",
+          "start_char": 6690,
+          "end_char": 6837
+        }
+      ],
+      "candidate_ids": [
+        "C020",
+        "C021"
+      ],
+      "final_goal_ids": [
+        "G009"
+      ],
+      "outcome": "represented",
+      "reason": "取回历史与回看复习合并为 G009。"
+    },
+    {
+      "check_id": "S11",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T029",
+          "quote": "not unlimited, but, like you, you can ask more, follow up questions to the higher level model.",
+          "role": "basis",
+          "start_char": 9507,
+          "end_char": 9601
+        }
+      ],
+      "candidate_ids": [
+        "C024"
+      ],
+      "final_goal_ids": [
+        "G012"
+      ],
+      "outcome": "represented",
+      "reason": "更多追问与'并非无限'的纠正均进入 G012。"
+    },
+    {
+      "check_id": "S12",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T031",
+          "quote": "I think, before they chat, Gpt was down for for a while, and people some people like rely on it to submit their work like, or to like trying to do something in a timely manner.",
+          "role": "basis",
+          "start_char": 10434,
+          "end_char": 10610
+        }
+      ],
+      "candidate_ids": [
+        "C027"
+      ],
+      "final_goal_ids": [
+        "G014"
+      ],
+      "outcome": "uncertain",
+      "reason": "只有第三人称描述，无法确认本人目标，保留为 insufficient 并登记待确认。"
+    },
+    {
+      "check_id": "S13",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T033",
+          "quote": "No, actually, I do not use it that often.",
+          "role": "basis",
+          "start_char": 11079,
+          "end_char": 11120
+        }
+      ],
+      "candidate_ids": [
+        "C028"
+      ],
+      "final_goal_ids": [
+        "G007"
+      ],
+      "outcome": "represented",
+      "reason": "不常使用的频率限定写入 G007 的 context。"
+    },
+    {
+      "check_id": "S14",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T019",
+          "quote": "those are different models you can choose, based on the questions you want to solve.",
+          "role": "basis",
+          "start_char": 7065,
+          "end_char": 7149
+        }
+      ],
+      "candidate_ids": [
+        "C019"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "仅描述可选模型的界面能力，未见本人的具体取舍结果；实际取舍已由 G011 承接。"
+    },
+    {
+      "check_id": "S15",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T003",
+          "quote": "So usually I use chat, gpt, and yeah, I I that's the one I use the most.",
+          "role": "basis",
+          "start_char": 354,
+          "end_char": 426
+        }
+      ],
+      "candidate_ids": [
+        "C001"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "工具使用现状，不构成目标。"
+    },
+    {
+      "check_id": "S16",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC024:T031",
+          "quote": "if you regenerate it, it will use the limit of your of your like of your chance talking to it. So that's kind of waste, and it's a waste of time",
+          "role": "basis",
+          "start_char": 10194,
+          "end_char": 10338
+        }
+      ],
+      "candidate_ids": [
+        "C026",
+        "C031"
+      ],
+      "final_goal_ids": [
+        "G013"
+      ],
+      "outcome": "represented",
+      "reason": "慢与卡住、重生成消耗额度与时间合并为同一避免目标。"
+    }
+  ],
+  "limitations": [
+    "原文为英文访谈转写，含口语重复与非常规拼写（如 'chat, gpt'、'docked'），引文按转写原文逐字保留，未做拼写修正。",
+    "受访者的 'you' 多为泛指；涉及核对做法的目标按本人自述解读，该解读已作为假设写入对应判断，未当作原文明确主语。",
+    "原文未给出任何时间、次数或准确率阈值，本任务未编造阈值。",
+    "转写中 T031 的 'docked' 语义按上下文理解为卡住/中断，未另行核实原始录音。"
+  ]
+}

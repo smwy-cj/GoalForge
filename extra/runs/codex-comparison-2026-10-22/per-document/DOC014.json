@@ -1,0 +1,787 @@
+{
+  "document_id": "DOC014",
+  "review_status": "first_pass_complete",
+  "local_goals": [
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G001",
+      "local_statement": "出门前按温度与降雨预报决定穿什么、骑车还是坐车、要不要带伞。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "通常在前一天查看",
+        "判断依据为温度区间与降雨概率（25% 以上视为可能下雨）"
+      ],
+      "paper_ids": [
+        "g0",
+        "g1",
+        "g8"
+      ],
+      "paper_statements": [
+        "Provide temperature forecasts for the next day.",
+        "Indicate the chance of rain for the next day.",
+        "Enable users to make informed decisions and adjust activities based on weather conditions."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "本地将天气信息联系到穿着/出行决策，论文分别描述数据与一般目的。",
+      "evidence": [
+        {
+          "evidence_id": "E0001",
+          "quote": "I can plan whether I should wear my thick coat or my light coat",
+          "source_turn_ids": [
+            "T001"
+          ],
+          "start_char": 372,
+          "end_char": 435
+        },
+        {
+          "evidence_id": "E0002",
+          "quote": "I make sure I have my umbrella",
+          "source_turn_ids": [
+            "T001"
+          ],
+          "start_char": 669,
+          "end_char": 699
+        },
+        {
+          "evidence_id": "E0003",
+          "quote": "I might skip going through bicycle and just go through the bus",
+          "source_turn_ids": [
+            "T001"
+          ],
+          "start_char": 475,
+          "end_char": 537
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G002",
+      "local_statement": "按出门时段查看逐小时温度与降水概率，而不是只看全天概况。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "关注早晨上课前那一小时的温度与降水"
+      ],
+      "paper_ids": [
+        "g2",
+        "g17",
+        "g22",
+        "g24"
+      ],
+      "paper_statements": [
+        "Provide hourly weather details for the next day.",
+        "Provide precise hourly coverage.",
+        "Display detailed weather data, such as wind speed, humidity, UV index, and perceived temperature for specific hours.",
+        "Include the ability to switch between different time views such as morning, afternoon, evening, and overnight."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "逐时温度/雨概率及上课前时间明确，论文包含更多气象参数。",
+      "evidence": [
+        {
+          "evidence_id": "E0004",
+          "quote": "it gives my gives me like an hour by hour detail",
+          "source_turn_ids": [
+            "T005"
+          ],
+          "start_char": 1292,
+          "end_char": 1340
+        },
+        {
+          "evidence_id": "E0005",
+          "quote": "what's the what's the precipitation chances",
+          "source_turn_ids": [
+            "T005"
+          ],
+          "start_char": 1515,
+          "end_char": 1558
+        },
+        {
+          "evidence_id": "E0006",
+          "quote": "if in in the morning time, you know, like before our classes, what what the temperature is around that time",
+          "source_turn_ids": [
+            "T005"
+          ],
+          "start_char": 1370,
+          "end_char": 1477
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G003",
+      "local_statement": "极端天气发生时，能获知严重程度与官方建议的应对方式（撤离/躲避/防护）。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "期望应用成为最早看到消息的地方",
+        "现状：严重预警也由地方政府与气象机构发布"
+      ],
+      "paper_ids": [
+        "g4",
+        "g5",
+        "g6",
+        "g7"
+      ],
+      "paper_statements": [
+        "Warn users about important weather events in their area.",
+        "Provide detailed information about severe weather events, including severity and global updates.",
+        "Offer guides or resources to ensure user safety during extreme weather events.",
+        "Include recommendations from local authorities or organizations during weather alerts."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "严重程度及官方行动建议整合，全球更新不完全等价本地警报。",
+      "evidence": [
+        {
+          "evidence_id": "E0007",
+          "quote": "I'll read for what they recommend",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 4515,
+          "end_char": 4548
+        },
+        {
+          "evidence_id": "E0008",
+          "quote": "Should I evacuate the city? Should I just seek shelter, not go outside",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 4565,
+          "end_char": 4635
+        },
+        {
+          "evidence_id": "E0009",
+          "quote": "weather.com would be a good spot that I'll 1st see it",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 2791,
+          "end_char": 2844
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G004",
+      "local_statement": "旅行前数周查看月/周预报（含云量），据以判断行程是否可行。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "场景：海滩度假要看云量；观星/天文行程怕阴天",
+        "也会先查历史数据"
+      ],
+      "paper_ids": [
+        "g9",
+        "g10",
+        "g11"
+      ],
+      "paper_statements": [
+        "Provide weather forecasts including cloud coverage for trip planning.",
+        "Allow users to check historical weather data for trip planning.",
+        "Enable monitoring weather forecasts starting weeks before a planned trip."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "旅行长提前期、云量和历史参考有上下文。",
+      "evidence": [
+        {
+          "evidence_id": "E0010",
+          "quote": "I check for future weather focus because it gives you focus",
+          "source_turn_ids": [
+            "T017"
+          ],
+          "start_char": 5666,
+          "end_char": 5725
+        },
+        {
+          "evidence_id": "E0011",
+          "quote": "not just like the temperature and precipitation. As I mentioned earlier, but also like the cloud coverage",
+          "source_turn_ids": [
+            "T017"
+          ],
+          "start_char": 5869,
+          "end_char": 5974
+        },
+        {
+          "evidence_id": "E0012",
+          "quote": "if you're going for a beach vacation, let's say, and it's going to be super cloudy. Then, you know, you might need to reconsider",
+          "source_turn_ids": [
+            "T017"
+          ],
+          "start_char": 5982,
+          "end_char": 6110
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G005",
+      "local_statement": "出发前 2–3 天用更准的短期预报做最终决定（去或不去）。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自评：几周前的预报很难准，2–3 天内通常可靠",
+        "误差可能正好落在「去/不去」的分界上"
+      ],
+      "paper_ids": [
+        "g12"
+      ],
+      "paper_statements": [
+        "Offer accurate weather predictions a few days before a planned event."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "短期更准用于最终决定，2—3天是经验判断，不是模型保证。",
+      "evidence": [
+        {
+          "evidence_id": "E0013",
+          "quote": "you should probably wait till the end and then then decide, based on what the final temperature is like",
+          "source_turn_ids": [
+            "T019"
+          ],
+          "start_char": 7304,
+          "end_char": 7407
+        },
+        {
+          "evidence_id": "E0014",
+          "quote": "at least like 2 or 3 days before. It's it's like, usually right",
+          "source_turn_ids": [
+            "T019"
+          ],
+          "start_char": 7036,
+          "end_char": 7099
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G006",
+      "local_statement": "雷达图更细致、更直观，并可切换多种参数（降水、积雪等）。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "对标 windy.com：整个应用就是雷达，动画细节多",
+        "自评若做好，可能因此付费"
+      ],
+      "paper_ids": [
+        "g3",
+        "g30",
+        "g31"
+      ],
+      "paper_statements": [
+        "Include parameters like snow coverage and precipitation in a visual display.",
+        "Enhance radar functionality with detailed and intuitive features.",
+        "Provide detailed radar data with animations."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "雷达参数、细节和直观性是具体改进。",
+      "evidence": [
+        {
+          "evidence_id": "E0015",
+          "quote": "the radar could be better",
+          "source_turn_ids": [
+            "T043"
+          ],
+          "start_char": 14293,
+          "end_char": 14318
+        },
+        {
+          "evidence_id": "E0016",
+          "quote": "There are like multiple parameters that you you can see",
+          "source_turn_ids": [
+            "T043"
+          ],
+          "start_char": 14497,
+          "end_char": 14552
+        },
+        {
+          "evidence_id": "E0017",
+          "quote": "which has like much detailed and like intuitive like radar map",
+          "source_turn_ids": [
+            "T043"
+          ],
+          "start_char": 14392,
+          "end_char": 14454
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G007",
+      "local_statement": "页面上减少广告，尤其是不要有视频弹窗广告夹在内容之间。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：一页 4–5 个广告，含视频弹窗",
+        "后果：需要上下滚动确认内容是否刷新"
+      ],
+      "paper_ids": [
+        "g26",
+        "g27",
+        "g28"
+      ],
+      "paper_statements": [
+        "Minimize the presence of ads to avoid distraction.",
+        "Restrict video and pop-up ads to enhance the user experience.",
+        "Reduce ad-related interruptions between UI elements and transitions."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "减少广告及视频弹窗，未扩成无条件完全无广告。",
+      "evidence": [
+        {
+          "evidence_id": "E0018",
+          "quote": "there is 1, 2, 3, 4 ads",
+          "source_turn_ids": [
+            "T037"
+          ],
+          "start_char": 12935,
+          "end_char": 12958
+        },
+        {
+          "evidence_id": "E0019",
+          "quote": "if you have 4 or 5 ads and then couple of video ads. it's just too much",
+          "source_turn_ids": [
+            "T037"
+          ],
+          "start_char": 13152,
+          "end_char": 13223
+        },
+        {
+          "evidence_id": "E0020",
+          "quote": "everything is separated by ads, like, when I click on from one tap to the next, like there is a big ad chunk between",
+          "source_turn_ids": [
+            "T069"
+          ],
+          "start_char": 22023,
+          "end_char": 22139
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G008",
+      "local_statement": "界面配色更素净（纯黑或纯白），而不是现在的暗蓝色。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "与广告并列为界面上的两处不满"
+      ],
+      "paper_ids": [
+        "g29"
+      ],
+      "paper_statements": [
+        "Provide an option to change the background color to a plain color."
+      ],
+      "correspondence": "local_narrower",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "黑白纯色是个人偏好。",
+      "evidence": [
+        {
+          "evidence_id": "E0021",
+          "quote": "the background, is like a dull blue, which I don't really like",
+          "source_turn_ids": [
+            "T035"
+          ],
+          "start_char": 12566,
+          "end_char": 12628
+        },
+        {
+          "evidence_id": "E0022",
+          "quote": "they could just make it plain black or plain white",
+          "source_turn_ids": [
+            "T035"
+          ],
+          "start_char": 12640,
+          "end_char": 12690
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G009",
+      "local_statement": "能按具体地点（徒步起点、山中酒店等）查天气，而不只是按城市。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "场景：目的地不是城市，城市级数据没有参考价值"
+      ],
+      "paper_ids": [
+        "g13"
+      ],
+      "paper_statements": [
+        "Provide very local weather information for specific locations."
+      ],
+      "correspondence": "equivalent",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "酒店/徒步起点的局部位置区别城市数据。",
+      "evidence": [
+        {
+          "evidence_id": "E0023",
+          "quote": "sometimes it's not necessarily like a city that you're going to, or a state that you're going to",
+          "source_turn_ids": [
+            "T067"
+          ],
+          "start_char": 20929,
+          "end_char": 21025
+        },
+        {
+          "evidence_id": "E0024",
+          "quote": "having having that very local data would be definitely helpful",
+          "source_turn_ids": [
+            "T067"
+          ],
+          "start_char": 21396,
+          "end_char": 21458
+        },
+        {
+          "evidence_id": "E0025",
+          "quote": "You just want to like, see whether at this particular hotel that's in like middle of nowhere",
+          "source_turn_ids": [
+            "T067"
+          ],
+          "start_char": 21031,
+          "end_char": 21123
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G010",
+      "local_statement": "默认不接收天气通知，需要时再自行打开。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自述在电脑上偏好零通知",
+        "通过浏览器站点设置关闭通知权限"
+      ],
+      "paper_ids": [
+        "g32",
+        "g33",
+        "g34"
+      ],
+      "paper_statements": [
+        "Allow users to manage notification settings.",
+        "Enable users to control whether notifications are on or off on specific devices.",
+        "Manage site permissions."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported_with_scope_note",
+      "rationale": "关闭通知是偏好，浏览器权限为手段；默认关闭需要区分个人配置与全局默认。",
+      "evidence": [
+        {
+          "evidence_id": "E0026",
+          "quote": "I usually prefer no notifications",
+          "source_turn_ids": [
+            "T055"
+          ],
+          "start_char": 17136,
+          "end_char": 17169
+        },
+        {
+          "evidence_id": "E0027",
+          "quote": "I just prefer it off. So I've kept it off.",
+          "source_turn_ids": [
+            "T057"
+          ],
+          "start_char": 17454,
+          "end_char": 17496
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G011",
+      "local_statement": "看到全球范围的重要天气事件新闻（不限本地）。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "首页有专门区块，点开进入站内新闻页"
+      ],
+      "paper_ids": [
+        "g5"
+      ],
+      "paper_statements": [
+        "Provide detailed information about severe weather events, including severity and global updates."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": false,
+      "source_support_judgment": "current_capability_with_value",
+      "rationale": "全球天气新闻与严重事件信息部分重合，本地并不限极端。",
+      "evidence": [
+        {
+          "evidence_id": "E0028",
+          "quote": "it does have sections for like weather events, not necessarily in my city",
+          "source_turn_ids": [
+            "T051"
+          ],
+          "start_char": 16342,
+          "end_char": 16415
+        },
+        {
+          "evidence_id": "E0029",
+          "quote": "important weather events. Ha! Happening across the world",
+          "source_turn_ids": [
+            "T051"
+          ],
+          "start_char": 16436,
+          "end_char": 16492
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G012",
+      "local_statement": "位置数据只留在本地、不被留存，也不因账号泄露而暴露所在城市。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "推断：位置存在本地浏览器缓存，清缓存即可清除",
+        "顾虑集中在已登录状态下的泄露风险"
+      ],
+      "paper_ids": [
+        "g35",
+        "g36",
+        "g37"
+      ],
+      "paper_statements": [
+        "Clear location data to ensure privacy.",
+        "Prevent storage of location data on external servers.",
+        "Prevent unauthorized access to user data."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "reasonable_inference",
+      "rationale": "隐私愿望合理，但本地缓存不等于不上传；不能把受访者猜测当已证实现状。",
+      "evidence": [
+        {
+          "evidence_id": "E0030",
+          "quote": "if it's in my local cache, you know, I can always just clear it from my cache, and the data is gone",
+          "source_turn_ids": [
+            "T061"
+          ],
+          "start_char": 18694,
+          "end_char": 18793
+        },
+        {
+          "evidence_id": "E0031",
+          "quote": "If I am logged in, though, I might be a little worried",
+          "source_turn_ids": [
+            "T061"
+          ],
+          "start_char": 18855,
+          "end_char": 18909
+        },
+        {
+          "evidence_id": "E0032",
+          "quote": "a leak could be a little scary",
+          "source_turn_ids": [
+            "T061"
+          ],
+          "start_char": 19118,
+          "end_char": 19148
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC014",
+      "local_id": "DOC014-G013",
+      "local_statement": "保留可用的个性化设置：收藏常看城市、按偏好切换摄氏/华氏。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "已设两个城市（现居与家乡）",
+        "默认华氏，手动切到摄氏"
+      ],
+      "paper_ids": [
+        "g14",
+        "g19",
+        "g23"
+      ],
+      "paper_statements": [
+        "Allow users to select favorite cities for easy weather access.",
+        "Allow users to set preferred locations for personalized updates.",
+        "Allow temperature display to switch between Fahrenheit and Celsius."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "current_capability_with_value",
+      "rationale": "收藏城市和温度单位设置均为被使用的现有功能。",
+      "evidence": [
+        {
+          "evidence_id": "E0033",
+          "quote": "I do have my cities set. So it's usually my home city.",
+          "source_turn_ids": [
+            "T045"
+          ],
+          "start_char": 15132,
+          "end_char": 15186
+        },
+        {
+          "evidence_id": "E0034",
+          "quote": "it is Fahrenheit. There is a option to change it at the top",
+          "source_turn_ids": [
+            "T047"
+          ],
+          "start_char": 15571,
+          "end_char": 15630
+        },
+        {
+          "evidence_id": "E0035",
+          "quote": "it does have the option to like star your favorite cities",
+          "source_turn_ids": [
+            "T071"
+          ],
+          "start_char": 22657,
+          "end_char": 22714
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    }
+  ],
+  "paper_only": [
+    {
+      "document_id": "DOC014",
+      "paper_id": "g15",
+      "statement": "Provide information on the source of its data.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC014",
+      "paper_id": "g16",
+      "statement": "Allow users to share information with others.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC014",
+      "paper_id": "g18",
+      "statement": "Display detailed information on user interaction with specific data points.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC014",
+      "paper_id": "g20",
+      "statement": "Send a daily notification summarizing the next day's information.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC014",
+      "paper_id": "g21",
+      "statement": "Provide a user interface to display main weather information including temperature, daily minimum and maximum temperature, and weather events.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC014",
+      "paper_id": "g25",
+      "statement": "Provide navigation through tabs for viewing hourly, daily, weekend, monthly, and radar information.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC014",
+      "paper_id": "g38",
+      "statement": "Improve the readability and navigability of the user interface.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    }
+  ],
+  "source_review_limits": "Local-goal correspondence is complete; paper-only support outside pilot is not exhaustively judged.",
+  "counts": {
+    "local_goals": 13,
+    "local_with_correspondence": 13,
+    "paper_goals": 39,
+    "paper_with_correspondence": 32,
+    "paper_only": 7,
+    "local_only": 0
+  },
+  "local_refinement_count": 0,
+  "eligible_paper_runs": 10,
+  "relation_semantic_reviews": [],
+  "rubric": {
+    "why_how_hierarchy": "insufficient_expression",
+    "kaos_refinement_groups": "not_expressed_in_old_schema",
+    "full_group_sufficiency": "not_assessed",
+    "alternatives_completeness": "not_assessed",
+    "source_locations": "supported_by_deterministic_checks",
+    "human_or_independent_review": "not_run"
+  }
+}

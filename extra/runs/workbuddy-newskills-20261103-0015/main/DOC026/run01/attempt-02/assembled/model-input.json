@@ -1,0 +1,1725 @@
+{
+  "schema_version": "goalforge-kaos-2",
+  "model_id": "DOC026-goal-model",
+  "version": "v1",
+  "parent": null,
+  "scope": {
+    "document_id": "DOC026",
+    "coverage": {
+      "scope": "provided_material",
+      "source_ids": [
+        "DOC026:T000",
+        "DOC026:T001",
+        "DOC026:T002",
+        "DOC026:T003",
+        "DOC026:T004",
+        "DOC026:T005",
+        "DOC026:T006",
+        "DOC026:T007",
+        "DOC026:T008",
+        "DOC026:T009",
+        "DOC026:T010",
+        "DOC026:T011",
+        "DOC026:T012",
+        "DOC026:T013",
+        "DOC026:T014",
+        "DOC026:T015",
+        "DOC026:T016",
+        "DOC026:T017",
+        "DOC026:T018",
+        "DOC026:T019",
+        "DOC026:T020",
+        "DOC026:T021",
+        "DOC026:T022",
+        "DOC026:T023",
+        "DOC026:T024",
+        "DOC026:T025",
+        "DOC026:T026",
+        "DOC026:T027",
+        "DOC026:T028",
+        "DOC026:T029",
+        "DOC026:T030",
+        "DOC026:T031",
+        "DOC026:T032",
+        "DOC026:T033",
+        "DOC026:T034",
+        "DOC026:T035",
+        "DOC026:T036",
+        "DOC026:T037",
+        "DOC026:T038",
+        "DOC026:T039",
+        "DOC026:T040",
+        "DOC026:T041",
+        "DOC026:T042",
+        "DOC026:T043",
+        "DOC026:T044",
+        "DOC026:T045",
+        "DOC026:T046",
+        "DOC026:T047"
+      ],
+      "omissions": []
+    }
+  },
+  "goals": [
+    {
+      "goal_id": "G001",
+      "statement": "Use Uber to get from one place to another, typically for destinations that are within walking distance.",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "主要目的是交通接送",
+          "通常前往步行可达范围内的地点"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原句明确把“从一处到另一处”的交通称为使用Uber的主要目标，并给出“通常是步行可达的地点”这一限定，主体与范围一致。"
+      },
+      "evidence_ids": [
+        "E0001"
+      ]
+    },
+    {
+      "goal_id": "G002",
+      "statement": "Choose whether to take a ride mainly by weighing trip duration and price against walking, driving or other transport, and walk instead when a ride would take about an hour and a half.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "the trip could alternatively be walked or driven"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "耗时与价格是决定是否叫车的因素",
+          "约一个半小时的行程选择步行，即使距离远"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "受访者明确说是否叫车主要看耗时与价格，并与其他方式比较；“约一个半小时就宁可走路，即使很远”是该规则的具体阈值例，未改变含义。"
+      },
+      "evidence_ids": [
+        "E0002",
+        "E0003",
+        "E0004"
+      ]
+    },
+    {
+      "goal_id": "G003",
+      "statement": "Choose the cheapest ride option, except when traveling with more people and a larger vehicle is needed.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "traveling alone or in a small group"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "通常选最便宜选项",
+          "与他人同行时例外"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说通常选最便宜的一档，“除非和别人一起”为例外，例外与主体均保留。"
+      },
+      "evidence_ids": [
+        "E0005"
+      ]
+    },
+    {
+      "goal_id": "G004",
+      "statement": "Wait before booking when the quoted price is too high and the departure does not have to be immediate.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "departure time is flexible"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "价格过高时选择等待",
+          "前提是非即时出发"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "“价格太高时可以选择等”是明确的等待决定，前提是“不一定要现在出发”，两个条件都在原句中。"
+      },
+      "evidence_ids": [
+        "E0006"
+      ]
+    },
+    {
+      "goal_id": "G005",
+      "statement": "Book a ride successfully when the app shows available drivers, without long scheduling delays or ending in a failure to find a driver.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "the app is showing drivers nearby"
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G001"
+        ],
+        "reason": "叫车长时间无响应并最终失败会直接阻断G001“从一处到另一处”的交通目的，据此推断希望订车顺利完成。",
+        "assumptions": [
+          "把订车失败视为对G001实现的阻碍"
+        ]
+      },
+      "support": {
+        "supported_parts": [
+          "报告点击叫车后长时间才排上",
+          "报告最终提示找不到司机"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "把对失败过程的抱怨理解为希望订车成功"
+        ],
+        "reasoning_steps": [
+          "定位抱怨的具体环节：点击叫车—长时间调度—找不到司机",
+          "推断期望结果为订车成功且不长时间等待"
+        ],
+        "label": "inferred",
+        "rationale": "受访者报告在应用显示附近有司机时，点击叫车会长时间无响应，甚至最终提示找不到司机；这是对订车可靠性的负面报告，据此推断其希望订车能顺利完成。原句未直接提出要求。"
+      },
+      "evidence_ids": [
+        "E0007"
+      ]
+    },
+    {
+      "goal_id": "G006",
+      "statement": "Avoid canceling a ride so that the passenger rating seen by drivers is not damaged.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "drivers can see a passenger's rating (stakeholder's belief)"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "尽量避免取消行程",
+          "理由是乘客评分可能受损（信念）"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说尽量不取消，理由是司机能看到乘客评分并可能受损；该理由是信念，保留在目标的条件里而不当作事实。"
+      },
+      "evidence_ids": [
+        "E0008"
+      ]
+    },
+    {
+      "goal_id": "G007",
+      "statement": "Cancel a ride without having to start the ride first.",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "不愿为取消而先开始行程"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "转写重复不影响“不想为取消而先开始行程”的否定指向"
+        ],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原句是口语重复的愿望表达（“I kind of wish that I don't want to just start a ride to cancel it”），否定指向清楚：不愿为了取消而先开始行程；随后说明应用内有取消按钮。语气为犹豫的愿望，未被强化为硬性要求。"
+      },
+      "evidence_ids": [
+        "E0009",
+        "E0010"
+      ]
+    },
+    {
+      "goal_id": "G008",
+      "statement": "Take the bus for planned routes such as the work commute.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "work provides a free bus pass",
+        "the route is planned in advance"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "计划路线通常坐公交",
+          "工作通勤有免费公交卡"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说计划好的路线通常坐公交，工作场景有免费公交卡；成本条件与“计划路线”的范围均保留。"
+      },
+      "evidence_ids": [
+        "E0011"
+      ]
+    },
+    {
+      "goal_id": "G009",
+      "statement": "Avoid taking the bus in areas I am not familiar with.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "destination is in an unfamiliar area"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "在不熟悉的地区避免坐公交"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说不想在不熟悉的地区坐公交，属避免型目标，情境条件保留。"
+      },
+      "evidence_ids": [
+        "E0012"
+      ]
+    },
+    {
+      "goal_id": "G010",
+      "statement": "Prefer Uber over the bus when the bus trip would take a long time or require walking or multiple buses.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "the bus trip would be long or need walking or transfers"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "公交线路复杂时更愿意用Uber"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "紧接在“公交耗时长、要步行、要换乘”的描述之后说“如果这么麻烦，我大概更愿意用Uber”，条件与偏好方向一致。"
+      },
+      "evidence_ids": [
+        "E0013"
+      ]
+    },
+    {
+      "goal_id": "G011",
+      "statement": "Prefer renting a car for trips that require a lot of driving or last several days.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "depends on how walkable the area is and how much driving is needed",
+        "covers work travel and week-long vacations"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "旅行时更愿意租车",
+          "条件是可步行性、驾驶需求与行程时长"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "两处都明确说旅行时更愿意租车：取决于地区可步行性与需要开多少车；一周假期且出行较多时更自由。合并为同一租车偏好，两类情境与条件都保留。"
+      },
+      "evidence_ids": [
+        "E0014",
+        "E0015"
+      ]
+    },
+    {
+      "goal_id": "G012",
+      "statement": "When taking a rideshare for work and the cost is covered, prioritize travel time over price.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "work covers the cost of the ride"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "工作出行费用可报销时以时间为先",
+          "接受多付约20美元以避免多等20分钟"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说工作出行、费用由公司承担时“不太在意价格，更在意时间”，并用多付约20美元避免多等20分钟为例；情境条件保留。"
+      },
+      "evidence_ids": [
+        "E0016",
+        "E0017"
+      ]
+    },
+    {
+      "goal_id": "G013",
+      "statement": "Reach a human customer support agent who can actually resolve the issue.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "a scripted or chatbot answer alone does not resolve the issue"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "想与真人客服沟通",
+          "目标是真正解决问题"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说当时“很想和真人说话”，并说真正解决问题需要的不止自动问答；核心诉求是得到能解决问题的真人客服，问题背景（客服差）一并保留。"
+      },
+      "evidence_ids": [
+        "E0018",
+        "E0019",
+        "E0020"
+      ]
+    },
+    {
+      "goal_id": "G014",
+      "statement": "Get accurate delivery-time estimates for Uber Eats orders.",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G013"
+        ],
+        "reason": "配送时间预估不准是求助客服的直接起因（G013），说明预估准确被视为需要满足的条件，故推断为改进诉求。",
+        "assumptions": [
+          "抱怨预估不准等同于希望预估准确"
+        ]
+      },
+      "support": {
+        "supported_parts": [
+          "把配送时间预估不准列为差体验"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "抱怨预估不准意味着希望预估准确"
+        ],
+        "reasoning_steps": [
+          "识别抱怨对象为时间预估",
+          "推断期望结果为预估准确"
+        ],
+        "label": "inferred",
+        "rationale": "受访者把“预估时间估得很差”列为糟糕体验的组成部分；据此推断其希望配送时间预估准确。原句是抱怨，不是明确要求，因此不声称是明确提出的标准。"
+      },
+      "evidence_ids": [
+        "E0021"
+      ]
+    },
+    {
+      "goal_id": "G015",
+      "statement": "Avoid using Uber Eats after bad delivery and support experiences.",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "糟糕体验后停止使用Uber Eats"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说有过糟糕体验后已停止使用Uber Eats，属已付诸行动的避免型目标。"
+      },
+      "evidence_ids": [
+        "E0022"
+      ]
+    },
+    {
+      "goal_id": "G016",
+      "statement": "Prefer trips with a single destination over multi-stop trips.",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "更愿意单一目的地"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说多数情况下更愿意只去一个地点而不是多个，偏好方向与范围一致。"
+      },
+      "evidence_ids": [
+        "E0023"
+      ]
+    },
+    {
+      "goal_id": "G017",
+      "statement": "Keep any intermediate stop on a multi-stop trip as short as possible.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "the trip involves an intermediate stop"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "避免中途停留耗时过长",
+          "尽量加快中途停留"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说担心中途停留占太多时间，并说会尽量避免、尽量让它快；适用条件是存在中途停留。"
+      },
+      "evidence_ids": [
+        "E0024"
+      ]
+    },
+    {
+      "goal_id": "G018",
+      "statement": "Call or message the driver in the app when the pickup spot is hard to find or the area is crowded.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "house numbers are hard to see, GPS is poor, or the area is busy"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "认为应用内联系司机有帮助",
+          "适用情境为上车点难找或人多拥挤"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说应用内联系司机“很有帮助”，并列出上车点难找（门牌不清、GPS差）与人多拥挤两类情境；偏好方向与情境保留。"
+      },
+      "evidence_ids": [
+        "E0025",
+        "E0026"
+      ]
+    },
+    {
+      "goal_id": "G019",
+      "statement": "Give the driver a heads-up when an intermediate stop on a multi-stop trip takes longer than expected.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "a multi-stop trip's intermediate stop runs long"
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G017"
+        ],
+        "reason": "告知司机是为避免中途停留拖延（G017）而提出的做法，受访者称其“有帮助”，据此推断为偏好。",
+        "assumptions": [
+          "认为有帮助等同于希望在该情境这样做"
+        ]
+      },
+      "support": {
+        "supported_parts": [
+          "认为提前告知司机有帮助"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "认为有帮助等同希望在该情境这样做"
+        ],
+        "reasoning_steps": [
+          "原句是效果评价而非习惯陈述",
+          "因此按偏好推断，不声明已实践"
+        ],
+        "label": "inferred",
+        "rationale": "受访者认为中途停留超时前先告知司机“也有帮助”，但紧接着自述“我不认为我这样做过”；据此推断为一种被认可的偏好，而非已实践的行为要求。"
+      },
+      "evidence_ids": [
+        "E0027"
+      ]
+    },
+    {
+      "goal_id": "G020",
+      "statement": "Be able to change the pickup point easily after a ride is booked when the ride starts from the current location.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "booking starts from the current location instead of a typed address"
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G021"
+        ],
+        "reason": "受访者因应用内改点不便而改用直接告知司机（G021），据此推断其希望下单后仍能容易改点。",
+        "assumptions": [
+          "难度对比意味着希望改点更容易"
+        ]
+      },
+      "support": {
+        "supported_parts": [
+          "报告现在用当前位置时改点不容易"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "难度对比意味着希望改点更容易"
+        ],
+        "reasoning_steps": [
+          "对比“不用当前位置时容易”与现在的情形",
+          "推断期望结果为下单后可容易改点"
+        ],
+        "label": "inferred",
+        "rationale": "受访者报告现在只有不用当前位置下单时才容易改上车点，用当前位置时很难、通常改为告知司机；据此推断其希望下单后仍能容易改点。原句是比较性抱怨，未直接提出要求。"
+      },
+      "evidence_ids": [
+        "E0028"
+      ]
+    },
+    {
+      "goal_id": "G021",
+      "statement": "Notify the driver directly instead of changing the pickup point in the app when the pickup point needs to change.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "the pickup point needs to change after booking"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "改点时直接告知司机",
+          "不使用应用内改点"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说想把上车点改掉时通常直接告知司机，而不是在应用里改；访谈者复述“直接联系司机是你的首选”后受访者答“Yeah”确认。"
+      },
+      "evidence_ids": [
+        "E0029",
+        "E0030"
+      ]
+    },
+    {
+      "goal_id": "G022",
+      "statement": "Check the ride fare after the trip, to split the cost with friends or to use it as a receipt for work reimbursement.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "shared ride with friends",
+        "work ride to be reimbursed"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "行程后查看车费",
+          "用途为分摊费用或工作报销"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "明确说行程结束后会看车费，用于与朋友分摊，或作为工作报销的凭证；两个情境共用同一核心动作（查看车费），未拆成近似重复节点。"
+      },
+      "evidence_ids": [
+        "E0031",
+        "E0032"
+      ]
+    }
+  ],
+  "refinement_groups": [],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC026:T005",
+      "material_id": "M001",
+      "quote": "For me, the main goal is transportation to get from one place to another. typically like a place I could walk to",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 577,
+      "end_char": 689,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T005",
+          "segment_start": 0,
+          "segment_end": 112,
+          "start_char": 577,
+          "end_char": 689
+        }
+      ],
+      "original_locator": {
+        "turn": "5",
+        "start_char": 577,
+        "end_char": 689
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC026:T007",
+      "material_id": "M001",
+      "quote": "When I've chosen to look for a ride, it's usually the amount of time it will take or the price in deciding whether or not to take ride.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 899,
+      "end_char": 1034,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T007",
+          "segment_start": 12,
+          "segment_end": 147,
+          "start_char": 899,
+          "end_char": 1034
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 887,
+        "end_char": 1341
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC026:T007",
+      "material_id": "M001",
+      "quote": "So if it's going to take like an hour and a half to get someplace. So I'll just walk even if it's kind of far away.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1226,
+      "end_char": 1341,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T007",
+          "segment_start": 339,
+          "segment_end": 454,
+          "start_char": 1226,
+          "end_char": 1341
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 887,
+        "end_char": 1341
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC026:T009",
+      "material_id": "M001",
+      "quote": "Yeah, I think that that's a good way of putting it.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1464,
+      "end_char": 1515,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T009",
+          "segment_start": 0,
+          "segment_end": 51,
+          "start_char": 1464,
+          "end_char": 1515
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 1464,
+        "end_char": 1515
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC026:T011",
+      "material_id": "M001",
+      "quote": "I usually just go for The cheapest one, to be honest, unless if i'm going with more people",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2491,
+      "end_char": 2581,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T011",
+          "segment_start": 771,
+          "segment_end": 861,
+          "start_char": 2491,
+          "end_char": 2581
+        }
+      ],
+      "original_locator": {
+        "turn": "11",
+        "start_char": 1720,
+        "end_char": 3018
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC026:T011",
+      "material_id": "M001",
+      "quote": "if the price was too high, then I can choose to wait",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2965,
+      "end_char": 3017,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T011",
+          "segment_start": 1245,
+          "segment_end": 1297,
+          "start_char": 2965,
+          "end_char": 3017
+        }
+      ],
+      "original_locator": {
+        "turn": "11",
+        "start_char": 1720,
+        "end_char": 3018
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC026:T013",
+      "material_id": "M001",
+      "quote": "sometimes when I click okay and try to book that driver, it will take a really long time to actually schedule it. And sometimes it will end up saying that can't find a driver.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3538,
+      "end_char": 3713,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T013",
+          "segment_start": 297,
+          "segment_end": 472,
+          "start_char": 3538,
+          "end_char": 3713
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 3241,
+        "end_char": 4284
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC026:T013",
+      "material_id": "M001",
+      "quote": "I usually try not to cancel a ride because I think that that damages my like the drivers will see a rating of the passenger as well.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3938,
+      "end_char": 4070,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T013",
+          "segment_start": 697,
+          "segment_end": 829,
+          "start_char": 3938,
+          "end_char": 4070
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 3241,
+        "end_char": 4284
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC026:T015",
+      "material_id": "M001",
+      "quote": "i uh... I kind of wish that I don't want to just start a ride to cancel it.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4440,
+      "end_char": 4515,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T015",
+          "segment_start": 0,
+          "segment_end": 75,
+          "start_char": 4440,
+          "end_char": 4515
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 4440,
+        "end_char": 4738
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC026:T015",
+      "material_id": "M001",
+      "quote": "I think that there's just a button they can choose to cancel it.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4674,
+      "end_char": 4738,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T015",
+          "segment_start": 234,
+          "segment_end": 298,
+          "start_char": 4674,
+          "end_char": 4738
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 4440,
+        "end_char": 4738
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC026:T021",
+      "material_id": "M001",
+      "quote": "So I usually do take a bus for my like planned route. So for work, it's fairly simple. My work gives me a free bus pass, basically.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5986,
+      "end_char": 6117,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T021",
+          "segment_start": 0,
+          "segment_end": 131,
+          "start_char": 5986,
+          "end_char": 6117
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 5986,
+        "end_char": 6994
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC026:T021",
+      "material_id": "M001",
+      "quote": "Because I don't want to take a bus in a place I'm not familiar with",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6254,
+      "end_char": 6321,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T021",
+          "segment_start": 268,
+          "segment_end": 335,
+          "start_char": 6254,
+          "end_char": 6321
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 5986,
+        "end_char": 6994
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC026:T021",
+      "material_id": "M001",
+      "quote": "if it's complicated like that, I would probably prefer And Uber in that case.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6595,
+      "end_char": 6672,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T021",
+          "segment_start": 609,
+          "segment_end": 686,
+          "start_char": 6595,
+          "end_char": 6672
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 5986,
+        "end_char": 6994
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC026:T019",
+      "material_id": "M001",
+      "quote": "when I'm traveling for work or just traveling in general, I would probably prefer to rent a car.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5180,
+      "end_char": 5276,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T019",
+          "segment_start": 48,
+          "segment_end": 144,
+          "start_char": 5180,
+          "end_char": 5276
+        }
+      ],
+      "original_locator": {
+        "turn": "19",
+        "start_char": 5132,
+        "end_char": 5685
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC026:T021",
+      "material_id": "M001",
+      "quote": "if I'm going on vacation for a week. And I know I'm going to need to be traveling a decent amount, then it would make more sense and give me a little bit more freedom to rent a car than to do a ride share every time I want to go someplace.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6755,
+      "end_char": 6994,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T021",
+          "segment_start": 769,
+          "segment_end": 1008,
+          "start_char": 6755,
+          "end_char": 6994
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 5986,
+        "end_char": 6994
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC026:T019",
+      "material_id": "M001",
+      "quote": "i usually care less about the price and more about the time in that case because my work is going to cover it.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5441,
+      "end_char": 5551,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T019",
+          "segment_start": 309,
+          "segment_end": 419,
+          "start_char": 5441,
+          "end_char": 5551
+        }
+      ],
+      "original_locator": {
+        "turn": "19",
+        "start_char": 5132,
+        "end_char": 5685
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC026:T019",
+      "material_id": "M001",
+      "quote": "if the Uber XL is the only one that's available then I don't care if it's an extra $20 for not having to wait an extra 20 minutes.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5555,
+      "end_char": 5685,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T019",
+          "segment_start": 423,
+          "segment_end": 553,
+          "start_char": 5555,
+          "end_char": 5685
+        }
+      ],
+      "original_locator": {
+        "turn": "19",
+        "start_char": 5132,
+        "end_char": 5685
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC026:T031",
+      "material_id": "M001",
+      "quote": "For that instance, I found it very difficult because I wanted to talk to a person",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8135,
+      "end_char": 8216,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T031",
+          "segment_start": 0,
+          "segment_end": 81,
+          "start_char": 8135,
+          "end_char": 8216
+        }
+      ],
+      "original_locator": {
+        "turn": "31",
+        "start_char": 8135,
+        "end_char": 8611
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC026:T031",
+      "material_id": "M001",
+      "quote": "if you actually want to actually resolve an issue, you're probably going to need more than what they're like",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8349,
+      "end_char": 8457,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T031",
+          "segment_start": 214,
+          "segment_end": 322,
+          "start_char": 8349,
+          "end_char": 8457
+        }
+      ],
+      "original_locator": {
+        "turn": "31",
+        "start_char": 8135,
+        "end_char": 8611
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC026:T027",
+      "material_id": "M001",
+      "quote": "Ultimately, it was bad customer service.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7653,
+      "end_char": 7693,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T027",
+          "segment_start": 0,
+          "segment_end": 40,
+          "start_char": 7653,
+          "end_char": 7693
+        }
+      ],
+      "original_locator": {
+        "turn": "27",
+        "start_char": 7653,
+        "end_char": 7693
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC026:T029",
+      "material_id": "M001",
+      "quote": "It was a mixture of a bad estimate poorly estimating the amount of time And then the customer service dealing with that was extraordinarily poor.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7772,
+      "end_char": 7917,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T029",
+          "segment_start": 33,
+          "segment_end": 178,
+          "start_char": 7772,
+          "end_char": 7917
+        }
+      ],
+      "original_locator": {
+        "turn": "29",
+        "start_char": 7739,
+        "end_char": 7917
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC026:T025",
+      "material_id": "M001",
+      "quote": "I have used it. That is something that I have had bad experiences with, so I've stopped using it.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7337,
+      "end_char": 7434,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T025",
+          "segment_start": 0,
+          "segment_end": 97,
+          "start_char": 7337,
+          "end_char": 7434
+        }
+      ],
+      "original_locator": {
+        "turn": "25",
+        "start_char": 7337,
+        "end_char": 7434
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC026:T037",
+      "material_id": "M001",
+      "quote": "Most of the time, if I'm going to use Uber, I would prefer to just go to one location versus going to multiple ones.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9755,
+      "end_char": 9871,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T037",
+          "segment_start": 107,
+          "segment_end": 223,
+          "start_char": 9755,
+          "end_char": 9871
+        }
+      ],
+      "original_locator": {
+        "turn": "37",
+        "start_char": 9648,
+        "end_char": 10157
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC026:T037",
+      "material_id": "M001",
+      "quote": "I always feel weird if I'm going to do that where one of the in-between stops takes too much time So I try to to do anything like that. I try to make it as quick as possible",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9938,
+      "end_char": 10111,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T037",
+          "segment_start": 290,
+          "segment_end": 463,
+          "start_char": 9938,
+          "end_char": 10111
+        }
+      ],
+      "original_locator": {
+        "turn": "37",
+        "start_char": 9648,
+        "end_char": 10157
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC026:T039",
+      "material_id": "M001",
+      "quote": "I actually find that very helpful. Especially if I'm someplace that's like either a little weird. So maybe the house numbers are hard to see or or GPS just isn't great in that location.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10498,
+      "end_char": 10683,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T039",
+          "segment_start": 31,
+          "segment_end": 216,
+          "start_char": 10498,
+          "end_char": 10683
+        }
+      ],
+      "original_locator": {
+        "turn": "39",
+        "start_char": 10467,
+        "end_char": 11204
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC026:T039",
+      "material_id": "M001",
+      "quote": "Or if I'm in a place that's really busy, so maybe there's not a good place for the driver to pull over or there are a lot of people, so they just want to make sure it's me.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10684,
+      "end_char": 10856,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T039",
+          "segment_start": 217,
+          "segment_end": 389,
+          "start_char": 10684,
+          "end_char": 10856
+        }
+      ],
+      "original_locator": {
+        "turn": "39",
+        "start_char": 10467,
+        "end_char": 11204
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC026:T039",
+      "material_id": "M001",
+      "quote": "in the circumstance where I'm doing a multi-stop letting the driver know if maybe I'm taking a little bit longer or just to give them a heads up about what's going on is also helpful.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11021,
+      "end_char": 11204,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T039",
+          "segment_start": 554,
+          "segment_end": 737,
+          "start_char": 11021,
+          "end_char": 11204
+        }
+      ],
+      "original_locator": {
+        "turn": "39",
+        "start_char": 10467,
+        "end_char": 11204
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC026:T041",
+      "material_id": "M001",
+      "quote": "It used to be relatively... easy if I'm remembering correctly. But now I think it's only really easy if you're not using your location from the start",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11505,
+      "end_char": 11654,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T041",
+          "segment_start": 47,
+          "segment_end": 196,
+          "start_char": 11505,
+          "end_char": 11654
+        }
+      ],
+      "original_locator": {
+        "turn": "41",
+        "start_char": 11458,
+        "end_char": 12185
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC026:T041",
+      "material_id": "M001",
+      "quote": "I think most of the time when I do want to change it, I give the driver a heads up instead of doing it on the app.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12071,
+      "end_char": 12185,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T041",
+          "segment_start": 613,
+          "segment_end": 727,
+          "start_char": 12071,
+          "end_char": 12185
+        }
+      ],
+      "original_locator": {
+        "turn": "41",
+        "start_char": 11458,
+        "end_char": 12185
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC026:T043",
+      "material_id": "M001",
+      "quote": "Yeah.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12362,
+      "end_char": 12367,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T043",
+          "segment_start": 0,
+          "segment_end": 5,
+          "start_char": 12362,
+          "end_char": 12367
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 12362,
+        "end_char": 12367
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC026:T045",
+      "material_id": "M001",
+      "quote": "I will go back And look at how much the ride was so that I could split split up the charge.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12926,
+      "end_char": 13017,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T045",
+          "segment_start": 337,
+          "segment_end": 428,
+          "start_char": 12926,
+          "end_char": 13017
+        }
+      ],
+      "original_locator": {
+        "turn": "45",
+        "start_char": 12589,
+        "end_char": 13178
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0032",
+      "source_id": "DOC026:T045",
+      "material_id": "M001",
+      "quote": "Or if I'm doing it for work, then I can use that as a receipt to get reimbursed.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13018,
+      "end_char": 13098,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T045",
+          "segment_start": 429,
+          "segment_end": 509,
+          "start_char": 13018,
+          "end_char": 13098
+        }
+      ],
+      "original_locator": {
+        "turn": "45",
+        "start_char": 12589,
+        "end_char": 13178
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0001",
+      "source_id": "DOC026:T041",
+      "material_id": "M001",
+      "quote": "I think most of the time when I do want to change it, I give the driver a heads up instead of doing it on the app.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12071,
+      "end_char": 12185,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T041",
+          "segment_start": 613,
+          "segment_end": 727,
+          "start_char": 12071,
+          "end_char": 12185
+        }
+      ],
+      "original_locator": {
+        "turn": "41",
+        "start_char": 11458,
+        "end_char": 12185
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0002",
+      "source_id": "DOC026:T039",
+      "material_id": "M001",
+      "quote": "in the circumstance where I'm doing a multi-stop letting the driver know if maybe I'm taking a little bit longer or just to give them a heads up about what's going on is also helpful.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11021,
+      "end_char": 11204,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:T039",
+          "segment_start": 554,
+          "segment_end": 737,
+          "start_char": 11021,
+          "end_char": 11204
+        }
+      ],
+      "original_locator": {
+        "turn": "39",
+        "start_char": 10467,
+        "end_char": 11204
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "issues": [
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "转写句“I kind of wish that I don't want to just start a ride to cancel it”是口语重复还是双重否定？把目标理解为“取消前不必先开始行程”是否准确？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G019",
+      "message": "受访者自述“我不认为我这样做过”，但认为告知司机有帮助；这应保留为行为偏好还是仅作为对功能的评价？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G020",
+      "message": "改上车点困难是否只发生在“用当前位置起单”的流程，还是下单后普遍如此？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G005",
+      "message": "由失败与抱怨推断出的“顺利订车”“配送时间预估准确”是否应作为明确要求保留？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G014",
+      "message": "由失败与抱怨推断出的“顺利订车”“配送时间预估准确”是否应作为明确要求保留？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "是否需要区分“取消已预约行程”与“取消进行中的行程”？原句未说明是哪一种。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G019",
+      "message": "该目标是否应降为偏好而非要求（受访者自述未实践）？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G020",
+      "message": "若应用内本就不支持改点，这项目标是否应改写为“通过司机协调完成改点”？",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC026-goal-model",
+      "message": "本模型有2条联系、0个精化组：原文未出现可声称“共同充分”的子目标组合。是否需要回查“顺利完成一次行程”这类上层目的以形成层级？",
+      "blocking": false
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R2",
+      "message": "这项联系尚待确认，不表示充分精化。",
+      "blocking": false
+    }
+  ],
+  "limitations": [
+    "原文是英文访谈的自动转写稿，个别句子口语重复或残缺（如T015的取消表述、T041被截断的自述），判断只依据可读文本，未核对录音。",
+    "只有一位Uber乘客的个人使用情境，不声称覆盖其他用户或该产品的全部需求。",
+    "未联网、未读取任何历史目标、参考答案或评分材料。"
+  ],
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "e371092f56b95568305e07ab2f3bd243bbeaa7c2a00665252d68aefd2d56c615"
+    },
+    {
+      "path": "attachments/judgments.json",
+      "sha256": "077a88edc9126666df9ef83affcf38adac48a537aaa5b492ca9466cdeb98dbb6"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "8d3e25ef9f7d7731190f22bf04d904cac903dc80b248658f575d362e34bedfaa"
+    },
+    {
+      "path": "attachments/kaos-decisions.json",
+      "sha256": "a2350d404a105cf4f2b32a13db082697a172a05337fd77f5c53f7e03cf71ef43"
+    }
+  ],
+  "review": {
+    "status": "pending"
+  },
+  "changes": [],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G021",
+      "target_id": "G020",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "应用内修改上车点难以完成时"
+      ],
+      "assumptions": [
+        "司机能按新的上车点接人"
+      ],
+      "rationale": "在应用内难改上车点时，直接告知司机是受访者实际采用的方式，用来达成“把上车点变更落实”这一目的；只说明方式与目的关系，不声称该方式总能成功。",
+      "evidence_ids": [
+        "K0001"
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G019",
+      "target_id": "G017",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [
+        "中途停留确实超时"
+      ],
+      "assumptions": [
+        "提前告知能让司机理解延误，而不使停留变短"
+      ],
+      "rationale": "原句只说提前告知司机“有帮助”，可理解为对“让中途停留不至于拖太久”有缓解作用，但未证明能让停留变短，故保留为待确认。",
+      "evidence_ids": [
+        "K0002"
+      ]
+    }
+  ],
+  "source_binding": {
+    "sha256": "8d3e25ef9f7d7731190f22bf04d904cac903dc80b248658f575d362e34bedfaa"
+  }
+}

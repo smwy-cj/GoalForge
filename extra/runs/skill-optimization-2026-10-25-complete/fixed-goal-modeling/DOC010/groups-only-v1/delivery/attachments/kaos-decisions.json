@@ -1,0 +1,71 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "0dad6b12548cbd5a21c439052711d6c355c8a2dbc8502e2f7a51fc42999896b0",
+    "judgments_sha256": "d40d620a7e076b714b1617a16fbcc6d4a5addd34ae11183a227525e11202984c"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G001",
+      "child_ids": [
+        "G002",
+        "G003",
+        "G006"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "The three explicit planning uses are examples of the broad primary purpose; satisfying them does not establish completeness for every daily decision.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "So for me, primary purpose is a planning. So whenever I use weather app, it's either to plan what I have to wear on a particular day or plan my outdoor activities. or just plan my trip or something.",
+          "role": "basis",
+          "start_char": 926,
+          "end_char": 1124
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G022",
+      "child_ids": [
+        "G019"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "App/website synchronization is a specific pair, not demonstrated coverage of every platform.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T071",
+          "quote": "Be consistent. Yeah, yeah. About the ads. Yes, yes. Ads are also very annoying. So no ads, real time updates and should be consistent across all the platforms. These are like the 3 things that I would prefer.",
+          "role": "basis",
+          "start_char": 13023,
+          "end_char": 13231
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "Joint sufficiency is unconfirmed: The three explicit planning uses are examples of the broad primary purpose; satisfying them does not establish completeness for every daily decision."
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "Joint sufficiency is unconfirmed: App/website synchronization is a specific pair, not demonstrated coverage of every platform."
+    }
+  ]
+}

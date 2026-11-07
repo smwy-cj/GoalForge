@@ -1,0 +1,200 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "fff431ccf1237547a577357ca86a99483c9cc1a54a99388658853d8e24e67987",
+    "input_sha256": "a926e4571bf9e6c783d5511815d42c5e3e69ed41c2ab394e92ade7292a58e7f7"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Plan what to wear and what to carry on a given day based on the weather.",
+      "label": "direct",
+      "rationale": "受访者两次明确说明用天气信息决定当天穿什么、带什么（早晨查天气后即做此决定），主体、对象与日常频次一致。陈述只写穿着与携带这一核心动作，未加入未提及的阈值或方式。",
+      "supported_parts": [
+        "用天气信息决定当天穿着",
+        "决定当天携带物品",
+        "发生在早晨起床后的例行流程中"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T007 把'plan what I have to wear on a particular day'列为使用天气应用的首要目的之一",
+        "T013 与 T037 重复确认该决定在日常使用中发生"
+      ]
+    },
+    "G002": {
+      "target_statement": "Plan outdoor activities with friends based on the weather, buying tickets for them only when the forecast is suitable.",
+      "label": "direct",
+      "rationale": "原文说明根据天气规划与朋友的户外活动，并明确给出购票判断规则（下雨或很冷时买票没有意义）。购票是同一规划动作中的决策，不是另一项独立结果，故合为一个目标并保留条件。",
+      "supported_parts": [
+        "依据天气规划户外活动",
+        "活动与朋友共同进行",
+        "仅在天气合适时购票"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T017 将活动规划与购票相连",
+        "T021 的芝加哥/六旗例子给出'不适合就不买票'的规则"
+      ]
+    },
+    "G003": {
+      "target_statement": "Check the forecast for the entire week at the destination when planning a trip, before deciding on activities and buying tickets.",
+      "label": "direct",
+      "rationale": "受访者明确说规划旅行时会查看整周天气，并说明原因是需要安排活动、购买活动门票；T017 补充目的地为没去过的地方、需在购票前查天气。整周范围与条件均来自原文，未泛化为所有场景。",
+      "supported_parts": [
+        "旅行规划时查看整周预报",
+        "查询目的地天气",
+        "用于安排活动与购票决策"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T019 直接给出'旅行→整周'的条件关系及理由",
+        "T017 说明旅行前查询目的地信息"
+      ]
+    },
+    "G004": {
+      "target_statement": "Check the weather in a new place to become familiar with its conditions.",
+      "label": "direct",
+      "rationale": "原文以'必须（have to）'表述在新地方需要熟悉当地天气因而使用天气信息，并明确给出长期居住地不需要查看的例外。目标保留该条件与例外，未扩展为所有地点都要查。",
+      "supported_parts": [
+        "在新地方查看天气",
+        "目的是熟悉当地天气条件",
+        "长期居住地不需要（例外）"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T031 以巴基斯坦为例说明熟悉地点不查天气",
+        "T033 直接给出新地点必须使用的条件"
+      ]
+    },
+    "G005": {
+      "target_statement": "See extreme weather conditions (thunderstorm, flooding) in the app so as to postpone the planned event and not go out.",
+      "label": "direct",
+      "rationale": "受访者明确说极端天气（雷暴、洪水）信息非常重要，并说明看到这类信息就推迟整个活动、不出门。目标保留信息对象、极端条件与后续行为，未添加时间阈值或强制措辞。",
+      "supported_parts": [
+        "极端天气信息最重要",
+        "看到后推迟已计划的活动",
+        "不出门"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T035 同句给出重要性判断与行为后果"
+      ]
+    },
+    "G006": {
+      "target_statement": "Receive notifications or alerts for extreme weather conditions.",
+      "label": "direct",
+      "rationale": "原文用'expecting'明确表达对极端天气提醒/警报的期望，对象与条件清楚；未指定渠道优先级（邮件、短信、应用推送并存），故目标不写具体渠道。",
+      "supported_parts": [
+        "对极端天气的提醒或警报有期望",
+        "提醒对象限定为极端天气"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T039 先陈述极端天气重要性，再说明期望应用给出通知或警报"
+      ]
+    },
+    "G007": {
+      "target_statement": "Receive routine weather notifications about three times a day (morning, afternoon, evening) aligned with going-out times, instead of constant pop-ups.",
+      "label": "direct",
+      "rationale": "原文明确说把通知调整为每天三次（早、午、晚），并与外出时间对齐；同时说明此前频繁弹出而自己并不需要。频次、时段与'不要频繁弹窗'均来自受访者自述，属于其选定的偏好设置，是否应作为硬性要求未明说，故在 review_questions 中保留。",
+      "supported_parts": [
+        "每天约三次通知",
+        "时段为早晨、下午、傍晚",
+        "与外出作息对齐",
+        "不需要频繁弹窗"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T041 描述从频繁弹窗改为每日三次的调整及理由",
+        "T045 确认更改了通知频率"
+      ]
+    },
+    "G008": {
+      "target_statement": "Receive frequent updates while rain is ongoing, covering when it starts and stops, and hourly updates for rain and extreme conditions.",
+      "label": "direct",
+      "rationale": "T049 说明持续降雨时希望频繁通知（何时停、何时开始），T063 说明降雨/极端条件下逐时更新重要，T066-T067 把即时更新限定在不利天气、其余时段常规日/周更新即可。目标合并同一对象（降雨/极端条件下的更新频率）并保留该范围限制。",
+      "supported_parts": [
+        "持续降雨期间频繁通知",
+        "覆盖降雨开始与停止",
+        "降雨与极端条件下逐时更新",
+        "仅限不利天气，其余时段常规更新即可"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T049 给出降雨期间频繁通知的偏好",
+        "T063 将逐时更新绑定到降雨/极端条件",
+        "T066-T067 确认不利天气与常规天气的分界"
+      ]
+    },
+    "G009": {
+      "target_statement": "Provide real-time weather updates so that upcoming changes are reflected when deciding whether to go out.",
+      "label": "direct",
+      "rationale": "受访者两次强调实时更新非常重要，并称这是新应用都应该具备的能力；出门决策（步行还是坐车）是其说明的具体情境。目标保留实时性与决策用途，未写成预测绝对准确。",
+      "supported_parts": [
+        "实时更新非常重要",
+        "新应用都应具备实时更新",
+        "用于出门方式等即时决策"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T051 以杂货店步行为例强调实时更新",
+        "T069 在'理想体验'回答中把实时更新列为首要问题"
+      ]
+    },
+    "G010": {
+      "target_statement": "Show no ads in the weather app.",
+      "label": "direct",
+      "rationale": "受访者先说不喜欢随机广告，后在总结三项偏好时明确说'no ads'。目标只保留无广告这一结果，未推断订阅策略或广告形式；是否仅适用于免费层不确定，另列为问题。",
+      "supported_parts": [
+        "不喜欢随机广告",
+        "明确偏好无广告"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T057 说明未订阅时出现随机广告并不喜欢",
+        "T071 将无广告列为三项偏好之一"
+      ]
+    },
+    "G011": {
+      "target_statement": "Keep weather information consistent across the app and the website on all platforms.",
+      "label": "direct",
+      "rationale": "T057 描述应用显示在下雨而网站显示不下雨的差异，T059 指出网站与应用同步性不足，T071 把'跨平台一致'列为三项偏好之一。目标保留一致性诉求，未承诺具体同步机制。",
+      "supported_parts": [
+        "应用与网站信息不一致的实际经验",
+        "同步性不足的判断",
+        "跨平台一致是明确偏好"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T057 给出具体不一致实例",
+        "T059 归纳为同步问题",
+        "T071 列为偏好"
+      ]
+    },
+    "G012": {
+      "target_statement": "Use a daily forecast rather than a weekly forecast for routine weather checks.",
+      "label": "direct",
+      "rationale": "受访者明确说平时不按周查看而按天查看，并说日预报用起来更舒适；周预报只用于旅行（已由 G003 承接）。目标保留这一偏好方向与情境，未写成强制默认视图。",
+      "supported_parts": [
+        "常规使用按天而非按周查看",
+        "日预报更易使用"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T019 区分日常按天与旅行按周",
+        "T065 说明日预报更舒适"
+      ]
+    }
+  }
+}

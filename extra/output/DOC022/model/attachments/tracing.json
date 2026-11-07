@@ -1,0 +1,1447 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC022\\extraction.json",
+    "sha256": "f3bd51fc8cecd2796d6ba03e15beb9d9b898493b29cf6ef9aefc1579126a46cf",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "c40cebfb331702f98767f012daa627f4bda84f2958edd0fb25c4c02728ac225e",
+      "input_sha256": "f3bd51fc8cecd2796d6ba03e15beb9d9b898493b29cf6ef9aefc1579126a46cf"
+    },
+    "bundle_sha256": "0bc2051ac40ce7f95a57e8be298a8d92104a2b2bdb6461eea96c0f5c5b2d1982"
+  },
+  "sources": [
+    {
+      "document_id": "DOC022",
+      "expected_hash": "23a8f0f90a085f224b23df63f633d36714a3c3971f425614296633839308300a",
+      "actual_hash": "23a8f0f90a085f224b23df63f633d36714a3c3971f425614296633839308300a",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC022-C001",
+      "target_kind": "candidate",
+      "statement": "在任意机器上都能改代码，尤其是没有图形界面的服务器。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC022:S016",
+          "material_id": "M001",
+          "quote": "You have to work at different machines",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4131,
+          "end_char": 4169,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S016",
+              "segment_start": 568,
+              "segment_end": 606,
+              "start_char": 4131,
+              "end_char": 4169
+            }
+          ],
+          "original_locator": {
+            "line_start": 16,
+            "line_end": 16,
+            "start_char": 3563,
+            "end_char": 5456
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC022:S016",
+          "material_id": "M001",
+          "quote": "when I have to like change some things at at the server, I can just easily open the vim and and modify the code",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4640,
+          "end_char": 4751,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S016",
+              "segment_start": 1077,
+              "segment_end": 1188,
+              "start_char": 4640,
+              "end_char": 4751
+            }
+          ],
+          "original_locator": {
+            "line_start": 16,
+            "line_end": 16,
+            "start_char": 3563,
+            "end_char": 5456
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC022:S022",
+          "material_id": "M001",
+          "quote": "you can only run vim on the terminal, because you can only access to the command line interface",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6448,
+          "end_char": 6543,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S022",
+              "segment_start": 527,
+              "segment_end": 622,
+              "start_char": 6448,
+              "end_char": 6543
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 5921,
+            "end_char": 6792
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S016",
+          "DOC022:S016",
+          "DOC022:S022"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "场景：T016「You have to work at different machines」",
+          "能力：T016「open the vim and and modify the code」",
+          "限制：T022「you can only access to the command line interface」"
+        ],
+        "unsupported_parts": [
+          "未说明多久遇到一次服务器改动",
+          "未说明是否所有服务器都装 vim"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取场景",
+          "2. 取服务器限制",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T015 说明换机器时其他编辑器不一定可用，T021 说明服务器只有命令行，因此必须在终端里改代码。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在任意机器上都能改代码，尤其是没有图形界面的服务器。",
+        "label": "direct",
+        "rationale": "T015 说明换机器时其他编辑器不一定可用，T021 说明服务器只有命令行，因此必须在终端里改代码。",
+        "supported_parts": [
+          "场景：T016「You have to work at different machines」",
+          "能力：T016「open the vim and and modify the code」",
+          "限制：T022「you can only access to the command line interface」"
+        ],
+        "unsupported_parts": [
+          "未说明多久遇到一次服务器改动",
+          "未说明是否所有服务器都装 vim"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取场景",
+          "2. 取服务器限制",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C002",
+      "target_kind": "candidate",
+      "statement": "把个人配置带到每一台机器，让各处环境一致。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC022:S032",
+          "material_id": "M001",
+          "quote": "make every system just like your local local customization",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10289,
+          "end_char": 10347,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S032",
+              "segment_start": 1401,
+              "segment_end": 1459,
+              "start_char": 10289,
+              "end_char": 10347
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 8888,
+            "end_char": 10550
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC022:S032",
+          "material_id": "M001",
+          "quote": "if you put put it in the server and and the server will will be just like your local beam",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10389,
+          "end_char": 10478,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S032",
+              "segment_start": 1501,
+              "segment_end": 1590,
+              "start_char": 10389,
+              "end_char": 10478
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 8888,
+            "end_char": 10550
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC022:S016",
+          "material_id": "M001",
+          "quote": "if I don't get used to the vim, I may find difficulty to easily modify codes on the server",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4774,
+          "end_char": 4864,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S016",
+              "segment_start": 1211,
+              "segment_end": 1301,
+              "start_char": 4774,
+              "end_char": 4864
+            }
+          ],
+          "original_locator": {
+            "line_start": 16,
+            "line_end": 16,
+            "start_char": 3563,
+            "end_char": 5456
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S032",
+          "DOC022:S032",
+          "DOC022:S016"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "做法：T032「make every system just like your local local customization」",
+          "效果：T032「the server will will be just like your local beam」"
+        ],
+        "unsupported_parts": [
+          "未说明配置如何同步（手动复制/版本库）",
+          "未提配置冲突或版本差异的处理"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取做法",
+          "2. 取效果",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T031 说明配置文件可复制到服务器，使远端环境与本地一致。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "把个人配置带到每一台机器，让各处环境一致。",
+        "label": "direct",
+        "rationale": "T031 说明配置文件可复制到服务器，使远端环境与本地一致。",
+        "supported_parts": [
+          "做法：T032「make every system just like your local local customization」",
+          "效果：T032「the server will will be just like your local beam」"
+        ],
+        "unsupported_parts": [
+          "未说明配置如何同步（手动复制/版本库）",
+          "未提配置冲突或版本差异的处理"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取做法",
+          "2. 取效果",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C003",
+      "target_kind": "candidate",
+      "statement": "本地环境可深度定制：外观、快捷键、语法主题都按自己习惯来。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC022:S016",
+          "material_id": "M001",
+          "quote": "I will like customize them to to. I will install a bunch of like cool plugins",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5004,
+          "end_char": 5081,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S016",
+              "segment_start": 1441,
+              "segment_end": 1518,
+              "start_char": 5004,
+              "end_char": 5081
+            }
+          ],
+          "original_locator": {
+            "line_start": 16,
+            "line_end": 16,
+            "start_char": 3563,
+            "end_char": 5456
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC022:S036",
+          "material_id": "M001",
+          "quote": "I can customize like, which shortcut I want to activate it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12381,
+          "end_char": 12439,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S036",
+              "segment_start": 211,
+              "segment_end": 269,
+              "start_char": 12381,
+              "end_char": 12439
+            }
+          ],
+          "original_locator": {
+            "line_start": 36,
+            "line_end": 36,
+            "start_char": 12170,
+            "end_char": 12785
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC022:S052",
+          "material_id": "M001",
+          "quote": "control. P is open the file in this project",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 16112,
+          "end_char": 16155,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S052",
+              "segment_start": 1258,
+              "segment_end": 1301,
+              "start_char": 16112,
+              "end_char": 16155
+            }
+          ],
+          "original_locator": {
+            "line_start": 52,
+            "line_end": 52,
+            "start_char": 14854,
+            "end_char": 17255
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S016",
+          "DOC022:S036",
+          "DOC022:S052"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "定制：T016「install a bunch of like cool plugins」",
+          "定制：T036「customize like, which shortcut I want to activate it」",
+          "实例：T052「control. P is open the file in this project」"
+        ],
+        "unsupported_parts": [
+          "「看起来很酷」是审美偏好，非功能指标",
+          "未说明定制的边界（哪些不愿改）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取定制行为",
+          "2. 取快捷键实例",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T015 说会装插件、改界面，T035 说快捷键与外观都可在配置文件里改。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "本地环境可深度定制：外观、快捷键、语法主题都按自己习惯来。",
+        "label": "direct",
+        "rationale": "T015 说会装插件、改界面，T035 说快捷键与外观都可在配置文件里改。",
+        "supported_parts": [
+          "定制：T016「install a bunch of like cool plugins」",
+          "定制：T036「customize like, which shortcut I want to activate it」",
+          "实例：T052「control. P is open the file in this project」"
+        ],
+        "unsupported_parts": [
+          "「看起来很酷」是审美偏好，非功能指标",
+          "未说明定制的边界（哪些不愿改）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取定制行为",
+          "2. 取快捷键实例",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C004",
+      "target_kind": "candidate",
+      "statement": "全部操作靠键盘完成，手不离键盘以提升效率。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC022:S056",
+          "material_id": "M001",
+          "quote": "everything you do is on the keyboard",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19103,
+          "end_char": 19139,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S056",
+              "segment_start": 1309,
+              "segment_end": 1345,
+              "start_char": 19103,
+              "end_char": 19139
+            }
+          ],
+          "original_locator": {
+            "line_start": 56,
+            "line_end": 56,
+            "start_char": 17794,
+            "end_char": 20204
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC022:S064",
+          "material_id": "M001",
+          "quote": "keep keeping your hands on the keyboard. Just do improve your efficiency",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 23764,
+          "end_char": 23836,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S064",
+              "segment_start": 695,
+              "segment_end": 767,
+              "start_char": 23764,
+              "end_char": 23836
+            }
+          ],
+          "original_locator": {
+            "line_start": 64,
+            "line_end": 64,
+            "start_char": 23069,
+            "end_char": 23931
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S056",
+          "DOC022:S064"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "方式：T056「everything you do is on the keyboard」",
+          "理由：T064「keep keeping your hands on the keyboard. Just do improve your efficiency」"
+        ],
+        "unsupported_parts": [
+          "未给出效率提升的量化",
+          "未说明鼠标在何种操作上仍不可替代"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取操作方式",
+          "2. 取效率理由",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T055 说全部操作都在键盘上、手不离键盘，T063 明确把这一点归为效率。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "全部操作靠键盘完成，手不离键盘以提升效率。",
+        "label": "direct",
+        "rationale": "T055 说全部操作都在键盘上、手不离键盘，T063 明确把这一点归为效率。",
+        "supported_parts": [
+          "方式：T056「everything you do is on the keyboard」",
+          "理由：T064「keep keeping your hands on the keyboard. Just do improve your efficiency」"
+        ],
+        "unsupported_parts": [
+          "未给出效率提升的量化",
+          "未说明鼠标在何种操作上仍不可替代"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取操作方式",
+          "2. 取效率理由",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C005",
+      "target_kind": "candidate",
+      "statement": "在大型项目里按文件名快速定位文件，并能跨文件全局搜索。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC022:S034",
+          "material_id": "M001",
+          "quote": "I can install like fuzzy search in in my, in my vein",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 11031,
+          "end_char": 11083,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S034",
+              "segment_start": 412,
+              "segment_end": 464,
+              "start_char": 11031,
+              "end_char": 11083
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 10619,
+            "end_char": 12062
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC022:S042",
+          "material_id": "M001",
+          "quote": "helps you to find the file by its name",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13195,
+          "end_char": 13233,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S042",
+              "segment_start": 68,
+              "segment_end": 106,
+              "start_char": 13195,
+              "end_char": 13233
+            }
+          ],
+          "original_locator": {
+            "line_start": 42,
+            "line_end": 42,
+            "start_char": 13127,
+            "end_char": 14120
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC022:S042",
+          "material_id": "M001",
+          "quote": "you can search the stream across every files in your project",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13971,
+          "end_char": 14031,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S042",
+              "segment_start": 844,
+              "segment_end": 904,
+              "start_char": 13971,
+              "end_char": 14031
+            }
+          ],
+          "original_locator": {
+            "line_start": 42,
+            "line_end": 42,
+            "start_char": 13127,
+            "end_char": 14120
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S034",
+          "DOC022:S042",
+          "DOC022:S042"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "手段：T034「install like fuzzy search」",
+          "用途：T042「find the file by its name」",
+          "用途：T042「search the stream across every files in your project」"
+        ],
+        "unsupported_parts": [
+          "未说明项目规模阈值",
+          "未提搜索性能要求"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取工具",
+          "2. 取两种用途",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T033 说装了模糊搜索插件，T041 说明它按文件名找文件、也能跨文件搜字符串。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在大型项目里按文件名快速定位文件，并能跨文件全局搜索。",
+        "label": "direct",
+        "rationale": "T033 说装了模糊搜索插件，T041 说明它按文件名找文件、也能跨文件搜字符串。",
+        "supported_parts": [
+          "手段：T034「install like fuzzy search」",
+          "用途：T042「find the file by its name」",
+          "用途：T042「search the stream across every files in your project」"
+        ],
+        "unsupported_parts": [
+          "未说明项目规模阈值",
+          "未提搜索性能要求"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取工具",
+          "2. 取两种用途",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C006",
+      "target_kind": "candidate",
+      "statement": "在同一个终端窗口内分屏：一边编辑、一边执行，立刻看到运行结果。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC022:S052",
+          "material_id": "M001",
+          "quote": "I will split the tmox split the window into half, and one is for command line one is for vim",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15228,
+          "end_char": 15320,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S052",
+              "segment_start": 374,
+              "segment_end": 466,
+              "start_char": 15228,
+              "end_char": 15320
+            }
+          ],
+          "original_locator": {
+            "line_start": 52,
+            "line_end": 52,
+            "start_char": 14854,
+            "end_char": 17255
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC022:S052",
+          "material_id": "M001",
+          "quote": "I will execute the code. There, I can. I can just see the result immediately",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 16749,
+          "end_char": 16825,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S052",
+              "segment_start": 1895,
+              "segment_end": 1971,
+              "start_char": 16749,
+              "end_char": 16825
+            }
+          ],
+          "original_locator": {
+            "line_start": 52,
+            "line_end": 52,
+            "start_char": 14854,
+            "end_char": 17255
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S052",
+          "DOC022:S052"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "布局：T052「split the window into half, and one is for command line one is for vim」",
+          "收益：T052「execute the code. There, I can. I can just see the result immediately」"
+        ],
+        "unsupported_parts": [
+          "未说明是否使用调试器或断点",
+          "未说明多窗口管理的痛点"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取布局",
+          "2. 取收益",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T051 描述 tmux 左右分屏，一边命令行一边 vim，改完立刻执行看结果。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在同一个终端窗口内分屏：一边编辑、一边执行，立刻看到运行结果。",
+        "label": "direct",
+        "rationale": "T051 描述 tmux 左右分屏，一边命令行一边 vim，改完立刻执行看结果。",
+        "supported_parts": [
+          "布局：T052「split the window into half, and one is for command line one is for vim」",
+          "收益：T052「execute the code. There, I can. I can just see the result immediately」"
+        ],
+        "unsupported_parts": [
+          "未说明是否使用调试器或断点",
+          "未说明多窗口管理的痛点"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取布局",
+          "2. 取收益",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C007",
+      "target_kind": "candidate",
+      "statement": "从编码、提交、评审到部署与线上监控，尽量在同一工具内完成。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC022:S082",
+          "material_id": "M001",
+          "quote": "the whole pipeline is integrating Vs code like",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 32810,
+          "end_char": 32856,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S082",
+              "segment_start": 1449,
+              "segment_end": 1495,
+              "start_char": 32810,
+              "end_char": 32856
+            }
+          ],
+          "original_locator": {
+            "line_start": 82,
+            "line_end": 82,
+            "start_char": 31361,
+            "end_char": 33174
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC022:S088",
+          "material_id": "M001",
+          "quote": "Everything can be finished on Vs code",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 35476,
+          "end_char": 35513,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S088",
+              "segment_start": 1831,
+              "segment_end": 1868,
+              "start_char": 35476,
+              "end_char": 35513
+            }
+          ],
+          "original_locator": {
+            "line_start": 88,
+            "line_end": 88,
+            "start_char": 33645,
+            "end_char": 36008
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC022:S092",
+          "material_id": "M001",
+          "quote": "There's a extension on the Vs code",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 37537,
+          "end_char": 37571,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S092",
+              "segment_start": 1164,
+              "segment_end": 1198,
+              "start_char": 37537,
+              "end_char": 37571
+            }
+          ],
+          "original_locator": {
+            "line_start": 92,
+            "line_end": 92,
+            "start_char": 36373,
+            "end_char": 37578
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S082",
+          "DOC022:S088",
+          "DOC022:S092"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "判断：T082「the whole pipeline is integrating Vs code」",
+          "范围：T088「Everything can be finished on Vs code」",
+          "机制：T092「There's a extension on the Vs code」"
+        ],
+        "unsupported_parts": [
+          "「监控」仅举例 Datadog/Kibana 扩展，未验证实际体验",
+          "未说明是否愿意为此牺牲轻量"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取整体判断",
+          "2. 取范围与机制",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T081 说整条流水线正在被收进 VS Code，T087 逐项列出编码/推送/评审/部署/监控都可在其中完成。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "从编码、提交、评审到部署与线上监控，尽量在同一工具内完成。",
+        "label": "direct",
+        "rationale": "T081 说整条流水线正在被收进 VS Code，T087 逐项列出编码/推送/评审/部署/监控都可在其中完成。",
+        "supported_parts": [
+          "判断：T082「the whole pipeline is integrating Vs code」",
+          "范围：T088「Everything can be finished on Vs code」",
+          "机制：T092「There's a extension on the Vs code」"
+        ],
+        "unsupported_parts": [
+          "「监控」仅举例 Datadog/Kibana 扩展，未验证实际体验",
+          "未说明是否愿意为此牺牲轻量"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取整体判断",
+          "2. 取范围与机制",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C008",
+      "target_kind": "candidate",
+      "statement": "编辑器必须支持插件/扩展，好把工具装配到满足自己的全部需求。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC022:S104",
+          "material_id": "M001",
+          "quote": "there's a must for editor",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 40306,
+          "end_char": 40331,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S104",
+              "segment_start": 68,
+              "segment_end": 93,
+              "start_char": 40306,
+              "end_char": 40331
+            }
+          ],
+          "original_locator": {
+            "line_start": 104,
+            "line_end": 104,
+            "start_char": 40238,
+            "end_char": 40952
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC022:S104",
+          "material_id": "M001",
+          "quote": "The the editor must supports plugins or extensions",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 40832,
+          "end_char": 40882,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S104",
+              "segment_start": 594,
+              "segment_end": 644,
+              "start_char": 40832,
+              "end_char": 40882
+            }
+          ],
+          "original_locator": {
+            "line_start": 104,
+            "line_end": 104,
+            "start_char": 40238,
+            "end_char": 40952
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S104",
+          "DOC022:S104"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "必要性：T104「there's a must for editor」",
+          "要求：T104「The the editor must supports plugins or extensions」"
+        ],
+        "unsupported_parts": [
+          "未说明可接受的最低生态规模",
+          "未区分官方插件与第三方"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取必要性陈述",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T103 明确说插件/扩展对编辑器是「must」，否则无法满足开发者的全部需求。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "编辑器必须支持插件/扩展，好把工具装配到满足自己的全部需求。",
+        "label": "direct",
+        "rationale": "T103 明确说插件/扩展对编辑器是「must」，否则无法满足开发者的全部需求。",
+        "supported_parts": [
+          "必要性：T104「there's a must for editor」",
+          "要求：T104「The the editor must supports plugins or extensions」"
+        ],
+        "unsupported_parts": [
+          "未说明可接受的最低生态规模",
+          "未区分官方插件与第三方"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取必要性陈述",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C009",
+      "target_kind": "candidate",
+      "statement": "装扩展应像应用商店一样：可搜索、可看文档与评分，再一键安装。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC022:S098",
+          "material_id": "M001",
+          "quote": "just go to the marketplace and search the extension you want",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 39428,
+          "end_char": 39488,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S098",
+              "segment_start": 367,
+              "segment_end": 427,
+              "start_char": 39428,
+              "end_char": 39488
+            }
+          ],
+          "original_locator": {
+            "line_start": 98,
+            "line_end": 98,
+            "start_char": 39061,
+            "end_char": 39845
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC022:S098",
+          "material_id": "M001",
+          "quote": "You can see the ratings",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 39602,
+          "end_char": 39625,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S098",
+              "segment_start": 541,
+              "segment_end": 564,
+              "start_char": 39602,
+              "end_char": 39625
+            }
+          ],
+          "original_locator": {
+            "line_start": 98,
+            "line_end": 98,
+            "start_char": 39061,
+            "end_char": 39845
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S098",
+          "DOC022:S098"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "方式：T098「go to the marketplace and search the extension you want」",
+          "可评估：T098「You can see the ratings」"
+        ],
+        "unsupported_parts": [
+          "未说明评分是否影响他的选择",
+          "未说明对自动更新的态度"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取安装方式",
+          "2. 取评估信号",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T097 对比 VS Code 的应用商店式安装：搜索、看文档与评分、一键装。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "装扩展应像应用商店一样：可搜索、可看文档与评分，再一键安装。",
+        "label": "direct",
+        "rationale": "T097 对比 VS Code 的应用商店式安装：搜索、看文档与评分、一键装。",
+        "supported_parts": [
+          "方式：T098「go to the marketplace and search the extension you want」",
+          "可评估：T098「You can see the ratings」"
+        ],
+        "unsupported_parts": [
+          "未说明评分是否影响他的选择",
+          "未说明对自动更新的态度"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取安装方式",
+          "2. 取评估信号",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C010",
+      "target_kind": "candidate",
+      "statement": "编辑器背后有活跃社区，遇到问题能查到别人的解法。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC022:S110",
+          "material_id": "M001",
+          "quote": "when it has a community, you can, you can see how people solve issues",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 42070,
+          "end_char": 42139,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S110",
+              "segment_start": 613,
+              "segment_end": 682,
+              "start_char": 42070,
+              "end_char": 42139
+            }
+          ],
+          "original_locator": {
+            "line_start": 110,
+            "line_end": 110,
+            "start_char": 41457,
+            "end_char": 42787
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC022:S110",
+          "material_id": "M001",
+          "quote": "How big is the community",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 42575,
+          "end_char": 42599,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S110",
+              "segment_start": 1118,
+              "segment_end": 1142,
+              "start_char": 42575,
+              "end_char": 42599
+            }
+          ],
+          "original_locator": {
+            "line_start": 110,
+            "line_end": 110,
+            "start_char": 41457,
+            "end_char": 42787
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S110",
+          "DOC022:S110"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "价值：T110「you can see how people solve issues」",
+          "判据：T110「How big is the community」"
+        ],
+        "unsupported_parts": [
+          "未说明社区活跃度的判断方式",
+          "未提官方支持渠道"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取价值",
+          "2. 取判据",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T109 说社区的价值在于能看到别人怎么解决问题，且规模比平台更重要。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "编辑器背后有活跃社区，遇到问题能查到别人的解法。",
+        "label": "direct",
+        "rationale": "T109 说社区的价值在于能看到别人怎么解决问题，且规模比平台更重要。",
+        "supported_parts": [
+          "价值：T110「you can see how people solve issues」",
+          "判据：T110「How big is the community」"
+        ],
+        "unsupported_parts": [
+          "未说明社区活跃度的判断方式",
+          "未提官方支持渠道"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取价值",
+          "2. 取判据",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC022-C011",
+      "target_kind": "candidate",
+      "statement": "写代码时获得语言相关的语法高亮与缩进支持，让代码更易读。",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC022:S010",
+          "material_id": "M001",
+          "quote": "you may have to like, like customize like in indent distance, or some like highlighting",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1434,
+          "end_char": 1521,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S010",
+              "segment_start": 329,
+              "segment_end": 416,
+              "start_char": 1434,
+              "end_char": 1521
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 1105,
+            "end_char": 1774
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC022:S012",
+          "material_id": "M001",
+          "quote": "The syntax highlighting will help you like read the code better",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2940,
+          "end_char": 3003,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:S012",
+              "segment_start": 1022,
+              "segment_end": 1085,
+              "start_char": 2940,
+              "end_char": 3003
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 1918,
+            "end_char": 3104
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:S010",
+          "DOC022:S012"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "能力：T010「customize like in indent distance, or some like highlighting」",
+          "作用：T012「The syntax highlighting will help you like read the code better」"
+        ],
+        "unsupported_parts": [
+          "属编辑器基础能力，不含个性化判断",
+          "未说明支持哪些语言"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取作用",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T009 说代码空间要适配语言、提供缩进与高亮，T011 说明高亮帮助读代码。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "写代码时获得语言相关的语法高亮与缩进支持，让代码更易读。",
+        "label": "direct",
+        "rationale": "T009 说代码空间要适配语言、提供缩进与高亮，T011 说明高亮帮助读代码。",
+        "supported_parts": [
+          "能力：T010「customize like in indent distance, or some like highlighting」",
+          "作用：T012「The syntax highlighting will help you like read the code better」"
+        ],
+        "unsupported_parts": [
+          "属编辑器基础能力，不含个性化判断",
+          "未说明支持哪些语言"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取作用",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC022\\tracing\\semantic-judgments.json",
+    "sha256": "1a55e85d21a62f0f8b45ebfa90daa4e2e953745ec3b1822e6bf562a60ec18b8f"
+  }
+}

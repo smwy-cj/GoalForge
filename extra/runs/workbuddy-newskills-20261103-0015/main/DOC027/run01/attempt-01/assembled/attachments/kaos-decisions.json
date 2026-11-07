@@ -1,0 +1,70 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "58401340a0cfc3f2f6d42500446c0272942371d23b515907df648d997c0ba88f",
+    "judgments_sha256": "3b4c97fda58b49aee51cc6a4bb61e29ccc86e00525d36812bd145b020d3fbe09"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC027-goal-model",
+      "message": "平台优先级排序（Reddit 因匿名性第一、Signal 因认证/隐私/加密第二、Twitter 因新闻第三；T027/T031）是否应作为独立的平台选择目标？当前按“排名不等于强制要求、也不构成独立结果状态”排除（C009），排序信息未进入目标正文。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC027-goal-model",
+      "message": "本次未建立任何 AND 精化组。已逐项检查：G001 由 G011/G014 精化、G006 由 G012 精化、G009 由 G006/G010 精化、G011 由 G014 精化、G003 由 G002 精化，均无法在原句中找到“整组共同满足父目标”的充分性依据；是否还有遗漏的父目标或整组依据需要补充？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "G013 由 T049 的抱怨（加载中断、回顶部刷新、担心漏帖）推断而来，原文未直接说出“希望持续加载”；是否接受该推断目标，或应降为使用体验问题？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G012",
+      "target_id": "G006",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "数字保险库仅本人可解锁"
+      ],
+      "rationale": "T023 直接把“把备份码保存在数字保险库”与“账号无法被本人以外的人访问”联系起来：保存好凭证/备份码有助于维持账号独占访问。但保存不等于认证机制本身，也不保证所有平台，故为 contribution 而非共同充分精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC027:T023",
+          "quote": "Because that kind of makes me feel like my particular account cannot be accessed by anyone else other than me. because I have those particular code.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G011",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "原句语境是 Instagram 兴趣推荐算法；结论限于平台内容呈现影响可见趋势范围"
+      ],
+      "assumptions": [
+        "多样化内容会带来不同领域的世界趋势信息"
+      ],
+      "rationale": "T081 用“So that I get different kind of like trends that are happening in the world”明示想要不同内容的目的是看到世界各地不同的趋势；内容多样性有助于世界新闻目标，但不保证新闻覆盖，故为 contribution。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC027:T081",
+          "quote": "So that I get different kind of like trends that are happening in the world, things that are happening.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

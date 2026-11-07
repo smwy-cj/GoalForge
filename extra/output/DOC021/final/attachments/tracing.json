@@ -1,0 +1,2329 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC021\\extraction.json",
+    "sha256": "41fb60465b606f88bb2ec3362861136820570c225f9cff2c8222b00452a28d0e",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "36641d2bfb84215d7df889966d8e5953201889c5698e3e593491ccc00017da4d",
+      "input_sha256": "41fb60465b606f88bb2ec3362861136820570c225f9cff2c8222b00452a28d0e"
+    },
+    "bundle_sha256": "faa20bb9cbaf4fad33ae40a0b8dbf14546012a57000321d3f00f2804b651eae3"
+  },
+  "sources": [
+    {
+      "document_id": "DOC021",
+      "expected_hash": "646a2acc644f941cab44967f5214817df0402a11682b42bc5f93959daa6b5b87",
+      "actual_hash": "646a2acc644f941cab44967f5214817df0402a11682b42bc5f93959daa6b5b87",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC021-C001",
+      "target_kind": "candidate",
+      "statement": "搬到新街区或新国家时，找到可租的新住处。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC021:S004",
+          "material_id": "M001",
+          "quote": "Mainly when I move to a new neighborhood or to a new country, I need to find a new place",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 907,
+          "end_char": 995,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S004",
+              "segment_start": 20,
+              "segment_end": 108,
+              "start_char": 907,
+              "end_char": 995
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 887,
+            "end_char": 1063
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC021:S004",
+          "material_id": "M001",
+          "quote": "I usually search on the Internet and use this type of web apps",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1000,
+          "end_char": 1062,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S004",
+              "segment_start": 113,
+              "segment_end": 175,
+              "start_char": 1000,
+              "end_char": 1062
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 887,
+            "end_char": 1063
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S004",
+          "DOC021:S004"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "情境：T003「when I move to a new neighborhood or to a new country」",
+          "需求：T003「I need to find a new place」"
+        ],
+        "unsupported_parts": [
+          "未说明是租还是买（后续提到 rent，倾向租）",
+          "未说明预算与家庭规模"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取触发情境",
+          "2. 取需求句",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T003 直接说明找房的唯一触发情境是迁居，并说明用网络搜索。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "搬到新街区或新国家时，找到可租的新住处。",
+        "label": "direct",
+        "rationale": "T003 直接说明找房的唯一触发情境是迁居，并说明用网络搜索。",
+        "supported_parts": [
+          "情境：T003「when I move to a new neighborhood or to a new country」",
+          "需求：T003「I need to find a new place」"
+        ],
+        "unsupported_parts": [
+          "未说明是租还是买（后续提到 rent，倾向租）",
+          "未说明预算与家庭规模"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取触发情境",
+          "2. 取需求句",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C002",
+      "target_kind": "candidate",
+      "statement": "找到目标地区最主流、当地人最常用的房源平台。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC021:S006",
+          "material_id": "M001",
+          "quote": "I want to be familiar with which websites are the most popular or most used there",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1595,
+          "end_char": 1676,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S006",
+              "segment_start": 236,
+              "segment_end": 317,
+              "start_char": 1595,
+              "end_char": 1676
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 1359,
+            "end_char": 1717
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC021:S006",
+          "material_id": "M001",
+          "quote": "sometimes it's another country",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1560,
+          "end_char": 1590,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S006",
+              "segment_start": 201,
+              "segment_end": 231,
+              "start_char": 1560,
+              "end_char": 1590
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 1359,
+            "end_char": 1717
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S006",
+          "DOC021:S006"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "目标：T005「which websites are the most popular or most used there」",
+          "背景：T005「sometimes it's another country」"
+        ],
+        "unsupported_parts": [
+          "未说明如何判断「最流行」（搜索/口碑/他人推荐）",
+          "未说明需要几个站"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取目标句",
+          "2. 记录跨国背景",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T005 明确说要先弄清当地最流行的房源站，再开始搜。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "找到目标地区最主流、当地人最常用的房源平台。",
+        "label": "direct",
+        "rationale": "T005 明确说要先弄清当地最流行的房源站，再开始搜。",
+        "supported_parts": [
+          "目标：T005「which websites are the most popular or most used there」",
+          "背景：T005「sometimes it's another country」"
+        ],
+        "unsupported_parts": [
+          "未说明如何判断「最流行」（搜索/口碑/他人推荐）",
+          "未说明需要几个站"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取目标句",
+          "2. 记录跨国背景",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C003",
+      "target_kind": "candidate",
+      "statement": "选到合适的街区：预算与需求集中、靠近工作或学校、有本地人推荐。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC021:S008",
+          "material_id": "M001",
+          "quote": "there are options that fits my budget and fits my requirements more clustered in specific neighborhoods",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2148,
+          "end_char": 2251,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S008",
+              "segment_start": 166,
+              "segment_end": 269,
+              "start_char": 2148,
+              "end_char": 2251
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 1982,
+            "end_char": 2639
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC021:S008",
+          "material_id": "M001",
+          "quote": "asking people who lives, for example in that country, if they have any recommendation for the places",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2282,
+          "end_char": 2382,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S008",
+              "segment_start": 300,
+              "segment_end": 400,
+              "start_char": 2282,
+              "end_char": 2382
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 1982,
+            "end_char": 2639
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC021:S008",
+          "material_id": "M001",
+          "quote": "I will usually pick a neighborhood that's close to that area",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2537,
+          "end_char": 2597,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S008",
+              "segment_start": 555,
+              "segment_end": 615,
+              "start_char": 2537,
+              "end_char": 2597
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 1982,
+            "end_char": 2639
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S008",
+          "DOC021:S008",
+          "DOC021:S008"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "依据一：T007「options that fits my budget... more clustered in specific neighborhoods」",
+          "依据二：T007「asking people who lives... if they have any recommendation」",
+          "依据三：T007「pick a neighborhood that's close to that area」"
+        ],
+        "unsupported_parts": [
+          "三条依据的权重未说明",
+          "未提治安、学区等其他常见因素"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取三条依据",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T007 给出选街区的三条依据：房源聚集度、熟人推荐、通勤/就学距离。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "选到合适的街区：预算与需求集中、靠近工作或学校、有本地人推荐。",
+        "label": "direct",
+        "rationale": "T007 给出选街区的三条依据：房源聚集度、熟人推荐、通勤/就学距离。",
+        "supported_parts": [
+          "依据一：T007「options that fits my budget... more clustered in specific neighborhoods」",
+          "依据二：T007「asking people who lives... if they have any recommendation」",
+          "依据三：T007「pick a neighborhood that's close to that area」"
+        ],
+        "unsupported_parts": [
+          "三条依据的权重未说明",
+          "未提治安、学区等其他常见因素"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取三条依据",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C004",
+      "target_kind": "candidate",
+      "statement": "先用硬条件（面积、卧室数、租金上限）圈定候选，再用软条件（设施、观感）细化。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC021:S010",
+          "material_id": "M001",
+          "quote": "I will search by like the size of the place, or sometimes by bedroom counts. and with also a budget limit",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3058,
+          "end_char": 3163,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S010",
+              "segment_start": 177,
+              "segment_end": 282,
+              "start_char": 3058,
+              "end_char": 3163
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 2881,
+            "end_char": 3439
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC021:S010",
+          "material_id": "M001",
+          "quote": "I can start filtering it down, using other non very important criteria, such as if they have, like some amenities",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3209,
+          "end_char": 3322,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S010",
+              "segment_start": 328,
+              "segment_end": 441,
+              "start_char": 3209,
+              "end_char": 3322
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 2881,
+            "end_char": 3439
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S010",
+          "DOC021:S010"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "硬条件：T009「size of the place... bedroom counts... budget limit」",
+          "软条件：T009「non very important criteria, such as... amenities」"
+        ],
+        "unsupported_parts": [
+          "「非很重要」是他自己的分级，未说明阈值",
+          "未说明价格与面积冲突时如何取舍"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两组条件",
+          "2. 记录自述优先级",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T009 明确区分硬条件（面积/卧室/预算）与软条件（设施/观感）并说明先后。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "先用硬条件（面积、卧室数、租金上限）圈定候选，再用软条件（设施、观感）细化。",
+        "label": "direct",
+        "rationale": "T009 明确区分硬条件（面积/卧室/预算）与软条件（设施/观感）并说明先后。",
+        "supported_parts": [
+          "硬条件：T009「size of the place... bedroom counts... budget limit」",
+          "软条件：T009「non very important criteria, such as... amenities」"
+        ],
+        "unsupported_parts": [
+          "「非很重要」是他自己的分级，未说明阈值",
+          "未说明价格与面积冲突时如何取舍"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两组条件",
+          "2. 记录自述优先级",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C005",
+      "target_kind": "candidate",
+      "statement": "通过对方的回复速度与信息完整度判断房源与房东是否可靠，据此缩小候选。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC021:S012",
+          "material_id": "M001",
+          "quote": "how fast they will reply might affect my choices",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3933,
+          "end_char": 3981,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S012",
+              "segment_start": 145,
+              "segment_end": 193,
+              "start_char": 3933,
+              "end_char": 3981
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 3788,
+            "end_char": 4432
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC021:S012",
+          "material_id": "M001",
+          "quote": "some people will not respond as quickly as the others, or not provide enough information",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4094,
+          "end_char": 4182,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S012",
+              "segment_start": 306,
+              "segment_end": 394,
+              "start_char": 4094,
+              "end_char": 4182
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 3788,
+            "end_char": 4432
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC021:S012",
+          "material_id": "M001",
+          "quote": "I'll start with the communication process, which will help me also to narrow down my options",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4339,
+          "end_char": 4431,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S012",
+              "segment_start": 551,
+              "segment_end": 643,
+              "start_char": 4339,
+              "end_char": 4431
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 3788,
+            "end_char": 4432
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S012",
+          "DOC021:S012",
+          "DOC021:S012"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "判据：T011「how fast they will reply might affect my choices」",
+          "判据：T011「not provide enough information」",
+          "用途：T011「help me also to narrow down my options」"
+        ],
+        "unsupported_parts": [
+          "未给出可接受的回复时限",
+          "「态度可疑」无客观标准"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两项判据",
+          "2. 取用途",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T011 明确说回复速度与信息完整度会影响选择，并用于缩小候选。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "通过对方的回复速度与信息完整度判断房源与房东是否可靠，据此缩小候选。",
+        "label": "direct",
+        "rationale": "T011 明确说回复速度与信息完整度会影响选择，并用于缩小候选。",
+        "supported_parts": [
+          "判据：T011「how fast they will reply might affect my choices」",
+          "判据：T011「not provide enough information」",
+          "用途：T011「help me also to narrow down my options」"
+        ],
+        "unsupported_parts": [
+          "未给出可接受的回复时限",
+          "「态度可疑」无客观标准"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两项判据",
+          "2. 取用途",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C006",
+      "target_kind": "candidate",
+      "statement": "知道房源信息最后更新时间，避免依据过期信息做判断。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC021:S020",
+          "material_id": "M001",
+          "quote": "You don't know when was the time the information was lastly updated",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6324,
+          "end_char": 6391,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S020",
+              "segment_start": 169,
+              "segment_end": 236,
+              "start_char": 6324,
+              "end_char": 6391
+            }
+          ],
+          "original_locator": {
+            "line_start": 20,
+            "line_end": 20,
+            "start_char": 6155,
+            "end_char": 7009
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC021:S020",
+          "material_id": "M001",
+          "quote": "It might be like outdated. It might be wrong",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6424,
+          "end_char": 6468,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S020",
+              "segment_start": 269,
+              "segment_end": 313,
+              "start_char": 6424,
+              "end_char": 6468
+            }
+          ],
+          "original_locator": {
+            "line_start": 20,
+            "line_end": 20,
+            "start_char": 6155,
+            "end_char": 7009
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC021:S060",
+          "material_id": "M001",
+          "quote": "to be able to see when it was last updated",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 22426,
+          "end_char": 22468,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S060",
+              "segment_start": 632,
+              "segment_end": 674,
+              "start_char": 22426,
+              "end_char": 22468
+            }
+          ],
+          "original_locator": {
+            "line_start": 60,
+            "line_end": 60,
+            "start_char": 21794,
+            "end_char": 22600
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S020",
+          "DOC021:S020",
+          "DOC021:S060"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "缺失：T020「You don't know when was the time the information was lastly updated」",
+          "后果：T020「outdated. It might be wrong」",
+          "重申：T060「be able to see when it was last updated」"
+        ],
+        "unsupported_parts": [
+          "未说明可接受的更新周期（一周/一月）",
+          "未说明由谁负责更新"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取缺失项",
+          "2. 取后果",
+          "3. 用 T060 佐证优先级",
+          "4. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T019 指出详情页没有更新时间，T059 再次把它列为最想要的信息。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "知道房源信息最后更新时间，避免依据过期信息做判断。",
+        "label": "direct",
+        "rationale": "T019 指出详情页没有更新时间，T059 再次把它列为最想要的信息。",
+        "supported_parts": [
+          "缺失：T020「You don't know when was the time the information was lastly updated」",
+          "后果：T020「outdated. It might be wrong」",
+          "重申：T060「be able to see when it was last updated」"
+        ],
+        "unsupported_parts": [
+          "未说明可接受的更新周期（一周/一月）",
+          "未说明由谁负责更新"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取缺失项",
+          "2. 取后果",
+          "3. 用 T060 佐证优先级",
+          "4. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C007",
+      "target_kind": "candidate",
+      "statement": "清楚知道发出联系后会经历什么、多久有回应。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC021:S022",
+          "material_id": "M001",
+          "quote": "a small visual of the timeline that, like the website, can show me what are the next steps",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7554,
+          "end_char": 7644,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S022",
+              "segment_start": 233,
+              "segment_end": 323,
+              "start_char": 7554,
+              "end_char": 7644
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 7321,
+            "end_char": 8033
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC021:S026",
+          "material_id": "M001",
+          "quote": "I would love like to know if I just proceeded with this option, what will happen when they would they respond to me?",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10347,
+          "end_char": 10463,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S026",
+              "segment_start": 642,
+              "segment_end": 758,
+              "start_char": 10347,
+              "end_char": 10463
+            }
+          ],
+          "original_locator": {
+            "line_start": 26,
+            "line_end": 26,
+            "start_char": 9705,
+            "end_char": 10596
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC021:S026",
+          "material_id": "M001",
+          "quote": "this a sort of visibility, and like deterministic steps, will make me more happy to to engage in this process",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10486,
+          "end_char": 10595,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S026",
+              "segment_start": 781,
+              "segment_end": 890,
+              "start_char": 10486,
+              "end_char": 10595
+            }
+          ],
+          "original_locator": {
+            "line_start": 26,
+            "line_end": 26,
+            "start_char": 9705,
+            "end_char": 10596
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S022",
+          "DOC021:S026",
+          "DOC021:S026"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "形态：T022「a small visual of the timeline... what are the next steps」",
+          "诉求：T026「what will happen when they would they respond to me」",
+          "效果：T026「deterministic steps, will make me more happy」"
+        ],
+        "unsupported_parts": [
+          "未说明时间线需覆盖到哪一步（看房/签约）",
+          "未说明回复时限的期望值"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取时间线设想",
+          "2. 取预期诉求",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T021 提出用时间线展示后续步骤，T025 明确想知道提交后会怎样、多久回应。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "清楚知道发出联系后会经历什么、多久有回应。",
+        "label": "direct",
+        "rationale": "T021 提出用时间线展示后续步骤，T025 明确想知道提交后会怎样、多久回应。",
+        "supported_parts": [
+          "形态：T022「a small visual of the timeline... what are the next steps」",
+          "诉求：T026「what will happen when they would they respond to me」",
+          "效果：T026「deterministic steps, will make me more happy」"
+        ],
+        "unsupported_parts": [
+          "未说明时间线需覆盖到哪一步（看房/签约）",
+          "未说明回复时限的期望值"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取时间线设想",
+          "2. 取预期诉求",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C008",
+      "target_kind": "candidate",
+      "statement": "表达意向时不必提交全部个人信息与精确需求。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC021:S024",
+          "material_id": "M001",
+          "quote": "when you're searching for a house, you're not necessarily having all these informations",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8665,
+          "end_char": 8752,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S024",
+              "segment_start": 275,
+              "segment_end": 362,
+              "start_char": 8665,
+              "end_char": 8752
+            }
+          ],
+          "original_locator": {
+            "line_start": 24,
+            "line_end": 24,
+            "start_char": 8390,
+            "end_char": 9480
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC021:S024",
+          "material_id": "M001",
+          "quote": "all of them are required fields, and you still don't know a lot about the one who is providing this house",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9066,
+          "end_char": 9171,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S024",
+              "segment_start": 676,
+              "segment_end": 781,
+              "start_char": 9066,
+              "end_char": 9171
+            }
+          ],
+          "original_locator": {
+            "line_start": 24,
+            "line_end": 24,
+            "start_char": 8390,
+            "end_char": 9480
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC021:S028",
+          "material_id": "M001",
+          "quote": "before that step I think it's not necessary to give all the information",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 11169,
+          "end_char": 11240,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S028",
+              "segment_start": 281,
+              "segment_end": 352,
+              "start_char": 11169,
+              "end_char": 11240
+            }
+          ],
+          "original_locator": {
+            "line_start": 28,
+            "line_end": 28,
+            "start_char": 10888,
+            "end_char": 11373
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S024",
+          "DOC021:S024",
+          "DOC021:S028"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "问题：T024「all of them are required fields」",
+          "理由：T024「you're not necessarily having all these informations」",
+          "替代：T028「before that step I think it's not necessary to give all the information」"
+        ],
+        "unsupported_parts": [
+          "未说明哪些字段可接受为必填",
+          "未说明愿在何种条件下提供手机号"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取必填项问题",
+          "2. 取替代顺序",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T023 逐项列出必填字段并说明自己常常并不掌握，T027 提出先确认再给信息。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "表达意向时不必提交全部个人信息与精确需求。",
+        "label": "direct",
+        "rationale": "T023 逐项列出必填字段并说明自己常常并不掌握，T027 提出先确认再给信息。",
+        "supported_parts": [
+          "问题：T024「all of them are required fields」",
+          "理由：T024「you're not necessarily having all these informations」",
+          "替代：T028「before that step I think it's not necessary to give all the information」"
+        ],
+        "unsupported_parts": [
+          "未说明哪些字段可接受为必填",
+          "未说明愿在何种条件下提供手机号"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取必填项问题",
+          "2. 取替代顺序",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C009",
+      "target_kind": "candidate",
+      "statement": "像电商加购一样，直接对某个具体房源一键表达意向。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC021:S026",
+          "material_id": "M001",
+          "quote": "they can just list it with their specification, and I can have something similar to the concept of. Add to cart",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10067,
+          "end_char": 10178,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S026",
+              "segment_start": 362,
+              "segment_end": 473,
+              "start_char": 10067,
+              "end_char": 10178
+            }
+          ],
+          "original_locator": {
+            "line_start": 26,
+            "line_end": 26,
+            "start_char": 9705,
+            "end_char": 10596
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC021:S026",
+          "material_id": "M001",
+          "quote": "there are limited options in housing, you're not customizing something that doesn't exist",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9916,
+          "end_char": 10005,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S026",
+              "segment_start": 211,
+              "segment_end": 300,
+              "start_char": 9916,
+              "end_char": 10005
+            }
+          ],
+          "original_locator": {
+            "line_start": 26,
+            "line_end": 26,
+            "start_char": 9705,
+            "end_char": 10596
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S026",
+          "DOC021:S026"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "类比：T026「something similar to the concept of. Add to cart」",
+          "理由：T026「there are limited options in housing, you're not customizing」"
+        ],
+        "unsupported_parts": [
+          "未说明加购后如何进入沟通",
+          "未说明是否需要选择具体单元"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取类比",
+          "2. 取理由",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T025 用电商加购类比，提出对具体房源一键表达意向。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "像电商加购一样，直接对某个具体房源一键表达意向。",
+        "label": "direct",
+        "rationale": "T025 用电商加购类比，提出对具体房源一键表达意向。",
+        "supported_parts": [
+          "类比：T026「something similar to the concept of. Add to cart」",
+          "理由：T026「there are limited options in housing, you're not customizing」"
+        ],
+        "unsupported_parts": [
+          "未说明加购后如何进入沟通",
+          "未说明是否需要选择具体单元"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取类比",
+          "2. 取理由",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C010",
+      "target_kind": "candidate",
+      "statement": "不注册、不登录也能直接搜索和浏览全部功能。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC021:S034",
+          "material_id": "M001",
+          "quote": "one of the things that I don't like is actually these extra steps like requiring you to register in the website",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13486,
+          "end_char": 13597,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S034",
+              "segment_start": 658,
+              "segment_end": 769,
+              "start_char": 13486,
+              "end_char": 13597
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 12828,
+            "end_char": 13862
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC021:S044",
+          "material_id": "M001",
+          "quote": "sometimes it's weird to to be like to be enforced to register or log in",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 16422,
+          "end_char": 16493,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S044",
+              "segment_start": 45,
+              "segment_end": 116,
+              "start_char": 16422,
+              "end_char": 16493
+            }
+          ],
+          "original_locator": {
+            "line_start": 44,
+            "line_end": 44,
+            "start_char": 16377,
+            "end_char": 16858
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC021:S044",
+          "material_id": "M001",
+          "quote": "It could be optional thing like if you want your information saved",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 16655,
+          "end_char": 16721,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S044",
+              "segment_start": 278,
+              "segment_end": 344,
+              "start_char": 16655,
+              "end_char": 16721
+            }
+          ],
+          "original_locator": {
+            "line_start": 44,
+            "line_end": 44,
+            "start_char": 16377,
+            "end_char": 16858
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S034",
+          "DOC021:S044",
+          "DOC021:S044"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "反感：T034「these extra steps like requiring you to register」",
+          "诉求：T044「It could be optional thing」",
+          "理由：T044「there is no need for such personalization」"
+        ],
+        "unsupported_parts": [
+          "未说明若注册可选，收藏等功能如何处理",
+          "未说明是否接受第三方登录"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取反感点",
+          "2. 取诉求与理由",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T033 把强制注册列为劝退项，T043 明确说应改为可选。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "不注册、不登录也能直接搜索和浏览全部功能。",
+        "label": "direct",
+        "rationale": "T033 把强制注册列为劝退项，T043 明确说应改为可选。",
+        "supported_parts": [
+          "反感：T034「these extra steps like requiring you to register」",
+          "诉求：T044「It could be optional thing」",
+          "理由：T044「there is no need for such personalization」"
+        ],
+        "unsupported_parts": [
+          "未说明若注册可选，收藏等功能如何处理",
+          "未说明是否接受第三方登录"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取反感点",
+          "2. 取诉求与理由",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C011",
+      "target_kind": "candidate",
+      "statement": "能在地图上画圈选区，而不只按街区名检索。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC021:S034",
+          "material_id": "M001",
+          "quote": "they provide sometimes a map with a drawing tool where you can just draw a circle around the place you're interested in",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12892,
+          "end_char": 13011,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S034",
+              "segment_start": 64,
+              "segment_end": 183,
+              "start_char": 12892,
+              "end_char": 13011
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 12828,
+            "end_char": 13862
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC021:S034",
+          "material_id": "M001",
+          "quote": "if there is a very good option just 2 meters away, it will not be considered",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13155,
+          "end_char": 13231,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S034",
+              "segment_start": 327,
+              "segment_end": 403,
+              "start_char": 13155,
+              "end_char": 13231
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 12828,
+            "end_char": 13862
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S034",
+          "DOC021:S034"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "偏好：T034「a map with a drawing tool where you can just draw a circle」",
+          "理由：T034「if there is a very good option just 2 meters away, it will not be considered」"
+        ],
+        "unsupported_parts": [
+          "未说明是否希望画多个区域",
+          "未说明与街区筛选如何并存"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取偏好",
+          "2. 取理由",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T033 说喜欢地图画圈，并说明按街区名检索会漏掉边界外的合适房源。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "能在地图上画圈选区，而不只按街区名检索。",
+        "label": "direct",
+        "rationale": "T033 说喜欢地图画圈，并说明按街区名检索会漏掉边界外的合适房源。",
+        "supported_parts": [
+          "偏好：T034「a map with a drawing tool where you can just draw a circle」",
+          "理由：T034「if there is a very good option just 2 meters away, it will not be considered」"
+        ],
+        "unsupported_parts": [
+          "未说明是否希望画多个区域",
+          "未说明与街区筛选如何并存"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取偏好",
+          "2. 取理由",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C012",
+      "target_kind": "candidate",
+      "statement": "看到真实住户的评价，用来判断房源与房东是否可信。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC021:S034",
+          "material_id": "M001",
+          "quote": "another thing that I like is providing reviews",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13312,
+          "end_char": 13358,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S034",
+              "segment_start": 484,
+              "segment_end": 530,
+              "start_char": 13312,
+              "end_char": 13358
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 12828,
+            "end_char": 13862
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0030",
+          "source_id": "DOC021:S034",
+          "material_id": "M001",
+          "quote": "reviews from people, makes. makes places feel more trusted",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13368,
+          "end_char": 13426,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S034",
+              "segment_start": 540,
+              "segment_end": 598,
+              "start_char": 13368,
+              "end_char": 13426
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 12828,
+            "end_char": 13862
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0031",
+          "source_id": "DOC021:S070",
+          "material_id": "M001",
+          "quote": "sometimes it also includes reviews from people who who has lived there",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 24129,
+          "end_char": 24199,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S070",
+              "segment_start": 322,
+              "segment_end": 392,
+              "start_char": 24129,
+              "end_char": 24199
+            }
+          ],
+          "original_locator": {
+            "line_start": 70,
+            "line_end": 70,
+            "start_char": 23807,
+            "end_char": 24312
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S034",
+          "DOC021:S034",
+          "DOC021:S070"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "偏好：T034「another thing that I like is providing reviews」",
+          "作用：T034「makes places feel more trusted」",
+          "现状：T070「reviews from people who who has lived there」"
+        ],
+        "unsupported_parts": [
+          "未说明评价需要什么结构（评分/文字/时间）",
+          "未说明是否担心刷评"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取偏好与作用",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T033 把评价列为喜欢的功能，并说明它带来可信度。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "看到真实住户的评价，用来判断房源与房东是否可信。",
+        "label": "direct",
+        "rationale": "T033 把评价列为喜欢的功能，并说明它带来可信度。",
+        "supported_parts": [
+          "偏好：T034「another thing that I like is providing reviews」",
+          "作用：T034「makes places feel more trusted」",
+          "现状：T070「reviews from people who who has lived there」"
+        ],
+        "unsupported_parts": [
+          "未说明评价需要什么结构（评分/文字/时间）",
+          "未说明是否担心刷评"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取偏好与作用",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C013",
+      "target_kind": "candidate",
+      "statement": "收藏的房源能在导航栏或一级菜单里找到。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0032",
+          "source_id": "DOC021:S036",
+          "material_id": "M001",
+          "quote": "there is a button called favorites",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 14165,
+          "end_char": 14199,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S036",
+              "segment_start": 102,
+              "segment_end": 136,
+              "start_char": 14165,
+              "end_char": 14199
+            }
+          ],
+          "original_locator": {
+            "line_start": 36,
+            "line_end": 36,
+            "start_char": 14063,
+            "end_char": 14820
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0033",
+          "source_id": "DOC021:S036",
+          "material_id": "M001",
+          "quote": "I can't find where where it's saving it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 14328,
+          "end_char": 14367,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S036",
+              "segment_start": 265,
+              "segment_end": 304,
+              "start_char": 14328,
+              "end_char": 14367
+            }
+          ],
+          "original_locator": {
+            "line_start": 36,
+            "line_end": 36,
+            "start_char": 14063,
+            "end_char": 14820
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0034",
+          "source_id": "DOC021:S040",
+          "material_id": "M001",
+          "quote": "It should be like on the nav bar, or at least at the menu, at the like 1st level of the menu",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15705,
+          "end_char": 15797,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S040",
+              "segment_start": 20,
+              "segment_end": 112,
+              "start_char": 15705,
+              "end_char": 15797
+            }
+          ],
+          "original_locator": {
+            "line_start": 40,
+            "line_end": 40,
+            "start_char": 15685,
+            "end_char": 15897
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S036",
+          "DOC021:S036",
+          "DOC021:S040"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "问题：T038「I can't find where where it's saving it」",
+          "期望：T040「on the nav bar, or at least at the menu, at the like 1st level」"
+        ],
+        "unsupported_parts": [
+          "更像缺陷修复诉求，而非新增能力",
+          "未说明收藏是否需要跨设备同步"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题",
+          "2. 取期望位置",
+          "3. 记录其缺陷属性",
+          "4. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T035 说点了收藏却找不到存哪里，T039 明确期望入口在导航或一级菜单。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "收藏的房源能在导航栏或一级菜单里找到。",
+        "label": "direct",
+        "rationale": "T035 说点了收藏却找不到存哪里，T039 明确期望入口在导航或一级菜单。",
+        "supported_parts": [
+          "问题：T038「I can't find where where it's saving it」",
+          "期望：T040「on the nav bar, or at least at the menu, at the like 1st level」"
+        ],
+        "unsupported_parts": [
+          "更像缺陷修复诉求，而非新增能力",
+          "未说明收藏是否需要跨设备同步"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题",
+          "2. 取期望位置",
+          "3. 记录其缺陷属性",
+          "4. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C014",
+      "target_kind": "candidate",
+      "statement": "把三四个候选房源放在同一屏里对比主要条件。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0035",
+          "source_id": "DOC021:S038",
+          "material_id": "M001",
+          "quote": "I wish, if there is an option for comparison, like, sometimes I like 3 or 4 options like, I want to collect them all in in like a single page",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15035,
+          "end_char": 15176,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S038",
+              "segment_start": 36,
+              "segment_end": 177,
+              "start_char": 15035,
+              "end_char": 15176
+            }
+          ],
+          "original_locator": {
+            "line_start": 38,
+            "line_end": 38,
+            "start_char": 14999,
+            "end_char": 15511
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0036",
+          "source_id": "DOC021:S038",
+          "material_id": "M001",
+          "quote": "I haven't found some website that's applying it",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15235,
+          "end_char": 15282,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S038",
+              "segment_start": 236,
+              "segment_end": 283,
+              "start_char": 15235,
+              "end_char": 15282
+            }
+          ],
+          "original_locator": {
+            "line_start": 38,
+            "line_end": 38,
+            "start_char": 14999,
+            "end_char": 15511
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0037",
+          "source_id": "DOC021:S072",
+          "material_id": "M001",
+          "quote": "I just want to mention it again about comparing between several options",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 24748,
+          "end_char": 24819,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S072",
+              "segment_start": 60,
+              "segment_end": 131,
+              "start_char": 24748,
+              "end_char": 24819
+            }
+          ],
+          "original_locator": {
+            "line_start": 72,
+            "line_end": 72,
+            "start_char": 24688,
+            "end_char": 25448
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S038",
+          "DOC021:S038",
+          "DOC021:S072"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "诉求：T038「I want to collect them all in in like a single page」",
+          "现状：T038「I haven't found some website that's applying it」",
+          "重申：T072「comparing between several options」"
+        ],
+        "unsupported_parts": [
+          "未说明需要对比哪些字段",
+          "未说明对比数量上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求",
+          "2. 取再次强调",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T037 明确想要把三四个候选放在一页对比，T071 结尾再次强调。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "把三四个候选房源放在同一屏里对比主要条件。",
+        "label": "direct",
+        "rationale": "T037 明确想要把三四个候选放在一页对比，T071 结尾再次强调。",
+        "supported_parts": [
+          "诉求：T038「I want to collect them all in in like a single page」",
+          "现状：T038「I haven't found some website that's applying it」",
+          "重申：T072「comparing between several options」"
+        ],
+        "unsupported_parts": [
+          "未说明需要对比哪些字段",
+          "未说明对比数量上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求",
+          "2. 取再次强调",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C015",
+      "target_kind": "candidate",
+      "statement": "筛选时可以自行选择是否纳入「未填写该条件」的房源，避免误筛掉。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0038",
+          "source_id": "DOC021:S052",
+          "material_id": "M001",
+          "quote": "when I just filtered by allowing a pet, they will just show for me the ones that has confirmed",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19357,
+          "end_char": 19451,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S052",
+              "segment_start": 519,
+              "segment_end": 613,
+              "start_char": 19357,
+              "end_char": 19451
+            }
+          ],
+          "original_locator": {
+            "line_start": 52,
+            "line_end": 52,
+            "start_char": 18838,
+            "end_char": 19821
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0039",
+          "source_id": "DOC021:S052",
+          "material_id": "M001",
+          "quote": "I have this fear that maybe I filtered by something, and I missed options that were not entered appropriately",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19711,
+          "end_char": 19820,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S052",
+              "segment_start": 873,
+              "segment_end": 982,
+              "start_char": 19711,
+              "end_char": 19820
+            }
+          ],
+          "original_locator": {
+            "line_start": 52,
+            "line_end": 52,
+            "start_char": 18838,
+            "end_char": 19821
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0040",
+          "source_id": "DOC021:S054",
+          "material_id": "M001",
+          "quote": "maybe if there is like a check box called include, for example, like the options that didn't determine",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 20218,
+          "end_char": 20320,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S054",
+              "segment_start": 234,
+              "segment_end": 336,
+              "start_char": 20218,
+              "end_char": 20320
+            }
+          ],
+          "original_locator": {
+            "line_start": 54,
+            "line_end": 54,
+            "start_char": 19984,
+            "end_char": 20391
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S052",
+          "DOC021:S052",
+          "DOC021:S054"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "问题：T052「they will just show for me the ones that has confirmed」",
+          "担心：T052「I missed options that were not entered appropriately」",
+          "方案：T054「a check box called include」"
+        ],
+        "unsupported_parts": [
+          "未说明默认是否勾选",
+          "未说明对已确认房源的排序影响"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题与担心",
+          "2. 取方案",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T051 说明筛选会漏掉未填写的房源，T053 提出加 include 复选框。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "筛选时可以自行选择是否纳入「未填写该条件」的房源，避免误筛掉。",
+        "label": "direct",
+        "rationale": "T051 说明筛选会漏掉未填写的房源，T053 提出加 include 复选框。",
+        "supported_parts": [
+          "问题：T052「they will just show for me the ones that has confirmed」",
+          "担心：T052「I missed options that were not entered appropriately」",
+          "方案：T054「a check box called include」"
+        ],
+        "unsupported_parts": [
+          "未说明默认是否勾选",
+          "未说明对已确认房源的排序影响"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题与担心",
+          "2. 取方案",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C016",
+      "target_kind": "candidate",
+      "statement": "房源照片有统一拍摄规范，避免过度美化或敷衍。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0041",
+          "source_id": "DOC021:S060",
+          "material_id": "M001",
+          "quote": "People don't put much effort in the pictures which could lead the person to change his mind",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 21894,
+          "end_char": 21985,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S060",
+              "segment_start": 100,
+              "segment_end": 191,
+              "start_char": 21894,
+              "end_char": 21985
+            }
+          ],
+          "original_locator": {
+            "line_start": 60,
+            "line_end": 60,
+            "start_char": 21794,
+            "end_char": 22600
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0042",
+          "source_id": "DOC021:S060",
+          "material_id": "M001",
+          "quote": "some sort of rules that enforces people who own these properties to take the picture in a specific format",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 22122,
+          "end_char": 22227,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S060",
+              "segment_start": 328,
+              "segment_end": 433,
+              "start_char": 22122,
+              "end_char": 22227
+            }
+          ],
+          "original_locator": {
+            "line_start": 60,
+            "line_end": 60,
+            "start_char": 21794,
+            "end_char": 22600
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S060",
+          "DOC021:S060"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "问题：T060「People don't put much effort in the pictures」",
+          "问题：T060「make the pictures look better than the reality」",
+          "设想：T060「rules that enforces people... to take the picture in a specific format」"
+        ],
+        "unsupported_parts": [
+          "未说明如何核查合规",
+          "未说明是否接受平台代拍"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两类照片问题",
+          "2. 取设想",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T059 指出照片质量两极，建议平台规定拍摄规范。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "房源照片有统一拍摄规范，避免过度美化或敷衍。",
+        "label": "direct",
+        "rationale": "T059 指出照片质量两极，建议平台规定拍摄规范。",
+        "supported_parts": [
+          "问题：T060「People don't put much effort in the pictures」",
+          "问题：T060「make the pictures look better than the reality」",
+          "设想：T060「rules that enforces people... to take the picture in a specific format」"
+        ],
+        "unsupported_parts": [
+          "未说明如何核查合规",
+          "未说明是否接受平台代拍"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两类照片问题",
+          "2. 取设想",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC021-C017",
+      "target_kind": "candidate",
+      "statement": "所有租房沟通都在同一个平台内完成。",
+      "document_id": "DOC021",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0043",
+          "source_id": "DOC021:S072",
+          "material_id": "M001",
+          "quote": "It will be great to have all the housing communication in a single place",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 25375,
+          "end_char": 25447,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S072",
+              "segment_start": 687,
+              "segment_end": 759,
+              "start_char": 25375,
+              "end_char": 25447
+            }
+          ],
+          "original_locator": {
+            "line_start": 72,
+            "line_end": 72,
+            "start_char": 24688,
+            "end_char": 25448
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0044",
+          "source_id": "DOC021:S074",
+          "material_id": "M001",
+          "quote": "never try something else, and just keep the communication in in the website",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 26379,
+          "end_char": 26454,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S074",
+              "segment_start": 548,
+              "segment_end": 623,
+              "start_char": 26379,
+              "end_char": 26454
+            }
+          ],
+          "original_locator": {
+            "line_start": 74,
+            "line_end": 74,
+            "start_char": 25831,
+            "end_char": 26455
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0045",
+          "source_id": "DOC021:S018",
+          "material_id": "M001",
+          "quote": "I mainly use this type of platforms like as a way to discover places. But I actually usually proceed with different type of communication outside of these apps",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5821,
+          "end_char": 5980,
+          "candidate_locations": [
+            {
+              "source_id": "DOC021:S018",
+              "segment_start": 342,
+              "segment_end": 501,
+              "start_char": 5821,
+              "end_char": 5980
+            }
+          ],
+          "original_locator": {
+            "line_start": 18,
+            "line_end": 18,
+            "start_char": 5479,
+            "end_char": 5981
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC021:S072",
+          "DOC021:S074",
+          "DOC021:S018"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "诉求：T072「all the housing communication in a single place」",
+          "条件：T074「never try something else, and just keep the communication in in the website」",
+          "现状：T018「proceed with different type of communication outside of these apps」"
+        ],
+        "unsupported_parts": [
+          "未说明平台内沟通需具备哪些具体能力（语音/预约/合同）",
+          "未说明是否接受平台抽佣"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求",
+          "2. 取成立条件",
+          "3. 用现状反证",
+          "4. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T071 明确希望全部沟通留在同一平台，T073 说明条件是不透明导致不信任。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "所有租房沟通都在同一个平台内完成。",
+        "label": "direct",
+        "rationale": "T071 明确希望全部沟通留在同一平台，T073 说明条件是不透明导致不信任。",
+        "supported_parts": [
+          "诉求：T072「all the housing communication in a single place」",
+          "条件：T074「never try something else, and just keep the communication in in the website」",
+          "现状：T018「proceed with different type of communication outside of these apps」"
+        ],
+        "unsupported_parts": [
+          "未说明平台内沟通需具备哪些具体能力（语音/预约/合同）",
+          "未说明是否接受平台抽佣"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求",
+          "2. 取成立条件",
+          "3. 用现状反证",
+          "4. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC021\\tracing\\semantic-judgments.json",
+    "sha256": "1a2d2a5909ffab3fad9d7d463e301a2a00230cea247db6b5c1954a96bf3463a9"
+  }
+}

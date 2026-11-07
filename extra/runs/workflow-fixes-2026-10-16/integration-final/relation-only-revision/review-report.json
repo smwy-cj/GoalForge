@@ -1,0 +1,147 @@
+{
+  "schema_version": "model-review-draft-1",
+  "report_id": "REVIEW-074d76d457790bc2",
+  "mode": "inspect",
+  "input_model": {
+    "file_sha256": "0d335fc42fb4fda6dc8fd5e96ccfa5b01cccdaac5bc6357cce82c4fd2f84d8ad",
+    "model_id": "FIX-goal-model",
+    "version": "v0.1.h1",
+    "core_sha256": "074d76d457790bc22da11de65c1453e4e588b9402380bf8b585846364c1ac384",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "checks": [
+    {
+      "check_id": "integrity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "共享契约、ID、引用、边方向、有向环和关系覆盖检查。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "scope",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查声明的文档范围及证据来源。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "lineage",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查目标与候选双向映射；不自行补造映射。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "representation",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "failed",
+      "evidence": "正向决策与可视化边一致。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "trace_validity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查既有支持状态；不重新推断语义支持。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "attachments",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "核对附件安全路径、可取得性和实际字节哈希。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "human_records",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "只核对已提供意见的文件与版本绑定，不认证审核人身份。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "source_location",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "按 Unicode 码点和半开区间核对原句。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "semantic",
+      "type": "semantic",
+      "scope": "current_model",
+      "status": "not_run",
+      "evidence": "未调用独立语义审查模型；只保留上游判断与待审项。",
+      "execution": "not_run"
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "I-fc1c4a052c24",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P12"
+      ],
+      "evidence_ids": [],
+      "reason": "Changed relation requires renewed evidence review",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-476389a15e6f",
+      "rule_id": "unassessed_relation",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P12"
+      ],
+      "evidence_ids": [],
+      "reason": "Relation has not been reassessed after node changes",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-17e7312e8f3c",
+      "rule_id": "unresolved_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "P12"
+      ],
+      "evidence_ids": [],
+      "reason": "关系尚需人工判断：uncertain",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    }
+  ],
+  "summary": {
+    "structure_status": "failed",
+    "semantic_status": "not_run",
+    "goal_count": 3,
+    "pair_count": 3,
+    "blocking_count": 2,
+    "needs_review_count": 1
+  },
+  "repair_attempts": [],
+  "unresolved_issue_ids": [
+    "I-fc1c4a052c24",
+    "I-476389a15e6f",
+    "I-17e7312e8f3c"
+  ],
+  "limitations": [
+    "结构检查不证明语义正确。",
+    "未执行独立语义审查；模型人工状态来自实际反馈，检查报告自身未获人工确认。"
+  ],
+  "model_human_review_status": "pending",
+  "review_status": "pending"
+}

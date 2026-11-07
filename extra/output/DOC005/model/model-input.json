@@ -1,0 +1,2155 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC005-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "403acec4c3003a594e7025e47e87d818ef1900dfb3d6dd6a2cd5dbe4d41d3d2c"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "1f3ebeba4e4cd394ec811eb82a7399c967f0d0990ef3e809ff9efadb6989f2d1"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "22f6c7bfb3dd8c372a818dc22129b5279cb2a0a0db58ecc95eb77199fe214b87"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "80bf36e1f60b4154c928f32c1b892cf54ac2a943a352a576afc415ef5afb530c"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC005"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC005-G001",
+      "statement": "始终需要背景中有声音/音乐播放（包括考试、高压期等听歌强度下降的时段；不适应静默）",
+      "source_candidate_ids": [
+        "DOC005-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "自评听歌强度 4/5：清醒时间几乎一直听音乐，但非每一刻（T005「a fool」疑为「a four」转写误差，待人工确认）",
+        "考试或高压期自评降至 3-2，但背景声音需求保持",
+        "动机：音乐使其从现实压力中抽离，感到生活仍在继续",
+        "极端假设下（流媒体与 YouTube 均不可用）依次退至电影/Netflix、电视、广播"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005",
+        "E0006"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC005-G005",
+      "statement": "处于特定情绪时，找到与当前情绪精确匹配的歌曲",
+      "source_candidate_ids": [
+        "DOC005-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "占使用时间约 15%",
+        "触发条件：正处于某种特定情绪",
+        "实现手段见动作候选 DOC005-C007（情绪词/关键词搜索公开播放列表）"
+      ],
+      "evidence_ids": [
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC005-G006",
+      "statement": "为心中已有的构想（如编舞、购物场景）找到匹配的歌曲并从中获得灵感",
+      "source_candidate_ids": [
+        "DOC005-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "场景：编舞、购物等有明确构想的场合",
+        "占使用时间约 15%（原文「the other 50%」与「15% and 15%」拆分矛盾，按上下文取 15%）",
+        "实现手段见动作候选 DOC005-C008"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC005-G010",
+      "statement": "发现并比较新歌，确认所选歌曲是可发现范围内相对更合心意的选择（从线上听到的片段出发）",
+      "source_candidate_ids": [
+        "DOC005-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "发现入口：线上听到歌曲片段后回 Spotify 搜索该歌",
+        "新歌发现不限于前述 15% 场景，日常听播放列表时也会发生",
+        "实现手段见动作候选 DOC005-C011"
+      ],
+      "evidence_ids": [
+        "E0010",
+        "E0011",
+        "E0012",
+        "E0013"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC005-G015",
+      "statement": "期望播放列表/推荐中符合自己口味的歌曲占比高（个性化命中率高）",
+      "source_candidate_ids": [
+        "DOC005-C015"
+      ],
+      "origin": "inferred",
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "自述对比：普通播放列表约 3/20，「Made for You」约 10-12/20"
+      ],
+      "evidence_ids": [
+        "E0014"
+      ],
+      "trace_status": "inferred",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC005-G016",
+      "statement": "希望应用首页展示「精选播放列表」：由普通用户（而非仅官方策展人）创建、获得最高人气的公开播放列表",
+      "source_candidate_ids": [
+        "DOC005-C016"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "动机：获得不同视角，非首要出于社交考虑，但包含社交维度",
+        "回应「如果想为应用增加一件事」的提问"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016",
+        "E0017"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC005-G017",
+      "statement": "希望平台基于自己保存与收听的播放列表找到听歌相似的其他用户，并向其推荐对方收听的播放列表",
+      "source_candidate_ids": [
+        "DOC005-C017"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "依据观点：算法无法真正复制人类情感，相似真人的选择可能更可信",
+        "受访者对该想法的实际效果不确定（I'm not sure how much it would work）"
+      ],
+      "evidence_ids": [
+        "E0018",
+        "E0019",
+        "E0020",
+        "E0021"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC005-G018",
+      "statement": "以自建播放列表为核心组织日常听歌（重复播放常用列表），并将播放列表能力视为流媒体服务不可或缺的功能",
+      "source_candidate_ids": [
+        "DOC005-C018"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "典型流程见动作候选 DOC005-C003；播放列表使用约占 70%",
+        "与「Made for You」、环境音并列为三大最重要功能",
+        "T105「Playlist is one made for use」转写含混（made for use 疑指 Made for You）"
+      ],
+      "evidence_ids": [
+        "E0022",
+        "E0023",
+        "E0024",
+        "E0025"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC005-G001",
+      "b": "DOC005-G005",
+      "label": "related",
+      "rationale": "G001 要求清醒时持续有背景声音，G005 决定在特定情绪下播放什么内容，二者分别对应同一听歌行为的存在性维度与内容维度；S034 自述在情绪触发时专门找匹配歌曲，S012 自述该播放需求覆盖全天。但 G001 明确允许非音乐声源（电影/电视/广播）且不要求内容匹配，G005 也未陈述是为满足背景声需求而找歌，故不构成精化；原文未把二者表述为实现路径关系。",
+      "evidence_ids": [
+        "E0001",
+        "E0007"
+      ],
+      "conditions": [
+        "联系性质为同一使用行为的两个维度，非实现路径；如人工认为情绪匹配应作为背景声需求的内容具体化，需另行确认并复评关系。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC005-G001",
+      "b": "DOC005-G006",
+      "label": "related",
+      "rationale": "与 G001-G005 同理：G006 决定在为编舞或购物等构想找歌时播放什么，属内容选择维度；G001 覆盖声音的持续存在。S034 自述构想匹配占部分使用，S012/S080 自述背景声需求持续存在。G001 不要求构想匹配，G006 也不以维持背景声为目的，故非精化。",
+      "evidence_ids": [
+        "E0001",
+        "E0008"
+      ],
+      "conditions": [
+        "联系性质为同一使用行为的两个维度，非实现路径。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC005-G001",
+      "b": "DOC005-G010",
+      "label": "none",
+      "rationale": "G001 关注背景声音的持续存在且不指定内容来源；G010 关注从线上片段出发发现并比较新歌。S012/S080 与 S056 分别描述两类行为，原文未建立二者关系：未说明发现的新歌用于背景播放，也未说明背景声需求依赖新歌发现。评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC005-G001",
+      "b": "DOC005-G015",
+      "label": "none",
+      "rationale": "G001 为存在性维持目标，G015 为对推荐/播放列表口味命中比例的质量期望；S012/S080 与 S086 分属不同话题段，原文未建立关系，也未说明背景播放的满意度取决于命中率。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC005-G001",
+      "b": "DOC005-G016",
+      "label": "none",
+      "rationale": "G016 是对新增功能的期望（首页展示高人气公开播放列表），G001 是对持续背景声的需求。S094 未提及背景播放需求，S012/S080 也未提及首页或列表来源；原文未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC005-G001",
+      "b": "DOC005-G017",
+      "label": "none",
+      "rationale": "G017 为基于听歌相似性的互荐功能期望，G001 为持续背景声需求。S100 未涉及播放的持续性，S012/S080 未涉及推荐来源；S102 关于算法无法复制人类情感的评论是对 G017 自身可行性的说明，不构成与 G001 的联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC005-G001",
+      "b": "DOC005-G018",
+      "label": "related",
+      "rationale": "G018 描述日常听歌的主要承载方式，S034 自述约 70% 的使用经由播放列表，S028 自述以播放列表为入口并重复播放常用列表；这与 G001 的清醒时持续播放共同构成同一日常使用行为的总量与结构。但 G001 不限定承载方式（可退至电影/电视/广播），G018 也不以维持背景声为目的，故非精化。",
+      "evidence_ids": [
+        "E0001",
+        "E0024",
+        "E0025"
+      ],
+      "conditions": [
+        "70% 为受访者自估占比；联系性质为总量与结构的互补描述，非实现路径。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC005-G005",
+      "b": "DOC005-G006",
+      "label": "related",
+      "rationale": "S034 将非播放列表的使用划为两个并列部分：15% 为情绪触发时找匹配歌曲，另一部分为已有构想时找匹配歌曲，二者在原文同一段自述中作为并列使用情形出现，触发条件（情绪状态 vs 心中构想）与对象不同，互不具体化，故为 related 而非 refinement；情境不同，也不满足 equivalent 的归并条件，不据此合并。",
+      "evidence_ids": [
+        "E0007",
+        "E0008"
+      ],
+      "conditions": [
+        "占比划分为受访者口头估算；S034 中同时出现 15%/15% 与 the other 50% 的不自洽表述，已另列为待确认问题。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC005-G005",
+      "b": "DOC005-G010",
+      "label": "related",
+      "rationale": "二者同属寻找特定歌曲的达成型目标，S034 与 S056 均描述以搜索关键词/曲目为入口的行为（S034 搜索情绪词或关键词，S056 搜索具体歌曲后听相似歌曲）。触发条件不同（情绪状态 vs 线上听到的片段），目标对象不同（匹配情绪 vs 相对更合心意的新歌），互不具体化，故为 related。",
+      "evidence_ids": [
+        "E0007",
+        "E0010"
+      ],
+      "conditions": [
+        "联系依据为共享的搜索/浏览手段与同类的找歌性质，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC005-G005",
+      "b": "DOC005-G015",
+      "label": "none",
+      "rationale": "G015 是对推荐/播放列表整体口味命中比例的质量期望（S086），G005 是特定情绪下的精确匹配。原文未说明情绪匹配依赖推荐命中率，也未以命中率评价情绪匹配结果；以推荐命中率支撑情绪精确匹配属原文未陈述的推断。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC005-G005",
+      "b": "DOC005-G016",
+      "label": "related",
+      "rationale": "S034 表明受访者预期他人已按情绪关键词创建公开播放列表（someone might have already created a public playlist），而 G016 正是希望首页展示由普通用户创建、获最高人气的公开播放列表（S094）；二者在'通过他人公开列表获取内容'这一点上相接。但 G016 限定为最高人气的列表而非情绪分类列表，且未表述为服务情绪匹配，故非精化。",
+      "evidence_ids": [
+        "E0007",
+        "E0015"
+      ],
+      "conditions": [
+        "联系依赖'精选列表中存在与当前情绪匹配的列表'这一未陈述假设；G016 的呈现动机是人气与用户来源，不是情绪分类。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC005-G005",
+      "b": "DOC005-G017",
+      "label": "none",
+      "rationale": "G017 的推荐依据是自己保存与收听的播放列表所对应的听歌相似性（S100），未涉及情绪状态；G005 的匹配对象为当前情绪。S102 关于算法不能复制人类情感的评论是提出 G017 的动机说明，未在原文中与情绪匹配目标建立联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC005-G005",
+      "b": "DOC005-G018",
+      "label": "related",
+      "rationale": "S034 将使用划分为约 70% 的播放列表使用与非播放列表部分（其中一部分为情绪触发的匹配找歌），二者在原文同一段占比划分中作为并列使用情形出现；G018 覆盖播放列表为主的日常组织，G005 覆盖情绪触发时的选曲，互不具体化。",
+      "evidence_ids": [
+        "E0007",
+        "E0024"
+      ],
+      "conditions": [
+        "占比为受访者自估；并列关系来自同段自述的占比划分，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC005-G006",
+      "b": "DOC005-G010",
+      "label": "related",
+      "rationale": "二者同属寻找特定歌曲的达成型目标：S034 构想匹配通过热门关键词搜索并浏览不同播放列表与歌曲，S056 新歌发现通过搜索具体歌曲后试听相似歌曲，共享搜索与试听比较的行为方式。触发条件（心中构想 vs 线上片段）与判据（匹配构想、灵感 vs 是否更合心意）不同，互不具体化。",
+      "evidence_ids": [
+        "E0008",
+        "E0010"
+      ],
+      "conditions": [
+        "联系依据为共享的搜索/试听比较行为，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC005-G006",
+      "b": "DOC005-G015",
+      "label": "none",
+      "rationale": "G015 针对推荐与播放列表的口味命中比例（S086），G006 针对已有构想的内容匹配与灵感获取（S034）。原文未以命中率评价构想匹配，也未说明构想匹配依赖推荐质量。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC005-G006",
+      "b": "DOC005-G016",
+      "label": "related",
+      "rationale": "S034 表明构想匹配的实现方式是浏览不同播放列表与歌曲（I try to go through different playlists and songs via search with popular keywords），G016 希望首页展示普通用户创建的高人气公开播放列表（S094），若实现可扩充其可浏览的列表来源。但 G016 未以构想匹配为动机，也未限定主题，故非精化。",
+      "evidence_ids": [
+        "E0008",
+        "E0015"
+      ],
+      "conditions": [
+        "联系依赖'精选列表覆盖其构想场景（如编舞、购物）'这一未陈述假设。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC005-G006",
+      "b": "DOC005-G017",
+      "label": "none",
+      "rationale": "G017 为按听歌相似性推送他人播放列表（S100），G006 为按心中构想主动浏览与搜索。前者是被动个性化推送，后者是主动检索，原文未建立二者关系，也未说明推荐结果用于构想匹配或灵感获取。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC005-G006",
+      "b": "DOC005-G018",
+      "label": "related",
+      "rationale": "S034 将约 70% 的使用归为播放列表、其余部分包含构想触发的找歌，二者在同一段占比划分中作为并列使用情形出现；G018 为日常组织方式，G006 为特定构想触发的选曲，互不具体化。",
+      "evidence_ids": [
+        "E0008",
+        "E0024"
+      ],
+      "conditions": [
+        "占比为受访者自估；并列关系来自同段自述，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC005-G010",
+      "b": "DOC005-G015",
+      "label": "related",
+      "rationale": "二者共享'口味契合'这一判据：G010 以是否有更好选择作为探索准则（Do I like anyone better / is this the best I can find，S056），G015 以喜欢曲目在列表中的占比衡量推荐与播放列表的优劣（S086）。但 G015 针对推荐/播放列表整体的质量期望，G010 针对发现过程中的比较行为，范围不同且互不具体化，故为 related。",
+      "evidence_ids": [
+        "E0010",
+        "E0014"
+      ],
+      "conditions": [
+        "联系依据为共同的口味契合判据；G010 未给出量化比例，G015 未涉及发现过程。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC005-G010",
+      "b": "DOC005-G016",
+      "label": "related",
+      "rationale": "G016 希望首页展示普通用户创建的高人气公开播放列表（S094），若实现可成为接触未听过内容的入口之一，与 G010 的发现新歌取向相接。但 S094 的动机是普通用户来源与最高人气的可见性，未提及新歌发现；S098 受访者确认主要动机不是社交属性，故非精化。",
+      "evidence_ids": [
+        "E0010",
+        "E0015"
+      ],
+      "conditions": [
+        "联系依赖'精选列表包含其未听过的内容'这一未陈述假设；G010 的起点限定为线上片段，G016 的入口为首页精选。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC005-G010",
+      "b": "DOC005-G017",
+      "label": "related",
+      "rationale": "G017 希望平台推荐听歌相似用户所听的播放列表（S100），其实质是引入新的、可能未听过的内容来源，与 G010 的发现新歌取向相接。但 G010 的起点是线上听到的片段并依赖 Spotify 的相似歌曲续播，G017 的来源为相似用户的播放列表，范围与机制不同，互不具体化。",
+      "evidence_ids": [
+        "E0010",
+        "E0018"
+      ],
+      "conditions": [
+        "联系依赖'推荐结果包含其未听过的内容'这一未陈述假设；G017 的可行性在 S104 中被受访者本人质疑。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC005-G010",
+      "b": "DOC005-G018",
+      "label": "none",
+      "rationale": "G018 为以自建播放列表组织日常听歌（S028、S106），G010 为从线上片段出发发现并比较新歌（S056）。原文未说明发现的新歌是否加入播放列表，也未说明播放列表使用依赖新歌发现，评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC005-G015",
+      "b": "DOC005-G016",
+      "label": "none",
+      "rationale": "G015 是口味命中比例的质量期望（S086），G016 是首页展示高人气公开播放列表的功能期望（S094）。后者关注列表的可见性与来源（普通用户而非仅策展人），不涉及命中比例；S086 也未涉及首页或精选机制。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC005-G015",
+      "b": "DOC005-G017",
+      "label": "related",
+      "rationale": "G015 确立的评价标准是曲目与自身口味的契合比例（S086）；G017 提出的互荐结果同样是可被该标准衡量的内容来源。但 G017 的提出依据是听歌相似性而非命中率，原文未以命中率论证该构想，故仅为判据适用层面的联系，非精化。",
+      "evidence_ids": [
+        "E0014",
+        "E0018"
+      ],
+      "conditions": [
+        "联系性质为评价标准可用于衡量 G017 的结果，不代表受访者以命中率为由提出 G017。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC005-G015",
+      "b": "DOC005-G018",
+      "label": "related",
+      "rationale": "S086 直接以播放列表为命中率的评价对象（in a playlist, maybe 3 out of 20 songs that I really like），与 G018 所述的播放列表中心地位（S034 约 70% 使用、S106 最重要功能之一）在同一材料上相接：播放列表既是主要使用方式，也是口味命中率的评价载体。但 G015 是质量期望，G018 是组织方式与功能重要性，性质不同，互不具体化。",
+      "evidence_ids": [
+        "E0014",
+        "E0022",
+        "E0024"
+      ],
+      "conditions": [
+        "3/20 与 10-12/20 为自述估计值；联系体现为评价载体与主要使用方式的一致，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC005-G016",
+      "b": "DOC005-G017",
+      "label": "related",
+      "rationale": "二者同为在采访者'希望新增什么功能'提问（S093）下提出的功能期望，且 S097 追问社交属性时，受访者确认 G016 虽非以此为首要动机但确实涵盖社交方面（S098），与 G017 的人人互荐取向相接。二者提出语境相同、取向部分重叠，但服务对象与机制不同，互不具体化。",
+      "evidence_ids": [
+        "E0015",
+        "E0017",
+        "E0018"
+      ],
+      "conditions": [
+        "S098 明确社交并非 G016 的首要动机，重叠是部分的；联系来自同一提问语境与受访者自述的部分涵盖，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC005-G016",
+      "b": "DOC005-G018",
+      "label": "related",
+      "rationale": "G016 的实现对象仍是播放列表（首页展示的精选公开播放列表，S094），与 G018 所述的播放列表中心地位（S106 最重要功能之一、S034 约 70% 使用）相容；G016 补充的是列表来源与入口，不改变以播放列表组织听歌的方式。但 G016 的列表来自他人，G018 的日常组织以其常用列表为主，来源不同，故非精化。",
+      "evidence_ids": [
+        "E0015",
+        "E0022"
+      ],
+      "conditions": [
+        "联系体现为对象一致（均为播放列表）与方式相容，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC005-G017",
+      "b": "DOC005-G018",
+      "label": "related",
+      "rationale": "G017 的触发数据直接来自 G018 所描述的播放列表使用行为：S100 明确以'我保存与收听的播放列表'作为寻找相似用户的依据，S028 自述以播放列表为入口并重复播放常用列表，S106 确认播放列表为最重要功能之一。二者在'播放列表行为是互荐机制的输入'这一点上相接，但 G017 是新增功能期望、G018 是既有使用方式，性质不同，非精化。",
+      "evidence_ids": [
+        "E0018",
+        "E0022",
+        "E0025"
+      ],
+      "conditions": [
+        "联系依赖'保存与收听的播放列表数据足以刻画听歌相似性'这一未陈述假设；G017 的可行性在 S104 中被受访者本人质疑。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [
+        "联系性质为同一使用行为的两个维度，非实现路径；如人工认为情绪匹配应作为背景声需求的内容具体化，需另行确认并复评关系。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G001",
+      "b": "DOC005-G005"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P002",
+      "conditions": [
+        "联系性质为同一使用行为的两个维度，非实现路径。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G001",
+      "b": "DOC005-G006"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P007",
+      "conditions": [
+        "70% 为受访者自估占比；联系性质为总量与结构的互补描述，非实现路径。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G001",
+      "b": "DOC005-G018"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P008",
+      "conditions": [
+        "占比划分为受访者口头估算；S034 中同时出现 15%/15% 与 the other 50% 的不自洽表述，已另列为待确认问题。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G005",
+      "b": "DOC005-G006"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P009",
+      "conditions": [
+        "联系依据为共享的搜索/浏览手段与同类的找歌性质，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G005",
+      "b": "DOC005-G010"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P011",
+      "conditions": [
+        "联系依赖'精选列表中存在与当前情绪匹配的列表'这一未陈述假设；G016 的呈现动机是人气与用户来源，不是情绪分类。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G005",
+      "b": "DOC005-G016"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P013",
+      "conditions": [
+        "占比为受访者自估；并列关系来自同段自述的占比划分，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G005",
+      "b": "DOC005-G018"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P014",
+      "conditions": [
+        "联系依据为共享的搜索/试听比较行为，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G006",
+      "b": "DOC005-G010"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P016",
+      "conditions": [
+        "联系依赖'精选列表覆盖其构想场景（如编舞、购物）'这一未陈述假设。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G006",
+      "b": "DOC005-G016"
+    },
+    {
+      "edge_id": "R010",
+      "type": "related",
+      "decision_id": "P018",
+      "conditions": [
+        "占比为受访者自估；并列关系来自同段自述，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G006",
+      "b": "DOC005-G018"
+    },
+    {
+      "edge_id": "R011",
+      "type": "related",
+      "decision_id": "P019",
+      "conditions": [
+        "联系依据为共同的口味契合判据；G010 未给出量化比例，G015 未涉及发现过程。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G010",
+      "b": "DOC005-G015"
+    },
+    {
+      "edge_id": "R012",
+      "type": "related",
+      "decision_id": "P020",
+      "conditions": [
+        "联系依赖'精选列表包含其未听过的内容'这一未陈述假设；G010 的起点限定为线上片段，G016 的入口为首页精选。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G010",
+      "b": "DOC005-G016"
+    },
+    {
+      "edge_id": "R013",
+      "type": "related",
+      "decision_id": "P021",
+      "conditions": [
+        "联系依赖'推荐结果包含其未听过的内容'这一未陈述假设；G017 的可行性在 S104 中被受访者本人质疑。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G010",
+      "b": "DOC005-G017"
+    },
+    {
+      "edge_id": "R014",
+      "type": "related",
+      "decision_id": "P024",
+      "conditions": [
+        "联系性质为评价标准可用于衡量 G017 的结果，不代表受访者以命中率为由提出 G017。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G015",
+      "b": "DOC005-G017"
+    },
+    {
+      "edge_id": "R015",
+      "type": "related",
+      "decision_id": "P025",
+      "conditions": [
+        "3/20 与 10-12/20 为自述估计值；联系体现为评价载体与主要使用方式的一致，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G015",
+      "b": "DOC005-G018"
+    },
+    {
+      "edge_id": "R016",
+      "type": "related",
+      "decision_id": "P026",
+      "conditions": [
+        "S098 明确社交并非 G016 的首要动机，重叠是部分的；联系来自同一提问语境与受访者自述的部分涵盖，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G016",
+      "b": "DOC005-G017"
+    },
+    {
+      "edge_id": "R017",
+      "type": "related",
+      "decision_id": "P027",
+      "conditions": [
+        "联系体现为对象一致（均为播放列表）与方式相容，非实现路径关系。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G016",
+      "b": "DOC005-G018"
+    },
+    {
+      "edge_id": "R018",
+      "type": "related",
+      "decision_id": "P028",
+      "conditions": [
+        "联系依赖'保存与收听的播放列表数据足以刻画听歌相似性'这一未陈述假设；G017 的可行性在 S104 中被受访者本人质疑。"
+      ],
+      "review_status": "pending",
+      "a": "DOC005-G017",
+      "b": "DOC005-G018"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC005:S012",
+      "material_id": "M001",
+      "quote": "I still need to have something playing in the background at all",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1068,
+      "end_char": 1131,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S012",
+          "segment_start": 105,
+          "segment_end": 168,
+          "start_char": 1068,
+          "end_char": 1131
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 963,
+        "end_char": 1140
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC005:S080",
+      "material_id": "M001",
+      "quote": "But I always need something playing in the background.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10500,
+      "end_char": 10554,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S080",
+          "segment_start": 293,
+          "segment_end": 347,
+          "start_char": 10500,
+          "end_char": 10554
+        }
+      ],
+      "original_locator": {
+        "line_start": 80,
+        "line_end": 80,
+        "start_char": 10207,
+        "end_char": 10554
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC005:S008",
+      "material_id": "M001",
+      "quote": "Music almost all the time, but not every moment. I'm awake.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 606,
+      "end_char": 665,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S008",
+          "segment_start": 20,
+          "segment_end": 79,
+          "start_char": 606,
+          "end_char": 665
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 586,
+        "end_char": 665
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC005:S012",
+      "material_id": "M001",
+      "quote": "when there are exams or peak stress schedules, maybe drops to a 3 or a 2",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 994,
+      "end_char": 1066,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S012",
+          "segment_start": 31,
+          "segment_end": 103,
+          "start_char": 994,
+          "end_char": 1066
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 963,
+        "end_char": 1140
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC005:S014",
+      "material_id": "M001",
+      "quote": "I think it kind of distracts me from the stress of the real world",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1466,
+      "end_char": 1531,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S014",
+          "segment_start": 20,
+          "segment_end": 85,
+          "start_char": 1466,
+          "end_char": 1531
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 1446,
+        "end_char": 1658
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC005:S080",
+      "material_id": "M001",
+      "quote": "So I'm someone who doesn't really do well with silence in the background.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10257,
+      "end_char": 10330,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S080",
+          "segment_start": 50,
+          "segment_end": 123,
+          "start_char": 10257,
+          "end_char": 10330
+        }
+      ],
+      "original_locator": {
+        "line_start": 80,
+        "line_end": 80,
+        "start_char": 10207,
+        "end_char": 10554
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC005:S034",
+      "material_id": "M001",
+      "quote": "the 1st 15% would be when I'm feeling a particular way. And then I need some songs to find exactly what I'm feeling.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4195,
+      "end_char": 4311,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S034",
+          "segment_start": 140,
+          "segment_end": 256,
+          "start_char": 4195,
+          "end_char": 4311
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 4055,
+        "end_char": 4837
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC005:S034",
+      "material_id": "M001",
+      "quote": "So if I have something in mind. and I want to find songs to match the vision I have in my mind.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4559,
+      "end_char": 4654,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S034",
+          "segment_start": 504,
+          "segment_end": 599,
+          "start_char": 4559,
+          "end_char": 4654
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 4055,
+        "end_char": 4837
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC005:S034",
+      "material_id": "M001",
+      "quote": "I'm a dancer. and I love going shopping as well.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4510,
+      "end_char": 4558,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S034",
+          "segment_start": 455,
+          "segment_end": 503,
+          "start_char": 4510,
+          "end_char": 4558
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 4055,
+        "end_char": 4837
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC005:S056",
+      "material_id": "M001",
+      "quote": "Discover new songs is, I hear, maybe a small part of it online.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7325,
+      "end_char": 7388,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S056",
+          "segment_start": 20,
+          "segment_end": 83,
+          "start_char": 7325,
+          "end_char": 7388
+        }
+      ],
+      "original_locator": {
+        "line_start": 56,
+        "line_end": 56,
+        "start_char": 7305,
+        "end_char": 7748
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC005:S056",
+      "material_id": "M001",
+      "quote": "So then I'm like, Okay, Vibe, what are the other songs that are there? Do I like anyone better, or do I like anything worse. But is this the best I can find?",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7591,
+      "end_char": 7748,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S056",
+          "segment_start": 286,
+          "segment_end": 443,
+          "start_char": 7591,
+          "end_char": 7748
+        }
+      ],
+      "original_locator": {
+        "line_start": 56,
+        "line_end": 56,
+        "start_char": 7305,
+        "end_char": 7748
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC005:S054",
+      "material_id": "M001",
+      "quote": "I don't think so most of the time.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7244,
+      "end_char": 7278,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S054",
+          "segment_start": 20,
+          "segment_end": 54,
+          "start_char": 7244,
+          "end_char": 7278
+        }
+      ],
+      "original_locator": {
+        "line_start": 54,
+        "line_end": 54,
+        "start_char": 7224,
+        "end_char": 7278
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC005:S058",
+      "material_id": "M001",
+      "quote": "Yeah, that is accurate.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7931,
+      "end_char": 7954,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S058",
+          "segment_start": 20,
+          "segment_end": 43,
+          "start_char": 7931,
+          "end_char": 7954
+        }
+      ],
+      "original_locator": {
+        "line_start": 58,
+        "line_end": 58,
+        "start_char": 7911,
+        "end_char": 7960
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC005:S086",
+      "material_id": "M001",
+      "quote": "But let's say in a playlist, I would like maybe 3 out of 20 songs that I really like with this made for you, but by spotify, I would say the chances go up to around 10 to 12 songs out of 20.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11924,
+      "end_char": 12114,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S086",
+          "segment_start": 101,
+          "segment_end": 291,
+          "start_char": 11924,
+          "end_char": 12114
+        }
+      ],
+      "original_locator": {
+        "line_start": 86,
+        "line_end": 86,
+        "start_char": 11823,
+        "end_char": 12114
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC005:S094",
+      "material_id": "M001",
+      "quote": "I think it would be nice to maybe have something on the home screen, like featured playlists. which are public playlists created by random people, not just by any curators that get the most traction.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12914,
+      "end_char": 13113,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S094",
+          "segment_start": 20,
+          "segment_end": 219,
+          "start_char": 12914,
+          "end_char": 13113
+        }
+      ],
+      "original_locator": {
+        "line_start": 94,
+        "line_end": 94,
+        "start_char": 12894,
+        "end_char": 13113
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC005:S096",
+      "material_id": "M001",
+      "quote": "I think that would have that would be cool.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13160,
+      "end_char": 13203,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S096",
+          "segment_start": 20,
+          "segment_end": 63,
+          "start_char": 13160,
+          "end_char": 13203
+        }
+      ],
+      "original_locator": {
+        "line_start": 96,
+        "line_end": 96,
+        "start_char": 13140,
+        "end_char": 13203
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC005:S098",
+      "material_id": "M001",
+      "quote": "I don't think that's the primary motivation behind what I said, but it does kind of encompass that.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13357,
+      "end_char": 13456,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S098",
+          "segment_start": 20,
+          "segment_end": 119,
+          "start_char": 13357,
+          "end_char": 13456
+        }
+      ],
+      "original_locator": {
+        "line_start": 98,
+        "line_end": 98,
+        "start_char": 13337,
+        "end_char": 13456
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC005:S100",
+      "material_id": "M001",
+      "quote": "maybe if there is an algorithm on Spotify where. based on the playlist, I save, and I listen to if they find someone else listening to kind of the same songs.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13560,
+      "end_char": 13718,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S100",
+          "segment_start": 77,
+          "segment_end": 235,
+          "start_char": 13560,
+          "end_char": 13718
+        }
+      ],
+      "original_locator": {
+        "line_start": 100,
+        "line_end": 100,
+        "start_char": 13483,
+        "end_char": 13775
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC005:S100",
+      "material_id": "M001",
+      "quote": "if they can suggest a playlist that they will listen to.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13719,
+      "end_char": 13775,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S100",
+          "segment_start": 236,
+          "segment_end": 292,
+          "start_char": 13719,
+          "end_char": 13775
+        }
+      ],
+      "original_locator": {
+        "line_start": 100,
+        "line_end": 100,
+        "start_char": 13483,
+        "end_char": 13775
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC005:S102",
+      "material_id": "M001",
+      "quote": "an algorithm cannot really replicate human emotions",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13879,
+      "end_char": 13930,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S102",
+          "segment_start": 77,
+          "segment_end": 128,
+          "start_char": 13879,
+          "end_char": 13930
+        }
+      ],
+      "original_locator": {
+        "line_start": 102,
+        "line_end": 102,
+        "start_char": 13802,
+        "end_char": 13931
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC005:S104",
+      "material_id": "M001",
+      "quote": "So I think this way might be pretty cool. I'm not sure how much it would work, though.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13979,
+      "end_char": 14065,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S104",
+          "segment_start": 20,
+          "segment_end": 106,
+          "start_char": 13979,
+          "end_char": 14065
+        }
+      ],
+      "original_locator": {
+        "line_start": 104,
+        "line_end": 104,
+        "start_char": 13959,
+        "end_char": 14065
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC005:S106",
+      "material_id": "M001",
+      "quote": "Definitely. Playlist is one made for use. Another.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14410,
+      "end_char": 14460,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S106",
+          "segment_start": 20,
+          "segment_end": 70,
+          "start_char": 14410,
+          "end_char": 14460
+        }
+      ],
+      "original_locator": {
+        "line_start": 106,
+        "line_end": 106,
+        "start_char": 14390,
+        "end_char": 14716
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC005:S106",
+      "material_id": "M001",
+      "quote": "So those 3 things are my most important features in spotify.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14656,
+      "end_char": 14716,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S106",
+          "segment_start": 266,
+          "segment_end": 326,
+          "start_char": 14656,
+          "end_char": 14716
+        }
+      ],
+      "original_locator": {
+        "line_start": 106,
+        "line_end": 106,
+        "start_char": 14390,
+        "end_char": 14716
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC005:S034",
+      "material_id": "M001",
+      "quote": "this is around 70% of my usage",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4097,
+      "end_char": 4127,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S034",
+          "segment_start": 42,
+          "segment_end": 72,
+          "start_char": 4097,
+          "end_char": 4127
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 4055,
+        "end_char": 4837
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC005:S028",
+      "material_id": "M001",
+      "quote": "I have the playlist that I listen to the most which are usually my repeat playlist, which is the list of all the songs I usually listen to on the repeat.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2986,
+      "end_char": 3139,
+      "candidate_locations": [
+        {
+          "source_id": "DOC005:S028",
+          "segment_start": 66,
+          "segment_end": 219,
+          "start_char": 2986,
+          "end_char": 3139
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 2920,
+        "end_char": 3387
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC005-C001",
+      "goal_id": "DOC005-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC005-C005",
+      "goal_id": "DOC005-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC005-C006",
+      "goal_id": "DOC005-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC005-C010",
+      "goal_id": "DOC005-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC005-C015",
+      "goal_id": "DOC005-G015",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC005-C016",
+      "goal_id": "DOC005-G016",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC005-C017",
+      "goal_id": "DOC005-G017",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC005-C018",
+      "goal_id": "DOC005-G018",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC005-C002",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C003",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C004",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C007",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C008",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C009",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C011",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C012",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C013",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C014",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C019",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC005-C020",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    }
+  ],
+  "diagnostics": [
+    {
+      "candidate_id": "DOC005-C002",
+      "category": "preference",
+      "subtype": "experience",
+      "statement": "最常听 K-pop 与 R&B（两者交替为最爱、重复度最高），其余类型也广泛收听；听歌类型随人生阶段演变（青少年期为 Pop/焦虑系与摇滚/垃圾摇滚等）",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "近期以 K-pop 与 R&B 为主，但整体类型范围很广"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S020",
+          "quote": "I like K-pop. I like R and B. Those are my 2, I alternate between one of the 2, but basically all the other genres as well. But these 2 are my most highly repeated ones.",
+          "role": "basis",
+          "start_char": 1962,
+          "end_char": 2131
+        },
+        {
+          "source_id": "DOC005:S022",
+          "quote": "While I was a teenager it was more of, you know. Angst and Pop definitely evolves range.",
+          "role": "context",
+          "start_char": 2291,
+          "end_char": 2379
+        },
+        {
+          "source_id": "DOC005:S024",
+          "quote": "but yeah, it's more of rock or grunge. I would say I might be, but approximately.",
+          "role": "context",
+          "start_char": 2613,
+          "end_char": 2694
+        }
+      ],
+      "classification_reason": "内容口味的事实性偏好陈述，未表达改变现状的期望；作为体验类诊断项供后续内容相关审核参考。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C003",
+      "category": "action",
+      "subtype": "interaction",
+      "statement": "典型听歌流程：打开 Spotify → 进入播放列表区 → 按当下需要选择常用「重复播放列表」→ 随机播放 → 整表播完后转入重复播放",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "应用分布约 95% Spotify、5% YouTube Music",
+        "该流程约占 70% 使用时间"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S028",
+          "quote": "so it's basically open the app go to the playlist section. Think of what do I really read? Need right now? Click on the playlist. I put it on shuffle. and then I put it on a repeat once the entire playlist is over.",
+          "role": "basis",
+          "start_char": 3173,
+          "end_char": 3387
+        },
+        {
+          "source_id": "DOC005:S028",
+          "quote": "I have the playlist that I listen to the most which are usually my repeat playlist, which is the list of all the songs I usually listen to on the repeat.",
+          "role": "context",
+          "start_char": 2986,
+          "end_char": 3139
+        },
+        {
+          "source_id": "DOC005:S030",
+          "quote": "I usually use, spotify.",
+          "role": "context",
+          "start_char": 3508,
+          "end_char": 3531
+        },
+        {
+          "source_id": "DOC005:S032",
+          "quote": "Actually, I would say, around 95% is spotify. while around 5% is Youtube music.",
+          "role": "context",
+          "start_char": 3726,
+          "end_char": 3805
+        },
+        {
+          "source_id": "DOC005:S034",
+          "quote": "this is around 70% of my usage",
+          "role": "context",
+          "start_char": 4097,
+          "end_char": 4127
+        }
+      ],
+      "classification_reason": "描述现有操作步骤而非期望结果，属操作步骤诊断项；应用占比与使用频率保留在上下文。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C004",
+      "category": "obstacle",
+      "subtype": "limitation",
+      "statement": "Spotify 有时缺少其在互联网上发现的特定混音，需转用 YouTube Music 收听（约 5% 使用量）",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "受访者以平常语气陈述现状，未表达不满或改变期望"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S032",
+          "quote": "Sometimes spotify don't have specific mixes that maybe I find on the Internet or something.",
+          "role": "basis",
+          "start_char": 3634,
+          "end_char": 3725
+        },
+        {
+          "source_id": "DOC005:S032",
+          "quote": "while around 5% is Youtube music.",
+          "role": "context",
+          "start_char": 3772,
+          "end_char": 3805
+        }
+      ],
+      "classification_reason": "内容可得性限制的陈述；未表达改变现状的愿望，按分类口径仅保留障碍并提出审核问题，不自行推断新增目标。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C007",
+      "category": "action",
+      "subtype": "interaction",
+      "statement": "以当前情绪词或可能的关键词搜索公开播放列表，直接沉浸试听",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "服务于情绪匹配目标（DOC005-C005）"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S034",
+          "quote": "I search for either the emotion that I'm feeling or keywords that I feel like someone might have already created a public playlist, too. and I just go emo with the playlist",
+          "role": "basis",
+          "start_char": 4312,
+          "end_char": 4484
+        }
+      ],
+      "classification_reason": "描述实现情绪匹配目标的操作步骤，未单独表达结果诉求；与对应目标分开保留。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C008",
+      "category": "action",
+      "subtype": "interaction",
+      "statement": "以热门关键词搜索并逐一听不同播放列表与歌曲，等待灵感出现",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "服务于构想匹配目标（DOC005-C006）"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S034",
+          "quote": "I try to go through different playlists and songs via search with popular keywords, and then I find them, and just listen through and see if inspiration strikes with any one of them.",
+          "role": "basis",
+          "start_char": 4655,
+          "end_char": 4837
+        }
+      ],
+      "classification_reason": "描述实现构想匹配目标的操作步骤。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C009",
+      "category": "preference",
+      "subtype": "solution",
+      "statement": "更看重流媒体平台的社交能力（jam、共享播放列表、公开分享便利与更大的活跃用户群），并因此认为 Spotify 优于 Apple Music",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "2021 年 Spotify/Apple Music 各半，2022 年全面切换至 Spotify，此前以 Apple Music 为主",
+        "口碑影响（everyone kept saying that）是开始使用 Spotify 的动因之一",
+        "认可 Apple Music 在「已有特定歌曲」场景下够用"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S048",
+          "quote": "Spotify has quite a few capabilities, like, you know, starting a jam. or like I said, playlists and all of that apple. Music is a little limited in that sense.",
+          "role": "basis",
+          "start_char": 6247,
+          "end_char": 6406
+        },
+        {
+          "source_id": "DOC005:S048",
+          "quote": "I feel spotify is better for more of social aspect.",
+          "role": "basis",
+          "start_char": 6465,
+          "end_char": 6516
+        },
+        {
+          "source_id": "DOC005:S068",
+          "quote": "And then Scott also has the starter jam options, which I think is really cool, and the shared playlists over here. People use spotify much more than they do apple music. So creating a playlist for people to view is quite easy.",
+          "role": "basis",
+          "start_char": 9072,
+          "end_char": 9298
+        },
+        {
+          "source_id": "DOC005:S046",
+          "quote": "I think I started using spotify only around 2021, which was 50, 50, and then 2022 I made the full split switch over into spotify. but before that I was primarily using apple music.",
+          "role": "context",
+          "start_char": 5915,
+          "end_char": 6095
+        },
+        {
+          "source_id": "DOC005:S048",
+          "quote": "So the reason I started Spotify is because everyone kept saying that.",
+          "role": "context",
+          "start_char": 6610,
+          "end_char": 6679
+        },
+        {
+          "source_id": "DOC005:S048",
+          "quote": "If you had specific songs in mind. apple music works.",
+          "role": "context",
+          "start_char": 6407,
+          "end_char": 6460
+        }
+      ],
+      "classification_reason": "对平台能力维度的偏好判断与对比，未单独表达具体结果诉求；历史切换与口碑动因保留为上下文。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C011",
+      "category": "action",
+      "subtype": "interaction",
+      "statement": "新歌发现流程：在 Spotify 搜索听到的歌曲并完整试听，用「下一首」触发相似歌曲连播并逐首比较",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "服务于新歌发现目标（DOC005-C010）"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S056",
+          "quote": "I go to spotify. I search for that particular song. I try to listen to it fully, and what spotify does is if I hit on next. it plays songs similar to that.",
+          "role": "basis",
+          "start_char": 7435,
+          "end_char": 7590
+        }
+      ],
+      "classification_reason": "描述实现新歌发现的操作步骤，含对 Spotify 相似歌曲连播功能的现有用法。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C012",
+      "category": "obstacle",
+      "subtype": "limitation",
+      "statement": "（历史）使用 Apple Music 期间多项想做的事无法完成：缺少 jam、共享播放列表等社交能力，睡眠定时器的停止选项也较少",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "已通过 2021-2022 年切换至 Spotify 解决（受访者认为 Spotify 已基本覆盖这些需求）",
+        "共享播放列表等能力的当前可用状态不确定（受访者不知 Apple Music 是否已更新）"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S064",
+          "quote": "there were a lot of things when I was on apple music that I wanted to, that I couldn't get done. but I think Spotify actually covers that pretty well.",
+          "role": "basis",
+          "start_char": 8419,
+          "end_char": 8569
+        },
+        {
+          "source_id": "DOC005:S066",
+          "quote": "Apple music also does have a sleep timer. But Spotify has more options",
+          "role": "context",
+          "start_char": 8814,
+          "end_char": 8884
+        },
+        {
+          "source_id": "DOC005:S070",
+          "quote": "Actually back when I used it. No, I don't know if it is updated.",
+          "role": "context",
+          "start_char": 9428,
+          "end_char": 9492
+        },
+        {
+          "source_id": "DOC005:S046",
+          "quote": "I think I started using spotify only around 2021, which was 50, 50, and then 2022 I made the full split switch over into spotify. but before that I was primarily using apple music.",
+          "role": "context",
+          "start_char": 5915,
+          "end_char": 6095
+        }
+      ],
+      "classification_reason": "已发生的历史困难且已通过切换平台解决，保留为诊断项；与社交偏好（DOC005-C009）的关联留待后续建模阶段处理。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C013",
+      "category": "preference",
+      "subtype": "solution",
+      "statement": "喜欢 Spotify 睡眠定时器的丰富停止选项（如当前歌曲结束时停止、25/30 分钟等），用于入睡场景",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "使用场景：入睡时",
+        "原文「30Â min」含编码异常（疑为 30 分钟），引文按原样保留"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S066",
+          "quote": "I like the sleep timer that spotify has it.",
+          "role": "basis",
+          "start_char": 8770,
+          "end_char": 8813
+        },
+        {
+          "source_id": "DOC005:S066",
+          "quote": "at the end of the song music stops playing, or 30Â min or 25Â min",
+          "role": "basis",
+          "start_char": 8913,
+          "end_char": 8978
+        },
+        {
+          "source_id": "DOC005:S068",
+          "quote": "And fall asleep. I I like that.",
+          "role": "context",
+          "start_char": 9040,
+          "end_char": 9071
+        }
+      ],
+      "classification_reason": "「I like the sleep timer」为对现有功能方式的偏好陈述；入睡目的保留在上下文，不推断额外的自动停止目标。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C014",
+      "category": "preference",
+      "subtype": "solution",
+      "statement": "喜欢 Spotify「Made for You」个性化板块：Day List（按当日状态选歌）、Sound Mind（进入特定心绪）、On Repeat、Repeat Rewind、Daily Mix 1-6 及按常听艺人生成的相似混音",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "自述命中率：普通搜索播放列表约 3/20，「Made for You」约 10-12/20",
+        "与播放列表、环境音并列为三大最重要功能"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S082",
+          "quote": "I really like. It's made for you. So there is this one part of spotify called, made for you.",
+          "role": "basis",
+          "start_char": 10728,
+          "end_char": 10820
+        },
+        {
+          "source_id": "DOC005:S082",
+          "quote": "it has a day list. So this is. it picks one of the vibes. Maybe you pick during the day on another day. Yeah. And then it curates songs from that.",
+          "role": "basis",
+          "start_char": 11010,
+          "end_char": 11156
+        },
+        {
+          "source_id": "DOC005:S082",
+          "quote": "Then it has a sound mind. If you want to just get in that headspace.",
+          "role": "basis",
+          "start_char": 11157,
+          "end_char": 11225
+        },
+        {
+          "source_id": "DOC005:S082",
+          "quote": "there's also this part of it called repeat rewind. where you can play past favorite songs.",
+          "role": "basis",
+          "start_char": 11334,
+          "end_char": 11424
+        },
+        {
+          "source_id": "DOC005:S082",
+          "quote": "Apart from that, it creates like unique mixes every day like daily. Mix one to 6, and then, based on artists, you listen to a lot it creates mixes based on their songs with similar vibes.",
+          "role": "basis",
+          "start_char": 11425,
+          "end_char": 11612
+        },
+        {
+          "source_id": "DOC005:S084",
+          "quote": "Discover new. I really like that part about spot, spotify.",
+          "role": "basis",
+          "start_char": 11661,
+          "end_char": 11719
+        },
+        {
+          "source_id": "DOC005:S086",
+          "quote": "But let's say in a playlist, I would like maybe 3 out of 20 songs that I really like with this made for you, but by spotify, I would say the chances go up to around 10 to 12 songs out of 20.",
+          "role": "basis",
+          "start_char": 11924,
+          "end_char": 12114
+        },
+        {
+          "source_id": "DOC005:S106",
+          "quote": "So those 3 things are my most important features in spotify.",
+          "role": "context",
+          "start_char": 14656,
+          "end_char": 14716
+        }
+      ],
+      "classification_reason": "对现有个性化能力的偏好与效果量化陈述；其背后的口味命中率期望另提取为推断目标 DOC005-C015。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C019",
+      "category": "preference",
+      "subtype": "experience",
+      "statement": "喜欢收听环境音，认为 Spotify 提供的环境音质量好，并将其列为三大最重要功能之一",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "三大最重要功能：播放列表、Made for You、环境音"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S106",
+          "quote": "sometimes I like to listen to ambient noise, so without that I don't think spotify would be spotify.",
+          "role": "basis",
+          "start_char": 14500,
+          "end_char": 14600
+        },
+        {
+          "source_id": "DOC005:S106",
+          "quote": "Spotify has some really good ambient noises available.",
+          "role": "basis",
+          "start_char": 14601,
+          "end_char": 14655
+        },
+        {
+          "source_id": "DOC005:S106",
+          "quote": "So those 3 things are my most important features in spotify.",
+          "role": "context",
+          "start_char": 14656,
+          "end_char": 14716
+        }
+      ],
+      "classification_reason": "内容类型与质量的体验偏好陈述，重要性评价保留在表述中。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC005-C020",
+      "category": "preference",
+      "subtype": "experience",
+      "statement": "「歌曲」范畴定义广泛：包含宝莱坞/电影歌曲、音乐剧曲目与独立音乐人作品",
+      "origin": null,
+      "actor": "受访者（Stakeholder，流媒体听歌用户）",
+      "context": [
+        "受访者自述为印度人"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC005:S110",
+          "quote": "as an Indian in Bollywood, and all of that songs from movies. I also like listening to songs, from musicals, and maybe just from independent artists.",
+          "role": "basis",
+          "start_char": 14984,
+          "end_char": 15133
+        }
+      ],
+      "classification_reason": "内容范围的事实性陈述，作为偏好诊断项供内容覆盖类审核参考；未表达平台内容诉求。",
+      "inference": null,
+      "review_status": "pending"
+    }
+  ],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 28,
+    "evaluated_pairs": 28
+  },
+  "issues": [],
+  "assumptions": [
+    {
+      "candidate_id": "DOC005-C015",
+      "basis_candidate_ids": [
+        "DOC005-C014"
+      ],
+      "reason": "受访者以命中率解释对 Made for You 的偏好，并给出普通播放列表（约 3/20）与 Made for You（约 10-12/20）的对比，表明其评价标准是口味命中比例，据此推断存在对高命中率推荐的持续期望。",
+      "assumptions": [
+        "该对比反映其对推荐质量的期望，而不仅是对现状满意",
+        "3/20 与 10-12/20 为受访者自述估计值，未经实测核验"
+      ]
+    }
+  ],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "assemble",
+    "readiness": "unchecked",
+    "limitations": [
+      "模型尚未经过 model-review；导出完整性检查不能替代模型质量审核。",
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。"
+    ],
+    "files": []
+  }
+}

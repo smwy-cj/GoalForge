@@ -1,0 +1,798 @@
+{
+  "document_id": "DOC028",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "round": "first",
+  "blinding_limit": "仅知A/B匿名代号，未读映射或其他分支；语言、节点粒度、解释模板等方法特征可被猜测，因此属于有限盲法，非严格不可猜方法的双盲。",
+  "policy": "冻结129条意图不修改；允许多对多和不同粒度。supported评价源文支持及合理推断，不代表需求已采纳；proposed/partial结构按候选强度评价。未计算标准P/R/F1。",
+  "samples": [
+    {
+      "sample": "first:A",
+      "intent_matches": [
+        {
+          "intent_id": "DOC028:I01",
+          "goal_ids": [
+            "G004",
+            "G005",
+            "G007",
+            "G008",
+            "G021"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“用真实、情境化的个人经验快速解决具体问题”的实质结果与适用范围；DOC028:T005「I get personal experiences over facts」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I02",
+          "goal_ids": [
+            "G001",
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“查城市活动、技术问题、职业升学等主题资料”的实质结果与适用范围；DOC028:T003「I browse my city's subreddit with keyword. Halloween」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I03",
+          "goal_ids": [
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在空闲时浏览感兴趣的社区内容以消遣和发现有趣事物”的实质结果与适用范围；DOC028:T009「if I'm just browsing Reddit, just to look through my interesting subreddits, the…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I04",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“特定问题通过 Google 加 Reddit 定位帖子，再与帖子互动”的实质结果与适用范围；DOC028:T007「I Google, the question. And then I put Reddit after that.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I05",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“根据个人兴趣跟随社区并获得贴合兴趣的帖子”；DOC028:T019「any post that comes on my feed is pretty tailored to my specifications.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I06",
+          "goal_ids": [
+            "G009",
+            "G023"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在恰当社区发求助帖取得建议或解决方案”的实质结果与适用范围；DOC028:T021「most of the posts that I've done are posts asking for advice.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I07",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“发布含标题、正文与所需格式或媒体的帖子”；DOC028:T021「Then I can add a title to my post, I can add a body to my post.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I08",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“按社区规则给帖子加标签以便合适的人筛选回答”；DOC028:T021「some subreddits make it mandatory to add tags.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I09",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“对帖子发表评论或回复特定讨论串”的实质结果与适用范围；DOC028:T021「you can either create a new comment, or you can reply to a thread of comments」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I10",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“用可信社区的管理减少低质、误导内容”；DOC028:T029「if a community has a strong, a strong set of moderators, then the posts themselv…」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I11",
+          "goal_ids": [
+            "G015"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“依据不同用途用户的产品评价作购买决策”的实质结果与适用范围；DOC028:T033「you can also find people from varied backgrounds talking about the product.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I12",
+          "goal_ids": [
+            "G016"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“学习一般健康、运动等问题的经验”的实质结果与适用范围；DOC028:T035「it's good for general health, related questions.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I13",
+          "goal_ids": [
+            "G011",
+            "G012",
+            "G025"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“移动端更快、更直观，并支持中途保留发帖草稿”的实质结果与适用范围；DOC028:T027「The mobile platform is quite slow and clunky」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I14",
+          "goal_ids": [
+            "G013"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在手机上清晰跟踪评论层次和讨论串”的实质结果与适用范围；DOC028:T027「you cannot keep track of comments intuitively on Mobile」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I15",
+          "goal_ids": [
+            "G017",
+            "G018"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按主动搜索或被动浏览选择合适内容密度”的实质结果与适用范围；DOC028:T043「I'm just using it as a passive activity, I prefer, like card mode」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I16",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“按新帖、热门、趋势等标准排序浏览帖子”；DOC028:T041「you can sort posts by new by top by trending, rising.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I17",
+          "goal_ids": [
+            "G019",
+            "G020"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“广告尽量不打扰阅读，必要时用屏蔽或付费获得无广告体验”的实质结果与适用范围；DOC028:T045「it doesn't interfere with your post experience or your reading experience.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I18",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“按个人偏好选择外观模式和布局版本”；DOC028:T049「light mode, dark mode.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I19",
+          "goal_ids": [
+            "G022",
+            "G023",
+            "G024"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“用自然语言/生成式AI找到适合自己具体问题的细分社区”的实质结果与适用范围；DOC028:T059「a Gen. AI tool, to figure out what subreddit I should be accessing to ask my par…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I20",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“在有限离线缓存范围内继续阅读已载入的 feed”；DOC028:T039「it will for sure save the existing posts.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。 原文仅描述有限离线缓存、并未请求扩展；该清单条目的目标性本来不确定，遗漏权重应低。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I02"
+          ],
+          "rationale": "与源文“查城市活动、技术问题、职业升学等主题资料”相符；DOC028:T003「I browse my city's subreddit with keyword. Halloween」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I03"
+          ],
+          "rationale": "与源文“在空闲时浏览感兴趣的社区内容以消遣和发现有趣事物”相符；DOC028:T009「if I'm just browsing Reddit, just to look through my interesting subreddits, the…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I02"
+          ],
+          "rationale": "与源文“查城市活动、技术问题、职业升学等主题资料”相符；DOC028:T003「I browse my city's subreddit with keyword. Halloween」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I01"
+          ],
+          "rationale": "与源文“用真实、情境化的个人经验快速解决具体问题”相符；DOC028:T005「I get personal experiences over facts」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I01"
+          ],
+          "rationale": "与源文“用真实、情境化的个人经验快速解决具体问题”相符；DOC028:T005「I get personal experiences over facts」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I04"
+          ],
+          "rationale": "与源文“特定问题通过 Google 加 Reddit 定位帖子，再与帖子互动”相符；DOC028:T007「I Google, the question. And then I put Reddit after that.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I01"
+          ],
+          "rationale": "与源文“用真实、情境化的个人经验快速解决具体问题”相符；DOC028:T005「I get personal experiences over facts」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I01"
+          ],
+          "rationale": "与源文“用真实、情境化的个人经验快速解决具体问题”相符；DOC028:T005「I get personal experiences over facts」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I06"
+          ],
+          "rationale": "与源文“在恰当社区发求助帖取得建议或解决方案”相符；DOC028:T021「most of the posts that I've done are posts asking for advice.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I09"
+          ],
+          "rationale": "与源文“对帖子发表评论或回复特定讨论串”相符；DOC028:T021「you can either create a new comment, or you can reply to a thread of comments」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I13"
+          ],
+          "rationale": "与源文“移动端更快、更直观，并支持中途保留发帖草稿”相符；DOC028:T027「The mobile platform is quite slow and clunky」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I13"
+          ],
+          "rationale": "与源文“移动端更快、更直观，并支持中途保留发帖草稿”相符；DOC028:T027「The mobile platform is quite slow and clunky」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I14"
+          ],
+          "rationale": "与源文“在手机上清晰跟踪评论层次和讨论串”相符；DOC028:T027「you cannot keep track of comments intuitively on Mobile」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T031承认有限使用社区相关趋势，随后明确非主要新闻源；Occasionally/relevant限制合适，不因背景候选就否定这个弱用途。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I11"
+          ],
+          "rationale": "与源文“依据不同用途用户的产品评价作购买决策”相符；DOC028:T033「you can also find people from varied backgrounds talking about the product.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I12"
+          ],
+          "rationale": "与源文“学习一般健康、运动等问题的经验”相符；DOC028:T035「it's good for general health, related questions.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I15"
+          ],
+          "rationale": "与源文“按主动搜索或被动浏览选择合适内容密度”相符；DOC028:T043「I'm just using it as a passive activity, I prefer, like card mode」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I15"
+          ],
+          "rationale": "与源文“按主动搜索或被动浏览选择合适内容密度”相符；DOC028:T043「I'm just using it as a passive activity, I prefer, like card mode」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I17"
+          ],
+          "rationale": "与源文“广告尽量不打扰阅读，必要时用屏蔽或付费获得无广告体验”相符；DOC028:T045「it doesn't interfere with your post experience or your reading experience.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I17"
+          ],
+          "rationale": "与源文“广告尽量不打扰阅读，必要时用屏蔽或付费获得无广告体验”相符；DOC028:T045「it doesn't interfere with your post experience or your reading experience.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G021",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I01"
+          ],
+          "rationale": "T051称search准确帮助自己节时，可推维持该能力，虽冻结I01较上位仍可承接。",
+          "issues": []
+        },
+        {
+          "goal_id": "G022",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I19"
+          ],
+          "rationale": "与源文“用自然语言/生成式AI找到适合自己具体问题的细分社区”相符；DOC028:T059「a Gen. AI tool, to figure out what subreddit I should be accessing to ask my par…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G023",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I06",
+            "DOC028:I19"
+          ],
+          "rationale": "T021发问与T059在特别合适的细分社区发问有不同精确度；G009/G023可保留一般和特殊策略，非必然过拆。",
+          "issues": []
+        },
+        {
+          "goal_id": "G024",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I19"
+          ],
+          "rationale": "与源文“用自然语言/生成式AI找到适合自己具体问题的细分社区”相符；DOC028:T059「a Gen. AI tool, to figure out what subreddit I should be accessing to ask my par…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G025",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC028:I13"
+          ],
+          "rationale": "T063官方应用应更好是移动改善的重申/竞争背景，当前再独立G025并贡献到G011几乎未增加可验收结果；建议合并为G011的定位。",
+          "issues": [
+            {
+              "category": "over_split",
+              "reason": "G011已是官方移动可用性/响应改善；T063重新强调同一愿望，未规定额外市场份额或独立功能。"
+            }
+          ]
+        }
+      ],
+      "relation_assessments": [
+        {
+          "relation_id": "R001",
+          "judgment": "consistent",
+          "rationale": "T003技术代码问题是具体问题求助的子类。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R002",
+          "judgment": "consistent",
+          "rationale": "T005情境经验有助针对问题答案，不证明真实性。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R003",
+          "judgment": "consistent",
+          "rationale": "T007问题+Reddit的Google搜索是所选路径。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R004",
+          "judgment": "consistent",
+          "rationale": "T009针对问题的答案可能解决问题，不是必然。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R005",
+          "judgment": "consistent",
+          "rationale": "T021社区发问是获得相关建议的一种途径。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R006",
+          "judgment": "consistent",
+          "rationale": "T027移动存草稿修复一个具体可用性障碍。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R007",
+          "judgment": "consistent",
+          "rationale": "T027线程清晰修复另一个障碍，不能修复所有慢问题。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R008",
+          "judgment": "consistent",
+          "rationale": "T033产品评测是特定问题答案的具体应用。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R009",
+          "judgment": "consistent",
+          "rationale": "T035一般健康学习是信息获取子类，保留不依赖具体医疗建议。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R010",
+          "judgment": "consistent",
+          "rationale": "T043被动卡片浏览为休闲阅读的选定显示方式。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R011",
+          "judgment": "consistent",
+          "rationale": "T043紧凑视图帮助比较定向搜索结果，方式明确。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R012",
+          "judgment": "consistent",
+          "rationale": "T047无adblock才考虑premium，是无广告方式之一。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R013",
+          "judgment": "consistent",
+          "rationale": "T051准确结果帮助更快找到信息，贡献成立。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R014",
+          "judgment": "consistent",
+          "rationale": "T059找到具体社区然后发问是所提工具流程，顺序合理。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R015",
+          "judgment": "consistent",
+          "rationale": "T061细分社区发问预期回答更好但仍可差，贡献合理。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R016",
+          "judgment": "consistent",
+          "rationale": "T051/T059工具找到社区可服务较佳答案，但中间需发问/回应；非充分，作为方式可接受。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R017",
+          "judgment": "needs_revision",
+          "rationale": "T063只是重申官方移动端应更好，与G011近同义；重复节点之间再建贡献无新增语义。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T005/T059/T061支持经验与具体社区可能带来更好答案，F001保留坏答例外和partial；不当成专家正确保证。"
+        },
+        {
+          "group_id": "F002",
+          "judgment": "consistent",
+          "rationale": "T027移动草稿/线程只是两项具体障碍，F002明确还会慢，故部分候选判断合适。"
+        }
+      ]
+    },
+    {
+      "sample": "first:B",
+      "intent_matches": [
+        {
+          "intent_id": "DOC028:I01",
+          "goal_ids": [
+            "G001",
+            "G014"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“用真实、情境化的个人经验快速解决具体问题”的实质结果与适用范围；DOC028:T005「I get personal experiences over facts」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I02",
+          "goal_ids": [
+            "G001",
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“查城市活动、技术问题、职业升学等主题资料”的实质结果与适用范围；DOC028:T003「I browse my city's subreddit with keyword. Halloween」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I03",
+          "goal_ids": [
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在空闲时浏览感兴趣的社区内容以消遣和发现有趣事物”的实质结果与适用范围；DOC028:T009「if I'm just browsing Reddit, just to look through my interesting subreddits, the…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I04",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“特定问题通过 Google 加 Reddit 定位帖子，再与帖子互动”；DOC028:T007「I Google, the question. And then I put Reddit after that.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I05",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“根据个人兴趣跟随社区并获得贴合兴趣的帖子”；DOC028:T019「any post that comes on my feed is pretty tailored to my specifications.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I06",
+          "goal_ids": [
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在恰当社区发求助帖取得建议或解决方案”的实质结果与适用范围；DOC028:T021「most of the posts that I've done are posts asking for advice.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I07",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“发布含标题、正文与所需格式或媒体的帖子”；DOC028:T021「Then I can add a title to my post, I can add a body to my post.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I08",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“按社区规则给帖子加标签以便合适的人筛选回答”；DOC028:T021「some subreddits make it mandatory to add tags.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I09",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“对帖子发表评论或回复特定讨论串”；DOC028:T021「you can either create a new comment, or you can reply to a thread of comments」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I10",
+          "goal_ids": [
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“用可信社区的管理减少低质、误导内容”的实质结果与适用范围；DOC028:T029「if a community has a strong, a strong set of moderators, then the posts themselv…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I11",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“依据不同用途用户的产品评价作购买决策”的实质结果与适用范围；DOC028:T033「you can also find people from varied backgrounds talking about the product.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I12",
+          "goal_ids": [
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“学习一般健康、运动等问题的经验”的实质结果与适用范围；DOC028:T035「it's good for general health, related questions.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I13",
+          "goal_ids": [
+            "G005",
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“移动端更快、更直观，并支持中途保留发帖草稿”的实质结果与适用范围；DOC028:T027「The mobile platform is quite slow and clunky」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I14",
+          "goal_ids": [
+            "G007"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在手机上清晰跟踪评论层次和讨论串”的实质结果与适用范围；DOC028:T027「you cannot keep track of comments intuitively on Mobile」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I15",
+          "goal_ids": [
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按主动搜索或被动浏览选择合适内容密度”的实质结果与适用范围；DOC028:T043「I'm just using it as a passive activity, I prefer, like card mode」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I16",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“按新帖、热门、趋势等标准排序浏览帖子”；DOC028:T041「you can sort posts by new by top by trending, rising.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I17",
+          "goal_ids": [
+            "G013"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“广告尽量不打扰阅读，必要时用屏蔽或付费获得无广告体验”的实质结果与适用范围；DOC028:T045「it doesn't interfere with your post experience or your reading experience.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I18",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“按个人偏好选择外观模式和布局版本”；DOC028:T049「light mode, dark mode.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC028:I19",
+          "goal_ids": [
+            "G015"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“用自然语言/生成式AI找到适合自己具体问题的细分社区”的实质结果与适用范围；DOC028:T059「a Gen. AI tool, to figure out what subreddit I should be accessing to ask my par…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC028:I20",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“在有限离线缓存范围内继续阅读已载入的 feed”；DOC028:T039「it will for sure save the existing posts.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。 原文仅描述有限离线缓存、并未请求扩展；该清单条目的目标性本来不确定，遗漏权重应低。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I01",
+            "DOC028:I02"
+          ],
+          "rationale": "与源文“用真实、情境化的个人经验快速解决具体问题；查城市活动、技术问题、职业升学等主题资料”相符；DOC028:T005「I get personal experiences over facts」；DOC028:T003「I browse my city's subreddit with keyword. Halloween」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I03"
+          ],
+          "rationale": "与源文“在空闲时浏览感兴趣的社区内容以消遣和发现有趣事物”相符；DOC028:T009「if I'm just browsing Reddit, just to look through my interesting subreddits, the…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I02",
+            "DOC028:I06"
+          ],
+          "rationale": "与源文“查城市活动、技术问题、职业升学等主题资料；在恰当社区发求助帖取得建议或解决方案”相符；DOC028:T003「I browse my city's subreddit with keyword. Halloween」；DOC028:T021「most of the posts that I've done are posts asking for advice.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T011把匿名性视为USP，T055承认历史可识别；inferred并明确不保证绝对匿名，属于合理维护偏好，冻结清单只当背景不应使其自动无依据。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I13"
+          ],
+          "rationale": "与源文“移动端更快、更直观，并支持中途保留发帖草稿”相符；DOC028:T027「The mobile platform is quite slow and clunky」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I13"
+          ],
+          "rationale": "与源文“移动端更快、更直观，并支持中途保留发帖草稿”相符；DOC028:T027「The mobile platform is quite slow and clunky」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I14"
+          ],
+          "rationale": "与源文“在手机上清晰跟踪评论层次和讨论串”相符；DOC028:T027「you cannot keep track of comments intuitively on Mobile」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I10"
+          ],
+          "rationale": "T029/T057认可管理团队对低质信息的作用；inferred限定为维护能力且依社区而变，合适。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T031有限趋势/当前事件用途真实，condition明确非主要新闻来源，接受该次要条目。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I11"
+          ],
+          "rationale": "与源文“依据不同用途用户的产品评价作购买决策”相符；DOC028:T033「you can also find people from varied backgrounds talking about the product.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I12"
+          ],
+          "rationale": "与源文“学习一般健康、运动等问题的经验”相符；DOC028:T035「it's good for general health, related questions.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I15"
+          ],
+          "rationale": "与源文“按主动搜索或被动浏览选择合适内容密度”相符；DOC028:T043「I'm just using it as a passive activity, I prefer, like card mode」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I17"
+          ],
+          "rationale": "与源文“广告尽量不打扰阅读，必要时用屏蔽或付费获得无广告体验”相符；DOC028:T045「it doesn't interfere with your post experience or your reading experience.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I01"
+          ],
+          "rationale": "与源文“用真实、情境化的个人经验快速解决具体问题”相符；DOC028:T005「I get personal experiences over facts」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC028:I19"
+          ],
+          "rationale": "T051/T059明确Gen AI工具找到细分社区，T061有坏答案例外；工具是选定方式而非直接AI诊断答案，保留正确。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T007/T021/T059检索、发问和社区发现是不同可选策略；F001没有把全部执行写成充分，partial合理。"
+        }
+      ]
+    }
+  ]
+}

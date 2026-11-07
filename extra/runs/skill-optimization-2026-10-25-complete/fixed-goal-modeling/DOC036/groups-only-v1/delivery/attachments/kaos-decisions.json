@@ -1,0 +1,80 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "df435a38e5201865fe69bae0fa020ebd24c943cb5f3da72a0e2c32206c936c29",
+    "judgments_sha256": "49fe3aa0199050c1d2361724ee6a0fce63907bca29ec9da570cadcde9e0dca33"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G004",
+      "child_ids": [
+        "G026",
+        "G011",
+        "G005"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Engagement heuristics and a payment precaution are risk mitigations, not a complete guarantee against malicious sellers.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC036:T062",
+          "quote": "Yeah. Well, the the feature for the ranking. It's really it it doesn't. It doesn't really run. What it does is. you see if you are a seller right? And like, I was saying, if you have different products. the amount of likes you would have if you are actually a reputable business is going to be reasonable, right? So for example, if you have a hundred products and we just uploaded 2 products today. I would not expect 2 products today to have as many likes as products you uploaded 6 months ago. Right? The the products you uploaded 6 months ago would probably have more likes and more engagement than the 2 products you just uploaded today. However, if I go to your gallery, and I realize that your products more or less have similar likes and similar comments. It. It is fishy. It looks like it's a malicious site or a malicious account, and you're just trying to see who you can bait to pay, and then they never get the product they want. So in that way, it helps me. And this is probably just social engineering. It just helps me to know which accounts are probably good and which ones are not good I should buy from, and I should not buy from. Yeah. And it saved me some money actually with, there was one account. Yeah, so yeah, that's.",
+          "role": "basis",
+          "start_char": 27688,
+          "end_char": 28930
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G001",
+      "child_ids": [
+        "G003",
+        "G007",
+        "G006",
+        "G023",
+        "G024"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "The shopping steps can support purchase but cannot jointly guarantee a suitable gift arrives; the interview expressly mentions malicious vendors.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC036:T058",
+          "quote": "Yeah. So what I do is, once I see your bio information, I get your phone number. Once I get your phone number, what I do is I would go to. I would either go to Whatsapp or, you know, direct, call you. And I would say, I saw this product and this product can I know the cost of it? And that is also something I feel like they should put on the website on. I'm sorry on the pages, the business. What you put there is. They don't put the price of the products. They just show you what the products are. But I I would imagine that if they did that, then maybe people would not ask about the products, and so they will not get the feedback they need on pricing. And so once I find out, figure out the price of the product. I would go ahead to ask for the phone number I can use for the payment. And I once I conduct that payment. I would confirm my address where the whatever I'm buying, you know, should be delivered to. And then I basically just wait. Once the product comes, or is it or is about to be dispatched? They'll give me a phone call. Tell me, you know they are about to reach my my home, or they are at my home. I should come pick it up so. That is generally how I think, ordering and delivering and pickup works. Yeah.",
+          "role": "basis",
+          "start_char": 25183,
+          "end_char": 26410
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "Joint sufficiency is unconfirmed: Engagement heuristics and a payment precaution are risk mitigations, not a complete guarantee against malicious sellers."
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "Joint sufficiency is unconfirmed: The shopping steps can support purchase but cannot jointly guarantee a suitable gift arrives; the interview expressly mentions malicious vendors."
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "Is anonymous posting also desired, separately from the clearly repeated anonymous-browsing request? T071 bundles both in an interviewer paraphrase and T072 only gives a short acknowledgment."
+    }
+  ]
+}

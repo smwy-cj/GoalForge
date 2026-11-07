@@ -1,0 +1,467 @@
+{
+  "document_id": "SYN001",
+  "synthetic": true,
+  "synthetic_source": "extra/runs/workbuddy-newskills-20261103-0015/logs/smoke/synthetic-source.json",
+  "raw_candidates": [
+    {
+      "candidate_id": "C001",
+      "statement": "compare three hotels before booking, and want the total price with breakfast visible",
+      "actor": "Stakeholder",
+      "modality": "习惯陈述 + 明确愿望",
+      "origin": "explicit",
+      "evidence": [
+        {
+          "source_id": "SYN001:T001",
+          "quote": "I usually compare three hotels before booking, and I want the total price with breakfast visible"
+        }
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "statement": "never want a booking confirmed without seeing the cancellation deadline first",
+      "actor": "Stakeholder",
+      "modality": "强烈的避免语气",
+      "origin": "explicit",
+      "evidence": [
+        {
+          "source_id": "SYN001:T003",
+          "quote": "I never want a booking confirmed without me seeing the cancellation deadline first"
+        }
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "statement": "remembering filters would help, but uncertain",
+      "actor": "Stakeholder",
+      "modality": "试探、不确定",
+      "origin": "inferred",
+      "evidence": [
+        {
+          "source_id": "SYN001:T005",
+          "quote": "That would help, though I am not sure yet"
+        }
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "statement": "itinerary readable offline, only for trips already booked",
+      "actor": "Stakeholder",
+      "modality": "明确愿望 + 范围限定",
+      "origin": "explicit",
+      "evidence": [
+        {
+          "source_id": "SYN001:T007",
+          "quote": "I want the itinerary to stay readable offline, but only for trips I already booked"
+        }
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "statement": "whole booking process predictable",
+      "actor": "Stakeholder",
+      "modality": "概括性总体愿望",
+      "origin": "explicit",
+      "evidence": [
+        {
+          "source_id": "SYN001:T008",
+          "quote": "Overall I want the whole booking process to stay predictable"
+        }
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "candidate_id": "G001",
+      "statement": "compare three hotels before booking",
+      "actor": "Stakeholder",
+      "origin": "explicit",
+      "evidence": [
+        {
+          "source_id": "SYN001:T001",
+          "quote": "I usually compare three hotels before booking"
+        }
+      ],
+      "judgment": {
+        "label": "direct",
+        "rationale": "原句明确说明通常比较三家酒店再预订。",
+        "supported_parts": [
+          "比较三家酒店再预订"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对原句与目标表述"
+        ]
+      }
+    },
+    {
+      "candidate_id": "G002",
+      "statement": "show the total price with breakfast before booking",
+      "actor": "Stakeholder",
+      "origin": "explicit",
+      "evidence": [
+        {
+          "source_id": "SYN001:T001",
+          "quote": "I want the total price with breakfast visible"
+        }
+      ],
+      "judgment": {
+        "label": "direct",
+        "rationale": "原句明确希望看到含早餐的总价。",
+        "supported_parts": [
+          "含早餐总价可见"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对原句"
+        ]
+      }
+    },
+    {
+      "candidate_id": "G003",
+      "statement": "avoid a booking being confirmed before the cancellation deadline is shown",
+      "actor": "Stakeholder",
+      "origin": "explicit",
+      "evidence": [
+        {
+          "source_id": "SYN001:T003",
+          "quote": "I never want a booking confirmed without me seeing the cancellation deadline first"
+        }
+      ],
+      "judgment": {
+        "label": "direct",
+        "rationale": "原句以 never want 表达该避免关系。",
+        "supported_parts": [
+          "避免未展示取消期限即确认预订"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对否定与条件"
+        ]
+      }
+    },
+    {
+      "candidate_id": "G004",
+      "statement": "remember the traveller's previous filters",
+      "actor": "Stakeholder",
+      "origin": "inferred",
+      "context": [],
+      "inference": {
+        "basis_candidate_ids": [
+          "G001",
+          "G002"
+        ],
+        "reason": "受访者称记住筛选条件有帮助，但同时说不确定；结合其反复比较多家酒店推断复用筛选条件有价值。",
+        "assumptions": [
+          "受访者会重复使用相同筛选条件"
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "SYN001:T005",
+          "quote": "That would help, though I am not sure yet"
+        }
+      ],
+      "judgment": {
+        "label": "inferred",
+        "rationale": "回答含不确定语气，但有正面评价；据比较酒店与查看完整价格的上下文推断。",
+        "supported_parts": [
+          "复用筛选条件有帮助"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "受访者会重复使用相同筛选条件"
+        ],
+        "reasoning_steps": [
+          "核对问答范围",
+          "比较不确定语气与正面评价"
+        ]
+      }
+    },
+    {
+      "candidate_id": "G005",
+      "statement": "keep the itinerary readable offline, only for trips already booked",
+      "actor": "Stakeholder",
+      "origin": "explicit",
+      "context": [
+        "仅限已经预订的行程"
+      ],
+      "evidence": [
+        {
+          "source_id": "SYN001:T007",
+          "quote": "I want the itinerary to stay readable offline, but only for trips I already booked"
+        }
+      ],
+      "judgment": {
+        "label": "direct",
+        "rationale": "原句明确离线可读并以 only 限定范围。",
+        "supported_parts": [
+          "离线可读",
+          "仅限已预订行程"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对限定范围"
+        ]
+      }
+    },
+    {
+      "candidate_id": "G006",
+      "statement": "keep the whole booking process predictable",
+      "actor": "Stakeholder",
+      "origin": "explicit",
+      "evidence": [
+        {
+          "source_id": "SYN001:T008",
+          "quote": "Overall I want the whole booking process to stay predictable"
+        }
+      ],
+      "judgment": {
+        "label": "direct",
+        "rationale": "原句明确希望整个预订流程保持可预期。",
+        "supported_parts": [
+          "预订流程可预期"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对总体愿望"
+        ]
+      }
+    }
+  ],
+  "review_questions": [
+    {
+      "candidate_ids": [
+        "G004"
+      ],
+      "question": "记住筛选条件是否确为需求，或仅为礼貌性回应？",
+      "reason": "回答含不确定语气"
+    }
+  ],
+  "limitations": [
+    "合成材料仅用于工具冒烟检查，不属于论文语料"
+  ],
+  "ledger": {
+    "model": "synthetic-smoke",
+    "temperature": "unknown",
+    "budget": "smoke",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 1,
+    "stop_reason": "synthetic smoke test",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "SYN001:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "SYN001:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "SYN001:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "SYN001:W0004",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ],
+    "full_context_review": {
+      "status": "completed",
+      "reason": "合成材料共9轮，整篇回查指代与条件"
+    },
+    "entries": [
+      {
+        "candidate_id": "C001",
+        "disposition": "split",
+        "final_goal_ids": [
+          "G001",
+          "G002"
+        ],
+        "reason": "比较酒店与查看含早餐总价是两个可独立满足的结果，共同来源句"
+      },
+      {
+        "candidate_id": "C002",
+        "disposition": "keep",
+        "final_goal_ids": [
+          "G003"
+        ],
+        "reason": "避免型目标保留否定与前置条件"
+      },
+      {
+        "candidate_id": "C003",
+        "disposition": "keep",
+        "final_goal_ids": [
+          "G004"
+        ],
+        "reason": "有正面评价但不确定，保留为推断并留问题"
+      },
+      {
+        "candidate_id": "C004",
+        "disposition": "keep",
+        "final_goal_ids": [
+          "G005"
+        ],
+        "reason": "range 限定写入 context"
+      },
+      {
+        "candidate_id": "C005",
+        "disposition": "keep",
+        "final_goal_ids": [
+          "G006"
+        ],
+        "reason": "总体目的有独立意图依据，保留为上层目标"
+      }
+    ],
+    "source_checks": [
+      {
+        "check_id": "S1",
+        "evidence_candidates": [
+          {
+            "source_id": "SYN001:T001",
+            "quote": "I usually compare three hotels before booking, and I want the total price with breakfast visible"
+          }
+        ],
+        "candidate_ids": [
+          "C001"
+        ],
+        "final_goal_ids": [
+          "G001",
+          "G002"
+        ],
+        "outcome": "represented",
+        "reason": "两个最终目标分别承接"
+      },
+      {
+        "check_id": "S2",
+        "evidence_candidates": [
+          {
+            "source_id": "SYN001:T005",
+            "quote": "That would help, though I am not sure yet"
+          }
+        ],
+        "candidate_ids": [
+          "C003"
+        ],
+        "final_goal_ids": [
+          "G004"
+        ],
+        "outcome": "uncertain",
+        "reason": "不确定语气未解决"
+      }
+    ]
+  },
+  "decisions": {
+    "relations": [
+      {
+        "relation_id": "R1",
+        "source_id": "G004",
+        "target_id": "G001",
+        "type": "contribution",
+        "status": "proposed",
+        "conditions": [],
+        "assumptions": [
+          "受访者重复使用相同筛选条件"
+        ],
+        "rationale": "复用筛选条件可减少重复比较，但不确定是否显著帮助。",
+        "evidence_ids": [],
+        "evidence_quotes": [
+          {
+            "source_id": "SYN001:T005",
+            "quote": "That would help",
+            "role": "basis"
+          }
+        ]
+      },
+      {
+        "relation_id": "R2",
+        "source_id": "G001",
+        "target_id": "G003",
+        "type": "precedes",
+        "status": "supported",
+        "conditions": [],
+        "assumptions": [],
+        "rationale": "先比较可选酒店，才会进入确认预订环节。",
+        "evidence_ids": [],
+        "evidence_quotes": [
+          {
+            "source_id": "SYN001:T001",
+            "quote": "I usually compare three hotels before booking",
+            "role": "basis"
+          }
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "group_id": "GR1",
+        "parent_id": "G006",
+        "child_ids": [
+          "G001",
+          "G002",
+          "G003"
+        ],
+        "kind": "and",
+        "status": "supported",
+        "completeness": "complete",
+        "rationale": "若先比较候选、看到含早餐总价、且在确认前看到取消期限，则可预期性在本次材料范围内得到共同满足。",
+        "assumptions": [
+          "酒店比较、价格可见与取消期限展示都发生在确认预订之前"
+        ],
+        "evidence_ids": [],
+        "evidence_quotes": [
+          {
+            "source_id": "SYN001:T008",
+            "quote": "Overall I want the whole booking process to stay predictable",
+            "role": "basis"
+          }
+        ],
+        "relation_ids": [
+          "R2"
+        ],
+        "checks": [
+          {
+            "kind": "normal",
+            "origin": "analysis_assumption",
+            "scenario": "用户按常规流程比较酒店、查看含早餐总价后在看到取消期限的情况下确认预订",
+            "outcome": "supports",
+            "rationale": "三个子目标均满足时流程结果可预测"
+          },
+          {
+            "kind": "exception",
+            "origin": "analysis_assumption",
+            "scenario": "用户跳过比较直接预订，但仍在确认页看到取消期限",
+            "outcome": "supports",
+            "rationale": "即使未比较，取消期限展示仍维持可预期性，精化组不因该例外失效"
+          }
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "target_type": "goal",
+        "target_id": "G004",
+        "message": "复用筛选条件是否为确定需求仍需确认。"
+      }
+    ],
+    "reassessments": []
+  }
+}

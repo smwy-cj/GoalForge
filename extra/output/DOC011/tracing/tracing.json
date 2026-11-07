@@ -1,0 +1,1581 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC011\\extraction.json",
+    "sha256": "b71600388d4a489e0023bb45d99a8f09b2acc3f174765d2d0249881a3ff9fe85",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "9c42860d53b508c660e1df02e6a7857b13c3b7c7b2d19efa69094edd9a9ccc8c",
+      "input_sha256": "b71600388d4a489e0023bb45d99a8f09b2acc3f174765d2d0249881a3ff9fe85"
+    },
+    "bundle_sha256": "1be762266e37b0d896a7017cebeb30e4aaed915980a7767cd4731987ccaf800b"
+  },
+  "sources": [
+    {
+      "document_id": "DOC011",
+      "expected_hash": "a7bcaec88a1d4bedcf6d5a97bd0a20e516e63b2b5b0c092f499e9430128b50df",
+      "actual_hash": "a7bcaec88a1d4bedcf6d5a97bd0a20e516e63b2b5b0c092f499e9430128b50df",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC011-C001",
+      "target_kind": "candidate",
+      "statement": "与队友异步协作修改同一份代码，完成课程与项目作业。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC011:S024",
+          "material_id": "M001",
+          "quote": "from my student perspective is like team collaboration",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4334,
+          "end_char": 4388,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S024",
+              "segment_start": 78,
+              "segment_end": 132,
+              "start_char": 4334,
+              "end_char": 4388
+            }
+          ],
+          "original_locator": {
+            "line_start": 24,
+            "line_end": 24,
+            "start_char": 4256,
+            "end_char": 4736
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC011:S024",
+          "material_id": "M001",
+          "quote": "we are asynchronous collab, asynchronously collaborating on this code",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4595,
+          "end_char": 4664,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S024",
+              "segment_start": 339,
+              "segment_end": 408,
+              "start_char": 4595,
+              "end_char": 4664
+            }
+          ],
+          "original_locator": {
+            "line_start": 24,
+            "line_end": 24,
+            "start_char": 4256,
+            "end_char": 4736
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC011:S104",
+          "material_id": "M001",
+          "quote": "It really did help facilitate our asynchronous workflows.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 23299,
+          "end_char": 23356,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S104",
+              "segment_start": 56,
+              "segment_end": 113,
+              "start_char": 23299,
+              "end_char": 23356
+            }
+          ],
+          "original_locator": {
+            "line_start": 104,
+            "line_end": 104,
+            "start_char": 23243,
+            "end_char": 23356
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S024",
+          "DOC011:S024",
+          "DOC011:S104"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "主要用途：T024「from my student perspective is like team collaboration」",
+          "异步协作：T024「asynchronously collaborating on this code」",
+          "共同写权限：T024「It's not just me who has access to update this online folder」"
+        ],
+        "unsupported_parts": [
+          "未说明团队规模与协作频率",
+          "「异步」的具体机制（时区、节奏）未说明"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取主用途陈述",
+          "2. 对象（队友、同一仓库）与条件（异步）一致",
+          "3. 无相反证据 → direct"
+        ],
+        "label": "direct",
+        "rationale": "T023 在回答「主要用 GitHub 做什么」时直接给出团队协作，并说明异步性质：「we are asynchronous collab, asynchronously collaborating on this code」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "与队友异步协作修改同一份代码，完成课程与项目作业。",
+        "label": "direct",
+        "rationale": "T023 在回答「主要用 GitHub 做什么」时直接给出团队协作，并说明异步性质：「we are asynchronous collab, asynchronously collaborating on this code」。",
+        "supported_parts": [
+          "主要用途：T024「from my student perspective is like team collaboration」",
+          "异步协作：T024「asynchronously collaborating on this code」",
+          "共同写权限：T024「It's not just me who has access to update this online folder」"
+        ],
+        "unsupported_parts": [
+          "未说明团队规模与协作频率",
+          "「异步」的具体机制（时区、节奏）未说明"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取主用途陈述",
+          "2. 对象（队友、同一仓库）与条件（异步）一致",
+          "3. 无相反证据 → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C002",
+      "target_kind": "candidate",
+      "statement": "代码合并进主分支前必须经他人审查，防止未审改动进入主干。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC011:S084",
+          "material_id": "M001",
+          "quote": "the port request feature simply because it's a great way to make sure that the main repository stays safe from unknown code changes before they are reviewed by others",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17598,
+          "end_char": 17764,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S084",
+              "segment_start": 131,
+              "segment_end": 297,
+              "start_char": 17598,
+              "end_char": 17764
+            }
+          ],
+          "original_locator": {
+            "line_start": 84,
+            "line_end": 84,
+            "start_char": 17467,
+            "end_char": 18156
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC011:S032",
+          "material_id": "M001",
+          "quote": "the code, is up to standard of the team or their personal standard",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6904,
+          "end_char": 6970,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S032",
+              "segment_start": 29,
+              "segment_end": 95,
+              "start_char": 6904,
+              "end_char": 6970
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 6875,
+            "end_char": 7041
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC011:S034",
+          "material_id": "M001",
+          "quote": "Either approved, or they can also be denied if they don't meet the standards.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7092,
+          "end_char": 7169,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S034",
+              "segment_start": 20,
+              "segment_end": 97,
+              "start_char": 7092,
+              "end_char": 7169
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 7072,
+            "end_char": 7169
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S084",
+          "DOC011:S032",
+          "DOC011:S034"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "目的：T084「stays safe from unknown code changes before they are reviewed」",
+          "标准：T032「up to standard of the team or their personal standard」",
+          "拒绝：T034「they can also be denied if they don't meet the standards」"
+        ],
+        "unsupported_parts": [
+          "未说明审查人数要求或超时规则",
+          "未说明紧急情况下是否允许绕过"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取 PR 价值陈述",
+          "2. 审查流程在 T029-T033 有具体描述",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T083 明确把 PR 的价值说成「make sure that the main repository stays safe from unknown code changes before they are reviewed by others」，T031-T033 补充审查标准与拒绝机制。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "代码合并进主分支前必须经他人审查，防止未审改动进入主干。",
+        "label": "direct",
+        "rationale": "T083 明确把 PR 的价值说成「make sure that the main repository stays safe from unknown code changes before they are reviewed by others」，T031-T033 补充审查标准与拒绝机制。",
+        "supported_parts": [
+          "目的：T084「stays safe from unknown code changes before they are reviewed」",
+          "标准：T032「up to standard of the team or their personal standard」",
+          "拒绝：T034「they can also be denied if they don't meet the standards」"
+        ],
+        "unsupported_parts": [
+          "未说明审查人数要求或超时规则",
+          "未说明紧急情况下是否允许绕过"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取 PR 价值陈述",
+          "2. 审查流程在 T029-T033 有具体描述",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C003",
+      "target_kind": "candidate",
+      "statement": "改动按小步增量提交，减少协作者每次要审查的内容量。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC011:S044",
+          "material_id": "M001",
+          "quote": "I personally prefer to do it incrementally",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9286,
+          "end_char": 9328,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S044",
+              "segment_start": 137,
+              "segment_end": 179,
+              "start_char": 9286,
+              "end_char": 9328
+            }
+          ],
+          "original_locator": {
+            "line_start": 44,
+            "line_end": 44,
+            "start_char": 9149,
+            "end_char": 9341
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC011:S046",
+          "material_id": "M001",
+          "quote": "It provides less content for my collaborators to have to review",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9386,
+          "end_char": 9449,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S046",
+              "segment_start": 20,
+              "segment_end": 83,
+              "start_char": 9386,
+              "end_char": 9449
+            }
+          ],
+          "original_locator": {
+            "line_start": 46,
+            "line_end": 46,
+            "start_char": 9366,
+            "end_char": 9847
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S044",
+          "DOC011:S046"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "偏好：T044「I personally prefer to do it incrementally」",
+          "理由：T044「provides less content for my collaborators to have to review」"
+        ],
+        "unsupported_parts": [
+          "有明确例外：独自开发时不用 PR、倾向大改动（T046）",
+          "未定义「增量」的粒度"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取偏好与理由",
+          "2. 记录例外条件",
+          "3. → direct，并转为人工问题"
+        ],
+        "label": "direct",
+        "rationale": "T043 明确偏好并给出理由：「I personally prefer to do it incrementally, because it... provides less content for my collaborators to have to review」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "改动按小步增量提交，减少协作者每次要审查的内容量。",
+        "label": "direct",
+        "rationale": "T043 明确偏好并给出理由：「I personally prefer to do it incrementally, because it... provides less content for my collaborators to have to review」。",
+        "supported_parts": [
+          "偏好：T044「I personally prefer to do it incrementally」",
+          "理由：T044「provides less content for my collaborators to have to review」"
+        ],
+        "unsupported_parts": [
+          "有明确例外：独自开发时不用 PR、倾向大改动（T046）",
+          "未定义「增量」的粒度"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取偏好与理由",
+          "2. 记录例外条件",
+          "3. → direct，并转为人工问题"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C004",
+      "target_kind": "candidate",
+      "statement": "能回看仓库的变更历史，包括每次提交改了什么、由谁改。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC011:S084",
+          "material_id": "M001",
+          "quote": "It's also a very convenient way to track history.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17766,
+          "end_char": 17815,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S084",
+              "segment_start": 299,
+              "segment_end": 348,
+              "start_char": 17766,
+              "end_char": 17815
+            }
+          ],
+          "original_locator": {
+            "line_start": 84,
+            "line_end": 84,
+            "start_char": 17467,
+            "end_char": 18156
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC011:S084",
+          "material_id": "M001",
+          "quote": "in that backlog I mean to see, like what changes were made with this pull request",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17914,
+          "end_char": 17995,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S084",
+              "segment_start": 447,
+              "segment_end": 528,
+              "start_char": 17914,
+              "end_char": 17995
+            }
+          ],
+          "original_locator": {
+            "line_start": 84,
+            "line_end": 84,
+            "start_char": 17467,
+            "end_char": 18156
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC011:S084",
+          "material_id": "M001",
+          "quote": "plus other like changes that were made by my collaborators.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18097,
+          "end_char": 18156,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S084",
+              "segment_start": 630,
+              "segment_end": 689,
+              "start_char": 18097,
+              "end_char": 18156
+            }
+          ],
+          "original_locator": {
+            "line_start": 84,
+            "line_end": 84,
+            "start_char": 17467,
+            "end_char": 18156
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S084",
+          "DOC011:S084",
+          "DOC011:S084"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "历史追踪：T084「a very convenient way to track history」",
+          "内容：T084「what changes were made with this pull request」",
+          "协作者改动：T084「changes that were made by my collaborators」"
+        ],
+        "unsupported_parts": [
+          "现有历史为线性提交栈，分支结构不可见（T087 指出）",
+          "未说明需要筛选或导出"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取历史追踪陈述",
+          "2. 与 C010 的不足描述对照",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T083 说 PR「is also a very convenient way to track history」，并说明可看每次 PR 改了什么以及协作者的改动。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "能回看仓库的变更历史，包括每次提交改了什么、由谁改。",
+        "label": "direct",
+        "rationale": "T083 说 PR「is also a very convenient way to track history」，并说明可看每次 PR 改了什么以及协作者的改动。",
+        "supported_parts": [
+          "历史追踪：T084「a very convenient way to track history」",
+          "内容：T084「what changes were made with this pull request」",
+          "协作者改动：T084「changes that were made by my collaborators」"
+        ],
+        "unsupported_parts": [
+          "现有历史为线性提交栈，分支结构不可见（T087 指出）",
+          "未说明需要筛选或导出"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取历史追踪陈述",
+          "2. 与 C010 的不足描述对照",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C005",
+      "target_kind": "candidate",
+      "statement": "代码安全保存在云端，本机损坏或丢失时可换机拉取继续。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC011:S076",
+          "material_id": "M001",
+          "quote": "having a convenient place to store my code in a in a in a safe manner",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15098,
+          "end_char": 15167,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S076",
+              "segment_start": 69,
+              "segment_end": 138,
+              "start_char": 15098,
+              "end_char": 15167
+            }
+          ],
+          "original_locator": {
+            "line_start": 76,
+            "line_end": 76,
+            "start_char": 15029,
+            "end_char": 15383
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC011:S076",
+          "material_id": "M001",
+          "quote": "I would still have my work in a cloud environment that I could simply I'm gonna use the keyword pull onto a different machine",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15220,
+          "end_char": 15345,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S076",
+              "segment_start": 191,
+              "segment_end": 316,
+              "start_char": 15220,
+              "end_char": 15345
+            }
+          ],
+          "original_locator": {
+            "line_start": 76,
+            "line_end": 76,
+            "start_char": 15029,
+            "end_char": 15383
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC011:S078",
+          "material_id": "M001",
+          "quote": "They can store their work on that branch",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15713,
+          "end_char": 15753,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S078",
+              "segment_start": 221,
+              "segment_end": 261,
+              "start_char": 15713,
+              "end_char": 15753
+            }
+          ],
+          "original_locator": {
+            "line_start": 78,
+            "line_end": 78,
+            "start_char": 15492,
+            "end_char": 15963
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S076",
+          "DOC011:S076",
+          "DOC011:S078"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "目的：T076「store my code in a in a in a safe manner」",
+          "恢复场景：T076「I would still have my work in a cloud environment」",
+          "换机继续：T076「pull onto a different machine and continue working」"
+        ],
+        "unsupported_parts": [
+          "未说明私有仓库的可见性与备份策略",
+          "未讨论误删恢复"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取目的与场景",
+          "2. 属维持型目标",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T075 明确云端保存的目的与场景：「having a convenient place to store my code in a in a in a safe manner」，本机故障时可「pull onto a different machine」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "代码安全保存在云端，本机损坏或丢失时可换机拉取继续。",
+        "label": "direct",
+        "rationale": "T075 明确云端保存的目的与场景：「having a convenient place to store my code in a in a in a safe manner」，本机故障时可「pull onto a different machine」。",
+        "supported_parts": [
+          "目的：T076「store my code in a in a in a safe manner」",
+          "恢复场景：T076「I would still have my work in a cloud environment」",
+          "换机继续：T076「pull onto a different machine and continue working」"
+        ],
+        "unsupported_parts": [
+          "未说明私有仓库的可见性与备份策略",
+          "未讨论误删恢复"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取目的与场景",
+          "2. 属维持型目标",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C006",
+      "target_kind": "candidate",
+      "statement": "检索并阅读他人公开仓库的代码。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC011:S082",
+          "material_id": "M001",
+          "quote": "public repositories are visible to anybody",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 16460,
+          "end_char": 16502,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S082",
+              "segment_start": 112,
+              "segment_end": 154,
+              "start_char": 16460,
+              "end_char": 16502
+            }
+          ],
+          "original_locator": {
+            "line_start": 82,
+            "line_end": 82,
+            "start_char": 16348,
+            "end_char": 17256
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC011:S082",
+          "material_id": "M001",
+          "quote": "it can then search the entire Github database for public repositories that I can look at",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 16767,
+          "end_char": 16855,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S082",
+              "segment_start": 419,
+              "segment_end": 507,
+              "start_char": 16767,
+              "end_char": 16855
+            }
+          ],
+          "original_locator": {
+            "line_start": 82,
+            "line_end": 82,
+            "start_char": 16348,
+            "end_char": 17256
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC011:S082",
+          "material_id": "M001",
+          "quote": "I can also filter based on language.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17111,
+          "end_char": 17147,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S082",
+              "segment_start": 763,
+              "segment_end": 799,
+              "start_char": 17111,
+              "end_char": 17147
+            }
+          ],
+          "original_locator": {
+            "line_start": 82,
+            "line_end": 82,
+            "start_char": 16348,
+            "end_char": 17256
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S082",
+          "DOC011:S082",
+          "DOC011:S082"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "开放性：T082「public repositories are visible to anybody」",
+          "检索范围：T082「search the entire Github database for public repositories」",
+          "语言筛选：T082「I can also filter based on language」"
+        ],
+        "unsupported_parts": [
+          "未说明检索用途（学习/复用/找工作）",
+          "未提及私有仓库边界"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取开放性陈述与检索描述",
+          "2. 用途未明但行为与目的清楚",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T081 说明平台开放性「public repositories are visible to anybody」，并描述搜索与筛选方式。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "检索并阅读他人公开仓库的代码。",
+        "label": "direct",
+        "rationale": "T081 说明平台开放性「public repositories are visible to anybody」，并描述搜索与筛选方式。",
+        "supported_parts": [
+          "开放性：T082「public repositories are visible to anybody」",
+          "检索范围：T082「search the entire Github database for public repositories」",
+          "语言筛选：T082「I can also filter based on language」"
+        ],
+        "unsupported_parts": [
+          "未说明检索用途（学习/复用/找工作）",
+          "未提及私有仓库边界"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取开放性陈述与检索描述",
+          "2. 用途未明但行为与目的清楚",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C007",
+      "target_kind": "candidate",
+      "statement": "用看板跟踪任务状态与分工（backlog → 待办 → 进行中）。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC011:S052",
+          "material_id": "M001",
+          "quote": "a project is essentially just a tracking board",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10737,
+          "end_char": 10783,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S052",
+              "segment_start": 126,
+              "segment_end": 172,
+              "start_char": 10737,
+              "end_char": 10783
+            }
+          ],
+          "original_locator": {
+            "line_start": 52,
+            "line_end": 52,
+            "start_char": 10611,
+            "end_char": 10798
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC011:S054",
+          "material_id": "M001",
+          "quote": "Kanban board where you're actually assigning tasks, and you can facilitate team management that way",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10857,
+          "end_char": 10956,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S054",
+              "segment_start": 32,
+              "segment_end": 131,
+              "start_char": 10857,
+              "end_char": 10956
+            }
+          ],
+          "original_locator": {
+            "line_start": 54,
+            "line_end": 54,
+            "start_char": 10825,
+            "end_char": 11280
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC011:S060",
+          "material_id": "M001",
+          "quote": "we would add that to the backlog, we would meet together as a team. discuss who should be assigned",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12381,
+          "end_char": 12479,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S060",
+              "segment_start": 131,
+              "segment_end": 229,
+              "start_char": 12381,
+              "end_char": 12479
+            }
+          ],
+          "original_locator": {
+            "line_start": 60,
+            "line_end": 60,
+            "start_char": 12250,
+            "end_char": 12602
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S052",
+          "DOC011:S054",
+          "DOC011:S060"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "定义：T054「a project is essentially just a tracking board」",
+          "分工：T054「assigning tasks, and you can facilitate team management」",
+          "流转：T060「move those issues... from the backlog to another part of the combine board」"
+        ],
+        "unsupported_parts": [
+          "未说明看板列的具体定义（待办/进行中/完成）",
+          "未说明是否需要进度统计"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取定义与分工描述",
+          "2. 流转流程在 T060-T062 有描述",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T053 定义项目为「a tracking board... Kanban board where you're actually assigning tasks」，T059 描述 backlog 到待办的流转与分工会议。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "用看板跟踪任务状态与分工（backlog → 待办 → 进行中）。",
+        "label": "direct",
+        "rationale": "T053 定义项目为「a tracking board... Kanban board where you're actually assigning tasks」，T059 描述 backlog 到待办的流转与分工会议。",
+        "supported_parts": [
+          "定义：T054「a project is essentially just a tracking board」",
+          "分工：T054「assigning tasks, and you can facilitate team management」",
+          "流转：T060「move those issues... from the backlog to another part of the combine board」"
+        ],
+        "unsupported_parts": [
+          "未说明看板列的具体定义（待办/进行中/完成）",
+          "未说明是否需要进度统计"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取定义与分工描述",
+          "2. 流转流程在 T060-T062 有描述",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C008",
+      "target_kind": "candidate",
+      "statement": "PR 与看板 issue 关联，合并后看板状态自动更新。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC011:S070",
+          "material_id": "M001",
+          "quote": "when that port request is merged, the Kanban board would automatically reflect that",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13992,
+          "end_char": 14075,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S070",
+              "segment_start": 382,
+              "segment_end": 465,
+              "start_char": 13992,
+              "end_char": 14075
+            }
+          ],
+          "original_locator": {
+            "line_start": 70,
+            "line_end": 70,
+            "start_char": 13610,
+            "end_char": 14136
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC011:S068",
+          "material_id": "M001",
+          "quote": "you can actually attach it to an issue in the Kanban board",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13367,
+          "end_char": 13425,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S068",
+              "segment_start": 53,
+              "segment_end": 111,
+              "start_char": 13367,
+              "end_char": 13425
+            }
+          ],
+          "original_locator": {
+            "line_start": 68,
+            "line_end": 68,
+            "start_char": 13314,
+            "end_char": 13576
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S070",
+          "DOC011:S068"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "自动更新：T070「the Kanban board would automatically reflect that」",
+          "关联方式：T070「you can actually attach it to an issue in the Kanban board」"
+        ],
+        "unsupported_parts": [
+          "依赖项目已链接仓库（T068），未说明未链接时的行为",
+          "关键词的具体语法未完整给出"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取联动效果与关联方式",
+          "2. 前置条件已由受访者说明",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T069 明确联动效果：「when that port request is merged, the Kanban board would automatically reflect that」，并说明通过 resolves 关键词关联。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "PR 与看板 issue 关联，合并后看板状态自动更新。",
+        "label": "direct",
+        "rationale": "T069 明确联动效果：「when that port request is merged, the Kanban board would automatically reflect that」，并说明通过 resolves 关键词关联。",
+        "supported_parts": [
+          "自动更新：T070「the Kanban board would automatically reflect that」",
+          "关联方式：T070「you can actually attach it to an issue in the Kanban board」"
+        ],
+        "unsupported_parts": [
+          "依赖项目已链接仓库（T068），未说明未链接时的行为",
+          "关键词的具体语法未完整给出"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取联动效果与关联方式",
+          "2. 前置条件已由受访者说明",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C009",
+      "target_kind": "candidate",
+      "statement": "GitHub Actions 的官方文档更易查，并提供讨论区或博客。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC011:S086",
+          "material_id": "M001",
+          "quote": "their documentation overall is a little broad. or it's it's very. It's very difficult to find.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18721,
+          "end_char": 18815,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S086",
+              "segment_start": 354,
+              "segment_end": 448,
+              "start_char": 18721,
+              "end_char": 18815
+            }
+          ],
+          "original_locator": {
+            "line_start": 86,
+            "line_end": 86,
+            "start_char": 18367,
+            "end_char": 19063
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC011:S086",
+          "material_id": "M001",
+          "quote": "So if they. Could have a forum or such, or like a a blog, tab forward discussions or information on building these action workflows. It'd be great.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18916,
+          "end_char": 19063,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S086",
+              "segment_start": 549,
+              "segment_end": 696,
+              "start_char": 18916,
+              "end_char": 19063
+            }
+          ],
+          "original_locator": {
+            "line_start": 86,
+            "line_end": 86,
+            "start_char": 18367,
+            "end_char": 19063
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC011:S086",
+          "material_id": "M001",
+          "quote": "most of the documentation, I find is from other external sources. Stack, overflow, for example.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18820,
+          "end_char": 18915,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S086",
+              "segment_start": 453,
+              "segment_end": 548,
+              "start_char": 18820,
+              "end_char": 18915
+            }
+          ],
+          "original_locator": {
+            "line_start": 86,
+            "line_end": 86,
+            "start_char": 18367,
+            "end_char": 19063
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S086",
+          "DOC011:S086",
+          "DOC011:S086"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "问题：T086「their documentation overall is a little broad」与「It's very difficult to find」",
+          "期望：T086「a forum or such, or like a a blog, tab forward discussions」",
+          "旁证：T086「most of the documentation, I find is from other external sources」"
+        ],
+        "unsupported_parts": [
+          "未说明期望的文档结构或示例数量",
+          "「broad」的含义（覆盖面广 vs 表述含糊）未澄清"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题陈述与期望形态",
+          "2. 二者同一段内直接相连",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T085 指出 Actions 文档难查「It's very difficult to find」，并直接提出改进形态（forum、blog、讨论区）。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "GitHub Actions 的官方文档更易查，并提供讨论区或博客。",
+        "label": "direct",
+        "rationale": "T085 指出 Actions 文档难查「It's very difficult to find」，并直接提出改进形态（forum、blog、讨论区）。",
+        "supported_parts": [
+          "问题：T086「their documentation overall is a little broad」与「It's very difficult to find」",
+          "期望：T086「a forum or such, or like a a blog, tab forward discussions」",
+          "旁证：T086「most of the documentation, I find is from other external sources」"
+        ],
+        "unsupported_parts": [
+          "未说明期望的文档结构或示例数量",
+          "「broad」的含义（覆盖面广 vs 表述含糊）未澄清"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题陈述与期望形态",
+          "2. 二者同一段内直接相连",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C010",
+      "target_kind": "candidate",
+      "statement": "以可视化方式呈现分支创建与合并的历史，而不只是线性提交栈。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC011:S088",
+          "material_id": "M001",
+          "quote": "It would be to see a visual mapping of the repository history.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19345,
+          "end_char": 19407,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S088",
+              "segment_start": 138,
+              "segment_end": 200,
+              "start_char": 19345,
+              "end_char": 19407
+            }
+          ],
+          "original_locator": {
+            "line_start": 88,
+            "line_end": 88,
+            "start_char": 19207,
+            "end_char": 20020
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC011:S088",
+          "material_id": "M001",
+          "quote": "visually see there was new branches made where they were merged in",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19806,
+          "end_char": 19872,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S088",
+              "segment_start": 599,
+              "segment_end": 665,
+              "start_char": 19806,
+              "end_char": 19872
+            }
+          ],
+          "original_locator": {
+            "line_start": 88,
+            "line_end": 88,
+            "start_char": 19207,
+            "end_char": 20020
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC011:S088",
+          "material_id": "M001",
+          "quote": "it's not an essential feature, it's more so. Just like convenience. Nice to have feature.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19255,
+          "end_char": 19344,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S088",
+              "segment_start": 48,
+              "segment_end": 137,
+              "start_char": 19255,
+              "end_char": 19344
+            }
+          ],
+          "original_locator": {
+            "line_start": 88,
+            "line_end": 88,
+            "start_char": 19207,
+            "end_char": 20020
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S088",
+          "DOC011:S088",
+          "DOC011:S088"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "期望：T088「a visual mapping of the repository history」",
+          "内容：T088「where they were merged in」",
+          "现状不足：T088「doesn't give like a an exact history of the repository」"
+        ],
+        "unsupported_parts": [
+          "受访者自称「not an essential feature... Nice to have」，强度弱",
+          "未说明图形形态（有向图/时间轴）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取期望与现状对照",
+          "2. 记录弱强度",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T087 明确提出「a visual mapping of the repository history」，并说明现有提交栈不足、期望看到分支与合并位置。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "以可视化方式呈现分支创建与合并的历史，而不只是线性提交栈。",
+        "label": "direct",
+        "rationale": "T087 明确提出「a visual mapping of the repository history」，并说明现有提交栈不足、期望看到分支与合并位置。",
+        "supported_parts": [
+          "期望：T088「a visual mapping of the repository history」",
+          "内容：T088「where they were merged in」",
+          "现状不足：T088「doesn't give like a an exact history of the repository」"
+        ],
+        "unsupported_parts": [
+          "受访者自称「not an essential feature... Nice to have」，强度弱",
+          "未说明图形形态（有向图/时间轴）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取期望与现状对照",
+          "2. 记录弱强度",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC011-C011",
+      "target_kind": "candidate",
+      "statement": "内置 AI 助手，辅助代码审查与操作引导，并帮用户用上平台已有的资源。",
+      "document_id": "DOC011",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC011:S094",
+          "material_id": "M001",
+          "quote": "if a Github was to integrate such an assistant to allow users to consult with it to have better to use all the resources available on Github",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 20715,
+          "end_char": 20855,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S094",
+              "segment_start": 220,
+              "segment_end": 360,
+              "start_char": 20715,
+              "end_char": 20855
+            }
+          ],
+          "original_locator": {
+            "line_start": 94,
+            "line_end": 94,
+            "start_char": 20495,
+            "end_char": 20877
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0030",
+          "source_id": "DOC011:S098",
+          "material_id": "M001",
+          "quote": "if I was to have maybe an AI assistant or something that would review help me with code reviews, provide suggestions",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 21245,
+          "end_char": 21361,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S098",
+              "segment_start": 149,
+              "segment_end": 265,
+              "start_char": 21245,
+              "end_char": 21361
+            }
+          ],
+          "original_locator": {
+            "line_start": 98,
+            "line_end": 98,
+            "start_char": 21096,
+            "end_char": 21588
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0031",
+          "source_id": "DOC011:S098",
+          "material_id": "M001",
+          "quote": "I have another source of feedback that I can incorporate",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 21363,
+          "end_char": 21419,
+          "candidate_locations": [
+            {
+              "source_id": "DOC011:S098",
+              "segment_start": 267,
+              "segment_end": 323,
+              "start_char": 21363,
+              "end_char": 21419
+            }
+          ],
+          "original_locator": {
+            "line_start": 98,
+            "line_end": 98,
+            "start_char": 21096,
+            "end_char": 21588
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC011:S094",
+          "DOC011:S098",
+          "DOC011:S098"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "集成设想：T094「integrate such an assistant to allow users to consult with it」",
+          "审查辅助：T098「help me with code reviews, provide suggestions」",
+          "操作引导：T098「guide me through. maybe making a pull request」",
+          "动机：T098「I have another source of feedback」"
+        ],
+        "unsupported_parts": [
+          "未说明 AI 与人工审查的关系（替代还是补充）",
+          "未说明对 AI 建议的信任边界"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 两处互证",
+          "2. 用途覆盖审查与操作两类",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T093 与 T097 两次提出 AI 集成：前者是「consult with it to have better to use all the resources available on Github」，后者具体到代码审查与操作引导。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "内置 AI 助手，辅助代码审查与操作引导，并帮用户用上平台已有的资源。",
+        "label": "direct",
+        "rationale": "T093 与 T097 两次提出 AI 集成：前者是「consult with it to have better to use all the resources available on Github」，后者具体到代码审查与操作引导。",
+        "supported_parts": [
+          "集成设想：T094「integrate such an assistant to allow users to consult with it」",
+          "审查辅助：T098「help me with code reviews, provide suggestions」",
+          "操作引导：T098「guide me through. maybe making a pull request」",
+          "动机：T098「I have another source of feedback」"
+        ],
+        "unsupported_parts": [
+          "未说明 AI 与人工审查的关系（替代还是补充）",
+          "未说明对 AI 建议的信任边界"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 两处互证",
+          "2. 用途覆盖审查与操作两类",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC011\\tracing\\semantic-judgments.json",
+    "sha256": "56c60b019973896ab47ce1ffc67e76b91132874bc8ca7ebec025258dc94719b9"
+  }
+}

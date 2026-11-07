@@ -1,0 +1,156 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "1148bf593fcf5f6fc53f2d8cc4c17ffc78cbee16feb4ed2e782c9c34285dc7db",
+    "input_sha256": "b6c0ea23120251303d692f8698fd8b15b4fd9c33d109baa48fea71bba76742e4"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Be able to open plain vim in the terminal and modify code on any server that has no graphical user interface",
+      "label": "inferred",
+      "rationale": "T015 反复陈述可在任意服务器用纯 vim 改文件并强调 matters much，T021/T075 给出无 UI 的条件与沿用依据；主体、对象、条件（无图形界面/仅命令行）与方式（终端里的纯 vim）均逐项核对，位置命中不等于语义支持一项已单独确认。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [
+        "把现状能力陈述视为维持型目标"
+      ],
+      "reasoning_steps": [
+        "定位 T015/T021/T075 原句",
+        "核对无 UI、仅命令行的适用条件",
+        "确认方式为 plain vim 而非 Vs code"
+      ]
+    },
+    "G002": {
+      "target_statement": "Customize the local development environment by installing plugins and configuring the vim interface to fit personal experience",
+      "label": "direct",
+      "rationale": "T015 用 I will 明确表达装插件与定制界面以贴合个人体验，T035/T031 补充这些定制都落在 config file；主体（受访者）、对象（本地 vim）、方式（配置文件/插件）一致，本地与纯 vim 的区分保留在 context。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G003": {
+      "target_statement": "Make every system's vim behave like the local customized vim by keeping and reusing the config file",
+      "label": "inferred",
+      "rationale": "T031 直接支撑保留配置使各系统一致，T069 的账号同步对比补充可移植性；未把偏好升级为强制，未删掉'config file'这一明确选定的方式。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G004": {
+      "target_statement": "Prefer a lightweight editor that opens quickly and avoids the RAM/CPU cost of graphical editors",
+      "label": "inferred",
+      "rationale": "轻量/快速与低资源在 T015、T027 有正面依据，但原文是属性描述与选择理由而非明确要求，故保留 Prefer 强度并判 inferred，不升级为 must。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G005": {
+      "target_statement": "Keep hands on the keyboard without using the mouse in order to improve coding efficiency",
+      "label": "direct",
+      "rationale": "T055 明确说图形界面下不必用鼠标、一切在键盘完成，T063 明说手不离键盘提升效率；核心动作（键盘操作）与预期结果（效率）都有原句支撑，方式未被抽象删掉。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G006": {
+      "target_statement": "Use whichever development tool gives better efficiency, since efficiency is what developers ultimately want",
+      "label": "direct",
+      "rationale": "T069 直接陈述'all the developer we all we want is efficiency'与'which tool give us better efficiency. We will use that tool'，并以自己开始学 VS Code 为例证；主体、结果与选择标准一致，逐字符引文保留了 we all we want 的转写原样。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G007": {
+      "target_statement": "Have an editor that must support plugins or extensions so tools can fit every requirement of a developer",
+      "label": "direct",
+      "rationale": "T103 明确说 'there's a must for editor' 与 'The the editor must supports plugins or extensions'，强度 must 与目的 so that tools will fit every requirements 均逐字保留；主体（编辑器）、对象（插件/扩展）、强度都核对。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G008": {
+      "target_statement": "Have a large community around the editor so users can see how people solve issues and see real people improving the product",
+      "label": "inferred",
+      "rationale": "社区重要性与'社区规模而非平台'在 T109、T103 有正面依据，但原文为评价/重要性判断而非明确要求，故判 inferred 并在 context 保留'规模而非平台'的限定，未把信念当事实。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G009": {
+      "target_statement": "Be able to start work at any device by getting familiar with every tool",
+      "label": "direct",
+      "rationale": "T087 直接说 'my mentality is that I need to get familiar' 与 'I can start work at any device'；动作（熟悉每个工具）与结果（任意设备开工）均有原句，未把现状能力自动扩展成额外要求。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G010": {
+      "target_statement": "Not stick to a single tool for a developer; evaluate each situation and choose the best plan",
+      "label": "direct",
+      "rationale": "T075 明确否定固守单一工具（don't ... stick to a single tool）并给出按情境评估选最佳方案；否定、主体（a developer）与建议强度（I think / just depends）都保留。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G011": {
+      "target_statement": "Keep using vim out of habit even though looking cool no longer matters",
+      "label": "direct",
+      "rationale": "T063 用 I will keep using it 明确维持使用，并明确说不再在意酷；否定与强度变化都保留在 context，未把已放弃的偏好升级为强制，也未因 T075 的相反表述改写标题。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G012": {
+      "target_statement": "Avoid recommending vim for front-end development because vim cannot display the colors front-end work needs",
+      "label": "direct",
+      "rationale": "T061 明确说前端开发 'I won't recommend using being currently'，原因是 vim 无法显示颜色；避免型目标、适用情境（前端）、建议强度与例外（要花很多力气）都逐项保留。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G013": {
+      "target_statement": "Have an editor that integrates the whole development pipeline (coding, build, test, deploy, code review, monitoring, cloud access) in one app through extensions",
+      "label": "inferred",
+      "rationale": "整条流水线在 T081/T087/T091 有正面依据，但原文是对产品能力/需求演进的描述与评价，不是明确要求，故判 inferred；未把'VS Code'这一具体工具固化为目标，保留 in one app through extensions 的方式。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G014": {
+      "target_statement": "Be able to resume the tmux/vim working session immediately after the computer shuts down",
+      "label": "inferred",
+      "rationale": "T051 直接支撑关机后立刻恢复会话，但原文是能力/工作流描述而非明确要求，故判 inferred，保留 tmux 会话与意外关机条件。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G015": {
+      "target_statement": "Make the editor's customization/configuration easy to understand and maintain without a separate config-file language",
+      "label": "insufficient",
+      "rationale": "原文 T055/T069/T093 只描述学习配置文件的困难、维护可移植配置的麻烦以及可用 GPT/市场安装缓解，属于抱怨与障碍线索，并未明确表达'编辑器应简化配置'这一要求；按目标边界，抱怨不自动证明障碍、问题取反不自动成为唯一补救方式，故如实保留 insufficient，不升级为 direct/inferred。",
+      "supported_parts": [],
+      "unsupported_parts": [
+        "把'配置困难'这一抱怨/障碍线索升级为对编辑器的明确要求缺少正面依据"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "定位 T055/T069/T093 困难与对比原句",
+        "核对是否存在明确要求表述",
+        "确认仅为抱怨/背景，判 insufficient"
+      ]
+    }
+  }
+}

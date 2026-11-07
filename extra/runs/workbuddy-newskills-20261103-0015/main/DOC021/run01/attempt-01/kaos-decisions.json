@@ -1,0 +1,356 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "7170a57cd7610f288ab239b12a2e829f866e8856864680f5aa642c9e62024b27",
+    "judgments_sha256": "1b65c658977787b896c84e33623b4b6542987119a743304ddbc8637615c5ab85"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G029",
+      "child_ids": [
+        "G014",
+        "G015"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "原文把“流程不清”和“表单冗长、结果不明”同时列为不在站内沟通的原因，短联系加流程可见性共同覆盖了其中一部分；但未覆盖响应时限、房主不回应等情形，不能声称整组已足以实现父目标。",
+      "assumptions": [
+        "若站内流程透明且联系成本低，用户会放弃站外电话/邮件",
+        "房主仍会通过站内渠道回应"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T071",
+          "quote": "But the reason why I'm not having this experience until now is that the process is not clear.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R6",
+        "R7"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "用户对某套房源产生兴趣：用短消息即可发出询问，并能在页面上看到下一步与预期回复时间。",
+          "outcome": "supports",
+          "rationale": "按原句（T071、T073）构造的正常场景，两个子目标各自覆盖“联系简单”与“流程可见”，场景内未出现反例。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "房主长期不回应或平台无人维护，即使界面清晰、表单很短。",
+          "outcome": "counterexample",
+          "rationale": "受访者自己说在无回应时会转用电话或邮件，说明两个子目标不能保证沟通留在站内，故整组只记为 proposed/partial。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC021-goal-model",
+      "message": "G012 描述的是当前主要在站外沟通，而 G029 期望把沟通留在站内：应理解为“流程清晰后才回到站内”的条件性偏好，还是两条并行渠道？"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "GR1 只覆盖流程可见与短联系，未覆盖响应时限与房主不回应；是否需要另一个“响应时限/可达性”目标才能共同充分？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G012",
+      "message": "G012 是现状做法（站外沟通），与 G029 方向相反；它应作为需要保留的现状，还是视为待改变的行为？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G028",
+      "message": "照片格式强制只以“maybe”提出，是否保留为目标而非仅列为偏好？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G021",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "a map with a drawing tool is available"
+      ],
+      "assumptions": [
+        "在地图上画圈仍属于选择搜索区域的实现方式"
+      ],
+      "rationale": "画圈选区域是受访者选街区/区域这一目的的具体实现方式，原句同时给出“街区名太具体”的理由，方向为方式→目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T033",
+          "quote": "One of the things that I like is that they provide sometimes a map with a drawing tool where you can just draw a circle around the place you're interested in in the map",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G004",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "the stakeholder has a job or a college that fixes the location"
+      ],
+      "assumptions": [
+        "就近上班/上学是选街区的一般目标的一个具体情境"
+      ],
+      "rationale": "“有固定上班或上学地点时选附近街区”是选街区目标在特定情境下的具体化，方向为具体→一般。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T007",
+          "quote": "if I have a specific job, or if I'm studying at specific college, I will usually pick a neighborhood that's close to that area",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G006",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "listing sites show where budget-fitting options cluster"
+      ],
+      "assumptions": [
+        "以房源聚集街区反推目标街区是可行性判断的方法"
+      ],
+      "rationale": "观察预算相符房源的聚集街区，是决定选哪个街区的具体方法，属方式→目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T007",
+          "quote": "Sometimes there are options that fits my budget and fits my requirements more clustered in specific neighborhoods",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G005",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "people living in the target country can be asked"
+      ],
+      "assumptions": [
+        "向当地人打听是获取街区信息的渠道之一"
+      ],
+      "rationale": "原句把“问当地人推荐”列为选街区的一种方式，属实现方式→目的；未声称它是唯一或充分方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T007",
+          "quote": "is asking people who lives, for example in that country, if they have any recommendation for the places",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G018",
+      "target_id": "G019",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "强制登录被受访者归入“无益步骤”"
+      ],
+      "rationale": "受访者把“跳过登录”直接解释为“更方便地搜索、去掉无益步骤”，即免登录服务于便利搜索这一目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T047",
+          "quote": "It's like to be more convenient just to search the information you want without having steps that you don't believe it's beneficial.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G014",
+      "target_id": "G029",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "the user can see the process before deciding"
+      ],
+      "assumptions": [
+        "对流程的可见性会提高站内沟通的信任"
+      ],
+      "rationale": "原句说明让用户了解沟通过程会使其更信任该功能并留在站内沟通，属于帮助关系而非充分条件。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T073",
+          "quote": "So maybe it's changing something in in the ui to make the user have some insight about, how would the communication process be? This will make him like, trust the feature more, and never try something else, and just keep the communication in in the website.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G015",
+      "target_id": "G029",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "contacting does not require the long form"
+      ],
+      "assumptions": [
+        "表单与不明结果是把沟通推到站外的原因之一"
+      ],
+      "rationale": "原句把“模糊按钮+表单+不知后续”列为不在站内沟通的原因，缩短联系路径因此有助于把沟通留在站内。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T071",
+          "quote": "You just have a vague button called. Send a message where you will fill a form and never know what will happen next.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G011",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "the provider is reachable outside the platform"
+      ],
+      "assumptions": [
+        "换渠道联系仍服务于缩小备选范围"
+      ],
+      "rationale": "站外渠道是在平台无回应时继续联系房源方的补救，帮助“联系房源方以缩小范围”这一目标推进，但不保证成功。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T013",
+          "quote": "So I'll try to communicate with them using other methods like email or phone.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G007",
+      "target_id": "G010",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "listings are aggregated on the site"
+      ],
+      "assumptions": [
+        "筛选与聚合共同带来价格区间的总体认识"
+      ],
+      "rationale": "原句说明筛选与网站聚合房源一起帮助形成价格区间与可选项总览，属有帮助但不等于充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T057",
+          "quote": "So these types of filters, and also these types of websites will collect a lot of options together will give me an overview about the price ranges about the available options",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R10",
+      "source_id": "G022",
+      "target_id": "G010",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "评论被视为总览的一部分信息"
+      ],
+      "rationale": "原句把“看评论、看位置”列为网站给出的总体信息的一部分，评论有助于形成市场总览。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T057",
+          "quote": "and to see the reviews, to see the locations",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R11",
+      "source_id": "G027",
+      "target_id": "G025",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "the filter field supports an include-unspecified option"
+      ],
+      "assumptions": [
+        "勾选框能按用户选择决定是否纳入未填写项"
+      ],
+      "rationale": "勾选“包含未注明”的控件是避免漏掉未填写属性房源这一目的的具体做法，方向为方式→目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T051",
+          "quote": "maybe I would love if there is an option where I can have like. I can also allow the people who didn't specify, so I can see both",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R12",
+      "source_id": "G008",
+      "target_id": "G009",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "“after that steps”指筛选完成之后才联系"
+      ],
+      "rationale": "原句明确说明先完成筛选再开始联系，属先后关系；未据此声称因果或精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T011",
+          "quote": "So after that steps I might start contacting like the people who offer these places",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R13",
+      "source_id": "G017",
+      "target_id": "G015",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "挑选已有选项可省去写自定义消息"
+      ],
+      "rationale": "原句说明不想写自定义消息时希望直接挑选已有选项，挑选因此有助于实现“短联系、不长表单”的目标。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T023",
+          "quote": "Sometimes you don't want to write a custom message. You just want to pick the available option you like.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

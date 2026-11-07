@@ -1,0 +1,587 @@
+{
+  "document_id": "DOC004",
+  "status": "completed",
+  "limitations": [
+    "仅处理已提供的访谈转写全文；未核听录音，未独立验证银行、平台或产品事实。",
+    "当前精确模型ID、采样参数和预算均为unknown，继承当前模型配置；生成方自检不构成独立审查或形式证明。",
+    "原契约无独立障碍、偏好与贡献关联层；关键条件以目标context、推断和问题承接，人审pending。"
+  ],
+  "goals": [
+    {
+      "candidate_id": "DOC004-G01",
+      "statement": "用Zelle向亲友快速支付小额款项以分摊费用",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T005",
+          "quote": "the main reason I use the app is to do sell payments to like a few of my friends. Basically split split costs and all of that."
+        },
+        {
+          "source_id": "DOC004:T007",
+          "quote": "Zelle is basically like a way to instantaneously transfer small amounts of money between, let's say, 2 different accounts just based on their phone number."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "受访者明确说明主要使用目的；T007解释电话号小额即时转账，sell为原转写，保留Zelle语境而不验证服务事实。",
+        "supported_parts": [
+          "用Zelle向亲友快速支付小额款项以分摊费用"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "受访者明确说明主要使用目的；T007解释电话号小额即时转账，sell为原转写，保留Zelle语境而不验证服务事实。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G02",
+      "statement": "把支票账户的富余资金转到储蓄账户以获得利息",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T005",
+          "quote": "when I have. Let's say a lot of funds in my checking account, so I normally transfer it over to my savings, so I can get even that little bit of interest I normally get."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "资金转移的条件、方式和目的均明确；不增加收益承诺。",
+        "supported_parts": [
+          "把支票账户的富余资金转到储蓄账户以获得利息"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "资金转移的条件、方式和目的均明确；不增加收益承诺。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G03",
+      "statement": "继续通过连接银行账户的Apple Pay完成商店支付",
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [
+        "商店等线下购物场景"
+      ],
+      "inference": {
+        "basis_candidate_ids": [],
+        "reason": "持续日常购物用例支持保持该支付方式的意图，但并未明确提出新增需求。",
+        "assumptions": [
+          "所述当前使用仍是受访者希望保持的用途"
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "DOC004:T005",
+          "quote": "So I use apple pay there. So which directly connects to chase itself. And then, does the payment from there."
+        }
+      ],
+      "support": {
+        "label": "inferred",
+        "rationale": "持续日常购物用例支持保持该支付方式的意图，但并未明确提出新增需求。",
+        "supported_parts": [
+          "继续通过连接银行账户的Apple Pay完成商店支付"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "所述当前使用仍是受访者希望保持的用途"
+        ],
+        "reasoning_steps": [
+          "持续日常购物用例支持保持该支付方式的意图，但并未明确提出新增需求。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G04",
+      "statement": "在登录后的概览中快速查看账户余额、收支及近期交易，少切换页面",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T015",
+          "quote": "it's a good thing that I can like. Just look at all of my spends on like in like a quick glance, and don't really have to go to like multiple screens to check all of that"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "对现有概览的明确价值评价含少跳转的结果意图；余额及近期交易在同轮上下文中列明。",
+        "supported_parts": [
+          "在登录后的概览中快速查看账户余额、收支及近期交易，少切换页面"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "对现有概览的明确价值评价含少跳转的结果意图；余额及近期交易在同轮上下文中列明。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G05",
+      "statement": "维持让受访者感到资金安全的客户侧安全保障",
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [
+        "不声称已知后台安全实现"
+      ],
+      "inference": {
+        "basis_candidate_ids": [],
+        "reason": "安全是受访者信念而非客观验证；对额外验证、通知和争议能力的肯定支持维持安全感的推断。",
+        "assumptions": [
+          "正面安全评价体现继续需要保护资金的意图"
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "DOC004:T019",
+          "quote": "I believe, like my funds are pretty safe with the bank."
+        }
+      ],
+      "support": {
+        "label": "inferred",
+        "rationale": "安全是受访者信念而非客观验证；对额外验证、通知和争议能力的肯定支持维持安全感的推断。",
+        "supported_parts": [
+          "维持让受访者感到资金安全的客户侧安全保障"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "正面安全评价体现继续需要保护资金的意图"
+        ],
+        "reasoning_steps": [
+          "安全是受访者信念而非客观验证；对额外验证、通知和争议能力的肯定支持维持安全感的推断。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G06",
+      "statement": "在首次使用新设备登录时保留双因素身份验证",
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [
+        "首次在该笔记本网页登录"
+      ],
+      "inference": {
+        "basis_candidate_ids": [],
+        "reason": "将被肯定的现有额外安全层保存为维持候选；不推成每次登录必须同一验证。",
+        "assumptions": [
+          "对该额外安全层的肯定表示希望维持"
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "DOC004:T019",
+          "quote": "it was the 1st time I was signing in on my laptop. So it. They had this whole 2 factor thing authentication thing set up like from the get go. So that was good."
+        }
+      ],
+      "support": {
+        "label": "inferred",
+        "rationale": "将被肯定的现有额外安全层保存为维持候选；不推成每次登录必须同一验证。",
+        "supported_parts": [
+          "在首次使用新设备登录时保留双因素身份验证"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "对该额外安全层的肯定表示希望维持"
+        ],
+        "reasoning_steps": [
+          "将被肯定的现有额外安全层保存为维持候选；不推成每次登录必须同一验证。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G07",
+      "statement": "继续及时获知交易支出，并能对可疑交易提出争议",
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [],
+      "inference": {
+        "basis_candidate_ids": [],
+        "reason": "交易通知和可争议被一起赞许，维持意图需推断；不把每次通知的报告当作已验证可靠性。",
+        "assumptions": [
+          "该正面评价支持保留所述客户能力"
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "DOC004:T019",
+          "quote": "every time I do a transaction. I get a notification on my phone saying that this much amount of money has been spent, and then I can also contest it, which is great."
+        }
+      ],
+      "support": {
+        "label": "inferred",
+        "rationale": "交易通知和可争议被一起赞许，维持意图需推断；不把每次通知的报告当作已验证可靠性。",
+        "supported_parts": [
+          "继续及时获知交易支出，并能对可疑交易提出争议"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "该正面评价支持保留所述客户能力"
+        ],
+        "reasoning_steps": [
+          "交易通知和可争议被一起赞许，维持意图需推断；不把每次通知的报告当作已验证可靠性。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G08",
+      "statement": "设定有期限的财务目标，并了解每月应赚取或支出多少以保持进度",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T021",
+          "quote": "it lets me set a goal and then tells me how much exactly I'm supposed to be earning, and are spending every month to make sure I hit that goal by a specified timeframe which is good"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "受访者解释现有功能为何有用：追踪期限、收入支出以避免过度消费，属于已实现能力的有意使用。",
+        "supported_parts": [
+          "设定有期限的财务目标，并了解每月应赚取或支出多少以保持进度"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "受访者解释现有功能为何有用：追踪期限、收入支出以避免过度消费，属于已实现能力的有意使用。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G09",
+      "statement": "查看按用途类别划分的消费明细以了解钱花在哪里",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T021",
+          "quote": "I I think that it would be great to see something like that. So I believe it's pretty easy to like categorize what we are spending on. And then I think it would be like a very valuable insight."
+        },
+        {
+          "source_id": "DOC004:T023",
+          "quote": "it doesn't have any other sort of indicator to show that I've let's say, spend it on groceries or on fuel, or something like that."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "回应食物等用途分类诉求；T023区分支付渠道与消费用途，未将“容易分类”当产品事实。",
+        "supported_parts": [
+          "查看按用途类别划分的消费明细以了解钱花在哪里"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "回应食物等用途分类诉求；T023区分支付渠道与消费用途，未将“容易分类”当产品事实。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G10",
+      "statement": "能够在银行网站上设置卡片消费限额",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "受访者目前资金多在未绑卡的储蓄账户，因此尚未实际使用该设置；不确认当前产品是否具备"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T037",
+          "quote": "I would like to use it at some point, because I remember using it for my previous credit and debit cards."
+        },
+        {
+          "source_id": "DOC004:T035",
+          "quote": "I don't think they really have like a specific option where I can, like, you know. change my change the limits on the card per se, yeah."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "T036问网站限额，T037明确期望；T028的100美元是采访任务，不提升为受访者固定阈值。",
+        "supported_parts": [
+          "能够在银行网站上设置卡片消费限额"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T036问网站限额，T037明确期望；T028的100美元是采访任务，不提升为受访者固定阈值。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G11",
+      "statement": "让锁定和解锁银行卡等重要功能更容易访问",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "锁卡/解锁是例子；点击7或8次是回忆而非实测指标"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T059",
+          "quote": "I think, like some of the more important features should be more accessible."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "T059明确改善访问性，并以锁卡需多次点击为例；受访者理解低频使用但仍提出改善。",
+        "supported_parts": [
+          "让锁定和解锁银行卡等重要功能更容易访问"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T059明确改善访问性，并以锁卡需多次点击为例；受访者理解低频使用但仍提出改善。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G12",
+      "statement": "在网页端使用Zelle，减少每次转账都要拿手机的麻烦",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T045",
+          "quote": "I would like to see them implement Zelle on on the web app because I think it. It'll just be more convenient, so that I don't have to like reach. Reach my phone every time."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确网页端方式约束及便利目的；未发现功能不等于验证产品缺失。",
+        "supported_parts": [
+          "在网页端使用Zelle，减少每次转账都要拿手机的麻烦"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确网页端方式约束及便利目的；未发现功能不等于验证产品缺失。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G13",
+      "statement": "账户转账前能核对金额和收款对象，避免误转",
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [],
+      "inference": {
+        "basis_candidate_ids": [],
+        "reason": "结合T043确认页面与明确避免错误的评价推断维持意图，不承诺绝对无误。",
+        "assumptions": [
+          "肯定确认能力意味着希望保持"
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "DOC004:T045",
+          "quote": "it's super intuitive, and then it makes sure that you don't send the wrong amount, or like to the wrong person. So that is great"
+        },
+        {
+          "source_id": "DOC004:T043",
+          "quote": "it asks me if everything looks okay. So just to confirm which is a great detail."
+        }
+      ],
+      "support": {
+        "label": "inferred",
+        "rationale": "结合T043确认页面与明确避免错误的评价推断维持意图，不承诺绝对无误。",
+        "supported_parts": [
+          "账户转账前能核对金额和收款对象，避免误转"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "肯定确认能力意味着希望保持"
+        ],
+        "reasoning_steps": [
+          "结合T043确认页面与明确避免错误的评价推断维持意图，不承诺绝对无误。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G14",
+      "statement": "按需要安排转账日期并设置重复转账，避免每次重新操作",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "重复频率、首次日期和结束条件依用户选择；不保证当日到账"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T045",
+          "quote": "it lets you schedule properly. It also lets you repeat the transactions is a great, so you don't have to come and keep on doing it again and again."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "被肯定的不仅是现状，受访者明确说明减少重复操作的目的；不把演示中关闭重复设置解释为不需要。",
+        "supported_parts": [
+          "按需要安排转账日期并设置重复转账，避免每次重新操作"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "被肯定的不仅是现状，受访者明确说明减少重复操作的目的；不把演示中关闭重复设置解释为不需要。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G15",
+      "statement": "通过网站的文字聊天获得银行支持，以较少焦虑并便于同时处理其他事情",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "相对电话更偏好文字；电话和预约仍可接受"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T055",
+          "quote": "I can like multitask while texting like, let's say, the bank representative. So that would be a great option."
+        },
+        {
+          "source_id": "DOC004:T055",
+          "quote": "It's not really anxiety inducing as much as the call."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "同轮明确文字聊天比电话更放松，并肯定与银行代表文字沟通；这是方式偏好而非禁用电话。",
+        "supported_parts": [
+          "通过网站的文字聊天获得银行支持，以较少焦虑并便于同时处理其他事情"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "同轮明确文字聊天比电话更放松，并肯定与银行代表文字沟通；这是方式偏好而非禁用电话。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G16",
+      "statement": "可考虑提供AI聊天帮助，让不熟悉网站的人获得操作指引",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "建议候选，受访者同时猜测存在未明限制"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC004:T055",
+          "quote": "for, let's say, people who who don't exactly know how to get around the website. It'd be great to just like text the AI bot. And then, like, get responses and all of that."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "受访者提出AI作为可选帮助方案，建议强度保留，不视为已采纳或等价替代人工服务。",
+        "supported_parts": [
+          "可考虑提供AI聊天帮助，让不熟悉网站的人获得操作指引"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "受访者提出AI作为可选帮助方案，建议强度保留，不视为已采纳或等价替代人工服务。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC004-G17",
+      "statement": "投资新手能够与顾问交流后再开始投资，以减少盲目损失的风险",
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [
+        "投资新手场景；产品合作与功能未经外部核验"
+      ],
+      "inference": {
+        "basis_candidate_ids": [],
+        "reason": "通过对现有顾问服务及用途的肯定，推断保留求助能力；不声称顾问可保证盈利。",
+        "assumptions": [
+          "受访者肯定该帮助用途意味着希望保留"
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "DOC004:T061",
+          "quote": "if you don't know where to start investing, you can like talk to someone. And instead of like losing a lot of money, you know, you could talk to someone who actually knows what they're doing"
+        }
+      ],
+      "support": {
+        "label": "inferred",
+        "rationale": "通过对现有顾问服务及用途的肯定，推断保留求助能力；不声称顾问可保证盈利。",
+        "supported_parts": [
+          "投资新手能够与顾问交流后再开始投资，以减少盲目损失的风险"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "受访者肯定该帮助用途意味着希望保留"
+        ],
+        "reasoning_steps": [
+          "通过对现有顾问服务及用途的肯定，推断保留求助能力；不声称顾问可保证盈利。"
+        ]
+      }
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "F004-1",
+      "parent_id": "DOC004-G05",
+      "child_ids": [
+        "DOC004-G06",
+        "DOC004-G07"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "双因素验证、支出通知与争议能力有助于安全感，但不证明覆盖安全的全部威胁；受访者也不知后台实现。",
+      "assumptions": [
+        "仅作为客户侧安全候选贡献组合"
+      ],
+      "evidence": [
+        {
+          "source_id": "DOC004:T019",
+          "quote": "might not have like a very good idea of how well, they've implemented like the security infrastructure"
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "candidate_ids": [
+        "DOC004-G10"
+      ],
+      "question": "卡片限额希望按每笔、每日、线上或其他渠道分别设置？",
+      "reason": "100美元来自采访者演示任务，不能当真实阈值。"
+    },
+    {
+      "candidate_ids": [
+        "DOC004-G15",
+        "DOC004-G16"
+      ],
+      "question": "人工文字支持与AI帮助各应覆盖哪些问题、何时需要转接？",
+      "reason": "两种提议并未被证明完整等价。"
+    }
+  ],
+  "model_questions": [
+    {
+      "target_type": "group",
+      "target_id": "F004-1",
+      "message": "安全组合仅为部分候选；需明确威胁范围与其他保障，不能作为成立精化。"
+    }
+  ],
+  "author_review": "# DOC004 生成方语义自检\n\n完整读取该文档提供的全部访谈轮次（包括采访者问题、回答、后续解释及例外），未读取参考答案或其他文档产物。实际来源是已处理文本，未核听录音、未外部验证产品事实。\n\n## 逐目标核验\n\n- DOC004-G01：用Zelle向亲友快速支付小额款项以分摊费用。origin=explicit；support=direct。受访者明确说明主要使用目的；T007解释电话号小额即时转账，sell为原转写，保留Zelle语境而不验证服务事实。 条件：无另加条件。\n- DOC004-G02：把支票账户的富余资金转到储蓄账户以获得利息。origin=explicit；support=direct。资金转移的条件、方式和目的均明确；不增加收益承诺。 条件：无另加条件。\n- DOC004-G03：继续通过连接银行账户的Apple Pay完成商店支付。origin=inferred；support=inferred。持续日常购物用例支持保持该支付方式的意图，但并未明确提出新增需求。 条件：商店等线下购物场景。\n- DOC004-G04：在登录后的概览中快速查看账户余额、收支及近期交易，少切换页面。origin=explicit；support=direct。对现有概览的明确价值评价含少跳转的结果意图；余额及近期交易在同轮上下文中列明。 条件：无另加条件。\n- DOC004-G05：维持让受访者感到资金安全的客户侧安全保障。origin=inferred；support=inferred。安全是受访者信念而非客观验证；对额外验证、通知和争议能力的肯定支持维持安全感的推断。 条件：不声称已知后台安全实现。\n- DOC004-G06：在首次使用新设备登录时保留双因素身份验证。origin=inferred；support=inferred。将被肯定的现有额外安全层保存为维持候选；不推成每次登录必须同一验证。 条件：首次在该笔记本网页登录。\n- DOC004-G07：继续及时获知交易支出，并能对可疑交易提出争议。origin=inferred；support=inferred。交易通知和可争议被一起赞许，维持意图需推断；不把每次通知的报告当作已验证可靠性。 条件：无另加条件。\n- DOC004-G08：设定有期限的财务目标，并了解每月应赚取或支出多少以保持进度。origin=explicit；support=direct。受访者解释现有功能为何有用：追踪期限、收入支出以避免过度消费，属于已实现能力的有意使用。 条件：无另加条件。\n- DOC004-G09：查看按用途类别划分的消费明细以了解钱花在哪里。origin=explicit；support=direct。回应食物等用途分类诉求；T023区分支付渠道与消费用途，未将“容易分类”当产品事实。 条件：无另加条件。\n- DOC004-G10：能够在银行网站上设置卡片消费限额。origin=explicit；support=direct。T036问网站限额，T037明确期望；T028的100美元是采访任务，不提升为受访者固定阈值。 条件：受访者目前资金多在未绑卡的储蓄账户，因此尚未实际使用该设置；不确认当前产品是否具备。\n- DOC004-G11：让锁定和解锁银行卡等重要功能更容易访问。origin=explicit；support=direct。T059明确改善访问性，并以锁卡需多次点击为例；受访者理解低频使用但仍提出改善。 条件：锁卡/解锁是例子；点击7或8次是回忆而非实测指标。\n- DOC004-G12：在网页端使用Zelle，减少每次转账都要拿手机的麻烦。origin=explicit；support=direct。明确网页端方式约束及便利目的；未发现功能不等于验证产品缺失。 条件：无另加条件。\n- DOC004-G13：账户转账前能核对金额和收款对象，避免误转。origin=inferred；support=inferred。结合T043确认页面与明确避免错误的评价推断维持意图，不承诺绝对无误。 条件：无另加条件。\n- DOC004-G14：按需要安排转账日期并设置重复转账，避免每次重新操作。origin=explicit；support=direct。被肯定的不仅是现状，受访者明确说明减少重复操作的目的；不把演示中关闭重复设置解释为不需要。 条件：重复频率、首次日期和结束条件依用户选择；不保证当日到账。\n- DOC004-G15：通过网站的文字聊天获得银行支持，以较少焦虑并便于同时处理其他事情。origin=explicit；support=direct。同轮明确文字聊天比电话更放松，并肯定与银行代表文字沟通；这是方式偏好而非禁用电话。 条件：相对电话更偏好文字；电话和预约仍可接受。\n- DOC004-G16：可考虑提供AI聊天帮助，让不熟悉网站的人获得操作指引。origin=explicit；support=direct。受访者提出AI作为可选帮助方案，建议强度保留，不视为已采纳或等价替代人工服务。 条件：建议候选，受访者同时猜测存在未明限制。\n- DOC004-G17：投资新手能够与顾问交流后再开始投资，以减少盲目损失的风险。origin=inferred；support=inferred。通过对现有顾问服务及用途的肯定，推断保留求助能力；不声称顾问可保证盈利。 条件：投资新手场景；产品合作与功能未经外部核验。\n\n## 精化、覆盖与场景检查\n\n完整覆盖T000–T066。T017最初‘完美’评价被后续限额、Zelle、支持与访问性意见限定，未把初评当成无改进需求。T025最初以为能设限额，T033–37探索后未找到，故不把功能存在与否定论。采访者要求1美元、100美元均为演示参数，未提成个人目标。\n\nF004-1是安全主题下的部分候选，非共同充分：正常场景（分析假设）中新设备验证加通知可帮助发现支出；异常场景（分析假设）已授权设备被盗或争议响应延迟仍可能损失，因而保留proposed/partial。G01与G12是日常用途和网页方式的关系，不证明网页功能足以完成一切小额支付；G02也未被建成财务目标的充分方案。G04、G08、G11等独立保留，不补共同根。\n\n正常转账演示有确认和计划记录；异常到账延迟与工作时间只是受访者猜测，未将它变成系统时限。支持偏好、AI建议、顾问信念的强度分别保留。未决限额、支持覆盖与安全组合需人工澄清；无法从本文解决。\n\n所有精化候选逐组复核，未将程序检查等同语义证明。下述inspect与finalize由冻结脚本实际执行，结果以inspection.json和run-record.json为准。独立语义审查not_run，形式证明not_run，人工审核pending。无新证据不能解决的问题保留待审，不循环推测补齐。\n"
+}

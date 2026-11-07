@@ -1,0 +1,2294 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC026-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "7e0591f4b7de119925e8f2d821ac0334b9ca01fb351fc4dd80b0447a975070fb"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "dfcb47a3bf1943aa83fab7e4e3802530cb937de32061447c2cb208b50e04b6e1"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "ae3c51f2f0086c2c1d41cf9259cf47d7b776f898e3bb74c0d43f3f790c5278eb"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "8d3e25ef9f7d7731190f22bf04d904cac903dc80b248658f575d362e34bedfaa"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC026"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC026-G001",
+      "statement": "在步行不现实的距离上，实现从一处到另一处的位移。",
+      "source_candidate_ids": [
+        "DOC026-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "自述这是使用 Uber 的主要目标",
+        "对照：能走到的地方就走"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G002",
+      "statement": "按耗时与价格权衡是否打车、以及是否改用其他交通方式。",
+      "source_candidate_ids": [
+        "DOC026-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "两条判据：时间成本、价格",
+        "他会主动比较开车、公交、步行"
+      ],
+      "evidence_ids": [
+        "E0003",
+        "E0004"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G003",
+      "statement": "在多个车型中选最便宜的一档，人多时改选大车。",
+      "source_candidate_ids": [
+        "DOC026-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "默认选最便宜",
+        "例外：同行人多时看座位数"
+      ],
+      "evidence_ids": [
+        "E0005",
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G004",
+      "statement": "下单前能看到附近车辆与预估到达时间、价格，据此决定是否等待或改期。",
+      "source_candidate_ids": [
+        "DOC026-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "界面会显示地图上的车辆与「X 分钟之外」",
+        "若价格过高可以选择晚点再走"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G005",
+      "statement": "输入地址时实时给出候选，不必打完就能选。",
+      "source_candidate_ids": [
+        "DOC026-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "自评「kind of helpful」"
+      ],
+      "evidence_ids": [
+        "E0010",
+        "E0011"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G006",
+      "statement": "下单后能真正派到车，不出现长时间等待后「找不到司机」。",
+      "source_candidate_ids": [
+        "DOC026-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "症状：显示有车、点了要等很久，最后说找不到司机",
+        "他猜测是应用夸大供给，或司机看到请求后拒单"
+      ],
+      "evidence_ids": [
+        "E0012",
+        "E0013"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G007",
+      "statement": "不因取消订单而拉低自己作为乘客的评分。",
+      "source_candidate_ids": [
+        "DOC026-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "他知道司机能看到乘客评分",
+        "因此尽量不取消，即使等待体验很差"
+      ],
+      "evidence_ids": [
+        "E0014",
+        "E0015"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G008",
+      "statement": "工作出行时以时间优先于价格（费用由公司承担）。",
+      "source_candidate_ids": [
+        "DOC026-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "前提：公司报销",
+        "取舍：多花 20 美元换少等 20 分钟可接受"
+      ],
+      "evidence_ids": [
+        "E0016",
+        "E0017"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G009",
+      "statement": "按对地区的熟悉度、路线复杂度与停留时长，在公交、租车与网约车之间选择。",
+      "source_candidate_ids": [
+        "DOC026-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "公交：熟悉地区且顺路才坐",
+        "租车：多天行程更自由",
+        "网约车：路线复杂时兜底"
+      ],
+      "evidence_ids": [
+        "E0018",
+        "E0019",
+        "E0020"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G010",
+      "statement": "出问题时能联系到真人客服，而不是只能和机器人对话。",
+      "source_candidate_ids": [
+        "DOC026-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "起因：Uber Eats 送餐时间预估错误，客服体验极差，此后停用该服务",
+        "他怀疑对方是聊天机器人"
+      ],
+      "evidence_ids": [
+        "E0021",
+        "E0022"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G011",
+      "statement": "用应用内通话或消息与司机沟通，解决上车点不清、位置难找、自己会迟到等问题。",
+      "source_candidate_ids": [
+        "DOC026-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "场景：门牌难找、GPS 差、地点太热闹",
+        "用途：提前告知、多停靠时说明延误"
+      ],
+      "evidence_ids": [
+        "E0023",
+        "E0024",
+        "E0025"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G012",
+      "statement": "需要时能方便地修改上车点。",
+      "source_candidate_ids": [
+        "DOC026-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "现状：改版后只在「不用当前定位」时才容易改",
+        "替代做法：直接打电话告诉司机"
+      ],
+      "evidence_ids": [
+        "E0026",
+        "E0027"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC026-G013",
+      "statement": "行程结束后能评分、给小费，并查看金额用于分摊或报销。",
+      "source_candidate_ids": [
+        "DOC026-C013"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+      "context": [
+        "最常回看的是评分与小费入口",
+        "金额用于与朋友分摊或作为报销凭证"
+      ],
+      "evidence_ids": [
+        "E0028",
+        "E0029",
+        "E0030"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC026-G001",
+      "b": "DOC026-G002",
+      "label": "related",
+      "rationale": "T005–T007 是目的与判据：位移是目的，时间与价格决定用什么方式完成它。但 G001 与工具无关，G002 只在有多个选项时才有意义。",
+      "evidence_ids": [
+        "E0001",
+        "E0003"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC026-G001",
+      "b": "DOC026-G003",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G003 的对象是车型里选最便宜的（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC026-G001",
+      "b": "DOC026-G004",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G004 的对象是看到附近车与预估价（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC026-G001",
+      "b": "DOC026-G005",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G005 的对象是地址自动补全（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC026-G001",
+      "b": "DOC026-G006",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G006 的对象是能真正派到车（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC026-G001",
+      "b": "DOC026-G007",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G007 的对象是不因取消掉评分（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC026-G001",
+      "b": "DOC026-G008",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G008 的对象是工作出行时间优先（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC026-G001",
+      "b": "DOC026-G009",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G009 的对象是多方式间取舍（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC026-G001",
+      "b": "DOC026-G010",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G010 的对象是联系到真人客服（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC026-G001",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC026-G001",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC026-G001",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G001 的对象是从一处到另一处（T005），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC026-G002",
+      "b": "DOC026-G003",
+      "label": "related",
+      "rationale": "T011 的选车策略就是 G002 的价格判据在下单环节的具体执行：默认选最便宜，人多时才为座位数加钱。但 G002 还包含「别的方式更划算就不打车」。",
+      "evidence_ids": [
+        "E0003",
+        "E0005"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC026-G002",
+      "b": "DOC026-G004",
+      "label": "none",
+      "rationale": "DOC026-G002 的对象是按时间与价格权衡（T007），DOC026-G004 的对象是看到附近车与预估价（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC026-G002",
+      "b": "DOC026-G005",
+      "label": "none",
+      "rationale": "DOC026-G002 的对象是按时间与价格权衡（T007），DOC026-G005 的对象是地址自动补全（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC026-G002",
+      "b": "DOC026-G006",
+      "label": "none",
+      "rationale": "DOC026-G002 的对象是按时间与价格权衡（T007），DOC026-G006 的对象是能真正派到车（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC026-G002",
+      "b": "DOC026-G007",
+      "label": "none",
+      "rationale": "DOC026-G002 的对象是按时间与价格权衡（T007），DOC026-G007 的对象是不因取消掉评分（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC026-G002",
+      "b": "DOC026-G008",
+      "label": "related",
+      "rationale": "T019 给出同一个权衡在两种场景下的不同权重：私人自付时看价格，工作报销时看时间。规则相同、系数不同。",
+      "evidence_ids": [
+        "E0003",
+        "E0016"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC026-G002",
+      "b": "DOC026-G009",
+      "label": "related",
+      "rationale": "T021 把权衡从「打不打车」扩展到「公交/租车/网约车怎么选」，判据仍是时间、成本与便利。但 G009 多了熟悉度与路线复杂度两个维度。",
+      "evidence_ids": [
+        "E0004",
+        "E0020"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC026-G002",
+      "b": "DOC026-G010",
+      "label": "none",
+      "rationale": "DOC026-G002 的对象是按时间与价格权衡（T007），DOC026-G010 的对象是联系到真人客服（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC026-G002",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G002 的对象是按时间与价格权衡（T007），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC026-G002",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G002 的对象是按时间与价格权衡（T007），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC026-G002",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G002 的对象是按时间与价格权衡（T007），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC026-G003",
+      "b": "DOC026-G004",
+      "label": "related",
+      "rationale": "T011 两个界面元素在同一屏：车型与价格列表、附近车辆地图；他据此判断此刻值不值得走。但 G003 是选哪一档，G004 是决定要不要现在走。",
+      "evidence_ids": [
+        "E0005",
+        "E0008"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC026-G003",
+      "b": "DOC026-G005",
+      "label": "none",
+      "rationale": "DOC026-G003 的对象是车型里选最便宜的（T011），DOC026-G005 的对象是地址自动补全（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC026-G003",
+      "b": "DOC026-G006",
+      "label": "none",
+      "rationale": "DOC026-G003 的对象是车型里选最便宜的（T011），DOC026-G006 的对象是能真正派到车（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC026-G003",
+      "b": "DOC026-G007",
+      "label": "none",
+      "rationale": "DOC026-G003 的对象是车型里选最便宜的（T011），DOC026-G007 的对象是不因取消掉评分（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC026-G003",
+      "b": "DOC026-G008",
+      "label": "none",
+      "rationale": "DOC026-G003 的对象是车型里选最便宜的（T011），DOC026-G008 的对象是工作出行时间优先（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC026-G003",
+      "b": "DOC026-G009",
+      "label": "none",
+      "rationale": "DOC026-G003 的对象是车型里选最便宜的（T011），DOC026-G009 的对象是多方式间取舍（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC026-G003",
+      "b": "DOC026-G010",
+      "label": "none",
+      "rationale": "DOC026-G003 的对象是车型里选最便宜的（T011），DOC026-G010 的对象是联系到真人客服（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC026-G003",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G003 的对象是车型里选最便宜的（T011），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC026-G003",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G003 的对象是车型里选最便宜的（T011），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC026-G003",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G003 的对象是车型里选最便宜的（T011），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC026-G004",
+      "b": "DOC026-G005",
+      "label": "none",
+      "rationale": "DOC026-G004 的对象是看到附近车与预估价（T011），DOC026-G005 的对象是地址自动补全（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC026-G004",
+      "b": "DOC026-G006",
+      "label": "uncertain",
+      "rationale": "两者可能相互矛盾：G004 依赖「地图上显示附近有车」来做决定，T013 却说他遇到过显示有车、点了却长时间排程、最终提示找不到司机，并自认可能是「应用夸大了能力」或「司机拒单」。若前者成立，G004 提供的信息就是误导；若后者成立，信息本身没错，是供给波动。他本人并列两种解释、未做判断，因此二者关系无法定论。",
+      "evidence_ids": [
+        "E0008",
+        "E0013"
+      ],
+      "conditions": [
+        "需人工确认：附近车辆数据是否可信；若确认可信，可改为 related 并注明「拒单属供给波动」。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed",
+      "interpretation": "解释一：展示数据失真，G004 与 G006 冲突；解释二：数据真实但司机可拒单，二者只是先后环节。"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC026-G004",
+      "b": "DOC026-G007",
+      "label": "none",
+      "rationale": "DOC026-G004 的对象是看到附近车与预估价（T011），DOC026-G007 的对象是不因取消掉评分（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC026-G004",
+      "b": "DOC026-G008",
+      "label": "none",
+      "rationale": "DOC026-G004 的对象是看到附近车与预估价（T011），DOC026-G008 的对象是工作出行时间优先（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC026-G004",
+      "b": "DOC026-G009",
+      "label": "none",
+      "rationale": "DOC026-G004 的对象是看到附近车与预估价（T011），DOC026-G009 的对象是多方式间取舍（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC026-G004",
+      "b": "DOC026-G010",
+      "label": "none",
+      "rationale": "DOC026-G004 的对象是看到附近车与预估价（T011），DOC026-G010 的对象是联系到真人客服（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC026-G004",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G004 的对象是看到附近车与预估价（T011），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC026-G004",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G004 的对象是看到附近车与预估价（T011），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC026-G004",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G004 的对象是看到附近车与预估价（T011），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC026-G005",
+      "b": "DOC026-G006",
+      "label": "related",
+      "rationale": "T011–T013 是同一次下单的前后两段：地址输入顺滑，但点了下单未必派得到车。输入体验好不能保证履约。",
+      "evidence_ids": [
+        "E0010",
+        "E0012"
+      ],
+      "conditions": [
+        "G006 发生在 G005 之后"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC026-G005",
+      "b": "DOC026-G007",
+      "label": "none",
+      "rationale": "DOC026-G005 的对象是地址自动补全（T011），DOC026-G007 的对象是不因取消掉评分（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC026-G005",
+      "b": "DOC026-G008",
+      "label": "none",
+      "rationale": "DOC026-G005 的对象是地址自动补全（T011），DOC026-G008 的对象是工作出行时间优先（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC026-G005",
+      "b": "DOC026-G009",
+      "label": "none",
+      "rationale": "DOC026-G005 的对象是地址自动补全（T011），DOC026-G009 的对象是多方式间取舍（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC026-G005",
+      "b": "DOC026-G010",
+      "label": "none",
+      "rationale": "DOC026-G005 的对象是地址自动补全（T011），DOC026-G010 的对象是联系到真人客服（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC026-G005",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G005 的对象是地址自动补全（T011），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC026-G005",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G005 的对象是地址自动补全（T011），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC026-G005",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G005 的对象是地址自动补全（T011），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC026-G006",
+      "b": "DOC026-G007",
+      "label": "related",
+      "rationale": "T013 把两者拴在一起：正因为派不到车，他才想取消，但又怕掉评分，于是硬等。G006 的失败直接制造了 G007 的压力。",
+      "evidence_ids": [
+        "E0013",
+        "E0014"
+      ],
+      "conditions": [
+        "G006 未达成时才触发 G007 的顾虑"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC026-G006",
+      "b": "DOC026-G008",
+      "label": "none",
+      "rationale": "DOC026-G006 的对象是能真正派到车（T013），DOC026-G008 的对象是工作出行时间优先（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC026-G006",
+      "b": "DOC026-G009",
+      "label": "none",
+      "rationale": "DOC026-G006 的对象是能真正派到车（T013），DOC026-G009 的对象是多方式间取舍（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC026-G006",
+      "b": "DOC026-G010",
+      "label": "none",
+      "rationale": "DOC026-G006 的对象是能真正派到车（T013），DOC026-G010 的对象是联系到真人客服（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC026-G006",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G006 的对象是能真正派到车（T013），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC026-G006",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G006 的对象是能真正派到车（T013），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC026-G006",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G006 的对象是能真正派到车（T013），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC026-G007",
+      "b": "DOC026-G008",
+      "label": "none",
+      "rationale": "DOC026-G007 的对象是不因取消掉评分（T013），DOC026-G008 的对象是工作出行时间优先（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC026-G007",
+      "b": "DOC026-G009",
+      "label": "none",
+      "rationale": "DOC026-G007 的对象是不因取消掉评分（T013），DOC026-G009 的对象是多方式间取舍（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC026-G007",
+      "b": "DOC026-G010",
+      "label": "none",
+      "rationale": "DOC026-G007 的对象是不因取消掉评分（T013），DOC026-G010 的对象是联系到真人客服（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC026-G007",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G007 的对象是不因取消掉评分（T013），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC026-G007",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G007 的对象是不因取消掉评分（T013），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC026-G007",
+      "b": "DOC026-G013",
+      "label": "related",
+      "rationale": "T013 与 T045 是同一评分体系的两端：他担心乘客评分被司机看到（G007），同时行程结束要給司机评分（G013）。但一个是被评价、一个是评价他人。",
+      "evidence_ids": [
+        "E0014",
+        "E0028"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC026-G008",
+      "b": "DOC026-G009",
+      "label": "related",
+      "rationale": "T021 说工作出行有免费公交卡，所以常规通勤直接坐公交——工作场景下的成本约束被外部消解，选择就转向便利性。但 G008 是权重、G009 是方式选择。",
+      "evidence_ids": [
+        "E0017",
+        "E0018"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC026-G008",
+      "b": "DOC026-G010",
+      "label": "none",
+      "rationale": "DOC026-G008 的对象是工作出行时间优先（T019），DOC026-G010 的对象是联系到真人客服（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC026-G008",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G008 的对象是工作出行时间优先（T019），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P067",
+      "a": "DOC026-G008",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G008 的对象是工作出行时间优先（T019），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P068",
+      "a": "DOC026-G008",
+      "b": "DOC026-G013",
+      "label": "related",
+      "rationale": "T045 说明工作出行后会把金额当报销凭证，正是 G008「公司报销」这一前提在行程结束后的落实。但 G008 影响下单决策，G013 是事后取证。",
+      "evidence_ids": [
+        "E0017",
+        "E0028"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P069",
+      "a": "DOC026-G009",
+      "b": "DOC026-G010",
+      "label": "none",
+      "rationale": "DOC026-G009 的对象是多方式间取舍（T021），DOC026-G010 的对象是联系到真人客服（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P070",
+      "a": "DOC026-G009",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G009 的对象是多方式间取舍（T021），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P071",
+      "a": "DOC026-G009",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G009 的对象是多方式间取舍（T021），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P072",
+      "a": "DOC026-G009",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G009 的对象是多方式间取舍（T021），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P073",
+      "a": "DOC026-G010",
+      "b": "DOC026-G011",
+      "label": "none",
+      "rationale": "DOC026-G010 的对象是联系到真人客服（T031），DOC026-G011 的对象是与司机通话沟通（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P074",
+      "a": "DOC026-G010",
+      "b": "DOC026-G012",
+      "label": "none",
+      "rationale": "DOC026-G010 的对象是联系到真人客服（T031），DOC026-G012 的对象是能改上车点（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P075",
+      "a": "DOC026-G010",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G010 的对象是联系到真人客服（T031），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P076",
+      "a": "DOC026-G011",
+      "b": "DOC026-G012",
+      "label": "related",
+      "rationale": "T041 给出替代关系：应用内改上车点变麻烦后，他改为打电话告知司机——G011 是 G012 失效时的兜底通道。但通话能解释、不能改变系统里的上车点。",
+      "evidence_ids": [
+        "E0023",
+        "E0027"
+      ],
+      "conditions": [
+        "G011 在 G012 不可用时充当替代"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P077",
+      "a": "DOC026-G011",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G011 的对象是与司机通话沟通（T039），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P078",
+      "a": "DOC026-G012",
+      "b": "DOC026-G013",
+      "label": "none",
+      "rationale": "DOC026-G012 的对象是能改上车点（T041），DOC026-G013 的对象是行程后评分与查金额（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC026-G001",
+      "b": "DOC026-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P013",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC026-G002",
+      "b": "DOC026-G003"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P018",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC026-G002",
+      "b": "DOC026-G008"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P019",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC026-G002",
+      "b": "DOC026-G009"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P024",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC026-G003",
+      "b": "DOC026-G004"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P043",
+      "conditions": [
+        "G006 发生在 G005 之后"
+      ],
+      "review_status": "pending",
+      "a": "DOC026-G005",
+      "b": "DOC026-G006"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P051",
+      "conditions": [
+        "G006 未达成时才触发 G007 的顾虑"
+      ],
+      "review_status": "pending",
+      "a": "DOC026-G006",
+      "b": "DOC026-G007"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P063",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC026-G007",
+      "b": "DOC026-G013"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P064",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC026-G008",
+      "b": "DOC026-G009"
+    },
+    {
+      "edge_id": "R010",
+      "type": "related",
+      "decision_id": "P068",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC026-G008",
+      "b": "DOC026-G013"
+    },
+    {
+      "edge_id": "R011",
+      "type": "related",
+      "decision_id": "P076",
+      "conditions": [
+        "G011 在 G012 不可用时充当替代"
+      ],
+      "review_status": "pending",
+      "a": "DOC026-G011",
+      "b": "DOC026-G012"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC026:S006",
+      "material_id": "M001",
+      "quote": "the main goal is transportation to get from one place to another",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 585,
+      "end_char": 649,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S006",
+          "segment_start": 28,
+          "segment_end": 92,
+          "start_char": 585,
+          "end_char": 649
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 557,
+        "end_char": 689
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC026:S008",
+      "material_id": "M001",
+      "quote": "if it's going to take like an hour and a half to get someplace. So I'll just walk even if it's kind of far away",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1229,
+      "end_char": 1340,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S008",
+          "segment_start": 362,
+          "segment_end": 473,
+          "start_char": 1229,
+          "end_char": 1340
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 867,
+        "end_char": 1341
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC026:S008",
+      "material_id": "M001",
+      "quote": "it's usually the amount of time it will take or the price in deciding whether or not to take ride",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 936,
+      "end_char": 1033,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S008",
+          "segment_start": 69,
+          "segment_end": 166,
+          "start_char": 936,
+          "end_char": 1033
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 867,
+        "end_char": 1341
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC026:S008",
+      "material_id": "M001",
+      "quote": "whether or not I'm able to drive there or I want to drive there or if there are other better means of transportation",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1053,
+      "end_char": 1169,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S008",
+          "segment_start": 186,
+          "segment_end": 302,
+          "start_char": 1053,
+          "end_char": 1169
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 867,
+        "end_char": 1341
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC026:S012",
+      "material_id": "M001",
+      "quote": "I usually just go for The cheapest one, to be honest",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2491,
+      "end_char": 2543,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S012",
+          "segment_start": 791,
+          "segment_end": 843,
+          "start_char": 2491,
+          "end_char": 2543
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 1700,
+        "end_char": 3018
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC026:S012",
+      "material_id": "M001",
+      "quote": "unless if i'm going with more people",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2545,
+      "end_char": 2581,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S012",
+          "segment_start": 845,
+          "segment_end": 881,
+          "start_char": 2545,
+          "end_char": 2581
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 1700,
+        "end_char": 3018
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC026:S012",
+      "material_id": "M001",
+      "quote": "there's a comfort that can sit four people",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2598,
+      "end_char": 2640,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S012",
+          "segment_start": 898,
+          "segment_end": 940,
+          "start_char": 2598,
+          "end_char": 2640
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 1700,
+        "end_char": 3018
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC026:S012",
+      "material_id": "M001",
+      "quote": "I can also see a map with a couple different Ubers around",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2767,
+      "end_char": 2824,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S012",
+          "segment_start": 1067,
+          "segment_end": 1124,
+          "start_char": 2767,
+          "end_char": 2824
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 1700,
+        "end_char": 3018
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC026:S012",
+      "material_id": "M001",
+      "quote": "if the price was too high, then I can choose to wait",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2965,
+      "end_char": 3017,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S012",
+          "segment_start": 1265,
+          "segment_end": 1317,
+          "start_char": 2965,
+          "end_char": 3017
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 1700,
+        "end_char": 3018
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC026:S012",
+      "material_id": "M001",
+      "quote": "a couple of different options pop up as I'm typing it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2204,
+      "end_char": 2257,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S012",
+          "segment_start": 504,
+          "segment_end": 557,
+          "start_char": 2204,
+          "end_char": 2257
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 1700,
+        "end_char": 3018
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC026:S012",
+      "material_id": "M001",
+      "quote": "I can just click on whatever comes up before I necessarily finish typing it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2288,
+      "end_char": 2363,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S012",
+          "segment_start": 588,
+          "segment_end": 663,
+          "start_char": 2288,
+          "end_char": 2363
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 1700,
+        "end_char": 3018
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC026:S014",
+      "material_id": "M001",
+      "quote": "it will take a really long time to actually schedule it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3595,
+      "end_char": 3650,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S014",
+          "segment_start": 374,
+          "segment_end": 429,
+          "start_char": 3595,
+          "end_char": 3650
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 3221,
+        "end_char": 4284
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC026:S014",
+      "material_id": "M001",
+      "quote": "it will end up saying that can't find a driver",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3666,
+      "end_char": 3712,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S014",
+          "segment_start": 445,
+          "segment_end": 491,
+          "start_char": 3666,
+          "end_char": 3712
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 3221,
+        "end_char": 4284
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC026:S014",
+      "material_id": "M001",
+      "quote": "I usually try not to cancel a ride",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3938,
+      "end_char": 3972,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S014",
+          "segment_start": 717,
+          "segment_end": 751,
+          "start_char": 3938,
+          "end_char": 3972
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 3221,
+        "end_char": 4284
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC026:S014",
+      "material_id": "M001",
+      "quote": "the drivers will see a rating of the passenger as well. And I think that that damages my rating",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4015,
+      "end_char": 4110,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S014",
+          "segment_start": 794,
+          "segment_end": 889,
+          "start_char": 4015,
+          "end_char": 4110
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 3221,
+        "end_char": 4284
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC026:S020",
+      "material_id": "M001",
+      "quote": "i usually care less about the price and more about the time in that case",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5441,
+      "end_char": 5513,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S020",
+          "segment_start": 329,
+          "segment_end": 401,
+          "start_char": 5441,
+          "end_char": 5513
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 5112,
+        "end_char": 5685
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC026:S020",
+      "material_id": "M001",
+      "quote": "my work is going to cover it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5522,
+      "end_char": 5550,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S020",
+          "segment_start": 410,
+          "segment_end": 438,
+          "start_char": 5522,
+          "end_char": 5550
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 5112,
+        "end_char": 5685
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC026:S022",
+      "material_id": "M001",
+      "quote": "it usually depends on both how familiar I am with the area",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6191,
+      "end_char": 6249,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S022",
+          "segment_start": 225,
+          "segment_end": 283,
+          "start_char": 6191,
+          "end_char": 6249
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 5966,
+        "end_char": 6994
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC026:S022",
+      "material_id": "M001",
+      "quote": "if it's complicated like that, I would probably prefer And Uber in that case",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6595,
+      "end_char": 6671,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S022",
+          "segment_start": 629,
+          "segment_end": 705,
+          "start_char": 6595,
+          "end_char": 6671
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 5966,
+        "end_char": 6994
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC026:S022",
+      "material_id": "M001",
+      "quote": "give me a little bit more freedom to rent a car than to do a ride share every time",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6888,
+      "end_char": 6970,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S022",
+          "segment_start": 922,
+          "segment_end": 1004,
+          "start_char": 6888,
+          "end_char": 6970
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 5966,
+        "end_char": 6994
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC026:S032",
+      "material_id": "M001",
+      "quote": "I wanted to talk to a person",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8188,
+      "end_char": 8216,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S032",
+          "segment_start": 73,
+          "segment_end": 101,
+          "start_char": 8188,
+          "end_char": 8216
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 8115,
+        "end_char": 8611
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC026:S032",
+      "material_id": "M001",
+      "quote": "I think I was probably talking to a chat bot",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8519,
+      "end_char": 8563,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S032",
+          "segment_start": 404,
+          "segment_end": 448,
+          "start_char": 8519,
+          "end_char": 8563
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 8115,
+        "end_char": 8611
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC026:S040",
+      "material_id": "M001",
+      "quote": "I actually find that very helpful",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10498,
+      "end_char": 10531,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S040",
+          "segment_start": 51,
+          "segment_end": 84,
+          "start_char": 10498,
+          "end_char": 10531
+        }
+      ],
+      "original_locator": {
+        "line_start": 40,
+        "line_end": 40,
+        "start_char": 10447,
+        "end_char": 11204
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC026:S040",
+      "material_id": "M001",
+      "quote": "calling on their way to pick me up is usually really helpful",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10887,
+      "end_char": 10947,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S040",
+          "segment_start": 440,
+          "segment_end": 500,
+          "start_char": 10887,
+          "end_char": 10947
+        }
+      ],
+      "original_locator": {
+        "line_start": 40,
+        "line_end": 40,
+        "start_char": 10447,
+        "end_char": 11204
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC026:S040",
+      "material_id": "M001",
+      "quote": "maybe the house numbers are hard to see",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10599,
+      "end_char": 10638,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S040",
+          "segment_start": 152,
+          "segment_end": 191,
+          "start_char": 10599,
+          "end_char": 10638
+        }
+      ],
+      "original_locator": {
+        "line_start": 40,
+        "line_end": 40,
+        "start_char": 10447,
+        "end_char": 11204
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC026:S042",
+      "material_id": "M001",
+      "quote": "I think that it's not as simple to change it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12025,
+      "end_char": 12069,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S042",
+          "segment_start": 587,
+          "segment_end": 631,
+          "start_char": 12025,
+          "end_char": 12069
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 11438,
+        "end_char": 12185
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC026:S042",
+      "material_id": "M001",
+      "quote": "I give the driver a heads up instead of doing it on the app",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12125,
+      "end_char": 12184,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S042",
+          "segment_start": 687,
+          "segment_end": 746,
+          "start_char": 12125,
+          "end_char": 12184
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 11438,
+        "end_char": 12185
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC026:S046",
+      "material_id": "M001",
+      "quote": "they give you the option to rate the driver",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12661,
+      "end_char": 12704,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S046",
+          "segment_start": 92,
+          "segment_end": 135,
+          "start_char": 12661,
+          "end_char": 12704
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 12569,
+        "end_char": 13178
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC026:S046",
+      "material_id": "M001",
+      "quote": "look at how much the ride was so that I could split split up the charge",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12945,
+      "end_char": 13016,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S046",
+          "segment_start": 376,
+          "segment_end": 447,
+          "start_char": 12945,
+          "end_char": 13016
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 12569,
+        "end_char": 13178
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC026:S046",
+      "material_id": "M001",
+      "quote": "I can use that as a receipt to get reimbursed",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13052,
+      "end_char": 13097,
+      "candidate_locations": [
+        {
+          "source_id": "DOC026:S046",
+          "segment_start": 483,
+          "segment_end": 528,
+          "start_char": 13052,
+          "end_char": 13097
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 12569,
+        "end_char": 13178
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC026-C001",
+      "goal_id": "DOC026-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C002",
+      "goal_id": "DOC026-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C003",
+      "goal_id": "DOC026-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C004",
+      "goal_id": "DOC026-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C005",
+      "goal_id": "DOC026-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C006",
+      "goal_id": "DOC026-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C007",
+      "goal_id": "DOC026-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C008",
+      "goal_id": "DOC026-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C009",
+      "goal_id": "DOC026-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C010",
+      "goal_id": "DOC026-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C011",
+      "goal_id": "DOC026-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C012",
+      "goal_id": "DOC026-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC026-C013",
+      "goal_id": "DOC026-G013",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 78,
+    "evaluated_pairs": 78
+  },
+  "issues": [
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC026-G004",
+        "DOC026-G006"
+      ],
+      "reason": "两者可能相互矛盾：G004 依赖「地图上显示附近有车」来做决定，T013 却说他遇到过显示有车、点了却长时间排程、最终提示找不到司机，并自认可能是「应用夸大了能力」或「司机拒单」。若前者成立，G004 提供的信息就是误导；若后者成立，信息本身没错，是供给波动。他本人并列两种解释、未做判断，因此二者关系无法定论。"
+    }
+  ],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "523a55856493bafb19b26ffe8d4e3813f6d9aed5c76512aae373789a2f4609dc",
+    "core_sha256": "1367984b7886c3a314d7d2c93f845778f9fb12774db7cce3c3395cb33b5249ed",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "84f506bee574945e371e0ec8f9957f2eb959fd0e9310be8a6d413ac5404f9d4d"
+}

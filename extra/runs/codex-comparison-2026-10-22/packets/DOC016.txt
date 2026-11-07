@@ -1,0 +1,118 @@
+# DOC016
+## LOCAL
+G001 在一个应用里聚合多来源资讯，跟进商业、政治、编程三类内容。 | context: 三类的用途：炒股（商业、政治）与本职业（编程、科技股）; 自评每天使用
+  E0001 DOC016:S026 stay up to date with business, politics and programming
+  E0002 DOC016:S010 it's my easy way to browse different news in one app basically
+  E0003 DOC016:S010 it basically categorized different news into different categories
+G002 在有限时间（早晨、遛狗）内摄取尽可能多的信息。 | context: 典型时段：上班前、遛狗途中; 目标为「多看条目」而非「读完全文」
+  E0004 DOC016:S028 gather as much information as possible within my limited morning time
+  E0005 DOC016:S030 read as much content and grasp as many articles as I can within a short period of time
+G003 把多条摘要拼起来，形成对全球局势的整体判断。 | context: 自述为阅读逻辑：先广度后串联
+  E0006 DOC016:S030 so that I can sort of piece everything together and make certain logic behind what is exactly is going on around the world
+G004 用发布时间判断消息是否已被美股消化，据以推测当日走势。 | context: 区分发布时刻（原媒体）与接收时刻（进入 Feedly）; 例：日本股市消息若发布于 3 小时前，美股尚未反映
+  E0007 DOC016:S042 That allows me to kind of predict what might happen in this in the Us. Stock market to today
+  E0008 DOC016:S042 the publish time is the original published time of that particular media, and then the receive time is, when does that article gets fetched into feedly app itself
+G005 能按「媒体 × 类别」的粒度调整推荐，而不是只能屏蔽整个媒体。 | context: 现状：只能整体取消订阅某媒体，无法只屏蔽其某类内容
+  E0009 DOC016:S046 the recommendation algorithm doesn't really give you the flexibility to say, Hey, I I don't like this type of news, but I do enjoy the news that is published by this media but related to other category
+  E0010 DOC016:S046 the only way that you can mute a a recommendation from certain media is you can unsubscribe to that particular media
+G006 跳转到原文之前，先提示该站需要订阅或登录。 | context: 典型：纽约时报几乎每篇都要登录再订阅; 期望省掉一次往返
+  E0011 DOC016:S058 Feedly can notify me in advance that this article requires you to have a subscription
+  E0012 DOC016:S058 that back and forth is can be saved. If there is a notification or a heads up reminder within the web app itself
+G007 从外链返回时不自动刷新，保留已看/未看的浏览进度。 | context: 现状：返回即刷新，进度全丢，需从头再来; 后果：有时索性关掉应用
+  E0013 DOC016:S060 the app refreshes itself without any previous, without any warning
+  E0014 DOC016:S060 So I will lose the current progress of going down the list
+  E0015 DOC016:S062 And sometimes I end up just closing the web app once for all.
+G008 减少同一事件被多家媒体重复推送、反复出现的情况。 | context: 成因归为推荐算法：不感兴趣的新闻换一家媒体又出现; 他靠认图片判断是否重复，快速划过
+  E0016 DOC016:S034 the news that you weren't interested in might showed up again. But this time it's published by another media
+  E0017 DOC016:S034 the quickest way to identify it. Is buying the image of that news
+G009 收藏（read later）里的文章按类别分组，便于按主题回看。 | context: 现状：仅按时间倒序，可加星标
+  E0018 DOC016:S054 Maybe by having different categories in the read. Later tab will be beneficial
+  E0019 DOC016:S054 the read later articles are sorted by the latest to the newest
+G010 提供可听的朗读模式，用有语气的语音而非机械音。 | context: 场景：开车、健身、遛狗等无法盯屏的时段; 自评这是最想要的功能
+  E0020 DOC016:S082 have a reading mode where, if I'm driving, it would just read through the list
+  E0021 DOC016:S082 instead of all those like robotic voices
+  E0022 DOC016:S084 that will allow me to utilize the time where I cannot actively sit in front of my computer
+G011 保持应用极简，不堆叠多余功能。 | context: 视为该应用最被认可的优点之一; 与 C002 的快速摄取直接相关
+  E0023 DOC016:S024 it really serves as a minimalism app
+  E0024 DOC016:S102 the platform is is very good at keeping things at a minimalism level and doesn't have too much at that
+G012 出错时给出普通读者能看懂的提示，而不是 HTTP 状态码。 | context: 现状：源站 API 异常时直接把 400/500 显示在文章位置; 他认为只有开发者能看懂
+  E0025 DOC016:S078 those code can basically only be understood by developers, but not by regular news readers
+  E0026 DOC016:S076 It just ended up not loading the article correctly, and actually through a few of those you know. Developer codes
+G013 能就最新热点与同事展开讨论（信息更新到可社交的程度）。 | context: 被问及「怎样算一次成功的阅读」时给出; 受访者补充这是此前未提到的需求
+  E0027 DOC016:S108 just simply be able to discuss the latest event that's happening around the world
+  E0028 DOC016:S108 so that you will have a common topics with your coworker
+  E0029 DOC016:S106 be able to discuss the trending events with my Co. Worker when I get into work
+## PAPER summarized goals
+g0 Provide daily abstracts of news across various categories.
+g1 Categorize news articles into different topics.
+g2 Show a headline and a summary sentence for each news article.
+g3 Keep users updated on selected news categories such as business, politics, and programming.
+g4 Help users connect related news articles.
+g5 Provide summaries of financial and life-relevant news.
+g6 Enable users to access the original source of the content.
+g7 Track and filter out news topics based on user interest.
+g8 Provide easier access to previously encountered articles.
+g9 Ensure complete understanding of important articles.
+g10 Provide access to news abstracts without visiting external sites.
+g11 Enable users to mark articles as unread.
+g12 Enable users to mark articles as read.
+g13 Enable users to hide articles.
+g14 Allow users to access full articles without mandatory subscriptions.
+g15 Allow users to stay informed on news from around the world.
+g16 Enable customization of the news feed based on user preferences.
+g17 Incorporate natural voice reading to convey news with appropriate context and emotion.
+g18 Provide flexibility in scheduling when news can be accessed.
+g19 Ensure access to news from both mobile and web platforms.
+g20 Monitor market trends of stocks of interest.
+g21 Monitor political events and news that affect the stock market.
+g22 Track technology company stocks.
+g23 Stay updated on technology stocks.
+g24 Stay informed about business news.
+g25 Stay informed about the tech industry.
+g26 Stay up to date with programming information.
+g27 Stay updated with the latest news upon platform access.
+g28 Keep up with industry developments.
+g29 Allow users to save articles for later reading.
+g30 Allow users to hide news from specific sources.
+g31 Minimize exposure to duplicate news articles from different sources.
+g32 Enable users to indicate their preference for the type of news from specific sources.
+g33 Provide an option to manage news recommendations without unsubscribing from certain sources.
+g34 Identify and avoid media sources that require a subscription.
+g35 Allow users to quickly browse as many news sources as possible.
+g36 Enable the system to learn and adapt based on user behavior and interactions.
+g37 Provide seamless access and maintain user progress when transitioning between tasks and external content.
+g38 Optimize time usage by allowing productive engagement during non-productive activities.
+g39 Ensure a seamless experience on all mobile platforms.
+g40 Facilitate information consumption during hands-free tasks.
+g41 Mark items as read to avoid viewing them again
+g42 Refresh content automatically after items are marked as read
+g43 Enable audio playback mode for listening while driving
+g44 Provide a user experience that is minimalistic and avoids distractions.
+g45 Gather information quickly within a limited time.
+g46 Understand global events within a short period of reading.
+g47 Provide access to information about global events and various industries.
+g48 Identify and sample recent news for potential impact assessment.
+g49 Display timeline and original publish date and time next to each article.
+g50 Allow users to predict market trends based on article publish times.
+g51 Identify articles worth reading later.
+g52 Organize articles into specific categories.
+g53 Sort articles in the read later list by category.
+g54 Use visual cues to identify and bypass uninteresting news.
+g55 Reduce unnecessary navigation to improve efficiency.
+g56 Retain progress in searching the newsfeed after interruptions or navigation.
+g57 Notify users in advance if content requires a subscription before accessing it.
+g58 Enable access to content without mandatory subscriptions.
+g59 Provide a user-friendly message when content loading fails due to technical issues.
+g60 Prevent loss of user progress and information during navigation and disruptions.
+g61 Minimize disruptions to user productivity.
+g62 Avoid repetitive login processes.
+g63 Enable users to learn about current events while performing other activities.
+g64 Allow users to discuss trending events with coworkers.
+g65 Keep users informed about the latest topics around the world.
+g66 Enable users to comment on current events.
+g67 Enable auditory consumption of news while performing various activities.
+g68 Simplify the process for users to save items for later without requiring additional steps or causing confusion.
+g69 Obtain important details from content while maintaining an abstract level of information.
+g70 Display important details effectively.
+g71 Stay up to date with the latest financial news
+g72 Stay up to date with the latest political news

@@ -1,0 +1,44 @@
+{
+  "evaluation_type": "isolated_boundary_probes_not_natural_errors",
+  "findings": [
+    {
+      "id": "A03",
+      "name": "Relation-only evidence dispute not invalidated",
+      "reproduced": true,
+      "affected_pair": "P12",
+      "actual_trace_status": null,
+      "report_summary": {
+        "structure_status": "passed",
+        "semantic_status": "not_run",
+        "goal_count": 3,
+        "pair_count": 3,
+        "blocking_count": 0,
+        "needs_review_count": 0
+      },
+      "routes": [
+        {
+          "entry_id": "E1",
+          "decision": "incorrect",
+          "target_id": "E-RELATION-ONLY",
+          "status": "needs_retrace",
+          "next_skill": "goal-tracing",
+          "affected_goal_ids": []
+        }
+      ]
+    },
+    {
+      "id": "A04",
+      "name": "Existing candidate review Markdown overwritten",
+      "reproduced": true,
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-extraction\\scripts\\render_review.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\boundary-probes\\review-with-simulated-comment.md"
+      ],
+      "returncode": 0,
+      "before_sha256": "1d009588e0df8e6b9bb2808a06b2cc135302e98df0729db4707ac1408065dc1a",
+      "after_sha256": "91b17aaff5bcdd2bd060ec36840a28a6d7101639af1bef113b0224b828af7267"
+    }
+  ]
+}

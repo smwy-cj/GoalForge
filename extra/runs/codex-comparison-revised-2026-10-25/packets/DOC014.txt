@@ -1,0 +1,59 @@
+# DOC014
+## NEW
+G01 依据天气安排日常穿衣、通勤方式和是否携带雨伞。 | conditions: 通常前一天查看；冷时可能改骑车为公交，并非禁止骑车。 | origin: explicit | support: direct
+G02 查看次日实际出门时段的气温和降雨概率。 | conditions: 通常是上课前早晨；25%以上是个人理解的较大降雨机会，非平台警报阈值。 | origin: explicit | support: direct
+G03 出行计划确定后提前了解目的地天气，并在临近日期时据更新决定安排。 | conditions: 数周前可查历史资料或未来预报；几天前再判断；远期精度有限为受访者评价。 | origin: explicit | support: direct
+G04 按旅行目的查看云量等天气条件，判断是否需要调整或取消行程。 | conditions: 海滩、观星是举例；不要求所有多云天气都取消。 | origin: explicit | support: direct
+G05 在可能影响所在城市的极端天气发生时及时了解重要天气事件。 | conditions: 假设情境；本人未经历所在城市极端天气；可作为先获知事件的渠道。 | origin: explicit | support: direct
+G06 收到本地极端天气提示后，了解严重程度和权威建议并相应调整当天安排。 | conditions: 假设收到台风提醒；撤离、避难或雨具等取决于严重程度及建议，不作实际安全指导。 | origin: explicit | support: direct
+G07 遇到对自己新奇的零下气温时，计划截图并分享到社交媒体。 | conditions: 尚未实际分享；来自通常不低于零度的地区；截图为选定方式。 | origin: explicit | support: direct
+G08 继续便于从日段概览进入小时明细，查看气温、降雨及需要时的其他天气指标。 | conditions: 现有表格和标签被评价有帮助；风速、湿度、UV及体感为可进一步查看细节。 | origin: inferred | support: inferred
+G09 背景配色更偏好纯黑或纯白。 | conditions: 个人偏好；不喜欢沉闷蓝色，未表示所有用户都应改色。 | origin: explicit | support: direct
+G10 减少过多广告和弹出视频对快速查看天气的干扰。 | conditions: 可理解一两条广告；当前常短时查看，不认为必须订阅去广告；使用更久时才可能考虑付费。 | origin: explicit | support: direct
+G11 改善雷达地图的详细程度、直观性和可探索天气参数。 | conditions: 希望云量外有降雪、降水等；喜欢另一应用动画；改进做好后可能考虑购买，不是购买承诺。 | origin: explicit | support: direct
+G12 天气温度显示更偏好摄氏度。 | conditions: 本人单位偏好；当前通过顶部单位切换达到该设置，不要求默认影响其他人。 | origin: explicit | support: direct
+G13 便于查看自己常用城市的天气。 | conditions: 当前常用居住城市和印度原来城市；星标是所述已有能力，非指定唯一方式。 | origin: inferred | support: inferred
+G14 在本人电脑上通常保持网站通知关闭。 | conditions: 通常偏好；若开启则可能为次日天气摘要；网站权限是现有管理方式。 | origin: explicit | support: direct
+G15 登录使用时避免邮箱与所设城市信息泄漏并使他人推测所在地。 | conditions: 有条件的担忧；未登录数据仅存本地缓存是猜测，不确定实际存储；不是要求新建唯一存储架构。 | origin: inferred | support: inferred
+G16 旅行到偏远地点或户外路线时，能查看比城市更局部的天气数据。 | conditions: 偏远酒店、徒步和登山为例；建议有帮助，未指定精度半径或地理技术。 | origin: explicit | support: direct
+G17 把页面相关信息放得更紧凑，使切换标签后的变化更容易阅读。 | conditions: 广告区块导致上下滚动；本人列为优先改进；不强设像素或全局布局。 | origin: explicit | support: direct
+## PAPER
+g0 Provide temperature forecasts for the next day.
+g1 Indicate the chance of rain for the next day.
+g2 Provide hourly weather details for the next day.
+g3 Include parameters like snow coverage and precipitation in a visual display.
+g4 Warn users about important weather events in their area.
+g5 Provide detailed information about severe weather events, including severity and global updates.
+g6 Offer guides or resources to ensure user safety during extreme weather events.
+g7 Include recommendations from local authorities or organizations during weather alerts.
+g8 Enable users to make informed decisions and adjust activities based on weather conditions.
+g9 Provide weather forecasts including cloud coverage for trip planning.
+g10 Allow users to check historical weather data for trip planning.
+g11 Enable monitoring weather forecasts starting weeks before a planned trip.
+g12 Offer accurate weather predictions a few days before a planned event.
+g13 Provide very local weather information for specific locations.
+g14 Allow users to select favorite cities for easy weather access.
+g15 Provide information on the source of its data.
+g16 Allow users to share information with others.
+g17 Provide precise hourly coverage.
+g18 Display detailed information on user interaction with specific data points.
+g19 Allow users to set preferred locations for personalized updates.
+g20 Send a daily notification summarizing the next day's information.
+g21 Provide a user interface to display main weather information including temperature, daily minimum and maximum temperature, and weather events.
+g22 Display detailed weather data, such as wind speed, humidity, UV index, and perceived temperature for specific hours.
+g23 Allow temperature display to switch between Fahrenheit and Celsius.
+g24 Include the ability to switch between different time views such as morning, afternoon, evening, and overnight.
+g25 Provide navigation through tabs for viewing hourly, daily, weekend, monthly, and radar information.
+g26 Minimize the presence of ads to avoid distraction.
+g27 Restrict video and pop-up ads to enhance the user experience.
+g28 Reduce ad-related interruptions between UI elements and transitions.
+g29 Provide an option to change the background color to a plain color.
+g30 Enhance radar functionality with detailed and intuitive features.
+g31 Provide detailed radar data with animations.
+g32 Allow users to manage notification settings.
+g33 Enable users to control whether notifications are on or off on specific devices.
+g34 Manage site permissions.
+g35 Clear location data to ensure privacy.
+g36 Prevent storage of location data on external servers.
+g37 Prevent unauthorized access to user data.
+g38 Improve the readability and navigability of the user interface.

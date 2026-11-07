@@ -1,0 +1,46 @@
+{
+  "schema_version": "goalforge-review-tasks-1",
+  "target_model": {
+    "model_id": "FIX-goal-model",
+    "version": "v0.1.h1",
+    "core_sha256": "b69b4adf0a336e008ceed6457d308231cf601fbd2d191253c1a2c6d469ff3fe5"
+  },
+  "goal_ids": [],
+  "pair_ids": [
+    "P12"
+  ],
+  "relations": [
+    {
+      "pair_id": "P12",
+      "a": "FIX-G001",
+      "b": "FIX-G002",
+      "label": "uncertain",
+      "interpretation": "scope_specialization",
+      "rationale": "目标或证据已变化，该关系退回待评估；原判断保留在previous_decision。",
+      "evidence_ids": [
+        "REL-ONLY"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "previous_decision": {
+        "pair_id": "P12",
+        "a": "FIX-G001",
+        "b": "FIX-G002",
+        "label": "refinement",
+        "parent_id": "FIX-G001",
+        "child_id": "FIX-G002",
+        "interpretation": "scope_specialization",
+        "rationale": "合成范围具体化。",
+        "evidence_ids": [
+          "REL-ONLY"
+        ],
+        "conditions": [],
+        "review_status": "pending"
+      },
+      "assessment_status": "not_run",
+      "trace_status": "needs_retrace"
+    }
+  ],
+  "instructions": "先重新判断目标证据支持，再评估列出的关系；不得以旧判断或none填充未评估项。",
+  "retrace_input_status": "not_needed"
+}

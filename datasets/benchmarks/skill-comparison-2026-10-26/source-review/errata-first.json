@@ -1,0 +1,58 @@
+{
+  "artifact_type": "source_inventory_errata_separate_from_freeze",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "frozen_inventory_modified": false,
+  "note": "以下是阅读匿名包后发现的原清单边界与遗漏，单独记录；不能回写冻结清单并以此改善任何样本覆盖。",
+  "entries": [
+    {
+      "document_id": "DOC003",
+      "type": "omitted_explicit_intent",
+      "source_id": "DOC003:T017",
+      "quote": "if I've got like extra points, or like gift vouchers left over, so I can help friends book their own flights",
+      "note": "替亲友订票主体已保留，但以剩余积分/礼券帮忙省钱并用券的具体目的未单列；A G004、B G006有支持。"
+    },
+    {
+      "document_id": "DOC003",
+      "type": "omitted_personal_plan",
+      "source_id": "DOC003:T029",
+      "quote": "I'll definitely be traveling somewhere during the winter break.",
+      "note": "冬假旅行是明确的一次个人出行意向，可能仅为示范场景；未列持久应用意图。B G009保留它不自动算幻造。"
+    },
+    {
+      "document_id": "DOC003",
+      "type": "omitted_continuing_preference",
+      "source_id": "DOC003:T123",
+      "quote": "I like to maintain global access through priority pass.",
+      "note": "本人维持Priority Pass权益有明确语句；清单只列使用贵宾室与查权益，未单列维持权益目的。B G040有依据。"
+    },
+    {
+      "document_id": "DOC013",
+      "type": "goal_vs_capability_boundary",
+      "source_id": "DOC013:T038",
+      "quote": "I'm able to toggle and untoggle the full screen.",
+      "note": "I14/I15包括现场播放器能力描述，目标意图强度弱于T012明确essential需求；未覆盖仍记absent，但不能按每个控件缺失断言模型质量差。"
+    },
+    {
+      "document_id": "DOC028",
+      "type": "goal_vs_capability_boundary",
+      "source_id": "DOC028:T039",
+      "quote": "there is an offline capability, but it's not very comprehensive.",
+      "note": "I20明确标不确定，原文只描述缓存能力而未提出扩展愿望，缺失应低权重。"
+    },
+    {
+      "document_id": "DOC028",
+      "type": "background_can_support_inference",
+      "source_id": "DOC028:T011",
+      "quote": "the USP. Of Reddit is anonymity",
+      "note": "冻结为背景候选并非否定需求；结合T055身份可推保留匿名性的有限偏好，B G004可支持。"
+    },
+    {
+      "document_id": "DOC031",
+      "type": "coverage_status_correction",
+      "source_id": "DOC031:T019",
+      "quote": "I would enter keywords",
+      "note": "原清单I08同时包含方式与结果；A G009/G010完整，而B G007结果级条目未留关键词。多对多评审保留这个区别。"
+    }
+  ]
+}

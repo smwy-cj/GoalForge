@@ -1,0 +1,156 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "SYN001",
+  "input_binding": {
+    "source_input_sha256": "d2bca159bfe9ee774237cc1bc3a2215ecc4b1d58666f3352c5ca1e70dbed1f20",
+    "source_sha256": "7a21457b8dc968516aea7f7ac319e4e4ff707365aca72c27478c02d642453f69",
+    "windows_sha256": "fbc1ca049eb573c6a13d137fbadb2f5aef2b5805625af8db5d5c383979d776c2",
+    "candidates_sha256": "8c5b3b9cbcdf3d048c4aaab4e68daa953a2060df509eac32883ba628b6aef222",
+    "extraction_sha256": "ba7abc5b3cf602a65746abb4a62d82c085274cd83a5320eb2a4a0c5edfb0d2cf"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "synthetic-smoke",
+    "temperature": "unknown",
+    "budget": "smoke",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 1,
+    "stop_reason": "synthetic smoke test",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "SYN001:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "SYN001:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "SYN001:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "SYN001:W0004",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "合成材料共9轮，整篇回查指代与条件",
+    "source_ids": [
+      "SYN001:T000",
+      "SYN001:T001",
+      "SYN001:T002",
+      "SYN001:T003",
+      "SYN001:T004",
+      "SYN001:T005",
+      "SYN001:T006",
+      "SYN001:T007",
+      "SYN001:T008"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "split",
+      "final_goal_ids": [
+        "G001",
+        "G002"
+      ],
+      "reason": "比较酒店与查看含早餐总价是两个可独立满足的结果，共同来源句"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "避免型目标保留否定与前置条件"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "有正面评价但不确定，保留为推断并留问题"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "range 限定写入 context"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "总体目的有独立意图依据，保留为上层目标"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "SYN001:T001",
+          "quote": "I usually compare three hotels before booking, and I want the total price with breakfast visible",
+          "role": "basis",
+          "start_char": 77,
+          "end_char": 173
+        }
+      ],
+      "candidate_ids": [
+        "C001"
+      ],
+      "final_goal_ids": [
+        "G001",
+        "G002"
+      ],
+      "outcome": "represented",
+      "reason": "两个最终目标分别承接"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "SYN001:T005",
+          "quote": "That would help, though I am not sure yet",
+          "role": "basis",
+          "start_char": 422,
+          "end_char": 463
+        }
+      ],
+      "candidate_ids": [
+        "C003"
+      ],
+      "final_goal_ids": [
+        "G004"
+      ],
+      "outcome": "uncertain",
+      "reason": "不确定语气未解决"
+    }
+  ],
+  "limitations": [
+    "合成材料仅用于工具冒烟检查，不属于论文语料"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "a05b00345863dca52ebb73492491acf080e091cb418f57f0a7a477f67b7ac327",
+    "input_sha256": "636fd8c57924e3f83f5e4f247050d8c2ceca272c5995bcba2fc3a49650dfae29"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Use the app to make quick small payments (called 'sell' payments, i.e. Zelle) to a few friends to split costs.",
+      "label": "direct",
+      "rationale": "受访者明确说使用 app 的主要原因是向朋友发 Zelle 付款以分摊费用，主体、动作、对象与目的在 T005 直接出现；T007 的定义补充'小额/即时/凭手机号/面向亲友'的方式。位置与语义逐项一致。",
+      "supported_parts": [
+        "使用 app 向朋友发起小额付款以分摊费用"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G002": {
+      "target_statement": "Transfer surplus funds from the checking account to the savings account when the checking account has a lot of funds, in order to earn the small amount of interest.",
+      "label": "direct",
+      "rationale": "T005 直接陈述当支票账户资金较多时把资金转到储蓄账户以获取利息；条件、动作、结果、强度均可逐项核对。",
+      "supported_parts": [
+        "条件触发的本人账户间转账以获取利息"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G003": {
+      "target_statement": "Use Apple Pay, which is connected directly to Chase, to pay at grocery stores and other outlets.",
+      "label": "direct",
+      "rationale": "T005 明确说在杂货店等门店使用 Apple Pay、且该方式直接连到 Chase 完成付款；主体/对象/方式一致。",
+      "supported_parts": [
+        "用直连 Chase 的 Apple Pay 在门店付款"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G004": {
+      "target_statement": "Have the website provide a categorized data analysis of where money is spent (e.g. groceries or fuel) as a valuable insight for users.",
+      "label": "insufficient",
+      "rationale": "受访者表达了'想看到花费多少与去向的分解'这一愿望，但把它表述为'面向用户的数据分析/有价值洞察'时证据不足：'data analysis / expense categories'措辞来自采访者提问，'valuable insight for the users'是推广性评价，且受访者自述不确定系统是否已按消费类别跟踪；T023 表明系统已按交易类型分类、只是未按消费类别。据实保留为 insufficient，不升级。",
+      "supported_parts": [
+        "希望看到花费多少与去向的分解（T021）",
+        "现有分类仅按交易类型、缺少 groceries/fuel 等消费类别指示（T023）"
+      ],
+      "unsupported_parts": [
+        "'按消费类别的数据分析'是否为其本人需求表述（该措辞来自采访者 T020）",
+        "'面向用户的有价值洞察'这一推广性收益",
+        "系统是否已按消费类别跟踪（受访者明确表示不确定）"
+      ],
+      "assumptions": [
+        "把 'a breakdown of how much I'm spending and where' 理解为按消费类别的分解"
+      ],
+      "reasoning_steps": [
+        "逐项核对主体/范围/条件/强度/方式与来源版本",
+        "区分采访者措辞与受访者措辞",
+        "识别相反证据：现有按交易类型分类"
+      ]
+    },
+    "G005": {
+      "target_statement": "Be able to set and change spending limits on the debit card through the website.",
+      "label": "direct",
+      "rationale": "T037 明确表达想在网站拥有该限额功能并希望看到它被加入；T035 确认网站无专门选项。条件与例外（资金在储蓄账户、未来使用、曾用过）逐项保留在 context，未把任务数值写入目标。",
+      "supported_parts": [
+        "在网站端拥有设置/修改借记卡限额的功能"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G006": {
+      "target_statement": "Have Zelle implemented on the web app so the user does not have to reach for the phone every time.",
+      "label": "direct",
+      "rationale": "T045 直接表达希望在 web app 实现 Zelle 及其理由，T041 与 T045 的'only concern'确认网站端缺 Zelle；主体/对象/理由一致。",
+      "supported_parts": [
+        "在 web app 上实现 Zelle 以免每次去拿手机"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G007": {
+      "target_statement": "Have a chat/text-based support interface (chatting with a bank representative, or an AI bot) available on the website.",
+      "label": "inferred",
+      "rationale": "受访者以偏好/习惯（'I am very used to having a chat based interface'、'would be a great option/feature'）表达对网站聊天支持的期望，需由偏好与 T053 的'缺少聊天通道'缺口推断为一项产品诉求；方式与受益人群在原文明确选定并保留于 context。",
+      "supported_parts": [
+        "偏好聊天式支持及其放松/可多任务处理的理由",
+        "网站目前无文字/聊天联系银行的通道",
+        "AI 机器人方式及面向不熟悉网站者的条件"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "受访者的个人偏好可视为对网站功能的有依据诉求",
+        "'a few limitations'为信念性可行性顾虑，不否定诉求本身"
+      ],
+      "reasoning_steps": [
+        "由'used to / would be a great'的偏好与 T053 的缺口推断诉求",
+        "核对方式、条件、强度与来源版本",
+        "不把偏好升级为强制要求"
+      ]
+    },
+    "G008": {
+      "target_statement": "Make the more important (niche) features, such as locking/unlocking the debit card, more accessible with fewer clicks on the website.",
+      "label": "direct",
+      "rationale": "T059 直接陈述'一些更重要/小众功能应更易访问'，并以 7-8 次点击为例；让步（不常用、理解）与总体评价张力保留在 context。",
+      "supported_parts": [
+        "让更重要/小众功能更易访问、减少点击"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G009": {
+      "target_statement": "Be able to view all bank accounts, balances, deposits, withdrawals and recent transactions at a quick glance on the dashboard without going to multiple screens or extra clicks.",
+      "label": "inferred",
+      "rationale": "该目标由对现有 dashboard 的正面评价推断为'维持一览能力、避免多屏/多次点击'的意图：原文以'it's a good thing'/'that's also good'/'pretty convenient'表达价值，并明确'don't really have to go to multiple screens'，属有正面依据支撑的维持/避免型意图；因原文是对已实现能力的评价而非新增要求，按 inferred 保留并在 context 标注该张力，不升级为强制诉求。",
+      "supported_parts": [
+        "登录后 dashboard 集中展示所有账户/余额/存取款与近期交易",
+        "可一眼查看所有花费、无需多屏或额外点击"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "对已实现能力的正面评价可视为希望维持的状态"
+      ],
+      "reasoning_steps": [
+        "由 T015 的正面评价与'无需多屏/额外点击'推断维持/避免型意图",
+        "核对展示内容、条件与来源版本",
+        "不把正面评价升级为新增强制要求"
+      ]
+    }
+  }
+}

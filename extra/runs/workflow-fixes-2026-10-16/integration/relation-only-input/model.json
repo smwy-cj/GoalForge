@@ -1,0 +1,301 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "FIX-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "142385d759deb27b78a5f602258e2ab0042f93f8ecec66a2fbe3c32e51cc738c"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "58f0f32f10b1d4a884df041998433cb9e9e779f4226ae0fa49ce88a27ea3efba"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "92c5c79dbb2f1dfb2a731a51c4070a69b36a8af2051685631115ff34d3ed5498"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "d80c8f962e0199bfd6dc43db7bd7e2598901925c268775eee420813ba7cd081b"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "FIX"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "FIX-G001",
+      "statement": "根据天气合理安排活动",
+      "source_candidate_ids": [
+        "FIX-C001"
+      ],
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_ids": [
+        "E0001"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "FIX-G002",
+      "statement": "根据降雨安排户外活动",
+      "source_candidate_ids": [
+        "FIX-C002"
+      ],
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_ids": [
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "FIX-G003",
+      "statement": "减少查找信息的费用",
+      "source_candidate_ids": [
+        "FIX-C003"
+      ],
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_ids": [
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P12",
+      "a": "FIX-G001",
+      "b": "FIX-G002",
+      "label": "refinement",
+      "parent_id": "FIX-G001",
+      "child_id": "FIX-G002",
+      "interpretation": "scope_specialization",
+      "rationale": "合成范围具体化。",
+      "evidence_ids": [
+        "REL-ONLY"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P13",
+      "a": "FIX-G001",
+      "b": "FIX-G003",
+      "label": "none",
+      "rationale": "未建立联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P23",
+      "a": "FIX-G002",
+      "b": "FIX-G003",
+      "label": "none",
+      "rationale": "未建立联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "refinement",
+      "decision_id": "P12",
+      "conditions": [],
+      "review_status": "pending",
+      "parent_id": "FIX-G001",
+      "child_id": "FIX-G002",
+      "interpretation": "scope_specialization"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "FIX:S001",
+      "material_id": "M001",
+      "quote": "使用者：我希望根据天气合理安排活动。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 0,
+      "end_char": 18,
+      "candidate_locations": [
+        {
+          "source_id": "FIX:S001",
+          "segment_start": 0,
+          "segment_end": 18,
+          "start_char": 0,
+          "end_char": 18
+        }
+      ],
+      "original_locator": {
+        "line_start": 1,
+        "line_end": 1,
+        "start_char": 0,
+        "end_char": 18
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "FIX:S002",
+      "material_id": "M001",
+      "quote": "使用者：我希望根据降雨安排户外活动。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19,
+      "end_char": 37,
+      "candidate_locations": [
+        {
+          "source_id": "FIX:S002",
+          "segment_start": 0,
+          "segment_end": 18,
+          "start_char": 19,
+          "end_char": 37
+        }
+      ],
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 19,
+        "end_char": 37
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "FIX:S003",
+      "material_id": "M001",
+      "quote": "使用者：我希望减少查找信息的费用。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 38,
+      "end_char": 55,
+      "candidate_locations": [
+        {
+          "source_id": "FIX:S003",
+          "segment_start": 0,
+          "segment_end": 17,
+          "start_char": 38,
+          "end_char": 55
+        }
+      ],
+      "original_locator": {
+        "line_start": 3,
+        "line_end": 3,
+        "start_char": 38,
+        "end_char": 55
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "REL-ONLY",
+      "source_id": "FIX:S001",
+      "material_id": "M001",
+      "quote": "使用者：我希望根据天气合理安排活动。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 0,
+      "end_char": 18,
+      "candidate_locations": [
+        {
+          "source_id": "FIX:S001",
+          "segment_start": 0,
+          "segment_end": 18,
+          "start_char": 0,
+          "end_char": 18
+        }
+      ],
+      "original_locator": {
+        "line_start": 1,
+        "line_end": 1,
+        "start_char": 0,
+        "end_char": 18
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "FIX-C001",
+      "goal_id": "FIX-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "FIX-C002",
+      "goal_id": "FIX-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "FIX-C003",
+      "goal_id": "FIX-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 3,
+    "evaluated_pairs": 3
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "8f13dc543152b339012729fd71b1500e9b6e07cfaf02718b473bb1008e0acea9",
+    "core_sha256": "eb41db2f0ee001e5183cec0fef05f223db8a37a8cd342b1c9455a0fa7894669a",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "0155bf5631e3d69a8f1e9670e42fdf2ba4c1498a6a3a74048a77de093e7ade98"
+}

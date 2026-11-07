@@ -1,0 +1,240 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "1867b3dfc7e44c6f3ae3f20c0e339833dda41f10b4f96e2e79925c85fef2b0b0",
+    "input_sha256": "1a04c6cdd5e067eec0db4a12eb4cc7149547c49dde47f3630da105c8077f0658"
+  },
+  "judgments": {
+    "DOC007-C001": {
+      "target_statement": "在忙碌周或只需补常规库存时，用线上采购替代去实体店，以节省时间。",
+      "label": "direct",
+      "rationale": "T022 在同一句内给出两个触发条件并直接陈述行为：「if I have like, a really busy week, and I don't have time to physically go or if I'm just buying the same things that I always buy and like don't need to explore. So like picking up just my regular stock for the month. I'll just do online.」；T056 明确给出时间收益「it does save a lot of time for me」，T050 又自陈「I'm really there for efficiency」。条件、行为、收益三要素一致，主体为受访者本人。",
+      "supported_parts": [
+        "触发条件一（忙、无时间到店）：T022「if I have like, a really busy week, and I don't have time to physically go」",
+        "触发条件二（只买固定商品、无需探索）：T022「if I'm just buying the same things that I always buy and like don't need to explore」",
+        "行为（改在线上完成）：T022「So like picking up just my regular stock for the month. I'll just do online.」",
+        "时间收益：T056「it does save a lot of time for me」",
+        "效率动机自陈：T050「I'm really there for efficiency. I'm not there to look around.」",
+        "履约方式偏好（自提）：T056「I think it's like the perfect balance of cost saving」、T058「typically pickup is free」"
+      ],
+      "unsupported_parts": [
+        "「节省时间」为受访者自陈的动机之一，但未表述为唯一动机；T022 同时提到「不需要探索」这一并行理由",
+        "未说明线上与线下的选择规则边界（例如多大工作量才构成「busy week」）",
+        "自评频率「about every 2 weeks」为估数（T018），不是目标的一部分"
+      ],
+      "assumptions": [
+        "「只补常规库存」与「忙」两个条件是并列可替代的触发条件，原文用 or 连接",
+        "自提偏好由 T056 的成本+时间权衡与 T058 的「pickup is free」共同支持，未单独列为目标"
+      ],
+      "reasoning_steps": [
+        "1. 拆分目标为条件（忙/常规补货）、行为（用线上替代到店）、收益（省时）",
+        "2. 三要素在 T022 与 T056 中均由第一人称直接陈述，无采访者引导成分",
+        "3. 检查有无限定冲突：T050 称「there for efficiency」，与「省时」同向，非反证",
+        "4. 检索相反证据：全文无「愿意花时间亲自到店」的表述（T056 说明住得近但仍选择线上省时）→ direct"
+      ]
+    },
+    "DOC007-C002": {
+      "target_statement": "采购时直接按已知商品搜索并加购，不在线上浏览探索；探索留到实体店进行。",
+      "label": "direct",
+      "rationale": "T028 描述「it'll be like a very targeted like I go to the search bar. I type in exactly what I want.」；T030 收束为「But for me it's just like the search bar, and that's it.」；T050 进一步否定线上探索（「I don't wanna waste time like randomly exploring grocery items on my computer.」）并说明探索留在实体店（「I prefer exploring in a physical grocery store if I have to do that.」）。行为与规避对象均为直接陈述。",
+      "supported_parts": [
+        "直接精确搜索：T028「I go to the search bar. I type in exactly what I want.」",
+        "只用搜索、不浏览：T030「But for me it's just like the search bar, and that's it.」",
+        "回避线上探索：T050「I don't wanna waste time like randomly exploring grocery items on my computer.」",
+        "探索留在实体店：T050「I prefer exploring in a physical grocery store if I have to do that.」",
+        "与线上购物目的的关系：T050「it contradicts why I'm going online grocery shopping in the 1st place」"
+      ],
+      "unsupported_parts": [
+        "「不探索」的严格程度未定义：T046 承认买零食时会按类目浏览（见 C008），边界由推断补足而非受访者澄清",
+        "未说明是否存在其他需要浏览的类目",
+        "未提及 explore tab 若改版是否会改变该取向（T050 仅就现状表态）"
+      ],
+      "assumptions": [
+        "T028 中的「very targeted」理解为不浏览、不加购计划外商品"
+      ],
+      "reasoning_steps": [
+        "1. 识别行为描述（T028/T030）与规避陈述（T050）指向同一取向",
+        "2. 核对 T050 的因果句：以「线上购物是为了效率」解释为何不探索，构成动机支持",
+        "3. 检查反例：T046 的零食浏览为例外情形，需按类目区分，已记入部分不支持",
+        "4. 主体、对象、条件一致 → direct"
+      ]
+    },
+    "DOC007-C003": {
+      "target_statement": "让每次采购更省力且不漏项：点开一份清单逐项核对即可，不必每次重新构建清单，也不会因漏买而再跑一趟实体店。",
+      "label": "direct",
+      "rationale": "T078 回答「习惯会如何改变」时直接给出期望状态：「the biggest overhaul would probably be, I just like click on one list and read through it rather than like having to reconstruct the list every time.」并说明两项收益：「reduce the amount of typing and clicking」与「more comprehensive, because sometimes I just like, forget things... I'll realize like I forgot one item, and then I'll have to like physically. Go into the store for that.」省力与不漏项均由第一人称陈述。",
+      "supported_parts": [
+        "不必每次重建清单：T078「click on one list and read through it rather than like having to reconstruct the list every time」",
+        "减少输入与点击：T078「reduce the amount of typing and clicking」",
+        "避免遗漏：T078「more comprehensive, because sometimes I just like, forget things」",
+        "漏项的代价：T078「I forgot one item, and then I'll have to like physically. Go into the store for that.」",
+        "现状负担：T079 之前的同段描述「a lot of like physically typing in and clicking for each item」"
+      ],
+      "unsupported_parts": [
+        "表述语气为预期而非承诺：「I think it would like reduce」「would probably be」，未陈述为必须达成的指标",
+        "「不漏项」如何保证未说明（清单本身是否准确、是否有校验机制均未讨论）",
+        "未给出「省力」的可衡量口径（减少多少次点击、多少时间）"
+      ],
+      "assumptions": [
+        "对「习惯会如何改变」的回答视为受访者期望的未来状态，而非单纯的行为预测"
+      ],
+      "reasoning_steps": [
+        "1. 确认提问语境：T078 是对「未来习惯会怎么变」的回答，属期望表达",
+        "2. 提取两个并列结果（省力、不漏项）及其代价说明",
+        "3. 检查强度：全段为 would/I think 的预期语气，记入部分不支持而不推翻方向",
+        "4. 无相反证据（未表示愿意维持逐项输入）→ direct"
+      ]
+    },
+    "DOC007-C004": {
+      "target_statement": "由应用根据我的历史订单自动生成一份购物清单。",
+      "label": "direct",
+      "rationale": "T035 明确表达期望：「it would be cool if they could look at all of my past orders, and like come up with a grocery list for me.」对象（历史订单）、结果（生成清单）、主体均直接给出，且紧接在同段陈述「figuring out exactly what I need for a month or 2 weeks」的困难之后，动机清晰。",
+      "supported_parts": [
+        "期望内容：T035「it would be cool if they could look at all of my past orders, and like come up with a grocery list for me.」",
+        "动机（制定清单本身困难）：T035「I feel like that part is more what's difficult, like figuring out exactly what I need for a month or 2 weeks」",
+        "平台已有相关数据：T035 随后发现的「buy again」可按已购商品加购"
+      ],
+      "unsupported_parts": [
+        "措辞为「would be cool」，属期望而非必需",
+        "与现有 buy again 功能的差异未说明：受访者发现该功能后表示「I might start using that」，是否仍需整单生成不明",
+        "未说明生成清单的粒度（按周/按月）、可编辑性与确认方式"
+      ],
+      "assumptions": [
+        "历史订单数据足以推导周期性采购需求（平台侧能力假设，原文未讨论）"
+      ],
+      "reasoning_steps": [
+        "1. 定位期望句与紧邻的动机句，确认二者同段同主体",
+        "2. 判定为结果型期望（生成清单）而非手段描述",
+        "3. 检查现有功能带来的替代性：buy again 提供的是单品加购，不等于整单生成，故不构成反证",
+        "4. 强度与差异缺口记入部分不支持 → direct"
+      ]
+    },
+    "DOC007-C005": {
+      "target_statement": "把购物清单存成可复用的模板，并按场景分别定制（如每周常规清单与派对采购清单）。",
+      "label": "direct",
+      "rationale": "同一诉求在访谈中出现两次且表述一致：T038「it would be nice like if they could have almost a template grocery list that I could just like reuse every time that I customize, like my weekly grocery list versus my like party planning grocery list」；T068「the ability to create templates of a grocery list. and then just like Reuse」。可复用、按场景定制两个要素均在原句中。",
+      "supported_parts": [
+        "模板化复用：T038「a template grocery list that I could just like reuse every time」",
+        "按场景定制：T038「my weekly grocery list versus my like party planning grocery list」",
+        "重复确认：T068「the ability to create templates of a grocery list. and then just like Reuse」",
+        "现有能力与差距：T070「There's a button called your list, which I guess allows you to make lists, but I have never actually done this.」"
+      ],
+      "unsupported_parts": [
+        "未说明模板的字段、数量上限与共享方式",
+        "「现有 your list 已能建清单」与「需要模板」的差距未由受访者定义，仅表示从未使用",
+        "未说明模板与历史订单生成（C004）如何区分"
+      ],
+      "assumptions": [
+        "两次表述视为同一诉求的重申，而非两个独立需求"
+      ],
+      "reasoning_steps": [
+        "1. 比对 T038 与 T068：均含 template + reuse，场景举例一致 → 合并为同一目标",
+        "2. 核对「定制」要素：T038 的 weekly vs party planning 直接支持",
+        "3. 检查现有功能是否已满足：your list 建清单不等于模板复用，且受访者未使用，不构成反证",
+        "4. → direct"
+      ]
+    },
+    "DOC007-C006": {
+      "target_statement": "每隔两周由应用把清单推给我，经我确认后自动下单、再到店自提。",
+      "label": "direct",
+      "rationale": "T068 完整描述该设想：「if they had like a way to every 2 weeks. They show you like, okay, here's your grocery list... if you once you sign off on it. I'm going to place this order, and then you can go pick it up.」触发周期、推送内容、确认环节、下单与自提四个环节都在同一句内，主体为受访者本人提出的期望。",
+      "supported_parts": [
+        "周期触发：T068「a way to every 2 weeks」",
+        "推送清单：T068「They show you like, okay, here's your grocery list」",
+        "本人确认后下单：T068「if you once you sign off on it. I'm going to place this order」",
+        "到店自提：T068「and then you can go pick it up」",
+        "与既有采购节奏一致：T018「maybe, like every 2 weeks or so roughly give or take」"
+      ],
+      "unsupported_parts": [
+        "可行性存疑：T068 紧接着说「wait! They actually might. I'm clicking around on it now they might have something like this. But again, this is like so buried.」，功能是否已存在未确认",
+        "「two weeks」与 T018 的自评频率重合，无法确定是个人节奏还是希望平台固定按此周期触发",
+        "confirm（sign off）的具体方式、可修改范围与错过确认的处理均未说明"
+      ],
+      "assumptions": [
+        "该设想在「希望增加什么功能」的提问下提出，视为期望而非纯假设",
+        "自提环节沿用 T056/T058 的既有偏好"
+      ],
+      "reasoning_steps": [
+        "1. 按四个环节拆解 T068，逐一核对是否在原句中",
+        "2. 检查提出语境：T067 询问「是否有其他应包含的功能」，属期望表达",
+        "3. 检查犹疑：T068 后半段的自我怀疑针对功能是否已存在，不针对需求本身",
+        "4. 周期语义存在两种解释，记入部分不支持并转为人工问题 → direct"
+      ]
+    },
+    "DOC007-C007": {
+      "target_statement": "让应用根据我的实际使用方式，主动推荐对我可能有用的功能。",
+      "label": "direct",
+      "rationale": "T072 以「should」直接提出应有做法：「they should just like somehow find a way to suggest features that might be useful to me, based on how I'm using this platform.」其动因由 T035（界面 overwhelming、buy again 入口不直观）与 T071（your list 从未使用）两处具体经历支持。",
+      "supported_parts": [
+        "期望做法：T072「they should just like somehow find a way to suggest features that might be useful to me, based on how I'm using this platform.」",
+        "动因一（入口不直观）：T035「It wasn't like intuitive to click on. Buy again.」",
+        "动因二（功能存在但未被使用）：T071「There's a button called your list... but I have never actually done this.」",
+        "动因三（界面负担）：T035「because the interface is so overwhelming like I haven't even.」"
+      ],
+      "unsupported_parts": [
+        "未说明推荐形式（弹窗、引导、通知、排序）与频次",
+        "「based on how I'm using this platform」的数据范围与隐私边界未讨论；T066 仅表示对数据用途好奇，未提出约束",
+        "未说明推荐错误或打扰时的退出方式"
+      ],
+      "assumptions": [
+        "「suggest features」指主动提示未被使用的既有功能，而非推荐商品"
+      ],
+      "reasoning_steps": [
+        "1. 取 T072 的规范性表述作为目标本体（should → 期望）",
+        "2. 用 T035/T071 的具体经历验证这不是空泛抱怨，而是有实例支撑的诉求",
+        "3. 检查与 C008 的区别：本条对象为功能，C008 对象为商品，故不合并",
+        "4. → direct"
+      ]
+    },
+    "DOC007-C008": {
+      "target_statement": "在浏览特定类目（如零食）时，获得类似信息流的商品推荐。",
+      "label": "direct",
+      "rationale": "T046 在描述如何探索零食时提出：「it would kind of be interesting if they like made it when I'm scrolling through like more of... a Facebook news feed where it's like recommending things.」场景（零食类目、滚动浏览）与期望形式（信息流式推荐）均直接给出。",
+      "supported_parts": [
+        "期望形式：T046「a Facebook news feed where it's like recommending things」",
+        "适用场景：T046「sometimes there are items like snacks when I want to explore some like other snacks」",
+        "浏览方式：T046「I just like start. Scrolling」"
+      ],
+      "unsupported_parts": [
+        "强度弱：措辞为「it would kind of be interesting」，明显弱于其他目标的 would be cool / should",
+        "适用边界未由受访者澄清：T050 同时称「I'm not interested really in that function when I'm shopping for food online」，两处关系需人工确认",
+        "受访者推测「they probably do this on the back end」，说明其对现状不确定",
+        "未说明推荐依据（历史购买、同类目热度或其他）"
+      ],
+      "assumptions": [
+        "该提议仅适用于有探索意愿的类目（原文举零食），不适用于常规补货",
+        "「Facebook news feed」理解为持续滚动中出现推荐的列表形态"
+      ],
+      "reasoning_steps": [
+        "1. 取 T046 的设想句与场景句，确认对象为商品推荐而非功能推荐（区别于 C007）",
+        "2. 记录措辞强度，避免与 C004/C005/C006 同级处理",
+        "3. 标记与 T050 的张力，不自行裁决，转为人工问题",
+        "4. 期望方向明确、仅边界不清 → direct（而非 insufficient）"
+      ]
+    },
+    "DOC007-C009": {
+      "target_statement": "购买可能含坚果的商品时，能查到配料表以排除过敏原。",
+      "label": "direct",
+      "rationale": "T038 说明因坚果过敏必须查看配料：「Sometimes I'll have to look at ingredients because I'm allergic to nuts.」并指出可用性不确定：「I'll have to see if they have an ingredient list available which I'm not entirely sure they always do」。过敏这一条件与「查配料表」这一必要动作均为直接陈述。",
+      "supported_parts": [
+        "条件（坚果过敏）：T038「I'm allergic to nuts」",
+        "必要动作（查看配料）：T038「Sometimes I'll have to look at ingredients」",
+        "对象（配料表）与可用性疑问：T038「I'll have to see if they have an ingredient list available which I'm not entirely sure they always do」"
+      ],
+      "unsupported_parts": [
+        "未明确要求平台「必须始终提供」配料表，只表达了对是否总有的不确定",
+        "未说明当前在哪些商品上缺失、缺失时如何处理",
+        "未提出配料信息的展示位置或筛选方式（如按过敏原过滤）"
+      ],
+      "assumptions": [
+        "把「必须核对配料」的既有做法视为对配料信息可得性的需求，而非仅描述一次购物经历"
+      ],
+      "reasoning_steps": [
+        "1. 提取条件（过敏）与动作（查配料）→ 目标的对象与条件成立",
+        "2. 判断可得性诉求：原句为疑问式不确定，未直接要求，记入部分不支持",
+        "3. 与其他目标比对：与清单、推荐类目标无重叠，独立成立",
+        "4. 需求方向明确 → direct；若人工认为应弱化为「不确定」，可改为 insufficient"
+      ]
+    }
+  }
+}

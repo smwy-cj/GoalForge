@@ -1,0 +1,258 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "8ff245ea29f0c344b15e4719c36b6f4ce4dc3be56721a47fcb0ab92753cbb5c3",
+    "input_sha256": "2164d4edd39e130bda0df78ed35d9a84f07224054fb48756828aa32bb2b0c8bf"
+  },
+  "judgments": {
+    "DOC013-C001": {
+      "target_statement": "按受众与内容类型实施分级：不适宜内容限制可见，违规内容禁止发布。",
+      "label": "direct",
+      "rationale": "T006 在回答合规约束时直接给出双向要求：观众侧限制可见、创作者侧禁止发布。",
+      "supported_parts": [
+        "观众侧：T007「some viewers can't see certain things」",
+        "创作者侧：T007「streamers should not be allowed to share」"
+      ],
+      "unsupported_parts": [
+        "未定义分级标准（年龄、地区、语言）",
+        "未说明审核由谁执行"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取双向要求",
+        "2. 属合规型目标",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C002": {
+      "target_statement": "支持用文本与筛选条件精确检索目标内容。",
+      "label": "direct",
+      "rationale": "T012 明确把文本检索与筛选列为观众侧首要必要功能：「essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters」。",
+      "supported_parts": [
+        "必要性：T013「essential to be able to」",
+        "方式：T013「searching via text, or perhaps by filters of some sort」"
+      ],
+      "unsupported_parts": [
+        "未说明筛选维度（时长、日期、清晰度）",
+        "未说明排序规则"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取必要性陈述",
+        "2. 与 C003 的视觉浏览并列",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C003": {
+      "target_statement": "以缩略图加描述的方式批量浏览，便于快速扫视与点开。",
+      "label": "direct",
+      "rationale": "T012 说明第二种检索方式是可视觉化浏览大量候选，并描述缩略图附带的信息。",
+      "supported_parts": [
+        "视觉浏览：T013「search visually... see a large volume of different options」",
+        "信息构成：T013「a thumbnail... with a description, perhaps, who made it」"
+      ],
+      "unsupported_parts": [
+        "未说明每屏数量或分页方式",
+        "未说明悬停预览是否为必需"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取视觉浏览陈述",
+        "2. 与文本检索构成两种并列方式",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C004": {
+      "target_statement": "支持上传视频或开播，并能填写标题、描述与字幕转写。",
+      "label": "direct",
+      "rationale": "T012 从创作者角度提出上传/开播入口，以及标题、描述、字幕等元数据填写。",
+      "supported_parts": [
+        "入口：T013「create to upload a video or start a stream」",
+        "元数据：T013「put some sort of description in, add, perhaps a transcript captions」"
+      ],
+      "unsupported_parts": [
+        "未说明必填项与校验",
+        "开播等待期未纳入本目标"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取入口与元数据陈述",
+        "2. 二者同一句内相连",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C005": {
+      "target_statement": "在平台内直接编辑视频（裁剪、加音效等），不必导出到第三方工具。",
+      "label": "direct",
+      "rationale": "T012 明确指出站内编辑的价值并举例（音效、裁剪）。",
+      "supported_parts": [
+        "价值判断：T013「would be very useful... to edit those」",
+        "具体能力：T013「add sound effects. Trim crop.」"
+      ],
+      "unsupported_parts": [
+        "未说明是否需要多轨道或时间轴",
+        "未说明编辑后是否需重新转码"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取价值判断与举例",
+        "2. 属功能诉求",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C006": {
+      "target_statement": "即使查询条件模糊，也能返回有意义的结果。",
+      "label": "direct",
+      "rationale": "T014 直接要求模糊查询也能返回有意义结果，并说明对应障碍是「找不到本该存在的内容」。",
+      "supported_parts": [
+        "要求：T015「search, using vague criteria, but that should still get me meaningful results」",
+        "障碍：T015「not finding what I'm looking for」"
+      ],
+      "unsupported_parts": [
+        "未定义「有意义」的判定",
+        "未说明是否接受推荐式补全"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取要求与障碍",
+        "2. 二者因果相连",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C007": {
+      "target_statement": "播放过程流畅、不卡顿，缓冲数据连续。",
+      "label": "direct",
+      "rationale": "T014 明确要求播放不卡顿、缓冲连续。",
+      "supported_parts": [
+        "要求：T015「a seamless stream of buffered data」",
+        "反面：T015「I don't want it to freeze constantly」"
+      ],
+      "unsupported_parts": [
+        "未给出码率或启动时延指标",
+        "未说明弱网下的降级策略"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取正反两面表述",
+        "2. → direct"
+      ]
+    },
+    "DOC013-C008": {
+      "target_statement": "上传时兼容常见格式，且不受时长或文件大小限制。",
+      "label": "direct",
+      "rationale": "T018 从创作者侧列出上传的技术约束：格式兼容、无长度限制。",
+      "supported_parts": [
+        "格式：T019「making sure their formats are compatible with the system」",
+        "长度：T019「making sure there's no length requirements」"
+      ],
+      "unsupported_parts": [
+        "未列出需要支持的具体格式",
+        "「no length requirements」是期望还是现状描述不明确"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取两项约束",
+        "2. 语气为「需要确保」，属期望",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C009": {
+      "target_statement": "在集中的订阅页看到已关注创作者的最新内容。",
+      "label": "direct",
+      "rationale": "T030 描述订阅机制与集中的订阅页，属对既有能力的正面陈述（维持型）。",
+      "supported_parts": [
+        "集中页：T031「a central area known as the subscriptions tab」",
+        "内容：T031「the latest content from said creators, who they are subscribed to」"
+      ],
+      "unsupported_parts": [
+        "未说明更新提醒方式",
+        "未说明订阅上限"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取订阅页描述",
+        "2. 属走查中的既有能力",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C010": {
+      "target_statement": "播放器提供完整控制：播放/暂停、下一个、音量、进度、字幕、设置、全屏。",
+      "label": "direct",
+      "rationale": "T038 逐一列出播放器控件并说明其行为，属对完备性的确认。",
+      "supported_parts": [
+        "播放/暂停：T039「a play button, which, when clicked, turns into a pause button」",
+        "字幕与设置：T039「I can enable disable captions. I have some settings.」",
+        "全屏：T039「toggle and untoggle the full screen」"
+      ],
+      "unsupported_parts": [
+        "未说明倍速、画质选择、快捷键",
+        "未说明触屏/移动端差异"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取控件枚举",
+        "2. 记录缺失项",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C011": {
+      "target_statement": "播放器控件对新用户可被发现（不因自动隐藏而找不到）。",
+      "label": "direct",
+      "rationale": "T040 指出控件对新用户不友好，具体原因是自动隐藏：「They actually disappear when the video is playing」。",
+      "supported_parts": [
+        "问题：T041「someone unfamiliar... might not be so well known」",
+        "成因：T041「They actually disappear when the video is playing」",
+        "代价：T041「someone would need to realize they need to move their mouse down」"
+      ],
+      "unsupported_parts": [
+        "未提出具体改法",
+        "熟悉用户不受影响，属特定人群问题"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题与成因",
+        "2. 与 C010 的完备性区分（有控件 ≠ 找得到）",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C012": {
+      "target_statement": "自动生成的字幕足够准确，尤其对非英语母语观众可用。",
+      "label": "direct",
+      "rationale": "T040 在回答可访问性时指出自动字幕的准确性不确定，并点名非英语母语观众。",
+      "supported_parts": [
+        "现状：T041「captions can be auto generated」",
+        "疑虑：T041「I'm not sure how accurate they always are」",
+        "目标人群：T041「people who don't speak English as a 1st language」"
+      ],
+      "unsupported_parts": [
+        "「不准确」为其不确定推测，非实测",
+        "未说明是否需支持多语言字幕"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取现状与疑虑",
+        "2. 记录推测性质",
+        "3. → direct"
+      ]
+    },
+    "DOC013-C013": {
+      "target_statement": "提供面向色盲等用户的可访问性显示调整。",
+      "label": "direct",
+      "rationale": "T040 提出色盲用户的显示适配问题，并称「that could be grounds for some work」。",
+      "supported_parts": [
+        "诉求：T041「things like colors can be tweaked for, say. colorblind viewers」",
+        "定性：T041「could be grounds for some work」"
+      ],
+      "unsupported_parts": [
+        "受访者自述不清楚现有能力（I'm also not sure）",
+        "未说明具体调整项（对比度、色板）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求与定性",
+        "2. 记录不确定前提",
+        "3. → direct"
+      ]
+    }
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "792a5c3ba70eeea96a6028b3ae4c1e4f5a0077080cffd993fa9d270d46ec6723",
+    "input_sha256": "0813ce5d6c73761dcb713fa5048a03422ff5131d17bcd56e9e91da8ad662981f"
+  },
+  "judgments": {
+    "DOC012-C001": {
+      "target_statement": "在截止时间前把作业提交到课程平台。",
+      "label": "direct",
+      "rationale": "T027 直接说明提交时点：「I submitted. Like before the due date.」，并给出频率。",
+      "supported_parts": [
+        "提交时点：T028「before the due date」",
+        "频率：T028「Once or twice every week for a class」"
+      ],
+      "unsupported_parts": [
+        "未说明留出的提前量（几小时/几天）",
+        "未说明逾期是否被允许"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取提交时点陈述",
+        "2. 频率作上下文",
+        "3. 无相反证据 → direct"
+      ]
+    },
+    "DOC012-C002": {
+      "target_statement": "提交后立即拿到自动评分，尽快知道结果。",
+      "label": "direct",
+      "rationale": "T031 描述 Gradescope 提交代码后的自动评测：「give me an auto auto auto grading, so I will know my grade immediately」。",
+      "supported_parts": [
+        "自动评分：T032「give me an auto auto auto grading」",
+        "即时性：T032「I will know my grade immediately」"
+      ],
+      "unsupported_parts": [
+        "仅适用于代码类作业",
+        "受访者明确说这不是最终成绩"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取自动评分描述",
+        "2. 记录适用边界与「非最终成绩」限制",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C003": {
+      "target_statement": "拿到能指明改进方向的具体评语，而不只是一个分数。",
+      "label": "direct",
+      "rationale": "T033 说明反馈形式与用途：「in the form of a document with some comments... So I can get some more detail like information, for where I can improve」。",
+      "supported_parts": [
+        "反馈形式：T034「a document with some comments」",
+        "用途：T034「for where I can improve」"
+      ],
+      "unsupported_parts": [
+        "未说明反馈时效要求",
+        "未说明反馈详细程度的底线"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取反馈形式与用途",
+        "2. 用途明确指向改进",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C004": {
+      "target_statement": "看清成绩是怎么构成的：rubric 各分项得分与课程实时预估总评。",
+      "label": "direct",
+      "rationale": "T059 连续描述三项成绩可见性：rubric 分项、单项得分、实时预估总评，并说明其决策用途。",
+      "supported_parts": [
+        "rubric：T060「there will be a rubric for each assignment」",
+        "分项得分：T060「what part of your assignment received better grade like a subgrade」",
+        "预估总评：T060「a real time estimated grade for your previously submitted and graded assignments」"
+      ],
+      "unsupported_parts": [
+        "rubric 仅 Canvas 有，跨平台不一致",
+        "未说明预估总评的算法与更新时间"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 三处同段并列",
+        "2. 均服务于「知道我处在什么位置」",
+        "3. → direct，合并代价转为人工问题"
+      ]
+    },
+    "DOC012-C005": {
+      "target_statement": "批注锚定在作业的对应位置，便于逐处对照修改。",
+      "label": "direct",
+      "rationale": "T061 直接指出痛点：「the feedback we'll be detached from the assignments. So I need to find really hard, like what the comment or feedback is related to which part of my assignment」。",
+      "supported_parts": [
+        "问题：T062「the feedback we'll be detached from the assignments」",
+        "代价：T062「I need to find really hard」",
+        "成因：T062「insert the comment in a globe global part」"
+      ],
+      "unsupported_parts": [
+        "未说明需要锚定到段落还是字符级",
+        "未说明教师侧操作成本如何平衡"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题与代价",
+        "2. 成因由受访者归因于教师不熟悉应用",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C006": {
+      "target_statement": "对认为不合理的扣分就地发起复议，而不必改用邮件。",
+      "label": "direct",
+      "rationale": "T061 说明 Gradescope 可就地提复议，而 Canvas 没有该功能，导致他多数情况放弃申诉。",
+      "supported_parts": [
+        "复议入口：T062「I can submit a recreate request」",
+        "Platform 差异：T062「there's no such feature in canvas」",
+        "实际后果：T062「I let it go」"
+      ],
+      "unsupported_parts": [
+        "「recreate request」为 regrade request 的转写误写",
+        "未说明复议的受理时效与结果反馈"
+      ],
+      "assumptions": [
+        "把「recreate request」理解为 regrade request"
+      ],
+      "reasoning_steps": [
+        "1. 取平台差异陈述",
+        "2. 后果说明需求真实存在",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C007": {
+      "target_statement": "需要联系教师时，能用 Slack 这类即时渠道而不是邮件。",
+      "label": "direct",
+      "rationale": "T063 说明 Slack 频道带来的便利，T061 说明没有时只能用邮件且「not convenient」。",
+      "supported_parts": [
+        "便利渠道：T064「a set up a slack channel. and that will be very convenient」",
+        "现状不足：T062「use email or other form of communication」"
+      ],
+      "unsupported_parts": [
+        "依赖教师个人是否建群，非平台能力",
+        "未说明期望平台内置什么沟通形式"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取便利性判断与现状",
+        "2. 属渠道偏好",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C008": {
+      "target_statement": "在做单调的事（健身、通勤、做饭）时用视频或音乐填充时间。",
+      "label": "direct",
+      "rationale": "T082 直接说明使用场景与目的：「I go to the gym, and I I want to be able to be entertained as I run」，并点出单调性。",
+      "supported_parts": [
+        "场景：T083「I go to the gym」",
+        "目的：T083「be entertained as I run」",
+        "动因：T083「which can be monotonous」"
+      ],
+      "unsupported_parts": [
+        "未说明对内容类型的具体限制（音乐 vs 视频）",
+        "未说明时长需求"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取场景与目的",
+        "2. 动因为单调，属填充型需求",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C009": {
+      "target_statement": "消费可以不按顺序看、能随时跳过、时长较短的视频。",
+      "label": "direct",
+      "rationale": "T114 明确对比并给出偏好：「I'd rather have a bunch of stuff that I can just watch out of order... That's better for my attention. Span and shorter things」。",
+      "supported_parts": [
+        "偏好：T115「watch out of order, or watch in whatever order I want, or skip」",
+        "理由：T115「better for my attention. Span and shorter things」",
+        "对照：T115「I don't really like stories」"
+      ],
+      "unsupported_parts": [
+        "「短」无时长阈值（另见 C011）",
+        "未说明是否需要「不追更」的提醒机制"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取偏好与理由",
+        "2. 与剧情类内容对照",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C010": {
+      "target_statement": "靠推荐流持续发现想看的新内容，不必自己找。",
+      "label": "direct",
+      "rationale": "T114 说明推荐的价值与自己不换平台的原因：「an endless stream of... algorithmically curated videos」「easy for me to find a new thing」，T116 确认这是主要因素。",
+      "supported_parts": [
+        "推荐流：T115「an endless stream of... algorithmically curated videos」",
+        "易发现：T115「easy for me to find a new thing that I want to watch」",
+        "不换平台的原因：T116「That's a big part of it」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的推荐误差",
+        "依赖长期历史数据，新用户不适用"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取推荐价值陈述",
+        "2. T116 确认其权重",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C011": {
+      "target_statement": "按剩余可用时间挑选长度相称的视频。",
+      "label": "direct",
+      "rationale": "T098 描述按剩余时间选片：「If I'm I have a certain amount of time left on the bike. Then I would aim for like filling exactly that time」，并给出 10–30 分钟的经验区间。",
+      "supported_parts": [
+        "按剩余时间：T099「aim for like filling exactly that time」",
+        "经验区间：T099「a 10 to 30. Minute video is like a safe bet」"
+      ],
+      "unsupported_parts": [
+        "区间为个人经验值",
+        "T098 句子在转写中被截断，长视频部分不完整"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取选片规则与区间",
+        "2. 与 C009 的短内容偏好区分（时长匹配 vs 内容形态）",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C012": {
+      "target_statement": "出行前批量下载视频，供路上离线观看。",
+      "label": "direct",
+      "rationale": "T120 明确把下载列为 YouTube 的易用点，T118 说明长途驾驶前会批量下载。",
+      "supported_parts": [
+        "能力：T121「Youtube makes really easy is downloading videos」",
+        "场景：T119「as I drive」"
+      ],
+      "unsupported_parts": [
+        "未说明下载数量与清晰度要求",
+        "依赖付费会员"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取能力陈述与场景",
+        "2. 二者互补",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C013": {
+      "target_statement": "按自己的兴趣划分方式组织内容分类，而不是平台给的类目。",
+      "label": "direct",
+      "rationale": "T126 指出平台分类与自己的划分不一致，并说明会如何重新划分。",
+      "supported_parts": [
+        "不一致：T127「they don't exactly square up with what, how I would subdivide my interests」",
+        "期望：T127「I would divide the content like differently」"
+      ],
+      "unsupported_parts": [
+        "未说明希望自定义标签还是多级目录",
+        "举例为个人兴趣，覆盖面有限"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取不一致陈述与期望",
+        "2. 属组织方式诉求",
+        "3. → direct"
+      ]
+    },
+    "DOC012-C014": {
+      "target_statement": "提升评论区质量（例如发言前设基本门槛）。",
+      "label": "direct",
+      "rationale": "T110 以「my biggest wish for Youtube」开头，明确要求提升评论区质量并给出具体设想。",
+      "supported_parts": [
+        "愿望：T111「my biggest wish for Youtube is that they had, like smarter users in the comments」",
+        "设想：T111「basic test before people were allowed to comment」"
+      ],
+      "unsupported_parts": [
+        "语气戏谑（IQ 测试、酒精测试），严肃程度存疑",
+        "受访者自称很少发评论，是旁观者视角"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取愿望句",
+        "2. 记录语气与视角限制",
+        "3. → direct，并转为人工问题"
+      ]
+    }
+  }
+}

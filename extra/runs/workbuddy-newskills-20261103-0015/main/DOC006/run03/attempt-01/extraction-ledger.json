@@ -1,0 +1,857 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC006",
+  "input_binding": {
+    "source_input_sha256": "4d8b2cdf50aff3c4639ecaff3064f69728b8d1b5b25832a1fa12a4c254469214",
+    "source_sha256": "b0259e08275f2d410c56604388ceeed755cf6b25e829eeb27a11b1b07f5bc460",
+    "windows_sha256": "8d178b3fc3d8cf484e493174bd26e0ba5e525ef9305d2f01e9045932e1b1883c",
+    "candidates_sha256": "c7492db33e4d9a6d7a7b1df04185edb695ed14510d734fa871565766e9955e27",
+    "extraction_sha256": "4500c536238f7483af3d1118753e924b8791019b31364f33457a3f03be9d5429"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "unknown",
+    "temperature": "unknown",
+    "budget": "1 initial pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 2,
+    "stop_reason": "完成一次逐窗基础提取（22 个窗口）与一次全篇校正加一次定向补查；补查仅新增一条含糊表述候选（C036，uncertain），无新的有据目标，按预算停止。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC006:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0009",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0010",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0011",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0012",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0013",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0014",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0015",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0016",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0017",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0018",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0019",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0020",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0021",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0022",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "pass_id": "P2",
+        "kind": "focused",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC006:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0003",
+            "status": "skipped",
+            "reason": "定向补查只针对 T003 含糊句与 T011/T013 地区检索的条件继承，其余窗口已在 P1 处理"
+          },
+          {
+            "window_id": "DOC006:W0004",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0005",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC006:W0008",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0009",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0010",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0011",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0012",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0013",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0014",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0015",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0016",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0017",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0018",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0019",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0020",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0021",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          },
+          {
+            "window_id": "DOC006:W0022",
+            "status": "skipped",
+            "reason": "定向补查范围不含该窗口"
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "通读 46 轮后回查：T002→T003 的问答目的关系、T014→T015 的确认（“Yeah yeah yeah” 承接“增加搜索限制”）、T017 对地区检索缺口的重申、T023 与 T025/T027 的娱乐内容取舍、T031→T037 对数据泄露的连续表态、T039 与 T041 的对立立场、T043 的账号治理要求；并核对代词所指（they/this feature 指应用本身）与条件继承。",
+    "source_ids": [
+      "DOC006:T000",
+      "DOC006:T001",
+      "DOC006:T002",
+      "DOC006:T003",
+      "DOC006:T004",
+      "DOC006:T005",
+      "DOC006:T006",
+      "DOC006:T007",
+      "DOC006:T008",
+      "DOC006:T009",
+      "DOC006:T010",
+      "DOC006:T011",
+      "DOC006:T012",
+      "DOC006:T013",
+      "DOC006:T014",
+      "DOC006:T015",
+      "DOC006:T016",
+      "DOC006:T017",
+      "DOC006:T018",
+      "DOC006:T019",
+      "DOC006:T020",
+      "DOC006:T021",
+      "DOC006:T022",
+      "DOC006:T023",
+      "DOC006:T024",
+      "DOC006:T025",
+      "DOC006:T026",
+      "DOC006:T027",
+      "DOC006:T028",
+      "DOC006:T029",
+      "DOC006:T030",
+      "DOC006:T031",
+      "DOC006:T032",
+      "DOC006:T033",
+      "DOC006:T034",
+      "DOC006:T035",
+      "DOC006:T036",
+      "DOC006:T037",
+      "DOC006:T038",
+      "DOC006:T039",
+      "DOC006:T040",
+      "DOC006:T041",
+      "DOC006:T042",
+      "DOC006:T043",
+      "DOC006:T044",
+      "DOC006:T045"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "每日新闻浏览是明确的自述用途，直接构成浏览目标。"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "“sometimes search job posting information”是独立用途，构成求职搜索目标。"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "滚动获取日常信息与新闻浏览是同一信息获取目标的不同路径，合并后路径写入 G001 的 context。"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "第一人称否定意愿，独立成为避免型目标，举例保留在 statement 中。"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "推荐算法加“necessary feature”构成维持型目标的主依据。"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "记录点赞/评论是推荐的输入机制，非独立结果，合并入 G008 并由 context 承接。"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "属受访者自述的现有操作路径（主页滚动），被问“你采取什么动作”而非提出要求；其结果由 G001 承接，不另建目标。"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "每日新闻排行是现有入口与操作步骤，无独立意图或验收要求。"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "搜索栏可用属现状能力报告，本身不含改善意图；对搜索的要求由 G004 承接。"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对“滚动是否算功能”的自我疑问，非目标。"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "无法按地区取结果是明确问题，直接支撑地区检索目标。"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "与 C011 同一愿望的建设性表述（按钮/功能），合并；实现形态作为未定方式记入 context。"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "线下中介是应用之外的替代渠道，非产品目标；仅说明平台是免费途径。"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "对采访者“增加搜索限制/条件”的确认，是 C011/C012 的重复强调而非新动作。"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "同一推荐能力在岗位场景下的正面效果，作为 G008 的补充依据。"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "对地区收窄缺失后果的重申（筛掉有用房源），与 C011 同一缺口。"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "想看招聘流程人数并说明目的，独立信息需求。"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "想看近期面试者反馈以判断门槛，独立信息需求。"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "“判断招聘规模”是 C017 的目的从句，已写入 G005 的 statement，不另建目标。"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对求职体验的正面评价，无改善或维持要求。"
+    },
+    {
+      "candidate_id": "C021",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对求职功能满意的表述，属现状评价。"
+    },
+    {
+      "candidate_id": "C022",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "分离娱乐与有用内容并可按需过滤，是独立功能目标，条件（不想看时）保留。"
+    },
+    {
+      "candidate_id": "C023",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G011"
+      ],
+      "reason": "信息浏览之外的娱乐用途，构成独立使用目的（maybe 语气保留）。"
+    },
+    {
+      "candidate_id": "C024",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "仅描述现有呈现格式（图文/视频），未表达偏好或要求。"
+    },
+    {
+      "candidate_id": "C025",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "对推荐机制作用的完整描述，与 C005 同一目标，合并。"
+    },
+    {
+      "candidate_id": "C026",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "“不必主动搜索即可持续收到信息”是同一推荐目标的结果，非独立目标。"
+    },
+    {
+      "candidate_id": "C027",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "描述已发生泄露与无可奈何的接受，无保护或改善要求。"
+    },
+    {
+      "candidate_id": "C028",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "把泄露视为不可避免，仅保留“损害过大才诉讼”的条件性个人反应，不构成产品目标。"
+    },
+    {
+      "candidate_id": "C029",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "现状陈述（尚未被困扰），无意图。"
+    },
+    {
+      "candidate_id": "C030",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "明确表示该问题不影响体验，无要求。"
+    },
+    {
+      "candidate_id": "C031",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "明确不在意，属相反于隐私目标的态度证据。"
+    },
+    {
+      "candidate_id": "C032",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "对公司应如何做的直接回答，保留为弱建议目标。"
+    },
+    {
+      "candidate_id": "C033",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "否认应用内隐私保护手段可行，属相反证据，不建目标。"
+    },
+    {
+      "candidate_id": "C034",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "用 should 明确要求治理 matrix 营销账号，独立目标。"
+    },
+    {
+      "candidate_id": "C035",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "淹没信息流、干扰体验是 C034 的理由，合并入 G010 的 context。"
+    },
+    {
+      "candidate_id": "C036",
+      "disposition": "uncertain",
+      "final_goal_ids": [],
+      "reason": "T003 末句“the 1st information”转写含糊，可能指第一手信息或漏掉最新信息，无法确定意图，不建目标。"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T001",
+          "quote": "So I daily use social network web application for like news browsing.",
+          "role": "basis",
+          "start_char": 383,
+          "end_char": 452
+        }
+      ],
+      "candidate_ids": [
+        "C001"
+      ],
+      "final_goal_ids": [
+        "G001"
+      ],
+      "outcome": "represented",
+      "reason": "每日新闻浏览原句直接对应 G001。"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T003",
+          "quote": "I do not want to miss out any important information like if there are any great events going on internationally.",
+          "role": "basis",
+          "start_char": 740,
+          "end_char": 852
+        }
+      ],
+      "candidate_ids": [
+        "C004"
+      ],
+      "final_goal_ids": [
+        "G002"
+      ],
+      "outcome": "represented",
+      "reason": "否定意愿与举例均保留在 G002。"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T007",
+          "quote": "So for for the 1st one is When I enter the main page of social application. They would just show a bunch of postings to me, and I can just scroll up and down to to try to locate my intended postings.",
+          "role": "basis",
+          "start_char": 1990,
+          "end_char": 2189
+        }
+      ],
+      "candidate_ids": [
+        "C007",
+        "C008"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "回查确认这是被问“你采取什么动作”时的现有路径描述，无独立要求；浏览结果已在 G001。"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T013",
+          "quote": "it would be better for for me if there is a specific specific button, or or some feature in the application that I could search in a specific region like the city.",
+          "role": "basis",
+          "start_char": 3889,
+          "end_char": 4052
+        }
+      ],
+      "candidate_ids": [
+        "C011",
+        "C012"
+      ],
+      "final_goal_ids": [
+        "G004"
+      ],
+      "outcome": "represented",
+      "reason": "地区检索愿望与具体形态在 G004 及 context 中保留。"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T015",
+          "quote": "Yeah, yeah, yeah.",
+          "role": "basis",
+          "start_char": 4410,
+          "end_char": 4427
+        }
+      ],
+      "candidate_ids": [
+        "C014"
+      ],
+      "final_goal_ids": [
+        "G004"
+      ],
+      "outcome": "represented",
+      "reason": "确认采访者“增加搜索限制/条件”的转述，作为 G004 的确认依据。"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T019",
+          "quote": "I might want to see, like. how how many people are already entering the hiring process, so that I can see if this company is on a great number of hiring or not,",
+          "role": "basis",
+          "start_char": 5532,
+          "end_char": 5692
+        }
+      ],
+      "candidate_ids": [
+        "C017",
+        "C019"
+      ],
+      "final_goal_ids": [
+        "G005"
+      ],
+      "outcome": "represented",
+      "reason": "信息项与目的同句，G005 一并承接，未重复建点。"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T019",
+          "quote": "I'll get feedback from the interviewees who just recently has taken the interviews from the company, and I can get feedback from them to see if this company is, does it have a high benchmark to to pass the interview or not?",
+          "role": "basis",
+          "start_char": 5709,
+          "end_char": 5932
+        }
+      ],
+      "candidate_ids": [
+        "C018"
+      ],
+      "final_goal_ids": [
+        "G006"
+      ],
+      "outcome": "represented",
+      "reason": "面试者反馈与判断门槛的目的均在 G006。"
+    },
+    {
+      "check_id": "S8",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T023",
+          "quote": "when sometimes I don't wanna see those entertainment contents, and they can filter them up for me.",
+          "role": "basis",
+          "start_char": 6804,
+          "end_char": 6902
+        }
+      ],
+      "candidate_ids": [
+        "C022"
+      ],
+      "final_goal_ids": [
+        "G007"
+      ],
+      "outcome": "represented",
+      "reason": "过滤的条件“不想看时”写入 G007，未被强化为全局过滤。"
+    },
+    {
+      "check_id": "S9",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T027",
+          "quote": "it will be in a form of photos and texts",
+          "role": "basis",
+          "start_char": 7578,
+          "end_char": 7618
+        }
+      ],
+      "candidate_ids": [
+        "C024"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "仅回答“什么格式”，无偏好或要求，排除有据。"
+    },
+    {
+      "check_id": "S10",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T031",
+          "quote": "I think I just got used to it.",
+          "role": "basis",
+          "start_char": 8979,
+          "end_char": 9009
+        }
+      ],
+      "candidate_ids": [
+        "C027",
+        "C028",
+        "C029",
+        "C030",
+        "C031"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "连续多轮均为接受、习惯与不在意，明确无保护诉求；与 C032 的弱建议区分处理。"
+    },
+    {
+      "check_id": "S11",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T039",
+          "quote": "I think they might just They might just improve their management to ensure that they won't sell data to other parties.",
+          "role": "basis",
+          "start_char": 10371,
+          "end_char": 10489
+        }
+      ],
+      "candidate_ids": [
+        "C032"
+      ],
+      "final_goal_ids": [
+        "G009"
+      ],
+      "outcome": "represented",
+      "reason": "弱建议被保留为 G009，强度写入 context。"
+    },
+    {
+      "check_id": "S12",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T041",
+          "quote": "I think it's hard to tell, because when when you are using applications, it just they they will read your data for for better user experience.",
+          "role": "basis",
+          "start_char": 10695,
+          "end_char": 10837
+        }
+      ],
+      "candidate_ids": [
+        "C033"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "相反证据：受访者认为应用内隐私功能难以设想，排除应用内隐私目标有据。"
+    },
+    {
+      "check_id": "S13",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T043",
+          "quote": "I think that the social application platforms should strengthen their efforts to handle with matrix accounts.",
+          "role": "basis",
+          "start_char": 11259,
+          "end_char": 11368
+        }
+      ],
+      "candidate_ids": [
+        "C034",
+        "C035"
+      ],
+      "final_goal_ids": [
+        "G010"
+      ],
+      "outcome": "represented",
+      "reason": "should 要求与理由均在 G010 承接。"
+    },
+    {
+      "check_id": "S14",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC006:T003",
+          "quote": "I can't get the 1st information from social web applications.",
+          "role": "basis",
+          "start_char": 957,
+          "end_char": 1018
+        }
+      ],
+      "candidate_ids": [
+        "C036"
+      ],
+      "final_goal_ids": [],
+      "outcome": "uncertain",
+      "reason": "转写含糊，无法判断是“第一手信息”还是“漏掉信息”，保留待确认。"
+    }
+  ],
+  "limitations": [
+    "原文为自动转写，存在识别错误与重复词（如 “Cisco”、“matrix accounts”、“the 1st information”），相关语义按上下文理解。",
+    "仅一次访谈、无回访确认，弱建议（might just）与偏好（would be better、maybe）的强度按原样保留，未升级为强制。",
+    "未获得产品文档，无法核对受访者所述现有能力的实际情况。"
+  ]
+}

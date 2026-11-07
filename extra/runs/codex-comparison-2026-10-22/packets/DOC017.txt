@@ -1,0 +1,103 @@
+# DOC017
+## LOCAL
+G001 只收到与自身技能匹配的岗位（软件工程、机器学习等），不被无关岗位与陌生人打扰。 | context: 可按关键词自定义搜索; 曾经因推送不准而错过岗位
+  E0001 DOC017:S004 job roles specific to the domain such as software engineering or machine learning roles
+  E0002 DOC017:S004 job updates based on whatever is my skill set
+  E0003 DOC017:S070 getting random job notifications. Random people reaching me out in Linkedin
+G002 推送频率跟随求职状态：找工作时即时推送，不急时每周一次即可。 | context: 背景：市场冷淡，每天只有一两条新岗位
+  E0004 DOC017:S006 it would be great if I receive at the instant
+  E0005 DOC017:S006 if I'm not looking actively, then it's okay to receive once in a week
+G003 通过邮件接收岗位更新，邮件内信息精简且可直接投递。 | context: 不排斥站内通知，但不愿把通知栏塞满
+  E0006 DOC017:S008 I would generally prefer getting via emails
+  E0007 DOC017:S010 should be having a direct apply button in the email itself
+  E0008 DOC017:S010 so that I don't need to waste time then navigating to the app, and then again, going to the company's portal
+G004 按角色匹配度、薪资、地点、公司声誉的顺序权衡是否投递。 | context: 自述为明确的优先级顺序
+  E0009 DOC017:S020 one is the role like, I'll see if the role is really interesting. And I'm suitable for that role second is the payment. And then comes the location. And of course the company reputation
+G005 岗位页给出现任员工评价、团队在做的具体工作与技术栈，并以列表/卡片等结构呈现。 | context: 现状：LinkedIn 把大量文字堆在一起，需上下滚动才找到技术栈
+  E0010 DOC017:S022 I would consider the reviews from the current employees. What work they are specifically working on, what text they are using
+  E0011 DOC017:S024 formatted in terms of list cars and tables that would be really helpful for me to navigate
+G006 给出岗位要求与个人技能的匹配度百分比，作为投递依据。 | context: 现状：借助第三方插件自行比对; LinkedIn 已有 AI 提示「你很适合」
+  E0012 DOC017:S034 it can also give some percentage out of it
+  E0013 DOC017:S034 I kind of use some tool out Plugin. I see if I can actually match those skill sets with me
+G007 投递时自动带出已有资料，不必重填一遍。 | context: 认可少量针对性的定制，但反对整体重填
+  E0014 DOC017:S074 it's a hindrance for me to again fill all those details
+  E0015 DOC017:S074 I don't want to have a lot of manual efforts in filling up just a job application
+G008 在求职平台内直接完成投递，不必跳到公司官网重填。 | context: 现状：LinkedIn 投递仍跳转公司门户
+  E0016 DOC017:S068 that would be really great to have integrated
+  E0017 DOC017:S062 there is no point in having Linkedin. In the 1st place, when I have to like navigate to other place
+G009 在门户内收藏并跟踪感兴趣的岗位，不必另开文档记录。 | context: 现状：把 job id 记在 Notion 之类的文档里，周末统一处理
+  E0018 DOC017:S078 It'd be great to have such features in the job portal itself
+  E0019 DOC017:S076 have I just note down what the job id or whatever in a separate Doc
+G010 只看到仍在招聘的岗位，不出现半年或一年前的过期信息。 | context: 过期岗位会直接放弃投递
+  E0020 DOC017:S072 I don't want to apply for jobs which are like one year back, or even 6 months back
+  E0021 DOC017:S072 not having a relevant or updated job list
+G011 能看到每次投递的当前状态，并得到可用于改进的反馈。 | context: 按 1–10 评分时给 10 分; 抱怨多数平台不提供任何反馈
+  E0022 DOC017:S106 I want to know what is my status of my application
+  E0023 DOC017:S106 if there is any feedback that would be really great for me to improve in my further applications
+  E0024 DOC017:S108 They don't like provide proper feedbacks
+G012 投递记录对他人不可见，也不同意向公开自己投了哪些岗位。 | context: 理由：竞争压力下不想被同侪看到
+  E0025 DOC017:S084 Expose my applications
+  E0026 DOC017:S084 I don't want people to know for what job roles I'm applying for
+G013 AI 用于识别与筛选岗位，但不自动代写申请材料，需本人确认。 | context: 对 AI 写作持保留：不可靠，须本人核实
+  E0027 DOC017:S096 it shouldn't be automatic
+  E0028 DOC017:S094 when it comes for writing applications, I think I kind of still feel that Eas are uncertain
+  E0029 DOC017:S096 if it is like verified by us, then it's good
+## PAPER summarized goals
+g0 Provide job updates specific to the user's domain and skill set.
+g1 Ensure job updates are timely and relevant to the user's criteria.
+g2 Receive job posting updates instantly or periodically based on user preferences.
+g3 Receive simplified job updates via mobile notifications.
+g4 Simplify the process of navigating job postings.
+g5 Allow users to save and track job postings over time.
+g6 Enable easy comparison of job postings from different sources.
+g7 Receive professional emails with necessary and concise job details.
+g8 Include a quick apply button for job applications in emails and the system.
+g9 Provide accurate and relevant notifications that align with user preferences without being overly complicated or cluttered.
+g10 Ensure the persistence of user-configured details without requiring changes.
+g11 Verify AI-generated content to ensure reliability through manual processes.
+g12 Allow users to customize job search criteria based on roles, companies, location, experience, and skill sets.
+g13 Allow users to customize keywords for job search.
+g14 Allow users to customize personal details for specific job roles.
+g15 Match user's skill sets with job listing requirements.
+g16 Identify and define necessary skill sets for job listings.
+g17 Provide a percentage match of user's skills against job requirements.
+g18 Recommend job postings based on user's skill set match.
+g19 Identify user's interests to match with roles and skill sets.
+g20 Facilitate users to apply for jobs directly through the application.
+g21 Reduce waiting time in the job application process.
+g22 Enable quick job application processes.
+g23 Streamline the job application process to minimize navigation and manual effort.
+g24 Minimize repetitive entry of information already provided.
+g25 Facilitate connection with a person for job referrals.
+g26 Evaluate the interest and suitability for a job role.
+g27 Consider payment details when considering job roles.
+g28 Assess the job location's suitability.
+g29 Consider eligibility based on work experience.
+g30 Provide role matches based on past experiences and education.
+g31 Identify relevant job opportunities.
+g32 Provide visibility into the status of job applications.
+g33 Assess the company's reputation.
+g34 Consider the company's reputation when prioritizing job opportunities.
+g35 Assess personal contribution to the team.
+g36 Assess potential contributions to the team.
+g37 Assess potential contributions to the company.
+g38 Review feedback from employees.
+g39 Provide feedback on job applications to help users improve future submissions.
+g40 Identify the specific work being done by employees.
+g41 Identify the technology being used by employees.
+g42 Differentiate job descriptions and responsibilities.
+g43 Use AI to identify different jobs.
+g44 Present information in a format that is easy to navigate.
+g45 Allow users to detail their work experience and projects in their profile.
+g46 Protect the confidentiality of job application details.
+g47 Offer customization options for user profiles to accurately display work experience and education.
+g48 Provide users with relevant job recommendations.
+g49 Allow users to track the status of their job applications.
+g50 Avoid displaying irrelevant job listings to users.
+g51 Allow users to blacklist or mark job postings as uninteresting.
+g52 Filter outdated job listings older than 6 months.
+g53 Integrate an in-page view of the job portal.
+g54 Automatically transfer user details from the job portal to other platforms.
+g55 Organize job postings with advanced structuring features.
+g56 Prevent unauthorized access to user data from external entities.
+g57 Ensure only authorized entities within the platform have access to user data.

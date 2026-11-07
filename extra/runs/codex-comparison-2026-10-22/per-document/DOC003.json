@@ -1,0 +1,1413 @@
+{
+  "document_id": "DOC003",
+  "review_status": "first_pass_complete",
+  "local_goals": [
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G001",
+      "local_statement": "拿到当前可找到的最优票价（价格合理，且是认真比价后的结果）。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自述为主要目标之一",
+        "价格判断依赖多年订票经验，无客观阈值",
+        "比价会持续多次、跨数天进行"
+      ],
+      "paper_ids": [
+        "g1",
+        "g9",
+        "g19",
+        "g23",
+        "g70",
+        "g77"
+      ],
+      "paper_statements": [
+        "Book itineraries at the best price.",
+        "Ensure affordability for users with budget constraints.",
+        "Ensure competitive and fair flight pricing.",
+        "Ensure users secure good deals when booking flights.",
+        "Minimize travel costs.",
+        "Determine and display the cheapest option among available combinations."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "本地集中表达认真比价后的好价格；论文拆分价格、可负担性、最便宜等不同强度，不能全部严格等价。",
+      "evidence": [
+        {
+          "evidence_id": "E0001",
+          "quote": "But my primary focus is to like get a really good deal when I'm actually booking my flights. So I keep on checking at regular intervals, just to make sure. Hey, am I getting a good deal?",
+          "source_turn_ids": [
+            "T025"
+          ],
+          "start_char": 6098,
+          "end_char": 6284
+        },
+        {
+          "evidence_id": "E0002",
+          "quote": "I would do that in terms of finding a good itinerary and finding a good price that works for me.",
+          "source_turn_ids": [
+            "T115"
+          ],
+          "start_char": 41817,
+          "end_char": 41913
+        },
+        {
+          "evidence_id": "E0003",
+          "quote": "I check like dozens of different websites to just make sure I'm having the best deal possible.",
+          "source_turn_ids": [
+            "T025"
+          ],
+          "start_char": 6285,
+          "end_char": 6379
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G002",
+      "local_statement": "拿到行程本身合适（时间与衔接可行）的机票，而不只是便宜。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自述「best results」为物流/行程、价格与灵活性的组合，前两者为主",
+        "行程是否合适取决于当时的个人处境，无法给出客观标准"
+      ],
+      "paper_ids": [
+        "g0",
+        "g2",
+        "g3",
+        "g15",
+        "g17",
+        "g20",
+        "g48",
+        "g50",
+        "g64",
+        "g105"
+      ],
+      "paper_statements": [
+        "Plan itineraries.",
+        "Research and find flexible itinerary options.",
+        "Provide itinerary options accommodating situational needs.",
+        "Select flights based on pricing, logistics, and user-specified criteria.",
+        "Show flight options that balance price and duration efficiently.",
+        "Provide information necessary for deciding the suitability of a flight.",
+        "Select the optimal booking provider for completing a booking by combining logistics, price, and flexibility.",
+        "Support users in planning travel based on situational needs.",
+        "Provide and compare different flight options and itineraries based on specified inputs.",
+        "Allow users to research and compare different itineraries."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "行程适合及情境性有原句；论文混合广义计划、灵活性、物流与方案选择。",
+      "evidence": [
+        {
+          "evidence_id": "E0004",
+          "quote": "Best results for me is a combination of the logistics in terms of the itinerary that I want the price and the flexibility.",
+          "source_turn_ids": [
+            "T107"
+          ],
+          "start_char": 39706,
+          "end_char": 39828
+        },
+        {
+          "evidence_id": "E0005",
+          "quote": "It should give me a good itinerary in terms of times, and it should match my situations.",
+          "source_turn_ids": [
+            "T129"
+          ],
+          "start_char": 46866,
+          "end_char": 46954
+        },
+        {
+          "evidence_id": "E0006",
+          "quote": "it is extremely situational, and I cannot give you like a concrete or objective criteria for that",
+          "source_turn_ids": [
+            "T109"
+          ],
+          "start_char": 40464,
+          "end_char": 40561
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G003",
+      "local_statement": "中转停留时间不低于最短衔接时间（MCT）的 1.5 倍。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "MCT 为 IATA 定义的最短衔接时间（含行李转运与最远登机口移动）",
+        "一般取 1.5× 或 2× 作为自设缓冲",
+        "除非有签证限制，否则不介意中转次数本身"
+      ],
+      "paper_ids": [
+        "g28"
+      ],
+      "paper_statements": [
+        "Ensure stopover time is at least 1.5 times the minimum connection time to account for delays."
+      ],
+      "correspondence": "equivalent",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "1.5倍 MCT 与签证例外在原文及上下文保留。",
+      "evidence": [
+        {
+          "evidence_id": "E0007",
+          "quote": "Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport.",
+          "source_turn_ids": [
+            "T123"
+          ],
+          "start_char": 43159,
+          "end_char": 43289
+        },
+        {
+          "evidence_id": "E0008",
+          "quote": "I generally tend to at least go for 1.5 x or 2 x of that for a stopover.",
+          "source_turn_ids": [
+            "T123"
+          ],
+          "start_char": 43868,
+          "end_char": 43940
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G004",
+      "local_statement": "航班起降时间能与后续接驳交通、以及要会面对象的日程衔接，避免长时间空等。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "典型场景：落地后需转乘火车去另一城市",
+        "判断标准包含是否需要在城市里空等约 20 小时"
+      ],
+      "paper_ids": [
+        "g52",
+        "g53",
+        "g61",
+        "g62",
+        "g65"
+      ],
+      "paper_statements": [
+        "Ensure transportation schedules align with other planned modes of transport.",
+        "Ensure transportation schedules align with the schedules of people being met.",
+        "Plan travel to ensure timely connections between flights and other modes of transport.",
+        "Provide options that align with logistical needs, such as flights landing earlier to catch subsequent transportation.",
+        "Check compatibility of itineraries with other schedules, such as transport modes and people visited."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "本地整合交通与会面安排衔接，论文按对象和时间拆分。",
+      "evidence": [
+        {
+          "evidence_id": "E0009",
+          "quote": "How does that connect with other modes of transport? So let's say I'm flying into a city, but then I have to travel to a different city by like a train",
+          "source_turn_ids": [
+            "T031"
+          ],
+          "start_char": 8728,
+          "end_char": 8879
+        },
+        {
+          "evidence_id": "E0010",
+          "quote": "I try to plan out my travel, such that things fall into place, and I don't end up having to stay in a city for like 20Â h doing nothing.",
+          "source_turn_ids": [
+            "T031"
+          ],
+          "start_char": 8957,
+          "end_char": 9093
+        },
+        {
+          "evidence_id": "E0011",
+          "quote": "is it matching up with the schedules of the other modes of transport I'm planning to.",
+          "source_turn_ids": [
+            "T119"
+          ],
+          "start_char": 42557,
+          "end_char": 42642
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G005",
+      "local_statement": "避开耗时过长（40–60 小时）与红眼时段的航班，保证行程时长与睡眠。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "国际航线的「最便宜」列表常被 40–60 小时行程占满",
+        "对红眼航班不完全排斥，但更希望不牺牲夜间睡眠"
+      ],
+      "paper_ids": [
+        "g33",
+        "g55"
+      ],
+      "paper_statements": [
+        "Ensure selection of flights that depart at convenient times to avoid red-eye flights.",
+        "Avoid scheduling transportation during times that interfere with sleep."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported_with_scope_note",
+      "rationale": "本地同时含总时长与红眼偏好；“避开”可能强于不介意红眼的弱偏好，context 保留例外。",
+      "evidence": [
+        {
+          "evidence_id": "E0012",
+          "quote": "the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in.",
+          "source_turn_ids": [
+            "T073"
+          ],
+          "start_char": 23576,
+          "end_char": 23699
+        },
+        {
+          "evidence_id": "E0013",
+          "quote": "I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "source_turn_ids": [
+            "T119"
+          ],
+          "start_char": 42839,
+          "end_char": 42910
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G006",
+      "local_statement": "对同一行程比较多个订票供应商的最终价格与可用折扣，再决定在哪下单。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "比较项：价格、评分、折扣码、最终总价",
+        "价格随时变动，折扣并非固定"
+      ],
+      "paper_ids": [
+        "g5",
+        "g7",
+        "g13",
+        "g68",
+        "g106"
+      ],
+      "paper_statements": [
+        "Compare prices and discounts from different providers to ensure the best deal.",
+        "Research directly from providers for potential discounts.",
+        "Enable users to compare flight deals across multiple sources.",
+        "Facilitate price comparison by visiting provider pages with preloaded details.",
+        "Enable users to find the best price by comparing various booking options."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "跨供应商比较最终价格和折扣，论文若干表述缺供应商或最终总价条件。",
+      "evidence": [
+        {
+          "evidence_id": "E0014",
+          "quote": "I look at the price. I take a look at the rating, and I often visit multiple providers from this page.",
+          "source_turn_ids": [
+            "T077"
+          ],
+          "start_char": 26073,
+          "end_char": 26175
+        },
+        {
+          "evidence_id": "E0015",
+          "quote": "you can compare prices. Sometimes prices increase, though that's pretty rare, and you can compare discounts on different providers. The final costs on different providers.",
+          "source_turn_ids": [
+            "T077"
+          ],
+          "start_char": 26319,
+          "end_char": 26490
+        },
+        {
+          "evidence_id": "E0016",
+          "quote": "they allow me to find the best price for that itinerary. comparing all of the different booking options.",
+          "source_turn_ids": [
+            "T103"
+          ],
+          "start_char": 38329,
+          "end_char": 38433
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G007",
+      "local_statement": "一次并行比较大量出发地/目的地/日期/舱位组合，而不是逐个查询。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自估组合规模约 11,760（20 个出发机场 × 49 个日期组合 × 2 个舱位）",
+        "还需对里程票单独重复一轮",
+        "现实中没有网站允许同时跑这么多查询"
+      ],
+      "paper_ids": [
+        "g14",
+        "g36",
+        "g37",
+        "g38",
+        "g39",
+        "g75",
+        "g76",
+        "g95",
+        "g96",
+        "g97",
+        "g98",
+        "g99",
+        "g100",
+        "g101",
+        "g102"
+      ],
+      "paper_statements": [
+        "Allow flexible search for flight deals over different timeframes.",
+        "Find suitable flights based on city pairs and country pairs.",
+        "Allow users to perform up to 500 simultaneous searches for travel options.",
+        "Facilitate searches for travel segments based on points.",
+        "Display optimal combinations of cities, dates, and times for travel.",
+        "Enable users to discover and explore different options and combinations.",
+        "Automatically provide users with all possible routes and combinations.",
+        "Enable users to change the origin to multiple airports or locations including cities and countries.",
+        "Allow users to search for flights by selecting a destination country or region with multiple airports.",
+        "Enable users to search for flights from a specified country to a specified set of airports in another country.",
+        "Allow selection of specific departure and arrival airports or cities for flights.",
+        "Enable users to select specific departure and return dates.",
+        "Allow users to search for travel options within a date range.",
+        "Allow users to choose the class of service.",
+        "Provide options to search for different classes of service."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported_with_scope_note",
+      "rationale": "本地重点是批量并行组合查询，论文很多节点只支持单一参数输入；不将它们视为等价覆盖。组合数是受访者估计，不保证其算术正确。",
+      "evidence": [
+        {
+          "evidence_id": "E0017",
+          "quote": "So I'd like to search for all possible airports, let's say, from the Us. All, the top 20 most popular airports from the Us. To the top 5 or 6 most popular airports in India.",
+          "source_turn_ids": [
+            "T099"
+          ],
+          "start_char": 35630,
+          "end_char": 35803
+        },
+        {
+          "evidence_id": "E0018",
+          "quote": "So that works out to be 11,760 different combinations of flights, different combinations of dates and itineraries",
+          "source_turn_ids": [
+            "T099"
+          ],
+          "start_char": 36333,
+          "end_char": 36446
+        },
+        {
+          "evidence_id": "E0019",
+          "quote": "you want to do around 500 searches at the same time, because you're doing combinations of city pairs, country pairs, dates. travelers, different classes",
+          "source_turn_ids": [
+            "T095"
+          ],
+          "start_char": 34294,
+          "end_char": 34446
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G008",
+      "local_statement": "提前约 1–2 个月订票，以换取更好的价格。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "理想为提前两个月以上；实际常拖到出发前 1–2 周，价格明显更高",
+        "国际长途线曾提前约两个月订"
+      ],
+      "paper_ids": [
+        "g21"
+      ],
+      "paper_statements": [
+        "Book flights in advance to obtain a better price."
+      ],
+      "correspondence": "equivalent",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "保留提前一至两个月争取价格的偏好。",
+      "evidence": [
+        {
+          "evidence_id": "E0020",
+          "quote": "Ideally, I like to do it at least a couple of months before.",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 2616,
+          "end_char": 2676
+        },
+        {
+          "evidence_id": "E0021",
+          "quote": "Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal.",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 2910,
+          "end_char": 3015
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G009",
+      "local_statement": "搜索与比价时保持匿名、不登录，避免个人数据被共享或被追踪抬价。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "手段：不登录、无痕窗口、屏蔽 cookie",
+        "两个动机：避免按搜索行为抬价；不愿把数据交给不信任的第三方",
+        "例外：用里程/积分订票必须登录航司账户"
+      ],
+      "paper_ids": [
+        "g83",
+        "g84",
+        "g85"
+      ],
+      "paper_statements": [
+        "Allow users to browse anonymously and prevent user tracking to protect privacy.",
+        "Do not share user data with third parties.",
+        "Provide privacy protection options to users."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "匿名与不共享个人数据的组合，用户的抬价/所有权看法按其观点记录，不视为已验证平台事实。",
+      "evidence": [
+        {
+          "evidence_id": "E0022",
+          "quote": "I generally am very privacy conscious. So I avoid logging in, and I try to keep myself as anonymized as possible.",
+          "source_turn_ids": [
+            "T053"
+          ],
+          "start_char": 15167,
+          "end_char": 15280
+        },
+        {
+          "evidence_id": "E0023",
+          "quote": "if you end up booking flights or searching for specific flights pretty often they might increase the flight prices for you.",
+          "source_turn_ids": [
+            "T053"
+          ],
+          "start_char": 15340,
+          "end_char": 15463
+        },
+        {
+          "evidence_id": "E0024",
+          "quote": "considering the way I specifically use skyscanner, I would probably never log in.",
+          "source_turn_ids": [
+            "T093"
+          ],
+          "start_char": 33892,
+          "end_char": 33973
+        },
+        {
+          "evidence_id": "E0025",
+          "quote": "skyscanner is a Chinese company, and I generally don't want my data to be shared.",
+          "source_turn_ids": [
+            "T089"
+          ],
+          "start_char": 32744,
+          "end_char": 32825
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G010",
+      "local_statement": "在陌生市场能判断票价相对水平（高于/低于中位），以便决定是否值得下单。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "对熟悉市场凭经验判断，不需要该功能",
+        "在美国等新市场需要外部参考价"
+      ],
+      "paper_ids": [],
+      "paper_statements": [],
+      "correspondence": "local_only",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "陌生市场的中位价格参考在本地明确表达，论文列表没有相同判价基准。",
+      "evidence": [
+        {
+          "evidence_id": "E0026",
+          "quote": "I can use Google flights for it because it tells me if the price is above, below, or lower than the Median.",
+          "source_turn_ids": [
+            "T109"
+          ],
+          "start_char": 40985,
+          "end_char": 41092
+        },
+        {
+          "evidence_id": "E0027",
+          "quote": "Sure. Yeah, it would help out for the times when I'm not familiar with the specific market.",
+          "source_turn_ids": [
+            "T111"
+          ],
+          "start_char": 41208,
+          "end_char": 41299
+        },
+        {
+          "evidence_id": "E0028",
+          "quote": "I won't really need that feature. But yeah, it's it's nice to have.",
+          "source_turn_ids": [
+            "T111"
+          ],
+          "start_char": 41432,
+          "end_char": 41499
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G011",
+      "local_statement": "对多条候选航线设置降价提醒，价格下探时及时获知并下单。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "仅在必须成行、且价格暴涨的紧迫场景下使用过",
+        "当时借用已登录的 Google 账号，回避新建账号"
+      ],
+      "paper_ids": [
+        "g60",
+        "g103",
+        "g104"
+      ],
+      "paper_statements": [
+        "Adapt alerts and notifications based on changing personal travel plans.",
+        "Notify users of flight price drops.",
+        "Send reminders for flight route price changes."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "本地保留多航线、紧迫情境；论文另有随计划变化调整提醒的泛化。",
+      "evidence": [
+        {
+          "evidence_id": "E0029",
+          "quote": "I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price. I I book it",
+          "source_turn_ids": [
+            "T087"
+          ],
+          "start_char": 31622,
+          "end_char": 31742
+        },
+        {
+          "evidence_id": "E0030",
+          "quote": "So that was the only time I set up an alert. And that was through Google flights.",
+          "source_turn_ids": [
+            "T087"
+          ],
+          "start_char": 31847,
+          "end_char": 31928
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G012",
+      "local_statement": "在一个平台上集齐比价、行程与订票信息，不必往返十余个网站。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自估一次订票至少访问 10–12 个网站",
+        "表述为当前最大的两个障碍之一"
+      ],
+      "paper_ids": [
+        "g79",
+        "g80",
+        "g81"
+      ],
+      "paper_statements": [
+        "Aggregate information from multiple sources.",
+        "Provide a convenient interface for viewing aggregated information.",
+        "Consolidate all necessary information in one location to avoid visiting multiple sites."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "本地集中聚合全部信息，论文分出聚合与界面呈现。",
+      "evidence": [
+        {
+          "evidence_id": "E0031",
+          "quote": "I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum.",
+          "source_turn_ids": [
+            "T137"
+          ],
+          "start_char": 49886,
+          "end_char": 50024
+        },
+        {
+          "evidence_id": "E0032",
+          "quote": "and nobody's there to feed you all the different combinations.",
+          "source_turn_ids": [
+            "T095"
+          ],
+          "start_char": 34703,
+          "end_char": 34765
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G013",
+      "local_statement": "输入全部参数后，由平台直接给出最优方案，不必自己逐轮迭代。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "表述为当前最大的两个障碍之一",
+        "受访者同时认为票价与个人处境的动态性使该设想难以实现（T086）"
+      ],
+      "paper_ids": [
+        "g94"
+      ],
+      "paper_statements": [
+        "Enable users to input all travel parameters in one place and receive the best travel option."
+      ],
+      "correspondence": "equivalent",
+      "split_merge": false,
+      "source_support_judgment": "reasonable_inference",
+      "rationale": "由一键给参数并选最优的愿望形成目标，原文同时承认动态性和可实现性限制。",
+      "evidence": [
+        {
+          "evidence_id": "E0033",
+          "quote": "There's no one click platform where I can just give it all of my parameters, and it will find the best option for me.",
+          "source_turn_ids": [
+            "T137"
+          ],
+          "start_char": 49695,
+          "end_char": 49812
+        },
+        {
+          "evidence_id": "E0034",
+          "quote": "I have to invest a lot of time into finding. What's the ideal option?",
+          "source_turn_ids": [
+            "T137"
+          ],
+          "start_char": 49813,
+          "end_char": 49882
+        },
+        {
+          "evidence_id": "E0035",
+          "quote": "it's kind of hard for these websites to also sort of predict what I would do, and let me know at an ideal time where maybe the cost is low for the exact itinerary that I want to take.",
+          "source_turn_ids": [
+            "T085"
+          ],
+          "start_char": 30584,
+          "end_char": 30767
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC003",
+      "local_id": "DOC003-G014",
+      "local_statement": "把信用卡权益与机场休息室准入信息整合进比价流程，便于在中转时使用休息室。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "持约 30 张信用卡，不同卡对不同休息室、不同时段与次数限制不同",
+        "受访者认为第三方整合难以保持准确，倾向直接查发卡行",
+        "愿望强度为 would be wonderful，但同时表示不愿深入讨论"
+      ],
+      "paper_ids": [
+        "g34",
+        "g40",
+        "g41",
+        "g42"
+      ],
+      "paper_statements": [
+        "Check airport lounge availability during stopovers.",
+        "Provide up-to-date information on lounge availability at airports.",
+        "Offer information about lounge access options globally.",
+        "Link lounge access information to individual credit card benefits and costs."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported_with_scope_note",
+      "rationale": "本地将休息室开放、准入与信用卡权益整合，保留用户对准确性和实际可行性的疑虑。",
+      "evidence": [
+        {
+          "evidence_id": "E0036",
+          "quote": "it would be very nice if I could, input there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner. That would be wonderful.",
+          "source_turn_ids": [
+            "T125"
+          ],
+          "start_char": 45038,
+          "end_char": 45261
+        },
+        {
+          "evidence_id": "E0037",
+          "quote": "Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries.",
+          "source_turn_ids": [
+            "T123"
+          ],
+          "start_char": 43994,
+          "end_char": 44139
+        },
+        {
+          "evidence_id": "E0038",
+          "quote": "I know a few apps that have tried that, but generally it doesn't update well, and it doesn't work well.",
+          "source_turn_ids": [
+            "T125"
+          ],
+          "start_char": 45262,
+          "end_char": 45365
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    }
+  ],
+  "paper_only": [
+    {
+      "document_id": "DOC003",
+      "paper_id": "g4",
+      "statement": "Explore and compare options to find the best alternative in terms of price and seating.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g6",
+      "statement": "Allow users to monitor prices at regular intervals for better deals.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g8",
+      "statement": "Enable users to switch between viewing options categorized as 'cheapest' or 'best'.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g10",
+      "statement": "Help users discover tricks for getting cheaper prices, better pathways, and better deals.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g11",
+      "statement": "Discover benefits and deals for flights.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g12",
+      "statement": "Regularly check for the best flight deals.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g16",
+      "statement": "Provide sorting options for flight search results by best, cheapest, and fastest.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g18",
+      "statement": "Allow users to personalize flight options and specify traveler details.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g22",
+      "statement": "Help users save money by booking flights using discounts or vouchers.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g24",
+      "statement": "Offer incentives such as coupons for booking through the system.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g25",
+      "statement": "Provide access to booking partners that offer discounts.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g26",
+      "statement": "Maximize time in the air during travel.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g27",
+      "statement": "Enable users to set a maximum duration for flight time.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g29",
+      "statement": "Experience different cities and lounges by selecting flights with multiple stops.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g30",
+      "statement": "Provide filters for flight characteristics such as number of stops, departure and arrival times, airlines, alliances, and origin airports.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g31",
+      "statement": "Enable filtering of flights based on environmental impact considerations.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g32",
+      "statement": "Display layover duration at stopover airports.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g35",
+      "statement": "Identify suitable travel destinations based on search criteria.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g43",
+      "statement": "Support last-minute flight booking and provide stakeholders with the ability to review all available options in urgent booking situations.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g44",
+      "statement": "Ensure accuracy and correctness of personal, travel, terminal, and logistics information before booking.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g45",
+      "statement": "Enable users to make final bookings and award bookings directly on a booking provider's or airline's website.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g46",
+      "statement": "Allow users to log into airline websites to check availability of award seats.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g47",
+      "statement": "Provide notifications for limited quantity award seats availability.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g49",
+      "statement": "Finalize and confirm itinerary details before proceeding to booking.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g51",
+      "statement": "Allow users to specify the number of adults traveling.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g54",
+      "statement": "Schedule transportation according to personal time-of-day preferences.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g56",
+      "statement": "Enable users to find and select travel deals based on preferred travel dates and holiday periods.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g57",
+      "statement": "Allow users to input travel details such as origin, destination, dates, class of travel, and number of travelers.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g58",
+      "statement": "Provide information and options for both outbound and return journeys, including possible routes.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g59",
+      "statement": "Show travel times and durations in local time zones, including the day of arrival at the final destination.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g63",
+      "statement": "Verify, display, and ensure accuracy of flight details, including departure and arrival times, locations, total duration, connections, and layover durations.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g66",
+      "statement": "Fill out and confirm necessary personal and travel details during the booking process.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g67",
+      "statement": "Redirect users to booking pages with pre-filled itinerary details for final actions.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g69",
+      "statement": "Enter personal information and complete payment transactions.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g71",
+      "statement": "Allow users to apply advanced techniques in their searches.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g72",
+      "statement": "Reduce the time required for conducting travel searches.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g73",
+      "statement": "Facilitate intuitive user navigation without active searching.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g74",
+      "statement": "Reduce mental load during searches.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g78",
+      "statement": "Filter options based on specific criteria.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g82",
+      "statement": "Enable users to conduct comprehensive research and planning activities for travel options.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g86",
+      "statement": "Ensure user trust through transparent practices.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g87",
+      "statement": "Allow users to access the source code of the system.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g88",
+      "statement": "Determine user access based on input of personal data and access rules.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g89",
+      "statement": "Update users on their permissions and access rights.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g90",
+      "statement": "Enable users to log in to manage their loyalty points.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g91",
+      "statement": "Permit users to book travel using loyalty points.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g92",
+      "statement": "Automatically determine the user's location to use as the starting point for travel.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g93",
+      "statement": "Allow users to select a destination.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g107",
+      "statement": "Enable users to quickly obtain and search for information.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g108",
+      "statement": "Facilitate faster research.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g109",
+      "statement": "Ensure the user interface remains consistent.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g110",
+      "statement": "Reduce the time needed to navigate the user interface.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g111",
+      "statement": "Minimize the mental load when using the user interface.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g112",
+      "statement": "Increase user familiarity with the interface for quick input and search.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC003",
+      "paper_id": "g113",
+      "statement": "Enhance the efficiency and accuracy of research activities.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    }
+  ],
+  "source_review_limits": "Local-goal correspondence is complete; paper-only support outside pilot is not exhaustively judged.",
+  "counts": {
+    "local_goals": 14,
+    "local_with_correspondence": 13,
+    "paper_goals": 114,
+    "paper_with_correspondence": 59,
+    "paper_only": 55,
+    "local_only": 1
+  },
+  "local_refinement_count": 3,
+  "eligible_paper_runs": 6,
+  "relation_semantic_reviews": [
+    {
+      "document_id": "DOC003",
+      "parent": "G002",
+      "child": "G003",
+      "judgment": "reasonable_why_how_partial_kaos",
+      "source_turns": [
+        "T107",
+        "T109",
+        "T119",
+        "T123"
+      ],
+      "rationale": "MCT缓冲是适合行程的一项具体约束，有语义依据；单个缓冲目标不保证整体行程适合。签证例外主要针对中转次数，不能自动当成MCT规则失效条件。"
+    },
+    {
+      "document_id": "DOC003",
+      "parent": "G002",
+      "child": "G004",
+      "judgment": "reasonable_why_how_partial_kaos",
+      "source_turns": [
+        "T031",
+        "T119"
+      ],
+      "rationale": "接驳及会面日程衔接是明确适合性维度，单项不充分；应作为带条件的组候选。"
+    },
+    {
+      "document_id": "DOC003",
+      "parent": "G002",
+      "child": "G005",
+      "judgment": "reasonable_why_how_partial_kaos",
+      "source_turns": [
+        "T073",
+        "T119"
+      ],
+      "rationale": "时长与睡眠偏好确实影响行程适合；红眼不是强制禁止，且这些约束未证明共同充分。"
+    }
+  ],
+  "rubric": {
+    "why_how_hierarchy": "partial",
+    "kaos_refinement_groups": "not_expressed_in_old_schema",
+    "full_group_sufficiency": "not_assessed",
+    "alternatives_completeness": "not_assessed",
+    "source_locations": "supported_by_deterministic_checks",
+    "human_or_independent_review": "not_run"
+  }
+}

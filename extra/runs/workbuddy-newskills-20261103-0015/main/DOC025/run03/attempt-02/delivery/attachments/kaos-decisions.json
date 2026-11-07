@@ -1,0 +1,226 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "6c5e01c1e77b0211a314845678cbcd2d70e187de8a34ebf1e481a2a1d1d6d5c1",
+    "judgments_sha256": "717993c7c1e0b1bb6b91612be6c1349b813969dd77be617b42062dd88cb38375"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC025-goal-model",
+      "message": "全篇未发现可声明'子目标共同满足足以实现父目标'的 AND 精化组；模型以扁平目标集与独立联系呈现，无成立层级，请人工复核是否存在遗漏的层级结构。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R9",
+      "message": "G007→G003 的贡献联系依赖'信息流（含最新技术文章分享）是其保持行业信息更新的渠道'这一假设，原文未直述，请确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G020",
+      "message": "G020 按受阻目的保留（发送个性化请求但被忽略/受限），障碍已写入条件；请确认是否需在风险分析中单独登记该障碍。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G005",
+      "target_id": "G004",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T004-T005 的问答结构表明：关键词+地点+筛选的搜索流程就是其在 LinkedIn 上寻找/探索职位机会的实现方式；G005 为方式目标，G004 为所服务的目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC025:T004",
+          "quote": "how do you typically go about finding job opportunities on Linkedin.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC025:T005",
+          "quote": "when I want to look for specific jobs on Linkedin, I'll just go to the jobs tab at the bottom of the screen",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G005",
+      "target_id": "G006",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T005 中先得到搜索结果并点击感兴趣的职位，随后才用 easy apply 提交申请；找到特定职位的结果先于提交申请发生。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC025:T005",
+          "quote": "after the search results come out, I'll just. I can just click on any of the job opportunities that I'm interested in",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G009",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "把线下已认识的人加入 LinkedIn 连接视为其线上职业人脉的扩展"
+      ],
+      "rationale": "与已认识的人建立连接是扩展职业人脉在'已认识的人'这一情境下的具体目标；T003 给出一般人脉扩展目的，T011 给出该情境下的连接方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC025:T011",
+          "quote": "when I want to connect with someone that I already know who they are, then I'll just tap on the search bar which is located at the top center of the screen",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC025:T003",
+          "quote": "I also use Linkedin because Linkedin helped me expand my professional network",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G011",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "群组成员大多为其现有网络之外的新联系人"
+      ],
+      "rationale": "与同群组成员建立连接是扩展职业人脉在'群组成员'情境下的具体目标；T011 将其列为连接方式之一，T003 给出人脉扩展目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC025:T011",
+          "quote": "And also I can like connect with people within the same group",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC025:T003",
+          "quote": "I also use Linkedin because Linkedin helped me expand my professional network",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G020",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "与网络之外的人员建立连接即把人脉扩展到现有网络之外的具体情境；原文叙述其在发送请求、建立连接时遇到该挑战。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC025:T021",
+          "quote": "another challenge is connecting with certain people who have strict privacy settings",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC025:T003",
+          "quote": "I also use Linkedin because Linkedin helped me expand my professional network",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G010",
+      "target_id": "G011",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先加入群组成为成员，之后才能与同群组成员建立连接；原文 once I'm a member ... connect with people within the same group 表明先后顺序。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC025:T011",
+          "quote": "once I'm a member I can see the post from the group. And also I can like connect with people within the same group",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G012",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "职位提醒推送的推荐职位列表是其浏览、探索职位机会的来源之一（T003 browse the job postings and the job recommendations），对 G004 有帮助；提醒并非探索的唯一途径，故仅记贡献不记精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC025:T003",
+          "quote": "browse the job postings and the job recommendations that I received from the app",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC025:T013",
+          "quote": "at the bottom of the screen there's a get job alerts for this search, and if you turn it on. Then Linkedin will send you notification. With the list of the recommended job postings",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G018",
+      "target_id": "G019",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文以 Because 直接说明：按技能/技术筛选是其查找提及特定软件或编程语言职位的期望实现方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC025:T021",
+          "quote": "I often wish there was a way to filter the jobs by specific skills or technologies rather than just job titles or locations. Because sometimes I want to look for jobs that mention specific software or programming languages",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G007",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "查看信息流（含最新技术文章分享）是其保持行业信息更新的主要渠道之一"
+      ],
+      "rationale": "信息流中含最新技术文章等帖子，浏览网络动态可能有助于其保持行业信息更新；但原文未直述信息流即其了解行业的渠道，留待人工确认。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC025:T007",
+          "quote": "if something interests me like a shared article on the latest technology, I can tap like, or sometimes I'll leave a comment",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC025:T003",
+          "quote": "stay updated with the industry",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

@@ -1,0 +1,347 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "e9dbdf42e7483758b42e961a1be1a6ddb25976ea030019af377f2633e18686df",
+    "input_sha256": "e0e03b3548666e960779251e9efa03222f057249ae7e85dcc52fe46b170cd104"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Use an AI assistant as a replacement for traditional web search to get results, except when the results must be perfectly factually correct.",
+      "label": "direct",
+      "rationale": "T003 明确说助手已在很大程度上取代其过去用 Google/Bing 做的传统搜索，并说现在把取结果的事交给助手，主体与对象一致；同一句内的'除非需要完全事实正确'作为例外已写入 context，未改写为绝对要求。",
+      "supported_parts": [
+        "以助手替代传统搜索",
+        "把取结果交给助手"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T003 陈述传统搜索被助手取代",
+        "同一句给出例外条件并已保留"
+      ]
+    },
+    "G002": {
+      "target_statement": "Compose professional emails (and, to a lesser extent, personal emails) with an AI assistant from just a few prompts.",
+      "label": "direct",
+      "rationale": "T011 明确说明用助手撰写专业邮件为主、个人邮件为次，且说明只需少量提示即可生成可在专业语境发送的邮件；主次范围与方式均已保留在 statement/context 中。",
+      "supported_parts": [
+        "撰写专业邮件",
+        "个人邮件为次要范围",
+        "少量提示的方式"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T011 首句给出主次范围",
+        "T011 后续句给出少量提示的方式"
+      ]
+    },
+    "G003": {
+      "target_statement": "Write long-form documents for work or assignments with AI assistance.",
+      "label": "direct",
+      "rationale": "T015 明确列举'为工作或作业写长文档'，T009 亦把撰写文档列为前三用例；撰写与校对在 T021 被分别表述为两类任务，故未合并进 G004。",
+      "supported_parts": [
+        "撰写长文档",
+        "工作与作业两类场景"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T009、T015 列举撰写文档用例",
+        "T021 将校对单列为另一任务，故拆开"
+      ]
+    },
+    "G004": {
+      "target_statement": "Proofread self-written documents with AI assistance for spelling, grammar and tone checks.",
+      "label": "direct",
+      "rationale": "T021 明确把校对本人所写文档（拼写、语法、语气检查）列为除头脑风暴之外的主要任务之一，对象、检查项与主体均一致。",
+      "supported_parts": [
+        "校对本人所写文档",
+        "拼写、语法、语气检查"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T021 说明校对对象与检查项",
+        "T009 同句提及 proofreading 作为佐证"
+      ]
+    },
+    "G006": {
+      "target_statement": "Generate digital art with AI and embed it in blog posts or social media posts, despite the stakeholder not being a skilled artist.",
+      "label": "direct",
+      "rationale": "T013 明确说用助手生成数字艺术并嵌入博客/社交媒体帖子，并自述本人绘画能力差而 AI 使其看起来不像外行；质量意图与用途均保留，'加速创作'作为已实现现状只写入 context，未升级为新目标。",
+      "supported_parts": [
+        "生成数字艺术",
+        "嵌入博客/社交帖子",
+        "弥补自身绘画能力的质量意图"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T013 给出用途与对象",
+        "T013 末句给出质量意图并写入 context"
+      ]
+    },
+    "G005": {
+      "target_statement": "Create multimedia content with AI assistance for blog posts and social media posts.",
+      "label": "direct",
+      "rationale": "T009 把多媒体创作（博客/社交媒体帖子构思）列为前三用例之一，T015 复述确认；T013 进一步具体化为生成数字艺术，作为具体情境另立 G006。",
+      "supported_parts": [
+        "多媒体内容创作",
+        "用于博客与社交媒体帖子"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T009 列举用例",
+        "T015 复述确认",
+        "T013 具体化为数字艺术，另立 G006"
+      ]
+    },
+    "G007": {
+      "target_statement": "Use AI assistant tools for assignments whose rules permit their use.",
+      "label": "direct",
+      "rationale": "T017 明确说只有部分作业允许使用 AI 助手，并在这些作业中用得很自由；允许使用的条件已写入 statement，未扩大到不允许的作业。频率为现状，只写入 context。",
+      "supported_parts": [
+        "在允许使用 AI 的作业中使用助手"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T017 给出允许使用的条件",
+        "频率作为现状保留在 context"
+      ]
+    },
+    "G008": {
+      "target_statement": "Use AI assistance to brainstorm different ideas.",
+      "label": "direct",
+      "rationale": "T017 与 T021 均明确把头脑风暴列为其使用助手的主要任务之一，动作与对象一致；与'更好表达已有想法'是两个可独立满足的结果，故分开。",
+      "supported_parts": [
+        "借助助手进行头脑风暴"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T017 说明助手帮助其头脑风暴",
+        "T021 复述为主要任务之一"
+      ]
+    },
+    "G009": {
+      "target_statement": "Use AI assistance to articulate the stakeholder's own existing ideas better.",
+      "label": "direct",
+      "rationale": "T017 明确说助手帮助其更好地表达自己已有的想法，与头脑风暴是并列的另一结果，各有独立表述依据。",
+      "supported_parts": [
+        "更好表达本人已有想法"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T017 同一句中与头脑风暴并列给出"
+      ]
+    },
+    "G010": {
+      "target_statement": "Give prompts to the AI assistant over voice, if the capability existed.",
+      "label": "insufficient",
+      "rationale": "T023 只说若助手具备语音接收提示的能力'我可能会考虑也使用'（might consider），是在假设能力存在条件下的考虑，未确认其希望或要求具备该能力；按证据口径对未确认采纳保持 insufficient，不升级为 direct/inferred。",
+      "supported_parts": [],
+      "unsupported_parts": [
+        "是否希望/要求具备语音输入能力未确认"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T023 为条件句且语气为 might consider",
+        "无后续确认"
+      ]
+    },
+    "G011": {
+      "target_statement": "Use AI assistance for coding or programming tasks at work.",
+      "label": "direct",
+      "rationale": "T027 明确说除前述用例外，另一项重要活动是用助手帮助工作，并把工作明确限定为编码/编程，主体、范围与对象一致。",
+      "supported_parts": [
+        "用助手帮助编码/编程工作"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T027 给出活动与其对'工作'的定义"
+      ]
+    },
+    "G012": {
+      "target_statement": "Have the AI assistant process and output standardized formats such as JSON or XML in addition to natural language for coding tasks.",
+      "label": "direct",
+      "rationale": "T027 明确说除处理与输出自然语言外，能格式化成编码任务使用的其他标准格式'是合理的'，并直接例举 JSON、XML；范围限定在编程任务，未扩展到其反问中提到的 HTML/LaTeX。语气为建议但含义明确，已保留在 context。",
+      "supported_parts": [
+        "处理并输出标准格式",
+        "JSON/XML 例举",
+        "限定在编码任务"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T027 说明编程任务中需要特定格式",
+        "T027 提出格式化为标准格式的期望"
+      ]
+    },
+    "G013": {
+      "target_statement": "Receive succinct responses from the AI assistant rather than verbose conversational ones.",
+      "label": "direct",
+      "rationale": "T031 明确说在提高生产力、时间关键的前提下更看重简洁而非冗长对话式回答；偏好强度（appreciate / more towards）已写入 context，未改写为必须。",
+      "supported_parts": [
+        "偏好简洁回答",
+        "相对冗长对话式回答的取舍"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T031 给出前提",
+        "T031 给出简洁胜冗长的偏好"
+      ]
+    },
+    "G014": {
+      "target_statement": "Improve the stakeholder's productivity by using AI assistant tools.",
+      "label": "direct",
+      "rationale": "T031 以'前提'方式明确陈述其使用助手是为了提高生产力，属原文明示的总体目的；未给出指标或阈值，也未虚构阈值，指标未知已在 context 与问题记录。",
+      "supported_parts": [
+        "通过使用助手提高生产力这一目的"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T031 明确给出使用助手的前提目的"
+      ]
+    },
+    "G015": {
+      "target_statement": "Have the AI assistant hold memory or history of previous interactions to provide context about the stakeholder's requirements.",
+      "label": "direct",
+      "rationale": "T033 明确说若助手能保存以往交互的某种记忆或历史，对提供上下文与自身需求会非常有帮助；方式与目的均来自同一句，未扩写为长期用户画像。",
+      "supported_parts": [
+        "保存以往交互的记忆/历史",
+        "用于提供上下文与需求"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T033 提出记忆/历史能力及其作用"
+      ]
+    },
+    "G016": {
+      "target_statement": "Not have to repeat the stakeholder's context in every query or conversation with the AI assistant.",
+      "label": "direct",
+      "rationale": "T033 明确说不必在每次查询或对话中重复自己非常重要，范围（每次查询与对话）与强度（super important）一致并已保留。",
+      "supported_parts": [
+        "不必在每次查询/对话中重复自己"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T033 直接陈述该结果与强度"
+      ]
+    },
+    "G017": {
+      "target_statement": "Cross-check answers to mathematical problems with multiple AI assistants.",
+      "label": "direct",
+      "rationale": "T035 明确说解数学问题时常需要用多个其他助手交叉核对某个助手给出的答案，并说明原因是数学易错；场景限定已写入 context，未扩展到语言任务。",
+      "supported_parts": [
+        "数学问题用多个助手交叉核对",
+        "原因：数学易错"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T035 给出场景与做法",
+        "T035 给出原因"
+      ]
+    },
+    "G018": {
+      "target_statement": "Have AI assistant output be factually accurate rather than hallucinated.",
+      "label": "inferred",
+      "rationale": "原文未以'我希望输出准确'句式直接提出要求，但 T041 把易产生幻觉并影响事实准确性列为负面体验，T047 把可能输出严重不准确列为阻碍使用的顾虑，T003 以'需要完全事实正确'作为不交给助手的条件；三处共同构成正面推断依据，故判 inferred 而非 direct。推断假设：受访者希望消除该负面体验。未设定阈值，也未把 T045 的技术挑战判断固化为方案。",
+      "supported_parts": [
+        "希望输出不具有幻觉导致的 factual inaccuracy"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "假设把不准确列为负面体验与顾虑等同于希望其消除"
+      ],
+      "reasoning_steps": [
+        "T041 负面体验指向事实准确性",
+        "T047 顾虑指向严重不准确",
+        "T003 条件显示其在意完全事实正确"
+      ]
+    },
+    "G019": {
+      "target_statement": "Fully automate certain pipelines with AI assistance without needing a human in the loop.",
+      "label": "inferred",
+      "rationale": "T043 说因需要人工在环而一直未能完全自动化某些流水线，并以反事实方式说若能自动化就能更好地提升生产力；这是明确的愿望表达但以遗憾句式给出，故判 inferred。'无需人工在环'来自 T043 对现状原因的说明，未声称其要求取消人工复核。",
+      "supported_parts": [
+        "希望实现某些流水线的完全自动化"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "假设反事实愿望表达对自动化的期望"
+      ],
+      "reasoning_steps": [
+        "T043 说明未能自动化的现状与原因",
+        "T043 以反事实句表达自动化愿望"
+      ]
+    },
+    "G020": {
+      "target_statement": "Have hallucinations detected and corrected, which the stakeholder sees as requiring a technological breakthrough and for which no solution is offered.",
+      "label": "insufficient",
+      "rationale": "T045 在采访者追问改进办法时回答想不出解决方案，只说检测并纠正幻觉需要技术突破、属于更广泛的技术挑战；这不足以确认其把'检测并纠正幻觉'作为对助手的具体要求或已采纳的方案，故保留 insufficient，不升级。",
+      "supported_parts": [],
+      "unsupported_parts": [
+        "是否要求助手具备检测与纠正幻觉的能力未确认",
+        "实现方式未知"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T045 自述无解决方案",
+        "T045 仅将其描述为待解决的技术挑战"
+      ]
+    },
+    "G021": {
+      "target_statement": "Have an AI assistant interface that is not cluttered or distracting.",
+      "label": "inferred",
+      "rationale": "T052 问有哪些令人 frustration 的特性，受访者明确把竞品界面元素过多导致分心、网页设计令人不适列为原因，故 origin 为 explicit；但目标表述'界面应不杂乱分散注意力'把具体竞品问题泛化为一般期望，原文未作此泛化陈述，需要该推断步骤，故支持判 inferred（origin 与 support 分别判断，差异在此说明）。其自述'不确定是习惯还是界面本身更好'作为限制写入 context；未虚构具体界面规范。",
+      "supported_parts": [
+        "希望界面不过度堆砌元素、不分散注意力"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "假设把界面分散注意力列为不满原因等同于希望界面简洁"
+      ],
+      "reasoning_steps": [
+        "T053 列出界面相关的负面体验",
+        "负面体验对应避免型期望"
+      ]
+    },
+    "G022": {
+      "target_statement": "Have the AI assistant support text-to-video generation.",
+      "label": "direct",
+      "rationale": "T055 在被问及缺失功能时明确说若助手能支持文本转视频会非常有用，是现有文生图能力的有用补充；能力与方向一致，未扩展其未提及的视频用途。",
+      "supported_parts": [
+        "支持文本转视频"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T055 直接提出文生视频为期望功能"
+      ]
+    },
+    "G023": {
+      "target_statement": "Have AI assistants act as agents that perform described tasks, rather than only returning text to copy and paste.",
+      "label": "direct",
+      "rationale": "T055 明确说从当前的问答模式转向具备 agent 能力'将是关键性的'，并说可描述任务交由其执行；示例仅用于演示该一般能力，按目标边界未另立固定业务目标，只写入 context。",
+      "supported_parts": [
+        "从文本补全转向可自主执行任务的 agent"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T055 提出 agent 方向",
+        "T055 以邮件示例演示能力，保留为 context"
+      ]
+    }
+  }
+}

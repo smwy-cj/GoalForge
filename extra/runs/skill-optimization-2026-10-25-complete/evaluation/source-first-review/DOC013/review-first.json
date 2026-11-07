@@ -1,0 +1,735 @@
+{
+  "document_id": "DOC013",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "round": "first",
+  "blinding_limit": "仅知A/B匿名代号，未读映射或其他分支；语言、节点粒度、解释模板等方法特征可被猜测，因此属于有限盲法，非严格不可猜方法的双盲。",
+  "policy": "冻结129条意图不修改；允许多对多和不同粒度。supported评价源文支持及合理推断，不代表需求已采纳；proposed/partial结构按候选强度评价。未计算标准P/R/F1。",
+  "samples": [
+    {
+      "sample": "first:A",
+      "intent_matches": [
+        {
+          "intent_id": "DOC013:I01",
+          "goal_ids": [
+            "G003",
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“控制不适合特定观众的内容可见性及禁止某些上传内容”的实质结果与适用范围；DOC013:T006「there could be types of content that's not suitable for all viewers.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I02",
+          "goal_ids": [
+            "G001",
+            "G005",
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按文本、过滤条件找到特定视频或内容”的实质结果与适用范围；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I03",
+          "goal_ids": [
+            "G001",
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过缩略图及描述等信息浏览和选择视频”的实质结果与适用范围；DOC013:T012「see a large volume of different options and click through it」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I04",
+          "goal_ids": [
+            "G014",
+            "G015",
+            "G016"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过观看获取娱乐、教育或快速信息”的实质结果与适用范围；DOC013:T016「for entertainment purposes and for education purposes.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I05",
+          "goal_ids": [
+            "G013"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“获得连续流畅且合理传输的视频播放”的实质结果与适用范围；DOC013:T014「I don't want it to freeze constantly. I want a seamless stream of buffered data.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I06",
+          "goal_ids": [
+            "G002",
+            "G007",
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“上传既有视频或发起直播来分享内容”的实质结果与适用范围；DOC013:T012「create to upload a video or start a stream.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I07",
+          "goal_ids": [
+            "G009",
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“为发布内容补充描述、转录、字幕等元数据”的实质结果与适用范围；DOC013:T012「put some sort of description in, add, perhaps a transcript captions of the like.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I08",
+          "goal_ids": [
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“编辑视频以添加音效、剪辑或裁切”的实质结果与适用范围；DOC013:T012「to edit those. So I can add sound effects. Trim crop.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I09",
+          "goal_ids": [
+            "G017",
+            "G018",
+            "G019"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“减少格式、时长兼容与上传发布流程的技术障碍”的实质结果与适用范围；DOC013:T018「making sure their formats are compatible with the system, making sure there's no…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I10",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“在首次上传时建立频道并发布选择的文件”；DOC013:T026「since I've never done this before. It's prompting me for what my account might b…」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I11",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“满足直播账户启用的等待限制后开播”；DOC013:T028「after a streaming account is set up.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I12",
+          "goal_ids": [
+            "G020",
+            "G021",
+            "G022"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过观看清单和订阅管理想看的内容并追踪创作者更新”的实质结果与适用范围；DOC013:T030「add things to their watch list. or they can perhaps follow or subscribe」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I13",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“以付费方案获得无广告、不间断观看”；DOC013:T032「a premium tier which promises all content, no interruptions」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I14",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“控制视频播放暂停、音量、静音、字幕与全屏”；DOC013:T038「play button, which, when clicked, turns into a pause button」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I15",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“了解播放进度并继续观看下一视频”；DOC013:T038「current time. Slash total time length.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I16",
+          "goal_ids": [
+            "G023"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“让不熟悉界面的用户发现并理解播放器控制”的实质结果与适用范围；DOC013:T040「if someone unfamiliar were to arrive and see these 10 icons, they might not be s…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I17",
+          "goal_ids": [
+            "G024",
+            "G025"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“改善字幕准确性及考虑色觉障碍等可访问性”的实质结果与适用范围；DOC013:T040「I'm not sure how accurate they always are」。不要求独立节点数或层次与清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I02",
+            "DOC013:I03"
+          ],
+          "rationale": "T004先描述viewer选择观看内容，T012后续确认为搜索/视觉浏览；可作上位选择目的，非凭角色名自动扩需求。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I06"
+          ],
+          "rationale": "T004明确streamer分享内容，T012上传和开播为两种方式；上位分享目的成立。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I01"
+          ],
+          "rationale": "T006语气有think/could，但也说have to make sure；support.rationale明确标为tentative且规则未定，未把它当已证实法规，接受该保守范围。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I01"
+          ],
+          "rationale": "T006区分不得向任何人分享的内容与只不适合部分观众的内容，分两目标保留了实际不同的限制对象。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I02"
+          ],
+          "rationale": "与源文“按文本、过滤条件找到特定视频或内容”相符；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I03"
+          ],
+          "rationale": "与源文“通过缩略图及描述等信息浏览和选择视频”相符；DOC013:T012「see a large volume of different options and click through it」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I06"
+          ],
+          "rationale": "与源文“上传既有视频或发起直播来分享内容”相符；DOC013:T012「create to upload a video or start a stream.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I06"
+          ],
+          "rationale": "与源文“上传既有视频或发起直播来分享内容”相符；DOC013:T012「create to upload a video or start a stream.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I07"
+          ],
+          "rationale": "与源文“为发布内容补充描述、转录、字幕等元数据”相符；DOC013:T012「put some sort of description in, add, perhaps a transcript captions of the like.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I07"
+          ],
+          "rationale": "T012“perhaps a transcript captions”是可选建议；support已写proposed capability，不能因statement未逐字写perhaps就认定系统强制每个视频有字幕。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I08"
+          ],
+          "rationale": "与源文“编辑视频以添加音效、剪辑或裁切”相符；DOC013:T012「to edit those. So I can add sound effects. Trim crop.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I02"
+          ],
+          "rationale": "与源文“按文本、过滤条件找到特定视频或内容”相符；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I05"
+          ],
+          "rationale": "与源文“获得连续流畅且合理传输的视频播放”相符；DOC013:T014「I don't want it to freeze constantly. I want a seamless stream of buffered data.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I04"
+          ],
+          "rationale": "与源文“通过观看获取娱乐、教育或快速信息”相符；DOC013:T016「for entertainment purposes and for education purposes.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I04"
+          ],
+          "rationale": "与源文“通过观看获取娱乐、教育或快速信息”相符；DOC013:T016「for entertainment purposes and for education purposes.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I04"
+          ],
+          "rationale": "与源文“通过观看获取娱乐、教育或快速信息”相符；DOC013:T016「for entertainment purposes and for education purposes.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I09"
+          ],
+          "rationale": "与源文“减少格式、时长兼容与上传发布流程的技术障碍”相符；DOC013:T018「making sure their formats are compatible with the system, making sure there's no…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I09"
+          ],
+          "rationale": "T018只把确保无长度要求作为潜在障碍；inferred及无数字阈值保持试探，未外推所有格式或无限时长保障。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I09"
+          ],
+          "rationale": "与源文“减少格式、时长兼容与上传发布流程的技术障碍”相符；DOC013:T018「making sure their formats are compatible with the system, making sure there's no…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I12"
+          ],
+          "rationale": "与源文“通过观看清单和订阅管理想看的内容并追踪创作者更新”相符；DOC013:T030「add things to their watch list. or they can perhaps follow or subscribe」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G021",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I12"
+          ],
+          "rationale": "与源文“通过观看清单和订阅管理想看的内容并追踪创作者更新”相符；DOC013:T030「add things to their watch list. or they can perhaps follow or subscribe」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G022",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I12"
+          ],
+          "rationale": "T030明确订阅后中央区域查看最新内容；与订阅动作G021有后续取用目的，分开合理。",
+          "issues": []
+        },
+        {
+          "goal_id": "G023",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I16"
+          ],
+          "rationale": "与源文“让不熟悉界面的用户发现并理解播放器控制”相符；DOC013:T040「if someone unfamiliar were to arrive and see these 10 icons, they might not be s…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G024",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I17"
+          ],
+          "rationale": "T040是准确性未知，support.rationale将其写成inferred concern而非证实缺陷；允许保留为待探索字幕目标。",
+          "issues": []
+        },
+        {
+          "goal_id": "G025",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I17"
+          ],
+          "rationale": "T040不知道颜色能否调但认为可做工作；Consider配合解释保留探索性，不是断言缺少颜色设置。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [
+        {
+          "relation_id": "R001",
+          "judgment": "consistent",
+          "rationale": "T012文字筛选搜索帮助viewer选择视频，为所选方式。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R002",
+          "judgment": "consistent",
+          "rationale": "T012视觉缩略图浏览为另一内容选择方式。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R003",
+          "judgment": "consistent",
+          "rationale": "T012上传是分享内容方式，不是唯一方式。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R004",
+          "judgment": "consistent",
+          "rationale": "T012直播为分享内容的替代方式。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R005",
+          "judgment": "consistent",
+          "rationale": "T014模糊条件仍有意义是搜索能力的特殊范围。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R006",
+          "judgment": "consistent",
+          "rationale": "T016检索帮助快速获信息，内容相关性仍必要。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R007",
+          "judgment": "consistent",
+          "rationale": "T016教育观看可贡献获取信息，并非所有教育都快速。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R008",
+          "judgment": "consistent",
+          "rationale": "T018格式兼容帮助上传，不能保证传输完成。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R009",
+          "judgment": "consistent",
+          "rationale": "T018减少长度障碍帮助上传，规则仍未定。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R010",
+          "judgment": "consistent",
+          "rationale": "T030先订阅后可从订阅区取最新内容，条件性顺序成立。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "上传和直播是T012两条替代方式，F001自身明确alternatives/proposed/partial，因此不能按已成立AND精化审判；保留发布权限未知。"
+        },
+        {
+          "group_id": "F002",
+          "judgment": "consistent",
+          "rationale": "T018格式长度仅潜在上传障碍，F002部分候选并未宣称足够；示例反例标analysis_assumption而非伪造源文。"
+        }
+      ]
+    },
+    {
+      "sample": "first:B",
+      "intent_matches": [
+        {
+          "intent_id": "DOC013:I01",
+          "goal_ids": [
+            "G001",
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“控制不适合特定观众的内容可见性及禁止某些上传内容”的实质结果与适用范围；DOC013:T006「there could be types of content that's not suitable for all viewers.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I02",
+          "goal_ids": [
+            "G003",
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按文本、过滤条件找到特定视频或内容”的实质结果与适用范围；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I03",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过缩略图及描述等信息浏览和选择视频”的实质结果与适用范围；DOC013:T012「see a large volume of different options and click through it」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I04",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过观看获取娱乐、教育或快速信息”的实质结果与适用范围；DOC013:T016「for entertainment purposes and for education purposes.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I05",
+          "goal_ids": [
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“获得连续流畅且合理传输的视频播放”的实质结果与适用范围；DOC013:T014「I don't want it to freeze constantly. I want a seamless stream of buffered data.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I06",
+          "goal_ids": [
+            "G005"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“上传既有视频或发起直播来分享内容”的实质结果与适用范围；DOC013:T012「create to upload a video or start a stream.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I07",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“为发布内容补充描述、转录、字幕等元数据”的实质结果与适用范围；DOC013:T012「put some sort of description in, add, perhaps a transcript captions of the like.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I08",
+          "goal_ids": [
+            "G007"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“编辑视频以添加音效、剪辑或裁切”的实质结果与适用范围；DOC013:T012「to edit those. So I can add sound effects. Trim crop.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I09",
+          "goal_ids": [
+            "G011",
+            "G012"
+          ],
+          "status": "partial",
+          "rationale": "G011/G012承接潜在上传发布顾虑，但G012statement较强地把等待当已定不便。 原文：DOC013:T018「making sure their formats are compatible with the system, making sure there's no…」"
+        },
+        {
+          "intent_id": "DOC013:I10",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“在首次上传时建立频道并发布选择的文件”；DOC013:T026「since I've never done this before. It's prompting me for what my account might b…」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I11",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“满足直播账户启用的等待限制后开播”；DOC013:T028「after a streaming account is set up.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I12",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“通过观看清单和订阅管理想看的内容并追踪创作者更新”；DOC013:T030「add things to their watch list. or they can perhaps follow or subscribe」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I13",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“以付费方案获得无广告、不间断观看”；DOC013:T032「a premium tier which promises all content, no interruptions」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I14",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“控制视频播放暂停、音量、静音、字幕与全屏”；DOC013:T038「play button, which, when clicked, turns into a pause button」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I15",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“了解播放进度并继续观看下一视频”；DOC013:T038「current time. Slash total time length.」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC013:I16",
+          "goal_ids": [
+            "G013"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“让不熟悉界面的用户发现并理解播放器控制”的实质结果与适用范围；DOC013:T040「if someone unfamiliar were to arrive and see these 10 icons, they might not be s…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I17",
+          "goal_ids": [
+            "G014",
+            "G015"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“改善字幕准确性及考虑色觉障碍等可访问性”的实质结果与适用范围；DOC013:T040「I'm not sure how accurate they always are」。不要求独立节点数或层次与清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I01"
+          ],
+          "rationale": "与源文“控制不适合特定观众的内容可见性及禁止某些上传内容”相符；DOC013:T006「there could be types of content that's not suitable for all viewers.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I01"
+          ],
+          "rationale": "与源文“控制不适合特定观众的内容可见性及禁止某些上传内容”相符；DOC013:T006「there could be types of content that's not suitable for all viewers.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I02"
+          ],
+          "rationale": "与源文“按文本、过滤条件找到特定视频或内容”相符；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I03"
+          ],
+          "rationale": "与源文“通过缩略图及描述等信息浏览和选择视频”相符；DOC013:T012「see a large volume of different options and click through it」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I06"
+          ],
+          "rationale": "T012上传既有视频与开始实时直播是可分别满足的发布方式，模型以“或”并列能力承接，不声称精化充分；作为上位内容分享范围可接受，但覆盖不能替代首次频道及直播等待条件。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I07"
+          ],
+          "rationale": "与源文“为发布内容补充描述、转录、字幕等元数据”相符；DOC013:T012「put some sort of description in, add, perhaps a transcript captions of the like.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I08"
+          ],
+          "rationale": "与源文“编辑视频以添加音效、剪辑或裁切”相符；DOC013:T012「to edit those. So I can add sound effects. Trim crop.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I02"
+          ],
+          "rationale": "与源文“按文本、过滤条件找到特定视频或内容”相符；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I05"
+          ],
+          "rationale": "与源文“获得连续流畅且合理传输的视频播放”相符；DOC013:T014「I don't want it to freeze constantly. I want a seamless stream of buffered data.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I04"
+          ],
+          "rationale": "与源文“通过观看获取娱乐、教育或快速信息”相符；DOC013:T016「for entertainment purposes and for education purposes.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC013:I09"
+          ],
+          "rationale": "T018格式/长度为潜在障碍，上传与发布是一个有上下游的交付目的；但发布便利又有G012，建议明确G011范围为上传兼容，不使同一发布简化重复。",
+          "issues": [
+            {
+              "category": "compound",
+              "reason": "G011同时含上传成功、发布成功、格式兼容、长度障碍；T018将这些列为不同可能困难，且发布简单性已另立G012。"
+            }
+          ]
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC013:I09"
+          ],
+          "rationale": "T018只问是否要等上传完才能发布。statement“减少等待完整上传后才能发布的不便”容易选定提前发布改进，虽rationale否认，声明与解释应一致。",
+          "issues": [
+            {
+              "category": "strength",
+              "reason": "原文是potential questions，不足把等待完整上传认作已确定不便；可写“探索简化上传到发布过程，等待要求待核实”。"
+            }
+          ]
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I16"
+          ],
+          "rationale": "与源文“让不熟悉界面的用户发现并理解播放器控制”相符；DOC013:T040「if someone unfamiliar were to arrive and see these 10 icons, they might not be s…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I17"
+          ],
+          "rationale": "T040现状未知，inferred且condition需核实避免强称已知错误，判断supported仅指合理候选建议。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I17"
+          ],
+          "rationale": "与源文“改善字幕准确性及考虑色觉障碍等可访问性”相符；DOC013:T040「I'm not sure how accurate they always are」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T012/T014/T016搜索浏览和流畅观看有助获取信息，F001保持partial；内容是否合适仍未知，没有过度充分声明。"
+        }
+      ]
+    }
+  ]
+}

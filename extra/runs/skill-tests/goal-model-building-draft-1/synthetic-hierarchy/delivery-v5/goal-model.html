@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; font-src 'none'">
+<title>GoalForge · 目标模型</title><style>:root{--ink:#20394a;--muted:#667c87;--teal:#146c64;--teal-soft:#edf7f4;--line:#dfe8e6;--paper:#fff;--amber:#966619;--amber-soft:#fff7e7;--shadow:0 12px 32px #25493908}*{box-sizing:border-box}body{margin:0;background:#f5f8f7;color:var(--ink);font:14px/1.65 'Segoe UI','Microsoft YaHei',sans-serif}button,input,select{font:inherit}button,a,input,select,summary{ -webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:default;opacity:.4}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #6caba2;outline-offset:3px}button{border:1px solid var(--line);background:#fff;border-radius:7px;padding:7px 12px;color:var(--ink);transition:background .16s,border-color .16s,box-shadow .16s}button:hover:not(:disabled){background:#f1f7f5;border-color:#b6cdc6}a{color:var(--teal)}[hidden]{display:none!important}.app-header{height:72px;padding:0 38px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);background:white}.brand{font-size:23px;font-weight:750;letter-spacing:-1px;text-decoration:none;color:var(--ink);display:flex;align-items:center}.brand>span{color:var(--teal)}.brand small{font-size:12px;font-weight:500;letter-spacing:0;border-left:1px solid var(--line);padding-left:17px;margin-left:17px;color:var(--muted)}.header-meta{display:flex;align-items:center;gap:16px}.version{color:var(--muted);font-size:12px}.status-chip,.pill{font-size:11px;border-radius:5px;padding:3px 8px;background:var(--teal-soft);color:var(--teal);white-space:nowrap}.status-chip{background:var(--amber-soft);color:var(--amber)}.text-button{color:var(--teal);border-color:transparent;background:transparent}.app-main{max-width:1660px;margin:0 auto;padding:30px 38px 24px}.intro{display:flex;justify-content:space-between;align-items:center;gap:32px;margin-bottom:25px}.eyebrow{font-size:11px;font-weight:650;color:var(--teal);letter-spacing:1.5px}.intro h1{font-size:29px;letter-spacing:-.8px;line-height:1.35;margin:7px 0 9px;font-weight:650}.intro p{margin:0;color:var(--muted);max-width:650px;font-size:13px}.model-note{max-width:350px;padding-left:18px;border-left:3px solid #d9b46c;flex-shrink:0}.model-note strong{font-size:12px;font-weight:650}.model-note p{font-size:11px;margin:5px 0 0}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}.metric{display:grid;grid-template-columns:1fr auto;text-align:left;align-items:center;padding:16px 20px;border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}.metric>span{font-size:12px;color:var(--muted)}.metric strong{grid-column:2;grid-row:1/3;font-size:32px;font-weight:600;line-height:1.3;padding-left:15px}.metric small{font-size:11px;color:#85948d}.inferred-metric strong,.issue-metric strong{color:var(--amber)}.workbench{border:1px solid var(--line);border-radius:12px;background:#fff;overflow:hidden;box-shadow:var(--shadow)}.workspace-bar{display:flex;justify-content:space-between;align-items:center;padding:18px 22px 14px}.workspace-bar h2{font-size:16px;line-height:1.4;margin:0 0 3px;font-weight:650}.muted{color:var(--muted);font-size:12px}.display-switch,.mode-switch{display:flex;gap:2px;border-radius:7px;padding:3px;background:#edf3f1}.display-switch button,.mode-switch button{font-size:12px;padding:5px 12px;border-color:transparent;background:transparent;white-space:nowrap}.display-switch button[aria-pressed=true],.mode-switch button[aria-pressed=true]{background:white;box-shadow:0 1px 4px #213f3920;color:var(--teal);font-weight:650}.toolbar{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding:0 22px 16px}.search-wrap{position:relative;flex:1;max-width:390px}.search-wrap input{width:100%;padding:9px 36px 9px 13px;border:1px solid var(--line);border-radius:7px;background:#fbfdfc;font-size:12px;outline:none}.search-wrap input:focus{border-color:#77a69b;box-shadow:0 0 0 3px #146c6410}.search-wrap kbd{position:absolute;right:12px;top:10px;border:1px solid var(--line);padding:0 5px;border-radius:3px;color:#91a19c;font-size:10px;pointer-events:none}select{padding:8px 26px 8px 11px;border:1px solid var(--line);border-radius:7px;color:var(--ink);font-size:12px;background:white;max-width:100%}.check-label{font-size:12px;color:var(--muted);white-space:nowrap;display:flex;gap:5px;align-items:center}input[type=checkbox]{accent-color:var(--teal)}.workspace{display:grid;grid-template-columns:minmax(0,1fr) 345px;min-height:650px}.explorer{min-width:0;background:#f8fbfa;display:flex;flex-direction:column}.graph-heading{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:14px 18px 8px;flex-wrap:wrap}.graph-heading>button{font-size:11px;padding:6px 9px;background:white}.graph-heading>button[aria-pressed=true]{color:white;background:var(--teal);border-color:var(--teal)}.graph-notice{padding:2px 20px 8px;font-size:11px;color:var(--muted);min-height:31px}.canvas{position:relative;min-height:470px;height:calc(100vh - 430px);max-height:800px;touch-action:none;overflow:hidden;background-image:radial-gradient(#c7d9d2 1px,transparent 1px);background-size:20px 20px}.canvas svg{width:100%;height:100%;display:block;overflow:visible;user-select:none}.canvas svg>text,.canvas svg>rect{display:none}.canvas svg text{font-family:'Segoe UI','Microsoft YaHei',sans-serif}.canvas svg .node{outline:none}.canvas svg .node rect{fill:#fff;stroke:#cbdad5;stroke-width:1.4;filter:drop-shadow(0 3px 5px #35534b09);transition:stroke .18s,filter .18s,fill .18s}.canvas svg .node>text:first-of-type{font-size:13px;font-weight:650;fill:#4b7f72;letter-spacing:.3px}.canvas svg .node>text:not(:first-of-type){font-size:19px;fill:#243e46}.canvas svg .node.inferred rect{fill:#fffbf1;stroke:#d5b468;stroke-dasharray:5 3}.canvas svg .node.inferred>text:first-of-type{fill:#936b25}.canvas svg .node:hover rect{stroke:#478b79;stroke-width:2;filter:drop-shadow(0 7px 9px #254c3f18)}.canvas svg .node.selected rect,.canvas svg .node:focus-visible rect{stroke:#1e7c66;stroke-width:3;fill:#f1faf6;filter:drop-shadow(0 7px 10px #1e7c661a)}.canvas svg .node.inferred.selected rect{fill:#fff7e6;stroke:#ad7c1b}.canvas svg .edge path{stroke:#497969;stroke-width:2.2}.canvas svg .edge.related path{stroke:#95a9a2;stroke-width:2;stroke-dasharray:4 6}.canvas svg .edge.conditional path{stroke-dasharray:10 5}.canvas svg .edge.focused-edge path:not([style]){stroke:#116f59;stroke-width:3.4}.canvas svg .edge.selected-edge path:not([style]){stroke:#c08828;stroke-width:4}.canvas svg .dimmed{opacity:.16;pointer-events:none}.canvas svg .hidden{display:none}.canvas svg .node,.canvas svg .edge{transition:opacity .2s}.zoom-controls{position:absolute;right:16px;bottom:16px;display:flex;align-items:center;gap:1px;padding:4px;background:#fffffff5;border:1px solid var(--line);box-shadow:0 3px 12px #2346370a;border-radius:8px}.zoom-controls button{border-color:transparent;padding:4px 9px;font-size:12px}.zoom-controls span{font-size:10px;color:var(--muted);min-width:35px;text-align:center}.graph-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 18px;background:white;border-top:1px solid var(--line);margin-top:auto}.legend{display:flex;gap:12px;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:10px}.legend>span{display:flex;align-items:center;gap:5px}.legend i{width:9px;height:9px;border-radius:3px;display:inline-block}.legend-explicit{background:#fff;border:1px solid #8fae9e}.legend-inferred{background:#fff4d5;border:1px dashed #bb8c31}#counter{font-size:10px;color:var(--muted)}.inspector{border-left:1px solid var(--line);background:white;min-width:0;max-height:900px;overflow:auto;scroll-behavior:smooth}.panel-tabs{display:flex;position:sticky;top:0;background:#fff;z-index:2;padding:0 14px;border-bottom:1px solid var(--line);gap:7px}.panel-tabs button{border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;font-size:12px;padding:16px 9px;color:var(--muted);white-space:nowrap}.panel-tabs button[aria-selected=true]{color:var(--teal);border-bottom-color:var(--teal);font-weight:650}#issueBadge{font-size:10px;background:#f9efdb;color:var(--amber);border-radius:3px;padding:1px 4px;margin-left:3px}.stepper{display:flex;justify-content:space-between;align-items:center;padding:15px 20px 0}.stepper button{border-color:transparent;font-size:11px;color:var(--teal);padding:4px 0}.stepper span{font-size:10px;color:var(--muted)}#detail{padding:12px 22px 22px;animation:panel-in .22s ease}.detail-kicker{font-size:10px;letter-spacing:.5px;color:var(--muted);margin:0 0 8px}.detail-title{font-size:18px;font-weight:650;line-height:1.6;margin:0 0 12px;overflow-wrap:anywhere}.pills{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 15px}.pill.inferred{background:var(--amber-soft);color:var(--amber)}.pill.pending{background:#f1f3f4;color:#68767e}.detail-section{border-top:1px solid var(--line);padding-top:14px;margin-top:18px}.detail-section h3{font-size:12px;color:var(--ink);margin:0 0 9px;font-weight:650}.detail-section p{font-size:12px;color:var(--muted);margin:5px 0 12px;overflow-wrap:anywhere}.quote-card{border:1px solid var(--line);border-radius:7px;margin:10px 0;background:#fafcfb;overflow:hidden}.quote-label{font-size:10px;color:var(--teal);padding:8px 11px;border-bottom:1px solid var(--line);background:#f2f7f4}.quote{font-family:Georgia,'Times New Roman','Microsoft YaHei',serif;font-size:13px;line-height:1.75;padding:11px 13px;white-space:pre-wrap;overflow-wrap:anywhere}.quote-meta{padding:0 12px 10px;font-size:10px;color:var(--muted)}.inference-box{padding:12px 13px;border-radius:7px;background:var(--amber-soft);border:1px solid #f0e0bc;font-size:12px}.inference-box strong{font-size:11px;color:var(--amber)}.inference-box p{margin:4px 0;color:#806c44}.connection-button,.issue-button,.decision-button{display:block;width:100%;text-align:left;margin:8px 0;padding:11px 12px;border-radius:7px;font-size:12px;white-space:normal}.connection-button small,.issue-button small,.decision-button small{display:block;font-size:10px;color:var(--muted);margin:4px 0}.connection-button:hover{transform:translateX(2px)}.panel-intro{padding:19px 22px 10px}.panel-intro h3{font-size:15px;margin:0 0 9px}.panel-intro p{font-size:12px;line-height:1.8;color:var(--muted);margin:0 0 14px}#issues,#decisions{padding:0 20px 20px}.issue-button{border-left:3px solid #d7b474}.panel-empty{font-size:12px;color:var(--muted);padding:18px 0}.cards{padding:12px 18px 22px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-height:650px;overflow:auto}.goal-card{text-align:left;padding:18px;border-radius:10px;background:white;border:1px solid var(--line);display:flex;flex-direction:column;gap:10px;min-height:150px;animation:panel-in .2s ease}.goal-card.inferred{background:#fffcf5;border-color:#ead9ad}.goal-card.selected{border-color:#287f68;box-shadow:0 0 0 2px #287f6818}.goal-card>strong{font-size:14px;line-height:1.8;font-weight:600}.goal-card>small{font-size:10px;color:var(--muted);margin-top:auto}.empty-state{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:1;background:#f8fbfaf5;padding:30px;text-align:center}.empty-state strong{font-size:18px}.empty-state p{font-size:12px;color:var(--muted);margin:10px 0 20px}.delivery-footer{padding:17px 1px 9px;display:flex;align-items:center;justify-content:space-between;gap:20px;font-size:11px;color:var(--muted)}.delivery-footer p{margin:0}.delivery-footer nav{display:flex;gap:15px;white-space:nowrap}.delivery-footer a{text-decoration:none}.provenance{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}.provenance summary{cursor:pointer}.provenance div{padding:10px 0;overflow-wrap:anywhere}.provenance p{margin:6px 0}dialog{max-width:570px;width:calc(100% - 35px);border:1px solid var(--line);border-radius:13px;padding:27px;color:var(--ink);box-shadow:0 24px 100px #182e3933}dialog::backdrop{background:#18372d4a;backdrop-filter:blur(3px)}.dialog-heading{display:flex;align-items:center;justify-content:space-between;gap:15px}.dialog-heading h2{font-size:19px;margin:0}dialog ol{padding-left:23px}dialog li{margin:16px 0;font-size:13px}dialog>p{font-size:12px;color:var(--muted)}@keyframes panel-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}@media(min-width:1500px){.workspace{grid-template-columns:minmax(0,1fr) 390px}.canvas{min-height:590px}}@media(max-width:1050px){.app-header{padding:0 22px}.app-main{padding:24px 22px}.workspace{grid-template-columns:minmax(0,1fr) 310px}.intro .model-note{max-width:280px}.metric{padding:14px}.metric strong{font-size:28px}.graph-heading{padding:12px}.mode-switch button{padding:5px 8px}.graph-heading>button{font-size:10px}.toolbar{gap:8px}.workspace-bar{padding-left:16px;padding-right:16px}.toolbar{padding-left:16px;padding-right:16px}}@media(max-width:760px){.app-header{height:62px;padding:0 16px}.brand{font-size:21px}.brand small,.header-meta .version{display:none}.header-meta{gap:5px}.header-meta .text-button{font-size:11px;padding:6px}.app-main{padding:22px 14px}.intro{display:block;margin-bottom:20px}.intro h1{font-size:24px}.intro .model-note{margin-top:18px;max-width:none;padding-left:12px}.metrics{grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:18px}.metric{padding:12px}.metric strong{font-size:27px}.metric small{font-size:10px}.workspace{grid-template-columns:1fr;min-height:0}.workspace-bar{padding:16px 13px 12px}.workspace-bar h2{font-size:14px}.workspace-bar .muted{font-size:10px}.toolbar{flex-wrap:wrap;padding:0 13px 13px}.search-wrap{max-width:none;flex-basis:100%}.toolbar select{flex:1}.inspector{border-left:0;border-top:1px solid var(--line);max-height:630px}.canvas{height:470px;min-height:470px}.cards{max-height:420px}.graph-footer{padding:10px 13px}.legend{font-size:9px;gap:9px}.delivery-footer{align-items:flex-start;flex-direction:column;gap:10px}.panel-tabs{position:sticky}.display-switch button{padding:5px 9px;font-size:11px}.graph-heading{gap:6px}.mode-switch button{font-size:11px}.graph-notice{font-size:10px;padding-left:15px}.goal-card{padding:13px;min-height:140px}.goal-card>strong{font-size:12px}.detail-title{font-size:18px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+.workspace-actions{display:flex;gap:12px;align-items:center}.workspace-actions>button{font-size:11px;color:var(--teal);padding:6px 11px}.workspace-focused .app-header,.workspace-focused .intro,.workspace-focused .metrics,.workspace-focused .delivery-footer,.workspace-focused .provenance{display:none}.workspace-focused .app-main{max-width:none;padding:14px}.workspace-focused .canvas{height:calc(100dvh - 242px);max-height:none;min-height:340px}.workspace-focused .inspector{max-height:calc(100dvh - 160px)}.workspace-focused .workspace{min-height:0}.workspace-focused .cards{height:calc(100dvh - 238px);max-height:none}.workspace-focused .workspace-bar{padding-top:12px;padding-bottom:10px}.workspace-focused .toolbar{padding-bottom:10px}@media(max-width:760px){.workspace-actions{gap:5px}.workspace-actions>button{padding:5px 7px;font-size:10px}.workspace-focused .canvas{height:430px;min-height:430px}.workspace-focused .inspector{max-height:620px}.workspace-focused .app-main{padding:8px}.workspace-focused .cards{max-height:55vh;height:auto}.workspace-bar>div:first-child{max-width:45%}}
+.canvas svg .dimmed{opacity:.48;pointer-events:auto}.canvas svg .edge.dimmed{opacity:.23}.workspace-focused .app-main{height:100dvh;padding:12px;overflow:hidden}.workspace-focused .workbench{height:100%;display:flex;flex-direction:column}.workspace-focused .workspace{flex:1;min-height:0;overflow:hidden}.workspace-focused .explorer{min-height:0}.workspace-focused .canvas{height:auto;min-height:0;flex:1;max-height:none}.workspace-focused .inspector{max-height:none;min-height:0;overflow:auto}.workspace-focused .cards{height:auto;flex:1;min-height:0;max-height:none;overflow:auto}.workspace-focused .graph-heading,.workspace-focused .graph-footer,.workspace-focused .graph-notice{flex-shrink:0}@media(max-width:760px){.workspace-focused .app-main{height:auto;padding:8px;overflow:visible}.workspace-focused .workbench{height:auto;display:block}.workspace-focused .workspace{overflow:visible}.workspace-focused .canvas{height:430px;min-height:430px;flex:none}.workspace-focused .inspector{max-height:620px}.workspace-focused .cards{max-height:55vh;flex:none}}
+</style></head><body>
+<header class="app-header"><a class="brand" href="#" aria-label="返回模型概览">Goal<span>Forge</span><small>目标模型工作台</small></a><div class="header-meta"><span class="version" id="version"></span><span id="readiness" class="status-chip"></span><button class="text-button" id="help">如何阅读模型</button></div></header>
+<main class="app-main">
+<section class="intro"><div><div class="eyebrow" id="documentName">MODEL EXPLORER</div><h1 id="title">目标模型概览</h1><p id="subtitle"></p></div><div class="model-note"><strong id="noteTitle">这是一份待审核的模型草案</strong><p id="noteBody">先浏览目标，再对照原文。图中的关系和推断都保留了判断依据。</p></div></section>
+<section class="metrics" aria-label="模型概览"><button class="metric" id="metricAll"><span>目标总数</span><strong id="goalCount">0</strong><small>查看全部目标</small></button><button class="metric" id="metricExplicit"><span>显式目标</span><strong id="explicitCount">0</strong><small>资料中直接表达</small></button><button class="metric inferred-metric" id="metricInferred"><span>推断目标</span><strong id="inferredCount">0</strong><small>建议优先核对依据</small></button><button class="metric issue-metric" id="metricIssues"><span>待确认事项</span><strong id="issueCount">0</strong><small>查看尚未解决的问题</small></button></section>
+<section class="workbench">
+<div class="workspace-bar"><div><h2>探索目标模型</h2><span class="muted" id="modelCaption"></span></div><div class="workspace-actions"><button id="focusWorkspace" aria-pressed="false">专注阅读</button><div class="display-switch" role="group" aria-label="展示方式"><button id="graphView" aria-pressed="true">目标图</button><button id="cardsView" aria-pressed="false">目标清单</button></div></div></div>
+<div class="toolbar"><div class="search-wrap"><input id="search" type="search" aria-label="搜索目标" placeholder="搜索目标内容或编号…"><kbd>/</kbd></div><select id="origin" aria-label="目标来源"><option value="all">全部目标</option><option value="explicit">显式目标</option><option value="inferred">推断目标</option><option value="design_extension">设计扩展</option></select><label class="check-label"><input id="pending" type="checkbox">待审核</label><button id="reset" class="text-button">清除筛选</button></div>
+<div class="workspace"><section class="explorer" aria-label="模型浏览区"><div class="graph-heading"><div class="mode-switch" role="group" aria-label="关系显示范围"><button data-mode="all" aria-pressed="true">全景关系</button><button data-mode="refinement" aria-pressed="false">目标层级</button><button data-mode="related" aria-pressed="false">相关联系</button></div><button id="neighbors" aria-pressed="false" title="只显示所选目标及与其相连的目标">聚焦所选目标</button></div><div class="graph-notice" id="graphNotice"></div><div id="canvas" class="canvas" aria-label="交互目标图"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1140 690" role="img" aria-label="目标模型图" data-height="690">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#40516c"/></marker></defs>
+<style>text{font-family:Arial,"Microsoft YaHei",sans-serif}.edge{cursor:pointer}.edge path{fill:none;stroke:#546881;stroke-width:2}.edge.related path{stroke:#8193ac;stroke-dasharray:4 6}.edge.conditional path{stroke-dasharray:10 5}.node{cursor:pointer}.node rect{fill:#fff;stroke:#455e7c;stroke-width:1.5}.node.inferred rect{fill:#fff8e6;stroke:#ad7c1b;stroke-dasharray:5 3}.node:focus rect{stroke:#18768b;stroke-width:4}.hidden{display:none}.selected rect{stroke:#087f8c;stroke-width:4}</style>
+<rect width="100%" height="100%" fill="#f5f7fb"/>
+<text x="50" y="40" font-size="22" fill="#182c42">合成层级示例 · v0.1</text>
+<text x="50" y="70" font-size="13" fill="#536277">状态：unchecked · 人工审核：pending · 精化有箭头 / 相关为点线 / 条件为长虚线</text>
+<text x="50" y="96" font-size="12" fill="#536277">显式目标白底；推断目标浅黄虚线框。节点总数 3，不确定判断见决策列表。</text>
+<g class="edge refinement" data-edge="R1" data-a="G1" data-b="G2" tabindex="0" role="button" aria-label="精化G1G2">
+<path d="M205.0 270 C205.0 320.0 205.0 320.0 205.0 370" marker-end="url(#arrow)"/><path d="M205.0 270 C205.0 320.0 205.0 320.0 205.0 370" style="stroke:transparent;stroke-width:16"/>
+<title>精化：G1 / G2</title></g>
+<g class="node explicit" data-node="G1" tabindex="0" role="button" aria-label="根据天气合理安排活动">
+<rect x="50" y="160" width="310" height="110" rx="12"/>
+<text x="68" y="186" fill="#63738a" font-size="12">G1</text>
+<text x="68" y="213" fill="#182c42" font-size="16">根据天气合理安排活动</text>
+</g>
+<g class="node explicit" data-node="G2" tabindex="0" role="button" aria-label="根据降雨安排户外活动">
+<rect x="50" y="370" width="310" height="110" rx="12"/>
+<text x="68" y="396" fill="#63738a" font-size="12">G2</text>
+<text x="68" y="423" fill="#182c42" font-size="16">根据降雨安排户外活动</text>
+</g>
+<g class="node inferred" data-node="G3" tabindex="0" role="button" aria-label="减少搜索费用">
+<rect x="415" y="160" width="310" height="110" rx="12"/>
+<text x="433" y="186" fill="#63738a" font-size="12">G3</text>
+<text x="433" y="213" fill="#182c42" font-size="16">减少搜索费用</text>
+</g>
+<text x="50" y="655" font-size="11" fill="#63738a">内容标识：4f03b39826f93633923cb22317040b69a0f1b126ab67391724a6fdaff65cf22b</text>
+</svg><div id="emptyState" class="empty-state" hidden><strong>没有找到匹配的目标</strong><p>可以换一个关键词，或清除筛选查看全部目标。</p><button id="emptyReset">查看全部目标</button></div><div class="zoom-controls"><button id="zoomOut" aria-label="缩小">－</button><span id="zoomValue">100%</span><button id="zoomIn" aria-label="放大">＋</button><button id="fit">适应画布</button></div></div><div id="cards" class="cards" aria-label="目标清单" hidden></div><div class="graph-footer"><div class="legend"><span><i class="legend-explicit"></i>显式目标</span><span><i class="legend-inferred"></i>推断目标</span><span>实线箭头：精化</span><span>点线：相关</span></div><span id="counter" role="status" aria-live="polite"></span></div></section>
+<aside class="inspector" aria-label="目标和关系详情"><div class="panel-tabs" role="tablist" aria-label="查看内容"><button id="detailTab" role="tab" aria-selected="true" aria-controls="detailPanel">目标详情</button><button id="issuesTab" role="tab" aria-selected="false" aria-controls="issuesPanel">待确认 <span id="issueBadge"></span></button><button id="relationsTab" role="tab" aria-selected="false" aria-controls="relationsPanel">关系判断</button></div><div id="detailPanel" role="tabpanel" aria-labelledby="detailTab"><div class="stepper"><button id="previous" aria-label="上一个目标">上一个</button><span id="position"></span><button id="next" aria-label="下一个目标">下一个</button></div><section id="detail"></section></div><div id="issuesPanel" role="tabpanel" aria-labelledby="issuesTab" hidden><div class="panel-intro"><h3>需要你确认的地方</h3><p>这些是尚未确定的判断，不代表模型已经出错。点击一项可以查看关联目标。</p></div><div id="issues"></div></div><div id="relationsPanel" role="tabpanel" aria-labelledby="relationsTab" hidden><div class="panel-intro"><h3>目标之间是什么关系？</h3><p>相关表示存在联系；精化表示有依据的范围或情境具体化。不确定项不会作为精化边绘制。</p><select id="relationFilter" aria-label="筛选关系判断"><option value="all">全部关系判断</option><option value="refinement">精化</option><option value="related">相关</option><option value="uncertain">不确定</option><option value="none">未建立关系</option><option value="equivalent">等价待归并</option></select></div><div id="decisions"></div></div></aside></div></section>
+<section class="delivery-footer"><p>图是阅读入口，原文是判断依据。筛选、聚焦和布局变化不会修改模型。</p><nav aria-label="模型文件"><a href="goal-model.svg" download>矢量图 SVG</a><a href="goal-model.json" download>模型 JSON</a><a href="goal-model.md" download>说明文档</a></nav></section><details class="provenance"><summary>来源、检查状态与版本信息</summary><div id="provenance"></div></details>
+</main><dialog id="helpDialog"><div class="dialog-heading"><h2>用三步读懂目标模型</h2><button id="closeHelp">关闭</button></div><ol><li><strong>先看目标。</strong>白色卡片来自资料中的明确表达，浅黄色卡片包含推断，需要留意假设。</li><li><strong>再看依据。</strong>点击卡片，右侧显示原文、来源位置与判断理由。位置匹配不代表语义已经得到确认。</li><li><strong>最后看关系。</strong>实线箭头表示精化，点线表示相关。点击连线或打开“关系判断”，查看理由和条件。</li></ol><p>没有精化边时，模型可以有多个独立目标。无需为了形成树状图补造关系。</p><p class="muted">拖动画布平移，滚轮缩放；小屏幕可切换“目标清单”阅读。</p></dialog>
+<script id="model-data" type="application/json">{"schema_version": "goalforge-model-draft-1", "model_id": "合成层级示例", "version": "v0.1", "parent_version": null, "input_artifacts": [], "document_scope": {"document_ids": ["SYN"], "cross_document_allowed": false}, "goals": [{"goal_id": "G1", "statement": "根据天气合理安排活动", "origin": "explicit", "actor": "用户", "context": [], "evidence_ids": ["E1"], "source_candidate_ids": ["C1"], "trace_status": "direct", "review_status": "pending"}, {"goal_id": "G2", "statement": "根据降雨安排户外活动", "origin": "explicit", "actor": "用户", "context": [], "evidence_ids": ["E2"], "source_candidate_ids": ["C2"], "trace_status": "direct", "review_status": "pending"}, {"goal_id": "G3", "statement": "减少搜索费用", "origin": "inferred", "actor": "用户", "context": [], "evidence_ids": ["E3"], "source_candidate_ids": ["C3"], "trace_status": "inferred", "review_status": "pending"}], "pair_decisions": [{"pair_id": "P12", "a": "G1", "b": "G2", "label": "refinement", "parent_id": "G1", "child_id": "G2", "rationale": "合成示例：户外活动为范围具体化。", "interpretation": "scope_specialization", "evidence_ids": ["E1", "E2"], "conditions": []}, {"pair_id": "P13", "a": "G1", "b": "G3", "label": "none", "rationale": "材料未建立联系。", "evidence_ids": [], "conditions": []}, {"pair_id": "P23", "a": "G2", "b": "G3", "label": "uncertain", "rationale": "需用户确认。", "evidence_ids": [], "conditions": []}], "edges": [{"edge_id": "R1", "type": "refinement", "parent_id": "G1", "child_id": "G2", "decision_id": "P12", "conditions": []}], "evidence_index": [{"evidence_id": "E1", "source_id": "S1", "quote": "根据天气合理安排活动", "original_locator": {"paragraph": 1}, "location_status": "exact", "recognition_status": "native_text"}, {"evidence_id": "E2", "source_id": "S2", "quote": "根据降雨安排户外活动", "original_locator": {"paragraph": 2}, "location_status": "exact", "recognition_status": "native_text"}, {"evidence_id": "E3", "source_id": "S3", "quote": "减少搜索费用", "original_locator": {"paragraph": 3}, "location_status": "exact", "recognition_status": "native_text"}], "candidate_goal_mapping": [], "diagnostics": [], "relation_coverage": {"strategy": "all_pairs", "expected_pairs": 3, "evaluated_pairs": 3}, "issues": [{"code": "uncertain", "reason": "需审核G2与G3关系。", "target_ids": ["G2", "G3"], "severity": "needs_review"}], "assumptions": [], "validation": {"structure_status": "not_run", "semantic_status": "not_run", "report_path": null}, "review": {"status": "pending", "records": []}, "changes": [], "delivery": {"mode": "assemble", "readiness": "unchecked", "limitations": ["合成例，不代表实际提取效果。"], "files": ["goal-model.json", "goal-model.md", "goal-model.html", "goal-model.svg", "delivery-manifest.json"]}, "content_sha256": "4f03b39826f93633923cb22317040b69a0f1b126ab67391724a6fdaff65cf22b"}</script><script>'use strict';
+const model = JSON.parse(document.getElementById('model-data').textContent);
+const $ = id => document.getElementById(id);
+const svg = $('canvas').querySelector('svg');
+svg.setAttribute('role', 'group');
+const goals = new Map(model.goals.map(g => [g.goal_id, g]));
+const evidence = new Map(model.evidence_index.map(e => [e.evidence_id, e]));
+const decisions = new Map(model.pair_decisions.map(p => [p.pair_id, p]));
+const shortId = id => '目标 ' + String(model.goals.findIndex(g => g.goal_id === id) + 1).padStart(2, '0');
+const labels = {explicit:'显式目标',inferred:'推断目标',design_extension:'设计扩展',pending:'待人工审核',accepted:'已人工采纳',partial:'部分审核',rejected:'未采纳',unchecked:'待审核草案',blocked:'存在阻断问题',reviewable:'可供审核',not_run:'尚未执行',passed:'通过',failed:'未通过',direct:'直接支持',insufficient:'支持不足',contradicted:'存在反证',needs_retrace:'需重新追溯',related:'相关',refinement:'精化',none:'未建立关系',uncertain:'不确定',equivalent:'等价待归并',needs_review:'需要人工检查',reviewed_no_findings:'已审查，未发现问题',reviewed_with_findings:'已审查，存在问题'};
+const label = value => labels[value] || value || '未记录';
+const ends = edge => edge.type === 'refinement' ? [edge.parent_id, edge.child_id] : [edge.a, edge.b];
+const state = {selected:null, decision:null, mode:'all', focus:false, display:matchMedia('(max-width:760px)').matches?'cards':'graph'};
+const nodeElements = new Map([...svg.querySelectorAll('[data-node]')].map(n => [n.dataset.node,n]));
+let visibleIds = new Set(goals.keys()), view = [0,130,1140,Number(svg.dataset.height)-130], fitWidth = 1140, animation = null, drag = null;
+const reducedMotion = matchMedia('(prefers-reduced-motion:reduce)');
+
+function element(tag, text, cls) {const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;}
+function add(parent, tag, text, cls) {const node=element(tag,text,cls);parent.appendChild(node);return node;}
+function button(parent, text, action, cls) {const node=add(parent,'button',text,cls);node.addEventListener('click',action);return node;}
+function section(parent, title) {const node=add(parent,'section',undefined,'detail-section');add(node,'h3',title);return node;}
+function pill(parent,text,cls='') {add(parent,'span',text,'pill '+cls);}
+function switchPanel(name) {
+  for(const id of ['detail','issues','relations']) {
+    $(id+'Panel').hidden = id !== name;
+    $(id+'Tab').setAttribute('aria-selected',String(id===name));
+  }
+  document.querySelector('.inspector').scrollTop=0;
+}
+// All displayed text is inserted with textContent. Source material never becomes markup.
+function locationText(e) {
+  const loc=e.original_locator||{}, parts=[];
+  if(loc.page!==undefined)parts.push('第 '+loc.page+' 页');
+  if(loc.slide!==undefined)parts.push('第 '+loc.slide+' 张幻灯片');
+  if(loc.paragraph!==undefined)parts.push('第 '+loc.paragraph+' 段');
+  if(loc.line_start!==undefined)parts.push('第 '+loc.line_start+(loc.line_end!==loc.line_start&&loc.line_end!==undefined?'—'+loc.line_end:'')+' 行');
+  if(loc.time_start_ms!==undefined)parts.push((loc.time_start_ms/1000).toFixed(1)+'—'+(loc.time_end_ms/1000).toFixed(1)+' 秒');
+  if(loc.turn!==undefined)parts.push('访谈轮次 T'+String(loc.turn).padStart(3,'0'));
+  return parts.join(' · ') || e.source_id || '原件位置尚未确定';
+}
+function showEvidence(parent, ids) {
+  const box=section(parent,'原文依据');
+  if(!ids.length){add(box,'p','尚未提供可核对的原文。');return;}
+  add(box,'p','以下保留资料的原始语言，供你对照目标表述。');
+  for(const id of ids) {
+    const e=evidence.get(id);if(!e)continue;
+    const card=add(box,'div',undefined,'quote-card');
+    add(card,'div',locationText(e),'quote-label');
+    add(card,'div',e.quote,'quote');
+    const statuses={native_text:'原生文字',ocr_unverified:'文字识别稿，未经人工核对',transcript_unverified:'录音转写稿，未经人工核对',human_verified:'人工核对过的文字'};
+    const status=e.location_status==='exact'?'引文位置已核对':'引文位置待核对';
+    add(card,'div',status+' · '+(statuses[e.recognition_status]||'识别状态未记录'),'quote-meta');
+  }
+}
+function showOverview() {
+  const box=$('detail');box.replaceChildren();
+  add(box,'p','READING GUIDE','detail-kicker');
+  add(box,'h3','先选一个你关心的目标','detail-title');
+  add(box,'p','图中的每张卡片都是一个期望结果。点击后，可以查看它来自哪段原文、是否包含推断，以及与哪些目标有关。','muted');
+  button(box,'开始逐项查看',()=>{if(model.goals[0])selectGoal(model.goals[0].goal_id);});
+  const intro=section(box,'建议先看什么？');
+  button(intro,'先看 '+model.goals.filter(g=>g.origin==='inferred').length+' 个推断目标',()=>filterOrigin('inferred'),'connection-button');
+  button(intro,'查看 '+model.issues.length+' 项待确认事项',()=>switchPanel('issues'),'connection-button');
+  const meaning=section(box,'关系怎么理解？');
+  add(meaning,'p','精化：一个目标是另一个目标有依据的范围或情境具体化。');
+  add(meaning,'p','相关：两个目标存在联系，但不能因此认定上下级关系。');
+  updateStepper();
+}
+function renderGoal(id) {
+  const g=goals.get(id),box=$('detail');box.replaceChildren();
+  add(box,'p',shortId(id)+' · '+id,'detail-kicker');
+  add(box,'h3',g.statement,'detail-title');
+  const badges=add(box,'div',undefined,'pills');
+  pill(badges,label(g.origin),g.origin);pill(badges,label(g.review_status),'pending');
+  const status=section(box,'这个目标有多少依据？');
+  add(status,'p',({direct:'直接支持',inferred:'推断支持'}[g.trace_status]||label(g.trace_status))+'。'+(g.origin==='inferred'?'它由原资料推断而来，请特别留意下面的假设。':'它保留了资料中的明确表达，仍需对照情境审核。'));
+  if(g.context.length){const context=section(box,'适用情境');for(const item of g.context)add(context,'p',item);}
+  const assumptions=(model.assumptions||[]).filter(a=>g.source_candidate_ids.includes(a.candidate_id));
+  for(const a of assumptions){const inf=add(box,'div',undefined,'inference-box');add(inf,'strong','这部分包含推断');add(inf,'p',a.reason);for(const assumption of a.assumptions||[])add(inf,'p','需要确认：'+assumption);}
+  showEvidence(box,g.evidence_ids);
+  const links=section(box,'与哪些目标有联系？');
+  const pairs=model.pair_decisions.filter(p=>(p.a===id||p.b===id)&&['related','refinement','equivalent','uncertain'].includes(p.label));
+  if(!pairs.length)add(links,'p','当前资料未建立可采用的目标联系。这不代表现实中绝无关系。');
+  for(const p of pairs){const other=p.a===id?p.b:p.a;const b=button(links,'',()=>showDecision(p.pair_id),'connection-button');add(b,'span',goals.get(other).statement);add(b,'small',label(p.label)+' · 查看判断依据');}
+  updateStepper();
+}
+function selectGoal(id, options={}) {
+  if(!goals.has(id))return;
+  if(options.reveal){clearFilterValues();state.focus=false;}
+  state.selected=id;state.decision=null;renderGoal(id);switchPanel('detail');applyFilters(false);
+  if(options.focus){state.focus=true;$('neighbors').setAttribute('aria-pressed','true');applyFilters(true);}
+  else if(state.display==='graph'){const b=nodeElements.get(id).getBBox();if(b.x<view[0]||b.y<view[1]||b.x+b.width>view[0]+view[2]||b.y+b.height>view[1]+view[3])animateView([b.x+b.width/2-view[2]/2,b.y+b.height/2-view[3]/2,view[2],view[3]]);}
+}
+function showDecision(id) {
+  const p=decisions.get(id);if(!p)return;
+  state.decision=id;state.selected=null;state.focus=false;state.mode='all';updateModeButtons();clearFilterValues();
+  const box=$('detail');box.replaceChildren();
+  add(box,'p','RELATION · '+p.pair_id,'detail-kicker');
+  add(box,'h3','这两个目标'+({related:'存在关联',refinement:'构成精化',uncertain:'关系尚不确定',none:'尚未建立关系',equivalent:'可能等价'}[p.label]||'的关系'),'detail-title');
+  const badges=add(box,'div',undefined,'pills');pill(badges,label(p.label),p.label==='uncertain'?'inferred':'');pill(badges,'待人工审核','pending');
+  const nodes=section(box,'涉及的目标');
+  for(const target of [p.a,p.b])button(nodes,goals.get(target).statement,()=>selectGoal(target,{reveal:true}),'connection-button');
+  if(p.parent_id)add(nodes,'p','方向：'+shortId(p.parent_id)+' → '+shortId(p.child_id));
+  const why=section(box,'为什么这样判断？');add(why,'p',p.rationale);
+  if(p.label==='uncertain'||p.label==='none')add(why,'p',p.label==='uncertain'?'依据尚不足，暂不把这项判断绘制成确定连线。':'这里只表示当前资料未建立可采用关系。');
+  if(p.conditions?.length){const conditions=section(box,'关系成立的条件');for(const c of p.conditions)add(conditions,'p',c);}
+  showEvidence(box,p.evidence_ids||[]);switchPanel('detail');applyFilters(false);updateStepper();if(state.display==='graph')fit(true,new Set([p.a,p.b]));
+}
+function renderIssues() {
+  const box=$('issues');box.replaceChildren();
+  if(!model.issues.length)add(box,'p','没有另列待确认事项，但模型仍需按其审核状态使用。','panel-empty');
+  for(const [i,issue] of model.issues.entries()) {
+    const b=button(box,'',()=>{
+      const ids=issue.target_ids||[];
+      const pair=ids.length===2?model.pair_decisions.find(p=>new Set([p.a,p.b]).size===2&&ids.includes(p.a)&&ids.includes(p.b)):null;
+      if(pair)showDecision(pair.pair_id);else if(ids[0])selectGoal(ids[0],{reveal:true,focus:true});
+    },'issue-button');
+    add(b,'small',String(i+1).padStart(2,'0')+' · '+(issue.code==='uncertain_relation'?'关系需要确认':'需要核对'));
+    add(b,'span',issue.reason||issue.code);
+    const names=(issue.target_ids||[]).filter(id=>goals.has(id)).map(shortId);if(names.length)add(b,'small',names.join(' / ')+' · 点击查看');
+  }
+}
+function renderDecisions() {
+  const box=$('decisions'),filter=$('relationFilter').value;box.replaceChildren();
+  const found=model.pair_decisions.filter(p=>filter==='all'||p.label===filter);
+  if(!found.length)add(box,'p','当前模型没有这类关系判断。','panel-empty');
+  for(const p of found){const b=button(box,'',()=>showDecision(p.pair_id),'decision-button');add(b,'small',label(p.label)+' · '+shortId(p.a)+' / '+shortId(p.b));add(b,'span',goals.get(p.a).statement+' / '+goals.get(p.b).statement);}
+}
+function renderCards() {
+  const cards=$('cards');cards.replaceChildren();
+  for(const g of model.goals.filter(g=>visibleIds.has(g.goal_id))) {
+    const b=button(cards,'',()=>selectGoal(g.goal_id),'goal-card '+g.origin+(state.selected===g.goal_id?' selected':''));
+    b.setAttribute('aria-label',g.statement);
+    const top=add(b,'div',undefined,'pills');pill(top,shortId(g.goal_id));pill(top,label(g.origin),g.origin);
+    add(b,'strong',g.statement);add(b,'small',g.evidence_ids.length+' 段原文依据 · '+label(g.review_status));
+  }
+  if(!visibleIds.size){const box=add(cards,'div',undefined,'panel-empty');add(box,'p','没有匹配的目标。');button(box,'清除筛选',reset);}
+}
+function edgeAllowed(e){return state.mode==='all'||e.type===state.mode;}
+function applyFilters(refit=true) {
+  const query=$('search').value.trim().toLowerCase(),origin=$('origin').value;
+  const nearby=new Set(state.selected?[state.selected]:[]);
+  if(state.selected)for(const edge of model.edges.filter(edgeAllowed)){const [a,b]=ends(edge);if(a===state.selected||b===state.selected){nearby.add(a);nearby.add(b);}}
+  visibleIds=new Set(model.goals.filter(g=>(!query||(g.goal_id+' '+shortId(g.goal_id)+' '+g.statement).toLowerCase().includes(query))&&(origin==='all'||g.origin===origin)&&(!$('pending').checked||g.review_status==='pending')&&(!state.focus||!state.selected||nearby.has(g.goal_id))).map(g=>g.goal_id));
+  const activePair=state.decision?decisions.get(state.decision):null;
+  for(const [id,node] of nodeElements){node.classList.toggle('hidden',!visibleIds.has(id));node.classList.toggle('selected',state.selected===id||!!activePair&&[activePair.a,activePair.b].includes(id));node.classList.toggle('dimmed',activePair?![activePair.a,activePair.b].includes(id):!!state.selected&&!state.focus&&!nearby.has(id));}
+  let edgeCount=0;
+  for(const node of svg.querySelectorAll('[data-edge]')){const edge=model.edges.find(e=>e.edge_id===node.dataset.edge),[a,b]=ends(edge);const show=visibleIds.has(a)&&visibleIds.has(b)&&edgeAllowed(edge);node.classList.toggle('hidden',!show);node.classList.toggle('focused-edge',state.selected===a||state.selected===b);node.classList.toggle('selected-edge',state.decision===edge.decision_id);node.classList.toggle('dimmed',activePair?state.decision!==edge.decision_id:!!state.selected&&!state.focus&&state.selected!==a&&state.selected!==b);if(show)edgeCount++;}
+  $('counter').textContent='当前显示 '+visibleIds.size+' / '+model.goals.length+' 个目标 · '+edgeCount+' 条关系';
+  $('emptyState').hidden=visibleIds.size>0;
+  const refinement=model.edges.filter(e=>e.type==='refinement').length;
+  $('graphNotice').textContent=state.focus&&!state.selected?'先选择一个目标，再聚焦它的相邻目标。':state.mode==='refinement'&&!refinement?'当前没有可采用的精化关系，保留所有目标；可切换“全景关系”查看已有联系。':state.mode==='related'?'相关仅表示存在联系，不表示上下级关系。':state.mode==='all'&&!refinement?'这份模型目前以相关联系为主，尚未建立精化层级。':'点击卡片查看原文，点击连线查看关系依据。';
+  $('neighbors').setAttribute('aria-pressed',String(state.focus));
+  renderCards();updateStepper();
+  if(refit&&state.display==='graph'&&visibleIds.size)fit();
+}
+function clearFilterValues(){$('search').value='';$('origin').value='all';$('pending').checked=false;}
+function reset(){clearFilterValues();state.selected=null;state.decision=null;state.focus=false;state.mode='all';updateModeButtons();showOverview();switchPanel('detail');applyFilters();}
+function filterOrigin(origin){clearFilterValues();$('origin').value=origin;state.focus=false;state.selected=null;state.decision=null;applyFilters();const first=model.goals.find(g=>visibleIds.has(g.goal_id));if(first)selectGoal(first.goal_id);else showOverview();}
+function updateStepper(){const ids=[...visibleIds],index=ids.indexOf(state.selected);$('position').textContent=index>=0?(index+1)+' / '+ids.length:'逐项目标浏览';$('previous').disabled=ids.length===0||index<=0;$('next').disabled=ids.length===0||index===ids.length-1;}
+function move(offset){const ids=[...visibleIds];let index=ids.indexOf(state.selected);if(index<0)index=-1;const id=ids[Math.max(0,Math.min(ids.length-1,index+offset))];if(id)selectGoal(id);}
+function updateModeButtons(){for(const b of document.querySelectorAll('[data-mode]'))b.setAttribute('aria-pressed',String(b.dataset.mode===state.mode));}
+function setDisplay(display){state.display=display;$('canvas').hidden=display!=='graph';$('cards').hidden=display!=='cards';$('graphView').setAttribute('aria-pressed',String(display==='graph'));$('cardsView').setAttribute('aria-pressed',String(display==='cards'));if(display==='graph')fit(false);}
+function paint(){svg.setAttribute('viewBox',view.join(' '));$('zoomValue').textContent=Math.round(fitWidth/view[2]*100)+'%';}
+function animateView(target,animate=true){if(animation)cancelAnimationFrame(animation);if(!animate||reducedMotion.matches){view=target;paint();return;}const before=[...view],start=performance.now();function frame(now){const t=Math.min(1,(now-start)/230),ease=1-Math.pow(1-t,3);view=target.map((n,i)=>before[i]+(n-before[i])*ease);paint();if(t<1)animation=requestAnimationFrame(frame);else animation=null;}animation=requestAnimationFrame(frame);}
+function fit(animate=true,ids=visibleIds){if(!ids.size||state.display!=='graph')return;const bounds=[...nodeElements].filter(([id])=>ids.has(id)).map(([,n])=>n.getBBox());if(!bounds.length)return;const x=Math.min(...bounds.map(b=>b.x))-42,y=Math.min(...bounds.map(b=>b.y))-42,w=Math.max(...bounds.map(b=>b.x+b.width))-x+42,h=Math.max(...bounds.map(b=>b.y+b.height))-y+72;const width=Math.max(w,470),height=Math.max(h,230);fitWidth=width;animateView([x-(width-w)/2,y-(height-h)/2,width,height],animate);}
+function zoom(factor){const width=view[2]*factor,height=view[3]*factor;if(width<160||width>16000)return;animateView([view[0]+(view[2]-width)/2,view[1]+(view[3]-height)/2,width,height]);}
+
+for(const [id,node] of nodeElements){const g=goals.get(id);const first=node.querySelector('text');if(first)first.textContent=shortId(id)+' · '+(g.origin==='inferred'?'推断':'显式');node.addEventListener('click',()=>selectGoal(id));node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();selectGoal(id);}});}
+for(const node of svg.querySelectorAll('[data-edge]')){const edge=model.edges.find(e=>e.edge_id===node.dataset.edge);const p=decisions.get(edge.decision_id);node.setAttribute('aria-label',label(p.label)+'：'+goals.get(p.a).statement+' / '+goals.get(p.b).statement);node.addEventListener('click',()=>showDecision(p.pair_id));node.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showDecision(p.pair_id);}});}
+for(const id of ['detail','issues','relations'])$(id+'Tab').addEventListener('click',()=>switchPanel(id));
+for(const [index,id] of ['detail','issues','relations'].entries())$(id+'Tab').addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();const ids=['detail','issues','relations'],next=ids[(index+(e.key==='ArrowRight'?1:2))%3];switchPanel(next);$(next+'Tab').focus();}});
+$('previous').onclick=()=>move(-1);$('next').onclick=()=>move(1);$('relationFilter').onchange=renderDecisions;
+$('metricAll').onclick=reset;$('metricExplicit').onclick=()=>filterOrigin('explicit');$('metricInferred').onclick=()=>filterOrigin('inferred');$('metricIssues').onclick=()=>switchPanel('issues');
+$('graphView').onclick=()=>setDisplay('graph');$('cardsView').onclick=()=>setDisplay('cards');
+for(const b of document.querySelectorAll('[data-mode]'))b.addEventListener('click',()=>{state.mode=b.dataset.mode;updateModeButtons();applyFilters();});
+$('neighbors').onclick=()=>{state.focus=!state.focus;applyFilters();};$('reset').onclick=reset;$('emptyReset').onclick=reset;
+$('search').addEventListener('input',()=>{state.focus=false;applyFilters();if(state.selected&&!visibleIds.has(state.selected)){state.selected=null;state.decision=null;showOverview();applyFilters(false);}});
+for(const id of ['origin','pending'])$(id).addEventListener('change',()=>{state.focus=false;applyFilters();if(state.selected&&!visibleIds.has(state.selected)){state.selected=null;showOverview();applyFilters(false);}});
+$('zoomIn').onclick=()=>zoom(.8);$('zoomOut').onclick=()=>zoom(1.25);$('fit').onclick=()=>fit();
+$('help').onclick=()=>$('helpDialog').showModal();$('closeHelp').onclick=()=>$('helpDialog').close();
+function focusWorkspace(active){document.body.classList.toggle('workspace-focused',active);$('focusWorkspace').textContent=active?'退出专注':'专注阅读';$('focusWorkspace').setAttribute('aria-pressed',String(active));window.scrollTo({top:0,behavior:'instant'});requestAnimationFrame(()=>fit(false));}
+$('focusWorkspace').onclick=()=>focusWorkspace(!document.body.classList.contains('workspace-focused'));
+document.querySelector('.brand').addEventListener('click',e=>{e.preventDefault();reset();});
+document.addEventListener('keydown',e=>{if(e.key==='/'&&!['INPUT','TEXTAREA','SELECT'].includes(document.activeElement.tagName)&&!$('helpDialog').open){e.preventDefault();$('search').focus();}if(e.key==='Escape'&&!$('helpDialog').open&&document.body.classList.contains('workspace-focused'))focusWorkspace(false);});
+svg.addEventListener('wheel',e=>{e.preventDefault();zoom(e.deltaY>0?1.12:.89);},{passive:false});
+svg.addEventListener('pointerdown',e=>{if(e.target.closest('[data-node],[data-edge]'))return;if(animation)cancelAnimationFrame(animation);drag={x:e.clientX,y:e.clientY,view:[...view]};svg.setPointerCapture(e.pointerId);svg.style.cursor='grabbing';});
+svg.addEventListener('pointermove',e=>{if(!drag)return;const ratio=Math.max(drag.view[2]/svg.clientWidth,drag.view[3]/svg.clientHeight);view=[drag.view[0]-(e.clientX-drag.x)*ratio,drag.view[1]-(e.clientY-drag.y)*ratio,drag.view[2],drag.view[3]];paint();});
+for(const name of ['pointerup','pointercancel','lostpointercapture'])svg.addEventListener(name,()=>{drag=null;svg.style.cursor='';});
+window.addEventListener('resize',()=>fit(false));
+
+const docIds=model.document_scope?.document_ids||[];
+$('documentName').textContent=(docIds.join(' / ')||model.model_id)+' · 目标模型';
+$('subtitle').textContent='从 '+model.goals.length+' 个目标出发，查看它们之间的联系，并回到原文确认每一项判断。';
+$('version').textContent=model.version;$('readiness').textContent=label(model.delivery.readiness);
+if(model.delivery.readiness==='blocked'){$('noteTitle').textContent='模型存在需要处理的问题';$('noteBody').textContent='可以继续浏览，但请先核对待确认事项，再决定如何采用。';}
+$('goalCount').textContent=model.goals.length;$('explicitCount').textContent=model.goals.filter(g=>g.origin==='explicit').length;$('inferredCount').textContent=model.goals.filter(g=>g.origin==='inferred').length;$('issueCount').textContent=model.issues.length;$('issueBadge').textContent=model.issues.length;
+$('modelCaption').textContent=model.edges.filter(e=>e.type==='refinement').length+' 条精化 · '+model.edges.filter(e=>e.type==='related').length+' 条相关 · '+model.pair_decisions.filter(p=>p.label==='uncertain').length+' 对关系待确认';
+for(const text of ['模型：'+model.model_id+' · '+model.version,'结构检查：'+label(model.validation.structure_status),'语义审查：'+label(model.validation.semantic_status),'人工审核：'+label(model.review.status),...(model.delivery.limitations||[]),'内容标识：'+model.content_sha256])add($('provenance'),'p',text);
+renderIssues();renderDecisions();showOverview();applyFilters(false);setDisplay(state.display);
+</script></body></html>

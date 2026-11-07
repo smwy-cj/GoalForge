@@ -1,0 +1,148 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "4700435abecd699b9b4008bcb1740c522124bc3c5201b9d0fd2a1b2fef36e0e6",
+    "input_sha256": "65c998afbbb7ff5a2394a3fad838cdeea089c2cc3ad896288837d67a56a66b7c"
+  },
+  "judgments": {
+    "DOC010-C001": {
+      "target_statement": "依据天气预报决定当天穿什么、带什么，以及安排户外活动与行程。",
+      "label": "direct",
+      "rationale": "T007 直接给出主要用途：「primary purpose is a planning... plan what I have to wear on a particular day or plan my outdoor activities」，T033 补充只在陌生地点才需要。",
+      "supported_parts": [
+        "主要用途：T008「primary purpose is a planning」",
+        "具体内容：T008「plan what I have to wear」与「plan my outdoor activities」",
+        "适用条件：T034「whenever I'm like in the new place... I have to use weather」"
+      ],
+      "unsupported_parts": [
+        "「熟悉地点不查」是使用边界，未说明平台应如何据此调整",
+        "未说明对预报精度的具体要求（按天/按时段）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取主要用途句",
+        "2. 加入陌生人地条件",
+        "3. 无相反证据 → direct"
+      ]
+    },
+    "DOC010-C002": {
+      "target_statement": "出行前查看整周预报，据此决定是否购买活动门票。",
+      "label": "direct",
+      "rationale": "T019 明确旅行场景的做法与理由：「if I have to plan a trip. I would check whether for entire week」，因为「I have to buy ticket for tickets for those activities」。",
+      "supported_parts": [
+        "整周预报：T020「check whether for entire week」",
+        "用途：T020「I have to buy ticket for tickets for those activities」",
+        "理由：T022「there's no point in buying tickets at that point」"
+      ],
+      "unsupported_parts": [
+        "日常仍只看当天（T020「I do it daily」），未说明为何不常用整周",
+        "未说明预报不确定性如何影响购票决策"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 区分日常与旅行两种查看粒度",
+        "2. 旅行场景的需求与理由均直接陈述",
+        "3. → direct"
+      ]
+    },
+    "DOC010-C003": {
+      "target_statement": "在极端天气（雷暴、洪水等）发生时第一时间得到告警，以便取消或推迟安排。",
+      "label": "direct",
+      "rationale": "T035 明确极端天气的重要性并给出行动规则「postpone the entire event and don't go out at all」，T039 进一步要求应用主动告警。",
+      "supported_parts": [
+        "对象：T036「thunderstorm or flood flooding conditions」",
+        "行动规则：T036「postpone the entire event」",
+        "告警要求：T040「expecting the weather app to give me notifications or alert」"
+      ],
+      "unsupported_parts": [
+        "未定义「极端」的阈值（降雨量、风速、预警等级）",
+        "现状部分依赖县政府通知，未说明应用应如何补位"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取重要性陈述与行动规则",
+        "2. 告警要求为直接期望",
+        "3. → direct"
+      ]
+    },
+    "DOC010-C004": {
+      "target_statement": "常规天气通知按每天三次的固定时点推送（早、午、晚），避免持续打扰。",
+      "label": "direct",
+      "rationale": "T041 描述已调整的通知节奏与原因：「I made it in a way that now I get it like 3 times per day」，并按早/午/晚固定，与其出门节奏对齐。",
+      "supported_parts": [
+        "频次：T042「now I get it like 3 times per day」",
+        "时点：T042「in the morning. in the afternoon, afternoon and in the evening」",
+        "理由：T042「blend in into my routine... that's when I go out」"
+      ],
+      "unsupported_parts": [
+        "「三次」是个人偏好值，未说明是否可自定义",
+        "未说明错过时点后的补推规则"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取频次、时点与理由",
+        "2. 三者一致，属维持型目标",
+        "3. → direct"
+      ]
+    },
+    "DOC010-C005": {
+      "target_statement": "降雨等不利天气期间获得高频实时更新（开始、持续、停止）。",
+      "label": "direct",
+      "rationale": "T049 明确降雨期间要高频通知（开始/持续/停止），T051 以「real time updates are very important」收束，并给出被淋湿的具体经历。",
+      "supported_parts": [
+        "高频通知：T050「frequent notifications like when it's stopping, when it's adding like when it's going」",
+        "重要性：T052「real time updates are very important」",
+        "代价：T052「But then it started raining and I got wet」"
+      ],
+      "unsupported_parts": [
+        "未定义「实时」的刷新间隔",
+        "未说明其他天气类型是否也需要同等频率"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取频次诉求与重要性判断",
+        "2. 具体经历支持其持续性",
+        "3. → direct"
+      ]
+    },
+    "DOC010-C006": {
+      "target_statement": "预报与实况、应用与网页之间保持一致，且数据及时更新。",
+      "label": "direct",
+      "rationale": "T057 指出更新不及时导致应用显示与实况不符，T059 指出网页与 app 之间不同步，两者合为一致性要求。",
+      "supported_parts": [
+        "更新不及时：T058「they don't get updates often」",
+        "与实况不符：T058「in the app itself is showing it's raining」",
+        "跨端不同步：T060「the synchronization between the website and the web app」"
+      ],
+      "unsupported_parts": [
+        "T060 句子未说完，跨端不同步的具体表现不完整",
+        "未说明以哪个端为准"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 区分「更新频率」与「跨端一致」两层",
+        "2. 两者均指向同一目标（信息可信）",
+        "3. → direct"
+      ]
+    },
+    "DOC010-C007": {
+      "target_statement": "未订阅时也不要显示广告。",
+      "label": "direct",
+      "rationale": "T057 直接表达对广告的反感，T071 把「no ads」列为理想体验三项之一。",
+      "supported_parts": [
+        "反感：T058「it just like shows me random ads, and I don't like that」",
+        "明确要求：T072「no ads, real time updates and should be consistent」"
+      ],
+      "unsupported_parts": [
+        "未说明是否接受付费去广告",
+        "未说明广告形式（横幅/插屏/开屏）的区别"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取反感陈述与明确要求",
+        "2. 两处互证",
+        "3. → direct"
+      ]
+    }
+  }
+}

@@ -1,0 +1,757 @@
+{
+  "document_id": "DOC017",
+  "review_status": "first_pass_complete",
+  "local_goals": [
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G001",
+      "local_statement": "只收到与自身技能匹配的岗位（软件工程、机器学习等），不被无关岗位与陌生人打扰。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "可按关键词自定义搜索",
+        "曾经因推送不准而错过岗位"
+      ],
+      "paper_ids": [
+        "g0",
+        "g1",
+        "g9",
+        "g12",
+        "g13",
+        "g18",
+        "g19",
+        "g31",
+        "g48",
+        "g50"
+      ],
+      "paper_statements": [
+        "Provide job updates specific to the user's domain and skill set.",
+        "Ensure job updates are timely and relevant to the user's criteria.",
+        "Provide accurate and relevant notifications that align with user preferences without being overly complicated or cluttered.",
+        "Allow users to customize job search criteria based on roles, companies, location, experience, and skill sets.",
+        "Allow users to customize keywords for job search.",
+        "Recommend job postings based on user's skill set match.",
+        "Identify user's interests to match with roles and skill sets.",
+        "Identify relevant job opportunities.",
+        "Provide users with relevant job recommendations.",
+        "Avoid displaying irrelevant job listings to users."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "技能匹配和减少随机打扰整合，岗位搜索能力只是手段。",
+      "evidence": [
+        {
+          "evidence_id": "E0001",
+          "quote": "job roles specific to the domain such as software engineering or machine learning roles",
+          "source_turn_ids": [
+            "T003"
+          ],
+          "start_char": 407,
+          "end_char": 494
+        },
+        {
+          "evidence_id": "E0002",
+          "quote": "job updates based on whatever is my skill set",
+          "source_turn_ids": [
+            "T003"
+          ],
+          "start_char": 516,
+          "end_char": 561
+        },
+        {
+          "evidence_id": "E0003",
+          "quote": "getting random job notifications. Random people reaching me out in Linkedin",
+          "source_turn_ids": [
+            "T069"
+          ],
+          "start_char": 12018,
+          "end_char": 12093
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G002",
+      "local_statement": "推送频率跟随求职状态：找工作时即时推送，不急时每周一次即可。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "背景：市场冷淡，每天只有一两条新岗位"
+      ],
+      "paper_ids": [
+        "g2"
+      ],
+      "paper_statements": [
+        "Receive job posting updates instantly or periodically based on user preferences."
+      ],
+      "correspondence": "local_narrower",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "即时/每周取决于求职状态，不是统一固定频率。",
+      "evidence": [
+        {
+          "evidence_id": "E0004",
+          "quote": "it would be great if I receive at the instant",
+          "source_turn_ids": [
+            "T005"
+          ],
+          "start_char": 938,
+          "end_char": 983
+        },
+        {
+          "evidence_id": "E0005",
+          "quote": "if I'm not looking actively, then it's okay to receive once in a week",
+          "source_turn_ids": [
+            "T005"
+          ],
+          "start_char": 1028,
+          "end_char": 1097
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G003",
+      "local_statement": "通过邮件接收岗位更新，邮件内信息精简且可直接投递。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "不排斥站内通知，但不愿把通知栏塞满"
+      ],
+      "paper_ids": [
+        "g3",
+        "g7",
+        "g8"
+      ],
+      "paper_statements": [
+        "Receive simplified job updates via mobile notifications.",
+        "Receive professional emails with necessary and concise job details.",
+        "Include a quick apply button for job applications in emails and the system."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "优先邮件及邮件直投明确，论文移动通知渠道不完全相同。",
+      "evidence": [
+        {
+          "evidence_id": "E0006",
+          "quote": "I would generally prefer getting via emails",
+          "source_turn_ids": [
+            "T007"
+          ],
+          "start_char": 1329,
+          "end_char": 1372
+        },
+        {
+          "evidence_id": "E0007",
+          "quote": "should be having a direct apply button in the email itself",
+          "source_turn_ids": [
+            "T009"
+          ],
+          "start_char": 1929,
+          "end_char": 1987
+        },
+        {
+          "evidence_id": "E0008",
+          "quote": "so that I don't need to waste time then navigating to the app, and then again, going to the company's portal",
+          "source_turn_ids": [
+            "T009"
+          ],
+          "start_char": 1989,
+          "end_char": 2097
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G004",
+      "local_statement": "按角色匹配度、薪资、地点、公司声誉的顺序权衡是否投递。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自述为明确的优先级顺序"
+      ],
+      "paper_ids": [
+        "g26",
+        "g27",
+        "g28",
+        "g29",
+        "g30",
+        "g33",
+        "g34"
+      ],
+      "paper_statements": [
+        "Evaluate the interest and suitability for a job role.",
+        "Consider payment details when considering job roles.",
+        "Assess the job location's suitability.",
+        "Consider eligibility based on work experience.",
+        "Provide role matches based on past experiences and education.",
+        "Assess the company's reputation.",
+        "Consider the company's reputation when prioritizing job opportunities."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "角色、薪资、地点、声誉的排序在本地保留，资格/经历比对非全部等价。",
+      "evidence": [
+        {
+          "evidence_id": "E0009",
+          "quote": "one is the role like, I'll see if the role is really interesting. And I'm suitable for that role second is the payment. And then comes the location. And of course the company reputation",
+          "source_turn_ids": [
+            "T019"
+          ],
+          "start_char": 4437,
+          "end_char": 4622
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G005",
+      "local_statement": "岗位页给出现任员工评价、团队在做的具体工作与技术栈，并以列表/卡片等结构呈现。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：LinkedIn 把大量文字堆在一起，需上下滚动才找到技术栈"
+      ],
+      "paper_ids": [
+        "g35",
+        "g36",
+        "g37",
+        "g38",
+        "g40",
+        "g41",
+        "g42",
+        "g44",
+        "g55"
+      ],
+      "paper_statements": [
+        "Assess personal contribution to the team.",
+        "Assess potential contributions to the team.",
+        "Assess potential contributions to the company.",
+        "Review feedback from employees.",
+        "Identify the specific work being done by employees.",
+        "Identify the technology being used by employees.",
+        "Differentiate job descriptions and responsibilities.",
+        "Present information in a format that is easy to navigate.",
+        "Organize job postings with advanced structuring features."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "员工评价、团队工作和技术栈结构化；个人贡献评估只是相关。",
+      "evidence": [
+        {
+          "evidence_id": "E0010",
+          "quote": "I would consider the reviews from the current employees. What work they are specifically working on, what text they are using",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 4886,
+          "end_char": 5011
+        },
+        {
+          "evidence_id": "E0011",
+          "quote": "formatted in terms of list cars and tables that would be really helpful for me to navigate",
+          "source_turn_ids": [
+            "T023"
+          ],
+          "start_char": 5844,
+          "end_char": 5934
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G006",
+      "local_statement": "给出岗位要求与个人技能的匹配度百分比，作为投递依据。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：借助第三方插件自行比对",
+        "LinkedIn 已有 AI 提示「你很适合」"
+      ],
+      "paper_ids": [
+        "g15",
+        "g16",
+        "g17"
+      ],
+      "paper_statements": [
+        "Match user's skill sets with job listing requirements.",
+        "Identify and define necessary skill sets for job listings.",
+        "Provide a percentage match of user's skills against job requirements."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "匹配百分比是明确建议，百分比不等于已验证准确性。",
+      "evidence": [
+        {
+          "evidence_id": "E0012",
+          "quote": "it can also give some percentage out of it",
+          "source_turn_ids": [
+            "T033"
+          ],
+          "start_char": 7238,
+          "end_char": 7280
+        },
+        {
+          "evidence_id": "E0013",
+          "quote": "I kind of use some tool out Plugin. I see if I can actually match those skill sets with me",
+          "source_turn_ids": [
+            "T033"
+          ],
+          "start_char": 7142,
+          "end_char": 7232
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G007",
+      "local_statement": "投递时自动带出已有资料，不必重填一遍。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "认可少量针对性的定制，但反对整体重填"
+      ],
+      "paper_ids": [
+        "g10",
+        "g14",
+        "g23",
+        "g24",
+        "g54"
+      ],
+      "paper_statements": [
+        "Ensure the persistence of user-configured details without requiring changes.",
+        "Allow users to customize personal details for specific job roles.",
+        "Streamline the job application process to minimize navigation and manual effort.",
+        "Minimize repetitive entry of information already provided.",
+        "Automatically transfer user details from the job portal to other platforms."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "复用资料与允许小幅定制均保留，跨平台自动传输是更具体机制。",
+      "evidence": [
+        {
+          "evidence_id": "E0014",
+          "quote": "it's a hindrance for me to again fill all those details",
+          "source_turn_ids": [
+            "T073"
+          ],
+          "start_char": 12860,
+          "end_char": 12915
+        },
+        {
+          "evidence_id": "E0015",
+          "quote": "I don't want to have a lot of manual efforts in filling up just a job application",
+          "source_turn_ids": [
+            "T073"
+          ],
+          "start_char": 13184,
+          "end_char": 13265
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G008",
+      "local_statement": "在求职平台内直接完成投递，不必跳到公司官网重填。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：LinkedIn 投递仍跳转公司门户"
+      ],
+      "paper_ids": [
+        "g20",
+        "g21",
+        "g22",
+        "g23",
+        "g53"
+      ],
+      "paper_statements": [
+        "Facilitate users to apply for jobs directly through the application.",
+        "Reduce waiting time in the job application process.",
+        "Enable quick job application processes.",
+        "Streamline the job application process to minimize navigation and manual effort.",
+        "Integrate an in-page view of the job portal."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "平台内投递与省导航明确，不等同任何等待时间缩减。",
+      "evidence": [
+        {
+          "evidence_id": "E0016",
+          "quote": "that would be really great to have integrated",
+          "source_turn_ids": [
+            "T067"
+          ],
+          "start_char": 11607,
+          "end_char": 11652
+        },
+        {
+          "evidence_id": "E0017",
+          "quote": "there is no point in having Linkedin. In the 1st place, when I have to like navigate to other place",
+          "source_turn_ids": [
+            "T061"
+          ],
+          "start_char": 10703,
+          "end_char": 10802
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G009",
+      "local_statement": "在门户内收藏并跟踪感兴趣的岗位，不必另开文档记录。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：把 job id 记在 Notion 之类的文档里，周末统一处理"
+      ],
+      "paper_ids": [
+        "g5"
+      ],
+      "paper_statements": [
+        "Allow users to save and track job postings over time."
+      ],
+      "correspondence": "equivalent",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "在门户收藏跟踪替代外部文档。",
+      "evidence": [
+        {
+          "evidence_id": "E0018",
+          "quote": "It'd be great to have such features in the job portal itself",
+          "source_turn_ids": [
+            "T077"
+          ],
+          "start_char": 14196,
+          "end_char": 14256
+        },
+        {
+          "evidence_id": "E0019",
+          "quote": "have I just note down what the job id or whatever in a separate Doc",
+          "source_turn_ids": [
+            "T075"
+          ],
+          "start_char": 13740,
+          "end_char": 13807
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G010",
+      "local_statement": "只看到仍在招聘的岗位，不出现半年或一年前的过期信息。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "过期岗位会直接放弃投递"
+      ],
+      "paper_ids": [
+        "g52"
+      ],
+      "paper_statements": [
+        "Filter outdated job listings older than 6 months."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "过期信息的半年/一年为举例，不应固定为所有岗位超过半年必无效。",
+      "evidence": [
+        {
+          "evidence_id": "E0020",
+          "quote": "I don't want to apply for jobs which are like one year back, or even 6 months back",
+          "source_turn_ids": [
+            "T071"
+          ],
+          "start_char": 12286,
+          "end_char": 12368
+        },
+        {
+          "evidence_id": "E0021",
+          "quote": "not having a relevant or updated job list",
+          "source_turn_ids": [
+            "T071"
+          ],
+          "start_char": 12236,
+          "end_char": 12277
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G011",
+      "local_statement": "能看到每次投递的当前状态，并得到可用于改进的反馈。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "按 1–10 评分时给 10 分",
+        "抱怨多数平台不提供任何反馈"
+      ],
+      "paper_ids": [
+        "g32",
+        "g39",
+        "g49"
+      ],
+      "paper_statements": [
+        "Provide visibility into the status of job applications.",
+        "Provide feedback on job applications to help users improve future submissions.",
+        "Allow users to track the status of their job applications."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "状态和反馈整合，有用途依据。",
+      "evidence": [
+        {
+          "evidence_id": "E0022",
+          "quote": "I want to know what is my status of my application",
+          "source_turn_ids": [
+            "T105"
+          ],
+          "start_char": 18627,
+          "end_char": 18677
+        },
+        {
+          "evidence_id": "E0023",
+          "quote": "if there is any feedback that would be really great for me to improve in my further applications",
+          "source_turn_ids": [
+            "T105"
+          ],
+          "start_char": 18708,
+          "end_char": 18804
+        },
+        {
+          "evidence_id": "E0024",
+          "quote": "They don't like provide proper feedbacks",
+          "source_turn_ids": [
+            "T107"
+          ],
+          "start_char": 18950,
+          "end_char": 18990
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G012",
+      "local_statement": "投递记录对他人不可见，也不同意向公开自己投了哪些岗位。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "理由：竞争压力下不想被同侪看到"
+      ],
+      "paper_ids": [
+        "g46",
+        "g56",
+        "g57"
+      ],
+      "paper_statements": [
+        "Protect the confidentiality of job application details.",
+        "Prevent unauthorized access to user data from external entities.",
+        "Ensure only authorized entities within the platform have access to user data."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "不让同侪看到申请是具体保密需求，不必然覆盖全部外部访问控制。",
+      "evidence": [
+        {
+          "evidence_id": "E0025",
+          "quote": "Expose my applications",
+          "source_turn_ids": [
+            "T083"
+          ],
+          "start_char": 15333,
+          "end_char": 15355
+        },
+        {
+          "evidence_id": "E0026",
+          "quote": "I don't want people to know for what job roles I'm applying for",
+          "source_turn_ids": [
+            "T083"
+          ],
+          "start_char": 15364,
+          "end_char": 15427
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC017",
+      "local_id": "DOC017-G013",
+      "local_statement": "AI 用于识别与筛选岗位，但不自动代写申请材料，需本人确认。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "对 AI 写作持保留：不可靠，须本人核实"
+      ],
+      "paper_ids": [
+        "g11",
+        "g43"
+      ],
+      "paper_statements": [
+        "Verify AI-generated content to ensure reliability through manual processes.",
+        "Use AI to identify different jobs."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "AI识别与申请写作人工确认的边界保留。",
+      "evidence": [
+        {
+          "evidence_id": "E0027",
+          "quote": "it shouldn't be automatic",
+          "source_turn_ids": [
+            "T095"
+          ],
+          "start_char": 17332,
+          "end_char": 17357
+        },
+        {
+          "evidence_id": "E0028",
+          "quote": "when it comes for writing applications, I think I kind of still feel that Eas are uncertain",
+          "source_turn_ids": [
+            "T093"
+          ],
+          "start_char": 17088,
+          "end_char": 17179
+        },
+        {
+          "evidence_id": "E0029",
+          "quote": "if it is like verified by us, then it's good",
+          "source_turn_ids": [
+            "T095"
+          ],
+          "start_char": 17272,
+          "end_char": 17316
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    }
+  ],
+  "paper_only": [
+    {
+      "document_id": "DOC017",
+      "paper_id": "g4",
+      "statement": "Simplify the process of navigating job postings.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC017",
+      "paper_id": "g6",
+      "statement": "Enable easy comparison of job postings from different sources.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC017",
+      "paper_id": "g25",
+      "statement": "Facilitate connection with a person for job referrals.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC017",
+      "paper_id": "g45",
+      "statement": "Allow users to detail their work experience and projects in their profile.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC017",
+      "paper_id": "g47",
+      "statement": "Offer customization options for user profiles to accurately display work experience and education.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC017",
+      "paper_id": "g51",
+      "statement": "Allow users to blacklist or mark job postings as uninteresting.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    }
+  ],
+  "source_review_limits": "Local-goal correspondence is complete; paper-only support outside pilot is not exhaustively judged.",
+  "counts": {
+    "local_goals": 13,
+    "local_with_correspondence": 13,
+    "paper_goals": 58,
+    "paper_with_correspondence": 52,
+    "paper_only": 6,
+    "local_only": 0
+  },
+  "local_refinement_count": 0,
+  "eligible_paper_runs": 7,
+  "relation_semantic_reviews": [],
+  "rubric": {
+    "why_how_hierarchy": "insufficient_expression",
+    "kaos_refinement_groups": "not_expressed_in_old_schema",
+    "full_group_sufficiency": "not_assessed",
+    "alternatives_completeness": "not_assessed",
+    "source_locations": "supported_by_deterministic_checks",
+    "human_or_independent_review": "not_run"
+  }
+}

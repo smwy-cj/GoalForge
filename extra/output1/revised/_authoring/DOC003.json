@@ -1,0 +1,685 @@
+{
+  "document_id": "DOC003",
+  "status": "completed",
+  "limitations": [
+    "仅处理指定已转写访谈全文；未核听录音，未验证受访者关于产品、价格、组织或技术的事实陈述。",
+    "提供材料范围内完成，不代表业务需求穷尽；源索引 native_text 仅表示所提供文本格式，不构成人工核听证明。",
+    "语义提取、核验和模型自检由同一生成助手完成；独立语义审查与形式证明未执行，人工决定 pending。",
+    "精确模型ID、采样参数和预算未知；继承当前模型配置。现有契约无独立障碍/偏好关系层，相关限制保留在条件、依据和问题中。"
+  ],
+  "goals": [
+    {
+      "candidate_id": "DOC003-G01",
+      "statement": "找到符合当次情况的合适航班行程",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "紧急无其他合适行程时可接受不理想选项；价格过高也会让步。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T129",
+          "quote": "It should give me a good itinerary in terms of times, and it should match my situations."
+        },
+        {
+          "source_id": "DOC003:T081",
+          "quote": "If it's an urgent booking, and I do not have any other good alternative itineraries. I don't really have a choice.",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC003:T109",
+          "quote": "it is extremely situational, and I cannot give you like a concrete or objective criteria for that",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "受访者总结其行程研究目的，具体好坏依情境，未添加统一最优指标。",
+        "supported_parts": [
+          "找到符合当次情况的合适航班行程"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "受访者总结其行程研究目的，具体好坏依情境，未添加统一最优指标。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G02",
+      "statement": "为所选行程找到适合自己的好价格",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "愿为喜爱的飞行体验选择略贵航班；预算及紧急程度会影响选择。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T025",
+          "quote": "my primary focus is to like get a really good deal when I'm actually booking my flights."
+        },
+        {
+          "source_id": "DOC003:T019",
+          "quote": "I rather opted to fly to Singapore and take the world's longest flight from Singapore to Newark.",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC003:T109",
+          "quote": "I know what I'm looking for in terms of price",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确的低价取向；好价格来自经验和市场而非绝对最低或固定阈值。",
+        "supported_parts": [
+          "为所选行程找到适合自己的好价格"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确的低价取向；好价格来自经验和市场而非绝对最低或固定阈值。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G03",
+      "statement": "比较不同预订网站，找到价格、折扣和选项更适合自己的预订方",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "不要求在 Skyscanner 内完成付款。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T115",
+          "quote": "I would also use it to compare different booking websites, just to figure out which one is giving me the best possible combination of options."
+        },
+        {
+          "source_id": "DOC003:T077",
+          "quote": "you can compare discounts on different providers. The final costs on different providers.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确比较目的；T077说明最终费用与折扣，T103保留可离开聚合平台预订。",
+        "supported_parts": [
+          "比较不同预订网站，找到价格、折扣和选项更适合自己的预订方"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确比较目的；T077说明最终费用与折扣，T103保留可离开聚合平台预订。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G04",
+      "statement": "在可安排时尽量提前约一个月至一个半月订票以获得较好价格",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "理想可提前几个月；最近国内航班也会提前一两周才订。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T015",
+          "quote": "Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "保留 try/aim 的意向强度，非硬性截止期；理想更早与现实临时订票并存。",
+        "supported_parts": [
+          "在可安排时尽量提前约一个月至一个半月订票以获得较好价格"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "保留 try/aim 的意向强度，非硬性截止期；理想更早与现实临时订票并存。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G05",
+      "statement": "在需要接续交通时使航班时间与后续交通相衔接，尽量免于错过末班车及长时间空等",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "更早航班的价差过高时可能接受接车风险；取舍随生活阶段变化。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T083",
+          "quote": "If I had a better option available, something that just maybe lands like 1Â h earlier, so that I would be able to make sure that I get home that night, and I don't miss my train, and I don't end up having to stay up for like 6, 7Â h, waiting for the next train early in the morning. Then I would go for that option."
+        },
+        {
+          "source_id": "DOC003:T119",
+          "quote": "is it matching up with the schedules of the other modes of transport I'm planning to.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "历史例子中明确结果意图；T119进一步概括为接续时间匹配，未把提前一小时设为所有行程指标。",
+        "supported_parts": [
+          "在需要接续交通时使航班时间与后续交通相衔接，尽量免于错过末班车及长时间空等"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "历史例子中明确结果意图；T119进一步概括为接续时间匹配，未把提前一小时设为所有行程指标。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G06",
+      "statement": "安排探访行程时使航班时间匹配被访者的日程",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "要去见某人时。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "本人提出好行程的情境性例子；仅在探访情境适用。",
+        "supported_parts": [
+          "安排探访行程时使航班时间匹配被访者的日程"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "本人提出好行程的情境性例子；仅在探访情境适用。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G07",
+      "statement": "选航班时更希望保有夜间睡眠，但可以接受红眼航班",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "I would, I mean, I don't mind taking a red eye, but I would rather get my night's sleep."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "显式软目标，完整保留可让步例外，不改为禁止红眼。",
+        "supported_parts": [
+          "选航班时更希望保有夜间睡眠，但可以接受红眼航班"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "显式软目标，完整保留可让步例外，不改为禁止红眼。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G08",
+      "statement": "通常为中转留出约机场最短转机时间的1.5倍至2倍以更安全地应对延误",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "无签证问题时一般不在意中转次数；具体留时随航程及机场情况。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "Just to be safe and to account for delays based on the flight length. I I generally tend to at least go for 1.5 x or 2 x of that for a stopover."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "保留个人通常标准与目的；其关于MCT/IATA的解释是受访者陈述而非经验证领域事实。",
+        "supported_parts": [
+          "通常为中转留出约机场最短转机时间的1.5倍至2倍以更安全地应对延误"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "保留个人通常标准与目的；其关于MCT/IATA的解释是受访者陈述而非经验证领域事实。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G09",
+      "statement": "中转时尽可能探访不同机场的贵宾室，并确认当时能够使用",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "按卡或通行证、航站楼、政策、营业时间、装修及剩余次数核实。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries."
+        },
+        {
+          "source_id": "DOC003:T127",
+          "quote": "What's their access policy? What's their timings? Is the renovation going on?",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "偏好同时包含明确访问结果意图，不因偏好标签删除。",
+        "supported_parts": [
+          "中转时尽可能探访不同机场的贵宾室，并确认当时能够使用"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "偏好同时包含明确访问结果意图，不因偏好标签删除。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G10",
+      "statement": "理想情况下将持续更新的个人卡证及贵宾室权益信息与 Skyscanner 整合",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "受访者目前不信任第三方更新质量，偏向权益发行方信息源。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T125",
+          "quote": "it would be very nice if I could, input there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner."
+        },
+        {
+          "source_id": "DOC003:T125",
+          "quote": "So I prefer going to the source of the truth for the lounge access and get my information from there",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确理想建议，保留信息更新与个人权益方式；不当作已采纳功能。",
+        "supported_parts": [
+          "理想情况下将持续更新的个人卡证及贵宾室权益信息与 Skyscanner 整合"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确理想建议，保留信息更新与个人权益方式；不当作已采纳功能。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G11",
+      "statement": "搜索现金票时尽量匿名并避免登录及额外分享个人数据",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "现金票研究通常不登录；积分票需登录航空公司；极特殊不得已情境可登录。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T053",
+          "quote": "So I prefer going the anonymous route, especially when I'm searching for flights, that is, unless I'm booking with points"
+        },
+        {
+          "source_id": "DOC003:T093",
+          "quote": "It would be a very specific scenario that I really need to do this. I'm kind of forced, or my hands are tied. that I would end up doing that.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确偏好；保留积分例外，涨价及隐私担忧是受访者信念，未据此断言平台追踪涨价。",
+        "supported_parts": [
+          "搜索现金票时尽量匿名并避免登录及额外分享个人数据"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确偏好；保留积分例外，涨价及隐私担忧是受访者信念，未据此断言平台追踪涨价。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G12",
+      "statement": "必须成行且票价过高时通过若干路线的降价提醒及时找到较便宜的票",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "只举过一次使用；优先已登录且已持有其数据的服务以避免额外开户共享。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T087",
+          "quote": "I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price. I I book it"
+        },
+        {
+          "source_id": "DOC003:T089",
+          "quote": "Google already has my data. Why give it to another party as well.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确条件性提醒目的，已有功能的使用结果；不生成普遍推送或预测意图。",
+        "supported_parts": [
+          "必须成行且票价过高时通过若干路线的降价提醒及时找到较便宜的票"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确条件性提醒目的，已有功能的使用结果；不生成普遍推送或预测意图。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G13",
+      "statement": "并行研究多个出发地、目的地、日期和舱等组合，扩大可比较的航班选择",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "现金票与积分票搜索不同；个人不用积分第三方聚合器。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T099",
+          "quote": "So I'd like to search for all possible airports, let's say, from the Us."
+        },
+        {
+          "source_id": "DOC003:T095",
+          "quote": "You want to do hundreds of searches at the same time, but nobody wants to let you do those searches at the same time.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "结合T095明确大量并行搜索意图；20×5/6机场、7天往返、两舱是举例，不冻结成固定产品上限。",
+        "supported_parts": [
+          "并行研究多个出发地、目的地、日期和舱等组合，扩大可比较的航班选择"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "结合T095明确大量并行搜索意图；20×5/6机场、7天往返、两舱是举例，不冻结成固定产品上限。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G14",
+      "statement": "更快且更准确地研究更多行程组合，减少反复搜索的时间与心智负担",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "换平台的一次性收益视忙碌和学习成本而定；长期每次节约几分钟也值得。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T149",
+          "quote": "If I was able to do research at a much quicker pace. look for much, much more combinations. At the same time, if I was able to more accurately research for things while spending less time at it."
+        },
+        {
+          "source_id": "DOC003:T155",
+          "quote": "If I'm doing it long term I would definitely do it, even if it's saving me just a couple of minutes",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确改善意图；保留效率与准确而不设提速阈值。",
+        "supported_parts": [
+          "更快且更准确地研究更多行程组合，减少反复搜索的时间与心智负担"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确改善意图；保留效率与准确而不设提速阈值。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G15",
+      "statement": "尽量在一个地方取得订票研究所需信息，减少往返多个站点",
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [],
+      "inference": {
+        "basis_candidate_ids": [],
+        "reason": "受访者将信息分散列为两大障碍，并期待输入全部参数找理想选项，因此推断减少跨站信息分散的结果意图。",
+        "assumptions": [
+          "所述障碍代表希望改善而非仅中性描述。"
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "DOC003:T137",
+          "quote": "I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites"
+        }
+      ],
+      "support": {
+        "label": "inferred",
+        "rationale": "障碍结合一站式研究叙述正面支持整合意图，但本人未逐字命令单一平台，故标推断。",
+        "supported_parts": [
+          "尽量在一个地方取得订票研究所需信息，减少往返多个站点"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "所述障碍代表希望改善而非仅中性描述。"
+        ],
+        "reasoning_steps": [
+          "受访者将信息分散列为两大障碍，并期待输入全部参数找理想选项，因此推断减少跨站信息分散的结果意图。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G16",
+      "statement": "不熟悉某市场时可参考票价相对常见价格水平的比较",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "可取功能；熟悉价格后可能不再需要。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T111",
+          "quote": "it would help out for the times when I'm not familiar with the specific market."
+        },
+        {
+          "source_id": "DOC003:T109",
+          "quote": "it tells me if the price is above, below, or lower than the Median.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "认可采访者的价格比较建议；保留 nice to have 强度和熟悉后不需要的例外。",
+        "supported_parts": [
+          "不熟悉某市场时可参考票价相对常见价格水平的比较"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "认可采访者的价格比较建议；保留 nice to have 强度和熟悉后不需要的例外。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G17",
+      "statement": "选定行程和预订方后直接进入已填好航班信息的预订页面以完成确认与付款",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "最终在合作预订方网站输入个人信息并支付，聚合器本身不出票。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T047",
+          "quote": "So it's just like a confirmation of details and making the final payment."
+        },
+        {
+          "source_id": "DOC003:T135",
+          "quote": "the flight details will already be filled in the day I'm flying which flight I'm taking. Which flight I'm returning on.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "现有直接跳转与使用目的共同支持维持意图；T135纠正为行程信息预填，未误写个人资料已填。",
+        "supported_parts": [
+          "选定行程和预订方后直接进入已填好航班信息的预订页面以完成确认与付款"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "现有直接跳转与使用目的共同支持维持意图；T135纠正为行程信息预填，未误写个人资料已填。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G18",
+      "statement": "在亲友需要或有剩余积分礼券时帮助他们订票并节省费用",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "主要为自己订票，亲友约占少数。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T017",
+          "quote": "That helps them saving money as well. And it I get rid of the gift voucher as well."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "行为有明确节费和使用礼券目的，保留个人/亲友范围而不要求全体用户代理购票。",
+        "supported_parts": [
+          "在亲友需要或有剩余积分礼券时帮助他们订票并节省费用"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "行为有明确节费和使用礼券目的，保留个人/亲友范围而不要求全体用户代理购票。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC003-G19",
+      "statement": "选择自己感兴趣的飞行路线和中转体验，享受旅行中的飞行",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "尤其独自旅行；喜欢不同城市与贵宾室，仍可能限制55小时等过长旅程。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC003:T019",
+          "quote": "So I try to maximize my time in the air."
+        },
+        {
+          "source_id": "DOC003:T069",
+          "quote": "I don't want to spend 55Â h continuously flying",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确个人体验目的；不会转成普遍最长航时要求，价钱与时间不总是唯一目标。",
+        "supported_parts": [
+          "选择自己感兴趣的飞行路线和中转体验，享受旅行中的飞行"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确个人体验目的；不会转成普遍最长航时要求，价钱与时间不总是唯一目标。"
+        ]
+      }
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "DOC003-F01",
+      "parent_id": "DOC003-G01",
+      "child_ids": [
+        "DOC003-G05",
+        "DOC003-G06",
+        "DOC003-G07",
+        "DOC003-G08",
+        "DOC003-G09"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "这些是受访者提供的好行程因素而非穷尽定义；签证、预算及具体情况还会改变可接受性，不能断言共同充分。",
+      "assumptions": [],
+      "evidence": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "It's it's quite subjective and situational, so I'm not fully sure how to do it."
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "candidate_ids": [
+        "DOC003-G01",
+        "DOC003-G05",
+        "DOC003-G06",
+        "DOC003-G07",
+        "DOC003-G08",
+        "DOC003-G09"
+      ],
+      "question": "针对一次实际行程，哪些条件必须满足，哪些可以用价格或其他体验交换？",
+      "reason": "好行程未有统一客观标准，示例无法证明候选精化组充分。"
+    },
+    {
+      "candidate_ids": [
+        "DOC003-G10",
+        "DOC003-G15"
+      ],
+      "question": "若整合个人权益信息，可信更新源、授权数据范围和遗漏时的回退方式是什么？",
+      "reason": "理想整合与当前不信任第三方更新并存，不能推断已接受数据汇集。"
+    },
+    {
+      "candidate_ids": [
+        "DOC003-G13",
+        "DOC003-G14"
+      ],
+      "question": "实际需要的组合范围、可接受研究耗时和准确性标准是什么？",
+      "reason": "数字是例子，原文明确阈值很难统一。"
+    }
+  ],
+  "model_questions": [
+    {
+      "target_type": "group",
+      "target_id": "DOC003-F01",
+      "message": "好行程因素仅为例子；需以实际旅程条件确认充分性，保持候选。"
+    }
+  ],
+  "author_review": "# DOC003 生成方语义自检\n\n完整读取 T000—T162（全部163轮问题、回答与例外），源文保持不变；未听录音、未核验产品或MCT定义。最初合并读取被工具截断，随后按0—54、55—109、110—162重读覆盖全文。本记录是同一作者自检，非独立评审。\n\n逐目标核验：G01匹配当次情况且保留紧急让步；G02好价格不等于绝对最低，体验可优先；G03比较预订方包含最终折扣费用；G04提前订票是尽量而非截止；G05接车风险因价差可接受；G06只对探访有效；G07睡眠偏好允许红眼；G08保留个人MCT倍数与通常语气，未把IATA说法认证；G09贵宾室访问是有结果的偏好；G10整合为理想建议且附更新信任限制；G11匿名为现金研究偏好，有积分与不得已登录例外，追踪涨价只是信念；G12降价提醒仅在必须成行的实例支持；G13组合数字是例示而非固定规格；G14快且准确的意图有明确换平台回答，未造KPI；G15从两大障碍推断整合目的，明确推断假设；G16陌生市场比较为可取非必须；G17由当前使用目的支持保留转跳功能，区别航班预填与个人信息未填；G18亲友和礼券利用有结果目的；G19保留航空爱好带来的体验结果，不强推最短航程。\n\nF01全部核验后仍 proposed/partial：T119称 examples，T123及T083增加签证、转机安全和预算边界。子目标可能贡献但不共同充分。未强造总根；价格、研究效率、匿名、整合及贵宾室建议保持多根。提前订票是选定个人策略，降价提醒、并行搜索、跨站整合是不同机制，不将它们伪装成低价的充分AND或完整OR。\n\n正常场景（分析假设）：存在价格可接受且接续交通、探访时间、转机留时合适的航班；G01/02/05/06/08可共同满足，但不能由此证明所有旅程都满足。异常场景（分析假设）：唯一便宜航班晚到，可能错过末班车；G05可让步且不与G01简单矛盾。异常场景（分析假设）：贵宾室数据过期或卡额度不足；G10尚非可信实现，G09须回官方来源核实。异常场景（分析假设）：临时必须成行而无理想票，可接受不理想行程并设置提醒，匿名亦可能有例外。\n\n遗漏风险与处置：未把页面所有过滤器、环境排放、浏览器tab、UI说明自动当目标；熟悉界面减少负担已由G14承接，不产生禁止改版要求。旅游计划的未定目的地不当硬需求。未决问题已进入目标/组问题；无新证据可决定整组充分性，停止反复猜测。工程检查由冻结脚本实际执行；人审pending，独立审查与形式证明not_run。\n"
+}

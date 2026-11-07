@@ -1,0 +1,688 @@
+{
+  "document_id": "DOC007",
+  "model_path": "revised/DOC007/v1/delivery/goal-model.json",
+  "required_goal_ids": [
+    "DOC007-G01",
+    "DOC007-G02",
+    "DOC007-G03",
+    "DOC007-G08",
+    "DOC007-G09",
+    "DOC007-G10",
+    "DOC007-G11",
+    "DOC007-G12",
+    "DOC007-G13",
+    "DOC007-G14",
+    "DOC007-G15",
+    "DOC007-G16"
+  ],
+  "model_sha256": "d0a4940419f72a9d43133cb02838b216bfae364645d5968d1af4916354ee6f97",
+  "source_sha256": "236c845ece2f3583b2d8ab714e712fc26820c24b5e264f392b9ea6430a9ece63",
+  "hashes_match_assignment": true,
+  "source_read_ranges": [
+    {
+      "first_turn": "T000",
+      "last_turn": "T085",
+      "complete": true
+    }
+  ],
+  "source_complete_read": true,
+  "reviewed_goal_ids": [
+    "DOC007-G01",
+    "DOC007-G02",
+    "DOC007-G03",
+    "DOC007-G08",
+    "DOC007-G09",
+    "DOC007-G10",
+    "DOC007-G11",
+    "DOC007-G12",
+    "DOC007-G13",
+    "DOC007-G14",
+    "DOC007-G15",
+    "DOC007-G16"
+  ],
+  "goal_reviews": [
+    {
+      "goal_id": "DOC007-G01",
+      "statement": "在忙碌或补充固定日用品时，通过线上买菜节省购物时间",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "在忙碌或补充固定日用品时，通过线上买菜节省购物时间"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确使用动机：时间不足或已有固定采购项；不把约两周频率提升为固定要求。"
+        ],
+        "label": "direct",
+        "rationale": "明确使用动机：时间不足或已有固定采购项；不把约两周频率提升为固定要求。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T022明确忙周没时间实体购物或补固定库存时用线上；T050再确认效率目的，T056说明省逛店时间。当前情境和节时结果有明确依据，未把不规律约两周用一次变成要求。",
+      "source_ids": [
+        "DOC007:T021",
+        "DOC007:T022",
+        "DOC007:T023",
+        "DOC007:T024",
+        "DOC007:T050",
+        "DOC007:T056",
+        "DOC007:T058"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC007:T022",
+          "quote": "if I have like, a really busy week, and I don't have time to physically go or if I'm just buying the same things that I always buy and like don't need to explore.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC007-G02",
+      "statement": "搜索并加入购物车的商品应属于所选本地Whole Foods，避免结账时重搜",
+      "actor": "受访者",
+      "conditions": [
+        "跨Amazon与Whole Foods搜索时，图标易错过；两个结账清单是现有缓解措施"
+      ],
+      "author_origin": "inferred",
+      "author_support": {
+        "supported_parts": [
+          "搜索并加入购物车的商品应属于所选本地Whole Foods，避免结账时重搜"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "重搜被称为烦恼体现减少这一问题的意图"
+        ],
+        "reasoning_steps": [
+          "T026和T032混入非本地可购商品导致重搜，结合效率目的支持避免误加的结果推断；不强加必须先选店的设计。"
+        ],
+        "label": "inferred",
+        "rationale": "T026和T032混入非本地可购商品导致重搜，结合效率目的支持避免误加的结果推断；不强加必须先选店的设计。"
+      },
+      "author_inference": {
+        "basis_candidate_ids": [],
+        "reason": "T026和T032混入非本地可购商品导致重搜，结合效率目的支持避免误加的结果推断；不强加必须先选店的设计。",
+        "assumptions": [
+          "重搜被称为烦恼体现减少这一问题的意图"
+        ]
+      },
+      "independent_origin": "inferred",
+      "independent_support": "inferred",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T026误忘Whole Foods筛选后加入本地不可购商品，T032说分成两个结账清单后还要重搜且烦恼。推断避免误加和重搜合理；当前保留跨平台购物情境，不指定唯一先选店界面。",
+      "source_ids": [
+        "DOC007:T025",
+        "DOC007:T026",
+        "DOC007:T028",
+        "DOC007:T031",
+        "DOC007:T032"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC007:T032",
+          "quote": "all the ones that aren't in whole foods, I'll have to like go back and like research for it.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC007-G03",
+      "statement": "能用搜索直接找到已知品牌和规格的指定商品",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "能用搜索直接找到已知品牌和规格的指定商品"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确目标式购买方式与固定品牌口味；不是要求只能搜索、禁用探索。"
+        ],
+        "label": "direct",
+        "rationale": "明确目标式购买方式与固定品牌口味；不是要求只能搜索、禁用探索。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T028的准确搜索和T044已知品牌、roasted garlic商品例子支持直接找指定商品。目标记录有明确结果目的的现有搜索方式，未据常用行为排除T046偶尔品类探索。",
+      "source_ids": [
+        "DOC007:T028",
+        "DOC007:T030",
+        "DOC007:T033",
+        "DOC007:T034",
+        "DOC007:T043",
+        "DOC007:T044",
+        "DOC007:T046"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC007:T044",
+          "quote": "I know exactly the brand and like item that I want, so I'll put into the search bar like rouse tomato sauce, roasted garlic",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC007-G08",
+      "statement": "根据本人使用方式推荐可能有用但尚未发现的功能",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "根据本人使用方式推荐可能有用但尚未发现的功能"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "在发现隐藏列表功能后明确建议；buy again和your list实际能力仍未充分探索。"
+        ],
+        "label": "direct",
+        "rationale": "在发现隐藏列表功能后明确建议；buy again和your list实际能力仍未充分探索。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T034首次发现buy again，T068–070又发现深藏的列表，T072直接建议按自己的使用方式提示有用功能。当前只要求建议潜在有用功能，没有断言相关能力不存在或必然有用。",
+      "source_ids": [
+        "DOC007:T034",
+        "DOC007:T068",
+        "DOC007:T069",
+        "DOC007:T070",
+        "DOC007:T072"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC007:T072",
+          "quote": "they should just like somehow find a way to suggest features that might be useful to me, based on how I'm using this platform.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC007-G09",
+      "statement": "购买时清楚查看品牌、价格及商品数量",
+      "actor": "受访者",
+      "conditions": [
+        "尤其需要区分一袋与多袋等包装数量"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "购买时清楚查看品牌、价格及商品数量"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "受访者说明实际决策信息目的，T038数量细字难理解；不是仅把静态字段自动提目标。"
+        ],
+        "label": "direct",
+        "rationale": "受访者说明实际决策信息目的，T038数量细字难理解；不是仅把静态字段自动提目标。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T036/042明确会看品牌、价格、数量；T038说一袋与十袋要读细字，支持清楚查看这一结果。未引入价格排序、最低价或额外包装规格承诺。",
+      "source_ids": [
+        "DOC007:T035",
+        "DOC007:T036",
+        "DOC007:T038",
+        "DOC007:T040",
+        "DOC007:T042"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC007:T036",
+          "quote": "I typically, look at brand quantity and price",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        },
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC007:T038",
+          "quote": "you kind of have to like. Read the fine print to see if you're getting like one bag of cat litter, or like 10",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC007-G10",
+      "statement": "购买可能含坚果的食品时能查看配料表以判断是否适合自己的过敏情况",
+      "actor": "受访者",
+      "conditions": [
+        "例如新鲜布朗尼；配料表是否总可用受访者不确定"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "购买可能含坚果的食品时能查看配料表以判断是否适合自己的过敏情况"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确坚果过敏与查配料目的；不推成平台保证所有商品无坚果。"
+        ],
+        "label": "direct",
+        "rationale": "明确坚果过敏与查配料目的；不推成平台保证所有商品无坚果。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T038因坚果过敏而要查配料，并举新鲜布朗尼可能缺表。当前是有目的地获得信息而非保证食品安全；配料是否总可用的未知保留，不能把未核实缺失说成已证事实。",
+      "source_ids": [
+        "DOC007:T035",
+        "DOC007:T038",
+        "DOC007:T042"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC007:T038",
+          "quote": "Sometimes I'll have to look at ingredients because I'm allergic to nuts.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC007-G11",
+      "statement": "线上买菜以高效采购为主，通常不花时间随机探索新品",
+      "actor": "受访者",
+      "conditions": [
+        "需要探索时更偏好实体店；偶尔在线浏览零食品类仍可接受"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "线上买菜以高效采购为主，通常不花时间随机探索新品"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确强偏好和使用目的，但T046零食时偶尔探索是例外，不能生成完全禁止探索。"
+        ],
+        "label": "direct",
+        "rationale": "明确强偏好和使用目的，但T046零食时偶尔探索是例外，不能生成完全禁止探索。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T050强烈偏向效率和实体探索，T046仍允许偶尔浏览零食。通常和条件保存例外，当前软偏好成立；不是禁止线上探索，也不是全体用户的默认行为。",
+      "source_ids": [
+        "DOC007:T044",
+        "DOC007:T046",
+        "DOC007:T049",
+        "DOC007:T050"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC007:T050",
+          "quote": "I'm really there for efficiency. I'm not there to look around.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC007-G12",
+      "statement": "偶尔按零食品类浏览时，可考虑提供类似信息流的推荐",
+      "actor": "受访者",
+      "conditions": [
+        "仅偶尔零食探索；不要求默认强推或挤占定向采购"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "偶尔按零食品类浏览时，可考虑提供类似信息流的推荐"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "这是轻度探索建议；T050强效率偏好限定适用场景，后台已在做只是猜测。"
+        ],
+        "label": "direct",
+        "rationale": "这是轻度探索建议；T050强效率偏好限定适用场景，后台已在做只是猜测。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T046在零食品类偶尔探索时建议类似Facebook信息流推荐；后台可能在做只是猜测。T050效率优先限定其强度，当前可考虑和偶尔条件合适，不应因总体偏好而删去。",
+      "source_ids": [
+        "DOC007:T043",
+        "DOC007:T044",
+        "DOC007:T046",
+        "DOC007:T048",
+        "DOC007:T049",
+        "DOC007:T050"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC007:T046",
+          "quote": "it would kind of be interesting if they like made it when I'm scrolling through like more of, or they probably do this on the back end. But like a Facebook news feed where it's like recommending things.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC007-G13",
+      "statement": "商品缺货时可按商品选择指定替代品、接受店员最接近替代，或不替换",
+      "actor": "受访者",
+      "conditions": [
+        "意面可较宽松；特定配方或昂贵商品可能拒替"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "商品缺货时可按商品选择指定替代品、接受店员最接近替代，或不替换"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "结合T054实际拒替的选择与理由，显示对现有方式的有意利用；保留每项选择而非一律自动替代。"
+        ],
+        "label": "direct",
+        "rationale": "结合T054实际拒替的选择与理由，显示对现有方式的有意利用；保留每项选择而非一律自动替代。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T052说明本人会按商品用指定替代、店员最接近替代或不买，T054给实际拒替例子。保留三种选项及意面/特定配方差异有维持意图；未把当前能力升成统一自动替换规则。",
+      "source_ids": [
+        "DOC007:T051",
+        "DOC007:T052",
+        "DOC007:T054"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC007:T052",
+          "quote": "they'll have a an option to select either an alternative that you can pick, or the closest alternative that the store associate will pick, or just like not get it at all.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [
+          {
+            "target_type": "goal",
+            "target_id": "DOC007-G13",
+            "message": "替代品如何同时遵守配方、价格和坚果过敏条件？",
+            "blocking": false
+          }
+        ],
+        "extraction_questions": [
+          {
+            "candidate_ids": [
+              "DOC007-G13",
+              "DOC007-G14"
+            ],
+            "question": "替代品如何同时遵守配方、价格和坚果过敏条件？",
+            "reason": "有拒替偏好但没有完整替代规则。"
+          }
+        ]
+      }
+    },
+    {
+      "goal_id": "DOC007-G14",
+      "statement": "对特定配方所需或价格较高的商品，缺货时可以拒绝不合适的替换",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "对特定配方所需或价格较高的商品，缺货时可以拒绝不合适的替换"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确否定替换及情境；不将鱼露和酱油差异外推成完整替换规则。"
+        ],
+        "label": "direct",
+        "rationale": "明确否定替换及情境；不将鱼露和酱油差异外推成完整替换规则。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T054不愿鱼露换酱油，因配方不需要且贵，最终选缺货不替。可以拒绝不合适替换忠实且没有把所有贵商品一律拒替；具体过敏和价格规则仍留在已有问题中。",
+      "source_ids": [
+        "DOC007:T052",
+        "DOC007:T054"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC007:T054",
+          "quote": "I wouldn't want them to replace the fish sauce with soy sauce, because, like my recipe didn't need that. And it was also like too expensive",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [
+          {
+            "target_type": "goal",
+            "target_id": "DOC007-G14",
+            "message": "替代品如何同时遵守配方、价格和坚果过敏条件？",
+            "blocking": false
+          }
+        ],
+        "extraction_questions": [
+          {
+            "candidate_ids": [
+              "DOC007-G13",
+              "DOC007-G14"
+            ],
+            "question": "替代品如何同时遵守配方、价格和坚果过敏条件？",
+            "reason": "有拒替偏好但没有完整替代规则。"
+          }
+        ]
+      }
+    },
+    {
+      "goal_id": "DOC007-G15",
+      "statement": "优先选择附近门店自提，在节省逛店时间的同时避免配送费用",
+      "actor": "受访者",
+      "conditions": [
+        "住得近时的个人偏好，不排斥配送"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "优先选择附近门店自提，在节省逛店时间的同时避免配送费用"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确自提偏好与费用/时间取舍；T058仅确认自述Target免费，Whole Foods不确定，不宣称一律免费。"
+        ],
+        "label": "direct",
+        "rationale": "明确自提偏好与费用/时间取舍；T058仅确认自述Target免费，Whole Foods不确定，不宣称一律免费。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T056明确喜欢附近自提兼顾时间和免配送费，T058强调住得近、Target自提免费而Whole Foods不确定。当前优先选择为个人偏好，不承诺所有平台自提免费，也没排除配送。",
+      "source_ids": [
+        "DOC007:T055",
+        "DOC007:T056",
+        "DOC007:T058"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC007:T056",
+          "quote": "I typically like picking it up. because I think it's like the perfect balance of cost saving, since I don't have to pay for shipping, but also time saving",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC007-G16",
+      "statement": "希望了解线上与线下购买数据被如何关联和使用",
+      "actor": "受访者",
+      "conditions": [
+        "从未深入账户设置；实体与线上数据共享是受访者的理解"
+      ],
+      "author_origin": "inferred",
+      "author_support": {
+        "supported_parts": [
+          "希望了解线上与线下购买数据被如何关联和使用"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "持续好奇意味着有了解用途的意向"
+        ],
+        "reasoning_steps": [
+          "表达好奇与隐私顾虑可支持了解数据用途的软目标，但未要求新增控制或证明数据滥用。"
+        ],
+        "label": "inferred",
+        "rationale": "表达好奇与隐私顾虑可支持了解数据用途的软目标，但未要求新增控制或证明数据滥用。"
+      },
+      "author_inference": {
+        "basis_candidate_ids": [],
+        "reason": "表达好奇与隐私顾虑可支持了解数据用途的软目标，但未要求新增控制或证明数据滥用。",
+        "assumptions": [
+          "持续好奇意味着有了解用途的意向"
+        ]
+      },
+      "independent_origin": "inferred",
+      "independent_support": "inferred",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T066明确一直好奇线上线下购买数据怎样使用，但没深入设置。把好奇推为了解用途的软目标有依据；当前不补数据控制要求，关联数据仍标本人理解而非已验证平台事实。",
+      "source_ids": [
+        "DOC007:T063",
+        "DOC007:T064",
+        "DOC007:T065",
+        "DOC007:T066"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC007:T066",
+          "quote": "I've been curious like, how do they use that kind of information?",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    }
+  ],
+  "reviewed_group_ids": [],
+  "group_review_scope": "本轮只补指定目标；无需重开此前组结论，未对组作新充分性裁决。"
+}

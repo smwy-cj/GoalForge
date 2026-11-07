@@ -1,0 +1,225 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "534e7da4f62c104b03c790e3376c2d541d945d0f6c3f8a27695c03fb0a569b11",
+    "judgments_sha256": "0156aff13e39c2038ee2273fb5d1afa4cf8428f9e139da4ec8d3d395e7158e7e"
+  },
+  "groups": [
+    {
+      "group_id": "FG001",
+      "parent_id": "G003",
+      "child_ids": [
+        "G011",
+        "G007",
+        "G009",
+        "G010"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "找到合适人并完成沟通只是内推争取过程，不共同保证员工实际内推。",
+      "assumptions": [
+        "场景仅为作者概念层检查，不是形式化充分性证明。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "Yeah, sure. So when I want to connect with people for a referral. what I would 1st do is to to search on in the search bar. This company name, and also the school name that I am currently attending like. For example, if I want to ask for referral in company. I will like type my company and my university in the search bar to and then Kim will give me the list of people who has the same background is me like, who has, who is currently or previously a company employee. and also also was, or is, my university's student. and then I am going to click on, click into their profile and to see about their experience. If their experience are the exactly what I'm looking for. Then I'm going to hit the connect button and in Linkedin. There is an option that you can send a note to the your connection, potential connection. and I will usually like add a message to introduce myself and I maybe will also tell them like I want to. If they will like to refer me for the position. Yeah. And then after this, I will just like wait to see if they except my invitation to connect. and if they do, I can then start to chat with them for the further details. and if they're not, then linking will not show me, like any further other stuff. It will just be like a pending status for that specific connection.",
+          "role": "basis",
+          "start_char": 1800,
+          "end_char": 3096
+        }
+      ],
+      "relation_ids": [
+        "R003"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "对方接受且愿意帮助时，这些动作可推动获得内推。",
+          "outcome": "supports",
+          "rationale": "在所述条件下可解释这些子目标如何服务父目标；不扩大到所有场景。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "匹配员工不接受邀请或不愿内推，子动作完成仍未获内推。",
+          "outcome": "counterexample",
+          "rationale": "未解决的充分性缺口保留候选；不补造根、额外前提目标或完整性。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "FG001",
+      "message": "找到合适人并完成沟通只是内推争取过程，不共同保证员工实际内推。 异常场景：匹配员工不接受邀请或不愿内推，子动作完成仍未获内推。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G001",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "增加资料连接数量被明确用来向他人展示活跃。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T003",
+          "quote": "Yeah, sure. So but I'm just using Linkedin. My, there are 2 of my primary goals. So the 1st one is to enlarge my the number of my connections on my profile. So it's like when when I go in on the linking page, when I go to view profile by clicking on my My Like the me button in the linking there is like a section called, like the number of connections you have. So I think it's pretty important to to increase the numbers, to make sure that I to to show people that I'm active on Linkedin. So one rate, one main reason for me to doing the connections on Linkedin, just just to encourage this number. And my sec second goal is to to get referrals from current employees for my 3rd company. Cause you know that. the completion, the application for the internships and full time jobs. It's pretty competitive. And sometimes a referral really helps to get my resume being seen by recruiters. So that's Another thing I usually do on Linkedin.",
+          "role": "basis",
+          "start_char": 413,
+          "end_char": 1351
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G003",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "内推有助简历被看到，原文没有充分保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T003",
+          "quote": "Yeah, sure. So but I'm just using Linkedin. My, there are 2 of my primary goals. So the 1st one is to enlarge my the number of my connections on my profile. So it's like when when I go in on the linking page, when I go to view profile by clicking on my My Like the me button in the linking there is like a section called, like the number of connections you have. So I think it's pretty important to to increase the numbers, to make sure that I to to show people that I'm active on Linkedin. So one rate, one main reason for me to doing the connections on Linkedin, just just to encourage this number. And my sec second goal is to to get referrals from current employees for my 3rd company. Cause you know that. the completion, the application for the internships and full time jobs. It's pretty competitive. And sometimes a referral really helps to get my resume being seen by recruiters. So that's Another thing I usually do on Linkedin.",
+          "role": "basis",
+          "start_char": 413,
+          "end_char": 1351
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G011",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "选择现任同校员工服务内推机会，但对方仍可不回应。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T009",
+          "quote": "Yeah. So still use the company and the university, for example. So When I search for the Madison, you as a search bar. So linking will not always give me like So exactly what I want. So of the people shown the search result. Some people they were previous company employee. They are not current employees, so they are not able to refer me for the position. So this is like one thing I would not choose not to connect with these people. And Another thing is that sometimes the people in the search results. They only satisfy, like one of the one, or like none of the that the requirements I want. So that's also like what I will filter out for the potential connections. So yeah. So just for this example, I will. I will only choose people who is currently a company employee and who was my university's student. So I can. So when I send them messages I can tell them that I was also like a student in my university, and to increase the possibility that they want to refer me for the position.",
+          "role": "basis",
+          "start_char": 3285,
+          "end_char": 4277
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G005",
+      "target_id": "G006",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先检索再点开资料看经历。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "Yeah, sure. So when I want to connect with people for a referral. what I would 1st do is to to search on in the search bar. This company name, and also the school name that I am currently attending like. For example, if I want to ask for referral in company. I will like type my company and my university in the search bar to and then Kim will give me the list of people who has the same background is me like, who has, who is currently or previously a company employee. and also also was, or is, my university's student. and then I am going to click on, click into their profile and to see about their experience. If their experience are the exactly what I'm looking for. Then I'm going to hit the connect button and in Linkedin. There is an option that you can send a note to the your connection, potential connection. and I will usually like add a message to introduce myself and I maybe will also tell them like I want to. If they will like to refer me for the position. Yeah. And then after this, I will just like wait to see if they except my invitation to connect. and if they do, I can then start to chat with them for the further details. and if they're not, then linking will not show me, like any further other stuff. It will just be like a pending status for that specific connection.",
+          "role": "basis",
+          "start_char": 1800,
+          "end_char": 3096
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G006",
+      "target_id": "G007",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "检查匹配后才发邀请。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "Yeah, sure. So when I want to connect with people for a referral. what I would 1st do is to to search on in the search bar. This company name, and also the school name that I am currently attending like. For example, if I want to ask for referral in company. I will like type my company and my university in the search bar to and then Kim will give me the list of people who has the same background is me like, who has, who is currently or previously a company employee. and also also was, or is, my university's student. and then I am going to click on, click into their profile and to see about their experience. If their experience are the exactly what I'm looking for. Then I'm going to hit the connect button and in Linkedin. There is an option that you can send a note to the your connection, potential connection. and I will usually like add a message to introduce myself and I maybe will also tell them like I want to. If they will like to refer me for the position. Yeah. And then after this, I will just like wait to see if they except my invitation to connect. and if they do, I can then start to chat with them for the further details. and if they're not, then linking will not show me, like any further other stuff. It will just be like a pending status for that specific connection.",
+          "role": "basis",
+          "start_char": 1800,
+          "end_char": 3096
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G007",
+      "target_id": "G010",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "发出邀请并被接受后才进一步聊天。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "Yeah, sure. So when I want to connect with people for a referral. what I would 1st do is to to search on in the search bar. This company name, and also the school name that I am currently attending like. For example, if I want to ask for referral in company. I will like type my company and my university in the search bar to and then Kim will give me the list of people who has the same background is me like, who has, who is currently or previously a company employee. and also also was, or is, my university's student. and then I am going to click on, click into their profile and to see about their experience. If their experience are the exactly what I'm looking for. Then I'm going to hit the connect button and in Linkedin. There is an option that you can send a note to the your connection, potential connection. and I will usually like add a message to introduce myself and I maybe will also tell them like I want to. If they will like to refer me for the position. Yeah. And then after this, I will just like wait to see if they except my invitation to connect. and if they do, I can then start to chat with them for the further details. and if they're not, then linking will not show me, like any further other stuff. It will just be like a pending status for that specific connection.",
+          "role": "basis",
+          "start_char": 1800,
+          "end_char": 3096
+        }
+      ]
+    },
+    {
+      "relation_id": "R007",
+      "source_id": "G014",
+      "target_id": "G005",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "修改关键词是改善该检索的可选方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T015",
+          "quote": "So usually I would just like as a most ease, like simplest way, I think, is just to purchase the linking premium, because, like this, allow me to access like as much as possible potential connections as I want to. But this is pretty like this costs a lot. And so sometimes I may turn to the other. Option is that to modify the keywords in my when I was doing the searching. so I may kind of like delete one or 2 of the keyword. or like to be more specific, so to see like, if Lincoln is giving me so like a more precise people with like a more precise background that I'm looking for.",
+          "role": "basis",
+          "start_char": 6133,
+          "end_char": 6717
+        }
+      ]
+    },
+    {
+      "relation_id": "R008",
+      "source_id": "G011",
+      "target_id": "G005",
+      "type": "specialization",
+      "status": "rejected",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "筛选结果与执行搜索是不同动作，并非具体情境中的同一目标。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T009",
+          "quote": "Yeah. So still use the company and the university, for example. So When I search for the Madison, you as a search bar. So linking will not always give me like So exactly what I want. So of the people shown the search result. Some people they were previous company employee. They are not current employees, so they are not able to refer me for the position. So this is like one thing I would not choose not to connect with these people. And Another thing is that sometimes the people in the search results. They only satisfy, like one of the one, or like none of the that the requirements I want. So that's also like what I will filter out for the potential connections. So yeah. So just for this example, I will. I will only choose people who is currently a company employee and who was my university's student. So I can. So when I send them messages I can tell them that I was also like a student in my university, and to increase the possibility that they want to refer me for the position.",
+          "role": "basis",
+          "start_char": 3285,
+          "end_char": 4277
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

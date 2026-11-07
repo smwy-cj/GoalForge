@@ -1,0 +1,103 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "49898e230d747ab102037eeb352beec9bab952456244df828f72565fa6c8816c",
+    "judgments_sha256": "028baec2765fe64dab81c2b928f868223b1673ff34c20f0119730d6780740132"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G018",
+      "message": "移动端改善的四个要点（速度、直观性、草稿、评论线索）现分布在 G016/G017/G018 三个目标，是否应合并为一个目标？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "G008（用 news subreddit 跟进趋势）与 G009（把新闻排除在 Reddit 外）是否存在范围张力？原文以 trends 与 news 区分，但未给出判据。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G005",
+      "target_id": "G004",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "specific search target"
+      ],
+      "assumptions": [],
+      "rationale": "以 Google 追问加 reddit 关键词并直接打开帖子，是受访者为实现“针对具体问题取得答案”所选定的检索方式；方式目标指向其服务的目的目标，方向为手段→目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T007",
+          "quote": "So one is, if I open Reddit and I want to like, search for something specific. Then I open it through Google.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G003",
+      "target_id": "G004",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "stuck on a technical problem"
+      ],
+      "assumptions": [],
+      "rationale": "“卡住时到技术类社区求助”是“针对具体问题取得答案”在技术问题这一具体情境下的目标；只覆盖该情境，不声称覆盖 G004 的全部适用情形。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T003",
+          "quote": "So I use those when I'm stuck on a problem or need like other inputs for a problem.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G015",
+      "target_id": "G014",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "ad blocking is not available"
+      ],
+      "assumptions": [],
+      "rationale": "在广告拦截不可用的情形下购买高级订阅，是受访者为维持无广告阅读所给出的替代手段，其唯一好处被明确为去广告。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T047",
+          "quote": "the only advantage of the premium tier, I'd say, like from my usage point of view, the only advantage is no ads",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G019",
+      "target_id": "G006",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "when the right community for a question is unclear"
+      ],
+      "assumptions": [],
+      "rationale": "AI 定位 subreddit 的工具直接帮助发帖者选对社区，从而提高求助帖被对口成员回应的机会；有帮助不等于充分保证被回答。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T059",
+          "quote": "But there, there's much more value in posting in a specific subreddit, and finding that subreddit would be very useful.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

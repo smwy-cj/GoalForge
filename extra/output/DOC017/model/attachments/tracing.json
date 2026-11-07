@@ -1,0 +1,1609 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC017\\extraction.json",
+    "sha256": "2cefb108699c75d22db86bb6b67a226b83b935cacd8c2cbe42ff953d877ca23c",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "f77a8c37ff96e9fd2067c543c392aaffc8f1d8edc600502dabded0fc1a94cf3a",
+      "input_sha256": "2cefb108699c75d22db86bb6b67a226b83b935cacd8c2cbe42ff953d877ca23c"
+    },
+    "bundle_sha256": "dfea414dd92aa387a520bf4e5c7de0b962e44fda6d62ae8084a7cbac2b2921c3"
+  },
+  "sources": [
+    {
+      "document_id": "DOC017",
+      "expected_hash": "3505a4e39af82d3d6a2a9a4fe67296abbc45b80efd0629d24291eb740e7035ef",
+      "actual_hash": "3505a4e39af82d3d6a2a9a4fe67296abbc45b80efd0629d24291eb740e7035ef",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC017-C001",
+      "target_kind": "candidate",
+      "statement": "只收到与自身技能匹配的岗位（软件工程、机器学习等），不被无关岗位与陌生人打扰。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC017:S004",
+          "material_id": "M001",
+          "quote": "job roles specific to the domain such as software engineering or machine learning roles",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 407,
+          "end_char": 494,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S004",
+              "segment_start": 49,
+              "segment_end": 136,
+              "start_char": 407,
+              "end_char": 494
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 358,
+            "end_char": 601
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC017:S004",
+          "material_id": "M001",
+          "quote": "job updates based on whatever is my skill set",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 516,
+          "end_char": 561,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S004",
+              "segment_start": 158,
+              "segment_end": 203,
+              "start_char": 516,
+              "end_char": 561
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 358,
+            "end_char": 601
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC017:S070",
+          "material_id": "M001",
+          "quote": "getting random job notifications. Random people reaching me out in Linkedin",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12018,
+          "end_char": 12093,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S070",
+              "segment_start": 46,
+              "segment_end": 121,
+              "start_char": 12018,
+              "end_char": 12093
+            }
+          ],
+          "original_locator": {
+            "line_start": 70,
+            "line_end": 70,
+            "start_char": 11972,
+            "end_char": 12114
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S004",
+          "DOC017:S004",
+          "DOC017:S070"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "领域限定：T004「software engineering or machine learning roles」",
+          "技能匹配：T004「job updates based on whatever is my skill set」",
+          "反感无关：T070「getting random job notifications」"
+        ],
+        "unsupported_parts": [
+          "未定义匹配阈值",
+          "「陌生人打扰」与岗位推送是两类问题，此处合并记录"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取领域与技能两个限定",
+          "2. 加入反感项",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T003 明确要求按领域与技能匹配推送，T069 又说明不愿收无关通知与陌生人消息。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "只收到与自身技能匹配的岗位（软件工程、机器学习等），不被无关岗位与陌生人打扰。",
+        "label": "direct",
+        "rationale": "T003 明确要求按领域与技能匹配推送，T069 又说明不愿收无关通知与陌生人消息。",
+        "supported_parts": [
+          "领域限定：T004「software engineering or machine learning roles」",
+          "技能匹配：T004「job updates based on whatever is my skill set」",
+          "反感无关：T070「getting random job notifications」"
+        ],
+        "unsupported_parts": [
+          "未定义匹配阈值",
+          "「陌生人打扰」与岗位推送是两类问题，此处合并记录"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取领域与技能两个限定",
+          "2. 加入反感项",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C002",
+      "target_kind": "candidate",
+      "statement": "推送频率跟随求职状态：找工作时即时推送，不急时每周一次即可。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC017:S006",
+          "material_id": "M001",
+          "quote": "it would be great if I receive at the instant",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 938,
+          "end_char": 983,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S006",
+              "segment_start": 187,
+              "segment_end": 232,
+              "start_char": 938,
+              "end_char": 983
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 751,
+            "end_char": 1105
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC017:S006",
+          "material_id": "M001",
+          "quote": "if I'm not looking actively, then it's okay to receive once in a week",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1028,
+          "end_char": 1097,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S006",
+              "segment_start": 277,
+              "segment_end": 346,
+              "start_char": 1028,
+              "end_char": 1097
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 751,
+            "end_char": 1105
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S006",
+          "DOC017:S006"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "求职期：T006「receive at the instant」",
+          "非求职期：T006「it's okay to receive once in a week」"
+        ],
+        "unsupported_parts": [
+          "「是否在求职」由谁判定未说明",
+          "未说明即时推送的延迟上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两种状态下的频率",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T005 按自身求职状态给出两种频率要求，并解释市场供给稀少。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "推送频率跟随求职状态：找工作时即时推送，不急时每周一次即可。",
+        "label": "direct",
+        "rationale": "T005 按自身求职状态给出两种频率要求，并解释市场供给稀少。",
+        "supported_parts": [
+          "求职期：T006「receive at the instant」",
+          "非求职期：T006「it's okay to receive once in a week」"
+        ],
+        "unsupported_parts": [
+          "「是否在求职」由谁判定未说明",
+          "未说明即时推送的延迟上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两种状态下的频率",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C003",
+      "target_kind": "candidate",
+      "statement": "通过邮件接收岗位更新，邮件内信息精简且可直接投递。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC017:S008",
+          "material_id": "M001",
+          "quote": "I would generally prefer getting via emails",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1329,
+          "end_char": 1372,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S008",
+              "segment_start": 20,
+              "segment_end": 63,
+              "start_char": 1329,
+              "end_char": 1372
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 1309,
+            "end_char": 1576
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC017:S010",
+          "material_id": "M001",
+          "quote": "should be having a direct apply button in the email itself",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1929,
+          "end_char": 1987,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S010",
+              "segment_start": 155,
+              "segment_end": 213,
+              "start_char": 1929,
+              "end_char": 1987
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 1774,
+            "end_char": 2260
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC017:S010",
+          "material_id": "M001",
+          "quote": "so that I don't need to waste time then navigating to the app, and then again, going to the company's portal",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1989,
+          "end_char": 2097,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S010",
+              "segment_start": 215,
+              "segment_end": 323,
+              "start_char": 1989,
+              "end_char": 2097
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 1774,
+            "end_char": 2260
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S008",
+          "DOC017:S010",
+          "DOC017:S010"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "渠道：T008「prefer getting via emails」",
+          "一键投递：T010「a direct apply button in the email itself」",
+          "动机：T010「don't need to waste time then navigating」"
+        ],
+        "unsupported_parts": [
+          "未说明邮件频率与内容粒度",
+          "对站内通知的态度为「也可以，但别刷屏」"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取渠道与内容要求",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T007 说明渠道偏好，T009 说明邮件应含什么（精简信息 + 直接投递）。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "通过邮件接收岗位更新，邮件内信息精简且可直接投递。",
+        "label": "direct",
+        "rationale": "T007 说明渠道偏好，T009 说明邮件应含什么（精简信息 + 直接投递）。",
+        "supported_parts": [
+          "渠道：T008「prefer getting via emails」",
+          "一键投递：T010「a direct apply button in the email itself」",
+          "动机：T010「don't need to waste time then navigating」"
+        ],
+        "unsupported_parts": [
+          "未说明邮件频率与内容粒度",
+          "对站内通知的态度为「也可以，但别刷屏」"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取渠道与内容要求",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C004",
+      "target_kind": "candidate",
+      "statement": "按角色匹配度、薪资、地点、公司声誉的顺序权衡是否投递。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC017:S020",
+          "material_id": "M001",
+          "quote": "one is the role like, I'll see if the role is really interesting. And I'm suitable for that role second is the payment. And then comes the location. And of course the company reputation",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4437,
+          "end_char": 4622,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S020",
+              "segment_start": 29,
+              "segment_end": 214,
+              "start_char": 4437,
+              "end_char": 4622
+            }
+          ],
+          "original_locator": {
+            "line_start": 20,
+            "line_end": 20,
+            "start_char": 4408,
+            "end_char": 4741
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S020"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "第一：T020「the role... I'm suitable for that role」",
+          "第二：T020「the payment」",
+          "后两项：T020「the location. And of course the company reputation」"
+        ],
+        "unsupported_parts": [
+          "未说明各因素的否决门槛（如薪资低于多少不投）",
+          "顺序为自述偏好，未见实际取舍记录"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取四项与顺序",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T019 明确给出四项因素及其顺序。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "按角色匹配度、薪资、地点、公司声誉的顺序权衡是否投递。",
+        "label": "direct",
+        "rationale": "T019 明确给出四项因素及其顺序。",
+        "supported_parts": [
+          "第一：T020「the role... I'm suitable for that role」",
+          "第二：T020「the payment」",
+          "后两项：T020「the location. And of course the company reputation」"
+        ],
+        "unsupported_parts": [
+          "未说明各因素的否决门槛（如薪资低于多少不投）",
+          "顺序为自述偏好，未见实际取舍记录"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取四项与顺序",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C005",
+      "target_kind": "candidate",
+      "statement": "岗位页给出现任员工评价、团队在做的具体工作与技术栈，并以列表/卡片等结构呈现。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC017:S022",
+          "material_id": "M001",
+          "quote": "I would consider the reviews from the current employees. What work they are specifically working on, what text they are using",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4886,
+          "end_char": 5011,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S022",
+              "segment_start": 20,
+              "segment_end": 145,
+              "start_char": 4886,
+              "end_char": 5011
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 4866,
+            "end_char": 5190
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC017:S024",
+          "material_id": "M001",
+          "quote": "formatted in terms of list cars and tables that would be really helpful for me to navigate",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5844,
+          "end_char": 5934,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S024",
+              "segment_start": 259,
+              "segment_end": 349,
+              "start_char": 5844,
+              "end_char": 5934
+            }
+          ],
+          "original_locator": {
+            "line_start": 24,
+            "line_end": 24,
+            "start_char": 5585,
+            "end_char": 6001
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S022",
+          "DOC017:S024"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "员工评价：T022「reviews from the current employees」",
+          "具体工作与技术栈：T022「what work they are specifically working on, what text they are using」",
+          "呈现方式：T024「list cars and tables that would be really helpful」"
+        ],
+        "unsupported_parts": [
+          "未说明评价的可信度或来源审核",
+          "「text」应为 tech stack 的转写误写"
+        ],
+        "assumptions": [
+          "把「what text they are using」理解为技术栈"
+        ],
+        "reasoning_steps": [
+          "1. 取三类信息与呈现要求",
+          "2. 记录转写歧义",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T021 列出希望看到的三类信息，T023 要求结构化呈现并说明现状难找。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "岗位页给出现任员工评价、团队在做的具体工作与技术栈，并以列表/卡片等结构呈现。",
+        "label": "direct",
+        "rationale": "T021 列出希望看到的三类信息，T023 要求结构化呈现并说明现状难找。",
+        "supported_parts": [
+          "员工评价：T022「reviews from the current employees」",
+          "具体工作与技术栈：T022「what work they are specifically working on, what text they are using」",
+          "呈现方式：T024「list cars and tables that would be really helpful」"
+        ],
+        "unsupported_parts": [
+          "未说明评价的可信度或来源审核",
+          "「text」应为 tech stack 的转写误写"
+        ],
+        "assumptions": [
+          "把「what text they are using」理解为技术栈"
+        ],
+        "reasoning_steps": [
+          "1. 取三类信息与呈现要求",
+          "2. 记录转写歧义",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C006",
+      "target_kind": "candidate",
+      "statement": "给出岗位要求与个人技能的匹配度百分比，作为投递依据。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC017:S034",
+          "material_id": "M001",
+          "quote": "it can also give some percentage out of it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7238,
+          "end_char": 7280,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S034",
+              "segment_start": 245,
+              "segment_end": 287,
+              "start_char": 7238,
+              "end_char": 7280
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 6993,
+            "end_char": 7381
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC017:S034",
+          "material_id": "M001",
+          "quote": "I kind of use some tool out Plugin. I see if I can actually match those skill sets with me",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7142,
+          "end_char": 7232,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S034",
+              "segment_start": 149,
+              "segment_end": 239,
+              "start_char": 7142,
+              "end_char": 7232
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 6993,
+            "end_char": 7381
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S034",
+          "DOC017:S034"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "诉求：T034「it can also give some percentage out of it」",
+          "现状：T034「I kind of use some tool out Plugin」"
+        ],
+        "unsupported_parts": [
+          "未说明百分比的算法或可解释性",
+          "未说明阈值（多少以上才投）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求与现状",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T033 明确要求给出匹配度百分比，并说明目前靠第三方插件自行比对。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "给出岗位要求与个人技能的匹配度百分比，作为投递依据。",
+        "label": "direct",
+        "rationale": "T033 明确要求给出匹配度百分比，并说明目前靠第三方插件自行比对。",
+        "supported_parts": [
+          "诉求：T034「it can also give some percentage out of it」",
+          "现状：T034「I kind of use some tool out Plugin」"
+        ],
+        "unsupported_parts": [
+          "未说明百分比的算法或可解释性",
+          "未说明阈值（多少以上才投）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求与现状",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C007",
+      "target_kind": "candidate",
+      "statement": "投递时自动带出已有资料，不必重填一遍。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC017:S074",
+          "material_id": "M001",
+          "quote": "it's a hindrance for me to again fill all those details",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12860,
+          "end_char": 12915,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S074",
+              "segment_start": 42,
+              "segment_end": 97,
+              "start_char": 12860,
+              "end_char": 12915
+            }
+          ],
+          "original_locator": {
+            "line_start": 74,
+            "line_end": 74,
+            "start_char": 12818,
+            "end_char": 13266
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC017:S074",
+          "material_id": "M001",
+          "quote": "I don't want to have a lot of manual efforts in filling up just a job application",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13184,
+          "end_char": 13265,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S074",
+              "segment_start": 366,
+              "segment_end": 447,
+              "start_char": 13184,
+              "end_char": 13265
+            }
+          ],
+          "original_locator": {
+            "line_start": 74,
+            "line_end": 74,
+            "start_char": 12818,
+            "end_char": 13266
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S074",
+          "DOC017:S074"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "阻碍：T074「it's a hindrance for me to again fill all those details」",
+          "强度：T074「I don't want to have a lot of manual efforts」",
+          "例外：T074「sometimes I would like to kind of customize my details for few of the job roles」"
+        ],
+        "unsupported_parts": [
+          "未说明哪些字段必须保留可编辑",
+          "未说明简历解析的准确率要求"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取阻碍陈述与例外",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T073 明确指出重复填写是阻碍，同时保留「少量定制」的合理空间。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "投递时自动带出已有资料，不必重填一遍。",
+        "label": "direct",
+        "rationale": "T073 明确指出重复填写是阻碍，同时保留「少量定制」的合理空间。",
+        "supported_parts": [
+          "阻碍：T074「it's a hindrance for me to again fill all those details」",
+          "强度：T074「I don't want to have a lot of manual efforts」",
+          "例外：T074「sometimes I would like to kind of customize my details for few of the job roles」"
+        ],
+        "unsupported_parts": [
+          "未说明哪些字段必须保留可编辑",
+          "未说明简历解析的准确率要求"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取阻碍陈述与例外",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C008",
+      "target_kind": "candidate",
+      "statement": "在求职平台内直接完成投递，不必跳到公司官网重填。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC017:S068",
+          "material_id": "M001",
+          "quote": "that would be really great to have integrated",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 11607,
+          "end_char": 11652,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S068",
+              "segment_start": 26,
+              "segment_end": 71,
+              "start_char": 11607,
+              "end_char": 11652
+            }
+          ],
+          "original_locator": {
+            "line_start": 68,
+            "line_end": 68,
+            "start_char": 11581,
+            "end_char": 11846
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC017:S062",
+          "material_id": "M001",
+          "quote": "there is no point in having Linkedin. In the 1st place, when I have to like navigate to other place",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10703,
+          "end_char": 10802,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S062",
+              "segment_start": 84,
+              "segment_end": 183,
+              "start_char": 10703,
+              "end_char": 10802
+            }
+          ],
+          "original_locator": {
+            "line_start": 62,
+            "line_end": 62,
+            "start_char": 10619,
+            "end_char": 10809
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S068",
+          "DOC017:S062"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "质疑：T062「there is no point in having Linkedin... when I have to like navigate to other place」",
+          "诉求：T068「that would be really great to have integrated」"
+        ],
+        "unsupported_parts": [
+          "未说明公司自建系统是否会接受站内投递",
+          "未说明资料同步的技术前提"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取质疑与诉求",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T061 质疑跳转后的平台价值，T067 明确希望集成在站内。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在求职平台内直接完成投递，不必跳到公司官网重填。",
+        "label": "direct",
+        "rationale": "T061 质疑跳转后的平台价值，T067 明确希望集成在站内。",
+        "supported_parts": [
+          "质疑：T062「there is no point in having Linkedin... when I have to like navigate to other place」",
+          "诉求：T068「that would be really great to have integrated」"
+        ],
+        "unsupported_parts": [
+          "未说明公司自建系统是否会接受站内投递",
+          "未说明资料同步的技术前提"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取质疑与诉求",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C009",
+      "target_kind": "candidate",
+      "statement": "在门户内收藏并跟踪感兴趣的岗位，不必另开文档记录。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC017:S078",
+          "material_id": "M001",
+          "quote": "It'd be great to have such features in the job portal itself",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 14196,
+          "end_char": 14256,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S078",
+              "segment_start": 20,
+              "segment_end": 80,
+              "start_char": 14196,
+              "end_char": 14256
+            }
+          ],
+          "original_locator": {
+            "line_start": 78,
+            "line_end": 78,
+            "start_char": 14176,
+            "end_char": 14349
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC017:S076",
+          "material_id": "M001",
+          "quote": "have I just note down what the job id or whatever in a separate Doc",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13740,
+          "end_char": 13807,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S076",
+              "segment_start": 136,
+              "segment_end": 203,
+              "start_char": 13740,
+              "end_char": 13807
+            }
+          ],
+          "original_locator": {
+            "line_start": 76,
+            "line_end": 76,
+            "start_char": 13604,
+            "end_char": 13922
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S078",
+          "DOC017:S076"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "现状：T076「note down what the job id or whatever in a separate Doc」",
+          "诉求：T078「It'd be great to have such features in the job portal itself」",
+          "理由：T078「I don't want to navigate to another application」"
+        ],
+        "unsupported_parts": [
+          "未说明跟踪字段（状态、截止日期）",
+          "未说明与 C011 状态追踪的边界"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取现状与诉求",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T075 说明现状是在外部文档记 job id，T077 明确希望在门户内实现。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在门户内收藏并跟踪感兴趣的岗位，不必另开文档记录。",
+        "label": "direct",
+        "rationale": "T075 说明现状是在外部文档记 job id，T077 明确希望在门户内实现。",
+        "supported_parts": [
+          "现状：T076「note down what the job id or whatever in a separate Doc」",
+          "诉求：T078「It'd be great to have such features in the job portal itself」",
+          "理由：T078「I don't want to navigate to another application」"
+        ],
+        "unsupported_parts": [
+          "未说明跟踪字段（状态、截止日期）",
+          "未说明与 C011 状态追踪的边界"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取现状与诉求",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C010",
+      "target_kind": "candidate",
+      "statement": "只看到仍在招聘的岗位，不出现半年或一年前的过期信息。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC017:S072",
+          "material_id": "M001",
+          "quote": "I don't want to apply for jobs which are like one year back, or even 6 months back",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12286,
+          "end_char": 12368,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S072",
+              "segment_start": 106,
+              "segment_end": 188,
+              "start_char": 12286,
+              "end_char": 12368
+            }
+          ],
+          "original_locator": {
+            "line_start": 72,
+            "line_end": 72,
+            "start_char": 12180,
+            "end_char": 12490
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC017:S072",
+          "material_id": "M001",
+          "quote": "not having a relevant or updated job list",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12236,
+          "end_char": 12277,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S072",
+              "segment_start": 56,
+              "segment_end": 97,
+              "start_char": 12236,
+              "end_char": 12277
+            }
+          ],
+          "original_locator": {
+            "line_start": 72,
+            "line_end": 72,
+            "start_char": 12180,
+            "end_char": 12490
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S072",
+          "DOC017:S072"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "时效要求：T072「I don't want to apply for jobs which are like one year back, or even 6 months back」",
+          "问题归类：T072「not having a relevant or updated job list」"
+        ],
+        "unsupported_parts": [
+          "未说明「有效」的判定方式（发布日期 vs 平台校验）",
+          "6 个月为个人容忍上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取时效要求",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T071 明确不接受半年/一年前的岗位，并把它与「列表不更新」并列。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "只看到仍在招聘的岗位，不出现半年或一年前的过期信息。",
+        "label": "direct",
+        "rationale": "T071 明确不接受半年/一年前的岗位，并把它与「列表不更新」并列。",
+        "supported_parts": [
+          "时效要求：T072「I don't want to apply for jobs which are like one year back, or even 6 months back」",
+          "问题归类：T072「not having a relevant or updated job list」"
+        ],
+        "unsupported_parts": [
+          "未说明「有效」的判定方式（发布日期 vs 平台校验）",
+          "6 个月为个人容忍上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取时效要求",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C011",
+      "target_kind": "candidate",
+      "statement": "能看到每次投递的当前状态，并得到可用于改进的反馈。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC017:S106",
+          "material_id": "M001",
+          "quote": "I want to know what is my status of my application",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18627,
+          "end_char": 18677,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S106",
+              "segment_start": 51,
+              "segment_end": 101,
+              "start_char": 18627,
+              "end_char": 18677
+            }
+          ],
+          "original_locator": {
+            "line_start": 106,
+            "line_end": 106,
+            "start_char": 18576,
+            "end_char": 18805
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC017:S106",
+          "material_id": "M001",
+          "quote": "if there is any feedback that would be really great for me to improve in my further applications",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18708,
+          "end_char": 18804,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S106",
+              "segment_start": 132,
+              "segment_end": 228,
+              "start_char": 18708,
+              "end_char": 18804
+            }
+          ],
+          "original_locator": {
+            "line_start": 106,
+            "line_end": 106,
+            "start_char": 18576,
+            "end_char": 18805
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC017:S108",
+          "material_id": "M001",
+          "quote": "They don't like provide proper feedbacks",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18950,
+          "end_char": 18990,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S108",
+              "segment_start": 110,
+              "segment_end": 150,
+              "start_char": 18950,
+              "end_char": 18990
+            }
+          ],
+          "original_locator": {
+            "line_start": 108,
+            "line_end": 108,
+            "start_char": 18840,
+            "end_char": 18991
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S106",
+          "DOC017:S106",
+          "DOC017:S108"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "重要性：T106「I would say 10」",
+          "状态：T106「what is my status of my application」",
+          "反馈：T106「feedback that would be really great for me to improve」"
+        ],
+        "unsupported_parts": [
+          "未说明希望的更新频率",
+          "雇主侧无反馈时平台如何补位未讨论"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取评分与两项诉求",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T105 在被要求打分时给 10 分，并说明想要状态与反馈两个层次。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "能看到每次投递的当前状态，并得到可用于改进的反馈。",
+        "label": "direct",
+        "rationale": "T105 在被要求打分时给 10 分，并说明想要状态与反馈两个层次。",
+        "supported_parts": [
+          "重要性：T106「I would say 10」",
+          "状态：T106「what is my status of my application」",
+          "反馈：T106「feedback that would be really great for me to improve」"
+        ],
+        "unsupported_parts": [
+          "未说明希望的更新频率",
+          "雇主侧无反馈时平台如何补位未讨论"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取评分与两项诉求",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C012",
+      "target_kind": "candidate",
+      "statement": "投递记录对他人不可见，也不同意向公开自己投了哪些岗位。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC017:S084",
+          "material_id": "M001",
+          "quote": "Expose my applications",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15333,
+          "end_char": 15355,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S084",
+              "segment_start": 104,
+              "segment_end": 126,
+              "start_char": 15333,
+              "end_char": 15355
+            }
+          ],
+          "original_locator": {
+            "line_start": 84,
+            "line_end": 84,
+            "start_char": 15229,
+            "end_char": 15565
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC017:S084",
+          "material_id": "M001",
+          "quote": "I don't want people to know for what job roles I'm applying for",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15364,
+          "end_char": 15427,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S084",
+              "segment_start": 135,
+              "segment_end": 198,
+              "start_char": 15364,
+              "end_char": 15427
+            }
+          ],
+          "original_locator": {
+            "line_start": 84,
+            "line_end": 84,
+            "start_char": 15229,
+            "end_char": 15565
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S084",
+          "DOC017:S084"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "诉求：T084「I don't want to expose my applications」",
+          "理由：T084「there's a little no wrecking due to the competition these days」"
+        ],
+        "unsupported_parts": [
+          "未说明对雇主的可见性（投递对象是否可见）",
+          "未说明匿名投递是否可接受"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求与理由",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T083 明确要求投递记录保密，理由是同侪竞争。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "投递记录对他人不可见，也不同意向公开自己投了哪些岗位。",
+        "label": "direct",
+        "rationale": "T083 明确要求投递记录保密，理由是同侪竞争。",
+        "supported_parts": [
+          "诉求：T084「I don't want to expose my applications」",
+          "理由：T084「there's a little no wrecking due to the competition these days」"
+        ],
+        "unsupported_parts": [
+          "未说明对雇主的可见性（投递对象是否可见）",
+          "未说明匿名投递是否可接受"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求与理由",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC017-C013",
+      "target_kind": "candidate",
+      "statement": "AI 用于识别与筛选岗位，但不自动代写申请材料，需本人确认。",
+      "document_id": "DOC017",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC017:S096",
+          "material_id": "M001",
+          "quote": "it shouldn't be automatic",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17332,
+          "end_char": 17357,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S096",
+              "segment_start": 95,
+              "segment_end": 120,
+              "start_char": 17332,
+              "end_char": 17357
+            }
+          ],
+          "original_locator": {
+            "line_start": 96,
+            "line_end": 96,
+            "start_char": 17237,
+            "end_char": 17358
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC017:S094",
+          "material_id": "M001",
+          "quote": "when it comes for writing applications, I think I kind of still feel that Eas are uncertain",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17088,
+          "end_char": 17179,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S094",
+              "segment_start": 78,
+              "segment_end": 169,
+              "start_char": 17088,
+              "end_char": 17179
+            }
+          ],
+          "original_locator": {
+            "line_start": 94,
+            "line_end": 94,
+            "start_char": 17010,
+            "end_char": 17210
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC017:S096",
+          "material_id": "M001",
+          "quote": "if it is like verified by us, then it's good",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17272,
+          "end_char": 17316,
+          "candidate_locations": [
+            {
+              "source_id": "DOC017:S096",
+              "segment_start": 35,
+              "segment_end": 79,
+              "start_char": 17272,
+              "end_char": 17316
+            }
+          ],
+          "original_locator": {
+            "line_start": 96,
+            "line_end": 96,
+            "start_char": 17237,
+            "end_char": 17358
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC017:S096",
+          "DOC017:S094",
+          "DOC017:S096"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "识别可用：T094「it will be great to actually identify jobs」",
+          "写作保留：T094「Eas are uncertain, right? They are not reliable」",
+          "边界：T096「it shouldn't be automatic」"
+        ],
+        "unsupported_parts": [
+          "「verified by us」的确切含义（逐句确认还是整体确认）未说明",
+          "未说明是否接受 AI 起草初稿"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分两类 AI 用途",
+          "2. 取边界陈述",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T093 区分识别与写作两类 AI 用途，T095 明确写作不应自动、须本人核实。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "AI 用于识别与筛选岗位，但不自动代写申请材料，需本人确认。",
+        "label": "direct",
+        "rationale": "T093 区分识别与写作两类 AI 用途，T095 明确写作不应自动、须本人核实。",
+        "supported_parts": [
+          "识别可用：T094「it will be great to actually identify jobs」",
+          "写作保留：T094「Eas are uncertain, right? They are not reliable」",
+          "边界：T096「it shouldn't be automatic」"
+        ],
+        "unsupported_parts": [
+          "「verified by us」的确切含义（逐句确认还是整体确认）未说明",
+          "未说明是否接受 AI 起草初稿"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分两类 AI 用途",
+          "2. 取边界陈述",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC017\\tracing\\semantic-judgments.json",
+    "sha256": "f9d9730a0103bdd101621b284170f8255ec0c6f4588a4caf2e19cf67b362dca0"
+  }
+}

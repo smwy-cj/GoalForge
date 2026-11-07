@@ -1,0 +1,133 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "e7c57f4f6b847fa5155c142871fba21f704173dd4f66ae0ea5f7d811b1bb1acb",
+    "judgments_sha256": "17367a75c854d697a08c27a7651d2cc87661a057d529f043b4c555306737a54e"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查精化组候选：父 G009“调整当天安排”，子 G007“查严重程度与详情”+ G008“读官方建议”。两者是决策输入，源文未说二者共同足以完成调整（还需形成决定并执行，且未给严重程度阈值），故不建组，保留 proposed 缺口说明。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查精化组候选：父 G012“临期最终决定”，子 G010“提前查预报”+ G011“查云量”。G010 与 G012 是先后关系（见 R3），G011 触发的是重新考虑而非最终决定；源文没有“旅行天气规划”这一上层目标，补父目标会造根，故不建组。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查日常簇 G001/G003/G004/G005 能否归入共同父目标：源文只给出具体决策（外套、雨伞、首看项、出门时段），未表达更高层目的；若设“日常出行准备”父目标属分析者补造，故不建组。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查 G015（避免广告干扰快速查看）与 G016（布局紧凑便于阅读）的 AND 组：二者结果部分重叠，但源文只把“快速查看”作为受广告影响的体验，未表述为可由两者共同满足的目标，且布局建议是 maybe 级建议；故不建组。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G021",
+      "message": "隐私目标由“缓存可清除所以不担心被存储”与“登录后泄露会怕”推断，不是明确请求；是否作为产品需求保留待确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G017",
+      "message": "把“用量超过 20-30 分钟才考虑付费”与“雷达做好才考虑买”合并为同一付费决策，是否掩盖了两个不同触发条件？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "“很冷时可能改坐公交”用 might 表达，是稳定偏好还是偶发选择？目标已保留条件但强度仍待确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G006",
+      "message": "“本市严重天气会注意到”是对假设情境（佛州天气事件）的预期，而非已发生行为；作为目标保留是否合适待确认。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G007",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "收到并查看严重天气警报"
+      ],
+      "assumptions": [],
+      "rationale": "原句说调整当天安排取决于严重程度与所给信息，因此查看严重程度与详情有助于做出调整。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC014:T015",
+          "quote": "So yeah, it depends on the severity. And like what information they've given. And like, yeah, based on that, I'll adjust my day.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G008",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "警报附带官方建议"
+      ],
+      "assumptions": [],
+      "rationale": "读官方建议是为了判断撤离/避难/仅带雨具，进而决定当天怎么调整，属帮助关系而非充分实现。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC014:T015",
+          "quote": "So you know, I'll read for what they recommend like, should I? Should I evacuate the city? Should I just seek shelter, not go outside or like, just carry a umbrella and a raincoat? So yeah, it depends on the severity. And like what information they've given. And like, yeah, based on that, I'll adjust my day.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G010",
+      "target_id": "G012",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "同一次出行规划"
+      ],
+      "assumptions": [],
+      "rationale": "原文明确“几周前先看”→随日期接近预报更准→临期才有最终判断，先后的结果顺序清楚；先后不等于因果或精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC014:T017",
+          "quote": "So stuff like that, you can at least start seeing a few weeks before, and then, as you approach the date, the weather, like the weather forecast, becomes usually more accurate. So like a few days before you can get like a final you know, see on what the situation would be like.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G018",
+      "target_id": "G017",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "雷达改进达到其期待"
+      ],
+      "assumptions": [],
+      "rationale": "原句说若雷达做好他可能为享受雷达区而购买，即雷达改进有助于其付费决策；不表示一定购买。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC014:T043",
+          "quote": "if they if they if they do good job at it I might, I might consider just buying it for the sake of enjoying the radar section.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

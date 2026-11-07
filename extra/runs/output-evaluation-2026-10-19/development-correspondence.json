@@ -1,0 +1,42 @@
+{
+  "purpose": "Post-generation semantic correspondence for diagnosis only; not independent gold evaluation or an automatic string-match score.",
+  "reference_root": "datasets/processed/goalforge-v1/development_reference",
+  "output_root": "output",
+  "limitations": [
+    "References were used in development and have mixed human/assistant provenance.",
+    "Mappings below are this reviewing assistant's judgments, not independently adjudicated labels.",
+    "Many-to-one and one-to-many mappings are allowed; counts are not precision or recall.",
+    "Coverage of meaning does not establish correctness of output origin labels or refinement edges."
+  ],
+  "mappings": [
+    {"reference": "DOC010-G01", "outputs": ["DOC010-G001"], "status": "covered"},
+    {"reference": "DOC010-G02", "outputs": ["DOC010-G001"], "status": "covered_as_part", "note": "The specific clothing/carrying goal is merged with the broad planning goal; its independent position in a hierarchy is lost."},
+    {"reference": "DOC010-G03", "outputs": ["DOC010-G002"], "status": "covered"},
+    {"reference": "DOC010-G06", "outputs": ["DOC010-G001"], "status": "context_only", "note": "Unfamiliar locations occur in context/evidence, rather than as an independent goal to learn local weather conditions."},
+    {"reference": "DOC010-G07", "outputs": ["DOC010-G003"], "status": "covered", "note": "The output adds a first-moment timing expression that needs checking."},
+    {"reference": "DOC010-G08", "outputs": ["DOC010-G004"], "status": "covered"},
+    {"reference": "DOC010-G09", "outputs": ["DOC010-G005"], "status": "covered"},
+    {"reference": "DOC010-G10", "outputs": ["DOC010-G005", "DOC010-G006"], "status": "partial", "note": "Real-time updates appear as rain-specific notifications and timely/consistent data; the general outside-decision purpose is not a separate goal."},
+    {"reference": "DOC010-G11", "outputs": ["DOC010-G006"], "status": "covered_as_part"},
+    {"reference": "DOC010-G12", "outputs": ["DOC010-G007"], "status": "covered"},
+    {"reference": "DOC023-G01", "outputs": ["DOC023-G001"], "status": "covered_as_part"},
+    {"reference": "DOC023-G02", "outputs": ["DOC023-G001"], "status": "covered_as_part", "note": "Quantity and the purpose of displaying activity are merged; this obscures a possible why/how relation."},
+    {"reference": "DOC023-G03", "outputs": ["DOC023-G002"], "status": "covered_as_part"},
+    {"reference": "DOC023-G04", "outputs": ["DOC023-G002"], "status": "covered_as_part", "note": "Referral and recruiter visibility are merged; the accepted development reference kept them separate and related."},
+    {"reference": "DOC023-G09", "outputs": [], "status": "not_explicitly_represented", "note": "Lowering search cost is not the same as lifting search-result limits. This is an implied reference goal, so exclusion is not automatically an extraction error."},
+    {"reference": "DOC023-N02", "outputs": [], "status": "not_explicitly_represented", "note": "Improving employment chances is a higher-level inferred goal; output intentionally declines to add interview/job-offer goals without direct statements."},
+    {"reference": "DOC031-G01", "outputs": ["DOC031-G001"], "status": "covered_as_part"},
+    {"reference": "DOC031-G02", "outputs": ["DOC031-G001"], "status": "covered_as_part", "note": "Broad instant communication and the no-contact-saving condition are merged."},
+    {"reference": "DOC031-G03", "outputs": ["DOC031-G002"], "status": "covered"},
+    {"reference": "DOC031-G04", "outputs": ["DOC031-G003"], "status": "covered"},
+    {"reference": "DOC031-G05", "outputs": ["DOC031-G004"], "status": "covered"},
+    {"reference": "DOC031-G06", "outputs": ["DOC031-G005"], "status": "covered"},
+    {"reference": "DOC031-G07", "outputs": ["DOC031-G006", "DOC031-G007"], "status": "covered_split", "note": "Historical search and search-result precision are separated; possible redundancy depends on the chosen granularity."},
+    {"reference": "DOC031-G08", "outputs": ["DOC031-G008"], "status": "covered"},
+    {"reference": "DOC031-G09", "outputs": ["DOC031-G009"], "status": "covered"},
+    {"reference": "DOC031-G10", "outputs": ["DOC031-G010"], "status": "covered_origin_disagreement", "note": "Development reference says implied; output says explicit/direct although the stated evidence is a navigation difficulty."}
+  ],
+  "excluded_design_extensions": [
+    {"reference": "DOC023-N01", "reason": "Human-added personalized presentation design extension; not a goal that must be extracted from the interview."}
+  ]
+}

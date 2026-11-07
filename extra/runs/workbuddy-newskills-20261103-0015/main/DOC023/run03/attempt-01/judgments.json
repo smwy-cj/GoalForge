@@ -1,0 +1,150 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "235725f04c951bdad91f4b6df904784e2f025b52c1961fb297d8e68c8e763e5e",
+    "input_sha256": "7895eb9ed43b15895fc53b8228fa2ff72c516197dc3589317572490c04ceb169"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Increase the number of connections shown on my LinkedIn profile.",
+      "label": "direct",
+      "rationale": "受访者明确把'扩大主页连接数'列为第一个主要目标，主体、对象（主页上的连接数）与方向（增加）均一致。",
+      "supported_parts": [
+        "第一个主要目标",
+        "对象为主页显示的连接数量",
+        "方向为增加"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T003 直接陈述 'the 1st one is to enlarge ... the number of my connections on my profile'"
+      ]
+    },
+    "G002": {
+      "target_statement": "Show the people who view my profile that I am active on LinkedIn.",
+      "label": "direct",
+      "rationale": "原文用 'to make sure that I ... show people that I'm active on Linkedin' 明确表达要达到的状态；这里的'people'指查看主页的人，由同句'number of connections you have'的展示语境确定。",
+      "supported_parts": [
+        "希望被看到的状态：在 LinkedIn 上活跃",
+        "受众为查看主页的人"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T003 把该状态说成增加连接数的目的（'to make sure'）",
+        "同轮上下文表明展示位置是主页的连接数区块"
+      ]
+    },
+    "G003": {
+      "target_statement": "Obtain referrals from current employees of the company I am applying to, since internship and full-time applications are competitive and a referral helps my resume be seen by recruiters.",
+      "label": "direct",
+      "rationale": "第二个主要目标原文明确；'current employees'的主体限制、'3rd company'的对象以及竞争激烈、希望简历被招聘方看到的原因均在同一轮给出。",
+      "supported_parts": [
+        "目标：获得转介",
+        "来源限定：目标公司的现任员工",
+        "原因：申请竞争激烈、转介有助于简历被看到"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T003 直接陈述 'my sec second goal is to ... get referrals from current employees for my 3rd company'",
+        "同轮给出 'pretty competitive' 与 'referral really helps' 的理由"
+      ]
+    },
+    "G004": {
+      "target_statement": "Search LinkedIn by entering both the target company name and the name of the university I currently attend, so that the results list people with the same background as me.",
+      "label": "direct",
+      "rationale": "检索动作、两个关键词（公司名+在读学校名）以及期望结果（同背景的人）都在 T007 明说；T011 给出加公司名的理由，未改变表述。",
+      "supported_parts": [
+        "动作：在搜索栏输入关键词检索",
+        "两个关键词同时使用：目标公司名 + 在读大学名",
+        "期望结果：同背景的人出现在结果中"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T007 'This company name, and also the school name that I am currently attending'",
+        "T011 说明公司关键词的必要性依据"
+      ]
+    },
+    "G005": {
+      "target_statement": "Connect only with people who are currently employed at the target company and who attended my university, skipping former employees and people who satisfy only one or none of these requirements.",
+      "label": "direct",
+      "rationale": "两个并列条件是同一选择动作的共同限定（现任员工 AND 校友），排除项（前员工、只满足一项或不满足）也在同轮明说，未把 AND 改成 OR。",
+      "supported_parts": [
+        "选择规则：现任员工且校友（同时满足）",
+        "排除前员工（不能转介）",
+        "排除只满足一项或不满足者"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T009 'only choose people who is currently a company employee and who was my university's student'",
+        "T009 分别给出两类排除理由"
+      ]
+    },
+    "G006": {
+      "target_statement": "Open each candidate's profile to read their experience, and only send a connection request when that experience matches the position I am targeting.",
+      "label": "direct",
+      "rationale": "查看经历与'符合条件才发起连接'构成一个条件动作；原文用 'If ... exactly what I'm looking for. Then ... connect' 明确条件关系。",
+      "supported_parts": [
+        "动作：进入候选人主页查看经历",
+        "条件：经历与其寻找的职位相符才发起连接"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T007 条件句 'If their experience are the exactly what I'm looking for. Then I'm going to hit the connect button'"
+      ]
+    },
+    "G007": {
+      "target_statement": "Send a connection note that introduces myself, says that I would like a referral for the position, and mentions that I was also a student at the same university, to raise the chance they agree to refer me.",
+      "label": "direct",
+      "rationale": "三个内容项（自我介绍、请对方转介、说明同校经历）都附着于同一个动作——随邀请发送的附言；同校说明的目的（提高对方愿意转介的可能性）原文明确。字符上限作为平台条件保留，不升级为受访者的要求。",
+      "supported_parts": [
+        "动作：发送带附言的连接邀请",
+        "内容一：自我介绍",
+        "内容二：说明希望对方为该职位转介",
+        "内容三：说明同为该校学生，目的是提高转介意愿"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T007 'add a message to introduce myself ... refer me for the position'",
+        "T009 'I can tell them that I was also like a student in my university'",
+        "T017 给出附言字符上限作为外部约束"
+      ]
+    },
+    "G008": {
+      "target_statement": "Purchase LinkedIn Premium so that I can access as many potential connections as I want.",
+      "label": "direct",
+      "rationale": "购买动作与其直接结果（不受限地访问潜在连接）同句给出；'usually / simplest way' 的偏好强度和'costs a lot' 的代价在 context 中保留，未升级为无条件强制。",
+      "supported_parts": [
+        "动作：购买 LinkedIn Premium",
+        "期望结果：可访问任意多的潜在连接",
+        "强度：通常是首选/最省事，但成本高"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T015 'purchase the linking premium ... access as much as possible potential connections as I want to'",
+        "同轮补充 'costs a lot'"
+      ]
+    },
+    "G009": {
+      "target_statement": "Adjust the search keywords — deleting one or two of them or making them more specific — so that LinkedIn returns people with a more precise background.",
+      "label": "direct",
+      "rationale": "两种具体做法（删减关键词或更具体）是同一调整动作的可选方式，原文并列给出；期望结果是更精确的背景匹配，也在同句。'sometimes / other option' 的替代强度保留在 context。",
+      "supported_parts": [
+        "动作：调整搜索关键词",
+        "两种方式：删掉一两个关键词，或更具体",
+        "期望结果：结果更精确"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": [
+        "T015 'modify the keywords ... delete one or 2 of the keyword. or like to be more specific'"
+      ]
+    }
+  }
+}

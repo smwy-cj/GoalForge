@@ -1,0 +1,1179 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC008\\extraction.json",
+    "sha256": "5369c74677b97aa987956b606e3e56d17dc8edb994b7b122759dc723ae7ae7e5",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "e49157c59626ace3ea5a7976fdc8bfe598c78a670e01ca394a77ee4d9ebeac21",
+      "input_sha256": "5369c74677b97aa987956b606e3e56d17dc8edb994b7b122759dc723ae7ae7e5"
+    },
+    "bundle_sha256": "6230b12282632ccf5dbe1b53c0f973d5642d685063e2ac0c55671430d4391cae"
+  },
+  "sources": [
+    {
+      "document_id": "DOC008",
+      "expected_hash": "82789ed28652d9691e16d170bc6f78962f209504f3ed6cabc4f84015caff0f21",
+      "actual_hash": "82789ed28652d9691e16d170bc6f78962f209504f3ed6cabc4f84015caff0f21",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC008-C001",
+      "target_kind": "candidate",
+      "statement": "和朋友在线语音聊天，并能一边做别的事（如打游戏）。",
+      "document_id": "DOC008",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC008:S006",
+          "material_id": "M001",
+          "quote": "primary goal is just to like talk to my friends online. And also, like voice calls. we can talk to each other, while doing other things like playing games.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1123,
+          "end_char": 1278,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S006",
+              "segment_start": 26,
+              "segment_end": 181,
+              "start_char": 1123,
+              "end_char": 1278
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 1097,
+            "end_char": 1278
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC008:S004",
+          "material_id": "M001",
+          "quote": "I lean more towards the like, the group chat functions. And like the video calls and the texting, direct, messaging.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 787,
+          "end_char": 903,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S004",
+              "segment_start": 159,
+              "segment_end": 275,
+              "start_char": 787,
+              "end_char": 903
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 628,
+            "end_char": 903
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC008:S006",
+          "DOC008:S004"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "主目标：T005「primary goal is just to like talk to my friends online」",
+          "语音与并行：T005「voice calls. we can talk to each other, while doing other things like playing games」"
+        ],
+        "unsupported_parts": [
+          "未说明通话频率或群规模",
+          "「while doing other things」是使用场景，未说明对功能的具体要求（如低延迟、低占用）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取主目标陈述",
+          "2. 对象（朋友、语音）与场景一致",
+          "3. 无相反证据 → direct"
+        ],
+        "label": "direct",
+        "rationale": "T005 直接回答主要目标：「primary goal is just to like talk to my friends online. And also, like voice calls」，并补充并行场景「while doing other things like playing games」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "和朋友在线语音聊天，并能一边做别的事（如打游戏）。",
+        "label": "direct",
+        "rationale": "T005 直接回答主要目标：「primary goal is just to like talk to my friends online. And also, like voice calls」，并补充并行场景「while doing other things like playing games」。",
+        "supported_parts": [
+          "主目标：T005「primary goal is just to like talk to my friends online」",
+          "语音与并行：T005「voice calls. we can talk to each other, while doing other things like playing games」"
+        ],
+        "unsupported_parts": [
+          "未说明通话频率或群规模",
+          "「while doing other things」是使用场景，未说明对功能的具体要求（如低延迟、低占用）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取主目标陈述",
+          "2. 对象（朋友、语音）与场景一致",
+          "3. 无相反证据 → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC008-C002",
+      "target_kind": "candidate",
+      "statement": "当所用游戏或平台本身不支持语音时，用 Discord 作为备用通话场所。",
+      "document_id": "DOC008",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC008:S014",
+          "material_id": "M001",
+          "quote": "we use discord as like a secondary platform to host like the video call or whatnot.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1979,
+          "end_char": 2062,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S014",
+              "segment_start": 195,
+              "segment_end": 278,
+              "start_char": 1979,
+              "end_char": 2062
+            }
+          ],
+          "original_locator": {
+            "line_start": 14,
+            "line_end": 14,
+            "start_char": 1784,
+            "end_char": 2062
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC008:S014",
+          "material_id": "M001",
+          "quote": "It's helpful for like when there's like a platform that we want to talk to. Other people like don't want to talk to each other. but the platform itself doesn't support it.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1804,
+          "end_char": 1975,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S014",
+              "segment_start": 20,
+              "segment_end": 191,
+              "start_char": 1804,
+              "end_char": 1975
+            }
+          ],
+          "original_locator": {
+            "line_start": 14,
+            "line_end": 14,
+            "start_char": 1784,
+            "end_char": 2062
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC008:S014",
+          "DOC008:S014"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "备用定位：T013「secondary platform to host like the video call」",
+          "触发条件：T013「the platform itself doesn't support it」"
+        ],
+        "unsupported_parts": [
+          "T013 原句有断裂（「people like don't want to talk to each other」），触发条件为按上下文还原",
+          "未说明该场景的发生频率"
+        ],
+        "assumptions": [
+          "把断裂句理解为「对方平台不支持语音通话」"
+        ],
+        "reasoning_steps": [
+          "1. 取备用定位句",
+          "2. 用前半句还原触发条件",
+          "3. → direct，并记录语义断裂"
+        ],
+        "label": "direct",
+        "rationale": "T013 说明备用平台的用法：「we use discord as like a secondary platform to host like the video call or whatnot」，并给出触发条件（对方平台不支持）。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "当所用游戏或平台本身不支持语音时，用 Discord 作为备用通话场所。",
+        "label": "direct",
+        "rationale": "T013 说明备用平台的用法：「we use discord as like a secondary platform to host like the video call or whatnot」，并给出触发条件（对方平台不支持）。",
+        "supported_parts": [
+          "备用定位：T013「secondary platform to host like the video call」",
+          "触发条件：T013「the platform itself doesn't support it」"
+        ],
+        "unsupported_parts": [
+          "T013 原句有断裂（「people like don't want to talk to each other」），触发条件为按上下文还原",
+          "未说明该场景的发生频率"
+        ],
+        "assumptions": [
+          "把断裂句理解为「对方平台不支持语音通话」"
+        ],
+        "reasoning_steps": [
+          "1. 取备用定位句",
+          "2. 用前半句还原触发条件",
+          "3. → direct，并记录语义断裂"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC008-C003",
+      "target_kind": "candidate",
+      "statement": "加入并浏览与自己兴趣相关的公开社区内容（游戏、机器学习等）。",
+      "document_id": "DOC008",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC008:S022",
+          "material_id": "M001",
+          "quote": "there are a bunch of like public discords that you're allowed to join.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2632,
+          "end_char": 2702,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S022",
+              "segment_start": 36,
+              "segment_end": 106,
+              "start_char": 2632,
+              "end_char": 2702
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 2596,
+            "end_char": 2702
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC008:S024",
+          "material_id": "M001",
+          "quote": "Usually, it's like different topics, like, I'm in one that's about a game called Genshin impact.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2890,
+          "end_char": 2986,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S024",
+              "segment_start": 150,
+              "segment_end": 246,
+              "start_char": 2890,
+              "end_char": 2986
+            }
+          ],
+          "original_locator": {
+            "line_start": 24,
+            "line_end": 24,
+            "start_char": 2740,
+            "end_char": 3047
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC008:S030",
+          "material_id": "M001",
+          "quote": "I don't really like contribute too much to it. But I like to read a lot of what other people are saying.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3505,
+          "end_char": 3609,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S030",
+              "segment_start": 82,
+              "segment_end": 186,
+              "start_char": 3505,
+              "end_char": 3609
+            }
+          ],
+          "original_locator": {
+            "line_start": 30,
+            "line_end": 30,
+            "start_char": 3423,
+            "end_char": 3754
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC008:S032",
+          "material_id": "M001",
+          "quote": "I just joined to like just kind of snoop around.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3973,
+          "end_char": 4021,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S032",
+              "segment_start": 192,
+              "segment_end": 240,
+              "start_char": 3973,
+              "end_char": 4021
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 3781,
+            "end_char": 4021
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC008:S022",
+          "DOC008:S024",
+          "DOC008:S030",
+          "DOC008:S032"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "可加入公开社区：T021「a bunch of like public discords that you're allowed to join」",
+          "按主题划分：T024「different topics, like, I'm in one that's about a game called Genshin impact」",
+          "围观为主：T030「I like to read a lot of what other people are saying」"
+        ],
+        "unsupported_parts": [
+          "未说明是否需要按兴趣发现新社区（T017 明确说 Discord 没有推荐/探索功能）",
+          "未说明参与深度的期望"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 三处互证加入与浏览行为",
+          "2. T017 的「无推荐功能」说明发现依赖外部信息，不否定目标",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T021 说明可加入公开社区，T023 说明按主题划分并给出自己所在的例子，T031 说明围观式使用（「just joined to like just kind of snoop around」）。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "加入并浏览与自己兴趣相关的公开社区内容（游戏、机器学习等）。",
+        "label": "direct",
+        "rationale": "T021 说明可加入公开社区，T023 说明按主题划分并给出自己所在的例子，T031 说明围观式使用（「just joined to like just kind of snoop around」）。",
+        "supported_parts": [
+          "可加入公开社区：T021「a bunch of like public discords that you're allowed to join」",
+          "按主题划分：T024「different topics, like, I'm in one that's about a game called Genshin impact」",
+          "围观为主：T030「I like to read a lot of what other people are saying」"
+        ],
+        "unsupported_parts": [
+          "未说明是否需要按兴趣发现新社区（T017 明确说 Discord 没有推荐/探索功能）",
+          "未说明参与深度的期望"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 三处互证加入与浏览行为",
+          "2. T017 的「无推荐功能」说明发现依赖外部信息，不否定目标",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC008-C004",
+      "target_kind": "candidate",
+      "statement": "把通知干扰降到可接受水平（静音大频道、常开免打扰、提示音不刺耳）。",
+      "document_id": "DOC008",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC008:S048",
+          "material_id": "M001",
+          "quote": "I'd say overall, the notifications are a little overwhelming.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5422,
+          "end_char": 5483,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S048",
+              "segment_start": 20,
+              "segment_end": 81,
+              "start_char": 5422,
+              "end_char": 5483
+            }
+          ],
+          "original_locator": {
+            "line_start": 48,
+            "line_end": 48,
+            "start_char": 5402,
+            "end_char": 5483
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC008:S050",
+          "material_id": "M001",
+          "quote": "A lot of the channels that I'm in especially the bigger ones I have muted because they would just constantly be going off",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5534,
+          "end_char": 5655,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S050",
+              "segment_start": 20,
+              "segment_end": 141,
+              "start_char": 5534,
+              "end_char": 5655
+            }
+          ],
+          "original_locator": {
+            "line_start": 50,
+            "line_end": 50,
+            "start_char": 5514,
+            "end_char": 5707
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC008:S054",
+          "material_id": "M001",
+          "quote": "So I like I'm always on. Do not disturb",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6003,
+          "end_char": 6042,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S054",
+              "segment_start": 20,
+              "segment_end": 59,
+              "start_char": 6003,
+              "end_char": 6042
+            }
+          ],
+          "original_locator": {
+            "line_start": 54,
+            "line_end": 54,
+            "start_char": 5983,
+            "end_char": 6042
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC008:S056",
+          "material_id": "M001",
+          "quote": "I think this group should find oh, like just a more pleasing sound for the notification.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6125,
+          "end_char": 6213,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S056",
+              "segment_start": 41,
+              "segment_end": 129,
+              "start_char": 6125,
+              "end_char": 6213
+            }
+          ],
+          "original_locator": {
+            "line_start": 56,
+            "line_end": 56,
+            "start_char": 6084,
+            "end_char": 6213
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC008:S048",
+          "DOC008:S050",
+          "DOC008:S054",
+          "DOC008:S056"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "总体评价：T047「the notifications are a little overwhelming」",
+          "静音大频道：T050「the bigger ones I have muted」",
+          "提示音诉求：T056「a more pleasing sound for the notification」"
+        ],
+        "unsupported_parts": [
+          "三项措施强度不同：前两项为已执行的规避，第三项才是产品诉求",
+          "未说明可接受的通知量或分类规则（如仅提及/仅私信）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 把三处合并为同一诉求（降低打扰）",
+          "2. 区分既有规避与新增诉求，转为人工问题",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T047 直接评价「the notifications are a little overwhelming」，T049 说明已采取静音，T055 提出更换提示音的建议，构成一条完整的「降低打扰」诉求。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "把通知干扰降到可接受水平（静音大频道、常开免打扰、提示音不刺耳）。",
+        "label": "direct",
+        "rationale": "T047 直接评价「the notifications are a little overwhelming」，T049 说明已采取静音，T055 提出更换提示音的建议，构成一条完整的「降低打扰」诉求。",
+        "supported_parts": [
+          "总体评价：T047「the notifications are a little overwhelming」",
+          "静音大频道：T050「the bigger ones I have muted」",
+          "提示音诉求：T056「a more pleasing sound for the notification」"
+        ],
+        "unsupported_parts": [
+          "三项措施强度不同：前两项为已执行的规避，第三项才是产品诉求",
+          "未说明可接受的通知量或分类规则（如仅提及/仅私信）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 把三处合并为同一诉求（降低打扰）",
+          "2. 区分既有规避与新增诉求，转为人工问题",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC008-C005",
+      "target_kind": "candidate",
+      "statement": "避免陌生人添加好友与被盗号的风险。",
+      "document_id": "DOC008",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC008:S062",
+          "material_id": "M001",
+          "quote": "I think I have run into a few times where, like random people that I don't know are trying to add me as friends.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6825,
+          "end_char": 6937,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S062",
+              "segment_start": 20,
+              "segment_end": 132,
+              "start_char": 6825,
+              "end_char": 6937
+            }
+          ],
+          "original_locator": {
+            "line_start": 62,
+            "line_end": 62,
+            "start_char": 6805,
+            "end_char": 7009
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC008:S064",
+          "material_id": "M001",
+          "quote": "Is quite concerning",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7056,
+          "end_char": 7075,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S064",
+              "segment_start": 20,
+              "segment_end": 39,
+              "start_char": 7056,
+              "end_char": 7075
+            }
+          ],
+          "original_locator": {
+            "line_start": 64,
+            "line_end": 64,
+            "start_char": 7036,
+            "end_char": 7182
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC008:S064",
+          "material_id": "M001",
+          "quote": "I've seen a few of so few people get hacked.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7126,
+          "end_char": 7170,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S064",
+              "segment_start": 90,
+              "segment_end": 134,
+              "start_char": 7126,
+              "end_char": 7170
+            }
+          ],
+          "original_locator": {
+            "line_start": 64,
+            "line_end": 64,
+            "start_char": 7036,
+            "end_char": 7182
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC008:S062",
+          "DOC008:S064",
+          "DOC008:S064"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "陌生加好友：T061「random people that I don't know are trying to add me as friends」",
+          "担忧：T062「Is quite concerning」",
+          "盗号担忧：T064「I've seen a few of so few people get hacked」"
+        ],
+        "unsupported_parts": [
+          "未提出具体防护手段（如仅允许共同频道者添加）",
+          "盗号部分为听闻，非亲身经历",
+          "未说明隐私设置是否已调整"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分亲身经历与听闻",
+          "2. 两者均指向同一安全诉求",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T061 描述陌生账号频繁加好友并直接评价「Is quite concerning」，T063 补充听说他人账号被盗，两处共同构成安全类目标。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "避免陌生人添加好友与被盗号的风险。",
+        "label": "direct",
+        "rationale": "T061 描述陌生账号频繁加好友并直接评价「Is quite concerning」，T063 补充听说他人账号被盗，两处共同构成安全类目标。",
+        "supported_parts": [
+          "陌生加好友：T061「random people that I don't know are trying to add me as friends」",
+          "担忧：T062「Is quite concerning」",
+          "盗号担忧：T064「I've seen a few of so few people get hacked」"
+        ],
+        "unsupported_parts": [
+          "未提出具体防护手段（如仅允许共同频道者添加）",
+          "盗号部分为听闻，非亲身经历",
+          "未说明隐私设置是否已调整"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分亲身经历与听闻",
+          "2. 两者均指向同一安全诉求",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC008-C006",
+      "target_kind": "candidate",
+      "statement": "私信与添加联系人分成不同区域，菜单层级更易找到目标。",
+      "document_id": "DOC008",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC008:S090",
+          "material_id": "M001",
+          "quote": "some some of the menus are a bit more a bit harder to navigate than others. Like the the the direct message, menu.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10592,
+          "end_char": 10706,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S090",
+              "segment_start": 28,
+              "segment_end": 142,
+              "start_char": 10592,
+              "end_char": 10706
+            }
+          ],
+          "original_locator": {
+            "line_start": 90,
+            "line_end": 90,
+            "start_char": 10564,
+            "end_char": 10874
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC008:S090",
+          "material_id": "M001",
+          "quote": "usually other other like social media apps. have a separation between your dms, and then like adding. adding connections.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10749,
+          "end_char": 10870,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S090",
+              "segment_start": 185,
+              "segment_end": 306,
+              "start_char": 10749,
+              "end_char": 10870
+            }
+          ],
+          "original_locator": {
+            "line_start": 90,
+            "line_end": 90,
+            "start_char": 10564,
+            "end_char": 10874
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC008:S092",
+          "material_id": "M001",
+          "quote": "But all of that is like slapped onto the same menu.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10925,
+          "end_char": 10976,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S092",
+              "segment_start": 20,
+              "segment_end": 71,
+              "start_char": 10925,
+              "end_char": 10976
+            }
+          ],
+          "original_locator": {
+            "line_start": 92,
+            "line_end": 92,
+            "start_char": 10905,
+            "end_char": 10976
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC008:S090",
+          "DOC008:S090",
+          "DOC008:S092"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "导航困难：T090「some of the menus are a bit more a bit harder to navigate」",
+          "对照做法：T090「a separation between your dms, and then like adding connections」",
+          "现状：T092「slapped onto the same menu」"
+        ],
+        "unsupported_parts": [
+          "未说明除了私信菜单还有哪些菜单需要调整",
+          "「更易导航」无量化标准"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题陈述与对照做法",
+          "2. 用户给出的解法即分区",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T089 指出「some of the menus are... harder to navigate」，并以私信菜单为例说明其他应用「have a separation between your dms, and then like adding connections」，T091 补充「all of that is like slapped onto the same menu」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "私信与添加联系人分成不同区域，菜单层级更易找到目标。",
+        "label": "direct",
+        "rationale": "T089 指出「some of the menus are... harder to navigate」，并以私信菜单为例说明其他应用「have a separation between your dms, and then like adding connections」，T091 补充「all of that is like slapped onto the same menu」。",
+        "supported_parts": [
+          "导航困难：T090「some of the menus are a bit more a bit harder to navigate」",
+          "对照做法：T090「a separation between your dms, and then like adding connections」",
+          "现状：T092「slapped onto the same menu」"
+        ],
+        "unsupported_parts": [
+          "未说明除了私信菜单还有哪些菜单需要调整",
+          "「更易导航」无量化标准"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题陈述与对照做法",
+          "2. 用户给出的解法即分区",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC008-C007",
+      "target_kind": "candidate",
+      "statement": "语音通话保持稳定，不出现莫名断连。",
+      "document_id": "DOC008",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC008:S072",
+          "material_id": "M001",
+          "quote": "the discord call just kept on like cutting out and everything.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8927,
+          "end_char": 8989,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S072",
+              "segment_start": 282,
+              "segment_end": 344,
+              "start_char": 8927,
+              "end_char": 8989
+            }
+          ],
+          "original_locator": {
+            "line_start": 72,
+            "line_end": 72,
+            "start_char": 8645,
+            "end_char": 8989
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC008:S074",
+          "material_id": "M001",
+          "quote": "there's sometimes just like discord has some like connectivity issues.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9199,
+          "end_char": 9269,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S074",
+              "segment_start": 162,
+              "segment_end": 232,
+              "start_char": 9199,
+              "end_char": 9269
+            }
+          ],
+          "original_locator": {
+            "line_start": 74,
+            "line_end": 74,
+            "start_char": 9037,
+            "end_char": 9269
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC008:S078",
+          "material_id": "M001",
+          "quote": "I kind of just manage it myself a lot of times. I just have to wait for a problem to like. Just roll over.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9610,
+          "end_char": 9716,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S078",
+              "segment_start": 20,
+              "segment_end": 126,
+              "start_char": 9610,
+              "end_char": 9716
+            }
+          ],
+          "original_locator": {
+            "line_start": 78,
+            "line_end": 78,
+            "start_char": 9590,
+            "end_char": 9716
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC008:S072",
+          "DOC008:S074",
+          "DOC008:S078"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "现象：T072「the discord call just kept on like cutting out」",
+          "排除本地原因：T072「my Wi-fi connection. Everything else on my computer is working fine」",
+          "归因：T074「discord has some like connectivity issues」"
+        ],
+        "unsupported_parts": [
+          "未量化（断连频率、持续时长）",
+          "仅一次经历，是否长期问题不明"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分现象、排除条件与归因",
+          "2. 三者一致指向平台侧稳定性",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T071 描述通话断连且排除本地网络原因，T073 归因为「discord has some like connectivity issues」，为明确的可用性目标。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "语音通话保持稳定，不出现莫名断连。",
+        "label": "direct",
+        "rationale": "T071 描述通话断连且排除本地网络原因，T073 归因为「discord has some like connectivity issues」，为明确的可用性目标。",
+        "supported_parts": [
+          "现象：T072「the discord call just kept on like cutting out」",
+          "排除本地原因：T072「my Wi-fi connection. Everything else on my computer is working fine」",
+          "归因：T074「discord has some like connectivity issues」"
+        ],
+        "unsupported_parts": [
+          "未量化（断连频率、持续时长）",
+          "仅一次经历，是否长期问题不明"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分现象、排除条件与归因",
+          "2. 三者一致指向平台侧稳定性",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC008-C008",
+      "target_kind": "candidate",
+      "statement": "保持应用精简，不堆叠多余功能。",
+      "document_id": "DOC008",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC008:S038",
+          "material_id": "M001",
+          "quote": "Discord overall is a pretty bare application. It doesn't have like too much fluff to it.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4544,
+          "end_char": 4632,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S038",
+              "segment_start": 69,
+              "segment_end": 157,
+              "start_char": 4544,
+              "end_char": 4632
+            }
+          ],
+          "original_locator": {
+            "line_start": 38,
+            "line_end": 38,
+            "start_char": 4475,
+            "end_char": 4632
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC008:S038",
+          "material_id": "M001",
+          "quote": "it's a it's a pretty, I'd say.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4513,
+          "end_char": 4543,
+          "candidate_locations": [
+            {
+              "source_id": "DOC008:S038",
+              "segment_start": 38,
+              "segment_end": 68,
+              "start_char": 4513,
+              "end_char": 4543
+            }
+          ],
+          "original_locator": {
+            "line_start": 38,
+            "line_end": 38,
+            "start_char": 4475,
+            "end_char": 4632
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC008:S038",
+          "DOC008:S038"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "评价：T037「a pretty bare application」",
+          "理由：T037「doesn't have like too much fluff to it」"
+        ],
+        "unsupported_parts": [
+          "「fluff」无定义，与 C006 的菜单重组是否冲突未澄清",
+          "该评价出现在讨论内容互动功能时，适用范围可能有限"
+        ],
+        "assumptions": [
+          "把正面评价理解为希望保持精简"
+        ],
+        "reasoning_steps": [
+          "1. 定位正面评价",
+          "2. 与 C006 的改进诉求对照，发现潜在张力",
+          "3. → direct，并转为人工问题"
+        ],
+        "label": "direct",
+        "rationale": "T037 明确把精简当作优点：「Discord overall is a pretty bare application. It doesn't have like too much fluff to it.」，属对现状的正面评价，即维持型目标。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "保持应用精简，不堆叠多余功能。",
+        "label": "direct",
+        "rationale": "T037 明确把精简当作优点：「Discord overall is a pretty bare application. It doesn't have like too much fluff to it.」，属对现状的正面评价，即维持型目标。",
+        "supported_parts": [
+          "评价：T037「a pretty bare application」",
+          "理由：T037「doesn't have like too much fluff to it」"
+        ],
+        "unsupported_parts": [
+          "「fluff」无定义，与 C006 的菜单重组是否冲突未澄清",
+          "该评价出现在讨论内容互动功能时，适用范围可能有限"
+        ],
+        "assumptions": [
+          "把正面评价理解为希望保持精简"
+        ],
+        "reasoning_steps": [
+          "1. 定位正面评价",
+          "2. 与 C006 的改进诉求对照，发现潜在张力",
+          "3. → direct，并转为人工问题"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC008\\tracing\\semantic-judgments.json",
+    "sha256": "082490932624e50c0a83c268d4638e36014a3ff90752e04b16d87273e609a71e"
+  }
+}

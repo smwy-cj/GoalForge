@@ -1,0 +1,1192 @@
+{
+  "document_id": "DOC003",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "round": "first",
+  "blinding_limit": "仅知A/B匿名代号，未读映射或其他分支；语言、节点粒度、解释模板等方法特征可被猜测，因此属于有限盲法，非严格不可猜方法的双盲。",
+  "policy": "冻结129条意图不修改；允许多对多和不同粒度。supported评价源文支持及合理推断，不代表需求已采纳；proposed/partial结构按候选强度评价。未计算标准P/R/F1。",
+  "samples": [
+    {
+      "sample": "first:A",
+      "intent_matches": [
+        {
+          "intent_id": "DOC003:I01",
+          "goal_ids": [
+            "G001",
+            "G002"
+          ],
+          "status": "partial",
+          "rationale": "G001/G002保留价格和合适行程，但未显式保留T107 flexibility这一较次质量维度。 原文：DOC003:T025「my primary focus is to like get a really good deal」"
+        },
+        {
+          "intent_id": "DOC003:I02",
+          "goal_ids": [
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“尽量提前订票以获得较好价格”的实质结果与适用范围；DOC003:T015「Mostly I try to aim for at least one to 1.5 months out, just to get like a bette…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I03",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "未找到目标承接。冻结条目为“在不同时间反复比价并探索多个网站的最佳优惠”；DOC003:T025「I check like dozens of different websites to just make sure I'm having the best …」。这表示模型覆盖缺口，不直接证明现有目标错误或此能力应强制实施。"
+        },
+        {
+          "intent_id": "DOC003:I04",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“灵活组合区域、国家、邻近机场及日期，缩小到可行行程”的实质结果与适用范围；DOC003:T031「I generally do country to country pairs」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I05",
+          "goal_ids": [
+            "G007",
+            "G008",
+            "G018"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“使航班时刻与后续交通、住宿、会面安排和休息相匹配”的实质结果与适用范围；DOC003:T031「I don't end up having to stay in a city」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I06",
+          "goal_ids": [
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“比较供应商价格、评价、折扣、优惠券和升级，确定最终总价与订票渠道”的实质结果与适用范围；DOC003:T077「I look at the price. I take a look at the rating, and I often visit multiple pro…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I07",
+          "goal_ids": [
+            "G007"
+          ],
+          "status": "partial",
+          "rationale": "G007时间/连接适合有据，未单列T031终站与物流信息正确性核查。 原文：DOC003:T077「I make sure all the flight details like I said. All the connections and all the …」"
+        },
+        {
+          "intent_id": "DOC003:I08",
+          "goal_ids": [
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按国际或国内场景平衡价格和总旅程时长”的实质结果与适用范围；DOC003:T073「when I'm booking domestic, it's mostly going through the cheapest tab.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I09",
+          "goal_ids": [
+            "G011"
+          ],
+          "status": "partial",
+          "rationale": "G011保留价格时长平衡，未保留T069出到达时窗过滤的所选手段。 原文：DOC003:T069「The filters. I don't use it very often unless I'm connecting onto something.」"
+        },
+        {
+          "intent_id": "DOC003:I10",
+          "goal_ids": [
+            "G008",
+            "G013"
+          ],
+          "status": "partial",
+          "rationale": "G013把重查选项也限定为紧急无替代，丢失一般不合适也重查情境。 原文：DOC003:T081「I try to just rerun through all of my options. Make sure I'm not missing somethi…」"
+        },
+        {
+          "intent_id": "DOC003:I11",
+          "goal_ids": [
+            "G017"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在陌生市场判断当前价格是否合理”的实质结果与适用范围；DOC003:T109「I can use Google flights for it because it tells me if the price is above, below…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I12",
+          "goal_ids": [
+            "G019"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“保留足够转机缓冲以应对延误与机场连接”的实质结果与适用范围；DOC003:T123「Unless I have visa issues, I generally don't care very much about it」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I13",
+          "goal_ids": [
+            "G020"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“核查转机贵宾室是否开放以及自己能否使用”的实质结果与适用范围；DOC003:T123「will the lounge at that airport be open at that point of time?」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I14",
+          "goal_ids": [
+            "G021"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“希望最新个人权益信息可与行程研究整合”的实质结果与适用范围；DOC003:T125「there would be a website that keeps everything updated about what I have and wha…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I15",
+          "goal_ids": [
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“研究现金票时尽量匿名并减少数据分享”的实质结果与适用范围；DOC003:T053「I avoid logging in, and I try to keep myself as anonymized as possible.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I16",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“需要积分票时登录持有积分的航空公司查询并兑换”的实质结果与适用范围；DOC003:T057「if I have to make a points or an award booking, I'd log on to the airline that I…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I17",
+          "goal_ids": [
+            "G014"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“特殊刚需且价格骤升时接收多个路线的降价提醒”的实质结果与适用范围；DOC003:T087「I needed a reminder on a few different routes, just to make sure that if any one…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I18",
+          "goal_ids": [
+            "G006",
+            "G015"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“更快、更准确、同时研究大量路线日期舱位组合”的实质结果与适用范围；DOC003:T095「You want to do hundreds of searches at the same time」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I19",
+          "goal_ids": [
+            "G016"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在一处取得研究所需信息，减少多站切换”的实质结果与适用范围；DOC003:T137「I don't get to have all of my information at one pace I end up having to visit a…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I20",
+          "goal_ids": [
+            "G023"
+          ],
+          "status": "partial",
+          "rationale": "G023节时负担和学习成本有据，但T143稳定熟悉UI这个选定效率来源较隐。 原文：DOC003:T143「the website doesn't change very often the interface remains the same.」"
+        },
+        {
+          "intent_id": "DOC003:I21",
+          "goal_ids": [
+            "G022"
+          ],
+          "status": "partial",
+          "rationale": "G022承接预填跳转和继续付款，未覆盖T031/T131输入个人/护照信息及卡付款。 原文：DOC003:T131「enter in all my details and pay for the booking through my card.」"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I01"
+          ],
+          "rationale": "与源文“找到价格合适且满足行程安排的航班”相符；DOC003:T025「my primary focus is to like get a really good deal」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I01"
+          ],
+          "rationale": "与源文“找到价格合适且满足行程安排的航班”相符；DOC003:T025「my primary focus is to like get a really good deal」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I02"
+          ],
+          "rationale": "与源文“尽量提前订票以获得较好价格”相符；DOC003:T015「Mostly I try to aim for at least one to 1.5 months out, just to get like a bette…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T017明确愿用剩余积分/礼券帮亲友省钱并用掉礼券；虽冻结清单未单列此用途，不因此判无依据。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T019、T023确有享受飞行和机场的偏好；“适合的旅行”条件及后文不接受极长航程的限制被保留。目的、体验例子合并可接受，并非要求所有行程最大化时长。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I04",
+            "DOC003:I18"
+          ],
+          "rationale": "T031/T065支持组合搜索，T099支持舱位变化；同时研究更多组合是手段与范围，未因并列参数判混合目标。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I05",
+            "DOC003:I07"
+          ],
+          "rationale": "与源文“使航班时刻与后续交通、住宿、会面安排和休息相匹配；确认每段航班、转机、当地日期时间、终站等物流细节适合自己”相符；DOC003:T031「I don't end up having to stay in a city」；DOC003:T077「I make sure all the flight details like I said. All the connections and all the …」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I05",
+            "DOC003:I10"
+          ],
+          "rationale": "与源文“使航班时刻与后续交通、住宿、会面安排和休息相匹配；行程不合适时重查替代路线，兼顾紧迫性和预算”相符；DOC003:T031「I don't end up having to stay in a city」；DOC003:T081「I try to just rerun through all of my options. Make sure I'm not missing somethi…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I15"
+          ],
+          "rationale": "与源文“研究现金票时尽量匿名并减少数据分享”相符；DOC003:T053「I avoid logging in, and I try to keep myself as anonymized as possible.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I16"
+          ],
+          "rationale": "与源文“需要积分票时登录持有积分的航空公司查询并兑换”相符；DOC003:T057「if I have to make a points or an award booking, I'd log on to the airline that I…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I08",
+            "DOC003:I09"
+          ],
+          "rationale": "与源文“按国际或国内场景平衡价格和总旅程时长；必要时用出到达时窗及最长旅行时长过滤不合适航班”相符；DOC003:T073「when I'm booking domestic, it's mostly going through the cheapest tab.」；DOC003:T069「The filters. I don't use it very often unless I'm connecting onto something.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I06"
+          ],
+          "rationale": "与源文“比较供应商价格、评价、折扣、优惠券和升级，确定最终总价与订票渠道”相符；DOC003:T077「I look at the price. I take a look at the rating, and I often visit multiple pro…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC003:I10"
+          ],
+          "rationale": "T081在不合适时通常重查，紧急无替代则接受。当前把“复查备选”也限定为紧急且无替代，缩窄了原文常规应对。",
+          "issues": [
+            {
+              "category": "condition_loss",
+              "reason": "T081先说明不合适会做更多研究和rerun all options，只有接受不理想方案才受urgent/no alternative限制。"
+            }
+          ]
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I17"
+          ],
+          "rationale": "与源文“特殊刚需且价格骤升时接收多个路线的降价提醒”相符；DOC003:T087「I needed a reminder on a few different routes, just to make sure that if any one…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I18"
+          ],
+          "rationale": "与源文“更快、更准确、同时研究大量路线日期舱位组合”相符；DOC003:T095「You want to do hundreds of searches at the same time」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I19"
+          ],
+          "rationale": "与源文“在一处取得研究所需信息，减少多站切换”相符；DOC003:T137「I don't get to have all of my information at one pace I end up having to visit a…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I11"
+          ],
+          "rationale": "与源文“在陌生市场判断当前价格是否合理”相符；DOC003:T109「I can use Google flights for it because it tells me if the price is above, below…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I05"
+          ],
+          "rationale": "与源文“使航班时刻与后续交通、住宿、会面安排和休息相匹配”相符；DOC003:T031「I don't end up having to stay in a city」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I12"
+          ],
+          "rationale": "与源文“保留足够转机缓冲以应对延误与机场连接”相符；DOC003:T123「Unless I have visa issues, I generally don't care very much about it」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I13"
+          ],
+          "rationale": "与源文“核查转机贵宾室是否开放以及自己能否使用”相符；DOC003:T123「will the lounge at that airport be open at that point of time?」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G021",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I14"
+          ],
+          "rationale": "与源文“希望最新个人权益信息可与行程研究整合”相符；DOC003:T125「there would be a website that keeps everything updated about what I have and wha…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G022",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I21"
+          ],
+          "rationale": "T135直接跳到已填好行程页确实有据，且明确交由供应商继续；但只说“继续确认与付款”尚不足承接T031/T131填写旅客、护照资料与卡付款的完整最终阶段。",
+          "issues": []
+        },
+        {
+          "goal_id": "G023",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I20"
+          ],
+          "rationale": "与源文“凭熟悉的稳定界面降低搜索操作负担”相符；DOC003:T143「the website doesn't change very often the interface remains the same.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "F001把价格、情境行程和供应商比较作为研究组织候选，T115/T129支持这些方面；proposed/partial没有宣称充分。"
+        },
+        {
+          "group_id": "F002",
+          "judgment": "consistent",
+          "rationale": "F002交通、睡眠、转机余量对应T083/T119/T123，T119明确仅examples；部分候选分组合理，不要求所有行程同时满足。"
+        }
+      ]
+    },
+    {
+      "sample": "first:B",
+      "intent_matches": [
+        {
+          "intent_id": "DOC003:I01",
+          "goal_ids": [
+            "G001",
+            "G002",
+            "G003",
+            "G034"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“找到价格合适且满足行程安排的航班”的实质结果与适用范围；DOC003:T025「my primary focus is to like get a really good deal」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I02",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“尽量提前订票以获得较好价格”的实质结果与适用范围；DOC003:T015「Mostly I try to aim for at least one to 1.5 months out, just to get like a bette…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I03",
+          "goal_ids": [
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在不同时间反复比价并探索多个网站的最佳优惠”的实质结果与适用范围；DOC003:T025「I check like dozens of different websites to just make sure I'm having the best …」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I04",
+          "goal_ids": [
+            "G010",
+            "G020",
+            "G032"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“灵活组合区域、国家、邻近机场及日期，缩小到可行行程”的实质结果与适用范围；DOC003:T031「I generally do country to country pairs」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I05",
+          "goal_ids": [
+            "G011",
+            "G025",
+            "G028",
+            "G036",
+            "G037"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“使航班时刻与后续交通、住宿、会面安排和休息相匹配”的实质结果与适用范围；DOC003:T031「I don't end up having to stay in a city」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I06",
+          "goal_ids": [
+            "G012",
+            "G026",
+            "G033",
+            "G044"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“比较供应商价格、评价、折扣、优惠券和升级，确定最终总价与订票渠道”的实质结果与适用范围；DOC003:T077「I look at the price. I take a look at the rating, and I often visit multiple pro…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I07",
+          "goal_ids": [
+            "G013",
+            "G025"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“确认每段航班、转机、当地日期时间、终站等物流细节适合自己”的实质结果与适用范围；DOC003:T077「I make sure all the flight details like I said. All the connections and all the …」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I08",
+          "goal_ids": [
+            "G023",
+            "G024"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按国际或国内场景平衡价格和总旅程时长”的实质结果与适用范围；DOC003:T073「when I'm booking domestic, it's mostly going through the cheapest tab.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I09",
+          "goal_ids": [
+            "G021",
+            "G022"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“必要时用出到达时窗及最长旅行时长过滤不合适航班”的实质结果与适用范围；DOC003:T069「The filters. I don't use it very often unless I'm connecting onto something.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I10",
+          "goal_ids": [
+            "G027",
+            "G028"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“行程不合适时重查替代路线，兼顾紧迫性和预算”的实质结果与适用范围；DOC003:T081「I try to just rerun through all of my options. Make sure I'm not missing somethi…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I11",
+          "goal_ids": [
+            "G035"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在陌生市场判断当前价格是否合理”的实质结果与适用范围；DOC003:T109「I can use Google flights for it because it tells me if the price is above, below…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I12",
+          "goal_ids": [
+            "G038"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“保留足够转机缓冲以应对延误与机场连接”的实质结果与适用范围；DOC003:T123「Unless I have visa issues, I generally don't care very much about it」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I13",
+          "goal_ids": [
+            "G039",
+            "G042",
+            "G043"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“核查转机贵宾室是否开放以及自己能否使用”的实质结果与适用范围；DOC003:T123「will the lounge at that airport be open at that point of time?」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I14",
+          "goal_ids": [
+            "G041"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“希望最新个人权益信息可与行程研究整合”的实质结果与适用范围；DOC003:T125「there would be a website that keeps everything updated about what I have and wha…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I15",
+          "goal_ids": [
+            "G016",
+            "G017",
+            "G030"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“研究现金票时尽量匿名并减少数据分享”的实质结果与适用范围；DOC003:T053「I avoid logging in, and I try to keep myself as anonymized as possible.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I16",
+          "goal_ids": [
+            "G018",
+            "G019"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“需要积分票时登录持有积分的航空公司查询并兑换”的实质结果与适用范围；DOC003:T057「if I have to make a points or an award booking, I'd log on to the airline that I…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I17",
+          "goal_ids": [
+            "G029"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“特殊刚需且价格骤升时接收多个路线的降价提醒”的实质结果与适用范围；DOC003:T087「I needed a reminder on a few different routes, just to make sure that if any one…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I18",
+          "goal_ids": [
+            "G031",
+            "G032",
+            "G045",
+            "G048"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“更快、更准确、同时研究大量路线日期舱位组合”的实质结果与适用范围；DOC003:T095「You want to do hundreds of searches at the same time」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I19",
+          "goal_ids": [
+            "G046"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在一处取得研究所需信息，减少多站切换”的实质结果与适用范围；DOC003:T137「I don't get to have all of my information at one pace I end up having to visit a…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I20",
+          "goal_ids": [
+            "G047",
+            "G049"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“凭熟悉的稳定界面降低搜索操作负担”的实质结果与适用范围；DOC003:T143「the website doesn't change very often the interface remains the same.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC003:I21",
+          "goal_ids": [
+            "G014",
+            "G015"
+          ],
+          "status": "partial",
+          "rationale": "G014卡付款、G015预填跳转均在，T031/T131用户填写个人/护照资料和声明没有目标承接。 原文：DOC003:T131「enter in all my details and pay for the booking through my card.」"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I01"
+          ],
+          "rationale": "与源文“找到价格合适且满足行程安排的航班”相符；DOC003:T025「my primary focus is to like get a really good deal」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I01"
+          ],
+          "rationale": "与源文“找到价格合适且满足行程安排的航班”相符；DOC003:T025「my primary focus is to like get a really good deal」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I01"
+          ],
+          "rationale": "与源文“找到价格合适且满足行程安排的航班”相符；DOC003:T025「my primary focus is to like get a really good deal」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I02"
+          ],
+          "rationale": "与源文“尽量提前订票以获得较好价格”相符；DOC003:T015「Mostly I try to aim for at least one to 1.5 months out, just to get like a bette…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T017明确替亲友订票，冻结清单主体已保留该用途；这不是软件自动代订承诺。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T017明确有剩余积分或礼券时帮别人省钱；是条件策略，不需把每位亲友均设为必须用积分。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T019明确喜爱更长飞行；statement保留practical constraints，未把无限飞行当硬性约束。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I03"
+          ],
+          "rationale": "与源文“在不同时间反复比价并探索多个网站的最佳优惠”相符；DOC003:T025「I check like dozens of different websites to just make sure I'm having the best …」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T029明确下一次冬假旅行意向，但不是聚合器持久功能要求。作为Stakeholder一次出行目标有源文支持，建议与稳定应用目标区分；不因冻结清单未收录即判错。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I04"
+          ],
+          "rationale": "与源文“灵活组合区域、国家、邻近机场及日期，缩小到可行行程”相符；DOC003:T031「I generally do country to country pairs」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I05"
+          ],
+          "rationale": "与源文“使航班时刻与后续交通、住宿、会面安排和休息相匹配”相符；DOC003:T031「I don't end up having to stay in a city」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I06"
+          ],
+          "rationale": "T031确实检查coupon与upgrade；与G026最终提供方比较有细分对象，可保留为过程层目标。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I07"
+          ],
+          "rationale": "与源文“确认每段航班、转机、当地日期时间、终站等物流细节适合自己”相符；DOC003:T077「I make sure all the flight details like I said. All the connections and all the …」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I21"
+          ],
+          "rationale": "与源文“完成行程和渠道决策后提供旅客资料并付款取得机票”相符；DOC003:T131「enter in all my details and pay for the booking through my card.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I21"
+          ],
+          "rationale": "与源文“完成行程和渠道决策后提供旅客资料并付款取得机票”相符；DOC003:T131「enter in all my details and pay for the booking through my card.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I15"
+          ],
+          "rationale": "与源文“研究现金票时尽量匿名并减少数据分享”相符；DOC003:T053「I avoid logging in, and I try to keep myself as anonymized as possible.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I15"
+          ],
+          "rationale": "与源文“研究现金票时尽量匿名并减少数据分享”相符；DOC003:T053「I avoid logging in, and I try to keep myself as anonymized as possible.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I16"
+          ],
+          "rationale": "T055登录看有限奖励座位、T057到持有积分航司兑换是可分阶段；与G019并列不是把同一事实机械重复。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I16"
+          ],
+          "rationale": "与源文“需要积分票时登录持有积分的航空公司查询并兑换”相符；DOC003:T057「if I have to make a points or an award booking, I'd log on to the airline that I…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I04"
+          ],
+          "rationale": "与源文“灵活组合区域、国家、邻近机场及日期，缩小到可行行程”相符；DOC003:T031「I generally do country to country pairs」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G021",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I09"
+          ],
+          "rationale": "与源文“必要时用出到达时窗及最长旅行时长过滤不合适航班”相符；DOC003:T069「The filters. I don't use it very often unless I'm connecting onto something.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G022",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I09"
+          ],
+          "rationale": "与源文“必要时用出到达时窗及最长旅行时长过滤不合适航班”相符；DOC003:T069「The filters. I don't use it very often unless I'm connecting onto something.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G023",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I08"
+          ],
+          "rationale": "与源文“按国际或国内场景平衡价格和总旅程时长”相符；DOC003:T073「when I'm booking domestic, it's mostly going through the cheapest tab.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G024",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I08"
+          ],
+          "rationale": "与源文“按国际或国内场景平衡价格和总旅程时长”相符；DOC003:T073「when I'm booking domestic, it's mostly going through the cheapest tab.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G025",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I05",
+            "DOC003:I07"
+          ],
+          "rationale": "与源文“使航班时刻与后续交通、住宿、会面安排和休息相匹配；确认每段航班、转机、当地日期时间、终站等物流细节适合自己”相符；DOC003:T031「I don't end up having to stay in a city」；DOC003:T077「I make sure all the flight details like I said. All the connections and all the …」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G026",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I06"
+          ],
+          "rationale": "与源文“比较供应商价格、评价、折扣、优惠券和升级，确定最终总价与订票渠道”相符；DOC003:T077「I look at the price. I take a look at the rating, and I often visit multiple pro…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G027",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I10"
+          ],
+          "rationale": "与源文“行程不合适时重查替代路线，兼顾紧迫性和预算”相符；DOC003:T081「I try to just rerun through all of my options. Make sure I'm not missing somethi…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G028",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I05",
+            "DOC003:I10"
+          ],
+          "rationale": "与源文“使航班时刻与后续交通、住宿、会面安排和休息相匹配；行程不合适时重查替代路线，兼顾紧迫性和预算”相符；DOC003:T031「I don't end up having to stay in a city」；DOC003:T081「I try to just rerun through all of my options. Make sure I'm not missing somethi…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G029",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I17"
+          ],
+          "rationale": "与源文“特殊刚需且价格骤升时接收多个路线的降价提醒”相符；DOC003:T087「I needed a reminder on a few different routes, just to make sure that if any one…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G030",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I15"
+          ],
+          "rationale": "与源文“研究现金票时尽量匿名并减少数据分享”相符；DOC003:T053「I avoid logging in, and I try to keep myself as anonymized as possible.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G031",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I18"
+          ],
+          "rationale": "与源文“更快、更准确、同时研究大量路线日期舱位组合”相符；DOC003:T095「You want to do hundreds of searches at the same time」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G032",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC003:I04",
+            "DOC003:I18"
+          ],
+          "rationale": "T099的US–India矩阵为解释规模的例子；虽rationale说illustrative，仍立成独立G032并连specialization，容易将示例固化为常驻特定地理目标。宜降为G031的场景示例。",
+          "issues": [
+            {
+              "category": "background",
+              "reason": "T099用let us say的机场/七天/舱位计算说明搜索复杂性，不是另立固定US–India查询需求。"
+            }
+          ]
+        },
+        {
+          "goal_id": "G033",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I06"
+          ],
+          "rationale": "与源文“比较供应商价格、评价、折扣、优惠券和升级，确定最终总价与订票渠道”相符；DOC003:T077「I look at the price. I take a look at the rating, and I often visit multiple pro…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G034",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I01"
+          ],
+          "rationale": "与源文“找到价格合适且满足行程安排的航班”相符；DOC003:T025「my primary focus is to like get a really good deal」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G035",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I11"
+          ],
+          "rationale": "与源文“在陌生市场判断当前价格是否合理”相符；DOC003:T109「I can use Google flights for it because it tells me if the price is above, below…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G036",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I05"
+          ],
+          "rationale": "与源文“使航班时刻与后续交通、住宿、会面安排和休息相匹配”相符；DOC003:T031「I don't end up having to stay in a city」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G037",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I05"
+          ],
+          "rationale": "与源文“使航班时刻与后续交通、住宿、会面安排和休息相匹配”相符；DOC003:T031「I don't end up having to stay in a city」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G038",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I12"
+          ],
+          "rationale": "与源文“保留足够转机缓冲以应对延误与机场连接”相符；DOC003:T123「Unless I have visa issues, I generally don't care very much about it」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G039",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I13"
+          ],
+          "rationale": "与源文“核查转机贵宾室是否开放以及自己能否使用”相符；DOC003:T123「will the lounge at that airport be open at that point of time?」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G040",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T123明确“I like to maintain global access through priority pass”；属个人持续权益偏好，冻结清单未单列不代表无依据。不能解释成平台必须提供全球准入。",
+          "issues": []
+        },
+        {
+          "goal_id": "G041",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I14"
+          ],
+          "rationale": "与源文“希望最新个人权益信息可与行程研究整合”相符；DOC003:T125「there would be a website that keeps everything updated about what I have and wha…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G042",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I13"
+          ],
+          "rationale": "与源文“核查转机贵宾室是否开放以及自己能否使用”相符；DOC003:T123「will the lounge at that airport be open at that point of time?」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G043",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I13"
+          ],
+          "rationale": "T127确实要求有限次数卡检查有效和余额；本人用无限卡，故保留For a limited-use条件作为一般化举例即可，不能说本人余额不足。",
+          "issues": []
+        },
+        {
+          "goal_id": "G044",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I06"
+          ],
+          "rationale": "与源文“比较供应商价格、评价、折扣、优惠券和升级，确定最终总价与订票渠道”相符；DOC003:T077「I look at the price. I take a look at the rating, and I often visit multiple pro…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G045",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I18"
+          ],
+          "rationale": "T137希望统一给参数找合适选项；已标inferred且rationale排除数学绝对最优保证，强度合适。",
+          "issues": []
+        },
+        {
+          "goal_id": "G046",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I19"
+          ],
+          "rationale": "与源文“在一处取得研究所需信息，减少多站切换”相符；DOC003:T137「I don't get to have all of my information at one pace I end up having to visit a…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G047",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I20"
+          ],
+          "rationale": "T143/T147以熟悉稳定界面解释节时，G047只保留节时/认知负担结果；与G048更快准确和G049长期切换意愿可相容，虽有重叠不必一概合并。",
+          "issues": []
+        },
+        {
+          "goal_id": "G048",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I18"
+          ],
+          "rationale": "与源文“更快、更准确、同时研究大量路线日期舱位组合”相符；DOC003:T095「You want to do hundreds of searches at the same time」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G049",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC003:I20"
+          ],
+          "rationale": "与源文“凭熟悉的稳定界面降低搜索操作负担”相符；DOC003:T143「the website doesn't change very often the interface remains the same.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [
+        {
+          "relation_id": "R001",
+          "judgment": "consistent",
+          "rationale": "T015提前买为了好价，作为尝试性手段成立，不保证便宜。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R002",
+          "judgment": "consistent",
+          "rationale": "T017剩余积分/券帮助替亲友订票，条件性手段成立。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R003",
+          "judgment": "consistent",
+          "rationale": "T025跨站重复比较为找优惠方式，非充分条件。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R004",
+          "judgment": "consistent",
+          "rationale": "T065国家区域输入扩大机场组合，操作方式成立。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R005",
+          "judgment": "consistent",
+          "rationale": "T069接续时限筛选为配合交通安排，方向正确。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R006",
+          "judgment": "consistent",
+          "rationale": "T073国际价格时间折衷是一般替代评估的情境特化。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R007",
+          "judgment": "consistent",
+          "rationale": "T073国内便宜标签是另一情境特化，非所有行程规则。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R008",
+          "judgment": "consistent",
+          "rationale": "T077最终费用/优惠比较服务于T103选定行程价格。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R009",
+          "judgment": "consistent",
+          "rationale": "T081重查是找到可行方案的应对方式，并保留无替代妥协。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R010",
+          "judgment": "consistent",
+          "rationale": "T083末班火车是接续交通的具体场景，预算可让步。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R011",
+          "judgment": "consistent",
+          "rationale": "T087提醒可能帮助低价出现时及时订，不保证降价。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R012",
+          "judgment": "consistent",
+          "rationale": "T053匿名是减少数据披露的本人方式，不确认跟踪涨价事实。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R013",
+          "judgment": "consistent",
+          "rationale": "T089不多给另一方数据是隐私目标特化。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R014",
+          "judgment": "needs_revision",
+          "rationale": "T099只是说明规模的例子；将其建为独立特化目标会固化地理例子，宜改为场景注释。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R015",
+          "judgment": "consistent",
+          "rationale": "T109/T111市场价比较辅助判断价格，不直接产出最低报价。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R016",
+          "judgment": "consistent",
+          "rationale": "T119会面对象时间是旅程适合的具体条件。 当前关系按包内specialization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R017",
+          "judgment": "consistent",
+          "rationale": "T119睡眠偏好对适合性有帮助，可接受红眼。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R018",
+          "judgment": "consistent",
+          "rationale": "T123转机余量帮助接续，无法保证延误不发生。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R019",
+          "judgment": "consistent",
+          "rationale": "T125权益整合可能帮助贵宾室机会判断，但权益与开放是不同维度，只能有限贡献。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R020",
+          "judgment": "consistent",
+          "rationale": "T127发卡方来源可查开放时间和政策，作为所选信息源成立。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R021",
+          "judgment": "consistent",
+          "rationale": "T095/T147并行查组合减少重复研究，有贡献而非充分。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R022",
+          "judgment": "consistent",
+          "rationale": "T137信息集中减少站点切换，与认知时间负担有关。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R023",
+          "judgment": "consistent",
+          "rationale": "T047/T135供应商页面在付款之前，顺序成立。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R024",
+          "judgment": "consistent",
+          "rationale": "T031核对物流再付款，顺序成立而非充分。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T119明确时间匹配例子，F001保留proposed/partial；签证和预算例外未变硬约束，组织合理。"
+        },
+        {
+          "group_id": "F002",
+          "judgment": "consistent",
+          "rationale": "T015/T025/T077/T087这些优惠策略依场景而用，F002明确非强制AND且partial，因此不因不充分判错。"
+        },
+        {
+          "group_id": "F003",
+          "judgment": "consistent",
+          "rationale": "T095/T137并行与集中资料针对研究负担；F003只提出部分方案，没有保证快速准确。"
+        }
+      ]
+    }
+  ]
+}

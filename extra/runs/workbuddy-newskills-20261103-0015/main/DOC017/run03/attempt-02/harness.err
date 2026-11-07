@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\logs\harness.py", line 301, in <module>
+    main()
+    ~~~~^^
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\logs\harness.py", line 183, in main
+    r.run([TRACE, a / "extraction.json", "--judgment-template", a / "judgments.json"], "judgment_template")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\logs\harness.py", line 65, in run
+    raise RuntimeError(f"{label} failed ({proc.returncode}): {proc.stderr.strip()[-1500:]}")
+RuntimeError: judgment_template failed (1):  last):
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\versions\skills\goal-extraction\scripts\trace_candidates.py", line 245, in <module>
+    main()
+    ~~~~^^
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\versions\skills\goal-extraction\scripts\trace_candidates.py", line 221, in main
+    json.dump(judgment_template(data, raw), handle, ensure_ascii=False, indent=2)
+              ~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\versions\skills\goal-extraction\scripts\trace_candidates.py", line 34, in judgment_template
+    validate_input(data)
+    ~~~~~~~~~~~~~~^^^^^^
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\versions\skills\goal-extraction\scripts\trace_candidates.py", line 29, in validate_input
+    validate(data)
+    ~~~~~~~~^^^^^^
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\versions\skills\goal-extraction\scripts\simple_candidates.py", line 22, in validate
+    validate_old(legacy_shape(data))
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\versions\skills\goal-extraction\scripts\render_review.py", line 105, in validate
+    raise ValueError("Unknown review question reference")
+ValueError: Unknown review question reference

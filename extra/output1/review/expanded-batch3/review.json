@@ -1,0 +1,2171 @@
+{
+  "review_id": "expanded-batch3",
+  "created_at_utc": "2026-10-24T08:00:51.292185+00:00",
+  "status": "complete_with_local_unresolved_candidate_DOC036_G17",
+  "reviewer": {
+    "identity": "fresh independent context model reviewer /root/review_expanded_batch3",
+    "independence": "separate context from generating agents, same model family; not external human review",
+    "exact_model": "unknown",
+    "sampling_parameters": "unknown",
+    "budget": "unknown"
+  },
+  "protocol": {
+    "full_goal_sample": [
+      "DOC004",
+      "DOC026",
+      "DOC033"
+    ],
+    "risk_triggered_full_goal_review": [
+      "DOC015"
+    ],
+    "all_groups_documents": [
+      "DOC004",
+      "DOC006",
+      "DOC007",
+      "DOC015",
+      "DOC016",
+      "DOC026",
+      "DOC029",
+      "DOC032",
+      "DOC033",
+      "DOC036"
+    ],
+    "sampling": "purposive, not random; no accuracy extrapolation",
+    "prohibited_materials_not_read": [
+      "author-review.md",
+      "baseline contents",
+      "historical output comparisons/adjudications",
+      "research/development reference answers"
+    ],
+    "rules_used": [
+      "output1/_run/skill-snapshots/revised/skills/model-review/SKILL.md",
+      "output1/_run/skill-snapshots/revised/skills/model-review/references/semantic-review.md",
+      "output1/_run/skill-snapshots/revised/skills/goal-extraction/references/goal-boundaries.md",
+      "output1/_run/skill-snapshots/revised/skills/goal-extraction/references/evidence-rules.md",
+      "output1/_run/skill-snapshots/revised/skills/goal-model-building/references/modeling-rules.md",
+      "output1/_run/expanded-review-plan.json"
+    ],
+    "engineering": "Relied on final-verification engineering result, independently verified selected final byte hashes/input artifact hashes/source equality; no repeated full engineering suite or edited core inspection."
+  },
+  "coverage": {
+    "completed_documents": 10,
+    "full_goal_documents": 4,
+    "full_goal_count": 84,
+    "endpoint_only_documents": 5,
+    "endpoint_goal_count": 26,
+    "unique_independently_reviewed_goals": 111,
+    "reviewed_groups": 10,
+    "established_groups": 0,
+    "pending_documents": [],
+    "claims": "Object counts are coverage only. Finding items are not added as erroneous-goal counts and no corpus accuracy rate is claimed.",
+    "risk_added_nonendpoint_goal_count": 1,
+    "endpoint_only_plus_risk_added_documents": 1
+  },
+  "documents": [
+    {
+      "document_id": "DOC004",
+      "delivery_path": "revised/DOC004/v1/delivery/goal-model.json",
+      "model_sha256": "db5c86648c324f6353fd5b960568b33434fd00b65ab7b53bb4591e259b2c775f",
+      "internal_version": "v1",
+      "scope": "full_document_goal_review",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "完整标准全文T000-T066，先于目标比较"
+        },
+        {
+          "round": "R2",
+          "read": "目标模型、证据、全部组与问题；首个长输出有截断，未据截断标全读"
+        },
+        {
+          "round": "R3",
+          "read": "紧凑重读全17目标、全部证据、全部条件/context及F004-1，完成缺失部分"
+        }
+      ],
+      "source_read_ranges": [
+        "T000-T066"
+      ],
+      "source_complete_read": true,
+      "reviewed_goal_ids": [
+        "DOC004-G01",
+        "DOC004-G02",
+        "DOC004-G03",
+        "DOC004-G04",
+        "DOC004-G05",
+        "DOC004-G06",
+        "DOC004-G07",
+        "DOC004-G08",
+        "DOC004-G09",
+        "DOC004-G10",
+        "DOC004-G11",
+        "DOC004-G12",
+        "DOC004-G13",
+        "DOC004-G14",
+        "DOC004-G15",
+        "DOC004-G16",
+        "DOC004-G17"
+      ],
+      "reviewed_group_ids": [
+        "F004-1"
+      ],
+      "total_model_goals": 17,
+      "unreviewed_goal_ids": [],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC004-G01",
+          "source_context": "T004-T007",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "Zelle分账的方式、小额和亲友用途均成立；sell按上下文理解为转写，不验证现实服务速度。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G02",
+          "source_context": "T005",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "富余checking转savings赚利息的条件与目的均保留，未补收益承诺。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G03",
+          "source_context": "T005",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "持续线下Apple Pay用途提供维持意图的正面依据；inferred及假设适度，没有升级为明确新增需求。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G04",
+          "source_context": "T014-T017",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "概览余额、收支及近期交易、少跳页均有肯定与用途；是有价值的现有能力维持。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G05",
+          "source_context": "T018-T019",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "保留受访者主观安全感与不知道后台的限制；未把知名银行或安全信念变事实。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G06",
+          "source_context": "T018-T019",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "首次该笔记本登录的2FA得到肯定；新设备解释受条件收窄，没有推成每次登录必需。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G07",
+          "source_context": "T018-T019",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "支出通知及争议被肯定；维持推断合理，及时不引入具体时限或零漏报保证。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G08",
+          "source_context": "T017,T020-T021",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "有期限目标及月收入/支出进度明确，减少过度消费的结果意图可辨。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G09",
+          "source_context": "T020-T023",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "用途分类诉求与渠道分类现状分开；没有把猜测易实现当技术事实。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G10",
+          "source_context": "T024-T037",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "实际探索找不到后仍明确希望设置卡消费限额；100美元为采访者演示，不是固定要求。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G11",
+          "source_context": "T058-T059",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "重要低频功能应更可达，锁/解锁是例子；7或8点击仅回忆，未创造验收数值。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G12",
+          "source_context": "T038-T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "网页Zelle与减少拿手机的方式/目的保留；未验证网站确无该功能。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G13",
+          "source_context": "T043-T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "确认页面与避免金额/对象错误有正面依据；维持推断不承诺绝对无误。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G14",
+          "source_context": "T043-T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "日程及重复转账的减少重复操作价值明确；关闭演示开关不是拒绝重复功能。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G15",
+          "source_context": "T048-T055",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "网站文字支持、相对电话更放松及多任务均成立；保留偏好而非禁止电话。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G16",
+          "source_context": "T053-T055",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "AI聊天帮助为受访者建议，面向不熟网站者；候选语气和未知限制均保留。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC004-G17",
+          "source_context": "T060-T061",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "肯定投资新手先向顾问求助提供维持推断；降低盲目损失风险没有保证盈利。",
+          "finding_ids": []
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F004-1",
+          "parent_id": "DOC004-G05",
+          "child_ids": [
+            "DOC004-G06",
+            "DOC004-G07"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T018-T019",
+          "normal_scenario": "首次新设备验证、支出通知与争议给该受访者安全感以正面贡献。",
+          "counterexample_or_gap": "分析假设：前台能力均有，但因银行信誉变化或其他已知风险，受访者仍不安心。原文同时提及知名银行，未说明这些子目标穷尽安全感来源。",
+          "decision_reason": "维持proposed/partial；不是因为必须覆盖全部客观安全威胁——父目标是主观客户侧安全感。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        }
+      ],
+      "human_review": "pending",
+      "formal_proof": "not_run"
+    },
+    {
+      "document_id": "DOC006",
+      "delivery_path": "revised/DOC006/v1/delivery/goal-model.json",
+      "model_sha256": "46c479a65254ea051a72b38ce1838cece49853a7fbc0bb04d061e99c50609dfe",
+      "internal_version": "v1",
+      "scope": "all_groups_and_endpoints_only",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "全F006-1及完整父/子4目标、证据、条件、问题"
+        },
+        {
+          "round": "R2",
+          "read": "完整标准全文T000-T045；仅4个端点完成目标独立复核"
+        }
+      ],
+      "source_read_ranges": [
+        "T000-T045"
+      ],
+      "source_complete_read": true,
+      "reviewed_goal_ids": [
+        "DOC006-G01",
+        "DOC006-G02",
+        "DOC006-G04",
+        "DOC006-G05"
+      ],
+      "reviewed_group_ids": [
+        "F006-1"
+      ],
+      "total_model_goals": 14,
+      "unreviewed_goal_ids": [
+        "DOC006-G03",
+        "DOC006-G06",
+        "DOC006-G07",
+        "DOC006-G08",
+        "DOC006-G09",
+        "DOC006-G10",
+        "DOC006-G11",
+        "DOC006-G12",
+        "DOC006-G13",
+        "DOC006-G14"
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC006-G01",
+          "source_context": "T000-T003",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "资讯/招聘及避免遗漏的重要目的明确，不要求所有用户。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC006-G02",
+          "source_context": "T004-T005,T028-T029",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "最新、持续和符合兴趣被明确认为必要；选定AI方式在依据中保留，不验证算法事实。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC006-G04",
+          "source_context": "T006-T007",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "每日排行路径是主要使用行动，维持推断有依据；hardest按上下文热度解释有转写未知。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC006-G05",
+          "source_context": "T008-T009",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "频繁搜索是有意检索路径，维持推断合理。",
+          "finding_ids": []
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F006-1",
+          "parent_id": "DOC006-G01",
+          "child_ids": [
+            "DOC006-G02",
+            "DOC006-G04",
+            "DOC006-G05"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T000-T009,T028-T029",
+          "normal_scenario": "推荐、排行、搜索提供被实际使用的信息发现路径。",
+          "counterexample_or_gap": "分析假设：重要新招聘未被索引/尚未有热度且不合既有兴趣，三个路径都可用仍可能没有接触到。",
+          "decision_reason": "维持proposed/partial；信息发现途径与避免遗漏结果之间缺覆盖前提，不能按主题直接成立。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        }
+      ],
+      "human_review": "pending",
+      "formal_proof": "not_run"
+    },
+    {
+      "document_id": "DOC007",
+      "delivery_path": "revised/DOC007/v1/delivery/goal-model.json",
+      "model_sha256": "d0a4940419f72a9d43133cb02838b216bfae364645d5968d1af4916354ee6f97",
+      "internal_version": "v1",
+      "scope": "all_groups_and_endpoints_only",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "全F007-1及完整父/子4目标、证据、条件、问题"
+        },
+        {
+          "round": "R2",
+          "read": "标准全文T028-T044、T062-T082，含问题、发现现状、后续完整解释和确认"
+        }
+      ],
+      "source_read_ranges": [
+        "T028-T044",
+        "T062-T082"
+      ],
+      "source_complete_read": false,
+      "reviewed_goal_ids": [
+        "DOC007-G04",
+        "DOC007-G05",
+        "DOC007-G06",
+        "DOC007-G07"
+      ],
+      "reviewed_group_ids": [
+        "F007-1"
+      ],
+      "total_model_goals": 16,
+      "unreviewed_goal_ids": [
+        "DOC007-G01",
+        "DOC007-G02",
+        "DOC007-G03",
+        "DOC007-G08",
+        "DOC007-G09",
+        "DOC007-G10",
+        "DOC007-G11",
+        "DOC007-G12",
+        "DOC007-G13",
+        "DOC007-G14",
+        "DOC007-G15",
+        "DOC007-G16"
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC007-G04",
+          "source_context": "T033-T034",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "根据过去全部订单拟清单是明确期望；发现buy again不自动满足完整拟单。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC007-G05",
+          "source_context": "T038,T068-T072",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "自定义模板复用的用途及日常/聚会例子保留；是否已有相关功能不是明确已实现事实。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC007-G06",
+          "source_context": "T068-T072",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "定期清单经本人签认后才下单和自提均支持；两周作为提议例子而非唯一周期。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC007-G07",
+          "source_context": "T077-T082",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "减少键入、重建和遗忘后实体补跑的预期明确；不是零遗漏。",
+          "finding_ids": []
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F007-1",
+          "parent_id": "DOC007-G07",
+          "child_ids": [
+            "DOC007-G04",
+            "DOC007-G05",
+            "DOC007-G06"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T033-T038,T068-T078",
+          "normal_scenario": "常规需求稳定、历史和模板适合时，确认后的复用清单有望减少重建。",
+          "counterexample_or_gap": "分析假设：历史和模板过时，临时聚会新增需求未加入，用户签认未发现；三能力都有仍不一定比原流程减少遗忘补跑。",
+          "decision_reason": "维持proposed/partial。减少不等于零遗漏；AND也不要求每一子目标独立必要，不能仅因重叠否决。此处未确认适配需求/改善标准。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        }
+      ],
+      "human_review": "pending",
+      "formal_proof": "not_run"
+    },
+    {
+      "document_id": "DOC015",
+      "delivery_path": "revised/DOC015/v3/delivery/goal-model.json",
+      "model_sha256": "eca38e8885badb8c931f066e31c17cf557769e2282bc4db7397b68418207e9b6",
+      "internal_version": "v1",
+      "scope": "full_document_goal_review",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "完整标准全文T000-T059，先于目标比较"
+        },
+        {
+          "round": "R2",
+          "read": "最新外层v2的31目标、证据、条件/context、问题及两组全字段"
+        },
+        {
+          "round": "R3",
+          "read": "重读T022-T029与T040-T045，分清内容分类/反馈及量化例子与要求"
+        },
+        {
+          "round": "R4",
+          "read": "G12仅质量反馈/评分；G02保留按内容分类辅助推荐且无评分定类推断，符合T024-T025。其他目标完整字段及按文本/角色归一的引用相同，继承此前逐目标审查；并非重读全部原文。"
+        }
+      ],
+      "source_read_ranges": [
+        "T000-T059"
+      ],
+      "source_complete_read": true,
+      "reviewed_goal_ids": [
+        "DOC015-G01",
+        "DOC015-G02",
+        "DOC015-G03",
+        "DOC015-G04",
+        "DOC015-G05",
+        "DOC015-G06",
+        "DOC015-G07",
+        "DOC015-G08",
+        "DOC015-G09",
+        "DOC015-G10",
+        "DOC015-G11",
+        "DOC015-G12",
+        "DOC015-G13",
+        "DOC015-G14",
+        "DOC015-G15",
+        "DOC015-G16",
+        "DOC015-G17",
+        "DOC015-G18",
+        "DOC015-G19",
+        "DOC015-G20",
+        "DOC015-G21",
+        "DOC015-G22",
+        "DOC015-G23",
+        "DOC015-G24",
+        "DOC015-G25",
+        "DOC015-G26",
+        "DOC015-G27",
+        "DOC015-G28",
+        "DOC015-G29",
+        "DOC015-G30",
+        "DOC015-G31"
+      ],
+      "reviewed_group_ids": [
+        "F015-1",
+        "F015-2"
+      ],
+      "total_model_goals": 31,
+      "unreviewed_goal_ids": [],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC015-G01",
+          "source_context": "T008-T011",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "受访者自述职责明确听众与创作者体验结果；角色是来源主体，非系统实现责任。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G02",
+          "source_context": "T016-T019,T031,T053",
+          "assessment": "supported_after_separate_revision",
+          "note": "个性化与登录即合适内容明确；推荐优先但不牺牲UI/导航的取舍在条件中保留。 v3相关条件/证据保留按内容归类辅助推荐，不声称充分性或评分定类。",
+          "finding_ids": [],
+          "original_assessment": "supported_with_recorded_boundaries",
+          "original_note": "个性化与登录即合适内容明确；推荐优先但不牺牲UI/导航的取舍在条件中保留。"
+        },
+        {
+          "goal_id": "DOC015-G03",
+          "source_context": "T017,T023,T043,T047",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "特殊需要用户可访问目标明确，未捏造障碍类型全覆盖或量化达标值。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G04",
+          "source_context": "T017,T037",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "社区参与结果明确；排序不是逻辑精化或可选性。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G05",
+          "source_context": "T017,T023",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "创作者工具与留存目的明确；没有声称具体工具必然留下所有创作者。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G06",
+          "source_context": "T019,T043",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "多语方言和多背景创作者的覆盖目的明确；已实现历史没有当外部已核事实。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G07",
+          "source_context": "T018-T021,T053",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "扩大听众的上下文使参与、活跃增长、留存成为关注成效；没有编造指标值，提升方向属合理上下文理解。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G08",
+          "source_context": "T022-T023",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "逐播客转写/字幕及多方式获取的用途明确；自述现状范围在条件保留而非客观完备证明。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G09",
+          "source_context": "T023-T025",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "检测标记不当/禁止内容的选定自动方式明确；未加自动删除或零漏检。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G10",
+          "source_context": "T024-T025",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "音频/制作标准要求明确，未回答不达标处置；问题保留，未补惩罚或下架规则。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G11",
+          "source_context": "T023",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "创作者洞察和优化建议用途明确；未承诺采纳和效果。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G12",
+          "source_context": "T024-T025",
+          "assessment": "supported_after_separate_revision",
+          "note": "v3已收窄为质量判断中的反馈/评分；T024-T025支持，不再声称参与内容分类。ER-B3-001修复后独立核验通过。",
+          "finding_ids": [
+            "ER-B3-001"
+          ],
+          "original_assessment": "material_issue",
+          "original_note": "质量评价流程考虑反馈/评分有依据；把反馈/评分同时用于内容分类无正面依据，见ER-B3-001。"
+        },
+        {
+          "goal_id": "DOC015-G13",
+          "source_context": "T026-T027",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "付费条件与无广告目的明确；月/年付费在证据和依据中可见，没有无条件免费无广告承诺。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G14",
+          "source_context": "T027,T041",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "目标广告相关性及频率/位置干扰控制明确；没有编造上限。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G15",
+          "source_context": "T028-T029",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "新用户少广告、入门试用和探索目的明确；2至3月保留为例子，未变固定套餐阈值。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G16",
+          "source_context": "T029",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "长期听众历史推荐与付费用户有时独家分别保留；未混为所有长期听众必有付费专属。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G17",
+          "source_context": "T019,T031-T033",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "自主兴趣设置、定期问答明确；不是强制每次填写。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G18",
+          "source_context": "T033,T039,T049",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "新鲜探索与播客不偏离过远的双重边界成立；没有随机跨类要求。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G19",
+          "source_context": "T031",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "亲友分享内容增强推荐为选定策略；没有要求读取所有私人消息。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G20",
+          "source_context": "T036-T037",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "分享评分、自建列表、点赞保存列表均支持；创建应理解为自建列表，非创建他人的所有权。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G21",
+          "source_context": "T037",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "主题群组/论坛、直播问答为选定社区方式；不是已证完整OR替代方案。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G22",
+          "source_context": "T038-T039",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "引入更多创作者、避免少数垄断的目的明确；2000位是上月自述，不是未来配额。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G23",
+          "source_context": "T040-T041",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "通常首尾而非中间的投放方式保留；4条与30秒是例子，不是普遍上限。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G24",
+          "source_context": "T041",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "赞助内容/广告清晰标识和信任目的明确。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G25",
+          "source_context": "T042-T043",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "不愿计算规模损害体验明确，术语转写不顺已说明；没有延迟/吞吐阈值。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G26",
+          "source_context": "T043,T047",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "语音及键盘导航选定方式保留，不只留抽象无障碍。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G27",
+          "source_context": "T043",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "跨平板及品牌手机的一致行为/性能体验明确；不推出设备硬件指标相等。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G28",
+          "source_context": "T044-T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "移动/网页算法效率且不牺牲功能的目标明确；代码拆分只为自述背景，未强制唯一架构。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G29",
+          "source_context": "T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "睡前用途及好评支持维持计时停止的推断；10至15Â NBSP min原样引文不变成上限或必须15分。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G30",
+          "source_context": "T046-T047",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "直接搜索栏和减少点击均为已选方式/目的；未为抽象删除方式。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC015-G31",
+          "source_context": "T047",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "Instagram/WhatsApp群组直接分享及图片正确表示均明确；未扩大到所有社交平台。",
+          "finding_ids": []
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F015-1",
+          "parent_id": "DOC015-G03",
+          "child_ids": [
+            "DOC015-G08",
+            "DOC015-G06",
+            "DOC015-G26"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T017,T019,T023,T043,T047",
+          "normal_scenario": "转写字幕、多语和语音/键盘能覆盖部分具体访问路径。",
+          "counterexample_or_gap": "分析假设：仍有屏幕阅读或认知导航需要未被覆盖，多语创作者存在也不保证每个目标内容有可用字幕。特殊需要类别和验收范围未知。",
+          "decision_reason": "维持proposed/partial；不能把支持部分访问途径视为全部无障碍结果成立，也不能把多语与所有障碍直接等同。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        },
+        {
+          "group_id": "F015-2",
+          "parent_id": "DOC015-G14",
+          "child_ids": [
+            "DOC015-G23",
+            "DOC015-G24"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T027,T029,T041",
+          "normal_scenario": "首尾广告和清楚标识有助减少中断、维护信任。",
+          "counterexample_or_gap": "分析假设：所有广告都在首尾且标识清楚，但总数过多或与用户兴趣不相关，父目标的相关性/负荷部分仍未满足。",
+          "decision_reason": "维持proposed/partial；明确的父目标成分缺口是相关性和频率，非仅泛泛认为可能有其他原因。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        }
+      ],
+      "human_review": "pending",
+      "formal_proof": "not_run",
+      "original_review_delivery_path": "revised/DOC015/v2/delivery/goal-model.json",
+      "original_review_model_sha256": "a6673e5d5498b0b1718fe3ef207e30bc8fecfdd4bc2ae3a0a2115463269e1ce1",
+      "revision_recheck": {
+        "document_id": "DOC015",
+        "original_path": "output1/revised/DOC015/v2/delivery/goal-model.json",
+        "revised_path": "output1/revised/DOC015/v3/delivery/goal-model.json",
+        "revised_sha256": "eca38e8885badb8c931f066e31c17cf557769e2282bc4db7397b68418207e9b6",
+        "rechecked_goal_ids": [
+          "DOC015-G02",
+          "DOC015-G12"
+        ],
+        "unchanged_goal_ids": [
+          "DOC015-G01",
+          "DOC015-G03",
+          "DOC015-G04",
+          "DOC015-G05",
+          "DOC015-G06",
+          "DOC015-G07",
+          "DOC015-G08",
+          "DOC015-G09",
+          "DOC015-G10",
+          "DOC015-G11",
+          "DOC015-G13",
+          "DOC015-G14",
+          "DOC015-G15",
+          "DOC015-G16",
+          "DOC015-G17",
+          "DOC015-G18",
+          "DOC015-G19",
+          "DOC015-G20",
+          "DOC015-G21",
+          "DOC015-G22",
+          "DOC015-G23",
+          "DOC015-G24",
+          "DOC015-G25",
+          "DOC015-G26",
+          "DOC015-G27",
+          "DOC015-G28",
+          "DOC015-G29",
+          "DOC015-G30",
+          "DOC015-G31"
+        ],
+        "groups_byte_semantics_unchanged": true,
+        "source_unchanged": true,
+        "conclusion": "G12仅质量反馈/评分；G02保留按内容分类辅助推荐且无评分定类推断，符合T024-T025。",
+        "scope": "affected_objects_read_in_full; other goals quote-and-field normalized equality checked",
+        "independent_verdict": "repair_confirmed"
+      }
+    },
+    {
+      "document_id": "DOC016",
+      "delivery_path": "revised/DOC016/v2/delivery/goal-model.json",
+      "model_sha256": "7ae8191e455beaa49b4a2b6972a1682d86fa8a7f3e0e5e841e8cfd1fe39530a0",
+      "internal_version": "v1",
+      "scope": "all_groups_and_endpoints_only",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "两组与完整父/子8目标、证据、条件、问题"
+        },
+        {
+          "round": "R2",
+          "read": "T020-T071及T079-T109；长输出中段截断，未据此标完整"
+        },
+        {
+          "round": "R3",
+          "read": "重读T040-T071补齐截断；T020-T071及T079-T109均实际完成"
+        }
+      ],
+      "source_read_ranges": [
+        "T020-T071",
+        "T079-T109"
+      ],
+      "source_complete_read": false,
+      "reviewed_goal_ids": [
+        "DOC016-G03",
+        "DOC016-G05",
+        "DOC016-G08",
+        "DOC016-G14",
+        "DOC016-G15",
+        "DOC016-G17",
+        "DOC016-G18",
+        "DOC016-G19"
+      ],
+      "reviewed_group_ids": [
+        "F016-1",
+        "F016-2"
+      ],
+      "total_model_goals": 21,
+      "unreviewed_goal_ids": [
+        "DOC016-G01",
+        "DOC016-G02",
+        "DOC016-G04",
+        "DOC016-G06",
+        "DOC016-G07",
+        "DOC016-G09",
+        "DOC016-G10",
+        "DOC016-G11",
+        "DOC016-G12",
+        "DOC016-G13",
+        "DOC016-G16",
+        "DOC016-G20",
+        "DOC016-G21"
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC016-G03",
+          "source_context": "T024-T029,T101-T105",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "摘要、有限晨间/遛狗时间、尽可能多信息明确；1015和can't转写不确定未升阈值。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC016-G05",
+          "source_context": "T023,T027,T100-T103",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "极简及少干扰的结果明确；不等于拒绝所有新功能。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC016-G08",
+          "source_context": "T032-T037,T045-T047",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "不感兴趣事件跨媒体重复致无效浏览的改善推断合理；未否定有用多元报道。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC016-G14",
+          "source_context": "T056-T057,T065-T071",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "跳转前订阅/登录提示以免无效往返明确，未要求绕付费。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC016-G15",
+          "source_context": "T058-T069",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "返回时有时丢进度并放弃阅读，支持维持列表/阅读进度的推断；不指定缓存实现。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC016-G17",
+          "source_context": "T080-T093",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "逐条朗读用于驾驶/忙手活动明确，且最高优先；手机存在不证明朗读现已可用。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC016-G18",
+          "source_context": "T081",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "结合语境、自然表现的软质量诉求明确，不用数值臆造验收。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC016-G19",
+          "source_context": "T082-T093",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "不在电脑前和多任务时更灵活及更多资讯结果明确。",
+          "finding_ids": []
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F016-1",
+          "parent_id": "DOC016-G19",
+          "child_ids": [
+            "DOC016-G17",
+            "DOC016-G18"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T081-T093",
+          "normal_scenario": "能用且自然的逐条朗读支持驾驶、锻炼等不看屏场景的新闻消费。",
+          "counterexample_or_gap": "分析假设：朗读形式可用但所需内容需外部付费登录，或所用设备/进入方式不适合该双手忙碌场景，未必带来更多有效资讯。",
+          "decision_reason": "维持proposed/partial；场景设备、内容和操作边界未知。未从手机存在推导朗读已可用。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        },
+        {
+          "group_id": "F016-2",
+          "parent_id": "DOC016-G03",
+          "child_ids": [
+            "DOC016-G05",
+            "DOC016-G08",
+            "DOC016-G14",
+            "DOC016-G15"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T023-T037,T045-T071,T101-T105",
+          "normal_scenario": "极简、少无效重复、预警付费及保存进度可减少不同时间损失。",
+          "counterexample_or_gap": "分析假设：四项都做到但摘要漏重要细节，或提供的新闻不相关；有限时间内实际重要信息量仍不改善。",
+          "decision_reason": "维持proposed/partial；父目标的摘要内容和重要性未由这四子目标保证；1015和否定转写未知未补。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        }
+      ],
+      "human_review": "pending",
+      "formal_proof": "not_run"
+    },
+    {
+      "document_id": "DOC026",
+      "delivery_path": "revised/DOC026/v1/delivery/goal-model.json",
+      "model_sha256": "f1d88c73fdeeab8a5b99fadc5c7c2549516f803d9affb0dce35d4a078a1d5103",
+      "internal_version": "v1",
+      "scope": "full_document_goal_review",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "完整标准全文T000-T047，先于目标比较"
+        },
+        {
+          "round": "R2",
+          "read": "全18目标、证据、条件/context、问题与无精化组状态"
+        }
+      ],
+      "source_read_ranges": [
+        "T000-T047"
+      ],
+      "source_complete_read": true,
+      "reviewed_goal_ids": [
+        "DOC026-G01",
+        "DOC026-G02",
+        "DOC026-G03",
+        "DOC026-G04",
+        "DOC026-G05",
+        "DOC026-G06",
+        "DOC026-G07",
+        "DOC026-G08",
+        "DOC026-G09",
+        "DOC026-G10",
+        "DOC026-G11",
+        "DOC026-G12",
+        "DOC026-G13",
+        "DOC026-G14",
+        "DOC026-G15",
+        "DOC026-G16",
+        "DOC026-G17",
+        "DOC026-G18"
+      ],
+      "reviewed_group_ids": [],
+      "total_model_goals": 18,
+      "unreviewed_goal_ids": [],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC026-G01",
+          "source_context": "T004-T005",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "核心到达目的明确；未擅自纠正原文typically a place I could walk to为不能步行。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G02",
+          "source_context": "T006-T009,T019-T021",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "费用/时间和替代方式权衡成立；公交/租车例外保留，未设一律Uber。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G03",
+          "source_context": "T011,T019",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "通常个人最低价偏好与多人/工作例外保留，不是全用户默认规则。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G04",
+          "source_context": "T010-T011",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "接驾/到达估计、报价、附近司机作为现在或等候的决策信息有明确用途；演示价与时长未变阈值。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G05",
+          "source_context": "T011",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "地址建议被肯定且减少输入，维持推断有正面依据。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G06",
+          "source_context": "T012-T013",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "等待后失败与时间决策支持改善预期；原因只猜测，不选定唯一技术修复。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G07",
+          "source_context": "T013-T015",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "避免取消意图及可能影响评分的信念区分；费用和操作记忆不确定保留。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G08",
+          "source_context": "T018-T019",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "工作报销才更重时间，车型贵可接受；20美元省20分钟只是例子。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G09",
+          "source_context": "T020-T021",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "不熟公交或复杂换乘时偏好便捷方式成立；长假租车仍可选。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G10",
+          "source_context": "T022-T029",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "Uber Eats估时和客服差导致停用，为配送估时改善提供推断；未推广所有叫车均误差。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G11",
+          "source_context": "T030-T031",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "真人及实质解决诉求明确；机器人身份未知、简单问题现有服务有用的例外保留。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G12",
+          "source_context": "T007,T033",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "价格决定选择加多数报价相符报告，提供维持一致收费推断；不保证零差异事实。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G13",
+          "source_context": "T036-T037",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "偶发多站及尽快中停、通常单目的地偏好均保留。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G14",
+          "source_context": "T038-T039",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "提问通话/消息得到确认，受访者具体通常通话接驾；场景及身份确认成立，多站是假设用途。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G15",
+          "source_context": "T040-T043",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "想改位置时联系司机提供目的推断，具体界面回忆未当已测事实；选定联系偏好在条件保存。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G16",
+          "source_context": "T044-T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "结束后查看评分和小费用途成立，小费能力存在性不确定保留。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G17",
+          "source_context": "T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "同乘后查看车费以分账，未补自动收款或转账方式。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC026-G18",
+          "source_context": "T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "工作费用记录报销的用途明确，未补雇主自动集成。",
+          "finding_ids": []
+        }
+      ],
+      "group_assessments": [],
+      "human_review": "pending",
+      "formal_proof": "not_run"
+    },
+    {
+      "document_id": "DOC029",
+      "delivery_path": "revised/DOC029/v1/delivery/goal-model.json",
+      "model_sha256": "b5afe842d44d583850dd477fc5067dfa42c49d86a100d8346d4e6e9853ae8899",
+      "internal_version": "v1",
+      "scope": "all_groups_and_endpoints_only",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "全F029-1及完整父/子3目标、证据、条件、问题"
+        },
+        {
+          "round": "R2",
+          "read": "标准全文T028-T045，含预览提议、留存预测及迁移痛点减弱说明"
+        }
+      ],
+      "source_read_ranges": [
+        "T028-T045"
+      ],
+      "source_complete_read": false,
+      "reviewed_goal_ids": [
+        "DOC029-G10",
+        "DOC029-G11",
+        "DOC029-G13"
+      ],
+      "reviewed_group_ids": [
+        "F029-1"
+      ],
+      "total_model_goals": 16,
+      "unreviewed_goal_ids": [
+        "DOC029-G01",
+        "DOC029-G02",
+        "DOC029-G03",
+        "DOC029-G04",
+        "DOC029-G05",
+        "DOC029-G06",
+        "DOC029-G07",
+        "DOC029-G08",
+        "DOC029-G09",
+        "DOC029-G12",
+        "DOC029-G14",
+        "DOC029-G15",
+        "DOC029-G16"
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC029-G10",
+          "source_context": "T032-T035",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "犹豫时Netflix内2至3分钟精选片段及判断合口味明确；有推荐轮播语境。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC029-G11",
+          "source_context": "T033-T035",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "预览合适后直接播放是明确建议；不解读为产品现状承诺。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC029-G13",
+          "source_context": "T036-T041",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "减少外跳及留存是受访者预测的价值；未当已测因果，且无重大迁移痛点的例外可见。",
+          "finding_ids": []
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F029-1",
+          "parent_id": "DOC029-G13",
+          "child_ids": [
+            "DOC029-G10",
+            "DOC029-G11"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T033-T041",
+          "normal_scenario": "合适的内置预览接直接播放，可在一次选片场景减少寻找外部预览的需求。",
+          "counterexample_or_gap": "分析假设：精选片段没有代表性或用户仍需外部完整评价，直接播放可用仍不能确定净外跳减少/留存改善。适用人群、比较口径和代表性未知。",
+          "decision_reason": "维持proposed/partial。父目标是减少/留存倾向，不要求保证所有人永不离开；单靠仍可离开不能否决，当前缺受支持的完整效果前提。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        }
+      ],
+      "human_review": "pending",
+      "formal_proof": "not_run"
+    },
+    {
+      "document_id": "DOC032",
+      "delivery_path": "revised/DOC032/v1/delivery/goal-model.json",
+      "model_sha256": "a90daa035d9dd3b887c0616022b1233c61e4279c2a8e55b57ba4cfeff8b7b1a5",
+      "internal_version": "v1",
+      "scope": "all_groups_and_endpoints_only",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "全F032-1及完整父/子4目标、证据、条件、问题"
+        },
+        {
+          "round": "R2",
+          "read": "标准全文T042-T073，含云架构猜测、迁移/丢机后果、最高优先及保存意图"
+        }
+      ],
+      "source_read_ranges": [
+        "T042-T073"
+      ],
+      "source_complete_read": false,
+      "reviewed_goal_ids": [
+        "DOC032-G09",
+        "DOC032-G10",
+        "DOC032-G11",
+        "DOC032-G12"
+      ],
+      "reviewed_group_ids": [
+        "F032-1"
+      ],
+      "total_model_goals": 12,
+      "unreviewed_goal_ids": [
+        "DOC032-G01",
+        "DOC032-G02",
+        "DOC032-G03",
+        "DOC032-G04",
+        "DOC032-G05",
+        "DOC032-G06",
+        "DOC032-G07",
+        "DOC032-G08"
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC032-G09",
+          "source_context": "T070-T071",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "希望全部消息随时可用并保存明确；是目标强度而非平台可靠性已证事实。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC032-G10",
+          "source_context": "T058-T071",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "云方式、最优先、节省空间和换机担忧均明确；现有无云及原因只为受访者信念。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC032-G11",
+          "source_context": "T059-T061,T071",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "换机手工迁移耗时的抱怨与明确改善支持结果推断；没有自动零操作保证。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC032-G12",
+          "source_context": "T065,T071",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "丢机后不可恢复顾虑加保留全部消息意图支持避免目标，未当平台必然行为。",
+          "finding_ids": []
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F032-1",
+          "parent_id": "DOC032-G09",
+          "child_ids": [
+            "DOC032-G10",
+            "DOC032-G11",
+            "DOC032-G12"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T059-T071",
+          "normal_scenario": "云存储及迁移/丢机恢复结果能回应主要保存担忧。",
+          "counterexample_or_gap": "分析假设：已云存、换机省事且丢机可找回，但断网/认证失效时仍不可随时访问。云方式也未定义权限、可靠性和保留策略。",
+          "decision_reason": "维持proposed/partial；离线/恢复条件是分析缺口，不是偷偷增加用户要求或把现有云架构猜测当事实。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        }
+      ],
+      "human_review": "pending",
+      "formal_proof": "not_run"
+    },
+    {
+      "document_id": "DOC033",
+      "delivery_path": "revised/DOC033/v2/delivery/goal-model.json",
+      "model_sha256": "b5353e9a6537897f2055034ec0df7059d327426d676eb69102a098a6cafeb352",
+      "internal_version": "v1",
+      "scope": "full_document_goal_review",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "完整标准全文T000-T190，先于目标比较"
+        },
+        {
+          "round": "R2",
+          "read": "全18目标、证据、条件/context、问题与无精化组状态"
+        },
+        {
+          "round": "R3",
+          "read": "重读T128-T135、T150-T155、T163-T180，查20分钟边界、广告与推荐刷新减弱语气"
+        },
+        {
+          "round": "R4",
+          "read": "G12严格超过20分钟；G17分别补T151两小时广告烦恼与T155愿修复但非迁移决定因素，语义/引用均合理。其他目标完整字段及按文本/角色归一的引用相同，继承此前逐目标审查；并非重读全部原文。"
+        }
+      ],
+      "source_read_ranges": [
+        "T000-T190"
+      ],
+      "source_complete_read": true,
+      "reviewed_goal_ids": [
+        "DOC033-G01",
+        "DOC033-G02",
+        "DOC033-G03",
+        "DOC033-G04",
+        "DOC033-G05",
+        "DOC033-G06",
+        "DOC033-G07",
+        "DOC033-G08",
+        "DOC033-G09",
+        "DOC033-G10",
+        "DOC033-G11",
+        "DOC033-G12",
+        "DOC033-G13",
+        "DOC033-G14",
+        "DOC033-G15",
+        "DOC033-G16",
+        "DOC033-G17",
+        "DOC033-G18"
+      ],
+      "reviewed_group_ids": [],
+      "total_model_goals": 18,
+      "unreviewed_goal_ids": [],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC033-G01",
+          "source_context": "T020-T021,T063",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "无聊娱乐、转移注意及晨起/回家过渡明确；没有每日时长要求。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G02",
+          "source_context": "T021",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "深入主题时用长视频的目的/方式明确。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G03",
+          "source_context": "T023-T025,T033,T047,T094-T097",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "电脑背景听音频及任务许可条件明确；未扩大为手机后台能力要求。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G04",
+          "source_context": "T064-T065",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "个人有时获专注与有时听漏的例外均保留，没有认知科学效果事实化。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G05",
+          "source_context": "T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "偶发白噪声助眠用途明确，不是治疗效果。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G06",
+          "source_context": "T045",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "列出的听音乐用途可保留；probably为列举回忆语气，未提升硬性音质或曲库规格。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G07",
+          "source_context": "T049-T057",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "推荐符合当前兴趣、少主动搜索的意图明确；本人开启历史的方式及历史隐私顾虑保留。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G08",
+          "source_context": "T060-T061",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "即时选择且不习惯稍后清单的个人偏好明确，未变为删除功能。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G09",
+          "source_context": "T105-T107",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "偶尔加速及几乎不降速报告，维持推断合理；未补省时等额外目的。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G10",
+          "source_context": "T105-T107",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "睡眠计时器未用但可能会用，意向强度保留，未加时长。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G11",
+          "source_context": "T120-T127",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "广内容和可继续寻找喜欢内容的价值明确；largest保持个人看法非排名事实。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G12",
+          "source_context": "T129-T135",
+          "assessment": "supported_after_separate_revision",
+          "note": "v2改为超过20分钟，严格大于边界与T129/T133/T135一致。ER-B3-002已解决。",
+          "finding_ids": [
+            "ER-B3-002"
+          ],
+          "original_assessment": "supported_with_recorded_boundaries",
+          "original_note": "技术概念的新近、深度及超过20分钟条件明确；20分钟以上的等号歧义见ER-B3-002，核心意图支持。"
+        },
+        {
+          "goal_id": "DOC033-G13",
+          "source_context": "T137-T139",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "WhatsApp、Shorts和亲友联系都明确；不愿发长视频例外在条件中。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G14",
+          "source_context": "T141-T143,T163,T173",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "按记忆细节找回Shorts以稍后分享明确；未创造特定识别技术。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G15",
+          "source_context": "T151,T167-T175",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "暂时暂停旧类推荐的建议得到确认，后续非日常且更多来自别的平台的记忆限制未遗漏。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G16",
+          "source_context": "T165-T169",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "描述想看/不想看是可选建议，未知具体方案保留，不强制AI架构或替代全部历史。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC033-G17",
+          "source_context": "T151-T155",
+          "assessment": "supported_after_separate_revision",
+          "note": "v2选入T151两小时广告烦恼及T155愿修复但非dealbreaker；保留普通广告容忍。ER-B3-003已解决。",
+          "finding_ids": [
+            "ER-B3-003"
+          ],
+          "original_assessment": "supported_with_recorded_boundaries",
+          "original_note": "普通广告容忍与异常两小时广告烦恼均支持收窄避免目标；非换平台决定因素；所选引文不足见ER-B3-003。"
+        },
+        {
+          "goal_id": "DOC033-G18",
+          "source_context": "T155,T177-T181",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "保留熟悉和避免大改退步明确；不是禁止一切更新，也不抹除小改进意图。",
+          "finding_ids": []
+        }
+      ],
+      "group_assessments": [],
+      "human_review": "pending",
+      "formal_proof": "not_run",
+      "original_review_delivery_path": "revised/DOC033/v1/delivery/goal-model.json",
+      "original_review_model_sha256": "7e8bb90b9101e69afd9d4a5fe1316ce3137666dd86702e2e2d97d6b053637e7f",
+      "revision_recheck": {
+        "document_id": "DOC033",
+        "original_path": "output1/revised/DOC033/v1/delivery/goal-model.json",
+        "revised_path": "output1/revised/DOC033/v2/delivery/goal-model.json",
+        "revised_sha256": "b5353e9a6537897f2055034ec0df7059d327426d676eb69102a098a6cafeb352",
+        "rechecked_goal_ids": [
+          "DOC033-G12",
+          "DOC033-G17"
+        ],
+        "unchanged_goal_ids": [
+          "DOC033-G01",
+          "DOC033-G02",
+          "DOC033-G03",
+          "DOC033-G04",
+          "DOC033-G05",
+          "DOC033-G06",
+          "DOC033-G07",
+          "DOC033-G08",
+          "DOC033-G09",
+          "DOC033-G10",
+          "DOC033-G11",
+          "DOC033-G13",
+          "DOC033-G14",
+          "DOC033-G15",
+          "DOC033-G16",
+          "DOC033-G18"
+        ],
+        "groups_byte_semantics_unchanged": true,
+        "source_unchanged": true,
+        "conclusion": "G12严格超过20分钟；G17分别补T151两小时广告烦恼与T155愿修复但非迁移决定因素，语义/引用均合理。",
+        "scope": "affected_objects_read_in_full; other goals quote-and-field normalized equality checked",
+        "independent_verdict": "repair_confirmed"
+      }
+    },
+    {
+      "document_id": "DOC036",
+      "delivery_path": "revised/DOC036/v1/delivery/goal-model.json",
+      "model_sha256": "d62f9a753e63c5be90ee4e9688eaa371324948f9cd2299009353c9be6b33a7bf",
+      "internal_version": "v1",
+      "scope": "all_groups_endpoints_plus_risk_added_G17",
+      "actual_read_rounds": [
+        {
+          "round": "R1",
+          "read": "全DOC036-F01、完整父/子G07/G08/G16、条件/证据/问题；未借作者自检认可"
+        },
+        {
+          "round": "R2",
+          "read": "原文T000-T026和T052-T076，含可疑交易、排名纠正、普通付款、匿名浏览与最终并列归纳"
+        },
+        {
+          "round": "R3",
+          "read": "G17全部statement/conditions/origin/inference/support/证据，并与已读原文完整问题与回答核对"
+        },
+        {
+          "round": "R4",
+          "read": "父代理要求核查尚未覆盖的T027-T051，实际完整读取。至此已核读提供原文全部77轮，只对G17支持作追加全文查证，不把其他13目标标已审。该区段有社交连接、影响购物、无限滚动、关注/标签和群组回忆，未出现另一次单独明确采纳匿名发帖。"
+        }
+      ],
+      "source_read_ranges": [
+        "T000-T076"
+      ],
+      "source_complete_read": true,
+      "reviewed_goal_ids": [
+        "DOC036-G07",
+        "DOC036-G08",
+        "DOC036-G16",
+        "DOC036-G17"
+      ],
+      "reviewed_group_ids": [
+        "DOC036-F01"
+      ],
+      "total_model_goals": 17,
+      "unreviewed_goal_ids": [
+        "DOC036-G01",
+        "DOC036-G02",
+        "DOC036-G03",
+        "DOC036-G04",
+        "DOC036-G05",
+        "DOC036-G06",
+        "DOC036-G09",
+        "DOC036-G10",
+        "DOC036-G11",
+        "DOC036-G12",
+        "DOC036-G13",
+        "DOC036-G14",
+        "DOC036-G15"
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "DOC036-G07",
+          "source_context": "T013-T018,T024,T062",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "亲遇可疑交易并避免付款损失的意图明确；未称本人已经损失，也不验证商家恶意事实。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC036-G08",
+          "source_context": "T023-T024,T061-T068",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "受访者纠正ranking，按互动随发布时间是否合理作经验线索；不把点赞量当安全认证。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC036-G16",
+          "source_context": "T014,T057-T058",
+          "assessment": "supported_with_recorded_boundaries",
+          "note": "可疑交易采取先交货后付款明确；普通订单先付款并存，限定可疑情境，未升级为一律货到付款。",
+          "finding_ids": []
+        },
+        {
+          "goal_id": "DOC036-G17",
+          "source_context": "T024,T026,T052-T054,T069-T074",
+          "assessment": "appropriately_insufficient_candidate",
+          "note": "反复明确的是免登录浏览/在线状态；私密账号不等于匿名发帖。T071并列or归纳的简短yes无法确定单独采纳，保持insufficient/pending合理。",
+          "finding_ids": [
+            "ER-B3-004"
+          ]
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "DOC036-F01",
+          "parent_id": "DOC036-G07",
+          "child_ids": [
+            "DOC036-G08",
+            "DOC036-G16"
+          ],
+          "current_status": "proposed",
+          "current_completeness": "partial",
+          "independent_verdict": "retain_proposed_partial_not_established",
+          "source_context": "T013-T024,T057-T068",
+          "normal_scenario": "互动线索触发可疑判断、商家同意先货后款时，有助避免该类预付损失。",
+          "counterexample_or_gap": "分析假设：伪造互动使可疑交易漏判，或商家不同意先交货；普通交易仍可先付款，子目标触发条件未覆盖该情境。",
+          "decision_reason": "尽量减少损失不要求零诈骗；但资料仅给一次策略与经验，未确证整组在已知普通/可疑条件下共同充分。保持候选合理。",
+          "scenario_origin": "reviewer_analysis_assumption; not interview fact or exhaustive proof"
+        }
+      ],
+      "human_review": "pending",
+      "formal_proof": "not_run",
+      "readiness": "blocked",
+      "blocking_scope": [
+        "DOC036-G17 current sentence support insufficient"
+      ],
+      "blocking_interpretation": "核心工具汇总为整包blocked；语义缺口只定位G17，组不含G17。其他16目标不是因此都错误，非端点者未全目标独立审。"
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "ER-B3-001",
+      "category": [
+        "语义偏差",
+        "来源与推断偏差"
+      ],
+      "severity": "medium",
+      "object_type": "goal",
+      "document_id": "DOC015",
+      "object_ids": [
+        "DOC015-G12"
+      ],
+      "specific_unsupported_part": "在内容分类中考虑听众反馈和评分；当前整体explicit/direct掩盖此跨成分合并。",
+      "supported_part": "质量评价流程考虑用户反馈/评分。",
+      "source_evidence": [
+        {
+          "source_id": "DOC015:T024",
+          "role": "问题上下文",
+          "description": "问播客质量评价流程及未达标处置。"
+        },
+        {
+          "source_id": "DOC015:T025",
+          "role": "区分依据",
+          "quote": "we also segregate this podcast based on most of its content."
+        },
+        {
+          "source_id": "DOC015:T025",
+          "role": "支持质量流程中的反馈",
+          "quote": "And we also take user feedback reviews. So considering what the people, what they listen to the ratings that they give."
+        }
+      ],
+      "reason": "同一回答先描述按内容归类以辅助推荐，另列质量流程采用用户反馈/评分；没有正面证据表明反馈/评分是归类依据。不能仅因相邻陈述而交叉合并适用范围。",
+      "status": "resolved_in_separate_revision_independently_rechecked",
+      "recommendation": "另存修订时把G12收窄为质量判断考虑反馈和评分；若保留分类意图，先检查已有覆盖并按按内容归类以辅助推荐的来源审查，不要求补节点。更新支持包与受影响附件后重新核验。",
+      "blocking_scope": [],
+      "dependent_group_ids": [],
+      "whole_document_blocked": false,
+      "count_as_confirmed_goal_semantic_issue": true,
+      "original_status": "confirmed_open",
+      "resolution": {
+        "document_id": "DOC015",
+        "original_path": "output1/revised/DOC015/v2/delivery/goal-model.json",
+        "revised_path": "output1/revised/DOC015/v3/delivery/goal-model.json",
+        "revised_sha256": "eca38e8885badb8c931f066e31c17cf557769e2282bc4db7397b68418207e9b6",
+        "rechecked_goal_ids": [
+          "DOC015-G02",
+          "DOC015-G12"
+        ],
+        "unchanged_goal_ids": [
+          "DOC015-G01",
+          "DOC015-G03",
+          "DOC015-G04",
+          "DOC015-G05",
+          "DOC015-G06",
+          "DOC015-G07",
+          "DOC015-G08",
+          "DOC015-G09",
+          "DOC015-G10",
+          "DOC015-G11",
+          "DOC015-G13",
+          "DOC015-G14",
+          "DOC015-G15",
+          "DOC015-G16",
+          "DOC015-G17",
+          "DOC015-G18",
+          "DOC015-G19",
+          "DOC015-G20",
+          "DOC015-G21",
+          "DOC015-G22",
+          "DOC015-G23",
+          "DOC015-G24",
+          "DOC015-G25",
+          "DOC015-G26",
+          "DOC015-G27",
+          "DOC015-G28",
+          "DOC015-G29",
+          "DOC015-G30",
+          "DOC015-G31"
+        ],
+        "groups_byte_semantics_unchanged": true,
+        "source_unchanged": true,
+        "conclusion": "G12仅质量反馈/评分；G02保留按内容分类辅助推荐且无评分定类推断，符合T024-T025。",
+        "scope": "affected_objects_read_in_full; other goals quote-and-field normalized equality checked",
+        "independent_verdict": "repair_confirmed"
+      },
+      "original_blocking_scope": [
+        "DOC015-G12当前整句的direct支持判断"
+      ]
+    },
+    {
+      "finding_id": "ER-B3-002",
+      "category": [
+        "表达不足"
+      ],
+      "severity": "low",
+      "object_type": "goal",
+      "document_id": "DOC033",
+      "object_ids": [
+        "DOC033-G12"
+      ],
+      "specific_unsupported_part": "20分钟以上在形式阈值阅读下可能包含恰好20分钟；原文greater than/over 20为严格超过。",
+      "source_evidence": [
+        {
+          "source_id": "DOC033:T129",
+          "quote": "greater than 20"
+        },
+        {
+          "source_id": "DOC033:T133",
+          "description": "时长类别分别under 4、4 to 20、over 20。"
+        },
+        {
+          "source_id": "DOC033:T135",
+          "quote": "So I would try to look for over 20"
+        }
+      ],
+      "reason": "深度/近期与长视频筛选意图有完整支持，差异是中文边界歧义；不能据此把整个目标计错误或推定新数值要求。",
+      "status": "resolved_in_separate_revision_independently_rechecked",
+      "recommendation": "下次另存修订可改为超过20分钟，保持其余语义和支持。",
+      "blocking_scope": [],
+      "whole_document_blocked": false,
+      "count_as_confirmed_goal_semantic_issue": false,
+      "original_status": "clarification_recommended",
+      "resolution": {
+        "document_id": "DOC033",
+        "original_path": "output1/revised/DOC033/v1/delivery/goal-model.json",
+        "revised_path": "output1/revised/DOC033/v2/delivery/goal-model.json",
+        "revised_sha256": "b5353e9a6537897f2055034ec0df7059d327426d676eb69102a098a6cafeb352",
+        "rechecked_goal_ids": [
+          "DOC033-G12",
+          "DOC033-G17"
+        ],
+        "unchanged_goal_ids": [
+          "DOC033-G01",
+          "DOC033-G02",
+          "DOC033-G03",
+          "DOC033-G04",
+          "DOC033-G05",
+          "DOC033-G06",
+          "DOC033-G07",
+          "DOC033-G08",
+          "DOC033-G09",
+          "DOC033-G10",
+          "DOC033-G11",
+          "DOC033-G13",
+          "DOC033-G14",
+          "DOC033-G15",
+          "DOC033-G16",
+          "DOC033-G18"
+        ],
+        "groups_byte_semantics_unchanged": true,
+        "source_unchanged": true,
+        "conclusion": "G12严格超过20分钟；G17分别补T151两小时广告烦恼与T155愿修复但非迁移决定因素，语义/引用均合理。",
+        "scope": "affected_objects_read_in_full; other goals quote-and-field normalized equality checked",
+        "independent_verdict": "repair_confirmed"
+      },
+      "original_blocking_scope": []
+    },
+    {
+      "finding_id": "ER-B3-003",
+      "category": [
+        "表达不足"
+      ],
+      "severity": "low",
+      "object_type": "evidence",
+      "document_id": "DOC033",
+      "object_ids": [
+        "DOC033-G17",
+        "E0021"
+      ],
+      "specific_unsupported_part": "当前选定E0021只引用普通广告I do not mind的前段，未选到同轮中心的两小时广告烦恼。",
+      "source_evidence": [
+        {
+          "source_id": "DOC033:T151",
+          "quote": "But sometimes it goes into advertisements that themselves are 2Â h videos."
+        },
+        {
+          "source_id": "DOC033:T151",
+          "quote": "And that's kind of yeah, that that's annoying."
+        },
+        {
+          "source_id": "DOC033:T155",
+          "description": "希望修复但不是更换平台的决定因素。"
+        }
+      ],
+      "reason": "完整源上下文支持G17；这不是引文错误、不是反证，也不是目标语义insufficient。缺的是便于审阅支持包的中心片段。",
+      "status": "resolved_in_separate_revision_independently_rechecked",
+      "recommendation": "在另存修订中加一条同轮连续原文引文或扩大连续片段，保留普通广告容忍和超长广告烦恼两个成分，不拼成伪连续引文。",
+      "blocking_scope": [],
+      "whole_document_blocked": false,
+      "count_as_confirmed_goal_semantic_issue": false,
+      "original_status": "traceability_improvement_recommended",
+      "resolution": {
+        "document_id": "DOC033",
+        "original_path": "output1/revised/DOC033/v1/delivery/goal-model.json",
+        "revised_path": "output1/revised/DOC033/v2/delivery/goal-model.json",
+        "revised_sha256": "b5353e9a6537897f2055034ec0df7059d327426d676eb69102a098a6cafeb352",
+        "rechecked_goal_ids": [
+          "DOC033-G12",
+          "DOC033-G17"
+        ],
+        "unchanged_goal_ids": [
+          "DOC033-G01",
+          "DOC033-G02",
+          "DOC033-G03",
+          "DOC033-G04",
+          "DOC033-G05",
+          "DOC033-G06",
+          "DOC033-G07",
+          "DOC033-G08",
+          "DOC033-G09",
+          "DOC033-G10",
+          "DOC033-G11",
+          "DOC033-G13",
+          "DOC033-G14",
+          "DOC033-G15",
+          "DOC033-G16",
+          "DOC033-G18"
+        ],
+        "groups_byte_semantics_unchanged": true,
+        "source_unchanged": true,
+        "conclusion": "G12严格超过20分钟；G17分别补T151两小时广告烦恼与T155愿修复但非迁移决定因素，语义/引用均合理。",
+        "scope": "affected_objects_read_in_full; other goals quote-and-field normalized equality checked",
+        "independent_verdict": "repair_confirmed"
+      },
+      "original_blocking_scope": []
+    },
+    {
+      "finding_id": "ER-B3-004",
+      "category": [
+        "正确/边界案例",
+        "支持不足待确认"
+      ],
+      "severity": "info",
+      "object_type": "goal",
+      "document_id": "DOC036",
+      "object_ids": [
+        "DOC036-G17"
+      ],
+      "specific_unsupported_part": "匿名发帖而非仅免登录浏览的独立意图。",
+      "source_evidence": [
+        {
+          "source_id": "DOC036:T024",
+          "description": "希望不登录即可搜索/浏览，不想让别人知道在线。"
+        },
+        {
+          "source_id": "DOC036:T052-T054",
+          "description": "再次详细说免登录看商家；匿名浏览归纳得到确认。"
+        },
+        {
+          "source_id": "DOC036:T071-T072",
+          "description": "采访者将anonymous browsing or anonymous posting与恶意账号并列，答Yeah.Yes。"
+        },
+        {
+          "source_id": "DOC036:T000-T076",
+          "description": "完成全部77轮核读，包括追加T027-T051，在本次提供全文范围内未找到另一处单独明确采纳匿名发帖的正面依据。不是声称未核听录音或未来资料中绝无此意图。"
+        }
+      ],
+      "reason": "有对并列归纳的正面回应，可作为待确认候选；但不能定位独立匿名发帖采纳。insufficient及明确限制合理，不强行改direct或删除候选。 全部提供原文77轮已核读，补读T027-T051未改变该局部判断；不以局部引文缺口冒充整份来源无依据。",
+      "status": "appropriately_unresolved_pending_stakeholder_clarification",
+      "recommendation": "保留G17为待确认且不用作成立精化前提，未来真实反馈应单独问是否需要匿名发帖。不得伪造反馈或用沉默当认可。",
+      "blocking_scope": [
+        "DOC036-G17 support"
+      ],
+      "dependent_group_ids": [],
+      "whole_document_blocked": false,
+      "tool_readiness": "blocked",
+      "count_as_confirmed_goal_semantic_issue": false
+    }
+  ],
+  "correct_boundaries": [
+    {
+      "id": "BC-B3-01",
+      "objects": [
+        "DOC004-G05",
+        "DOC004-G06",
+        "DOC004-G07",
+        "F004-1"
+      ],
+      "conclusion": "已实现且被肯定的客户安全能力可保留维持推断；安全感不是外部安全证明；部分组不需删除目标。"
+    },
+    {
+      "id": "BC-B3-02",
+      "objects": [
+        "DOC004-G10",
+        "DOC004-G14"
+      ],
+      "conclusion": "采访者100美元任务与实际长期限额需求分开；演示关闭重复转账不是拒绝维持功能。"
+    },
+    {
+      "id": "BC-B3-03",
+      "objects": [
+        "DOC015-G15",
+        "DOC015-G22",
+        "DOC015-G23",
+        "DOC015-G29"
+      ],
+      "conclusion": "2至3月试用、上月2000创作者、四条30秒广告、10至15Â NBSP min均未被变成通用指标阈值；编码异常不自动说明语义错误。"
+    },
+    {
+      "id": "BC-B3-04",
+      "objects": [
+        "DOC026-G03",
+        "DOC026-G07",
+        "DOC026-G08",
+        "DOC026-G11",
+        "DOC026-G15",
+        "DOC026-G16"
+      ],
+      "conclusion": "个人/工作价时权衡、取消评分信念、客服身份、小费和界面记忆的不确定被保留；不能把偏好/未知删掉才算干净。"
+    },
+    {
+      "id": "BC-B3-05",
+      "objects": [
+        "DOC033-G07",
+        "DOC033-G15",
+        "DOC033-G16",
+        "DOC033-G17",
+        "DOC033-G18"
+      ],
+      "conclusion": "本人开启历史不是普遍隐私许可；暂时刷新不是永久清空，后续减弱语气仍保留；普通广告可接受且避免退化不是拒绝所有更新。"
+    },
+    {
+      "id": "BC-B3-06",
+      "objects": [
+        "F007-1",
+        "F029-1"
+      ],
+      "conclusion": "AND不要求各子目标独立必要；减少类软目标不要求零错误或所有人永不离开。此次仍保留候选来自具体条件/效果口径缺口。"
+    }
+  ],
+  "candidate_omission_risks": [
+    {
+      "id": "OR-B3-01",
+      "document_id": "DOC015",
+      "source_ids": [
+        "DOC015:T011"
+      ],
+      "kind": "candidate_omission_risk",
+      "description": "与创作者/涉众共同定义最低系统需求的协作过程未形成独立目标。G01/G05/G11覆盖体验/工具/洞察但不完全表达共同需求形成。当前属职责/策略陈述，未证必须单列；不计真实漏提，不要求补节点。",
+      "status": "unconfirmed_not_counted"
+    },
+    {
+      "id": "OR-B3-02",
+      "document_id": "DOC033",
+      "source_ids": [
+        "DOC033:T107",
+        "DOC033:T111",
+        "DOC033:T119"
+      ],
+      "kind": "boundary_checked",
+      "description": "画中画、全屏、播放器布局只是功能演示及一般易懂评价，没有新增明确结果；G18已有维持熟悉体验。无证据把每个控件都变独立目标，不计漏提。",
+      "status": "no_confirmed_omission"
+    },
+    {
+      "id": "OR-B3-03",
+      "document_id": "DOC026",
+      "source_ids": [
+        "DOC026:T011",
+        "DOC026:T021",
+        "DOC026:T039"
+      ],
+      "kind": "boundary_checked",
+      "description": "折扣自动应用、以后预约、旅行租车与多站提前沟通已分为现状/条件/假设；租车偏好在G02条件、多站假设在G14条件。未发现因已实现/偏好标签而滤掉确证目标。",
+      "status": "no_confirmed_omission"
+    },
+    {
+      "id": "OR-B3-04",
+      "document_id": "DOC004",
+      "source_ids": [
+        "DOC004:T023",
+        "DOC004:T041-T043",
+        "DOC004:T061"
+      ],
+      "kind": "boundary_checked",
+      "description": "路由号显示、添加外部账户猜测与投资伙伴说明没有自动造需求；投资求助、日程重复和现有支付维持已有覆盖。",
+      "status": "no_confirmed_omission"
+    },
+    {
+      "id": "OR-B3-05",
+      "document_id": "DOC015",
+      "source_ids": [
+        "DOC015:T019",
+        "DOC015:T031",
+        "DOC015:T043"
+      ],
+      "kind": "representation_limit",
+      "description": "AI推荐是受访者反复描述的选定策略，G02较抽象，但G25保留AI推荐场景、G19保留社交方式、G17保留主动输入；未据缺独立AI节点计漏提，具体算法/架构仍未知。",
+      "status": "not_counted"
+    }
+  ],
+  "unknowns": [
+    "DOC036-G17 independent anonymous-posting intention remains unknown; source is available and reviewed",
+    "metric satisfaction thresholds and domain assumptions remain unknown where source does not define them",
+    "underlying product/architecture/security facts not externally verified",
+    "source transcript not checked against original audio",
+    "human approval pending; formal proof not_run"
+  ],
+  "consumed_file_hashes": "consumed-files.json",
+  "source_baseline": "source-baseline.md",
+  "modifications": "Batch3 review only output1/review/expanded-batch3. Separate expressly delegated B2 follow-up only output1/review/expanded-batch2/followup-by-batch3.md and .json. Generated deliveries, inputs, frozen snapshots, skills and core inspection not modified.",
+  "updated_at_utc": "2026-10-24T08:02:05.214894+00:00",
+  "revision_rechecks": [
+    {
+      "document_id": "DOC015",
+      "original_path": "output1/revised/DOC015/v2/delivery/goal-model.json",
+      "revised_path": "output1/revised/DOC015/v3/delivery/goal-model.json",
+      "revised_sha256": "eca38e8885badb8c931f066e31c17cf557769e2282bc4db7397b68418207e9b6",
+      "rechecked_goal_ids": [
+        "DOC015-G02",
+        "DOC015-G12"
+      ],
+      "unchanged_goal_ids": [
+        "DOC015-G01",
+        "DOC015-G03",
+        "DOC015-G04",
+        "DOC015-G05",
+        "DOC015-G06",
+        "DOC015-G07",
+        "DOC015-G08",
+        "DOC015-G09",
+        "DOC015-G10",
+        "DOC015-G11",
+        "DOC015-G13",
+        "DOC015-G14",
+        "DOC015-G15",
+        "DOC015-G16",
+        "DOC015-G17",
+        "DOC015-G18",
+        "DOC015-G19",
+        "DOC015-G20",
+        "DOC015-G21",
+        "DOC015-G22",
+        "DOC015-G23",
+        "DOC015-G24",
+        "DOC015-G25",
+        "DOC015-G26",
+        "DOC015-G27",
+        "DOC015-G28",
+        "DOC015-G29",
+        "DOC015-G30",
+        "DOC015-G31"
+      ],
+      "groups_byte_semantics_unchanged": true,
+      "source_unchanged": true,
+      "conclusion": "G12仅质量反馈/评分；G02保留按内容分类辅助推荐且无评分定类推断，符合T024-T025。",
+      "scope": "affected_objects_read_in_full; other goals quote-and-field normalized equality checked",
+      "independent_verdict": "repair_confirmed"
+    },
+    {
+      "document_id": "DOC033",
+      "original_path": "output1/revised/DOC033/v1/delivery/goal-model.json",
+      "revised_path": "output1/revised/DOC033/v2/delivery/goal-model.json",
+      "revised_sha256": "b5353e9a6537897f2055034ec0df7059d327426d676eb69102a098a6cafeb352",
+      "rechecked_goal_ids": [
+        "DOC033-G12",
+        "DOC033-G17"
+      ],
+      "unchanged_goal_ids": [
+        "DOC033-G01",
+        "DOC033-G02",
+        "DOC033-G03",
+        "DOC033-G04",
+        "DOC033-G05",
+        "DOC033-G06",
+        "DOC033-G07",
+        "DOC033-G08",
+        "DOC033-G09",
+        "DOC033-G10",
+        "DOC033-G11",
+        "DOC033-G13",
+        "DOC033-G14",
+        "DOC033-G15",
+        "DOC033-G16",
+        "DOC033-G18"
+      ],
+      "groups_byte_semantics_unchanged": true,
+      "source_unchanged": true,
+      "conclusion": "G12严格超过20分钟；G17分别补T151两小时广告烦恼与T155愿修复但非迁移决定因素，语义/引用均合理。",
+      "scope": "affected_objects_read_in_full; other goals quote-and-field normalized equality checked",
+      "independent_verdict": "repair_confirmed"
+    }
+  ],
+  "remaining_blockers": [
+    {
+      "document_id": "DOC036",
+      "goal_ids": [
+        "DOC036-G17"
+      ],
+      "reason": "support insufficient; actual core readiness blocked, local semantic scope only",
+      "required_to_resolve": "genuine stakeholder clarification of independent anonymous-posting intention"
+    }
+  ],
+  "newly_confirmed_material_findings": 1,
+  "open_confirmed_material_findings": 0,
+  "separate_followup": {
+    "finding_id": "ER-B2-001",
+    "document_id": "DOC025",
+    "artifact": "output1/review/expanded-batch2/followup-by-batch3.json",
+    "included_in_batch3_coverage": false,
+    "status": "resolved_in_separate_revision_independently_rechecked"
+  }
+}

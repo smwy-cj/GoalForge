@@ -1,0 +1,61 @@
+--- before/tests/test_skill_migration.py
++++ after/tests/test_skill_installation.py
+@@ -1,6 +1,5 @@
+ """Installation/compatibility checks with synthetic authoring, not extraction accuracy."""
+ import copy
+-import importlib.util
+ import json
+ import os
+ import shutil
+@@ -92,42 +91,13 @@
+                 revised_delivery=str(work/'revised-delivery/goal-model.html'))
+ 
+ 
+-class SkillMigrationTests(unittest.TestCase):
++class SkillInstallationTests(unittest.TestCase):
+     def test_three_skill_installation_runs_delivery_and_feedback(self):
+         with tempfile.TemporaryDirectory() as tmp:
+             result = isolated_workflow(tmp)
+             self.assertEqual(result['structure'], 'passed')
+ 
+-    def test_old_cli_and_import_delegate_without_mutating_inputs(self):
+-        with tempfile.TemporaryDirectory() as tmp:
+-            base = Path(tmp)
+-            data, source, judgments, _ = fixture()
+-            for name, raw in [('extraction.json', k.encode(data)), ('source.txt', source), ('judgments.json', k.encode(judgments))]:
+-                (base/name).write_bytes(raw)
+-            before = {p.name: p.read_bytes() for p in base.iterdir()}
+-            for name, skill in [('old','goal-tracing'), ('new','goal-extraction')]:
+-                cli(ROOT/'skills'/skill/'scripts/trace_candidates.py', base/'extraction.json', base/name,
+-                    '--source', base/'source.txt', '--judgments', base/'judgments.json', '--review-md', cwd=base)
+-            self.assertEqual(k.load(base/'old/tracing.json'), k.load(base/'new/tracing.json'))
+-            self.assertEqual((base/'old/goal-tracing-review.md').read_bytes(), (base/'new/goal-tracing-review.md').read_bytes())
+-            self.assertTrue(all((base/name).read_bytes() == raw for name, raw in before.items()))
+-            legacy = ROOT/'skills/goal-tracing/scripts/trace_candidates.py'
+-            spec = importlib.util.spec_from_file_location('legacy_trace_compatibility', legacy)
+-            module = importlib.util.module_from_spec(spec)
+-            spec.loader.exec_module(module)
+-            self.assertEqual(module.trace(data, judgments, source.decode(), k.digest(k.encode(data))),
+-                             trace(data, judgments, source.decode(), k.digest(k.encode(data))))
+-            cli(legacy, base/'extraction.json', '--judgment-template', base/'old-template.json', cwd=base)
+-            self.assertEqual(k.load(base/'old-template.json'), judgment_template(data, k.encode(data)))
+ 
+-    def test_compatibility_entrypoint_reports_missing_target(self):
+-        with tempfile.TemporaryDirectory() as tmp:
+-            script = Path(tmp)/'skills/goal-tracing/scripts/trace_candidates.py'
+-            script.parent.mkdir(parents=True)
+-            shutil.copyfile(ROOT/'skills/goal-tracing/scripts/trace_candidates.py', script)
+-            result = subprocess.run([sys.executable, str(script), '--help'], capture_output=True, timeout=10)
+-            self.assertNotEqual(result.returncode, 0)
+-            self.assertIn(b'GoalForge compatibility target unavailable', result.stderr)
+ 
+     def test_partial_support_preserves_original_decision_and_cannot_establish_refinement(self):
+         for label in ('direct', 'inferred'):
+--- before/semantic-judgments.md
++++ after/semantic-judgments.md
+@@ -17,4 +17,4 @@
+ 
+ tracing.json 保存 semantic_binding、输入与判断文件哈希。建模工具直接消费当前判断并重执行核对；哈希证明一致性，不证明语义或编制者身份。提取、核验、自检、独立审查和人工决定分别记录；未执行的阶段保持 not_run。
+ 
+-脚本是仅核验能力，不自动改目标；默认/修订模式的目标改写由助手另存新输入后重建模板、依据当前原文重新编制受影响判断。未变内容可经核对后沿用其理由，不批量盖章旧包。旧 `skills/goal-tracing/scripts/trace_candidates.py` 仅转接同一实现；正式安装只需要三项目录。
++脚本是仅核验能力，不自动改目标；默认/修订模式的目标改写由助手另存新输入后重建模板、依据当前原文重新编制受影响判断。未变内容可经核对后沿用其理由，不批量盖章旧包。正式安装只需要三个同级技能目录；旧 goal-tracing 转接入口不再维护，历史名称 goal-tracing-review.md 仅是报告文件名。

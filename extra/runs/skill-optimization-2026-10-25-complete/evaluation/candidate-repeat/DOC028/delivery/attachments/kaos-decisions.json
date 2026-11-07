@@ -1,0 +1,243 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "f1d15a2bfc9f946824979a63c6f5c6240dc173d1b7c5e0f58a051684e505737e",
+    "judgments_sha256": "363ebabee4460a75649f3ab66f0b99c7de20b9dcf1d2ba65ff7dd5a24adc3e0b"
+  },
+  "groups": [
+    {
+      "group_id": "FG001",
+      "parent_id": "G024",
+      "child_ids": [
+        "G023",
+        "G009"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "找到专门社区并发问只提高好答案机会，受访者明确仍会有坏回答。",
+      "assumptions": [
+        "场景仅为作者概念层检查，不是形式化充分性证明。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T061",
+          "quote": "I think the answers I'd get would be better, because when I post in a particular subreddit, people who are responding in that subreddit are expected to know the subject matter if they are responding, so of course they can be like bad responses. You can never mitigate that completely. But I'd say that. it's a pretty How do you say? Like it's a it's Yeah. I'd say that this is covers most of it.",
+          "role": "basis",
+          "start_char": 30173,
+          "end_char": 30568
+        }
+      ],
+      "relation_ids": [
+        "R004"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "专业社区有人了解问题且愿意认真回答时，预期可得更好答案。",
+          "outcome": "supports",
+          "rationale": "在所述条件下可解释这些子目标如何服务父目标；不扩大到所有场景。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "发在正确社区仍可无人回复或得到错误建议，整组不足以保证答案质量。",
+          "outcome": "counterexample",
+          "rationale": "未解决的充分性缺口保留候选；不补造根、额外前提目标或完整性。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "FG001",
+      "message": "找到专门社区并发问只提高好答案机会，受访者明确仍会有坏回答。 异常场景：发在正确社区仍可无人回复或得到错误建议，整组不足以保证答案质量。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G003",
+      "target_id": "G006",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "解决编程问题是解决预定问题的具体情境。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T003",
+          "quote": "Okay? So I use it. So I'll answer the when 1st there's no predefined time where I log in and browser edit the why will tie into more how I use it. So I use it for a multitude of things. So if I want to learn more about some particular topic. Say that there's Halloween Halloween is coming up. So I wanted to know what happens during Halloween. So I browse my city's subreddit with keyword. Halloween, search to get information about that. So sometimes I just want to like scroll through topics. I follow like subreddits that I follow. So I log in just to kill some time following the subredd itself. So that's why I use it. So the when really ties into whenever I'm free, or whenever I need some information. Also. it could also be like, I also use Reddit as an alternative for stack overflow. So there are a lot of subreddits that are give like technical help or like code queries. So I use those when I'm stuck on a problem or need like other inputs for a problem. So the when is kind of staggered. The why is also like there are many use cases for it.",
+          "role": "basis",
+          "start_char": 269,
+          "end_char": 1323
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G005",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "Google加Reddit的路径用来找到相关帖子信息。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T007",
+          "quote": "Okay. So again, there are 2 main flows that I go through. So one is, if I open Reddit and I want to like, search for something specific. Then I open it through Google. So I Google, the question. And then I put Reddit after that. So it gives me all the relevant posts. So I just open the post directly and then I interact with the post was the other way. Is I open@it.com. I don't use the mobile app I think the mobile app design is really clunky, and there are a lot of 3rd party apps that are much better than that. But coming back to the point, so if I open Reddit through reddit.com, and the 1st thing you see, is the homepage. So the homepage is like a top bar where you have a search bar on top. You have messaging, you have. You can create a post. You have your notifications. All those are on top, and the top bar then below that the screen is divided into 3 parts, the left most is all your recently visited tabs you recently visited subreddits and the subreddits that you follow. The middle is kind of like a newsfeed with posts from subreddits that I follow, and on the right it's like posts you might be interested in. So it suggests posts that I might like. So I when I come on Reddit, I normally, if I have a targeted problem, then I go through the Google Link. If I don't. If I log in through reddit.com. I just scroll through the newsfeed till I find something that interests me, and I go into that post and interact with the post.",
+          "role": "basis",
+          "start_char": 2435,
+          "end_char": 3881
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G004",
+      "target_id": "G006",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "有情境的经验有助解决问题，不能保证经验适用。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T005",
+          "quote": "The primary reason would be to. So I'll tell you how it differs from a Google search. So a Google search basically aggregates a lot of generalized search results. So let's pick an example where you know, I'm trying to integrate a new workout into my routine. So I really want to know how that workout has impacted other people, and how what kind of what kind of results they've seen from it. So instead of googling something like that, I'd go into Reddit and say that. So the reason for using it is that I get personal experiences over facts, and these personal experiences are mostly legitimate. So they and they're very contextual. So I feel that they're much more valuable than Google search. So that is so to like encapsulate. Why, I use it in one word, it's to get more targeted results to the problem that I'm facing.",
+          "role": "basis",
+          "start_char": 1481,
+          "end_char": 2304
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G023",
+      "target_id": "G024",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "找专门社区是改善回答质量的明确办法。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T061",
+          "quote": "I think the answers I'd get would be better, because when I post in a particular subreddit, people who are responding in that subreddit are expected to know the subject matter if they are responding, so of course they can be like bad responses. You can never mitigate that completely. But I'd say that. it's a pretty How do you say? Like it's a it's Yeah. I'd say that this is covers most of it.",
+          "role": "basis",
+          "start_char": 30173,
+          "end_char": 30568
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G016",
+      "target_id": "G017",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "对照用户评价会影响购买决策，未保证决策正确。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T033",
+          "quote": "Yeah, yeah, I. So I use reddit. I use reddit all the time, for. So I have a laptop that I bought in February this year, which I researched a lot on Reddit. So the one thing that I like about Reddit is that if you go on Amazon, there are mostly good reviews about something Reddit is more of a balanced perspective, and you can also find people from varied backgrounds talking about the product. So say that I was trying to buy a laptop and someone who's into video editing has their opinion on the laptop and so if I was buying the laptop for video editing, I'd have a very. I'd have a much better idea about how about what to expect. So that's that's how Reddit is useful in that scenario. But yeah, I've made a lot of purchase decisions because of reviews I've seen on Reddit.",
+          "role": "basis",
+          "start_char": 17578,
+          "end_char": 18356
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G022",
+      "target_id": "G021",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "无法用adblock时付费是去广告的替代办法。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T047",
+          "quote": "Yeah, actually, I would like I I don't see the like. I I would actually buy it. I I'm not sure why I haven't bought it yet, but maybe sometime soon I might get the premium tier, but the only advantage of the premium tier, I'd say, like from my usage point of view, the only advantage is no ads, and since I already have ad block it kind of like, since I already have ad block. It's it's fine without the premium tier. But in some scenario where ad block is not available, I would buy the premium tier.",
+          "role": "basis",
+          "start_char": 24190,
+          "end_char": 24691
+        }
+      ]
+    },
+    {
+      "relation_id": "R007",
+      "source_id": "G005",
+      "target_id": "G007",
+      "type": "precedes",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先找到帖子，出现新疑问后可进一步研究。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T009",
+          "quote": "I would say, very rarely is there? So if there is an outcome that I'm trying to achieve while using it, it is either very specifically defined before I log in, or there is no particular outcome. So if I want to elaborate on that, there's either a problem that I'm searching for an answer for, and the outcome of that interaction that that. I mean the pro. The outcome of that usage of Reddit will result in the problem being solved. if I'm just browsing Reddit, just to look through my interesting subreddits, then there is no particular outcome. It's just that I just browse them to find and read something interesting. it might be a positive outcome where I find something really interesting to read. And then I have specific questions about it, and then I research it further on, Reddit. But most of the time, if I don't have a predefined goal, then there is no particular outcome.",
+          "role": "basis",
+          "start_char": 4114,
+          "end_char": 4998
+        }
+      ]
+    },
+    {
+      "relation_id": "R008",
+      "source_id": "G012",
+      "target_id": "G014",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "手机保存草稿能缓解创作受阻，只解决移动体验的一部分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T027",
+          "quote": "I would say, on the desktop desktop platform. No. but on the mobile platform there are quite a few barriers. So the for one. The mobile platform is quite slow and clunky, like the Ui. Is not very intuitive. I'm not sure how they like. I'm not sure if it's different on other phones. But I use an android phone and it's very unintuitive and very heavyweight. So if I want to give you some examples like when you're creating a post, and you leave it in the middle. you can't save it as a draft which you can do on desktop. So that is something that is frustrating. If I want to post on Mobile Another thing is. you cannot keep track of comments intuitively on Mobile, so on desktop. You have like threads where you can easily see, but on Mobile you have. You also have threads, but I feel that the desktop version is much more clearly put out. So I would say, user experience ui ux is one frustration that I have on the mobile app.",
+          "role": "basis",
+          "start_char": 13812,
+          "end_char": 14741
+        }
+      ]
+    },
+    {
+      "relation_id": "R009",
+      "source_id": "G013",
+      "target_id": "G014",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "线程清楚帮助移动使用体验。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T027",
+          "quote": "I would say, on the desktop desktop platform. No. but on the mobile platform there are quite a few barriers. So the for one. The mobile platform is quite slow and clunky, like the Ui. Is not very intuitive. I'm not sure how they like. I'm not sure if it's different on other phones. But I use an android phone and it's very unintuitive and very heavyweight. So if I want to give you some examples like when you're creating a post, and you leave it in the middle. you can't save it as a draft which you can do on desktop. So that is something that is frustrating. If I want to post on Mobile Another thing is. you cannot keep track of comments intuitively on Mobile, so on desktop. You have like threads where you can easily see, but on Mobile you have. You also have threads, but I feel that the desktop version is much more clearly put out. So I would say, user experience ui ux is one frustration that I have on the mobile app.",
+          "role": "basis",
+          "start_char": 13812,
+          "end_char": 14741
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

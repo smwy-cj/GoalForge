@@ -1,0 +1,120 @@
+{
+  "schema_version": "model-review-draft-1",
+  "report_id": "REVIEW-9def1b91078f5f53",
+  "mode": "inspect",
+  "input_model": {
+    "file_sha256": "1667ff4079519bf80f95c3ccfc89efa796af6cdbf264d729110442767aa8968c",
+    "model_id": "DOC014-goal-model",
+    "version": "v0.1",
+    "core_sha256": "9def1b91078f5f5321f0b01465e7449e7ad13c99271c61792c5987e1b1a894b1",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "checks": [
+    {
+      "check_id": "integrity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "共享契约、ID、引用、边方向、有向环和关系覆盖检查。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "scope",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查声明的文档范围及证据来源。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "lineage",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查目标与候选双向映射；不自行补造映射。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "representation",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "正向决策与可视化边一致。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "trace_validity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查既有支持状态；不重新推断语义支持。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "attachments",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "核对附件安全路径、可取得性和实际字节哈希。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "human_records",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "只核对已提供意见的文件与版本绑定，不认证审核人身份。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "source_location",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "按 Unicode 码点和半开区间核对原句。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "semantic",
+      "type": "semantic",
+      "scope": "current_model",
+      "status": "not_run",
+      "evidence": "未调用独立语义审查模型；只保留上游判断与待审项。",
+      "execution": "not_run"
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "I-f913a6095f5c",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC014-G003",
+        "DOC014-G010"
+      ],
+      "evidence_ids": [],
+      "reason": "两处表态方向相左：T011 说极端天气时 weather.com 会是「the 1st place I'll see it」，暗示希望第一时间获知；T055-T057 又明确「I usually prefer no notifications」「I just prefer it off」，把通知全关，只靠主动打开网站。可以解释为「关常规通知、保留极端预警」的分层策略，也可以解释为全靠主动查询；受访者未澄清，无法裁决，故记为不确定。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    }
+  ],
+  "summary": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "goal_count": 13,
+    "pair_count": 78,
+    "blocking_count": 0,
+    "needs_review_count": 1
+  },
+  "repair_attempts": [],
+  "unresolved_issue_ids": [
+    "I-f913a6095f5c"
+  ],
+  "limitations": [
+    "结构检查不证明语义正确。",
+    "未执行独立语义审查；模型人工状态来自实际反馈，检查报告自身未获人工确认。"
+  ],
+  "model_human_review_status": "pending",
+  "review_status": "pending"
+}

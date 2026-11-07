@@ -1,0 +1,280 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "3f56f8e3a8d583b7ad165709903ce78ca847c39e1539461ccf74a4b9f4121e7f",
+    "judgments_sha256": "6241973bb5d381d6d8429501e8fccd53831923c883f4830edb0cf66c3b4e45b8"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC006-goal-model",
+      "message": "本次未建立 AND 精化组：信息浏览的三条路径（滚动信息流、每日榜单、搜索）是并列替代方式，职位搜索的两项信息需求与区域搜索条件都不足以共同构成父目标，因此保留为独立目标与联系；若需要层级，请确认可接受的上层目标或 OR 方案表达。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "按需过滤娱乐内容是否只作为可选开关，以免与 G012 期待的每日笑话推送冲突？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "区域限制应作为所有搜索类型的通用条件，还是仅针对租房等分类信息？原文以城市租房为例。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "不向第三方出售数据的责任主体是平台公司还是开发团队？原文只给了'改进管理'的笼统建议。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G005",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "滚动主页信息流是受访者自述的实现日常信息浏览的两项主要动作之一，属实现方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T007",
+          "quote": "I think there are 2 actions, 2 main actions. I achieve this goal.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G006",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "进入每日新闻榜单选新闻是受访者自述的另一项主要动作，与滚动并列服务于信息浏览。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T007",
+          "quote": "I think there are 2 actions, 2 main actions. I achieve this goal.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G007",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "限于信息浏览这一使用情境的提问范围。"
+      ],
+      "assumptions": [],
+      "rationale": "在'这一步动作中最常用哪些功能'的问答范围内，受访者举出搜索功能，说明搜索是实现信息浏览的方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T008",
+          "quote": "So in this step of actions. What features from this platform?",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC006:T009",
+          "quote": "but I can think about another feature which is search feature",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G008",
+      "target_id": "G007",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "区域限制是搜索的附加条件，不改变其他搜索方式。"
+      ],
+      "assumptions": [],
+      "rationale": "按地区搜索是搜索在'指定地区'情境下的具体化，且受访者确认这是给搜索增加限制条件。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T013",
+          "quote": "it would be better for for me if there is a specific specific button, or or some feature in the application that I could search in a specific region like the city.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G009",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "在'找工作时想获取什么信息'的问答中，查看应聘人数用于判断公司招聘规模，帮助职位搜索决策。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T018",
+          "quote": "when you are searching a job on the application? What kind of information, or what kind of data you want to get from the application.",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC006:T019",
+          "quote": "how how many people are already entering the hiring process, so that I can see if this company is on a great number of hiring or not",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G010",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "近期面试者反馈用于判断公司面试门槛，属于职位搜索中帮助判断的信息需求。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T018",
+          "quote": "when you are searching a job on the application? What kind of information, or what kind of data you want to get from the application.",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC006:T019",
+          "quote": "I'll get feedback from the interviewees who just recently has taken the interviews from the company, and I can get feedback from them to see if this company is, does it have a high benchmark to to pass the interview or not?",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G004",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "针对职位信息这一类内容。"
+      ],
+      "assumptions": [],
+      "rationale": "受访者明确说职位搜索问题较少，因为 AI 推荐能把合适的职位推送给他。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T017",
+          "quote": "because it can push you the right postings with artificial intelligence, recommendations.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G004",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "推荐系统使用户无需主动搜索即可持续获得符合口味的最新信息，帮助日常信息浏览。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T029",
+          "quote": "you can just stay there, and they will give you the the latest information. That fits your taste continuously.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G011",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "仅当用户不想看娱乐内容时生效。"
+      ],
+      "assumptions": [],
+      "rationale": "把娱乐内容与有用内容分开并按需过滤，可减少浏览日常信息时的无关内容。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T023",
+          "quote": "when sometimes I don't wanna see those entertainment contents, and they can filter them up for me.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R10",
+      "source_id": "G014",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [
+        "原文只说干扰整体用户体验，未点名日常信息浏览。"
+      ],
+      "assumptions": [
+        "信息流中的无关刷屏内容会降低日常信息浏览的可用性。"
+      ],
+      "rationale": "治理矩阵账号可减少信息流中的无关内容，但原文未把受益范围限定到新闻浏览，故列为待确认。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T043",
+          "quote": "they just flood the feed with irrelevant contents, and it interferes with user experience.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R11",
+      "source_id": "G001",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "日常浏览可覆盖国际事件等广泛信息。"
+      ],
+      "rationale": "原文把'不想错过重要信息'作为使用动机，但未直接说明浏览行为足以避免遗漏，故待确认。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T003",
+          "quote": "I do not want to miss out any important information like if there are any great events going on internationally.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R12",
+      "source_id": "G002",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "主动搜索职位可减少漏掉新职位的可能。"
+      ],
+      "rationale": "职位搜索与'不想错过新职位'相关，但原文未明示搜索能保证不漏，故待确认。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T003",
+          "quote": "maybe there are some new job posting",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

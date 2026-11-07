@@ -1,0 +1,92 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "3bb14fc48d3749b0eca67275623cf3981c804fa5a543af6e8a799fe5ab3c2336",
+    "judgments_sha256": "8ead240b0f75db0bbd351eb762156ed1ec46aafe3688ef3a911afffcc67a1816"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查但无依据（关系判断总述）：按 brief 4.6 逐类执行了 specialization / operationalization / contribution / precedes 四类独立联系判断，并逐对检查了下述目标组合；结论为没有任何可支撑的联系，故 relations 为空数组。四类逐类理由见下列各条，空数组是判断结果而非跳过该阶段。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查但无依据（specialization 具体情境→一般目标）：核对旅行 G012/G013/G014 与日常 G001/G002、极冷改公交 G004 与穿衣 G003、极端天气 G006-G010 与日常查看、台风通知 G008 与一般事件 G006。原文各段均为独立使用场景的并列描述或同一流程内动作与其预期结果，未出现一般目标与具体情境目标的层级陈述，也无'该具体目标覆盖/属于一般目标'的关系原句，故不建立 specialization。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查但无依据（operationalization 实现方式→目的）：核对 G001 查温度↔G003 决定穿衣、G002 查降雨↔G005 带伞、G015 每小时标签↔G001、G008 打开通知↔G006 得知事件。原文 'So like, I can plan...' / 'So if... rain... I make sure I have my umbrella' 是同一复合句内动作与其预期结果或条件-行动的描写，属'一目标一核心动作'拆分后的内部语义，不是两个独立目标之间被明确陈述的方式-目的关系；按不为拆出的节点补边、不把操作先后当联系，判定无独立联系依据。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查但无依据（contribution 有帮助→受帮助）：核对减少广告 G018、压缩 UI G019、改进雷达 G020、本地化天气 G021 与快速查看/日常目标之间是否构成'有帮助'关系。原文为并列改善愿望与抱怨，未出现某目标对另一目标'有帮助'的关系原句；相关、相似、同主题不构成联系，故不建立 contribution。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查但无依据（precedes 先发生→后发生）：核对旅行链 G012→G014（T017 'as you approach the date'、T019 'wait till the end and then decide'）、极端天气链 G008/G009→G010（T015 'based on that'）、以及 T011 '1st see it'。这些是同一使用流程内的时间顺序或依据指代，且 G014 本身已含'等最后再决定'，原文未将两个独立结果以先后关系明确关联；按不把操作先后当联系、不为凑数造边，判定无独立 precedes 依据。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G001",
+      "message": "已检查但无依据：G001 与 G003/G004/G005 仅有 T001 同一复合句内的目的/条件连接（'So like, I can plan...'），且 G001 与 G013（旅行查云量）对象不同（温度 vs 云量）、无一般/具体层级陈述；不为拆出的节点补边，故不建立以 G001 为端点的联系。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "已检查但无依据：G002 查降雨与 G005 有雨带伞仅由 T001 'So if... rain... make sure I have my umbrella' 的条件-行动连接，属同一候选拆分后的内部语义，不是两个独立目标间被明确陈述的联系，故不建立 G002→G005 联系。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G006",
+      "message": "已检查但无依据：G006（首先得知重要天气事件）与 G008（打开通知查台风详情）、G011（新闻标签读全球事件）分属不同问答场景（T011/T015 与 T051/T053），原文未把三者以先后、贡献或具体化关系明确关联；'1st see it' 仅描述单一动作的顺序，不构成两个独立结果之间的联系。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "已检查但无依据：G008/G009 与 G010 之间 T015 'based on that, I'll adjust my day' 是同一复合句内依据指代（that 回指详情与建议），不是两个独立目标之间的 contribution/precedes 原句；按不为拆出的节点补边，不建立联系。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G012",
+      "message": "已检查但无依据：G012（提前查估计）与 G014（临近几天再决定）虽有 T017/T019 的时间标记，但二者为同一旅行规划流程的阶段，且 G014 已含'等到最后'，原文未将两个独立结果以先后关系明确关联；不建立 precedes。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G017",
+      "message": "已检查但无依据：G017（配色）、G018（减少广告）、G019（压缩 UI）是 T035/T037/T069 中并列的 UI 改善愿望与抱怨，彼此无'有帮助/方式-目的/共同充分'关系原句；相关/同主题不构成联系，也不构成 AND 精化组。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G020",
+      "message": "已检查但无依据：G020（改进雷达）与 G021（本地化地点天气）分别出现在 T043/T067 与 T067，均以 windy.com/创业公司为参照背景，但原文未声称二者之一帮助或实现另一者；不建立 contribution/operationalization。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G022",
+      "message": "已检查但无依据：G022（保持通知关闭）、G023（摄氏度）、G024（两个城市）是 T045/T047/T055-T057 中并列的个性化设置偏好/现状，原文未把它们彼此关联；不建立联系，也不为凑层级造根目标。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查但依据不足（端点支持）：G007/G021/G025 为 insufficient 目标，按 brief 4.6 即使存在候选联系也只能标 proposed；且经核对原文并无对应关系原句，故不建立任何端点含它们的关系。insufficient 目标如实保留，未升级。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查但无依据（AND 精化组·共同充分性）：逐一检查可能声称'子目标共同满足足以实现父目标'的组合——日常信息查看(G001/G002)与决策准备(G003/G004/G005)、极端天气应对(G006/G008/G009/G010)、旅行规划(G012/G013/G014)、UI/广告改善(G017/G018/G019)、雷达与本地化(G020/G021)。原文均未声称任何一组共同满足足以实现某上层目标，也无正常/异常场景可支撑共同充分性；按不为增加层级造根、不把贡献/先后当精化，判定无成立精化组（含 proposed/partial），groups 保留为空，无 normal/exception 场景可写为 supports。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "已检查但无依据（精化组场景检查）：若强行建组，缺少至少一条 normal 与一条 exception 场景、全部 outcome=supports、所有依赖联系 supported 的前提；原文中 T013 对 T011 假设的否定、T065 与 T067 的相反证据、以及 T041 的条件性购买意向均构成未解决反例/未知，故任何组都只能停留在 proposed+partial 甚至不能成立，按不为凑数扩写目标，不建立任何组。"
+    }
+  ],
+  "relations": [],
+  "reassessments": []
+}

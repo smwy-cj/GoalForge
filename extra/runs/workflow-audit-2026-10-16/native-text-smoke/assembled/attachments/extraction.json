@@ -1,0 +1,140 @@
+{
+  "document_id": "AUDIT",
+  "document_hash": "80c7b4c499a18d9ecea01cb128ae7016eea922537044333b0eab6d9802562349",
+  "materials": [
+    {
+      "material_id": "M001",
+      "file_name": "original.md",
+      "media_type": "text/markdown",
+      "original_hash": "80c7b4c499a18d9ecea01cb128ae7016eea922537044333b0eab6d9802562349",
+      "id_origin": "provided",
+      "processing_status": "processed"
+    }
+  ],
+  "conversion": {
+    "canonical_text_path": "source.txt",
+    "method": "UTF-8 原生文本忠实读取，保留行顺序；不做语义摘要",
+    "issues": []
+  },
+  "segments": [
+    {
+      "source_id": "AUDIT:S001",
+      "material_id": "M001",
+      "text": "使用者：我希望根据天气安排活动。",
+      "speaker": null,
+      "recognition_status": "native_text",
+      "original_locator": {
+        "line_start": 1,
+        "line_end": 1,
+        "start_char": 0,
+        "end_char": 16
+      }
+    },
+    {
+      "source_id": "AUDIT:S002",
+      "material_id": "M001",
+      "text": "使用者：我希望根据降雨安排户外活动。",
+      "speaker": null,
+      "recognition_status": "native_text",
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 17,
+        "end_char": 35
+      }
+    },
+    {
+      "source_id": "AUDIT:S003",
+      "material_id": "M001",
+      "text": "使用者：我希望减少查找信息的费用。",
+      "speaker": null,
+      "recognition_status": "native_text",
+      "original_locator": {
+        "line_start": 3,
+        "line_end": 3,
+        "start_char": 36,
+        "end_char": 53
+      }
+    }
+  ],
+  "coverage": {
+    "scope": "provided_material",
+    "source_ids": [
+      "AUDIT:S001",
+      "AUDIT:S002",
+      "AUDIT:S003"
+    ],
+    "omissions": []
+  },
+  "schema_version": "goalforge-extraction-draft-2",
+  "status": "completed",
+  "candidates": [
+    {
+      "candidate_id": "AUDIT-C001",
+      "category": "goal",
+      "subtype": "unspecified",
+      "statement": "根据天气安排活动",
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "AUDIT:S001",
+          "quote": "使用者：我希望根据天气安排活动。",
+          "role": "basis",
+          "start_char": 0,
+          "end_char": 16
+        }
+      ],
+      "classification_reason": "受控夹具预置期望结果，非实际模型提取评测。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "AUDIT-C002",
+      "category": "goal",
+      "subtype": "unspecified",
+      "statement": "根据降雨安排户外活动",
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "AUDIT:S002",
+          "quote": "使用者：我希望根据降雨安排户外活动。",
+          "role": "basis",
+          "start_char": 17,
+          "end_char": 35
+        }
+      ],
+      "classification_reason": "受控夹具预置期望结果，非实际模型提取评测。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "AUDIT-C003",
+      "category": "goal",
+      "subtype": "unspecified",
+      "statement": "减少查找信息的费用",
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "AUDIT:S003",
+          "quote": "使用者：我希望减少查找信息的费用。",
+          "role": "basis",
+          "start_char": 36,
+          "end_char": 53
+        }
+      ],
+      "classification_reason": "受控夹具预置期望结果，非实际模型提取评测。",
+      "inference": null,
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "受控合成资料；候选与语义判断预置，只验证阶段衔接。"
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "ca8079b6ab5f6d0b289ffd83985a154f762cd31083993c56c068c10831a39d65",
+    "input_sha256": "ea7ea6619cbce30c33721cd9ec3a6057bbffcae625de8182c4caa887fd710c23"
+  },
+  "judgments": {
+    "DOC015-C001": {
+      "target_statement": "用户一登录就能看到贴合自己的内容（推荐系统为最高优先级）。",
+      "label": "direct",
+      "rationale": "T017 直接说明首要目标与优先级：「giving the users the right experience as soon as they log on to spotify is our main goal」，并明确排第一。",
+      "supported_parts": [
+        "目标：T018「the right experience as soon as they log on」",
+        "优先级：T018「the recommendations comes in at 1st」"
+      ],
+      "unsupported_parts": [
+        "「right experience」无量化指标",
+        "未说明冷启动用户如何满足"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目标与排序",
+        "2. 主体为平台整体",
+        "3. → direct"
+      ]
+    },
+    "DOC015-C002": {
+      "target_statement": "播客对特殊需求用户可用：转录与字幕、语音与键盘导航（第二优先级）。",
+      "label": "direct",
+      "rationale": "T017 把无障碍列为第二优先并说明理由，T043 补充具体能力（语音、键盘导航）。",
+      "supported_parts": [
+        "重要性：T018「of utmost importance to us」",
+        "具体能力：T044「navigate, spotify via voice or via their keyboards」",
+        "优先级：T018 位于推荐之后"
+      ],
+      "unsupported_parts": [
+        "未给出无障碍的合规标准（如 WCAG 等级）",
+        "自承是长期欠账，现状不完整"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取重要性判断与具体能力",
+        "2. 与 C006 的字幕能力区分（前者面向残障，后者面向质量）",
+        "3. → direct"
+      ]
+    },
+    "DOC015-C003": {
+      "target_statement": "强化听众之间的社区参与（第三优先级）。",
+      "label": "direct",
+      "rationale": "T017 把社区参与列为第三优先，T037 描述具体做法（播放列表、点赞保存、论坛、直播）。",
+      "supported_parts": [
+        "目标：T018「strengthening the overall community engagement among listeners」",
+        "手段：T038「create their own playlists」「theme based groups and forums」"
+      ],
+      "unsupported_parts": [
+        "未定义社区活跃度指标",
+        "与商业目标的取舍未说明"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目标与手段",
+        "2. → direct"
+      ]
+    },
+    "DOC015-C004": {
+      "target_statement": "为创作者提供留在平台的工具（第四优先级）。",
+      "label": "direct",
+      "rationale": "T017 把「给创作者的工具」列为第四优先，T023 提到优化建议。",
+      "supported_parts": [
+        "目标：T018「the tools that we can offer to the creators to stay on our platform」",
+        "示例：T024「content optimization suggestions」"
+      ],
+      "unsupported_parts": [
+        "证据单薄：仅优先级列举一句，缺少具体工具清单",
+        "「留在平台」的衡量方式未说明"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取优先级列举",
+        "2. 记录证据薄弱",
+        "3. → direct"
+      ]
+    },
+    "DOC015-C005": {
+      "target_statement": "支持多语言与方言，把覆盖扩展到非英语听众。",
+      "label": "direct",
+      "rationale": "T019 说明多语言支持的动机与时间范围。",
+      "supported_parts": [
+        "做法：T020「supporting multiple languages and dialects」",
+        "动机：T020「we just want to broaden our reach」",
+        "背景：T020「there are way more non English speakers in the world」"
+      ],
+      "unsupported_parts": [
+        "未说明已支持的语言数量或质量",
+        "未说明方言的识别与字幕如何处理"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取做法与动机",
+        "2. → direct"
+      ]
+    },
+    "DOC015-C006": {
+      "target_statement": "把控内容质量：自动审核违规内容、检查音质与制作标准、给创作者优化建议。",
+      "label": "direct",
+      "rationale": "T023 列出三项质量手段（转录字幕、审核、优化建议），T025 补充审核流程与标准。",
+      "supported_parts": [
+        "审核：T024「content moderation tools」",
+        "标准：T026「audio quality and the production standards are up to mark」",
+        "面向用户：T024「transcriptions and closed captions」"
+      ],
+      "unsupported_parts": [
+        "未说明违规判定的误杀率或申诉机制",
+        "「quality up to mark」无具体阈值"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取三项手段",
+        "2. 与 C002 区分（同为字幕，目的不同）",
+        "3. → direct"
+      ]
+    },
+    "DOC015-C007": {
+      "target_statement": "控制广告总量与位置，使其不破坏收听体验（如只放在开头与结尾）。",
+      "label": "direct",
+      "rationale": "T027 说明平衡广告负载的原则，T041 给出具体做法（只放开头结尾、2+2 段各 30 秒）与透明标注。",
+      "supported_parts": [
+        "原则：T028「balance our ad load」",
+        "位置：T042「just at the start or just at the end of podcasts」",
+        "透明：T042「clear labeling helps us maintain the trust」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的广告总时长上限",
+        "未说明定向广告的隐私边界"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取原则与具体做法",
+        "2. 二者为同一策略的不同层级",
+        "3. → direct"
+      ]
+    },
+    "DOC015-C008": {
+      "target_statement": "按用户旅程分层运营：新用户少广告并有试用，长期用户给个性化推荐与独家内容。",
+      "label": "direct",
+      "rationale": "T029 分别说明新用户与长期用户的不同做法，构成按旅程分层的运营策略。",
+      "supported_parts": [
+        "新用户：T030「we try and minimize ads. So this encourages exploration」",
+        "长期用户：T030「customized recommendation based on their listening history」",
+        "独家内容：T030「exclusive contents for our premium users」"
+      ],
+      "unsupported_parts": [
+        "两层合并为一个节点，可能掩盖差异",
+        "未说明分层的判定标准（多久算长期）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 区分两类用户的做法",
+        "2. 合并为分层策略并记录代价",
+        "3. → direct"
+      ]
+    },
+    "DOC015-C009": {
+      "target_statement": "避免内容饱和：持续引入新创作者，避免少数创作者垄断平台。",
+      "label": "direct",
+      "rationale": "T039 说明不愿被少数创作者垄断，并给出引入新创作者的具体动作。",
+      "supported_parts": [
+        "目标：T040「we really don't wanna constrict our platform」",
+        "动作：T040「bought over 2,000 new creators on our platform」"
+      ],
+      "unsupported_parts": [
+        "「over 2,000」为单月数据，未说明长期节奏",
+        "未说明新创作者的质量门槛"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目标与动作",
+        "2. → direct"
+      ]
+    },
+    "DOC015-C010": {
+      "target_statement": "在引入更重的 AI 推荐时不牺牲响应速度与加载时间。",
+      "label": "direct",
+      "rationale": "T043 明确不愿为处理大数据而牺牲体验，并点名延迟与加载时间。",
+      "supported_parts": [
+        "原则：T044「we really don't wanna process such huge amounts of data that it kind of ruins the user experience」",
+        "代价项：T044「high latency and the low loading times」"
+      ],
+      "unsupported_parts": [
+        "未给出延迟或加载时间的目标值",
+        "未说明在弱网下的降级"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取原则与代价项",
+        "2. → direct"
+      ]
+    },
+    "DOC015-C011": {
+      "target_statement": "同一功能在各类设备上表现一致（iPad、安卓、iPhone、桌面）。",
+      "label": "direct",
+      "rationale": "T043 把跨设备一致性列为专门事项，并回顾因共用后端导致移动端受限的经历。",
+      "supported_parts": [
+        "目标：T044「consistent sort of behavior throughout all the devices」",
+        "经历：T046「the phone has only so much of memory and RAM」"
+      ],
+      "unsupported_parts": [
+        "未说明一致性覆盖的功能范围",
+        "未说明各端发布节奏是否同步"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目标与背景",
+        "2. → direct"
+      ]
+    },
+    "DOC015-C012": {
+      "target_statement": "减少点击、简化导航：搜索栏直接内嵌，分享直达社交应用。",
+      "label": "direct",
+      "rationale": "T047 明确以减少点击为目标，并给出搜索栏内嵌、分享直达两个已实施改动。",
+      "supported_parts": [
+        "目标：T048「we are trying to minimize our click」",
+        "改动一：T048「integrated the search bar directly in our ux」",
+        "改动二：T048「send Instagram or Whatsapp messages onto their respective groups」"
+      ],
+      "unsupported_parts": [
+        "未给出点击步数的量化目标",
+        "改版前状态为受访者回忆"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目标与两处改动",
+        "2. → direct"
+      ]
+    },
+    "DOC015-C013": {
+      "target_statement": "播客推荐幅度比音乐更保守，不做跨品类跳跃。",
+      "label": "direct",
+      "rationale": "T049 对比音乐与播客的推荐策略差异，明确播客必须更保守。",
+      "supported_parts": [
+        "差异：T050「this kind of thing we can't really do in the podcast space」",
+        "做法：T050「we have to be a whole lot subtler with it」",
+        "举例：T050 给灵修听众推日常 Vlog「just wouldn't work」"
+      ],
+      "unsupported_parts": [
+        "「更保守」无量化标准（相似度阈值）",
+        "与 C001 的「探索意料之外内容」存在潜在张力"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取对比与做法",
+        "2. 与 C001/C009 对照发现张力",
+        "3. → direct，并转为人工问题"
+      ]
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "01c79a2dfef06e9b679541be1ad718c3e46e8edd324dd627b315cf0725cf3af7",
+    "input_sha256": "e47610fab4179e3764d7c390412b1febc183cce3372dff787ae4920de080f83d"
+  },
+  "judgments": {
+    "DOC019-C001": {
+      "target_statement": "做长期财务规划，为退休积累资金。",
+      "label": "direct",
+      "rationale": "T024 明确自述第一目标是长期财务规划与退休储蓄。",
+      "supported_parts": [
+        "目标：T024「my primary goal is financial planning long term financial planning」",
+        "用途：T024「save up money for the future whenever I retire」"
+      ],
+      "unsupported_parts": [
+        "未给出目标金额或年限",
+        "未说明风险承受度"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取首要目标陈述",
+        "2. → direct"
+      ]
+    },
+    "DOC019-C002": {
+      "target_statement": "在投资过程中提升金融素养，理解市场如何运作。",
+      "label": "direct",
+      "rationale": "T024 把提升金融素养列为次要目标，T012 说明起点是自学。",
+      "supported_parts": [
+        "目标：T024「becoming more financially literate in the process」",
+        "内容：T024「trying to understand how markets work」",
+        "背景：T012「I was not really very financially Literate」"
+      ],
+      "unsupported_parts": [
+        "未说明「更懂」的判定标准",
+        "与 C008/C009 的学习诉求存在重叠"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取次要目标与背景",
+        "2. → direct"
+      ]
+    },
+    "DOC019-C003": {
+      "target_statement": "提升金融领域的算法素养，以增强就业竞争力。",
+      "label": "direct",
+      "rationale": "T024 明确列为三级目标，并说明与就业相关。",
+      "supported_parts": [
+        "目标：T024「becoming algorithmically literate in terms of finance」",
+        "用途：T024「can help me in getting jobs」"
+      ],
+      "unsupported_parts": [
+        "仅为一句列举，无展开",
+        "与当前投资行为的关联未说明"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取陈述",
+        "2. 记录证据单薄",
+        "3. → direct"
+      ]
+    },
+    "DOC019-C004": {
+      "target_statement": "银行账户能与交易应用顺畅对接（验证、入金不折腾）。",
+      "label": "direct",
+      "rationale": "T028 把银行对接列为理想体验的第一要素，并说明它是选择应用的决定因素。",
+      "supported_parts": [
+        "要素：T028「seamless integration with the bank account」",
+        "权重：T028「the deciding factor of using or not using an app」",
+        "反例：T018「I was not able to get my cash from my bank」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的验证步骤数或时长",
+        "不同市场的合规差异未讨论"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取要素与权重",
+        "2. 用 Coinbase 的反例佐证",
+        "3. → direct"
+      ]
+    },
+    "DOC019-C005": {
+      "target_statement": "能即时看清个股走势并立刻下单，或预设交易规则。",
+      "label": "direct",
+      "rationale": "T028 明确把「看懂走势 + 立即下单 / 设规则」作为理想体验的核心。",
+      "supported_parts": [
+        "看懂走势：T028「understand how a particular stock is moving at that point of time」",
+        "即时下单：T028「make a trade instantly」",
+        "规则化：T028「set up rules of for trading」"
+      ],
+      "unsupported_parts": [
+        "未说明需要的行情粒度（实时/延迟）",
+        "「规则交易」的具体类型未说明"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取三项能力",
+        "2. → direct"
+      ]
+    },
+    "DOC019-C006": {
+      "target_statement": "应用内提供财经新闻，并标注每条新闻对个股的正面或负面影响。",
+      "label": "direct",
+      "rationale": "T028 把财经新闻列为理想体验的一部分，T038 以 Coinbase 的做法具体化期望形态。",
+      "supported_parts": [
+        "需求：T028「a separate interface to get in financial news」",
+        "期望标注：T038「whether this particular headline is positive news... or Negative news」",
+        "现状缺失：T038「it does not have that」"
+      ],
+      "unsupported_parts": [
+        "未说明新闻来源与更新频率",
+        "正负判断的准确性如何保证未讨论"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取需求与参照实现",
+        "2. → direct"
+      ]
+    },
+    "DOC019-C007": {
+      "target_statement": "每天末检视持仓变动，并按两周到一月的节奏调整仓位。",
+      "label": "direct",
+      "rationale": "T030 给出明确的日检视与周期再平衡节奏，并说明加密因波动大而频率更低。",
+      "supported_parts": [
+        "日检：T030「every day at the end of the day I would just check」",
+        "再平衡：T030「once in 2 weeks or so... refactor my investments」",
+        "加密：T030「once in 2 weeks」"
+      ],
+      "unsupported_parts": [
+        "未说明再平衡的触发阈值（跌幅/涨幅）",
+        "节奏为个人习惯，非产品要求"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取两个频率",
+        "2. 区分股票与加密",
+        "3. → direct"
+      ]
+    },
+    "DOC019-C008": {
+      "target_statement": "在入门教程之外获得进阶交易算法的指导。",
+      "label": "direct",
+      "rationale": "T044 明确希望在入门之后获得进阶算法指导，并说明当时的困惑。",
+      "supported_parts": [
+        "诉求：T044「some more guidance on advanced algorithms」",
+        "痛点：T044「I was very blank as to how should I go about progressing」"
+      ],
+      "unsupported_parts": [
+        "未说明期望形式（课程/案例/工具）",
+        "「进阶」无分级标准"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求与痛点",
+        "2. → direct"
+      ]
+    },
+    "DOC019-C009": {
+      "target_statement": "有系统完整的期货与期权教程。",
+      "label": "direct",
+      "rationale": "T044 指出期货与期权教程不完整，属明确的内容缺口。",
+      "supported_parts": [
+        "缺口：T044「didn't have a very comprehensive Academy on futures and Options trading」",
+        "现状：T044「mentioned it in a very running pattern」"
+      ],
+      "unsupported_parts": [
+        "受访者不确定现状是否已改善（I don't know if they have done it now）",
+        "未说明需要覆盖的深度"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取缺口陈述",
+        "2. 记录时效不确定",
+        "3. → direct"
+      ]
+    },
+    "DOC019-C010": {
+      "target_statement": "除个股外还能投资共同基金，以分散风险。",
+      "label": "direct",
+      "rationale": "T046 明确提出增加共同基金，并给出安全性与信任度理由。",
+      "supported_parts": [
+        "诉求：T046「an option of investing in mutual funds」",
+        "理由：T046「much more safer... in a lot more quantity」"
+      ],
+      "unsupported_parts": [
+        "受访者自述不确定平台是否以此为目标，属建议性质",
+        "未说明期望的基金类型"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求与理由",
+        "2. 记录建议性质并转为人工问题",
+        "3. → direct"
+      ]
+    },
+    "DOC019-C011": {
+      "target_statement": "提供语音下单与语音摘要，减少频繁打开应用的负担。",
+      "label": "direct",
+      "rationale": "T058 在被问「只改一件事」时给出语音功能，并说明动机。",
+      "supported_parts": [
+        "诉求：T058「voice based orders... or voice based summarization」",
+        "动机：T058「reduce the pain of going into the app all the time」"
+      ],
+      "unsupported_parts": [
+        "受访者自己也不确定可行性（I'm not sure... if it is possible）",
+        "未说明语音指令的覆盖范围"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求与动机",
+        "2. → direct"
+      ]
+    }
+  }
+}

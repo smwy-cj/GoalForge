@@ -1,0 +1,172 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "9e03a1c4bd366e060912c38f18c4d3366b6a5a1aa7fdefbb5e66c7864995af94",
+    "judgments_sha256": "4e9e91d673ffc1c8f1c8df01b0067f98df83353d0c8fac0f74d2e87ce016e571"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G011",
+      "child_ids": [
+        "G009",
+        "G010"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "发布内容并在早高峰定时，看起来共同构成获得互动的操作组合；但原文没有给出内容质量、受众规模与转化条件，不能声称整组已足以实现获得互动与业务。",
+      "assumptions": [
+        "把发布与定时视为同一流程中互补的两个子目标"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "And then, when I'm done I can hit this post button, or I can schedule it for later",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R1",
+        "R2"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "受访者在会议现场写好一条营销帖，并定时到次日 9 点人群上线时发布。",
+          "outcome": "supports",
+          "rationale": "发布使内容进入 feed，定时提升曝光；两者共同构成获得互动的前置条件。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "内容与目标受众无关、账号粉丝很少，或只发布而不回应评论时，即使按早高峰定时也未必获得互动或业务。",
+          "outcome": "counterexample",
+          "rationale": "原文未给出内容质量、受众规模与互动转化条件，且有其他目标（G013/G014）涉及内容制作，故整组不能成立为充分精化。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC034-goal-model",
+      "message": "已检查 G013（内容开发自动化支持）与 G014（免多轮评审发布专业内容）之间是否存在实现方式或贡献联系：原文只并列提出两项期望，未说明自动化能减少评审轮次，故未建立联系。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC034-goal-model",
+      "message": "已检查 G006（可信的专业资料页）是否有助于 G011（获得互动与业务）：原文只说明向客户传递可信度，未说明它带来互动或成交，故未建立联系。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC034-goal-model",
+      "message": "已检查 G012（先查背景再加人）与 G001（与同事、同学联系）之间的联系：两者对象不同（陌生目标客户 vs 熟人），原文未说明前者服务于后者，故未建立联系。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC034-goal-model",
+      "message": "已检查 G008（LinkedIn Learning 快速深入）与其他目标的联系：原文未说明它服务于营销、招聘或职业发展；且 T005 明确否认 LinkedIn 对职业发展起作用，故无联系依据。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "受访者把广告与界面杂乱列为最大困扰（T017），但未提出明确的改动要求；是否应据此建立‘减少广告/无关内容干扰’的目标，待确认。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "GR1 缺少内容质量、受众规模与互动转化条件的依据，也未把 G013/G014（专业内容制作）纳入为共同前提，尚不能成立。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G009",
+      "target_id": "G011",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先有发布并进入 feed 的结果，随后才会开始获得互动；原句用 once I've posted it ... I'll start to get interactions 明确先后。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "So once I've posted it, it goes out to the network and it's on the feed, so I'll start to kind of get some interactions.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G010",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "posts are scheduled to the morning peak instead of the evening"
+      ],
+      "assumptions": [
+        "more impressions make interactions more likely"
+      ],
+      "rationale": "上午 9 点定时被明确用于获得更多曝光，而曝光进入 feed 后才开始获得互动；定时对互动有正向帮助但原文未保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "it doesn't really make sense, you know, in the evening, to post it. It's just not going to get as many impressions. So I'm going to be posted at, you know. 9 Am. Tomorrow, when people 1st show up at the office, and I'll get a nice kind of boost in some of the impressions.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G009",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "posting as company and/or personal profile"
+      ],
+      "assumptions": [],
+      "rationale": "发布营销/曝光帖是受访者做营销的一般目标下的具体情境做法；T009 把该任务直接称为 marketing post，T003 说他们重点关注营销。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "the task would probably be kind of posting, marketing information are posting like a marketing post just for awareness",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC034:T003",
+          "quote": "So we focus a lot on marketing.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G007",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "tool ease and targeting are the reasons the stakeholder keeps using them"
+      ],
+      "rationale": "易用的发帖与推荐工具是受访者实现营销曝光的实现方式；原句说这些工具让 LinkedIn 成为适合广泛且定向营销的工具。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC034:T007",
+          "quote": "some of the tools that they have to like post you know, marketing things are are very, very easy and user friendly. So kind of makes it again, a good tool for any sort of broad based marketing you can get, you know, pretty targeted.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

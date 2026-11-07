@@ -1,0 +1,78 @@
+{
+  "recorded_at_utc": "2026-10-23T06:43:32.733121+00:00",
+  "revision": "2026-10-23-initial",
+  "baseline": {
+    "python_tests": 88,
+    "javascript_tests": 11,
+    "status": "passed"
+  },
+  "python": {
+    "command": "python -m unittest discover -s tests -p 'test_*.py' -v",
+    "tests": 94,
+    "added_tests": 6,
+    "status": "passed",
+    "exit_code": 0
+  },
+  "javascript": {
+    "command": "node --test tests/review_core.test.js tests/simple_review.test.js",
+    "tests": 11,
+    "status": "passed",
+    "exit_code": 0
+  },
+  "skill_structure": {
+    "status": "passed",
+    "count": 3,
+    "invocation": "python -X utf8 <skill-creator>/scripts/quick_validate.py <skill>",
+    "note": "Initial invocation failed with default GBK; UTF-8 invocation passed. System files unchanged."
+  },
+  "isolated_install": {
+    "formal_skills": [
+      "goal-extraction",
+      "goal-model-building",
+      "model-review"
+    ],
+    "structure": "passed",
+    "independent_semantic": "not_run",
+    "formal_proof": "not_run",
+    "input_unchanged": true,
+    "feedback_scope": [
+      "G3"
+    ],
+    "unresolved_feedback_preserved": true,
+    "delivery": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-23-initial\\isolated-install\\work\\delivery\\goal-model.html",
+    "revised_delivery": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-23-initial\\isolated-install\\work\\revised-delivery\\goal-model.html"
+  },
+  "compatibility": {
+    "cli": "passed",
+    "judgment_template": "passed",
+    "public_python_import": "passed",
+    "input_unchanged": "passed",
+    "missing_target": "explicit_failure_passed"
+  },
+  "checks": {
+    "partial_support": "downgraded_with_original_preserved",
+    "unsupported_refinement": "rejected",
+    "unrelated_goals": "preserved",
+    "empty_goals": "completed",
+    "changed_conditions": "stale_judgment_rejected",
+    "unresolved_feedback": "preserved_pending"
+  },
+  "modes": {
+    "default_extraction": "instructions_updated; synthetic_authored_pipeline_passed; real_generation_not_run",
+    "verify_only": "cli_and_import_input_immutability_passed; semantic_accuracy_not_measured",
+    "feedback_revision": "synthetic_scope_and_rebuild_passed; real_semantic_rewrite_not_run",
+    "extraction_only": "instructions_updated; real_conversation_acceptance_not_run"
+  },
+  "current_source_versions": "after-manifest.json",
+  "semantic_regression": "not_run",
+  "independent_semantic": "not_run",
+  "formal_proof": "not_run",
+  "human_acceptance": "not_run",
+  "semantic_context_attachment": "not_implemented",
+  "controlled_same_source_comparison": "not_run",
+  "historical_output_regenerated": false,
+  "generation_model": "unknown",
+  "generation_budget": "unknown",
+  "external_installations_updated": false,
+  "evidence_basis": "Observed tool execution results in this chat; engineering fixtures are synthetic authoring, not semantic gold labels."
+}

@@ -1,0 +1,381 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "090769074a1a83760471b1b945efc20cdd826e86cce6d2bc8175a0459a0a1ed1",
+    "input_sha256": "dcc6d80b71593afe32e2fb81e89295dd7682cb6f2f5a928c0b25ad1f3e2c21fa"
+  },
+  "judgments": {
+    "DOC020-C001": {
+      "target_statement": "每天及时收到招聘方的邮件，不漏任何新信息。",
+      "label": "direct",
+      "rationale": "T008 直接说使用邮箱的目标之一是收招聘方邮件，并说明每天查看以防漏信息。",
+      "supported_parts": [
+        "目标：T008「one of the goals... is to get the email from recruiters」",
+        "频率：T008「check my email every day」",
+        "动机：T008「didn't lose any new information」"
+      ],
+      "unsupported_parts": [
+        "未说明何类招聘邮件算「新信息」",
+        "未给出可接受的延迟上限"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目标句",
+        "2. 取频率与动机",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C002": {
+      "target_statement": "及时获知学校发布的通知。",
+      "label": "direct",
+      "rationale": "T008 把学校通知列为第二个目标。",
+      "supported_parts": [
+        "目标：T008「check about the news that broadcasted by school」",
+        "形态：T008「This kind of notification」"
+      ],
+      "unsupported_parts": [
+        "未说明通知类型（活动/成绩/行政）",
+        "与 C001 共用同一检查动作，未区分优先级"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取第二目标",
+        "2. → direct"
+      ]
+    },
+    "DOC020-C003": {
+      "target_statement": "用邮件完成个人事务预约（牙医、诊所等）。",
+      "label": "direct",
+      "rationale": "T010 明确列举用邮箱做个人预约。",
+      "supported_parts": [
+        "场景：T010「for personal purpose, I use it. For booking」",
+        "对象：T010「dentist or clinic」"
+      ],
+      "unsupported_parts": [
+        "未说明是预约本身还是预约确认通知",
+        "频率未提"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取个人用途举例",
+        "2. → direct"
+      ]
+    },
+    "DOC020-C004": {
+      "target_statement": "接收商家的促销与折扣信息。",
+      "label": "direct",
+      "rationale": "T010 明确说通过邮件获取商家促销信息。",
+      "supported_parts": [
+        "用途：T010「get the information from merchandise」",
+        "内容：T010「sales or discounts」"
+      ],
+      "unsupported_parts": [
+        "未说明是否希望聚合多家",
+        "未说明是否觉得这类邮件干扰"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取用途",
+        "2. → direct"
+      ]
+    },
+    "DOC020-C005": {
+      "target_statement": "与朋友保持联系。",
+      "label": "direct",
+      "rationale": "T010 明确提到用邮件联系朋友，但同句自评低频。",
+      "supported_parts": [
+        "用途：T010「use email to contact with my friends」",
+        "强度：T010「and also rare」"
+      ],
+      "unsupported_parts": [
+        "仅一句带过，无任何展开",
+        "与主要用途（求职/学业）权重差距明显"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取用途",
+        "2. 记录自评低频",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C006": {
+      "target_statement": "每天快速分拣收件箱：扫读未读、标出重要的、清掉垃圾、把待办暂存待处理。",
+      "label": "direct",
+      "rationale": "T014 完整描述了每日分拣流程：扫读→标记→删除→细读→打标签留待。",
+      "supported_parts": [
+        "扫读：T014「take a quick glance on every mail」",
+        "标记：T014「I will 1st market」",
+        "暂存待办：T014「tag it and then leave it there」"
+      ],
+      "unsupported_parts": [
+        "「重要」由他自己判断，无判定标准",
+        "流程为现状描述，未必是他期望的理想流程"
+      ],
+      "assumptions": [
+        "现状流程被视为他维持收件箱可控的手段"
+      ],
+      "reasoning_steps": [
+        "1. 取流程三步",
+        "2. 视为达成可控的手段",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C007": {
+      "target_statement": "让收件箱长期可控：无用邮件及时删除，并按用途分设多个邮箱账号。",
+      "label": "direct",
+      "rationale": "T016 自述两条策略：删除邮件、按用途分设账号。",
+      "supported_parts": [
+        "删除：T016「delete those mails that are not that important」",
+        "分账号：T016「I do this by have separate emails」",
+        "自述：T016「that's kind of 2 strategy」"
+      ],
+      "unsupported_parts": [
+        "分账号的用途划分（招聘/学校/优惠）是他个人习惯",
+        "未说明是否愿意在新客户端内维持多账号"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取两条策略",
+        "2. → direct"
+      ]
+    },
+    "DOC020-C008": {
+      "target_statement": "写信时由内置 AI 把要点写成结构得体的邮件。",
+      "label": "direct",
+      "rationale": "T018 说现有做法是先用外部 AI 起草，T036 明确把内置 AI 列为最想要的功能。",
+      "supported_parts": [
+        "现有做法：T018「ask the AI Assistant tool to compose an email for me」",
+        "诉求：T036「the feature I want is the AI assistance that is in bills in the email」",
+        "理想形态：T036「I just type... and it will just like compose」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的成稿修改量",
+        "未说明语言/语气偏好"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取现有做法",
+        "2. 取明确诉求",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C009": {
+      "target_statement": "可调整邮件排版：字号、重点句加粗。",
+      "label": "direct",
+      "rationale": "T020 描述写信最后一步是调字号、把重点句加粗。",
+      "supported_parts": [
+        "动作：T020「adjust the font size」",
+        "动作：T020「mark the important sentence as bold」"
+      ],
+      "unsupported_parts": [
+        "属操作步骤描述，未表达为独立诉求",
+        "未说明为何需要（可读性/强调）"
+      ],
+      "assumptions": [
+        "流程中的固定动作被视为他需要的能力"
+      ],
+      "reasoning_steps": [
+        "1. 取流程末步",
+        "2. 视为能力需求",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C010": {
+      "target_statement": "大文件改用云端链接发送，保证对方在任何设备都能看。",
+      "label": "direct",
+      "rationale": "T022 说明多媒体通常走云链接，理由是跨平台可看。",
+      "supported_parts": [
+        "做法：T022「upload it to the cloud and then send the link」",
+        "理由：T022「easier for the client to view it in any platform」"
+      ],
+      "unsupported_parts": [
+        "自评多媒体附件「didn't happen that much」，需求强度低",
+        "未说明文件大小阈值"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取做法与理由",
+        "2. 记录低频",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C011": {
+      "target_statement": "重要邮件不被自动分类误判进垃圾箱。",
+      "label": "direct",
+      "rationale": "T024 指出重要邮件被分到垃圾箱，T026 给出明确的取舍偏好。",
+      "supported_parts": [
+        "问题：T024「important emails that will like end up in the spans folder」",
+        "偏好：T026「I would rather receive some spans instead of ignoring some important messages」"
+      ],
+      "unsupported_parts": [
+        "未说明误判的发生频率",
+        "未提出可接受的误判率"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题",
+        "2. 取取舍偏好",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C012": {
+      "target_statement": "已发出的邮件仍可修改，且收件人可查看修改历史。",
+      "label": "direct",
+      "rationale": "T028 提出把「撤回」换成「可编辑」，并描述收件人可见新旧版本与修改历史。",
+      "supported_parts": [
+        "诉求：T028「an function of editing the email instead of sending a new one」",
+        "呈现：T028「see the new email and old email」",
+        "追溯：T028「they could see the editing history」"
+      ],
+      "unsupported_parts": [
+        "未说明可编辑的时间窗",
+        "未讨论收件人已读后的处理"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求与呈现方式",
+        "2. → direct"
+      ]
+    },
+    "DOC020-C013": {
+      "target_statement": "可靠收到本应送达的邮件（如注册验证码）。",
+      "label": "direct",
+      "rationale": "T032 说有时收不到邮件（如注册验证信），T034 称这是明显障碍。",
+      "supported_parts": [
+        "问题：T032「sometimes I would not receive some emails」",
+        "场景：T032「when you register some website」",
+        "定性：T034「quite an obstacle for me」"
+      ],
+      "unsupported_parts": [
+        "未区分是服务商拦截还是发送方问题",
+        "未说明发生频率"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题",
+        "2. 取定性",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C014": {
+      "target_statement": "读信时由 AI 提炼要点并高亮关键词，避免漏掉藏在正文里的限制条件。",
+      "label": "direct",
+      "rationale": "T040 要 AI 提炼要点，T044 要高亮关键词，T046 用漏看 TikTok 限制的实例说明后果。",
+      "supported_parts": [
+        "摘要：T040「help me. Get the main point of that email」",
+        "高亮：T044「highlights the keywords」",
+        "实例：T046「a small line... we don't recommend you to take this twice」",
+        "动机：T052「I spend a lot of time just reading every email」"
+      ],
+      "unsupported_parts": [
+        "未说明摘要长度或格式",
+        "未说明是否愿意让 AI 代读全部邮件"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取摘要与高亮两项",
+        "2. 用实例佐证漏读后果",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C015": {
+      "target_statement": "只在真正重要时收到提醒，且重要性的判定足够可靠才愿意依赖。",
+      "label": "direct",
+      "rationale": "T058 说重要邮件该有提醒，但现状无法可靠识别重要性，因此不愿依赖。",
+      "supported_parts": [
+        "诉求：T058「good to receive notification for some important messages」",
+        "条件：T058「not want to rely on that. Unless it's really reliable」",
+        "现状：T058「no a very good way to identify important messages」"
+      ],
+      "unsupported_parts": [
+        "未给出「可靠」的判定标准或可接受漏判率",
+        "未说明若可靠则希望提醒到什么程度"
+      ],
+      "assumptions": [
+        "条件句被视为目标的成立前提"
+      ],
+      "reasoning_steps": [
+        "1. 取诉求",
+        "2. 提取可靠性前提",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C016": {
+      "target_statement": "在截止期高压下，能快速把邮件转发、密送给整组。",
+      "label": "direct",
+      "rationale": "T070 在被问紧 deadline 场景时给出转发与密送，T072 称其对该场景很重要。",
+      "supported_parts": [
+        "功能：T070「forwarding the email. And BBC, like, sent to all the people in my group」",
+        "权重：T072「very important when it comes to working on deadlines」"
+      ],
+      "unsupported_parts": [
+        "他把协作等同于转发/密送，未提共享草稿或任务分配",
+        "未说明组规模"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取功能",
+        "2. 取权重",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C017": {
+      "target_statement": "能快速检索历史邮件。",
+      "label": "direct",
+      "rationale": "T086 在功能排序中把检索列为第一，理由是每天都用。",
+      "supported_parts": [
+        "排序：T086「the most important would definitely be searching」",
+        "理由：T086「I use it every day」"
+      ],
+      "unsupported_parts": [
+        "未说明检索维度（发件人/内容/附件）",
+        "未提现状检索有何不足"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取排序与理由",
+        "2. → direct"
+      ]
+    },
+    "DOC020-C018": {
+      "target_statement": "可定时发送邮件。",
+      "label": "direct",
+      "rationale": "T086 把定时发送列为第二重要。",
+      "supported_parts": [
+        "排序：T086「the second one will probably be scheduling」"
+      ],
+      "unsupported_parts": [
+        "仅一句排序，无场景说明",
+        "未说明他是否实际用过定时发送"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取排序",
+        "2. 记录证据单薄",
+        "3. → direct"
+      ]
+    },
+    "DOC020-C019": {
+      "target_statement": "未来可按自标识的类别/协议通信（例如招聘通知直接对接 HR 的同类标签）。",
+      "label": "direct",
+      "rationale": "T092 提出按自标识类别/协议通信的设想，并以招聘通知与 HR 对接为例。",
+      "supported_parts": [
+        "设想：T092「different category or protocol emails」",
+        "机制：T092「if I self identify a category... we could communicate」",
+        "示例：T092「tag categories for recruiting notifications for Hr」"
+      ],
+      "unsupported_parts": [
+        "自评「probably not that practical」，属远景设想",
+        "未说明类别由谁定义、如何防滥用"
+      ],
+      "assumptions": [
+        "设想性表述被视为他希望的能力"
+      ],
+      "reasoning_steps": [
+        "1. 取设想与示例",
+        "2. 记录自评可行性低",
+        "3. → direct"
+      ]
+    }
+  }
+}

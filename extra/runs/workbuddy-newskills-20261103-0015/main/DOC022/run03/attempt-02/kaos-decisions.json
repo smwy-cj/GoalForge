@@ -1,0 +1,32 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "b6c0ea23120251303d692f8698fd8b15b4fd9c33d109baa48fea71bba76742e4",
+    "judgments_sha256": "949b5810e772e695632e7bd094409a77f3237c86c96df14a9d3593bf699ec611"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC022-goal-model",
+      "message": "原文多为并列的偏好/要求/评价，缺少明确连接两个已核验目标的独立联系原句，也缺少可声称'子目标共同满足足以实现父目标'的整组依据；故 relations 与 AND 精化组均留空，不为连边或凑层级造节点。如需建立层级请补充相应依据。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G015",
+      "message": "配置复杂度仅以抱怨/障碍线索出现（T055/T069/T093），按目标边界不自动升级为明确要求，保留 insufficient；请确认是否删除或补充正面依据。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "'社区重要'为评价性陈述，社区规模被推断为对编辑器的要求；请确认该推断是否成立。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "T063 '不再在意酷' 与 T075 '仍觉得酷' 的强度张力未解决；请确认维持使用 vim 的动机强度。"
+    }
+  ],
+  "relations": [],
+  "reassessments": []
+}

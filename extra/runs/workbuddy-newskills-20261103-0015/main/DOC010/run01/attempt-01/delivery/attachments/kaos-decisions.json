@@ -1,0 +1,166 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "a926e4571bf9e6c783d5511815d42c5e3e69ed41c2ab394e92ade7292a58e7f7",
+    "judgments_sha256": "f4f9ffd54d178fae53e0923fb2c5c4182f03f6f50fcd8f9f481dae6f50e8a1d8"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G005",
+      "child_ids": [
+        "G006",
+        "G009"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "候选组合：要在极端天气前及时知晓并推迟活动（G005），需要极端天气提醒（G006）与数据实时更新（G009）同时成立——只有提醒而数据滞后仍会误判，只有实时数据而无提醒则会漏看。但原文存在明确反例：G009 的实时性并未阻止'未来10分钟不下雨'的误判导致淋雨，且受访者自认技术尚不足；同时 G009 的范围比父目标宽（覆盖一般天气），其对本组的贡献只在'极端天气下的时效'这一侧面成立。故仅作候选，不标成立。",
+      "assumptions": [
+        "极端天气提醒能够实际送达（推送/邮件/短信）",
+        "实时数据能代表极端天气临近时的真实状况"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T035",
+          "quote": "extreme weather conditions are really important, like thunderstorm or flood flooding conditions",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC010:T039",
+          "quote": "for extreme conditions, I'm just expecting, you know, the weather app to give me notifications or alert",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC010:T051",
+          "quote": "But then it started raining and I got wet.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R2"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "预报显示目的地当天有雷暴，应用推送极端天气提醒，同时天气数据为实时更新；受访者据此推迟活动并留在家中。",
+          "outcome": "supports",
+          "rationale": "在该场景下 G006 与 G009 同时成立即可支撑 G005 的目的：及时得知并据此改变行程。"
+        },
+        {
+          "kind": "exception",
+          "origin": "source",
+          "scenario": "应用显示'未来10分钟不下雨'，受访者据此步行去杂货店，随后下雨被淋湿（原文 T051 的实际经历）。",
+          "outcome": "counterexample",
+          "rationale": "即使有提醒与实时更新，短期预测本身失准仍会使 G005 的'及时且可靠地知晓'落空；受访者亦承认技术尚未达到。该反例未解决，故不标 supported+complete。",
+          "evidence_ids": [
+            "K0003"
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "GR1 的异常场景反例（短期预报失准导致淋雨）在原文中未解决，且子目标 G009 的范围宽于父目标；是否接受其保持 proposed/partial？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G005",
+      "message": "极端天气出现时“推迟活动、不出门”是受访者描述的一次反应，还是必须遵守的规则？原文未说明强度。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "广告只在未订阅状态下出现；“无广告”是否适用于免费层或仅要求不出现随机广告，原文未明确。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC010-goal-model",
+      "message": "精化组判断已逐组执行：检查了以“日常规划”为上层的 {G001,G002,G003} 组合、以实时更新为上层的 {G008,G006} 组合、以及“无广告+实时+一致”三要素组合，均无原文依据可声称共同充分（或存在反例），故未成立；仅保留 GR1 作候选。详见 self-review.md。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G003",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "仅在规划旅行、需要提前安排活动并购买门票时"
+      ],
+      "assumptions": [
+        "整周预报可用于旅行期间的活动与购票决策；原文未说明长期预报精度是否足够"
+      ],
+      "rationale": "旅行时查整周天气是'依据天气安排户外活动并决定是否购票'的一个具体情境：受访者直接以'要安排活动、要买活动票'解释为何旅行要查整周。方向为具体情境（G003）→ 一般目标（G002），不声称旅行情境覆盖户外活动的全部范围。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T019",
+          "quote": "if I have to plan a trip. I would check whether for entire week.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC010:T019",
+          "quote": "I have to plan activities, and I have to buy ticket for tickets for those activities",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G006",
+      "target_id": "G005",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "仅针对极端天气（雷暴、洪水等）"
+      ],
+      "assumptions": [
+        "提醒能够实际送达，且受访者能据此判断是否需要推迟活动"
+      ],
+      "rationale": "受访者把'对极端天气的期待'具体落在应用给出通知或警报上，并说明看到这类信息就推迟活动、不出门；即用提醒这一方式服务于及时知晓极端天气的目的。方向为方式（G006）→ 目的（G005），不声称提醒是唯一方式（县邮件/短信等亦可）。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T039",
+          "quote": "for extreme conditions, I'm just expecting, you know, the weather app to give me notifications or alert",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC010:T035",
+          "quote": "I just like postpone the entire event and don't. Don't go out at all.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G007",
+      "target_id": "G012",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "常规（非极端）天气下的日常使用"
+      ],
+      "assumptions": [
+        "每天三次的通知是消费日预报的主要方式；原文未排除他另开应用查看"
+      ],
+      "rationale": "受访者说明日预报用起来更舒适，并把日常使用拆成每天三次（早/午/晚），即以固定三次的通知节奏来实现日预报的常规使用。方向为方式（G007）→ 目的（G012），不声称该节奏是唯一使用途径，也不改变日预报优先于周预报的偏好方向。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T065",
+          "quote": "daily, forecast is something where I can use it more comfortably. Like, as I said, like I've splitted those into like 3 times a day",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

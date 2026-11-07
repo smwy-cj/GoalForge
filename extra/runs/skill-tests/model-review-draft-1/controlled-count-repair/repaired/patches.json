@@ -1,0 +1,33 @@
+[
+  {
+    "patch_id": "PATCH-coverage",
+    "issue_ids": [
+      "I-6813c5d5afac"
+    ],
+    "base_version": "v0.1",
+    "base_core_sha256": "4ce77a0e382a583285896572b521152ab8ccba7b755e6c5bd5482f50eaa9d9d0",
+    "rationale": "现有唯一目标对完整，只纠正统计数，不补造关系。",
+    "expected_checks": [
+      "integrity"
+    ],
+    "application_status": "proposed",
+    "operations": [
+      {
+        "action": "replace",
+        "entity": "model",
+        "id": null,
+        "field": "relation_coverage",
+        "before": {
+          "strategy": "all_pairs",
+          "expected_pairs": 36,
+          "evaluated_pairs": 999
+        },
+        "after": {
+          "strategy": "all_pairs",
+          "expected_pairs": 36,
+          "evaluated_pairs": 36
+        }
+      }
+    ]
+  }
+]

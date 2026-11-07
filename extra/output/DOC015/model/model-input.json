@@ -1,0 +1,2284 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC015-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "ea7ea6619cbce30c33721cd9ec3a6057bbffcae625de8182c4caa887fd710c23"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "7cba259d53720d972799889d94aff029bf96743697f715fcc0de541589b2ec86"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "f83dd4910d64ac6b3004448e272aa5ec86617d9b189639833df0c22a7aae6eab"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "3a765142e7640ae666d08694a0fb8f0fec6d1bd4db620827468fcea94f4f9ae0"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC015"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC015-G001",
+      "statement": "用户一登录就能看到贴合自己的内容（推荐系统为最高优先级）。",
+      "source_candidate_ids": [
+        "DOC015-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "自述为当前第一优先级",
+        "优先级排序：推荐 > 无障碍 > 社区 > 创作者工具"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G002",
+      "statement": "播客对特殊需求用户可用：转录与字幕、语音与键盘导航（第二优先级）。",
+      "source_candidate_ids": [
+        "DOC015-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "自评无障碍曾是技术欠账，最近才开始补",
+        "理由：播客是特殊需求用户也能消费的媒介"
+      ],
+      "evidence_ids": [
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G003",
+      "statement": "强化听众之间的社区参与（第三优先级）。",
+      "source_candidate_ids": [
+        "DOC015-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "手段：歌单式播放列表、点赞与保存、主题小组与论坛、直播与创作者问答"
+      ],
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G004",
+      "statement": "为创作者提供留在平台的工具（第四优先级）。",
+      "source_candidate_ids": [
+        "DOC015-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "与创作者协作、听取其需求",
+        "提供优化建议等创作者侧能力"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G005",
+      "statement": "支持多语言与方言，把覆盖扩展到非英语听众。",
+      "source_candidate_ids": [
+        "DOC015-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "近 2–3 年开始支持",
+        "理由：全球非英语使用者远多于英语使用者"
+      ],
+      "evidence_ids": [
+        "E0010",
+        "E0011"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G006",
+      "statement": "把控内容质量：自动审核违规内容、检查音质与制作标准、给创作者优化建议。",
+      "source_candidate_ids": [
+        "DOC015-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "流程：自动筛查 → 音质与制作标准评估 → 内容归类 → 参考用户评分"
+      ],
+      "evidence_ids": [
+        "E0012",
+        "E0013",
+        "E0014"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G007",
+      "statement": "控制广告总量与位置，使其不破坏收听体验（如只放在开头与结尾）。",
+      "source_candidate_ids": [
+        "DOC015-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "同时提供付费去广告订阅与定向广告",
+        "明确区分「平衡广告负载」与「透明标注赞助内容」"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016",
+        "E0017"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G008",
+      "statement": "按用户旅程分层运营：新用户少广告并有试用，长期用户给个性化推荐与独家内容。",
+      "source_candidate_ids": [
+        "DOC015-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "新用户：降干扰以鼓励探索，并提供 2–3 个月试用",
+        "长期用户：基于收听历史推荐，可获幕后内容或提前收听"
+      ],
+      "evidence_ids": [
+        "E0018",
+        "E0019",
+        "E0020"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G009",
+      "statement": "避免内容饱和：持续引入新创作者，避免少数创作者垄断平台。",
+      "source_candidate_ids": [
+        "DOC015-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "上月新增约 2,000 名创作者",
+        "配合推荐系统给出「意料之外但相关」的内容"
+      ],
+      "evidence_ids": [
+        "E0021",
+        "E0022"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G010",
+      "statement": "在引入更重的 AI 推荐时不牺牲响应速度与加载时间。",
+      "source_candidate_ids": [
+        "DOC015-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "明确权衡：不愿因处理过大数据而毁掉体验"
+      ],
+      "evidence_ids": [
+        "E0023",
+        "E0024"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G011",
+      "statement": "同一功能在各类设备上表现一致（iPad、安卓、iPhone、桌面）。",
+      "source_candidate_ids": [
+        "DOC015-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "曾因共用后端而导致移动端内存吃紧，已拆分代码库"
+      ],
+      "evidence_ids": [
+        "E0025",
+        "E0026"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G012",
+      "statement": "减少点击、简化导航：搜索栏直接内嵌，分享直达社交应用。",
+      "source_candidate_ids": [
+        "DOC015-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "改版前需先点搜索按钮再展开输入框",
+        "分享可带播客的图文表示"
+      ],
+      "evidence_ids": [
+        "E0027",
+        "E0028",
+        "E0029"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC015-G013",
+      "statement": "播客推荐幅度比音乐更保守，不做跨品类跳跃。",
+      "source_candidate_ids": [
+        "DOC015-C013"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+      "context": [
+        "音乐可试探性地推陌生流派",
+        "播客偏好更稳定，跳类会失效（如给灵修听众推日常 Vlog）"
+      ],
+      "evidence_ids": [
+        "E0030",
+        "E0031",
+        "E0032"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC015-G001",
+      "b": "DOC015-G002",
+      "label": "none",
+      "rationale": "DOC015-G001 的对象是登录即得贴合推荐（T017），DOC015-G002 的对象是无障碍可用（字幕/语音/键盘）（T017/T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC015-G001",
+      "b": "DOC015-G003",
+      "label": "none",
+      "rationale": "DOC015-G001 的对象是登录即得贴合推荐（T017），DOC015-G003 的对象是社区参与（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC015-G001",
+      "b": "DOC015-G004",
+      "label": "none",
+      "rationale": "DOC015-G001 的对象是登录即得贴合推荐（T017），DOC015-G004 的对象是创作者工具与留存（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC015-G001",
+      "b": "DOC015-G005",
+      "label": "none",
+      "rationale": "DOC015-G001 的对象是登录即得贴合推荐（T017），DOC015-G005 的对象是多语言扩大覆盖（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC015-G001",
+      "b": "DOC015-G006",
+      "label": "related",
+      "rationale": "T025 说明内容归类「helps giving the users what they actually need. In terms of suggestions」，质量与分类直接服务推荐；但 G006 还覆盖违规审核，范围更宽。",
+      "evidence_ids": [
+        "E0001",
+        "E0010"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC015-G001",
+      "b": "DOC015-G007",
+      "label": "none",
+      "rationale": "DOC015-G001 的对象是登录即得贴合推荐（T017），DOC015-G007 的对象是广告量与位置可控（T027/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC015-G001",
+      "b": "DOC015-G008",
+      "label": "related",
+      "rationale": "T029 把长期用户的推荐策略直接挂在收听历史上，属于 G001 的一个分层实现；但 G008 还包含新用户去广告与试用，范围不同。",
+      "evidence_ids": [
+        "E0001",
+        "E0014"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC015-G001",
+      "b": "DOC015-G009",
+      "label": "none",
+      "rationale": "DOC015-G001 的对象是登录即得贴合推荐（T017），DOC015-G009 的对象是避免内容饱和（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC015-G001",
+      "b": "DOC015-G010",
+      "label": "none",
+      "rationale": "DOC015-G001 的对象是登录即得贴合推荐（T017），DOC015-G010 的对象是低延迟与加载速度（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC015-G001",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G001 的对象是登录即得贴合推荐（T017），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC015-G001",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G001 的对象是登录即得贴合推荐（T017），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC015-G001",
+      "b": "DOC015-G013",
+      "label": "related",
+      "rationale": "T049 讨论的正是推荐系统在播客场景下的幅度控制，是对 G001 的约束条件；但 G013 是策略边界、G001 是目标，非精化。",
+      "evidence_ids": [
+        "E0001",
+        "E0024"
+      ],
+      "conditions": [
+        "约束仅适用于播客，音乐仍可跨流派试探"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC015-G002",
+      "b": "DOC015-G003",
+      "label": "none",
+      "rationale": "DOC015-G002 的对象是无障碍可用（字幕/语音/键盘）（T017/T043），DOC015-G003 的对象是社区参与（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC015-G002",
+      "b": "DOC015-G004",
+      "label": "none",
+      "rationale": "DOC015-G002 的对象是无障碍可用（字幕/语音/键盘）（T017/T043），DOC015-G004 的对象是创作者工具与留存（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC015-G002",
+      "b": "DOC015-G005",
+      "label": "related",
+      "rationale": "T043 在讲无障碍欠账时把「支持多语言」与「语音/键盘导航」并列为同一批未做的事，二者同属可达性范畴；但一个是语言覆盖、一个是交互方式。",
+      "evidence_ids": [
+        "E0002",
+        "E0005"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC015-G002",
+      "b": "DOC015-G006",
+      "label": "related",
+      "rationale": "T023 先说为每个播客提供转录与字幕以服务特殊需求用户，再说内容审核与优化建议；转录字幕同时服务无障碍与质量两个目的。",
+      "evidence_ids": [
+        "E0002",
+        "E0012"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC015-G002",
+      "b": "DOC015-G007",
+      "label": "none",
+      "rationale": "DOC015-G002 的对象是无障碍可用（字幕/语音/键盘）（T017/T043），DOC015-G007 的对象是广告量与位置可控（T027/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC015-G002",
+      "b": "DOC015-G008",
+      "label": "none",
+      "rationale": "DOC015-G002 的对象是无障碍可用（字幕/语音/键盘）（T017/T043），DOC015-G008 的对象是按用户旅程分层运营（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC015-G002",
+      "b": "DOC015-G009",
+      "label": "none",
+      "rationale": "DOC015-G002 的对象是无障碍可用（字幕/语音/键盘）（T017/T043），DOC015-G009 的对象是避免内容饱和（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC015-G002",
+      "b": "DOC015-G010",
+      "label": "none",
+      "rationale": "DOC015-G002 的对象是无障碍可用（字幕/语音/键盘）（T017/T043），DOC015-G010 的对象是低延迟与加载速度（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC015-G002",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G002 的对象是无障碍可用（字幕/语音/键盘）（T017/T043），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC015-G002",
+      "b": "DOC015-G012",
+      "label": "related",
+      "rationale": "T047 在讲减少点击时把「voice commands」与「keyboard navigation」列为同批改进，说明交互简化与无障碍存在重叠；但减少点击面向所有用户。",
+      "evidence_ids": [
+        "E0023",
+        "E0002"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC015-G002",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G002 的对象是无障碍可用（字幕/语音/键盘）（T017/T043），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC015-G003",
+      "b": "DOC015-G004",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G004 的对象是创作者工具与留存（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC015-G003",
+      "b": "DOC015-G005",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G005 的对象是多语言扩大覆盖（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC015-G003",
+      "b": "DOC015-G006",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G006 的对象是内容质量把关（T023/T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC015-G003",
+      "b": "DOC015-G007",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G007 的对象是广告量与位置可控（T027/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC015-G003",
+      "b": "DOC015-G008",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G008 的对象是按用户旅程分层运营（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC015-G003",
+      "b": "DOC015-G009",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G009 的对象是避免内容饱和（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC015-G003",
+      "b": "DOC015-G010",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G010 的对象是低延迟与加载速度（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC015-G003",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC015-G003",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC015-G003",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G003 的对象是社区参与（T017），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC015-G004",
+      "b": "DOC015-G005",
+      "label": "none",
+      "rationale": "DOC015-G004 的对象是创作者工具与留存（T017），DOC015-G005 的对象是多语言扩大覆盖（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC015-G004",
+      "b": "DOC015-G006",
+      "label": "none",
+      "rationale": "DOC015-G004 的对象是创作者工具与留存（T017），DOC015-G006 的对象是内容质量把关（T023/T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC015-G004",
+      "b": "DOC015-G007",
+      "label": "none",
+      "rationale": "DOC015-G004 的对象是创作者工具与留存（T017），DOC015-G007 的对象是广告量与位置可控（T027/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC015-G004",
+      "b": "DOC015-G008",
+      "label": "none",
+      "rationale": "DOC015-G004 的对象是创作者工具与留存（T017），DOC015-G008 的对象是按用户旅程分层运营（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC015-G004",
+      "b": "DOC015-G009",
+      "label": "related",
+      "rationale": "T039 说明避免饱和靠的是与创作者合作、引入新创作者，二者同属供给侧；但 G004 关注留存工具、G009 关注供给广度。",
+      "evidence_ids": [
+        "E0006",
+        "E0018"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC015-G004",
+      "b": "DOC015-G010",
+      "label": "none",
+      "rationale": "DOC015-G004 的对象是创作者工具与留存（T017），DOC015-G010 的对象是低延迟与加载速度（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC015-G004",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G004 的对象是创作者工具与留存（T017），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC015-G004",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G004 的对象是创作者工具与留存（T017），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC015-G004",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G004 的对象是创作者工具与留存（T017），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC015-G005",
+      "b": "DOC015-G006",
+      "label": "none",
+      "rationale": "DOC015-G005 的对象是多语言扩大覆盖（T019），DOC015-G006 的对象是内容质量把关（T023/T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC015-G005",
+      "b": "DOC015-G007",
+      "label": "none",
+      "rationale": "DOC015-G005 的对象是多语言扩大覆盖（T019），DOC015-G007 的对象是广告量与位置可控（T027/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC015-G005",
+      "b": "DOC015-G008",
+      "label": "none",
+      "rationale": "DOC015-G005 的对象是多语言扩大覆盖（T019），DOC015-G008 的对象是按用户旅程分层运营（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC015-G005",
+      "b": "DOC015-G009",
+      "label": "none",
+      "rationale": "DOC015-G005 的对象是多语言扩大覆盖（T019），DOC015-G009 的对象是避免内容饱和（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC015-G005",
+      "b": "DOC015-G010",
+      "label": "none",
+      "rationale": "DOC015-G005 的对象是多语言扩大覆盖（T019），DOC015-G010 的对象是低延迟与加载速度（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC015-G005",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G005 的对象是多语言扩大覆盖（T019），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC015-G005",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G005 的对象是多语言扩大覆盖（T019），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC015-G005",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G005 的对象是多语言扩大覆盖（T019），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC015-G006",
+      "b": "DOC015-G007",
+      "label": "none",
+      "rationale": "DOC015-G006 的对象是内容质量把关（T023/T025），DOC015-G007 的对象是广告量与位置可控（T027/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC015-G006",
+      "b": "DOC015-G008",
+      "label": "none",
+      "rationale": "DOC015-G006 的对象是内容质量把关（T023/T025），DOC015-G008 的对象是按用户旅程分层运营（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC015-G006",
+      "b": "DOC015-G009",
+      "label": "none",
+      "rationale": "DOC015-G006 的对象是内容质量把关（T023/T025），DOC015-G009 的对象是避免内容饱和（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC015-G006",
+      "b": "DOC015-G010",
+      "label": "none",
+      "rationale": "DOC015-G006 的对象是内容质量把关（T023/T025），DOC015-G010 的对象是低延迟与加载速度（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC015-G006",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G006 的对象是内容质量把关（T023/T025），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC015-G006",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G006 的对象是内容质量把关（T023/T025），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC015-G006",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G006 的对象是内容质量把关（T023/T025），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC015-G007",
+      "b": "DOC015-G008",
+      "label": "related",
+      "rationale": "T029 说明新用户会被刻意减少广告投放以鼓励探索，是 G007 全局广告策略下的分段处理；二者是总则与例外。",
+      "evidence_ids": [
+        "E0013",
+        "E0014"
+      ],
+      "conditions": [
+        "仅在新用户阶段生效"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC015-G007",
+      "b": "DOC015-G009",
+      "label": "none",
+      "rationale": "DOC015-G007 的对象是广告量与位置可控（T027/T041），DOC015-G009 的对象是避免内容饱和（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC015-G007",
+      "b": "DOC015-G010",
+      "label": "none",
+      "rationale": "DOC015-G007 的对象是广告量与位置可控（T027/T041），DOC015-G010 的对象是低延迟与加载速度（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC015-G007",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G007 的对象是广告量与位置可控（T027/T041），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC015-G007",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G007 的对象是广告量与位置可控（T027/T041），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC015-G007",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G007 的对象是广告量与位置可控（T027/T041），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC015-G008",
+      "b": "DOC015-G009",
+      "label": "none",
+      "rationale": "DOC015-G008 的对象是按用户旅程分层运营（T029），DOC015-G009 的对象是避免内容饱和（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC015-G008",
+      "b": "DOC015-G010",
+      "label": "none",
+      "rationale": "DOC015-G008 的对象是按用户旅程分层运营（T029），DOC015-G010 的对象是低延迟与加载速度（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC015-G008",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G008 的对象是按用户旅程分层运营（T029），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P067",
+      "a": "DOC015-G008",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G008 的对象是按用户旅程分层运营（T029），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P068",
+      "a": "DOC015-G008",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G008 的对象是按用户旅程分层运营（T029），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P069",
+      "a": "DOC015-G009",
+      "b": "DOC015-G010",
+      "label": "none",
+      "rationale": "DOC015-G009 的对象是避免内容饱和（T039），DOC015-G010 的对象是低延迟与加载速度（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P070",
+      "a": "DOC015-G009",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G009 的对象是避免内容饱和（T039），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P071",
+      "a": "DOC015-G009",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G009 的对象是避免内容饱和（T039），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P072",
+      "a": "DOC015-G009",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G009 的对象是避免内容饱和（T039），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P073",
+      "a": "DOC015-G010",
+      "b": "DOC015-G011",
+      "label": "none",
+      "rationale": "DOC015-G010 的对象是低延迟与加载速度（T043），DOC015-G011 的对象是跨设备表现一致（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P074",
+      "a": "DOC015-G010",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G010 的对象是低延迟与加载速度（T043），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P075",
+      "a": "DOC015-G010",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G010 的对象是低延迟与加载速度（T043），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P076",
+      "a": "DOC015-G011",
+      "b": "DOC015-G012",
+      "label": "none",
+      "rationale": "DOC015-G011 的对象是跨设备表现一致（T043），DOC015-G012 的对象是减少点击简化导航（T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P077",
+      "a": "DOC015-G011",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G011 的对象是跨设备表现一致（T043），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P078",
+      "a": "DOC015-G012",
+      "b": "DOC015-G013",
+      "label": "none",
+      "rationale": "DOC015-G012 的对象是减少点击简化导航（T047），DOC015-G013 的对象是播客推荐幅度更保守（T049）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P005",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC015-G001",
+      "b": "DOC015-G006"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P007",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC015-G001",
+      "b": "DOC015-G008"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P012",
+      "conditions": [
+        "约束仅适用于播客，音乐仍可跨流派试探"
+      ],
+      "review_status": "pending",
+      "a": "DOC015-G001",
+      "b": "DOC015-G013"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P015",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC015-G002",
+      "b": "DOC015-G005"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P016",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC015-G002",
+      "b": "DOC015-G006"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P022",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC015-G002",
+      "b": "DOC015-G012"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P038",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC015-G004",
+      "b": "DOC015-G009"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P058",
+      "conditions": [
+        "仅在新用户阶段生效"
+      ],
+      "review_status": "pending",
+      "a": "DOC015-G007",
+      "b": "DOC015-G008"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC015:S018",
+      "material_id": "M001",
+      "quote": "giving the users the right experience as soon as they log on to spotify is our main goal",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3737,
+      "end_char": 3825,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S018",
+          "segment_start": 189,
+          "segment_end": 277,
+          "start_char": 3737,
+          "end_char": 3825
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 3548,
+        "end_char": 4329
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC015:S018",
+      "material_id": "M001",
+      "quote": "if you'd asked me to prioritize it I would say the recommendations comes in at 1st",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4095,
+      "end_char": 4177,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S018",
+          "segment_start": 547,
+          "segment_end": 629,
+          "start_char": 4095,
+          "end_char": 4177
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 3548,
+        "end_char": 4329
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC015:S018",
+      "material_id": "M001",
+      "quote": "improving accessibility features in our platform is of utmost importance to us",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3911,
+      "end_char": 3989,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S018",
+          "segment_start": 363,
+          "segment_end": 441,
+          "start_char": 3911,
+          "end_char": 3989
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 3548,
+        "end_char": 4329
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC015:S044",
+      "material_id": "M001",
+      "quote": "allowing the users to navigate, spotify via voice or via their keyboards",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16933,
+      "end_char": 17005,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S044",
+          "segment_start": 992,
+          "segment_end": 1064,
+          "start_char": 16933,
+          "end_char": 17005
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 15941,
+        "end_char": 17354
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC015:S018",
+      "material_id": "M001",
+      "quote": "podcast is one thing that even people with special needs can listen to",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3837,
+      "end_char": 3907,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S018",
+          "segment_start": 289,
+          "segment_end": 359,
+          "start_char": 3837,
+          "end_char": 3907
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 3548,
+        "end_char": 4329
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC015:S018",
+      "material_id": "M001",
+      "quote": "strengthening the overall community engagement among listeners",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4027,
+      "end_char": 4089,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S018",
+          "segment_start": 479,
+          "segment_end": 541,
+          "start_char": 4027,
+          "end_char": 4089
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 3548,
+        "end_char": 4329
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC015:S038",
+      "material_id": "M001",
+      "quote": "anyone and everyone can create their own playlists and people can like and even save that playlist",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11981,
+      "end_char": 12079,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S038",
+          "segment_start": 316,
+          "segment_end": 414,
+          "start_char": 11981,
+          "end_char": 12079
+        }
+      ],
+      "original_locator": {
+        "line_start": 38,
+        "line_end": 38,
+        "start_char": 11665,
+        "end_char": 12488
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC015:S018",
+      "material_id": "M001",
+      "quote": "the tools that we can offer to the creators to stay on our platform",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4261,
+      "end_char": 4328,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S018",
+          "segment_start": 713,
+          "segment_end": 780,
+          "start_char": 4261,
+          "end_char": 4328
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 3548,
+        "end_char": 4329
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC015:S024",
+      "material_id": "M001",
+      "quote": "we also offer content optimization suggestions",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6307,
+      "end_char": 6353,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S024",
+          "segment_start": 678,
+          "segment_end": 724,
+          "start_char": 6307,
+          "end_char": 6353
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 5629,
+        "end_char": 6444
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC015:S020",
+      "material_id": "M001",
+      "quote": "started supporting multiple languages and dialects as well",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5066,
+      "end_char": 5124,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S020",
+          "segment_start": 546,
+          "segment_end": 604,
+          "start_char": 5066,
+          "end_char": 5124
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 4520,
+        "end_char": 5252
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC015:S020",
+      "material_id": "M001",
+      "quote": "we just want to broaden our reach",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5218,
+      "end_char": 5251,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S020",
+          "segment_start": 698,
+          "segment_end": 731,
+          "start_char": 5218,
+          "end_char": 5251
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 4520,
+        "end_char": 5252
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC015:S024",
+      "material_id": "M001",
+      "quote": "we also implement our content moderation tools",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6051,
+      "end_char": 6097,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S024",
+          "segment_start": 422,
+          "segment_end": 468,
+          "start_char": 6051,
+          "end_char": 6097
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 5629,
+        "end_char": 6444
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC015:S026",
+      "material_id": "M001",
+      "quote": "ensuring the audio quality and the production standards are up to mark",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7023,
+      "end_char": 7093,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S026",
+          "segment_start": 319,
+          "segment_end": 389,
+          "start_char": 7023,
+          "end_char": 7093
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 6704,
+        "end_char": 7426
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC015:S024",
+      "material_id": "M001",
+      "quote": "we also offer content optimization suggestions",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6307,
+      "end_char": 6353,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S024",
+          "segment_start": 678,
+          "segment_end": 724,
+          "start_char": 6307,
+          "end_char": 6353
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 5629,
+        "end_char": 6444
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC015:S028",
+      "material_id": "M001",
+      "quote": "we kind of balance our ad load, we ensure that the frequency and the placement of ads does not at the end of the day distract",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8198,
+      "end_char": 8323,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S028",
+          "segment_start": 425,
+          "segment_end": 550,
+          "start_char": 8198,
+          "end_char": 8323
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 7773,
+        "end_char": 8379
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC015:S042",
+      "material_id": "M001",
+      "quote": "we place ads usually just at the start or just at the end of podcasts",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14867,
+      "end_char": 14936,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S042",
+          "segment_start": 252,
+          "segment_end": 321,
+          "start_char": 14867,
+          "end_char": 14936
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 14615,
+        "end_char": 15698
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC015:S042",
+      "material_id": "M001",
+      "quote": "this clear labeling helps us maintain the trust between users and the platform",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15619,
+      "end_char": 15697,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S042",
+          "segment_start": 1004,
+          "segment_end": 1082,
+          "start_char": 15619,
+          "end_char": 15697
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 14615,
+        "end_char": 15698
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC015:S030",
+      "material_id": "M001",
+      "quote": "for new users, what we do is we try and minimize ads. So this encourages exploration",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8584,
+      "end_char": 8668,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S030",
+          "segment_start": 35,
+          "segment_end": 119,
+          "start_char": 8584,
+          "end_char": 8668
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 8549,
+        "end_char": 9216
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC015:S030",
+      "material_id": "M001",
+      "quote": "for a long time listeners. We offer customized recommendation based on their listening history",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8964,
+      "end_char": 9058,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S030",
+          "segment_start": 415,
+          "segment_end": 509,
+          "start_char": 8964,
+          "end_char": 9058
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 8549,
+        "end_char": 9216
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC015:S030",
+      "material_id": "M001",
+      "quote": "we also offer sometimes exclusive contents for our premium users",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9064,
+      "end_char": 9128,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S030",
+          "segment_start": 515,
+          "segment_end": 579,
+          "start_char": 9064,
+          "end_char": 9128
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 8549,
+        "end_char": 9216
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC015:S040",
+      "material_id": "M001",
+      "quote": "we really don't wanna constrict our platform by having just a limited number of creators",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13107,
+      "end_char": 13195,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S040",
+          "segment_start": 132,
+          "segment_end": 220,
+          "start_char": 13107,
+          "end_char": 13195
+        }
+      ],
+      "original_locator": {
+        "line_start": 40,
+        "line_end": 40,
+        "start_char": 12975,
+        "end_char": 14299
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC015:S040",
+      "material_id": "M001",
+      "quote": "last month itself we bought over 2,000 new creators on our platform",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13285,
+      "end_char": 13352,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S040",
+          "segment_start": 310,
+          "segment_end": 377,
+          "start_char": 13285,
+          "end_char": 13352
+        }
+      ],
+      "original_locator": {
+        "line_start": 40,
+        "line_end": 40,
+        "start_char": 12975,
+        "end_char": 14299
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC015:S044",
+      "material_id": "M001",
+      "quote": "We really don't wanna process such huge amounts of data that it kind of ruins the user experience",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16516,
+      "end_char": 16613,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S044",
+          "segment_start": 575,
+          "segment_end": 672,
+          "start_char": 16516,
+          "end_char": 16613
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 15941,
+        "end_char": 17354
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC015:S044",
+      "material_id": "M001",
+      "quote": "high latency and the low loading times",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16641,
+      "end_char": 16679,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S044",
+          "segment_start": 700,
+          "segment_end": 738,
+          "start_char": 16641,
+          "end_char": 16679
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 15941,
+        "end_char": 17354
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC015:S044",
+      "material_id": "M001",
+      "quote": "maintaining consistent sort of behavior throughout all the devices",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17139,
+      "end_char": 17205,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S044",
+          "segment_start": 1198,
+          "segment_end": 1264,
+          "start_char": 17139,
+          "end_char": 17205
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 15941,
+        "end_char": 17354
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC015:S044",
+      "material_id": "M001",
+      "quote": "ensure the apps. Performance is consistent throughout all the devices",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17284,
+      "end_char": 17353,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S044",
+          "segment_start": 1343,
+          "segment_end": 1412,
+          "start_char": 17284,
+          "end_char": 17353
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 15941,
+        "end_char": 17354
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC015:S048",
+      "material_id": "M001",
+      "quote": "we are trying to minimize our click",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19543,
+      "end_char": 19578,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S048",
+          "segment_start": 86,
+          "segment_end": 121,
+          "start_char": 19543,
+          "end_char": 19578
+        }
+      ],
+      "original_locator": {
+        "line_start": 48,
+        "line_end": 48,
+        "start_char": 19457,
+        "end_char": 20892
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC015:S048",
+      "material_id": "M001",
+      "quote": "we've just integrated the search bar directly in our ux, which, looks a whole lot cleaner",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19794,
+      "end_char": 19883,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S048",
+          "segment_start": 337,
+          "segment_end": 426,
+          "start_char": 19794,
+          "end_char": 19883
+        }
+      ],
+      "original_locator": {
+        "line_start": 48,
+        "line_end": 48,
+        "start_char": 19457,
+        "end_char": 20892
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC015:S048",
+      "material_id": "M001",
+      "quote": "users can directly just send Instagram or Whatsapp messages onto their respective groups",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19994,
+      "end_char": 20082,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S048",
+          "segment_start": 537,
+          "segment_end": 625,
+          "start_char": 19994,
+          "end_char": 20082
+        }
+      ],
+      "original_locator": {
+        "line_start": 48,
+        "line_end": 48,
+        "start_char": 19457,
+        "end_char": 20892
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC015:S050",
+      "material_id": "M001",
+      "quote": "this kind of thing we can't really do in the podcast space",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21829,
+      "end_char": 21887,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S050",
+          "segment_start": 539,
+          "segment_end": 597,
+          "start_char": 21829,
+          "end_char": 21887
+        }
+      ],
+      "original_locator": {
+        "line_start": 50,
+        "line_end": 50,
+        "start_char": 21290,
+        "end_char": 22401
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC015:S050",
+      "material_id": "M001",
+      "quote": "we have to be a whole lot subtler with it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 22116,
+      "end_char": 22157,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S050",
+          "segment_start": 826,
+          "segment_end": 867,
+          "start_char": 22116,
+          "end_char": 22157
+        }
+      ],
+      "original_locator": {
+        "line_start": 50,
+        "line_end": 50,
+        "start_char": 21290,
+        "end_char": 22401
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0032",
+      "source_id": "DOC015:S050",
+      "material_id": "M001",
+      "quote": "We can't just all of a sudden just throw in a regular day, in a life of a Youtube vlogger podcast that just wouldn't work",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21990,
+      "end_char": 22111,
+      "candidate_locations": [
+        {
+          "source_id": "DOC015:S050",
+          "segment_start": 700,
+          "segment_end": 821,
+          "start_char": 21990,
+          "end_char": 22111
+        }
+      ],
+      "original_locator": {
+        "line_start": 50,
+        "line_end": 50,
+        "start_char": 21290,
+        "end_char": 22401
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC015-C001",
+      "goal_id": "DOC015-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C002",
+      "goal_id": "DOC015-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C003",
+      "goal_id": "DOC015-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C004",
+      "goal_id": "DOC015-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C005",
+      "goal_id": "DOC015-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C006",
+      "goal_id": "DOC015-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C007",
+      "goal_id": "DOC015-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C008",
+      "goal_id": "DOC015-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C009",
+      "goal_id": "DOC015-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C010",
+      "goal_id": "DOC015-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C011",
+      "goal_id": "DOC015-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C012",
+      "goal_id": "DOC015-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC015-C013",
+      "goal_id": "DOC015-G013",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 78,
+    "evaluated_pairs": 78
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "assemble",
+    "readiness": "unchecked",
+    "limitations": [
+      "模型尚未经过 model-review；导出完整性检查不能替代模型质量审核。",
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。"
+    ],
+    "files": []
+  }
+}

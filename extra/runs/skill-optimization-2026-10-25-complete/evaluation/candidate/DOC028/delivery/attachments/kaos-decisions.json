@@ -1,0 +1,490 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "c27712a0a2b0600c14212647084d2d3d38aa69379bf1f038373da52de2660e59",
+    "judgments_sha256": "1ac9a37056c88d423f3100ab92d52b5a75928d535d035adb96067ad0f12dae04"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G024",
+      "child_ids": [
+        "G022",
+        "G023",
+        "G005"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Relevant community placement and personal experiences increase value but the source explicitly acknowledges bad responses.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T061",
+          "quote": "I think the answers I'd get would be better, because when I post in a particular subreddit, people who are responding in that subreddit are expected to know the subject matter if they are responding, so of course they can be like bad responses. You can never mitigate that completely. But I'd say that. it's a pretty How do you say? Like it's a it's Yeah. I'd say that this is covers most of it.",
+          "role": "basis",
+          "start_char": 30173,
+          "end_char": 30568
+        }
+      ],
+      "relation_ids": [
+        "R014",
+        "R015",
+        "R016"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "A knowledgeable respondent in the specific community gives a relevant experience-based answer.",
+          "outcome": "supports",
+          "rationale": "This limited constructed scenario explains why the candidate is plausible; it does not establish general sufficiency."
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "The community can provide a bad or unanswered response even after correct placement.",
+          "outcome": "counterexample",
+          "rationale": "The unresolved exception prevents supported/complete status; no extra goal is invented to patch the hierarchy."
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G011",
+      "child_ids": [
+        "G012",
+        "G013"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Two concrete fixes do not cover the stated sluggishness and broader unintuitive mobile interface.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T027",
+          "quote": "I would say, on the desktop desktop platform. No. but on the mobile platform there are quite a few barriers. So the for one. The mobile platform is quite slow and clunky, like the Ui. Is not very intuitive. I'm not sure how they like. I'm not sure if it's different on other phones. But I use an android phone and it's very unintuitive and very heavyweight. So if I want to give you some examples like when you're creating a post, and you leave it in the middle. you can't save it as a draft which you can do on desktop. So that is something that is frustrating. If I want to post on Mobile Another thing is. you cannot keep track of comments intuitively on Mobile, so on desktop. You have like threads where you can easily see, but on Mobile you have. You also have threads, but I feel that the desktop version is much more clearly put out. So I would say, user experience ui ux is one frustration that I have on the mobile app.",
+          "role": "basis",
+          "start_char": 13812,
+          "end_char": 14741
+        }
+      ],
+      "relation_ids": [
+        "R006",
+        "R007"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "Draft saving and clearer threads remove those two usability frustrations.",
+          "outcome": "supports",
+          "rationale": "This limited constructed scenario explains why the candidate is plausible; it does not establish general sufficiency."
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "The app can remain slow and difficult to navigate after both fixes.",
+          "outcome": "counterexample",
+          "rationale": "The unresolved exception prevents supported/complete status; no extra goal is invented to patch the hierarchy."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "Joint sufficiency is unconfirmed: Relevant community placement and personal experiences increase value but the source explicitly acknowledges bad responses."
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "Joint sufficiency is unconfirmed: Two concrete fixes do not cover the stated sluggishness and broader unintuitive mobile interface."
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G003",
+      "target_id": "G004",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Stuck coding problems are a concrete class of targeted questions.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T003",
+          "quote": "Okay? So I use it. So I'll answer the when 1st there's no predefined time where I log in and browser edit the why will tie into more how I use it. So I use it for a multitude of things. So if I want to learn more about some particular topic. Say that there's Halloween Halloween is coming up. So I wanted to know what happens during Halloween. So I browse my city's subreddit with keyword. Halloween, search to get information about that. So sometimes I just want to like scroll through topics. I follow like subreddits that I follow. So I log in just to kill some time following the subredd itself. So that's why I use it. So the when really ties into whenever I'm free, or whenever I need some information. Also. it could also be like, I also use Reddit as an alternative for stack overflow. So there are a lot of subreddits that are give like technical help or like code queries. So I use those when I'm stuck on a problem or need like other inputs for a problem. So the when is kind of staggered. The why is also like there are many use cases for it.",
+          "role": "basis",
+          "start_char": 269,
+          "end_char": 1323
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G005",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Relevant personal experience can produce contextual answers, but the respondent's reliability belief is not proof.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T005",
+          "quote": "The primary reason would be to. So I'll tell you how it differs from a Google search. So a Google search basically aggregates a lot of generalized search results. So let's pick an example where you know, I'm trying to integrate a new workout into my routine. So I really want to know how that workout has impacted other people, and how what kind of what kind of results they've seen from it. So instead of googling something like that, I'd go into Reddit and say that. So the reason for using it is that I get personal experiences over facts, and these personal experiences are mostly legitimate. So they and they're very contextual. So I feel that they're much more valuable than Google search. So that is so to like encapsulate. Why, I use it in one word, it's to get more targeted results to the problem that I'm facing.",
+          "role": "basis",
+          "start_char": 1481,
+          "end_char": 2304
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G006",
+      "target_id": "G004",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "A Google question plus Reddit query is the chosen route to relevant Reddit posts.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T007",
+          "quote": "Okay. So again, there are 2 main flows that I go through. So one is, if I open Reddit and I want to like, search for something specific. Then I open it through Google. So I Google, the question. And then I put Reddit after that. So it gives me all the relevant posts. So I just open the post directly and then I interact with the post was the other way. Is I open@it.com. I don't use the mobile app I think the mobile app design is really clunky, and there are a lot of 3rd party apps that are much better than that. But coming back to the point, so if I open Reddit through reddit.com, and the 1st thing you see, is the homepage. So the homepage is like a top bar where you have a search bar on top. You have messaging, you have. You can create a post. You have your notifications. All those are on top, and the top bar then below that the screen is divided into 3 parts, the left most is all your recently visited tabs you recently visited subreddits and the subreddits that you follow. The middle is kind of like a newsfeed with posts from subreddits that I follow, and on the right it's like posts you might be interested in. So it suggests posts that I might like. So I when I come on Reddit, I normally, if I have a targeted problem, then I go through the Google Link. If I don't. If I log in through reddit.com. I just scroll through the newsfeed till I find something that interests me, and I go into that post and interact with the post.",
+          "role": "basis",
+          "start_char": 2435,
+          "end_char": 3881
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G004",
+      "target_id": "G007",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Targeted answers may solve a predefined problem, but incorrect or incomplete answers remain possible.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T009",
+          "quote": "I would say, very rarely is there? So if there is an outcome that I'm trying to achieve while using it, it is either very specifically defined before I log in, or there is no particular outcome. So if I want to elaborate on that, there's either a problem that I'm searching for an answer for, and the outcome of that interaction that that. I mean the pro. The outcome of that usage of Reddit will result in the problem being solved. if I'm just browsing Reddit, just to look through my interesting subreddits, then there is no particular outcome. It's just that I just browse them to find and read something interesting. it might be a positive outcome where I find something really interesting to read. And then I have specific questions about it, and then I research it further on, Reddit. But most of the time, if I don't have a predefined goal, then there is no particular outcome.",
+          "role": "basis",
+          "start_char": 4114,
+          "end_char": 4998
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G009",
+      "target_id": "G004",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Asking a question in a community is a described way to obtain advice on a problem.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T021",
+          "quote": "Got it so I would say I've never posted something on reddit like in like. So I see credit posts. Can be classified into 2 tests. One of them is like posts asking for advice or asking for solutions, and the second is like posts about your experience about something which others can draw insights from. So most of the posts that I've done are posts asking for advice. I'd say I've asked for a lot of questions in like Cs career questions and grad school admissions where? It's helpful to ask for advice. So going through like specifically how I post when I log in to reddit.com I go. So I previously mentioned that there's a top bar of notifications create and like messaging and all that. So you can just click on create post. You. The 1st thing you have to choose is a community that you want to post in. So if suppose. I am. okay, let's let's just actually go to one of the communities. I am a part of which is let's say. let's just say the university's subreddit. So I have to select that I want to post something in the university's subreddit. Then I can add a title to my post, I can add a body to my post. This body is like a markdown editor, so you can use like a skip sequences, and you can have headings, and like h. 1 to H. 4, you can have paragraph lines. You can have everything you have in Markdown. You can also add images. You can add video, you can add links. You can add polls. basically many ways to interact using a post. So once you're done with all that, you can add tags to your post, so some subreddits make it mandatory to add tags. So I like suppose I'm posting on a like a vet subreddit like asking questions about. If you have animals at home like you have to tag the post with what kind of animal you have so vets? Who are on that subreddit will kind of filter out. So if there, if like, there are only doctors for dogs, they'll filter out only the dog posts, and they'll only interact with those posts. So that's where tags are useful. So yeah, so that's mostly my process or anyone's process that they go through to create a post commenting is pretty simple, like, you just go to any post that you want to interact with. You press on comment, and you can either create a new comment, or you can reply to a thread of comments so that that thread is like you can. There are like different stacks of comments under each other. So any thread you go to you can reply under that. So that's mainly the 2 ways that I create post and make comments.",
+          "role": "basis",
+          "start_char": 8618,
+          "end_char": 11087
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G012",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Saving unfinished posts would address one specific mobile usability problem, leaving other UI issues.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T027",
+          "quote": "I would say, on the desktop desktop platform. No. but on the mobile platform there are quite a few barriers. So the for one. The mobile platform is quite slow and clunky, like the Ui. Is not very intuitive. I'm not sure how they like. I'm not sure if it's different on other phones. But I use an android phone and it's very unintuitive and very heavyweight. So if I want to give you some examples like when you're creating a post, and you leave it in the middle. you can't save it as a draft which you can do on desktop. So that is something that is frustrating. If I want to post on Mobile Another thing is. you cannot keep track of comments intuitively on Mobile, so on desktop. You have like threads where you can easily see, but on Mobile you have. You also have threads, but I feel that the desktop version is much more clearly put out. So I would say, user experience ui ux is one frustration that I have on the mobile app.",
+          "role": "basis",
+          "start_char": 13812,
+          "end_char": 14741
+        }
+      ]
+    },
+    {
+      "relation_id": "R007",
+      "source_id": "G013",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Clearer thread presentation addresses another mobile usability problem but not general slowness.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T027",
+          "quote": "I would say, on the desktop desktop platform. No. but on the mobile platform there are quite a few barriers. So the for one. The mobile platform is quite slow and clunky, like the Ui. Is not very intuitive. I'm not sure how they like. I'm not sure if it's different on other phones. But I use an android phone and it's very unintuitive and very heavyweight. So if I want to give you some examples like when you're creating a post, and you leave it in the middle. you can't save it as a draft which you can do on desktop. So that is something that is frustrating. If I want to post on Mobile Another thing is. you cannot keep track of comments intuitively on Mobile, so on desktop. You have like threads where you can easily see, but on Mobile you have. You also have threads, but I feel that the desktop version is much more clearly put out. So I would say, user experience ui ux is one frustration that I have on the mobile app.",
+          "role": "basis",
+          "start_char": 13812,
+          "end_char": 14741
+        }
+      ]
+    },
+    {
+      "relation_id": "R008",
+      "source_id": "G015",
+      "target_id": "G004",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Purchase research is a concrete problem context seeking relevant personal experiences.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T033",
+          "quote": "Yeah, yeah, I. So I use reddit. I use reddit all the time, for. So I have a laptop that I bought in February this year, which I researched a lot on Reddit. So the one thing that I like about Reddit is that if you go on Amazon, there are mostly good reviews about something Reddit is more of a balanced perspective, and you can also find people from varied backgrounds talking about the product. So say that I was trying to buy a laptop and someone who's into video editing has their opinion on the laptop and so if I was buying the laptop for video editing, I'd have a very. I'd have a much better idea about how about what to expect. So that's that's how Reddit is useful in that scenario. But yeah, I've made a lot of purchase decisions because of reviews I've seen on Reddit.",
+          "role": "basis",
+          "start_char": 17578,
+          "end_char": 18356
+        }
+      ]
+    },
+    {
+      "relation_id": "R009",
+      "source_id": "G016",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "General-health learning is a specific information use, excluding reliance for specific medical problems.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T035",
+          "quote": "I don't follow. I don't specifically follow any of these communities, but I have searched for health queries on Reddit. There's a subreddit called, ask doctors. so you can post for you can post like any questions any health related questions on that subreddit and, like healthcare professionals will answer you. So I have used that a couple of times for some health issues. But I would say, it's not the best place to ask about specific problems. It's more about learning about general things. I would say so if I was trying to incorporate like a new let's say I was trying to like, do Yoga? Or something like that? So that comes on the health right? So I can search for like, what are the best beginner, Yoga routines or something like that. So I'd say it's good for general health, related questions. But for specifics I've not used it, nor do I suggest anyone to use it. But yeah, it's up to your discretion like you can get a lot of good advice. But at the same time I would not trust for health, related things specific, related things on Reddit.",
+          "role": "basis",
+          "start_char": 18565,
+          "end_char": 19616
+        }
+      ]
+    },
+    {
+      "relation_id": "R010",
+      "source_id": "G017",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Card view is explicitly preferred when passively browsing interesting posts.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T043",
+          "quote": "Okay. So the feed also can be customized by like post view. So you can have like card view or compact view. So card view is like I I would say. It's kind of like Instagram where one post at a time comes on your screen like like not exactly one post, but not more than 2 posts at once. And you can keep scrolling down like that versus the compact view where there are like 7 to 8 posts on your screen at once, and the post body is quite small, so you have to click on each post to read it. So I'd say that. It depends on what you're using it for. So again, when I said that, I'm just using it as a passive activity, I prefer, like card mode where I can just scroll through posts. If I'm using it actively, searching for something I prefer, like compact mode where I can see all relevant search results. Before I choose to click on one.",
+          "role": "basis",
+          "start_char": 22038,
+          "end_char": 22872
+        }
+      ]
+    },
+    {
+      "relation_id": "R011",
+      "source_id": "G018",
+      "target_id": "G004",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Compact view is preferred for comparing relevant results during active searching.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T043",
+          "quote": "Okay. So the feed also can be customized by like post view. So you can have like card view or compact view. So card view is like I I would say. It's kind of like Instagram where one post at a time comes on your screen like like not exactly one post, but not more than 2 posts at once. And you can keep scrolling down like that versus the compact view where there are like 7 to 8 posts on your screen at once, and the post body is quite small, so you have to click on each post to read it. So I'd say that. It depends on what you're using it for. So again, when I said that, I'm just using it as a passive activity, I prefer, like card mode where I can just scroll through posts. If I'm using it actively, searching for something I prefer, like compact mode where I can see all relevant search results. Before I choose to click on one.",
+          "role": "basis",
+          "start_char": 22038,
+          "end_char": 22872
+        }
+      ]
+    },
+    {
+      "relation_id": "R012",
+      "source_id": "G020",
+      "target_id": "G019",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "When ad blocking is unavailable, a Premium subscription is a contemplated ad-free route.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T047",
+          "quote": "Yeah, actually, I would like I I don't see the like. I I would actually buy it. I I'm not sure why I haven't bought it yet, but maybe sometime soon I might get the premium tier, but the only advantage of the premium tier, I'd say, like from my usage point of view, the only advantage is no ads, and since I already have ad block it kind of like, since I already have ad block. It's it's fine without the premium tier. But in some scenario where ad block is not available, I would buy the premium tier.",
+          "role": "basis",
+          "start_char": 24190,
+          "end_char": 24691
+        }
+      ]
+    },
+    {
+      "relation_id": "R013",
+      "source_id": "G021",
+      "target_id": "G008",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Accurate results are valued because they reduce time spent finding information.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T051",
+          "quote": "I'd say help. my experience would be My experience, I think the search in itself is a very good feature, like the accuracy of the search results are as expected. So that is something that helps my experience. So I don't end up spending a lot of time when I need to. I need to find something hindering, I would say the ads to some extent. But there's nothing really that like I would say, hindering is the subreddit search. So the ability to find a subreddit is quite complicated at this point, because anyone can create a subreddit about anything, and they don't check if there is a separate existing subreddit. So when you want to find out when you want to find a subreddit, you have to do the searching. I think a feature that would improve the user experience would be where you just type in like a Gen. AI tool where you want to subreddit about Xyz, and it gives you the exact subreddit that you need. I think that would improve my usage.",
+          "role": "basis",
+          "start_char": 25896,
+          "end_char": 26838
+        }
+      ]
+    },
+    {
+      "relation_id": "R014",
+      "source_id": "G022",
+      "target_id": "G023",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The proposed tool finds the right community before the person posts a question there.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T059",
+          "quote": "Yeah, I would add, like a Gen. AI tool, to figure out what subreddit I should be accessing to ask my particular question, because oftentimes there are like you can. You can search for subreddit on let's say I'm not sure like let's say food. You can search for food it'll cover all kinds of food, but there are separated for. say, vegetarian dishes, or there are subreddits for something as vague as tomato based dishes or something like that, so you can post on food. It might be answered, it might not be answered. But there, there's much more value in posting in a specific subreddit, and finding that subreddit would be very useful. So I would implement, like a geni tool to find a particular subreddit.",
+          "role": "basis",
+          "start_char": 29382,
+          "end_char": 30088
+        }
+      ]
+    },
+    {
+      "relation_id": "R015",
+      "source_id": "G023",
+      "target_id": "G024",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "A specific community is expected to improve answer relevance, with explicitly acknowledged bad responses still possible.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T061",
+          "quote": "I think the answers I'd get would be better, because when I post in a particular subreddit, people who are responding in that subreddit are expected to know the subject matter if they are responding, so of course they can be like bad responses. You can never mitigate that completely. But I'd say that. it's a pretty How do you say? Like it's a it's Yeah. I'd say that this is covers most of it.",
+          "role": "basis",
+          "start_char": 30173,
+          "end_char": 30568
+        }
+      ]
+    },
+    {
+      "relation_id": "R016",
+      "source_id": "G022",
+      "target_id": "G024",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The proposed generative AI community finder serves the hoped-for improvement in answers, without guaranteeing quality.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T059",
+          "quote": "Yeah, I would add, like a Gen. AI tool, to figure out what subreddit I should be accessing to ask my particular question, because oftentimes there are like you can. You can search for subreddit on let's say I'm not sure like let's say food. You can search for food it'll cover all kinds of food, but there are separated for. say, vegetarian dishes, or there are subreddits for something as vague as tomato based dishes or something like that, so you can post on food. It might be answered, it might not be answered. But there, there's much more value in posting in a specific subreddit, and finding that subreddit would be very useful. So I would implement, like a geni tool to find a particular subreddit.",
+          "role": "basis",
+          "start_char": 29382,
+          "end_char": 30088
+        }
+      ]
+    },
+    {
+      "relation_id": "R017",
+      "source_id": "G025",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "A stronger official app is expected to improve the stated mobile experience, without a fixed market-share target.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T063",
+          "quote": "Hmm! I'd say I'd say the mobile app ui again should be much better like if there are multiple apps as wrapper that use your Api and our wrapper apps built on all Apis that you offer in spite of you having an app to do the same thing. Then I think that's a problem. I think you should. I think you should have the best app out there for your system. There can be other apps, and people can choose to use that, but it should. It shouldn't be like that. Those apps have a higher market share than you, so I think one thing they can improve is their mobile app.",
+          "role": "basis",
+          "start_char": 30716,
+          "end_char": 31273
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

@@ -1,0 +1,257 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "6d13e3b6d60e392ecd41349bede3a5b7ff8df0149ff4424ae92f85d25d26e54c",
+    "input_sha256": "4e8b22eb3a0b9bb755cfdbda602ff4d3f5f0edcb823cd3d99ca67e997a9fb903"
+  },
+  "judgments": {
+    "DOC035-C001": {
+      "target_statement": "每隔一两天快速了解世界上发生了什么（先看头条）。",
+      "label": "direct",
+      "rationale": "T001 说约两天看一次新闻，T003 说打开先看头条再往下滚。",
+      "supported_parts": [
+        "频率：T002「once in 2 days」",
+        "路径：T004「headline articles of the top stories」"
+      ],
+      "unsupported_parts": [
+        "未说明每次停留时长",
+        "未说明是否会读完所有头条"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取频率",
+        "2. 取路径",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C002": {
+      "target_statement": "只读与自己兴趣相关的新闻：科技、赛车与板球、印度与美国政治。",
+      "label": "direct",
+      "rationale": "T007 逐项列出三类兴趣：科技、体育（F1/板球）、政治。",
+      "supported_parts": [
+        "科技：T008「some of the content that I'm interested is in technology」",
+        "体育：T008「another category of content... is in sports」",
+        "政治：T008「another major aspect... is getting to know about politics」"
+      ],
+      "unsupported_parts": [
+        "未说明三类内容的相对权重",
+        "未说明是否关注本地新闻"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取三类",
+        "2. → direct"
+      ]
+    },
+    "DOC035-C003": {
+      "target_statement": "新闻要有时效：事件发生几天内就要看到。",
+      "label": "direct",
+      "rationale": "T009 明确说时效是「relevant」的核心，事件几天内就要看到。",
+      "supported_parts": [
+        "判断：T010「the timing is a very important part」",
+        "期望：T010「get the news of the event in a couple of days」"
+      ],
+      "unsupported_parts": [
+        "未给出精确时效阈值（小时/天）",
+        "未说明不同主题是否要求不同"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取判断",
+        "2. 取期望",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C004": {
+      "target_statement": "能看到新闻的来源与多源报道，并对比不同立场。",
+      "label": "direct",
+      "rationale": "T011 说 Google News 标注所有来源，他会再搜一遍看不同观点。",
+      "supported_parts": [
+        "机制：T012「all of the sources are cited」",
+        "用途：T012「From where the news is coming from」"
+      ],
+      "unsupported_parts": [
+        "未说明如何判断某源更可信",
+        "未说明是否对比超过两个来源"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取机制",
+        "2. 取用途",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C005": {
+      "target_statement": "通知少而准，不被刷屏，以免漏掉真正重要的消息。",
+      "label": "direct",
+      "rationale": "T013 说通知会刷屏，导致漏掉重要消息，T021 重申通知不该被滥用。",
+      "supported_parts": [
+        "问题：T014「they tend to spam a lot」",
+        "后果：T014「might lead to missing a few important news」",
+        "原则：T022「notification should not be spammed」"
+      ],
+      "unsupported_parts": [
+        "未给出可接受的通知条数",
+        "未说明是否按应用分别调过设置"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题",
+        "2. 取后果与原则",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C006": {
+      "target_statement": "文章要短而全面，能在有限时间里读完并掌握要点。",
+      "label": "direct",
+      "rationale": "T013 说长文在有限时间内读不完，T017 期望「短但全面」。",
+      "supported_parts": [
+        "问题：T014「the articles have a huge amount of content」",
+        "期望：T018「smaller but comprehensive」"
+      ],
+      "unsupported_parts": [
+        "未给出理想字数",
+        "未说明缩写后是否接受信息损失"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题",
+        "2. 取期望",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C007": {
+      "target_statement": "阅读页不被广告遮挡，能顺畅读完正文。",
+      "label": "direct",
+      "rationale": "T017 说理想体验是不被广告打断，现状广告会盖住正文。",
+      "supported_parts": [
+        "诉求：T018「not hammered by unnecessary ads」",
+        "问题：T018「ads that even cover the content」"
+      ],
+      "unsupported_parts": [
+        "未说明是否接受非遮挡式广告",
+        "未说明是否用广告拦截"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求",
+        "2. 取问题",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C008": {
+      "target_statement": "当天的重要突发新闻当天就能收到，不必等几天。",
+      "label": "direct",
+      "rationale": "T037 把突发提醒的重要性打到 9/10，并要求当天内送达。",
+      "supported_parts": [
+        "权重：T038「9 is my level for importance」",
+        "底线：T038「all the breaking news from the day by the end of the day」"
+      ],
+      "unsupported_parts": [
+        "未说明希望即时推送还是汇总",
+        "未说明对误报的容忍度"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取权重",
+        "2. 取底线",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C009": {
+      "target_statement": "能关掉不感兴趣的话题，但该话题的突发新闻仍要保留。",
+      "label": "direct",
+      "rationale": "T041 希望可关闭不感兴趣的话题，但突发新闻要破例保留。",
+      "supported_parts": [
+        "诉求：T042「a feature to disable that topic」",
+        "例外：T042「it should still show you the breaking news」"
+      ],
+      "unsupported_parts": [
+        "未说明如何界定「突发」",
+        "未说明关闭后是否还能主动搜到"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求",
+        "2. 取例外",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C010": {
+      "target_statement": "按自定义主题分桶保存文章，方便日后集中阅读。",
+      "label": "direct",
+      "rationale": "T027 提出按主题分桶收藏，类似 Pinterest 的 board。",
+      "supported_parts": [
+        "设想：T028「defined topic buckets」",
+        "用法：T028「add multiple news articles to that topic bucket」"
+      ],
+      "unsupported_parts": [
+        "未说明桶的数量与命名方式",
+        "未说明跨设备同步"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取设想",
+        "2. 取用法",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C011": {
+      "target_statement": "一键把文章分享到 WhatsApp 等聊天工具。",
+      "label": "direct",
+      "rationale": "T025 说会复制链接或直接调起 WhatsApp 分享。",
+      "supported_parts": [
+        "做法：T026「copy the link and share it on various chat applications」",
+        "偏好：T026「share it directly via Whatsapp」"
+      ],
+      "unsupported_parts": [
+        "未说明分享频率",
+        "未说明是否附带评论"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取做法",
+        "2. 取偏好",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C012": {
+      "target_statement": "推荐贴合自己的行为与兴趣，不必每次主动搜。",
+      "label": "direct",
+      "rationale": "T039 说最满意的功能是「它跟踪我的行为」，T021 说推荐按搜索与使用行为定制。",
+      "supported_parts": [
+        "机制：T040「it tracks my behavior」",
+        "效果：T022「curated to what you search and what you do」"
+      ],
+      "unsupported_parts": [
+        "他同时担心数据被滥用（C013）",
+        "未说明推荐失准时的处理"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取机制",
+        "2. 取效果",
+        "3. → direct"
+      ]
+    },
+    "DOC035-C013": {
+      "target_statement": "平台不得留存全部阅读数据，更不能借数据推送议程。",
+      "label": "direct",
+      "rationale": "T047 说平台不应保存全部阅读数据，也不该借此推送议程；T029 表达同一担忧。",
+      "supported_parts": [
+        "边界：T048「should not be able to... store all of the data」",
+        "担忧：T030「push some agenda on me」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的数据保留期限",
+        "未说明是否愿意为无追踪付费"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取边界",
+        "2. 取担忧",
+        "3. → direct"
+      ]
+    }
+  }
+}

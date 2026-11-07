@@ -1,0 +1,44 @@
+# Harness 安装与使用指南
+
+GoalForge 在可读写文件、执行 Python 的应用中使用，由当前模型阅读资料和编制判断。无需为了这种方式单独搭建模型 API 服务。
+
+## 安装
+
+将项目 skills 下的 goal-extraction、goal-model-building、model-review 三个完整目录复制到所用应用的项目发现位置，保持同级、目录名和全部 scripts/references/assets。证据核验实现已包含在 goal-extraction，无需安装旧 goal-tracing 目录。
+
+维护者可用本项目发布工具冻结版本、核对压缩包及实际加载脚本位置：
+
+```text
+python scripts/release_skills.py build skills dist/goalforge-2026-10-26 --version 2026.10.26-kaos2
+python scripts/release_skills.py verify dist/goalforge-2026-10-26
+python scripts/release_skills.py install dist/goalforge-2026-10-26 .agents/skills
+python scripts/release_skills.py verify-installed dist/goalforge-2026-10-26 .agents/skills
+```
+
+输出已存在时使用新路径；安装遇到已有同名技能会拒绝覆盖，先保留并核对既有修改。该工具验证实际文件及Python导入路径，不代表当前应用会话已经重新加载技能；应用发现仍按下文核对。
+
+| 应用 | 项目位置 | 个人位置 |
+|---|---|---|
+| Codex | .agents/skills/ | ~/.agents/skills/ |
+| Claude Code | .claude/skills/ | ~/.claude/skills/ |
+| Gemini CLI | .agents/skills/ 或 .gemini/skills/ | ~/.agents/skills/ 或 ~/.gemini/skills/ |
+
+例如 Codex 应能直接找到 `.agents/skills/goal-extraction/SKILL.md`。不要多套目录，也不要只复制 SKILL.md。`~` 是实际执行环境的主目录；远程、WSL 和云端不会自动读取本机文件。
+
+## 确认能使用
+
+在项目中新建对话，确认三项技能实际发现路径、Python、资料读取和输出权限。可以先说：
+
+> 请确认三项 GoalForge Skill 的实际加载路径，检查能否读取本次资料、运行 Python 并输出文件；先不要生成模型。
+
+Codex CLI／IDE 可通过 /skills 或 $ 选择；Claude Code 可使用 /goal-extraction 等命令；Gemini CLI 可用 /skills list 检查。桌面界面按实际技能选择入口操作，也可在任务中点名。发现方式见官方说明：[Codex](https://learn.chatgpt.com/docs/build-skills)、[Claude Code](https://code.claude.com/docs/en/skills)、[Gemini CLI](https://geminicli.com/docs/cli/skills/)。
+
+## 开始与更新
+
+先用小型 MD/TXT 按[操作规范](07-完整流程操作手册.md)跑通阅读、建模、审核、导出和修订，再扩大资料规模。Word/PPT/OCR/录音依赖环境工具，技能安装不会自动补齐。
+
+维护源在项目 skills。修改后同步完整三个安装目录，确认实际加载路径，避免同名副本混淆。需要替换已存在目录时先保留内容，再按应用方式更新；不覆盖未知修改。已有旧 goal-tracing 安装副本应先备份再移出发现位置，避免被误选；本轮不会自动改写用户全局配置。
+
+项目内 skills/goal-tracing 只保留旧 CLI/导入转接及参考导航，不含正式 SKILL.md，不维护第二份实现。旧命令需要与新的 goal-extraction 同级；目标缺失时明确报错，不会回调旧逻辑。原入口已保存在[本轮基线](../runs/skill-optimization-2026-10-23-initial/before/skills/goal-tracing/SKILL.md)，三项安装与兼容验证见[修改对照](16-Skill初步修改内容对照.md)。
+
+安装方法不代表所有应用已经实测。每个环境分别核对资料、执行工具和保存能力；云端需提供允许处理的文件及相应运行环境。审核操作见[界面指南](06-人工审核界面与反馈处理说明.md)。

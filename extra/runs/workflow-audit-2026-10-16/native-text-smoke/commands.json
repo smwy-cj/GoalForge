@@ -1,0 +1,168 @@
+[
+  {
+    "stage": "prepare_native_source",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-extraction\\scripts\\prepare_source.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\original.md",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\source",
+      "--document-id",
+      "AUDIT"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "stage": "render_candidates",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-extraction\\scripts\\render_review.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\extraction.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\goal-candidates.md"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "stage": "trace",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-tracing\\scripts\\trace_candidates.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\extraction.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\tracing",
+      "--source",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\source\\source.txt",
+      "--judgments",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\semantic-judgments.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "stage": "assemble",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\assemble_model.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\extraction.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\tracing\\tracing.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\relation-decisions.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\assembled",
+      "--source",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\source\\source.txt"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "stage": "inspect",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\model-review\\scripts\\review_model.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\assembled\\model-input.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\inspection"
+    ],
+    "returncode": 0,
+    "stdout": "{\"structure_status\": \"passed\", \"semantic_status\": \"not_run\", \"goal_count\": 3, \"pair_count\": 3, \"blocking_count\": 0, \"needs_review_count\": 0}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "finalize",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\finalize_model.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\assembled\\model-input.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\inspection\\review-report.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\delivery"
+    ],
+    "returncode": 0,
+    "stdout": "{\"readiness\": \"reviewable\", \"human_review\": \"pending\"}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "feedback_plan",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\model-review\\scripts\\process_feedback.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\delivery\\goal-model.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\edit-feedback.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\feedback-plan"
+    ],
+    "returncode": 0,
+    "stdout": "{\"mode\": \"plan\", \"modified\": false}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "feedback_apply",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\model-review\\scripts\\process_feedback.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\delivery\\goal-model.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\edit-feedback.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision",
+      "--apply"
+    ],
+    "returncode": 0,
+    "stdout": "{\"mode\": \"apply\", \"modified\": true}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "retrace_without_judgments",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-tracing\\scripts\\trace_candidates.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision\\retrace-input.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\retrace-pending",
+      "--source",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision\\attachments\\source.txt"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "stage": "finalize_blocked_revision",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\finalize_model.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision\\feedback-model.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision\\review-report.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision-delivery"
+    ],
+    "returncode": 0,
+    "stdout": "{\"readiness\": \"blocked\", \"human_review\": \"pending\"}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "reject_stale_report",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\finalize_model.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision\\feedback-model.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\inspection\\review-report.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\must-not-export"
+    ],
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\finalize_model.py\", line 80, in <module>\n    main()\n  File \"D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\finalize_model.py\", line 75, in main\n    result = finalize(model, report, args.input.parent, args.output_dir, raw)\n  File \"D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\finalize_model.py\", line 20, in finalize\n    raise ValueError(\"Stale or mismatched review report\")\nValueError: Stale or mismatched review report\n"
+  },
+  {
+    "stage": "probe_reused_semantic_judgment",
+    "command": [
+      "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-tracing\\scripts\\trace_candidates.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision\\retrace-input.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\unbound-judgment-probe",
+      "--source",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision\\attachments\\source.txt",
+      "--judgments",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\unbound-old-judgment.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

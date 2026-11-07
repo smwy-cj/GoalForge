@@ -1,0 +1,88 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "58902437ab14a7f21f309b452d841c872ec67a119cf417ffd4409bb57f68bcff",
+    "judgments_sha256": "6adc69129abc03773ba6790c0bd502a493efb342c19c0c0f7ec341428c9907df"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC014-goal-model",
+      "message": "G001-G003 的日常查看目标没有上层目标与精化组；原文未提出“按天气安排一天”这类上层目标，是否需要补充需回到原文确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "G010 建议等到出发前两三天决定，与 G009 的提前判断时点不同；当前并列保留、未建立联系，需确认适用行程类型。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "分享零下温度的截图尚未发生（原文为计划），当前保留为目标，需确认是否应按“计划”而非现行做法对待。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G006",
+      "target_id": "G007",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "alert arrives for the stakeholder's city"
+      ],
+      "assumptions": [],
+      "rationale": "读取警报的严重程度与官方建议，是随后调整当天安排所依据的信息，属有帮助但不构成充分保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC014:T015",
+          "quote": "And like, yeah, based on that, I'll adjust my day.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G004",
+      "target_id": "G006",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "a weather alert is issued"
+      ],
+      "assumptions": [],
+      "rationale": "先收到并注意到警报，才会去打开通知查看细节；原文按此顺序描述。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC014:T015",
+          "quote": "Well, I'll probably open the notification check. You know the severity and all the details that they have about the typhoon",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G008",
+      "target_id": "G010",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "比较对象是同一次行程"
+      ],
+      "rationale": "原文先说出发前数周开始查看并取得估计，再说临近日期预报更准、出发前几天看到最终情况，最终决定在后。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC014:T017",
+          "quote": "as you approach the date, the weather, like the weather forecast, becomes usually more accurate. So like a few days before you can get like a final you know, see on what the situation would be like.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

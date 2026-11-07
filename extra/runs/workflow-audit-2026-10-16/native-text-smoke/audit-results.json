@@ -1,0 +1,28 @@
+{
+  "evaluation_type": "controlled_cli_handoff_not_semantic_accuracy",
+  "checks": {
+    "initial_reviewable": true,
+    "initial_human_pending": true,
+    "revised_blocked": true,
+    "changed_goal_needs_retrace": true,
+    "unassessed_pairs": true,
+    "semantic_not_run_without_judgment": true,
+    "original_model_preserved": true,
+    "original_source_preserved": true,
+    "manifest_valid": true,
+    "stale_report_did_not_export": true
+  },
+  "confirmed_findings": [
+    {
+      "id": "A01",
+      "subject": "Unbound semantic judgment reuse",
+      "reproduced": true,
+      "description": "旧语义判断按ID重投给增加时间条件的新目标，工具仍接受direct。此为边界复现，不是可信追溯结果。"
+    },
+    {
+      "id": "A02",
+      "subject": "Reassessment return requires assistant-managed model update",
+      "description": "已生成追溯输入及关系待办；目前没有自动回填修订模型的独立工具。"
+    }
+  ]
+}

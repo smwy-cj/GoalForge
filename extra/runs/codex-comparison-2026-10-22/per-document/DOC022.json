@@ -1,0 +1,859 @@
+{
+  "document_id": "DOC022",
+  "review_status": "first_pass_complete",
+  "local_goals": [
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G001",
+      "local_statement": "在任意机器上都能改代码，尤其是没有图形界面的服务器。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "选择 vim 的实用理由：机器上不一定装了别的编辑器",
+        "服务器只能通过终端访问，无法运行图形界面编辑器"
+      ],
+      "paper_ids": [
+        "g7",
+        "g12",
+        "g22",
+        "g26",
+        "g34",
+        "g35",
+        "g37"
+      ],
+      "paper_statements": [
+        "Edit and modify code.",
+        "Allow flexibility in choosing tools based on the situation.",
+        "Enable use on different machines and servers without dependency on personal tools.",
+        "Work efficiently on any device by becoming familiar with various tools.",
+        "Ensure the system can perform text editing operations without requiring a graphical interface.",
+        "Allow text editing to be executed efficiently without excessive CPU or RAM usage.",
+        "Allow flexibility in the choice of tools for users."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "终端/服务器普适性明确；低资源只是论文另列属性。",
+      "evidence": [
+        {
+          "evidence_id": "E0001",
+          "quote": "You have to work at different machines",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 4131,
+          "end_char": 4169
+        },
+        {
+          "evidence_id": "E0002",
+          "quote": "when I have to like change some things at at the server, I can just easily open the vim and and modify the code",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 4640,
+          "end_char": 4751
+        },
+        {
+          "evidence_id": "E0003",
+          "quote": "you can only run vim on the terminal, because you can only access to the command line interface",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 6448,
+          "end_char": 6543
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G002",
+      "local_statement": "把个人配置带到每一台机器，让各处环境一致。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "做法：维护一份 vim 配置文件，复制到服务器即可复现本地体验",
+        "这也是他称 vim「轻」的第二层含义"
+      ],
+      "paper_ids": [
+        "g3",
+        "g24",
+        "g27",
+        "g38",
+        "g39",
+        "g40"
+      ],
+      "paper_statements": [
+        "Provide a consistent experience across coding environments.",
+        "Synchronize and make settings portable across devices via a single account.",
+        "Allow customization and management of plugins or extensions through a configuration file.",
+        "Allow customization through a configuration file.",
+        "Replicate customizations from local to server environments using configuration files.",
+        "Create a default configuration file in the user's home directory."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "配置文件复制到服务器是原机制，不能变成必须单账户同步。",
+      "evidence": [
+        {
+          "evidence_id": "E0004",
+          "quote": "make every system just like your local local customization",
+          "source_turn_ids": [
+            "T031"
+          ],
+          "start_char": 10289,
+          "end_char": 10347
+        },
+        {
+          "evidence_id": "E0005",
+          "quote": "if you put put it in the server and and the server will will be just like your local beam",
+          "source_turn_ids": [
+            "T031"
+          ],
+          "start_char": 10389,
+          "end_char": 10478
+        },
+        {
+          "evidence_id": "E0006",
+          "quote": "if I don't get used to the vim, I may find difficulty to easily modify codes on the server",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 4774,
+          "end_char": 4864
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G003",
+      "local_statement": "本地环境可深度定制：外观、快捷键、语法主题都按自己习惯来。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "做法：装一堆插件、改界面「让它看起来很酷」",
+        "快捷键自定义到 ctrl+P / ctrl+E / 反斜杠+P"
+      ],
+      "paper_ids": [
+        "g10",
+        "g19",
+        "g20",
+        "g27",
+        "g28",
+        "g29",
+        "g30",
+        "g33",
+        "g38",
+        "g52",
+        "g79"
+      ],
+      "paper_statements": [
+        "Provide tools and features customized for developers.",
+        "Provide options for customization of syntax highlighting.",
+        "Allow customization of indent distance for different scenarios.",
+        "Allow customization and management of plugins or extensions through a configuration file.",
+        "Facilitate the installation and activation of plugins or extensions with minimal commands.",
+        "Enable customization of plugin or extension activation shortcuts.",
+        "Allow customization of plugin or extension appearance.",
+        "Allow users to customize the user interface to fit their preferences.",
+        "Allow customization through a configuration file.",
+        "Customize keyboard shortcuts for ease of use.",
+        "Customize with a variety of extensions."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "外观快捷键插件深度定制整合。",
+      "evidence": [
+        {
+          "evidence_id": "E0007",
+          "quote": "I will like customize them to to. I will install a bunch of like cool plugins",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 5004,
+          "end_char": 5081
+        },
+        {
+          "evidence_id": "E0008",
+          "quote": "I can customize like, which shortcut I want to activate it",
+          "source_turn_ids": [
+            "T035"
+          ],
+          "start_char": 12381,
+          "end_char": 12439
+        },
+        {
+          "evidence_id": "E0009",
+          "quote": "control. P is open the file in this project",
+          "source_turn_ids": [
+            "T051"
+          ],
+          "start_char": 16112,
+          "end_char": 16155
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G004",
+      "local_statement": "全部操作靠键盘完成，手不离键盘以提升效率。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自述这是 vim 效率优势的核心",
+        "自评「酷」的旧动机已淡化，但效率理由保留"
+      ],
+      "paper_ids": [
+        "g53",
+        "g60",
+        "g72"
+      ],
+      "paper_statements": [
+        "Enable keyboard-only navigation and management to improve efficiency.",
+        "Develop muscle memory for efficient navigation and editing.",
+        "Achieve better efficiency in development processes."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "键盘操作提高效率，肌肉记忆是相关结果而非相同义务。",
+      "evidence": [
+        {
+          "evidence_id": "E0010",
+          "quote": "everything you do is on the keyboard",
+          "source_turn_ids": [
+            "T055"
+          ],
+          "start_char": 19103,
+          "end_char": 19139
+        },
+        {
+          "evidence_id": "E0011",
+          "quote": "keep keeping your hands on the keyboard. Just do improve your efficiency",
+          "source_turn_ids": [
+            "T063"
+          ],
+          "start_char": 23764,
+          "end_char": 23836
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G005",
+      "local_statement": "在大型项目里按文件名快速定位文件，并能跨文件全局搜索。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "手段：模糊搜索插件（fuzzy finder）+ 文件树"
+      ],
+      "paper_ids": [
+        "g14",
+        "g15",
+        "g42",
+        "g46",
+        "g47",
+        "g48",
+        "g49"
+      ],
+      "paper_statements": [
+        "Easily manage work and projects.",
+        "Easily manage files.",
+        "Enable easy file management.",
+        "Enable quick navigation to project files and directories.",
+        "Facilitate fast searching across files.",
+        "Enable users to find files by name using a search algorithm.",
+        "Allow users to search for specific strings across all files in a project."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "文件名与全局内容检索具体，项目管理比其范围宽。",
+      "evidence": [
+        {
+          "evidence_id": "E0012",
+          "quote": "I can install like fuzzy search in in my, in my vein",
+          "source_turn_ids": [
+            "T033"
+          ],
+          "start_char": 11031,
+          "end_char": 11083
+        },
+        {
+          "evidence_id": "E0013",
+          "quote": "helps you to find the file by its name",
+          "source_turn_ids": [
+            "T041"
+          ],
+          "start_char": 13195,
+          "end_char": 13233
+        },
+        {
+          "evidence_id": "E0014",
+          "quote": "you can search the stream across every files in your project",
+          "source_turn_ids": [
+            "T041"
+          ],
+          "start_char": 13971,
+          "end_char": 14031
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G006",
+      "local_statement": "在同一个终端窗口内分屏：一边编辑、一边执行，立刻看到运行结果。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "工具：tmux 分左右两栏（命令行 / vim）",
+        "修改后切到命令行执行，结果立刻可见"
+      ],
+      "paper_ids": [
+        "g1",
+        "g50",
+        "g51",
+        "g54",
+        "g55"
+      ],
+      "paper_statements": [
+        "Execute code and view results immediately.",
+        "Split the terminal window into command line and text editing views.",
+        "Switch seamlessly between command execution and editing.",
+        "Execute and review code results in a terminal environment.",
+        "Build and test code in a terminal environment."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "tmux 编辑/执行同终端是现有工作流，不必视为编辑器本体必须原生提供。",
+      "evidence": [
+        {
+          "evidence_id": "E0015",
+          "quote": "I will split the tmox split the window into half, and one is for command line one is for vim",
+          "source_turn_ids": [
+            "T051"
+          ],
+          "start_char": 15228,
+          "end_char": 15320
+        },
+        {
+          "evidence_id": "E0016",
+          "quote": "I will execute the code. There, I can. I can just see the result immediately",
+          "source_turn_ids": [
+            "T051"
+          ],
+          "start_char": 16749,
+          "end_char": 16825
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G007",
+      "local_statement": "从编码、提交、评审到部署与线上监控，尽量在同一工具内完成。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状对比：终端工作流需频繁切浏览器（GitHub/Jenkins/AWS/Kibana）",
+        "VS Code 靠各类扩展把整条流水线收进编辑器"
+      ],
+      "paper_ids": [
+        "g2",
+        "g4",
+        "g5",
+        "g6",
+        "g8",
+        "g9",
+        "g25",
+        "g32",
+        "g56",
+        "g58",
+        "g59",
+        "g73",
+        "g74",
+        "g76",
+        "g77",
+        "g78",
+        "g85",
+        "g86",
+        "g87",
+        "g88",
+        "g89"
+      ],
+      "paper_statements": [
+        "Integrate features from various coding tools.",
+        "Start coding.",
+        "Build code.",
+        "Review code.",
+        "Facilitate deployment of code to a system.",
+        "Push code to a version control system.",
+        "Monitor production environments using appropriate monitoring tools.",
+        "Enable code development and pushing to a repository through integrated extensions.",
+        "Push code to the code base from a terminal environment.",
+        "Integrate multiple services and workflows.",
+        "Trigger automated workflows such as deployment actions.",
+        "Integrate the entire development pipeline.",
+        "Integrate with additional tools to maximize efficiency.",
+        "Combine different tools to leverage their strengths.",
+        "Combine and automate the code review, merging, and continuous integration/continuous deployment processes.",
+        "Enable code review and merging directly from the development environment.",
+        "Integrate a testing framework.",
+        "Deploy code to a server.",
+        "Access cloud services to check machine status.",
+        "Access system monitoring and statistics tools.",
+        "Perform health checks on deployed systems."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported_with_scope_note",
+      "rationale": "整条开发链集成目的明确，示例各工具不代表所有集成都为强制要求。",
+      "evidence": [
+        {
+          "evidence_id": "E0017",
+          "quote": "the whole pipeline is integrating Vs code like",
+          "source_turn_ids": [
+            "T081"
+          ],
+          "start_char": 32810,
+          "end_char": 32856
+        },
+        {
+          "evidence_id": "E0018",
+          "quote": "Everything can be finished on Vs code",
+          "source_turn_ids": [
+            "T087"
+          ],
+          "start_char": 35476,
+          "end_char": 35513
+        },
+        {
+          "evidence_id": "E0019",
+          "quote": "There's a extension on the Vs code",
+          "source_turn_ids": [
+            "T091"
+          ],
+          "start_char": 37537,
+          "end_char": 37571
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G008",
+      "local_statement": "编辑器必须支持插件/扩展，好把工具装配到满足自己的全部需求。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "理由：裸编辑器只负责改文本，开发者需要的远不止这些"
+      ],
+      "paper_ids": [
+        "g13",
+        "g31",
+        "g79",
+        "g84"
+      ],
+      "paper_statements": [
+        "Ensure tools fit every requirement for the developer.",
+        "Support community-provided extensions to enhance editor features.",
+        "Customize with a variety of extensions.",
+        "Ensure extensions integrate seamlessly into the system."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "扩展能力作为必须，满足全部需求仍需逐项判断。",
+      "evidence": [
+        {
+          "evidence_id": "E0020",
+          "quote": "there's a must for editor",
+          "source_turn_ids": [
+            "T103"
+          ],
+          "start_char": 40306,
+          "end_char": 40331
+        },
+        {
+          "evidence_id": "E0021",
+          "quote": "The the editor must supports plugins or extensions",
+          "source_turn_ids": [
+            "T103"
+          ],
+          "start_char": 40832,
+          "end_char": 40882
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G009",
+      "local_statement": "装扩展应像应用商店一样：可搜索、可看文档与评分，再一键安装。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "对照：vim 插件要翻 GitHub 页面、往配置文件里粘代码"
+      ],
+      "paper_ids": [
+        "g28",
+        "g80",
+        "g81",
+        "g82",
+        "g83",
+        "g90",
+        "g91",
+        "g92",
+        "g93"
+      ],
+      "paper_statements": [
+        "Facilitate the installation and activation of plugins or extensions with minimal commands.",
+        "Facilitate searching for extensions.",
+        "Enable viewing of documentation related to extensions.",
+        "Display ratings for extensions.",
+        "Offer walkthroughs for extensions.",
+        "Facilitate easy installation of extensions.",
+        "Provide users with access to documentation for extensions.",
+        "Allow users to search for extensions.",
+        "Enable users to view community discussions about extensions."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "市场搜索文档评分和安装明确，讨论/向导是补充。",
+      "evidence": [
+        {
+          "evidence_id": "E0022",
+          "quote": "just go to the marketplace and search the extension you want",
+          "source_turn_ids": [
+            "T097"
+          ],
+          "start_char": 39428,
+          "end_char": 39488
+        },
+        {
+          "evidence_id": "E0023",
+          "quote": "You can see the ratings",
+          "source_turn_ids": [
+            "T097"
+          ],
+          "start_char": 39602,
+          "end_char": 39625
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G010",
+      "local_statement": "编辑器背后有活跃社区，遇到问题能查到别人的解法。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "他自己的 vim 学习路径：看 YouTube、Stack Overflow、问 GPT，几乎不读官方文档"
+      ],
+      "paper_ids": [
+        "g62",
+        "g63",
+        "g64",
+        "g65",
+        "g66"
+      ],
+      "paper_statements": [
+        "Access and participate in a community for support and solutions.",
+        "Facilitate discussion among users about the tool.",
+        "Enable users to find solutions to common issues with the tool.",
+        "Support the improvement of the tool based on community feedback.",
+        "Track the size and activity level of the user community."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "社区及问题解法明确，工具改进是更宽结果。",
+      "evidence": [
+        {
+          "evidence_id": "E0024",
+          "quote": "when it has a community, you can, you can see how people solve issues",
+          "source_turn_ids": [
+            "T109"
+          ],
+          "start_char": 42070,
+          "end_char": 42139
+        },
+        {
+          "evidence_id": "E0025",
+          "quote": "How big is the community",
+          "source_turn_ids": [
+            "T109"
+          ],
+          "start_char": 42575,
+          "end_char": 42599
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC022",
+      "local_id": "DOC022-G011",
+      "local_statement": "写代码时获得语言相关的语法高亮与缩进支持，让代码更易读。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "他以此区分「代码空间」与记事本",
+        "承认这是编辑器的基础能力，不含个性化"
+      ],
+      "paper_ids": [
+        "g16",
+        "g17",
+        "g18",
+        "g19",
+        "g20",
+        "g21"
+      ],
+      "paper_statements": [
+        "Provide syntax highlighting for better readability and code comprehension.",
+        "Enable syntax tracking to assist in code development.",
+        "Differentiate code elements to facilitate understanding of code structure.",
+        "Provide options for customization of syntax highlighting.",
+        "Allow customization of indent distance for different scenarios.",
+        "Ensure code readability and comprehension through proper indentation."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "高亮与缩进提高可读性，个性化参数可选。",
+      "evidence": [
+        {
+          "evidence_id": "E0026",
+          "quote": "you may have to like, like customize like in indent distance, or some like highlighting",
+          "source_turn_ids": [
+            "T009"
+          ],
+          "start_char": 1434,
+          "end_char": 1521
+        },
+        {
+          "evidence_id": "E0027",
+          "quote": "The syntax highlighting will help you like read the code better",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 2940,
+          "end_char": 3003
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    }
+  ],
+  "paper_only": [
+    {
+      "document_id": "DOC022",
+      "paper_id": "g0",
+      "statement": "Manage code easily.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g11",
+      "statement": "Emulate the practices of recommended and famous developers.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g23",
+      "statement": "Ensure the system can start up quickly and efficiently.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g36",
+      "statement": "Provide a user-friendly interface.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g41",
+      "statement": "Facilitate easy modification of configuration files using AI tools.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g43",
+      "statement": "Integrate AI-driven code suggestion tools.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g44",
+      "statement": "Support customization of code suggestions.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g45",
+      "statement": "Enhance code suggestion capabilities.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g57",
+      "statement": "Store and resume the workflow process in case of shutdown.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g61",
+      "statement": "Enhance long-term memory retention for learned skills.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g67",
+      "statement": "Become proficient with tools that have a steep learning curve.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g68",
+      "statement": "Gradually improve skills over time.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g69",
+      "statement": "Adapt to new methods for important projects.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g70",
+      "statement": "Adapt tools and methods to support modern development needs.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g71",
+      "statement": "Become comfortable with complex development environments.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC022",
+      "paper_id": "g75",
+      "statement": "Adopt and learn new tools to enhance efficiency.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    }
+  ],
+  "source_review_limits": "Local-goal correspondence is complete; paper-only support outside pilot is not exhaustively judged.",
+  "counts": {
+    "local_goals": 11,
+    "local_with_correspondence": 11,
+    "paper_goals": 94,
+    "paper_with_correspondence": 78,
+    "paper_only": 16,
+    "local_only": 0
+  },
+  "local_refinement_count": 0,
+  "eligible_paper_runs": 9,
+  "relation_semantic_reviews": [],
+  "rubric": {
+    "why_how_hierarchy": "insufficient_expression",
+    "kaos_refinement_groups": "not_expressed_in_old_schema",
+    "full_group_sufficiency": "not_assessed",
+    "alternatives_completeness": "not_assessed",
+    "source_locations": "supported_by_deterministic_checks",
+    "human_or_independent_review": "not_run"
+  }
+}

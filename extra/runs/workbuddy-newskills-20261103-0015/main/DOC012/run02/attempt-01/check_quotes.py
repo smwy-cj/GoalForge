@@ -1,0 +1,83 @@
+import json, sys, io
+
+d = json.load(open('source/DOC012.json', encoding='utf-8'))
+segs = {t['source_id']: t['text'] for t in d['turns']}
+
+qs = [
+("DOC012:T027", "I submitted. Like before the due date."),
+("DOC012:T031", "if it's a Pdf report, then I will just upload the file using the file uploaded in the, for example, canvas."),
+("DOC012:T031", "I will use the feature in the grade school to fetch my latest commit from the Github and submit the my code base"),
+("DOC012:T031", "give me an auto auto auto grading, so I will know my grade immediately"),
+("DOC012:T033", "in the form of a document with some comments after the assignment is created"),
+("DOC012:T033", "So I can get some more detail like information, for where I can improve."),
+("DOC012:T037", "generally I'll just be able to see the comment while I'm viewing my submitted assignment"),
+("DOC012:T059", "there will be a rubric for each assignment, especially in cameras"),
+("DOC012:T059", "You are going to see like in details like, what part of your assignment received better grade like a subgrade. And what part of it is not as good."),
+("DOC012:T059", "you can see a real time estimated grade for your previously submitted and graded assignments"),
+("DOC012:T061", "One thing is, don't tire the feedback we'll be detached from the assignments. So I need to find really hard, like what the comment or feedback is related to which part of my assignment"),
+("DOC012:T061", "I can submit a recreate request whenever I think. Oh, maybe that comment is wrong or not applicable to my assignment"),
+("DOC012:T061", "so I should not be have a minus point here"),
+("DOC012:T063", "Some some of them have a set up a slack channel. and that will be very convenient, because you can just send a DM."),
+("DOC012:T041", "there's basically like other stuff that's related to the course that is not relevant to the grading, so I need to get to the grading page"),
+("DOC012:T047", "sometimes I just get it from canvas, and I need to submit it to grade school"),
+("DOC012:T049", "so I need to get all the details from the website and then get a link to the gray scope"),
+("DOC012:T133", "we just need to like review the transcripts and submit our individual assignments in time"),
+("DOC012:T082", "I want to be able to be entertained as I run or or go on the bike and do exercise on the bike, which can be monotonous"),
+("DOC012:T082", "sometimes at home. Maybe when I'm like cooking or like something like or something, I'll watch a video, too."),
+("DOC012:T090", "I just pulled out my phone and plugged in like my headphones because I don't want to disturb anyone else at the gym"),
+("DOC012:T086", "So I don't get ads or anything on the music or on the videos."),
+("DOC012:T104", "Sometimes I don't. There's no videos I really want to watch."),
+("DOC012:T092", "So usually, what I do is I I go on that screen, for maybe, like 5 or 10 videos, see if I see one that like calls out to me, and if not, I'll go to my watch later."),
+("DOC012:T092", "if not, I'll go to my watch later. And that's where I have a bunch of videos that I stored and saved up."),
+("DOC012:T104", "So then I would I solve that by usually going to the watch later."),
+("DOC012:T104", "I would think about something that I'm interested in and try and find a video on that"),
+("DOC012:T104", "And so if I didn't have any other video I wanted to watch, I might search for videos on that to find it."),
+("DOC012:T092", "And if and if I see one that I want to watch, but not at the moment. I'll put it in the watch later."),
+("DOC012:T094", "Sometimes people recommend things to me, and then I'll watch that. Especially if it's long form."),
+("DOC012:T094", "if someone recommends me like a long video, I would, I would almost always watch it"),
+("DOC012:T096", "So if something's like a really hard math content which I like, I'd only be able to do that when I'm more well rested."),
+("DOC012:T096", "But if something is like just like a chill like, maybe about a show or something, then I can put that on whenever"),
+("DOC012:T096", "if there's something I want to learn more about, like different games, or different, like like topics like geography or history or something"),
+("DOC012:T096", "Then I would pick a video that caters to that."),
+("DOC012:T098", "I have a certain amount of time left on the bike. Then I would aim for like filling exactly that time, if not like a 10 to 30. Minute video is like a safe bet for me"),
+("DOC012:T098", "If I'm on Youtube like I'm not gonna want want to watch shorts. I really want to like watch a longer video"),
+("DOC012:T098", "if it sucks, I would just leave after a few minutes"),
+("DOC012:T108", "if sometimes it gives me a video I don't want. And then I would just click off of the video"),
+("DOC012:T110", "Probably my biggest wish for Youtube is that they had, like smarter users in the comments"),
+("DOC012:T110", "just sort of basic any sort of basic test before people were allowed to comment. I think that would probably make the app more optimal for me"),
+("DOC012:T114", "I'd rather have a bunch of stuff that I can just watch out of order, or watch in whatever order I want, or skip, or whatever that's better for my attention. Span and shorter things."),
+("DOC012:T114", "I want more short stuff, short form stuff. And that's like what Youtube specializes in like nonfiction stuff."),
+("DOC012:T114", "basically an endless stream of like, really like. heavily, algorithmically curated curated videos Youtube has the quantity of videos that you want"),
+("DOC012:T114", "it's like it's easy for me to find a new thing that I want to watch"),
+("DOC012:T118", "if I'm going on a long trip. and I have, like really good Wi-fi beforehand. I'll download like 10 hours worth of videos or something, and I'll just listen to it as I drive."),
+("DOC012:T120", "And that's another thing that Youtube makes really easy is downloading videos."),
+("DOC012:T126", "It has an idea of like the topics that I'm interested in, but they don't exactly square up with what, how I would subdivide my interests."),
+("DOC012:T126", "I would divide the content like differently. So it would be easier for me to watch"),
+("DOC012:T055", "that can sometimes be confusing, because you need to go to see your grade, to pick up your assignment"),
+("DOC012:T115", "So the recommendation is the main part that motivated you not to switch to another platform"),
+("DOC012:T116", "That's a big part of it. Yeah."),
+("DOC012:T049", "it can tell you how how long you have time remaining for your assignment"),
+("DOC012:T031", "before I submit an assignment I will open the description for that assignment and fetch the information that I need to do the assignment"),
+("DOC012:T039", "So I 1st we'll go to the homepage or the dashboard page of the canvas or grade school."),
+("DOC012:T045", "that's the work I need to do for my course"),
+("DOC012:T033", "It either is like a document type so that is something. I just submit it. And then that's done."),
+("DOC012:T049", "it also has a auto grader for that. That will be very convenient for the coding projects."),
+("DOC012:T049", "there's not enough features for one of the apps. So we need to use another app to support that feature"),
+("DOC012:T061", "they basically just insert the comment in a globe global part rather than specify a place for inserting the comment"),
+("DOC012:T061", "I still have to try to use email or other form of communication to contact my professor, to try to explain my problem"),
+("DOC012:T041", "But for great scope, I just directly get to the page for my all of my assignments."),
+("DOC012:T059", "helpful to decide like how much time you are going to spend on the course, and whether or not you are going to try an extra extra credit to try to boost your grades"),
+("DOC012:T082", "So I often pull out my phone and and watch it. Just so I can be distracted"),
+("DOC012:T118", "that's just a way to fill the time"),
+("DOC012:T127", "your goal is to get entertain for many for the time you spend biking and driving and cooking and other stuff"),
+("DOC012:T059", "So you can see a detailed decomposition of your assignment like grading that that is, sometimes pretty back. indirect feedback that that kind of really helps."),
+("DOC012:T086", "I have the plan from Google, where they let you have the Youtube music and the Youtube premium plan."),
+]
+
+bad = 0
+for sid, q in qs:
+    n = segs[sid].count(q)
+    if n != 1:
+        bad += 1
+        print("MISS", sid, n, "|", q[:90])
+print("total", len(qs), "bad", bad)

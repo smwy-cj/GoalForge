@@ -1,0 +1,253 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "f081462b63303fbac3b2b937cc6c81954123cc2018c77af6da653fb61e88d931",
+    "input_sha256": "34f7743718a3975192417b8aac6a8a506017d8572e1c91c701a714d0cbbe298c"
+  },
+  "judgments": {
+    "DOC016-C001": {
+      "target_statement": "在一个应用里聚合多来源资讯，跟进商业、政治、编程三类内容。",
+      "label": "direct",
+      "rationale": "T025 直接说明主要目标：「stay up to date with business, politics and programming」，T009 说明聚合价值。",
+      "supported_parts": [
+        "目标：T026「stay up to date with business, politics and programming」",
+        "聚合：T010「browse different news in one app」"
+      ],
+      "unsupported_parts": [
+        "未说明每类的更新频率要求",
+        "三类的权重未说明"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目标句与聚合价值",
+        "2. 用途（炒股/本职）为背景",
+        "3. → direct"
+      ]
+    },
+    "DOC016-C002": {
+      "target_statement": "在有限时间（早晨、遛狗）内摄取尽可能多的信息。",
+      "label": "direct",
+      "rationale": "T027 与 T029 两次说明要在有限时间内尽量多摄取。",
+      "supported_parts": [
+        "时间限定：T028「within my limited morning time」",
+        "目标：T030「read as much content and grasp as many articles as I can」"
+      ],
+      "unsupported_parts": [
+        "未给出条数或时长目标",
+        "「摄取」不等于理解，质量标准未定义"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 两处互证",
+        "2. → direct"
+      ]
+    },
+    "DOC016-C003": {
+      "target_statement": "把多条摘要拼起来，形成对全球局势的整体判断。",
+      "label": "direct",
+      "rationale": "T029 明确说明阅读逻辑是把碎片拼成整体判断。",
+      "supported_parts": [
+        "拼合：T030「piece everything together」",
+        "目的：T030「make certain logic behind what is exactly is going on」"
+      ],
+      "unsupported_parts": [
+        "未说明判断正确的验证方式",
+        "依赖多源覆盖，单一来源不成立"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取拼合陈述",
+        "2. 与 C002 的广度摄取区分（广度 vs 串联）",
+        "3. → direct"
+      ]
+    },
+    "DOC016-C004": {
+      "target_statement": "用发布时间判断消息是否已被美股消化，据以推测当日走势。",
+      "label": "direct",
+      "rationale": "T041 详细说明如何用发布/接收时间推断市场是否已消化消息。",
+      "supported_parts": [
+        "时间含义：T042「the publish time... and then the receive time」",
+        "推断用途：T042「predict what might happen in this in the Us. Stock market」"
+      ],
+      "unsupported_parts": [
+        "推断依赖其个人对交易时段的理解，未经证实",
+        "未说明时区处理方式"
+      ],
+      "assumptions": [
+        "受访者默认「发布 3 小时内的消息尚未被美股消化」"
+      ],
+      "reasoning_steps": [
+        "1. 取时间字段含义与推断用途",
+        "2. → direct"
+      ]
+    },
+    "DOC016-C005": {
+      "target_statement": "能按「媒体 × 类别」的粒度调整推荐，而不是只能屏蔽整个媒体。",
+      "label": "direct",
+      "rationale": "T045 直接指出算法缺少按媒体×类别的控制能力，并说明现有唯一手段是整体退订。",
+      "supported_parts": [
+        "缺失：T046「doesn't really give you the flexibility to say... I don't like this type of news, but I do enjoy the news that is published by this media」",
+        "现有限制：T046「the only way... is you can unsubscribe to that particular media」"
+      ],
+      "unsupported_parts": [
+        "未说明期望的控制粒度（规则配置/多选）",
+        "未说明愿意投入多少设置成本"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取缺失与现有手段",
+        "2. → direct"
+      ]
+    },
+    "DOC016-C006": {
+      "target_statement": "跳转到原文之前，先提示该站需要订阅或登录。",
+      "label": "direct",
+      "rationale": "T057 明确提出希望外链前提示订阅要求，理由是可省掉往返。",
+      "supported_parts": [
+        "诉求：T058「Feedly can notify me in advance that this article requires you to have a subscription」",
+        "收益：T058「that back and forth is can be saved」"
+      ],
+      "unsupported_parts": [
+        "未说明提示形式（角标/弹窗）",
+        "付费墙判定依赖外部站点，可行性未讨论"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求与收益",
+        "2. → direct"
+      ]
+    },
+    "DOC016-C007": {
+      "target_statement": "从外链返回时不自动刷新，保留已看/未看的浏览进度。",
+      "label": "direct",
+      "rationale": "T059 描述刷新导致进度丢失的具体机制与后果，并说明有时直接关掉应用。",
+      "supported_parts": [
+        "问题：T060「the app refreshes itself without any previous, without any warning」",
+        "后果：T060「I will lose the current progress」",
+        "强度：T062「sometimes I end up just closing the web app」"
+      ],
+      "unsupported_parts": [
+        "未说明会话保持的时长要求",
+        "未说明是否所有刷新都可避免"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题与后果",
+        "2. 强度由「关掉应用」佐证",
+        "3. → direct"
+      ]
+    },
+    "DOC016-C008": {
+      "target_statement": "减少同一事件被多家媒体重复推送、反复出现的情况。",
+      "label": "direct",
+      "rationale": "T033 说明重复推送的成因与表现，并给出他目前的识别技巧（看图片）。",
+      "supported_parts": [
+        "现象：T034「might showed up again. But this time it's published by another media」",
+        "成因：T034「due to the nature of the recommendation algorithm」"
+      ],
+      "unsupported_parts": [
+        "未说明期望的去重方式（聚类/折叠）",
+        "「不感兴趣」的判定未定义"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取现象与成因",
+        "2. → direct"
+      ]
+    },
+    "DOC016-C009": {
+      "target_statement": "收藏（read later）里的文章按类别分组，便于按主题回看。",
+      "label": "direct",
+      "rationale": "T053 自评收藏仅按时间排序，并提出按类别分组的改进。",
+      "supported_parts": [
+        "现状：T054「sorted by the latest to the newest」",
+        "期望：T054「different categories in the read. Later tab will be beneficial」"
+      ],
+      "unsupported_parts": [
+        "未说明类别体系来源（沿用三类还是自定义）",
+        "未说明是否需要批量操作"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取现状与期望",
+        "2. → direct"
+      ]
+    },
+    "DOC016-C010": {
+      "target_statement": "提供可听的朗读模式，用有语气的语音而非机械音。",
+      "label": "direct",
+      "rationale": "T081 明确提出朗读模式，并强调不要机械音；T093 补充可用于健身、遛狗等场景。",
+      "supported_parts": [
+        "功能：T082「a reading mode where, if I'm driving, it would just read through the list」",
+        "语音质量：T082「instead of all those like robotic voices」",
+        "扩展场景：T094「working out... walking my dog」"
+      ],
+      "unsupported_parts": [
+        "未说明是否需要多语言或语速控制",
+        "「有感情」无客观标准"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取功能与语音要求",
+        "2. 与 C002 的时间利用相连",
+        "3. → direct"
+      ]
+    },
+    "DOC016-C011": {
+      "target_statement": "保持应用极简，不堆叠多余功能。",
+      "label": "direct",
+      "rationale": "T023 与 T101 两次把极简视为核心优点，属维持型目标。",
+      "supported_parts": [
+        "自评：T024「it really serves as a minimalism app」",
+        "优点：T102「keeping things at a minimalism level」"
+      ],
+      "unsupported_parts": [
+        "「极简」无量化边界，与新增功能诉求存在张力",
+        "未说明可接受的复杂度上限"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取两处正面评价",
+        "2. 与新增功能诉求对照",
+        "3. → direct，并转为人工问题"
+      ]
+    },
+    "DOC016-C012": {
+      "target_statement": "出错时给出普通读者能看懂的提示，而不是 HTTP 状态码。",
+      "label": "direct",
+      "rationale": "T077 指出直接显示 HTTP 状态码，只有开发者能懂，普通读者无法理解。",
+      "supported_parts": [
+        "现象：T078「only be understood by developers, but not by regular news readers」",
+        "来源：T076「Developer codes」"
+      ],
+      "unsupported_parts": [
+        "未说明期望的提示文案",
+        "未说明是否需要重试入口"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取现象与影响人群",
+        "2. → direct"
+      ]
+    },
+    "DOC016-C013": {
+      "target_statement": "能就最新热点与同事展开讨论（信息更新到可社交的程度）。",
+      "label": "direct",
+      "rationale": "T105 把「能与同事讨论」列为成功标准，T107 解释其社交价值。",
+      "supported_parts": [
+        "成功标准：T106「be able to discuss the trending events with my Co. Worker」",
+        "社交价值：T108「common topics with your coworker」"
+      ],
+      "unsupported_parts": [
+        "未说明话题覆盖范围",
+        "属结果层面的成功判据，非直接功能"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取成功标准与解释",
+        "2. 与 C003 的拼合理解相连",
+        "3. → direct"
+      ]
+    }
+  }
+}

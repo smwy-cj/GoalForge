@@ -1,0 +1,89 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "runs\\skill-tests\\human-review-v1\\controlled-from-browser\\applied-v2\\retrace-input.json",
+    "sha256": "8669b7869bdb90abfc133ff6adc1bd548c53192e0689c5517d5c6043419efe65",
+    "model_version": "goalforge-extraction-draft-2"
+  },
+  "sources": [
+    {
+      "document_id": "DOC023",
+      "expected_hash": "2966cdb21f4ac14cb0797faf9c1297e343e83f8b4dd509cd3d473d3048d7bffb",
+      "actual_hash": "2966cdb21f4ac14cb0797faf9c1297e343e83f8b4dd509cd3d473d3048d7bffb",
+      "availability": "available"
+    }
+  ],
+  "status": "partial",
+  "traces": [
+    {
+      "target_id": "DOC023-G001",
+      "target_kind": "goal",
+      "statement": "【工程测试建议】扩大职业社交平台上的联系人网络",
+      "document_id": "DOC023",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC023:T003",
+          "material_id": "M001",
+          "quote": "the 1st one is to enlarge my the number of my connections on my profile.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 497,
+          "end_char": 569,
+          "candidate_locations": [
+            {
+              "source_id": "DOC023:T003",
+              "segment_start": 84,
+              "segment_end": 156,
+              "start_char": 497,
+              "end_char": 569
+            }
+          ],
+          "original_locator": {
+            "turn": "3",
+            "start_char": 413,
+            "end_char": 1351
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC023:T003"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "label": "insufficient",
+        "rationale": "尚未进行语义判断；此标签不代表已判定原文缺少支持。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "submitted_semantic_judgment": null,
+      "issues": [
+        {
+          "code": "semantic_not_run",
+          "reason": "需另行提供语义判断。"
+        }
+      ],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "仅处理候选中 category=goal 的目标；其他诊断项仍留在提取产物中。"
+  ],
+  "target_model": {
+    "model_id": "DOC023-goal-model",
+    "version": "v0.1.h1",
+    "core_sha256": "8eb1c17c782e61f9dab54cf1076ab67c5fc22c9fb0cb2af52e226496f69af77d"
+  }
+}

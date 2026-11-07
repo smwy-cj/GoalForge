@@ -1,0 +1,46 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "741f12bec5b8b5d8390701995884947183d2fe0b6f8ebd94aaff89dbe808aa79",
+    "judgments_sha256": "1afc3376f095596291c1c419fcb4cf52c8244db87230ba308c8871866414c570"
+  },
+  "groups": [
+    {
+      "group_id": "DOC036-F01",
+      "parent_id": "DOC036-G07",
+      "child_ids": [
+        "DOC036-G08",
+        "DOC036-G16"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "互动分布和可疑时先货后款可能减少损失，但互动可伪造、可疑判断会漏判，且普通订单仍会先付款；整组不充分保证免受恶意交易损失，仅部分候选。",
+      "assumptions": [
+        "评论/点赞可作为本人经验线索，不假定真实完整；商家是否同意先交货未知。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC036:T062",
+          "quote": "It just helps me to know which accounts are probably good and which ones are not good I should buy from, and I should not buy from.",
+          "role": "basis",
+          "start_char": 28705,
+          "end_char": 28836
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "DOC036-F01",
+      "message": "互动线索与可疑时先货后款不保证避免恶意交易损失，保持部分候选。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "DOC036-G17",
+      "message": "匿名发帖仅见并列采访者归纳和简短肯定，独立意图未明确；支持不足，pending。"
+    }
+  ]
+}

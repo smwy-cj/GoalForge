@@ -1,0 +1,100 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\revision\\retrace-input.json",
+    "sha256": "8e1e4a3926b34aa28f65fa0f0c817a901f8e3f2bdb884e11e8ddba1257c1820c",
+    "model_version": "goalforge-extraction-draft-2"
+  },
+  "sources": [
+    {
+      "document_id": "AUDIT",
+      "expected_hash": "80c7b4c499a18d9ecea01cb128ae7016eea922537044333b0eab6d9802562349",
+      "actual_hash": "80c7b4c499a18d9ecea01cb128ae7016eea922537044333b0eab6d9802562349",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "AUDIT-G001",
+      "target_kind": "goal",
+      "statement": "根据天气和时间安排活动",
+      "document_id": "AUDIT",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "AUDIT:S001",
+          "material_id": "M001",
+          "quote": "使用者：我希望根据天气安排活动。",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 0,
+          "end_char": 16,
+          "candidate_locations": [
+            {
+              "source_id": "AUDIT:S001",
+              "segment_start": 0,
+              "segment_end": 16,
+              "start_char": 0,
+              "end_char": 16
+            }
+          ],
+          "original_locator": {
+            "line_start": 1,
+            "line_end": 1,
+            "start_char": 0,
+            "end_char": 16
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "AUDIT:S001"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "根据天气安排活动"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "受控夹具预置直接表达；不是独立语义评测。"
+      },
+      "submitted_semantic_judgment": {
+        "label": "direct",
+        "rationale": "受控夹具预置直接表达；不是独立语义评测。",
+        "supported_parts": [
+          "根据天气安排活动"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "仅处理候选中 category=goal 的目标；其他诊断项仍留在提取产物中。"
+  ],
+  "target_model": {
+    "model_id": "AUDIT-goal-model",
+    "version": "v0.1.h1",
+    "core_sha256": "e84e284455da675b1e4b400f8dfab5be7506bcbd0978c9f37403780d2b4b709b"
+  },
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-audit-2026-10-16\\native-text-smoke\\unbound-old-judgment.json",
+    "sha256": "d702fb47ef2f06fadae0c7825e318ee43484f3d3853efbfce4f8a45ae9ec0103"
+  }
+}

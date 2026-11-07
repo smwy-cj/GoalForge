@@ -1,0 +1,140 @@
+{
+  "document_id": "FIX",
+  "document_hash": "d80c8f962e0199bfd6dc43db7bd7e2598901925c268775eee420813ba7cd081b",
+  "materials": [
+    {
+      "material_id": "M001",
+      "file_name": "original.md",
+      "media_type": "text/markdown",
+      "original_hash": "d80c8f962e0199bfd6dc43db7bd7e2598901925c268775eee420813ba7cd081b",
+      "id_origin": "provided",
+      "processing_status": "processed"
+    }
+  ],
+  "conversion": {
+    "canonical_text_path": "source.txt",
+    "method": "UTF-8 原生文本忠实读取，保留行顺序；不做语义摘要",
+    "issues": []
+  },
+  "segments": [
+    {
+      "source_id": "FIX:S001",
+      "material_id": "M001",
+      "text": "使用者：我希望根据天气合理安排活动。",
+      "speaker": null,
+      "recognition_status": "native_text",
+      "original_locator": {
+        "line_start": 1,
+        "line_end": 1,
+        "start_char": 0,
+        "end_char": 18
+      }
+    },
+    {
+      "source_id": "FIX:S002",
+      "material_id": "M001",
+      "text": "使用者：我希望根据降雨安排户外活动。",
+      "speaker": null,
+      "recognition_status": "native_text",
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 19,
+        "end_char": 37
+      }
+    },
+    {
+      "source_id": "FIX:S003",
+      "material_id": "M001",
+      "text": "使用者：我希望减少查找信息的费用。",
+      "speaker": null,
+      "recognition_status": "native_text",
+      "original_locator": {
+        "line_start": 3,
+        "line_end": 3,
+        "start_char": 38,
+        "end_char": 55
+      }
+    }
+  ],
+  "coverage": {
+    "scope": "provided_material",
+    "source_ids": [
+      "FIX:S001",
+      "FIX:S002",
+      "FIX:S003"
+    ],
+    "omissions": []
+  },
+  "schema_version": "goalforge-extraction-draft-2",
+  "status": "completed",
+  "candidates": [
+    {
+      "candidate_id": "FIX-C001",
+      "category": "goal",
+      "subtype": "unspecified",
+      "statement": "根据天气合理安排活动",
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "FIX:S001",
+          "quote": "使用者：我希望根据天气合理安排活动。",
+          "role": "basis",
+          "start_char": 0,
+          "end_char": 18
+        }
+      ],
+      "classification_reason": "合成夹具预置目标。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "FIX-C002",
+      "category": "goal",
+      "subtype": "unspecified",
+      "statement": "根据降雨安排户外活动",
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "FIX:S002",
+          "quote": "使用者：我希望根据降雨安排户外活动。",
+          "role": "basis",
+          "start_char": 19,
+          "end_char": 37
+        }
+      ],
+      "classification_reason": "合成夹具预置目标。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "FIX-C003",
+      "category": "goal",
+      "subtype": "unspecified",
+      "statement": "减少查找信息的费用",
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "FIX:S003",
+          "quote": "使用者：我希望减少查找信息的费用。",
+          "role": "basis",
+          "start_char": 38,
+          "end_char": 55
+        }
+      ],
+      "classification_reason": "合成夹具预置目标。",
+      "inference": null,
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "受控预置判断，仅检验衔接。"
+  ]
+}

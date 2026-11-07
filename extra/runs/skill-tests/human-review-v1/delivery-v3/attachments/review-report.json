@@ -1,0 +1,195 @@
+{
+  "schema_version": "model-review-draft-1",
+  "report_id": "REVIEW-78fe766707153489",
+  "mode": "inspect",
+  "input_model": {
+    "file_sha256": "58c4f465cbf279a20838b8ad6bf3cf4f0cfa2d03e6e563b6ca253c434d237e95",
+    "model_id": "DOC023-goal-model",
+    "version": "v0.1",
+    "core_sha256": "78fe766707153489251dcc937a331dcdd6232b3646e016f70077772c41c4d136",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "checks": [
+    {
+      "check_id": "integrity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "共享契约、ID、引用、边方向、有向环和关系覆盖检查。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "scope",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查声明的文档范围及证据来源。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "lineage",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查目标与候选双向映射；不自行补造映射。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "representation",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "正向决策与可视化边一致。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "trace_validity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查既有支持状态；不重新推断语义支持。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "attachments",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "核对附件安全路径、可取得性和实际字节哈希。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "human_records",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "只核对已提供意见的文件与版本绑定，不认证审核人身份。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "source_location",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "按 Unicode 码点和半开区间核对原句。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "semantic",
+      "type": "semantic",
+      "scope": "current_model",
+      "status": "not_run",
+      "evidence": "未调用独立语义审查模型；只保留上游判断与待审项。",
+      "execution": "not_run"
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "I-ee6c6a0f13a0",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G001",
+        "DOC023-G003"
+      ],
+      "evidence_ids": [],
+      "reason": "联系人数量增加可能影响内推，但访谈没有确认数量本身与内推的关系。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-8ed4b75760ef",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G001",
+        "DOC023-G008"
+      ],
+      "evidence_ids": [],
+      "reason": "泛化的联系人数量与合资格内推联系人可能重叠，但适用目的未被充分区分。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-61f7bfcfa650",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G003",
+        "DOC023-G012"
+      ],
+      "evidence_ids": [],
+      "reason": "更多可访问联系人是否改善内推结果未被直接确认，保留待审。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-b480fdf1cf24",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G004",
+        "DOC023-G009"
+      ],
+      "evidence_ids": [],
+      "reason": "内推意愿与简历曝光存在可能的间接路径，但未直接说明，保留不确定。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-354b289a3140",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G008",
+        "DOC023-G012"
+      ],
+      "evidence_ids": [],
+      "reason": "访问更多候选与找到合资格联系人可能有关，但不是所有更多结果都符合资格。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-e3a9687a3742",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G009",
+        "DOC023-G017"
+      ],
+      "evidence_ids": [],
+      "reason": "更充分表达可能影响内推意愿，但访谈未明确该作用。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    }
+  ],
+  "summary": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "goal_count": 9,
+    "pair_count": 36,
+    "blocking_count": 0,
+    "needs_review_count": 6
+  },
+  "repair_attempts": [],
+  "unresolved_issue_ids": [
+    "I-ee6c6a0f13a0",
+    "I-8ed4b75760ef",
+    "I-61f7bfcfa650",
+    "I-b480fdf1cf24",
+    "I-354b289a3140",
+    "I-e3a9687a3742"
+  ],
+  "limitations": [
+    "结构检查不证明语义正确。",
+    "未执行独立语义审查；模型人工状态来自实际反馈，检查报告自身未获人工确认。"
+  ],
+  "model_human_review_status": "pending",
+  "review_status": "pending"
+}

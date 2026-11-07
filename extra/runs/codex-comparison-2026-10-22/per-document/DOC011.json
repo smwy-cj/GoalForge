@@ -1,0 +1,836 @@
+{
+  "document_id": "DOC011",
+  "review_status": "first_pass_complete",
+  "local_goals": [
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G001",
+      "local_statement": "与队友异步协作修改同一份代码，完成课程与项目作业。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "主要身份为学生与助教",
+        "队友同时有仓库写权限，无法约到共同工作时间时靠异步协作"
+      ],
+      "paper_ids": [
+        "g19",
+        "g20",
+        "g25",
+        "g61"
+      ],
+      "paper_statements": [
+        "Facilitate collaboration among team members on code projects.",
+        "Enable asynchronous collaboration on code projects.",
+        "Facilitate collaboration through pull requests.",
+        "Enable collaborative work in a cloud environment."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "异步团队协作的主要目的明确，云端与 PR 属实现机制。",
+      "evidence": [
+        {
+          "evidence_id": "E0001",
+          "quote": "from my student perspective is like team collaboration",
+          "source_turn_ids": [
+            "T023"
+          ],
+          "start_char": 4334,
+          "end_char": 4388
+        },
+        {
+          "evidence_id": "E0002",
+          "quote": "we are asynchronous collab, asynchronously collaborating on this code",
+          "source_turn_ids": [
+            "T023"
+          ],
+          "start_char": 4595,
+          "end_char": 4664
+        },
+        {
+          "evidence_id": "E0003",
+          "quote": "It really did help facilitate our asynchronous workflows.",
+          "source_turn_ids": [
+            "T103"
+          ],
+          "start_char": 23299,
+          "end_char": 23356
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G002",
+      "local_statement": "代码合并进主分支前必须经他人审查，防止未审改动进入主干。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "审查由同一仓库的其他协作者执行",
+        "不达标可拒绝合并"
+      ],
+      "paper_ids": [
+        "g21",
+        "g23",
+        "g38",
+        "g60"
+      ],
+      "paper_statements": [
+        "Ensure code meets standards before integration into the main branch.",
+        "Ensure that code is reviewed by collaborators before proceeding.",
+        "Approve or deny changes based on standards compliance.",
+        "Ensure the main repository is protected from unreviewed code changes."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "合并前审查与标准/主仓库保护整合。",
+      "evidence": [
+        {
+          "evidence_id": "E0004",
+          "quote": "the port request feature simply because it's a great way to make sure that the main repository stays safe from unknown code changes before they are reviewed by others",
+          "source_turn_ids": [
+            "T083"
+          ],
+          "start_char": 17598,
+          "end_char": 17764
+        },
+        {
+          "evidence_id": "E0005",
+          "quote": "the code, is up to standard of the team or their personal standard",
+          "source_turn_ids": [
+            "T031"
+          ],
+          "start_char": 6904,
+          "end_char": 6970
+        },
+        {
+          "evidence_id": "E0006",
+          "quote": "Either approved, or they can also be denied if they don't meet the standards.",
+          "source_turn_ids": [
+            "T033"
+          ],
+          "start_char": 7092,
+          "end_char": 7169
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G003",
+      "local_statement": "改动按小步增量提交，减少协作者每次要审查的内容量。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自述为个人偏好，非团队强制",
+        "独自开发时反而倾向大 PR，因为没人要审"
+      ],
+      "paper_ids": [
+        "g24",
+        "g39",
+        "g47"
+      ],
+      "paper_statements": [
+        "Manage changes incrementally to provide less content for review.",
+        "Decide and document the requirements for the size and frequency of changes.",
+        "Manage changes incrementally to maintain a seamless process."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "小步提交是个人偏好，不应变成团队统一频率要求。",
+      "evidence": [
+        {
+          "evidence_id": "E0007",
+          "quote": "I personally prefer to do it incrementally",
+          "source_turn_ids": [
+            "T043"
+          ],
+          "start_char": 9286,
+          "end_char": 9328
+        },
+        {
+          "evidence_id": "E0008",
+          "quote": "It provides less content for my collaborators to have to review",
+          "source_turn_ids": [
+            "T045"
+          ],
+          "start_char": 9386,
+          "end_char": 9449
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G004",
+      "local_statement": "能回看仓库的变更历史，包括每次提交改了什么、由谁改。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "PR 不会被删除，保留在列表中可追溯"
+      ],
+      "paper_ids": [
+        "g31",
+        "g32",
+        "g63"
+      ],
+      "paper_statements": [
+        "Save pull requests in a backlog for historical reference.",
+        "Allow users to see changes made through pull requests by collaborators.",
+        "Provide a convenient way to track the history of changes."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "回溯 PR 改动与协作者有原句。",
+      "evidence": [
+        {
+          "evidence_id": "E0009",
+          "quote": "It's also a very convenient way to track history.",
+          "source_turn_ids": [
+            "T083"
+          ],
+          "start_char": 17766,
+          "end_char": 17815
+        },
+        {
+          "evidence_id": "E0010",
+          "quote": "in that backlog I mean to see, like what changes were made with this pull request",
+          "source_turn_ids": [
+            "T083"
+          ],
+          "start_char": 17914,
+          "end_char": 17995
+        },
+        {
+          "evidence_id": "E0011",
+          "quote": "plus other like changes that were made by my collaborators.",
+          "source_turn_ids": [
+            "T083"
+          ],
+          "start_char": 18097,
+          "end_char": 18156
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G005",
+      "local_statement": "代码安全保存在云端，本机损坏或丢失时可换机拉取继续。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "也支持协作者各自分支存放工作，不影响主仓库"
+      ],
+      "paper_ids": [
+        "g8",
+        "g9",
+        "g16",
+        "g35",
+        "g59",
+        "g62"
+      ],
+      "paper_statements": [
+        "Allow users to synchronize code between the local machine and the online repository.",
+        "Provide commands to pull the latest code from the repository.",
+        "Enable code pulling for work on different machines.",
+        "Allow storage of work on separate branches to isolate changes.",
+        "Store code safely to protect against machine corruption or loss.",
+        "Facilitate transferring work from a cloud environment to another device."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "云端备份与换机恢复为核心，分支存储属于上下文能力。",
+      "evidence": [
+        {
+          "evidence_id": "E0012",
+          "quote": "having a convenient place to store my code in a in a in a safe manner",
+          "source_turn_ids": [
+            "T075"
+          ],
+          "start_char": 15098,
+          "end_char": 15167
+        },
+        {
+          "evidence_id": "E0013",
+          "quote": "I would still have my work in a cloud environment that I could simply I'm gonna use the keyword pull onto a different machine",
+          "source_turn_ids": [
+            "T075"
+          ],
+          "start_char": 15220,
+          "end_char": 15345
+        },
+        {
+          "evidence_id": "E0014",
+          "quote": "They can store their work on that branch",
+          "source_turn_ids": [
+            "T077"
+          ],
+          "start_char": 15713,
+          "end_char": 15753
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G006",
+      "local_statement": "检索并阅读他人公开仓库的代码。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "可按关键词、文件名、变量名、语言筛选",
+        "范围含仓库、PR、issue、讨论区与用户名"
+      ],
+      "paper_ids": [
+        "g30",
+        "g54",
+        "g55",
+        "g56",
+        "g58"
+      ],
+      "paper_statements": [
+        "Allow users to search for public pull requests.",
+        "Allow users to view code from different projects.",
+        "Allow users to search for projects using keywords.",
+        "Allow users to filter search results by file name, variable name, or programming language.",
+        "Allow users to search for other users by keywords in their username."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "本地整合公开代码搜索与过滤，用户名搜索是较宽检索上下文。",
+      "evidence": [
+        {
+          "evidence_id": "E0015",
+          "quote": "public repositories are visible to anybody",
+          "source_turn_ids": [
+            "T081"
+          ],
+          "start_char": 16460,
+          "end_char": 16502
+        },
+        {
+          "evidence_id": "E0016",
+          "quote": "it can then search the entire Github database for public repositories that I can look at",
+          "source_turn_ids": [
+            "T081"
+          ],
+          "start_char": 16767,
+          "end_char": 16855
+        },
+        {
+          "evidence_id": "E0017",
+          "quote": "I can also filter based on language.",
+          "source_turn_ids": [
+            "T081"
+          ],
+          "start_char": 17111,
+          "end_char": 17147
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G007",
+      "local_statement": "用看板跟踪任务状态与分工（backlog → 待办 → 进行中）。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "任务以 issue 形式建立，含标题、描述与被指派人",
+        "团队开会决定指派后再移入待办列"
+      ],
+      "paper_ids": [
+        "g1",
+        "g2",
+        "g3",
+        "g4",
+        "g5",
+        "g7",
+        "g48",
+        "g49",
+        "g50"
+      ],
+      "paper_statements": [
+        "Create, link, and manage projects with tracking boards.",
+        "Assign and organize tasks using layouts or Kanban boards.",
+        "Facilitate team management and task assignment.",
+        "Support creation and management of backlog issues for task organization.",
+        "Indicate readiness of entities for development.",
+        "Support issue tracking and development process planning.",
+        "Assign items in the backlog to team members.",
+        "Attach a title and description to items in the backlog.",
+        "Move items from the backlog to another part of the board."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "看板状态、分工与 backlog 组织整合，论文很多操作型节点。",
+      "evidence": [
+        {
+          "evidence_id": "E0018",
+          "quote": "a project is essentially just a tracking board",
+          "source_turn_ids": [
+            "T051"
+          ],
+          "start_char": 10737,
+          "end_char": 10783
+        },
+        {
+          "evidence_id": "E0019",
+          "quote": "Kanban board where you're actually assigning tasks, and you can facilitate team management that way",
+          "source_turn_ids": [
+            "T053"
+          ],
+          "start_char": 10857,
+          "end_char": 10956
+        },
+        {
+          "evidence_id": "E0020",
+          "quote": "we would add that to the backlog, we would meet together as a team. discuss who should be assigned",
+          "source_turn_ids": [
+            "T059"
+          ],
+          "start_char": 12381,
+          "end_char": 12479
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G008",
+      "local_statement": "PR 与看板 issue 关联，合并后看板状态自动更新。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "依赖项目已链接到对应仓库",
+        "通过 resolves / #issue 关键词关联"
+      ],
+      "paper_ids": [
+        "g12",
+        "g29",
+        "g51",
+        "g52",
+        "g53"
+      ],
+      "paper_statements": [
+        "Ensure the project board is linked to the repository.",
+        "Enable the use of keywords for automating pull request descriptions.",
+        "Link a pull request to an issue in the Kanban board.",
+        "Automatically update the Kanban board when a pull request is merged.",
+        "Allow users to make requests using keywords."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "issue/PR 关联与合并自动更新，保留仓库链接依赖。",
+      "evidence": [
+        {
+          "evidence_id": "E0021",
+          "quote": "when that port request is merged, the Kanban board would automatically reflect that",
+          "source_turn_ids": [
+            "T069"
+          ],
+          "start_char": 13992,
+          "end_char": 14075
+        },
+        {
+          "evidence_id": "E0022",
+          "quote": "you can actually attach it to an issue in the Kanban board",
+          "source_turn_ids": [
+            "T067"
+          ],
+          "start_char": 13367,
+          "end_char": 13425
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G009",
+      "local_statement": "GitHub Actions 的官方文档更易查，并提供讨论区或博客。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：官方文档「broad」且难找，多数信息来自 Stack Overflow 等外部来源"
+      ],
+      "paper_ids": [
+        "g6",
+        "g44",
+        "g57"
+      ],
+      "paper_statements": [
+        "Provide a platform for discussions and information exchange on workflows.",
+        "Improve documentation clarity and accessibility.",
+        "Allow users to access public discussion forums."
+      ],
+      "correspondence": "local_narrower",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "Actions 官方资料发现与讨论的具体请求；一般公开讨论能力范围更宽。",
+      "evidence": [
+        {
+          "evidence_id": "E0023",
+          "quote": "their documentation overall is a little broad. or it's it's very. It's very difficult to find.",
+          "source_turn_ids": [
+            "T085"
+          ],
+          "start_char": 18721,
+          "end_char": 18815
+        },
+        {
+          "evidence_id": "E0024",
+          "quote": "So if they. Could have a forum or such, or like a a blog, tab forward discussions or information on building these action workflows. It'd be great.",
+          "source_turn_ids": [
+            "T085"
+          ],
+          "start_char": 18916,
+          "end_char": 19063
+        },
+        {
+          "evidence_id": "E0025",
+          "quote": "most of the documentation, I find is from other external sources. Stack, overflow, for example.",
+          "source_turn_ids": [
+            "T085"
+          ],
+          "start_char": 18820,
+          "end_char": 18915
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G010",
+      "local_statement": "以可视化方式呈现分支创建与合并的历史，而不只是线性提交栈。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自评为 nice-to-have，非必需",
+        "期望同时看到分支内的 issue 与时间线"
+      ],
+      "paper_ids": [
+        "g36",
+        "g37",
+        "g64"
+      ],
+      "paper_statements": [
+        "Display branch creation and merge activities.",
+        "Show issues within branches with their corresponding timeline.",
+        "Include a visual mapping of the history to better understand branch creation, merging, and related timelines."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "分支/合并可视化明确但为可选便利。",
+      "evidence": [
+        {
+          "evidence_id": "E0026",
+          "quote": "It would be to see a visual mapping of the repository history.",
+          "source_turn_ids": [
+            "T087"
+          ],
+          "start_char": 19345,
+          "end_char": 19407
+        },
+        {
+          "evidence_id": "E0027",
+          "quote": "visually see there was new branches made where they were merged in",
+          "source_turn_ids": [
+            "T087"
+          ],
+          "start_char": 19806,
+          "end_char": 19872
+        },
+        {
+          "evidence_id": "E0028",
+          "quote": "it's not an essential feature, it's more so. Just like convenience. Nice to have feature.",
+          "source_turn_ids": [
+            "T087"
+          ],
+          "start_char": 19255,
+          "end_char": 19344
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC011",
+      "local_id": "DOC011-G011",
+      "local_statement": "内置 AI 助手，辅助代码审查与操作引导，并帮用户用上平台已有的资源。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "动机：独立开发者只能自己审自己，缺少第二意见",
+        "期望覆盖：审查建议、PR 与 actions 文件的操作引导"
+      ],
+      "paper_ids": [
+        "g33",
+        "g45",
+        "g46",
+        "g65"
+      ],
+      "paper_statements": [
+        "Guide users through making pull requests.",
+        "Provide code review assistance.",
+        "Offer suggestions for code improvement.",
+        "Facilitate the sending of action files."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "AI 第二意见、代码审查和操作指引有原句；发送 action 文件不等价全部助手能力。",
+      "evidence": [
+        {
+          "evidence_id": "E0029",
+          "quote": "if a Github was to integrate such an assistant to allow users to consult with it to have better to use all the resources available on Github",
+          "source_turn_ids": [
+            "T093"
+          ],
+          "start_char": 20715,
+          "end_char": 20855
+        },
+        {
+          "evidence_id": "E0030",
+          "quote": "if I was to have maybe an AI assistant or something that would review help me with code reviews, provide suggestions",
+          "source_turn_ids": [
+            "T097"
+          ],
+          "start_char": 21245,
+          "end_char": 21361
+        },
+        {
+          "evidence_id": "E0031",
+          "quote": "I have another source of feedback that I can incorporate",
+          "source_turn_ids": [
+            "T097"
+          ],
+          "start_char": 21363,
+          "end_char": 21419
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    }
+  ],
+  "paper_only": [
+    {
+      "document_id": "DOC011",
+      "paper_id": "g0",
+      "statement": "Support educational activities and track student progress.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g10",
+      "statement": "Provide commands to push the latest code to the online repository.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g11",
+      "statement": "Allow changes to be made in the main branch of the repository.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g13",
+      "statement": "Enable users to create branches for collaborative work.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g14",
+      "statement": "Synchronize code changes manually.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g15",
+      "statement": "Provide a button to merge code changes into the main branch.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g17",
+      "statement": "Enable merging of code changes through pull requests.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g18",
+      "statement": "Use the technology consistently on a daily basis.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g22",
+      "statement": "Provide context for code changes to collaborators.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g26",
+      "statement": "Allow users to create a pull request with a title and description.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g27",
+      "statement": "Use pull requests for reviewing changes individually.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g28",
+      "statement": "Track who is reviewing each pull request.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g34",
+      "statement": "Enable users to compare branches before merging changes.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g40",
+      "statement": "Ensure all changes are explicitly mentioned.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g41",
+      "statement": "Display a green box indicating 'review required' after a review by a collaborator.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g42",
+      "statement": "Indicate that merging is not allowed with a visual cue and a message stating merging is blocked.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC011",
+      "paper_id": "g43",
+      "statement": "Provide a text input area for adding comments.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    }
+  ],
+  "source_review_limits": "Local-goal correspondence is complete; paper-only support outside pilot is not exhaustively judged.",
+  "counts": {
+    "local_goals": 11,
+    "local_with_correspondence": 11,
+    "paper_goals": 66,
+    "paper_with_correspondence": 49,
+    "paper_only": 17,
+    "local_only": 0
+  },
+  "local_refinement_count": 0,
+  "eligible_paper_runs": 9,
+  "relation_semantic_reviews": [],
+  "rubric": {
+    "why_how_hierarchy": "insufficient_expression",
+    "kaos_refinement_groups": "not_expressed_in_old_schema",
+    "full_group_sufficiency": "not_assessed",
+    "alternatives_completeness": "not_assessed",
+    "source_locations": "supported_by_deterministic_checks",
+    "human_or_independent_review": "not_run"
+  }
+}

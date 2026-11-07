@@ -1,0 +1,1433 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC013\\extraction.json",
+    "sha256": "2164d4edd39e130bda0df78ed35d9a84f07224054fb48756828aa32bb2b0c8bf",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "8ff245ea29f0c344b15e4719c36b6f4ce4dc3be56721a47fcb0ab92753cbb5c3",
+      "input_sha256": "2164d4edd39e130bda0df78ed35d9a84f07224054fb48756828aa32bb2b0c8bf"
+    },
+    "bundle_sha256": "3b9338f02223278832cce758826dd6e358073813f17538444aa16118850d44a1"
+  },
+  "sources": [
+    {
+      "document_id": "DOC013",
+      "expected_hash": "f91319c2d822e5b70651d3ef319b32e3829a431db0fe31fb9e7bee9f395c2435",
+      "actual_hash": "f91319c2d822e5b70651d3ef319b32e3829a431db0fe31fb9e7bee9f395c2435",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC013-C001",
+      "target_kind": "candidate",
+      "statement": "按受众与内容类型实施分级：不适宜内容限制可见，违规内容禁止发布。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC013:S007",
+          "material_id": "M001",
+          "quote": "there could be types of content that's not suitable for all viewers. so we'll have to make sure that a some viewers can't see certain things",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 614,
+          "end_char": 754,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S007",
+              "segment_start": 46,
+              "segment_end": 186,
+              "start_char": 614,
+              "end_char": 754
+            }
+          ],
+          "original_locator": {
+            "line_start": 7,
+            "line_end": 7,
+            "start_char": 568,
+            "end_char": 975
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC013:S007",
+          "material_id": "M001",
+          "quote": "there's some sorts of content that streamers should not be allowed to share with anybody",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 780,
+          "end_char": 868,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S007",
+              "segment_start": 212,
+              "segment_end": 300,
+              "start_char": 780,
+              "end_char": 868
+            }
+          ],
+          "original_locator": {
+            "line_start": 7,
+            "line_end": 7,
+            "start_char": 568,
+            "end_char": 975
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC013:S007",
+          "material_id": "M001",
+          "quote": "things with explicit language, for instance.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 925,
+          "end_char": 969,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S007",
+              "segment_start": 357,
+              "segment_end": 401,
+              "start_char": 925,
+              "end_char": 969
+            }
+          ],
+          "original_locator": {
+            "line_start": 7,
+            "line_end": 7,
+            "start_char": 568,
+            "end_char": 975
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S007",
+          "DOC013:S007",
+          "DOC013:S007"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "观众侧：T007「some viewers can't see certain things」",
+          "创作者侧：T007「streamers should not be allowed to share」"
+        ],
+        "unsupported_parts": [
+          "未定义分级标准（年龄、地区、语言）",
+          "未说明审核由谁执行"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取双向要求",
+          "2. 属合规型目标",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T006 在回答合规约束时直接给出双向要求：观众侧限制可见、创作者侧禁止发布。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "按受众与内容类型实施分级：不适宜内容限制可见，违规内容禁止发布。",
+        "label": "direct",
+        "rationale": "T006 在回答合规约束时直接给出双向要求：观众侧限制可见、创作者侧禁止发布。",
+        "supported_parts": [
+          "观众侧：T007「some viewers can't see certain things」",
+          "创作者侧：T007「streamers should not be allowed to share」"
+        ],
+        "unsupported_parts": [
+          "未定义分级标准（年龄、地区、语言）",
+          "未说明审核由谁执行"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取双向要求",
+          "2. 属合规型目标",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C002",
+      "target_kind": "candidate",
+      "statement": "支持用文本与筛选条件精确检索目标内容。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC013:S013",
+          "material_id": "M001",
+          "quote": "essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters of some sort",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1999,
+          "end_char": 2127,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S013",
+              "segment_start": 118,
+              "segment_end": 246,
+              "start_char": 1999,
+              "end_char": 2127
+            }
+          ],
+          "original_locator": {
+            "line_start": 13,
+            "line_end": 13,
+            "start_char": 1881,
+            "end_char": 3007
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S013"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "必要性：T013「essential to be able to」",
+          "方式：T013「searching via text, or perhaps by filters of some sort」"
+        ],
+        "unsupported_parts": [
+          "未说明筛选维度（时长、日期、清晰度）",
+          "未说明排序规则"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取必要性陈述",
+          "2. 与 C003 的视觉浏览并列",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T012 明确把文本检索与筛选列为观众侧首要必要功能：「essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "支持用文本与筛选条件精确检索目标内容。",
+        "label": "direct",
+        "rationale": "T012 明确把文本检索与筛选列为观众侧首要必要功能：「essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters」。",
+        "supported_parts": [
+          "必要性：T013「essential to be able to」",
+          "方式：T013「searching via text, or perhaps by filters of some sort」"
+        ],
+        "unsupported_parts": [
+          "未说明筛选维度（时长、日期、清晰度）",
+          "未说明排序规则"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取必要性陈述",
+          "2. 与 C003 的视觉浏览并列",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C003",
+      "target_kind": "candidate",
+      "statement": "以缩略图加描述的方式批量浏览，便于快速扫视与点开。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC013:S013",
+          "material_id": "M001",
+          "quote": "to be able to search visually, so I would like to be able to see a large volume of different options and click through it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2143,
+          "end_char": 2264,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S013",
+              "segment_start": 262,
+              "segment_end": 383,
+              "start_char": 2143,
+              "end_char": 2264
+            }
+          ],
+          "original_locator": {
+            "line_start": 13,
+            "line_end": 13,
+            "start_char": 1881,
+            "end_char": 3007
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC013:S013",
+          "material_id": "M001",
+          "quote": "seeing little images of a thumbnail, so to speak, with a description, perhaps, who made it, the Creator, or the actors in it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2372,
+          "end_char": 2496,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S013",
+              "segment_start": 491,
+              "segment_end": 615,
+              "start_char": 2372,
+              "end_char": 2496
+            }
+          ],
+          "original_locator": {
+            "line_start": 13,
+            "line_end": 13,
+            "start_char": 1881,
+            "end_char": 3007
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S013",
+          "DOC013:S013"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "视觉浏览：T013「search visually... see a large volume of different options」",
+          "信息构成：T013「a thumbnail... with a description, perhaps, who made it」"
+        ],
+        "unsupported_parts": [
+          "未说明每屏数量或分页方式",
+          "未说明悬停预览是否为必需"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取视觉浏览陈述",
+          "2. 与文本检索构成两种并列方式",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T012 说明第二种检索方式是可视觉化浏览大量候选，并描述缩略图附带的信息。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "以缩略图加描述的方式批量浏览，便于快速扫视与点开。",
+        "label": "direct",
+        "rationale": "T012 说明第二种检索方式是可视觉化浏览大量候选，并描述缩略图附带的信息。",
+        "supported_parts": [
+          "视觉浏览：T013「search visually... see a large volume of different options」",
+          "信息构成：T013「a thumbnail... with a description, perhaps, who made it」"
+        ],
+        "unsupported_parts": [
+          "未说明每屏数量或分页方式",
+          "未说明悬停预览是否为必需"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取视觉浏览陈述",
+          "2. 与文本检索构成两种并列方式",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C004",
+      "target_kind": "candidate",
+      "statement": "支持上传视频或开播，并能填写标题、描述与字幕转写。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC013:S013",
+          "material_id": "M001",
+          "quote": "I would want to see some option where I could go and create to upload a video or start a stream",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2612,
+          "end_char": 2707,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S013",
+              "segment_start": 731,
+              "segment_end": 826,
+              "start_char": 2612,
+              "end_char": 2707
+            }
+          ],
+          "original_locator": {
+            "line_start": 13,
+            "line_end": 13,
+            "start_char": 1881,
+            "end_char": 3007
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC013:S013",
+          "material_id": "M001",
+          "quote": "put some sort of description in, add, perhaps a transcript captions of the like",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2765,
+          "end_char": 2844,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S013",
+              "segment_start": 884,
+              "segment_end": 963,
+              "start_char": 2765,
+              "end_char": 2844
+            }
+          ],
+          "original_locator": {
+            "line_start": 13,
+            "line_end": 13,
+            "start_char": 1881,
+            "end_char": 3007
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S013",
+          "DOC013:S013"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "入口：T013「create to upload a video or start a stream」",
+          "元数据：T013「put some sort of description in, add, perhaps a transcript captions」"
+        ],
+        "unsupported_parts": [
+          "未说明必填项与校验",
+          "开播等待期未纳入本目标"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取入口与元数据陈述",
+          "2. 二者同一句内相连",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T012 从创作者角度提出上传/开播入口，以及标题、描述、字幕等元数据填写。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "支持上传视频或开播，并能填写标题、描述与字幕转写。",
+        "label": "direct",
+        "rationale": "T012 从创作者角度提出上传/开播入口，以及标题、描述、字幕等元数据填写。",
+        "supported_parts": [
+          "入口：T013「create to upload a video or start a stream」",
+          "元数据：T013「put some sort of description in, add, perhaps a transcript captions」"
+        ],
+        "unsupported_parts": [
+          "未说明必填项与校验",
+          "开播等待期未纳入本目标"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取入口与元数据陈述",
+          "2. 二者同一句内相连",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C005",
+      "target_kind": "candidate",
+      "statement": "在平台内直接编辑视频（裁剪、加音效等），不必导出到第三方工具。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC013:S013",
+          "material_id": "M001",
+          "quote": "one thing, I think would be very useful, particularly in a video streaming would be to edit those. So I can add sound effects. Trim crop.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2850,
+          "end_char": 2987,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S013",
+              "segment_start": 969,
+              "segment_end": 1106,
+              "start_char": 2850,
+              "end_char": 2987
+            }
+          ],
+          "original_locator": {
+            "line_start": 13,
+            "line_end": 13,
+            "start_char": 1881,
+            "end_char": 3007
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S013"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "价值判断：T013「would be very useful... to edit those」",
+          "具体能力：T013「add sound effects. Trim crop.」"
+        ],
+        "unsupported_parts": [
+          "未说明是否需要多轨道或时间轴",
+          "未说明编辑后是否需重新转码"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取价值判断与举例",
+          "2. 属功能诉求",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T012 明确指出站内编辑的价值并举例（音效、裁剪）。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在平台内直接编辑视频（裁剪、加音效等），不必导出到第三方工具。",
+        "label": "direct",
+        "rationale": "T012 明确指出站内编辑的价值并举例（音效、裁剪）。",
+        "supported_parts": [
+          "价值判断：T013「would be very useful... to edit those」",
+          "具体能力：T013「add sound effects. Trim crop.」"
+        ],
+        "unsupported_parts": [
+          "未说明是否需要多轨道或时间轴",
+          "未说明编辑后是否需重新转码"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取价值判断与举例",
+          "2. 属功能诉求",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C006",
+      "target_kind": "candidate",
+      "statement": "即使查询条件模糊，也能返回有意义的结果。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC013:S015",
+          "material_id": "M001",
+          "quote": "I want to be able to search, using vague criteria, but that should still get me meaningful results.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3446,
+          "end_char": 3545,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S015",
+              "segment_start": 139,
+              "segment_end": 238,
+              "start_char": 3446,
+              "end_char": 3545
+            }
+          ],
+          "original_locator": {
+            "line_start": 15,
+            "line_end": 15,
+            "start_char": 3307,
+            "end_char": 3799
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC013:S015",
+          "material_id": "M001",
+          "quote": "not finding what I'm looking for. even if it hypothetically should exist",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3372,
+          "end_char": 3444,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S015",
+              "segment_start": 65,
+              "segment_end": 137,
+              "start_char": 3372,
+              "end_char": 3444
+            }
+          ],
+          "original_locator": {
+            "line_start": 15,
+            "line_end": 15,
+            "start_char": 3307,
+            "end_char": 3799
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S015",
+          "DOC013:S015"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "要求：T015「search, using vague criteria, but that should still get me meaningful results」",
+          "障碍：T015「not finding what I'm looking for」"
+        ],
+        "unsupported_parts": [
+          "未定义「有意义」的判定",
+          "未说明是否接受推荐式补全"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取要求与障碍",
+          "2. 二者因果相连",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T014 直接要求模糊查询也能返回有意义结果，并说明对应障碍是「找不到本该存在的内容」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "即使查询条件模糊，也能返回有意义的结果。",
+        "label": "direct",
+        "rationale": "T014 直接要求模糊查询也能返回有意义结果，并说明对应障碍是「找不到本该存在的内容」。",
+        "supported_parts": [
+          "要求：T015「search, using vague criteria, but that should still get me meaningful results」",
+          "障碍：T015「not finding what I'm looking for」"
+        ],
+        "unsupported_parts": [
+          "未定义「有意义」的判定",
+          "未说明是否接受推荐式补全"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取要求与障碍",
+          "2. 二者因果相连",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C007",
+      "target_kind": "candidate",
+      "statement": "播放过程流畅、不卡顿，缓冲数据连续。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC013:S015",
+          "material_id": "M001",
+          "quote": "I want a seamless stream of buffered data.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3757,
+          "end_char": 3799,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S015",
+              "segment_start": 450,
+              "segment_end": 492,
+              "start_char": 3757,
+              "end_char": 3799
+            }
+          ],
+          "original_locator": {
+            "line_start": 15,
+            "line_end": 15,
+            "start_char": 3307,
+            "end_char": 3799
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC013:S015",
+          "material_id": "M001",
+          "quote": "I don't want it to freeze constantly.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3719,
+          "end_char": 3756,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S015",
+              "segment_start": 412,
+              "segment_end": 449,
+              "start_char": 3719,
+              "end_char": 3756
+            }
+          ],
+          "original_locator": {
+            "line_start": 15,
+            "line_end": 15,
+            "start_char": 3307,
+            "end_char": 3799
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S015",
+          "DOC013:S015"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "要求：T015「a seamless stream of buffered data」",
+          "反面：T015「I don't want it to freeze constantly」"
+        ],
+        "unsupported_parts": [
+          "未给出码率或启动时延指标",
+          "未说明弱网下的降级策略"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取正反两面表述",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T014 明确要求播放不卡顿、缓冲连续。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "播放过程流畅、不卡顿，缓冲数据连续。",
+        "label": "direct",
+        "rationale": "T014 明确要求播放不卡顿、缓冲连续。",
+        "supported_parts": [
+          "要求：T015「a seamless stream of buffered data」",
+          "反面：T015「I don't want it to freeze constantly」"
+        ],
+        "unsupported_parts": [
+          "未给出码率或启动时延指标",
+          "未说明弱网下的降级策略"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取正反两面表述",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C008",
+      "target_kind": "candidate",
+      "statement": "上传时兼容常见格式，且不受时长或文件大小限制。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC013:S019",
+          "material_id": "M001",
+          "quote": "making sure their formats are compatible with the system, making sure there's no length requirements",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4683,
+          "end_char": 4783,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S019",
+              "segment_start": 229,
+              "segment_end": 329,
+              "start_char": 4683,
+              "end_char": 4783
+            }
+          ],
+          "original_locator": {
+            "line_start": 19,
+            "line_end": 19,
+            "start_char": 4454,
+            "end_char": 5021
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S019"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "格式：T019「making sure their formats are compatible with the system」",
+          "长度：T019「making sure there's no length requirements」"
+        ],
+        "unsupported_parts": [
+          "未列出需要支持的具体格式",
+          "「no length requirements」是期望还是现状描述不明确"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两项约束",
+          "2. 语气为「需要确保」，属期望",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T018 从创作者侧列出上传的技术约束：格式兼容、无长度限制。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "上传时兼容常见格式，且不受时长或文件大小限制。",
+        "label": "direct",
+        "rationale": "T018 从创作者侧列出上传的技术约束：格式兼容、无长度限制。",
+        "supported_parts": [
+          "格式：T019「making sure their formats are compatible with the system」",
+          "长度：T019「making sure there's no length requirements」"
+        ],
+        "unsupported_parts": [
+          "未列出需要支持的具体格式",
+          "「no length requirements」是期望还是现状描述不明确"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两项约束",
+          "2. 语气为「需要确保」，属期望",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C009",
+      "target_kind": "candidate",
+      "statement": "在集中的订阅页看到已关注创作者的最新内容。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC013:S031",
+          "material_id": "M001",
+          "quote": "they can access. This in a central area known as the subscriptions tab",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9652,
+          "end_char": 9722,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S031",
+              "segment_start": 303,
+              "segment_end": 373,
+              "start_char": 9652,
+              "end_char": 9722
+            }
+          ],
+          "original_locator": {
+            "line_start": 31,
+            "line_end": 31,
+            "start_char": 9349,
+            "end_char": 9932
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC013:S031",
+          "material_id": "M001",
+          "quote": "it will list out the latest content from said creators, who they are subscribed to",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9849,
+          "end_char": 9931,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S031",
+              "segment_start": 500,
+              "segment_end": 582,
+              "start_char": 9849,
+              "end_char": 9931
+            }
+          ],
+          "original_locator": {
+            "line_start": 31,
+            "line_end": 31,
+            "start_char": 9349,
+            "end_char": 9932
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S031",
+          "DOC013:S031"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "集中页：T031「a central area known as the subscriptions tab」",
+          "内容：T031「the latest content from said creators, who they are subscribed to」"
+        ],
+        "unsupported_parts": [
+          "未说明更新提醒方式",
+          "未说明订阅上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取订阅页描述",
+          "2. 属走查中的既有能力",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T030 描述订阅机制与集中的订阅页，属对既有能力的正面陈述（维持型）。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在集中的订阅页看到已关注创作者的最新内容。",
+        "label": "direct",
+        "rationale": "T030 描述订阅机制与集中的订阅页，属对既有能力的正面陈述（维持型）。",
+        "supported_parts": [
+          "集中页：T031「a central area known as the subscriptions tab」",
+          "内容：T031「the latest content from said creators, who they are subscribed to」"
+        ],
+        "unsupported_parts": [
+          "未说明更新提醒方式",
+          "未说明订阅上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取订阅页描述",
+          "2. 属走查中的既有能力",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C010",
+      "target_kind": "candidate",
+      "statement": "播放器提供完整控制：播放/暂停、下一个、音量、进度、字幕、设置、全屏。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC013:S039",
+          "material_id": "M001",
+          "quote": "my screen is the video player in the center, where along the bottom there is a play button",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 11360,
+          "end_char": 11450,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S039",
+              "segment_start": 243,
+              "segment_end": 333,
+              "start_char": 11360,
+              "end_char": 11450
+            }
+          ],
+          "original_locator": {
+            "line_start": 39,
+            "line_end": 39,
+            "start_char": 11117,
+            "end_char": 12235
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC013:S039",
+          "material_id": "M001",
+          "quote": "I can enable disable captions. I have some settings. and I'm able to toggle and untoggle the full screen.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12130,
+          "end_char": 12235,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S039",
+              "segment_start": 1013,
+              "segment_end": 1118,
+              "start_char": 12130,
+              "end_char": 12235
+            }
+          ],
+          "original_locator": {
+            "line_start": 39,
+            "line_end": 39,
+            "start_char": 11117,
+            "end_char": 12235
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S039",
+          "DOC013:S039"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "播放/暂停：T039「a play button, which, when clicked, turns into a pause button」",
+          "字幕与设置：T039「I can enable disable captions. I have some settings.」",
+          "全屏：T039「toggle and untoggle the full screen」"
+        ],
+        "unsupported_parts": [
+          "未说明倍速、画质选择、快捷键",
+          "未说明触屏/移动端差异"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取控件枚举",
+          "2. 记录缺失项",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T038 逐一列出播放器控件并说明其行为，属对完备性的确认。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "播放器提供完整控制：播放/暂停、下一个、音量、进度、字幕、设置、全屏。",
+        "label": "direct",
+        "rationale": "T038 逐一列出播放器控件并说明其行为，属对完备性的确认。",
+        "supported_parts": [
+          "播放/暂停：T039「a play button, which, when clicked, turns into a pause button」",
+          "字幕与设置：T039「I can enable disable captions. I have some settings.」",
+          "全屏：T039「toggle and untoggle the full screen」"
+        ],
+        "unsupported_parts": [
+          "未说明倍速、画质选择、快捷键",
+          "未说明触屏/移动端差异"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取控件枚举",
+          "2. 记录缺失项",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C011",
+      "target_kind": "candidate",
+      "statement": "播放器控件对新用户可被发现（不因自动隐藏而找不到）。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC013:S041",
+          "material_id": "M001",
+          "quote": "if someone unfamiliar were to arrive and see these 10 icons, they might not be so well known. They actually disappear when the video is playing.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12589,
+          "end_char": 12733,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S041",
+              "segment_start": 137,
+              "segment_end": 281,
+              "start_char": 12589,
+              "end_char": 12733
+            }
+          ],
+          "original_locator": {
+            "line_start": 41,
+            "line_end": 41,
+            "start_char": 12452,
+            "end_char": 13280
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC013:S041",
+          "material_id": "M001",
+          "quote": "someone would need to realize they need to move their mouse down to the bottom to find the buttons.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12737,
+          "end_char": 12836,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S041",
+              "segment_start": 285,
+              "segment_end": 384,
+              "start_char": 12737,
+              "end_char": 12836
+            }
+          ],
+          "original_locator": {
+            "line_start": 41,
+            "line_end": 41,
+            "start_char": 12452,
+            "end_char": 13280
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S041",
+          "DOC013:S041"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "问题：T041「someone unfamiliar... might not be so well known」",
+          "成因：T041「They actually disappear when the video is playing」",
+          "代价：T041「someone would need to realize they need to move their mouse down」"
+        ],
+        "unsupported_parts": [
+          "未提出具体改法",
+          "熟悉用户不受影响，属特定人群问题"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题与成因",
+          "2. 与 C010 的完备性区分（有控件 ≠ 找得到）",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T040 指出控件对新用户不友好，具体原因是自动隐藏：「They actually disappear when the video is playing」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "播放器控件对新用户可被发现（不因自动隐藏而找不到）。",
+        "label": "direct",
+        "rationale": "T040 指出控件对新用户不友好，具体原因是自动隐藏：「They actually disappear when the video is playing」。",
+        "supported_parts": [
+          "问题：T041「someone unfamiliar... might not be so well known」",
+          "成因：T041「They actually disappear when the video is playing」",
+          "代价：T041「someone would need to realize they need to move their mouse down」"
+        ],
+        "unsupported_parts": [
+          "未提出具体改法",
+          "熟悉用户不受影响，属特定人群问题"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题与成因",
+          "2. 与 C010 的完备性区分（有控件 ≠ 找得到）",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C012",
+      "target_kind": "candidate",
+      "statement": "自动生成的字幕足够准确，尤其对非英语母语观众可用。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC013:S041",
+          "material_id": "M001",
+          "quote": "these captions can be auto generated, but I'm not sure how accurate they always are, particularly for people who don't speak English as a 1st language",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12947,
+          "end_char": 13097,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S041",
+              "segment_start": 495,
+              "segment_end": 645,
+              "start_char": 12947,
+              "end_char": 13097
+            }
+          ],
+          "original_locator": {
+            "line_start": 41,
+            "line_end": 41,
+            "start_char": 12452,
+            "end_char": 13280
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S041"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "现状：T041「captions can be auto generated」",
+          "疑虑：T041「I'm not sure how accurate they always are」",
+          "目标人群：T041「people who don't speak English as a 1st language」"
+        ],
+        "unsupported_parts": [
+          "「不准确」为其不确定推测，非实测",
+          "未说明是否需支持多语言字幕"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取现状与疑虑",
+          "2. 记录推测性质",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T040 在回答可访问性时指出自动字幕的准确性不确定，并点名非英语母语观众。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "自动生成的字幕足够准确，尤其对非英语母语观众可用。",
+        "label": "direct",
+        "rationale": "T040 在回答可访问性时指出自动字幕的准确性不确定，并点名非英语母语观众。",
+        "supported_parts": [
+          "现状：T041「captions can be auto generated」",
+          "疑虑：T041「I'm not sure how accurate they always are」",
+          "目标人群：T041「people who don't speak English as a 1st language」"
+        ],
+        "unsupported_parts": [
+          "「不准确」为其不确定推测，非实测",
+          "未说明是否需支持多语言字幕"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取现状与疑虑",
+          "2. 记录推测性质",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC013-C013",
+      "target_kind": "candidate",
+      "statement": "提供面向色盲等用户的可访问性显示调整。",
+      "document_id": "DOC013",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC013:S041",
+          "material_id": "M001",
+          "quote": "I'm also not sure if things like colors can be tweaked for, say. colorblind viewers",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13103,
+          "end_char": 13186,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S041",
+              "segment_start": 651,
+              "segment_end": 734,
+              "start_char": 13103,
+              "end_char": 13186
+            }
+          ],
+          "original_locator": {
+            "line_start": 41,
+            "line_end": 41,
+            "start_char": 12452,
+            "end_char": 13280
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC013:S041",
+          "material_id": "M001",
+          "quote": "that could be grounds for some work.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13244,
+          "end_char": 13280,
+          "candidate_locations": [
+            {
+              "source_id": "DOC013:S041",
+              "segment_start": 792,
+              "segment_end": 828,
+              "start_char": 13244,
+              "end_char": 13280
+            }
+          ],
+          "original_locator": {
+            "line_start": 41,
+            "line_end": 41,
+            "start_char": 12452,
+            "end_char": 13280
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC013:S041",
+          "DOC013:S041"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "诉求：T041「things like colors can be tweaked for, say. colorblind viewers」",
+          "定性：T041「could be grounds for some work」"
+        ],
+        "unsupported_parts": [
+          "受访者自述不清楚现有能力（I'm also not sure）",
+          "未说明具体调整项（对比度、色板）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求与定性",
+          "2. 记录不确定前提",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T040 提出色盲用户的显示适配问题，并称「that could be grounds for some work」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "提供面向色盲等用户的可访问性显示调整。",
+        "label": "direct",
+        "rationale": "T040 提出色盲用户的显示适配问题，并称「that could be grounds for some work」。",
+        "supported_parts": [
+          "诉求：T041「things like colors can be tweaked for, say. colorblind viewers」",
+          "定性：T041「could be grounds for some work」"
+        ],
+        "unsupported_parts": [
+          "受访者自述不清楚现有能力（I'm also not sure）",
+          "未说明具体调整项（对比度、色板）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求与定性",
+          "2. 记录不确定前提",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC013\\tracing\\semantic-judgments.json",
+    "sha256": "49c0d6f8297411fec4554963df812a29e3a03cd66360a810e3a8beccc6d293f8"
+  }
+}

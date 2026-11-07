@@ -1,0 +1,187 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "995ff3c4b9d38dfa50780ac9738282475e1ae5a77964bb41d5a71e0cf0d759f6",
+    "judgments_sha256": "1de998741b05ba71afdb0f5493d769bddd023bba8d052be459eba9a59314ff9a"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G023",
+      "child_ids": [
+        "G021",
+        "G022"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "草稿保存与评论串跟踪都针对移动端发帖/阅读的具体缺陷，可视为移动端体验改进的子目标；但原文同时抱怨缓慢、笨重、不直观，且未说明这些子目标足以覆盖整体体验，故只作部分覆盖的候选组。",
+      "assumptions": [
+        "移动端体验由多个维度构成",
+        "草稿与评论串只是其中两项"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T027",
+          "quote": "you cannot keep track of comments intuitively on Mobile",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC028:T063",
+          "quote": "I'd say the mobile app ui again should be much better",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "用户在移动端写帖时被打断，保存草稿后回来继续；同时在长回复串中仍能看清层级。",
+          "outcome": "supports",
+          "rationale": "两项子目标各自消除了原文点名的缺陷，在正常场景下确实改善移动端使用。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "草稿与评论串都修好后，应用仍被描述为缓慢、笨重、不直观；用户可能仍转用第三方 wrapper。",
+          "outcome": "counterexample",
+          "rationale": "原文的总体抱怨超出这两项子目标，二者共同不足以实现'移动端体验更好'，故不能称完整充分。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC028-goal-model",
+      "message": "关系判断已逐对执行：只建立 5 条有明确原句依据的联系（R1-R5）。其余组合经检查不成立：G002 与 G007 是同一用户两种互斥使用模式（无预设目标 vs 有预设问题），非具体化或贡献；G005 与 G012 是信息质量与购前调研的同主题重叠，无实现或贡献原句；G010 与 G011 是趋势与新闻的边界划分，方向相反而非帮助；G016 与 G017 是同一偏好与其条件化行动，G017 已含条件，不再另建边。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC028-goal-model",
+      "message": "精化组判断已执行：只保留 GR1（proposed/partial）。检查过但未建组：G004+G005+G008 缺少'比 Google 更有价值'的父目标（原文是比较性信念，不是目标，造父目标会违反不凑层级）；G018+G020 已是单一目的-手段链，二者不构成共同满足另一父目标；G021+G022 归入 GR1 而不单独立组。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "移动端体验是否只由草稿保存与评论串跟踪两项构成？原文另有缓慢、笨重、不直观等抱怨，本组因此只作部分覆盖，待确认完整子目标集合。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "无预设目标的浏览被受访者描述为 'no particular outcome'，现保留为'填充空闲时间'的意图；是否应作为目标而非背景行为，请确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "新闻与趋势的边界（关注 subreddit 内事件、popular 页全球事件 vs 其它新闻）是否稳定？当前按原文保留为条件，未与 G010 合并。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G006",
+      "target_id": "G004",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "when the problem is already articulated as a query"
+      ],
+      "assumptions": [],
+      "rationale": "T007 把'有具体问题'与'走 Google 链接'直接绑定：该入口是为定位到针对该问题的帖子，属于实现方式而非独立目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T007",
+          "quote": "So I when I come on Reddit, I normally, if I have a targeted problem, then I go through the Google Link.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G003",
+      "target_id": "G007",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "the problem is technical and the user is stuck"
+      ],
+      "assumptions": [
+        "technical help is still aimed at solving that problem"
+      ],
+      "rationale": "T003 说明技术类 subreddit 用于卡住或需要额外输入时；T009 说明预先定义问题的会话结果是问题被解决，属具体情境对一般目标的细化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T003",
+          "quote": "So I use those when I'm stuck on a problem or need like other inputs for a problem.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G001",
+      "target_id": "G004",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "a subreddit matching the topic exists"
+      ],
+      "assumptions": [],
+      "rationale": "T003 的按关键词搜索城市 subreddit 是把结果限定到具体话题的一种做法；T005 说明使用 Reddit 的目的是得到针对问题的结果。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T003",
+          "quote": "So I browse my city's subreddit with keyword. Halloween, search to get information about that.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G019",
+      "target_id": "G018",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T059 明确说会实现 Gen-AI 工具来找具体 subreddit；T051 描述其行为是输入主题给出确切 subreddit，直接服务于'找到确切 subreddit'。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T059",
+          "quote": "So I would implement, like a geni tool to find a particular subreddit.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G018",
+      "target_id": "G020",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "the found subreddit matches the question topic"
+      ],
+      "assumptions": [
+        "that subreddit still has active respondents"
+      ],
+      "rationale": "T059 把'发在具体 subreddit 更有价值'与'找到该 subreddit 很有用'连在一起：找到正确 subreddit 有助于把问题发到那里，但不保证回答质量。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T059",
+          "quote": "there's much more value in posting in a specific subreddit, and finding that subreddit would be very useful.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

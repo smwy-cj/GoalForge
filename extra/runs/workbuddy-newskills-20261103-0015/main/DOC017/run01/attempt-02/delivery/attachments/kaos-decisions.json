@@ -1,0 +1,306 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "275d97a6f69948c50dd0c0a22cf2e5049f3714df6ccaf58ccbdbb8938eb86171",
+    "judgments_sha256": "51d26f860b83cdea1edb5718add7d19a076d9408b0be30b2404ccba71726ce17"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G033",
+      "child_ids": [
+        "G016",
+        "G032"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "G016（页面内申请）与 G032（门户内收藏）都是 G033（一切在门户内完成）的具体情境，但原文提到的查看员工评价、技术栈、职位职责区块、申请状态与反馈等操作未由这两个子目标共同覆盖，不能声称整组共同满足足以实现父目标，故保留 proposed/partial",
+      "assumptions": [
+        "门户内还包含查看职位信息与跟踪状态等其他操作",
+        "这些其他操作是否也须在门户内完成未获原文确认"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T079",
+          "quote": "Everything is present in the job portal. It will be really great right.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R2",
+        "R3"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "用户在门户内收到匹配更新，点击后在页面内嵌视图完成公司门户申请，并把该职位加入门户内收藏列表，全程未跳转外部应用",
+          "outcome": "supports",
+          "rationale": "该场景下申请与保存两个子目标共同满足'一切在门户内完成'，为编制者构造的分析假设"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "用户需要在同一门户内查看在职员工评价、团队技术栈、职责区块，或跟踪申请状态与雇主反馈（G022/G023/G024/G026/G034/G035）",
+          "outcome": "counterexample",
+          "rationale": "原文未说明这些操作也在门户内完成，G016 与 G032 未覆盖父目标全部范围，故整组不完整且存在未解决反例"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "G033 的子目标只覆盖申请与保存，未覆盖查看员工评价/技术栈/职责区块、跟踪状态与反馈等操作；需确认是否可声称整组充分，否则维持 proposed/partial"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G043",
+      "message": "招聘中介无具体意图内容，目标为 insufficient，需补访谈或明确排除"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G012",
+      "message": "与 G013 的邮件详略张力未解决"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "与 G012 的邮件详略张力未解决"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "label 为 inferred，仅由负面经历推断，需确认防错过机制与可接受的支持强度"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G015",
+      "message": "T015 转写断裂，快速申请的判定标准未给出"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G031",
+      "message": "label 为 inferred，签证/资格是否由系统判断、信息来源为何未明"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G023",
+      "message": "原文 'what text they are using' 存在转写歧义，需核对录音"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R9",
+      "message": "G037→G038 的操作化方向依赖 T085 中 'So' 的因果读法，需确认方向未写反"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC017-goal-model",
+      "message": "全篇为单人访谈，多个目标来自偏好、现状体验或让步推断，无第二受访者交叉验证；成立精化组数为 0"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G014",
+      "target_id": "G015",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "直接/快速申请按钮是快速完成申请的明确实现方式，T009 用 'so that I don't need to waste time' 连接方式与目的",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T009",
+          "quote": "should be having a direct apply button in the email itself, so that I don't need to waste time then navigating to the app",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G016",
+      "target_id": "G033",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "页面内嵌申请是'一切在门户内完成、不跳转别处'在公司门户申请这一具体情境下的具体化",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T061",
+          "quote": "there is no point in having Linkedin. In the 1st place, when I have to like navigate to other place right.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G032",
+      "target_id": "G033",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "门户内置收藏是'不跳转到另一个应用'在保存职位这一具体情境下的具体化",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T077",
+          "quote": "It'd be great to have such features in the job portal itself, because I again, as I said, I don't want to navigate to another application",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G009",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T006 明确问通过哪些渠道接收职位更新，专业邮箱是接收匹配职位更新的选定渠道",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T007",
+          "quote": "I would generally prefer getting via emails.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G010",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "移动端通知是接收职位更新的另一渠道，且保留 unless 例外",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T007",
+          "quote": "job notifications would also be great unless it's like too complicated.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G005",
+      "target_id": "G006",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T041 明确用 'to kind of get me the relevant result' 表明关键词自定义服务于获得相关结果",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T041",
+          "quote": "customizing few keywords for the job search to kind of get me the relevant result right?",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G004",
+      "target_id": "G006",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "资料驱动的自动筛选服务于提供已匹配的相关职位列表，无需再加筛选",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T039",
+          "quote": "I kinda assume that it's already set right when it provides me the job list. and I don't need to add any more filters",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G028",
+      "target_id": "G006",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T032 问如何定义相关职位，T033 以技能匹配百分比工具作为判断相关性的方式，'So with that, I'll consider'",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T033",
+          "quote": "I see if I can actually match those skill sets with me, and it can also give some percentage out of it. So with that, I'll consider.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G037",
+      "target_id": "G038",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T085 用 'So' 连接：不希望被其他平台的人联系，因此不希望数据暴露给平台之外，前者以后者为实现方式",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T085",
+          "quote": "I don't want to people reaching me out from other platforms, right? So I don't want my data to be exposed by other people apart from the platform.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R10",
+      "source_id": "G002",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T004 问接收频率，主动求职时即时接收是接收匹配职位更新在该情境下的具体化",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T005",
+          "quote": "so it would be great if I'm actually looking for Job right? So it would be great if I receive at the instant. The job is like posted in the platform",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R11",
+      "source_id": "G003",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "非主动求职时每周接收是接收匹配职位更新在另一情境下的具体化",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T005",
+          "quote": "if I'm not looking actively, then it's okay to receive once in a week",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

@@ -1,0 +1,156 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "733c3b87b2ca7bd0f20ffb53551b075489f9d5a9646a74b7b26f8561ea224a7e",
+    "judgments_sha256": "662936d523bab88cc2537a6ec931a0b6c4fbdacc564c1af94bea0f76c3938670"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "地理定位障碍是否隐含对'可切换地区设置'之类功能的期望？原文仅陈述受限现状，未提出解决方案，待人工确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G018",
+      "message": "G018 为由现状+正面评价推断的维持意图（避免被误导），非明确表达，待人工确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "Twitter 目标以'了解世界动态'为核心动作，科技新闻与 meme 记入 context；是否需要独立娱乐性目标待确认。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R6",
+      "message": "内容及时加载→找到正确内容的贡献关系依据为 T079 破碎转写，方向为编制者判断，标 proposed 待确认。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC027-goal-model",
+      "message": "观点偏见（T095/T097）因未表达避免意图且自评整体正面（T099）未立目标；如评审认为应保留为顾虑或目标请反馈。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G013",
+      "target_id": "G010",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "把 Twitter 当首选新闻应用、经热搜标签追踪世界动态，是他实现'与世界保持连接、大事不可不知'的方式；两端目标支持均为 direct，关系原句明确（方式→目的）。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC027:T005",
+          "quote": "Twitter just makes it very easy for me to just tap like one particular hashtag whatever is trending, and then go through everything that is happening around the world.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G012",
+      "target_id": "G011",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "用 Snapchat 与朋友实时连接（拍照即发）是他了解朋友圈/印度朋友动态、与其保持连接的方式；两端支持均为 direct。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC027:T005",
+          "quote": "For Snapchat. It's very easy for me to connect to stay connected to my friends in real time.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G017",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "在数字保险库中保存全部凭据与 2FA 备份码，有助于实现'他人无法访问其账号'——他明确说因为持有该备份码才信任只有自己能访问账号；贡献而非充分保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC027:T023",
+          "quote": "You have to put it back in. You have to keep it saved somewhere, maybe in like a digital vault or something.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC027:T023",
+          "quote": "that kind of makes me feel like my particular account cannot be accessed by anyone else other than me. because I have those particular code.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G019",
+      "target_id": "G015",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "通用聚合平台是他设想的实现'获得多样内容组合'的方式：把各平台的好内容聚合到一处即形成 assortment；两端支持均为 direct，原句同时陈述了方式与产出。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC027:T105",
+          "quote": "but it will have all of my favorite applications in one place, and give me, like an assortment of different kind of content, let's say, some good content from Twitter, some good content from Reddit, some good content from Instagram, and give it all in one place",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G005",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "数据加密有助于其对话/数据不被外人看到：他将'隐私与数据加密'并列为 Signal 受信任的原因，且称 Signal 的好加密'让人很难怀疑他们'；贡献而非充分保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC027:T027",
+          "quote": "the next will be signal because of like high authentication and privacy and data encryption",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC027:T031",
+          "quote": "Signal kind of like makes it really, really hard for you to like doubt them because they have, like really good data encryption.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G016",
+      "target_id": "G014",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "内容及时加载有望帮助他找到在找的正确内容——他在谈'找到正确内容'时把内容卡顿（需上滑重刷）列为相关原因；原句转写破碎，方向为编制者判断，故记 proposed 待确认。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC027:T079",
+          "quote": "I'd say, finding the right content that I'm looking for so one of the reasons that like the when I talk like when I talked about like having a content block.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

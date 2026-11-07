@@ -1,0 +1,2731 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC030-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "48d244835d3b58258dc08b2be20110992c11c142ef3ae8162a1b8be54e4f471f"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "9ad7ff9820f35cd4e1f42920944b47a091da87d057a1ded8acf2c5e78d306314"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "6f1ab063dc19eb939deec5b902d53f57a3536d079e130bc2f33670c96f720bc1"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "3186830a0b0fc1c17c19307b1c816393bf8ae39fa22592d34f12941b70cbbbe4"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC030"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC030-G001",
+      "statement": "通过技术面试、拿到工作。",
+      "source_candidate_ids": [
+        "DOC030-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "自述这是刷题的主要目的",
+        "起因：找第一份实习"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G002",
+      "statement": "提升日常学习与工作中的编码能力。",
+      "source_candidate_ids": [
+        "DOC030-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "作为「拿到工作」之外的附带目的"
+      ],
+      "evidence_ids": [
+        "E0003",
+        "E0004"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G003",
+      "statement": "按题型分类逐个攻克，把一类题全部做完作为里程碑。",
+      "source_candidate_ids": [
+        "DOC030-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "分类维度：数组、树等",
+        "里程碑：某分类全部完成"
+      ],
+      "evidence_ids": [
+        "E0005",
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G004",
+      "statement": "按面试季调配训练强度：临近面试就每天练，平时只做少量保温。",
+      "source_candidate_ids": [
+        "DOC030-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "高强度：状态好时一天 10 题以上",
+        "低强度：2 题、easy–medium、防手生"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009",
+        "E0010"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G005",
+      "statement": "用难度标签与推荐用时估算该在一道题上投入多久。",
+      "source_candidate_ids": [
+        "DOC030-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "平台给的 easy/medium/hard 作为粗略时间参照",
+        "他也知道难度与真实耗时并不完全对应"
+      ],
+      "evidence_ids": [
+        "E0011",
+        "E0012",
+        "E0013"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G006",
+      "statement": "能用题号与同伴指认同一道题，便于讨论。",
+      "source_candidate_ids": [
+        "DOC030-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "做法：朋友面试遇到同题，直接把 LeetCode 题号发过来",
+        "反例：不同平台时只能靠描述、还得让对方去找"
+      ],
+      "evidence_ids": [
+        "E0014",
+        "E0015"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G007",
+      "statement": "用精炼、面试高频的题单练，而不是随机刷。",
+      "source_candidate_ids": [
+        "DOC030-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "平台：NeetCode",
+        "理由：题单更精炼、更贴近面试实际考的"
+      ],
+      "evidence_ids": [
+        "E0016",
+        "E0017"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G008",
+      "statement": "随机遇到没学过的题型或算法，拓展知识面。",
+      "source_candidate_ids": [
+        "DOC030-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "平台：LeetCode 随机题",
+        "与「精炼题单」互补"
+      ],
+      "evidence_ids": [
+        "E0018",
+        "E0019"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G009",
+      "statement": "看不懂平台题解时，能找到把算法一步步讲透的讲解。",
+      "source_candidate_ids": [
+        "DOC030-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "LeetCode 的题解描述不够直观",
+        "GeeksforGeeks 会走一遍完整算法并给更多例子"
+      ],
+      "evidence_ids": [
+        "E0020",
+        "E0021"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G010",
+      "statement": "隔一段时间回头重做做过的题，防止遗忘。",
+      "source_candidate_ids": [
+        "DOC030-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "看完题解后仍要重做",
+        "目的：真正记住"
+      ],
+      "evidence_ids": [
+        "E0022",
+        "E0023"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G011",
+      "statement": "能量化自己的进步：计时看速度、看累计做题数。",
+      "source_candidate_ids": [
+        "DOC030-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "计时器：开始/提交时手动开关",
+        "题量计数带来信心"
+      ],
+      "evidence_ids": [
+        "E0024",
+        "E0025"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G012",
+      "statement": "用周赛题训练「读懂陌生表述并转成熟悉模型」的能力。",
+      "source_candidate_ids": [
+        "DOC030-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "周赛题措辞与常见练习题不同",
+        "他只取题目、不入赛（周日时间与压力）"
+      ],
+      "evidence_ids": [
+        "E0026",
+        "E0027"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G013",
+      "statement": "提交后能立刻修正刚发现的小错，不被频率限制挡住。",
+      "source_candidate_ids": [
+        "DOC030-C013"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "场景：点了提交才想起漏了 else，一秒内补上却提交不了"
+      ],
+      "evidence_ids": [
+        "E0028",
+        "E0029"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G014",
+      "statement": "性能/排名数据稳定可信，能真实反映代码好坏。",
+      "source_candidate_ids": [
+        "DOC030-C014"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "同一份两年前的代码，性能指标反而下降"
+      ],
+      "evidence_ids": [
+        "E0030",
+        "E0031"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC030-G015",
+      "statement": "拿到更充分的测试用例自测，包括其他用户贡献的用例。",
+      "source_candidate_ids": [
+        "DOC030-C015"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，CS 学生，为实习面试刷题）",
+      "context": [
+        "现状：每题只给 1–3 个用例，要提交才知道漏了什么"
+      ],
+      "evidence_ids": [
+        "E0032",
+        "E0033",
+        "E0034"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC030-G001",
+      "b": "DOC030-G002",
+      "label": "related",
+      "rationale": "T009 把两者并列：「主要目的是拿工作，其次想练编码能力」。同一批练习产生两种收益，但一个是外部结果、一个是能力沉淀。",
+      "evidence_ids": [
+        "E0001",
+        "E0003"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC030-G001",
+      "b": "DOC030-G003",
+      "label": "related",
+      "rationale": "T011 的里程碑（把某类题全部做完）是达成面试准备的执行方式，分类覆盖正是为面试考察面服务。但 G003 只描述组织方式，不保证面试结果。",
+      "evidence_ids": [
+        "E0001",
+        "E0007"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC030-G001",
+      "b": "DOC030-G004",
+      "label": "related",
+      "rationale": "T013 说练习集中在面试季，T015 说知道有面试就每天练——训练强度直接由求职进度驱动。但 G004 是节奏安排，G001 是目标本身。",
+      "evidence_ids": [
+        "E0001",
+        "E0009"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC030-G001",
+      "b": "DOC030-G005",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G005 的对象是难度与推荐用时估算（T019/T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC030-G001",
+      "b": "DOC030-G006",
+      "label": "related",
+      "rationale": "T005 的例子最能说明：朋友刚面完，直接把面试里遇到的题号发过来，他照着练——题号是把面试现场的经验传给同伴的载体。但 G006 也用于日常讨论。",
+      "evidence_ids": [
+        "E0001",
+        "E0014"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC030-G001",
+      "b": "DOC030-G007",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G007 的对象是精炼高频题单（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC030-G001",
+      "b": "DOC030-G008",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G008 的对象是发现新题型（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC030-G001",
+      "b": "DOC030-G009",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G009 的对象是看懂题解推导（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC030-G001",
+      "b": "DOC030-G010",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G010 的对象是隔期回头复习（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC030-G001",
+      "b": "DOC030-G011",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G011 的对象是量化进步（计时+题数）（T029/T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC030-G001",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC030-G001",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC030-G001",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC030-G001",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G001 的对象是通过面试拿工作（T001/T009），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC030-G002",
+      "b": "DOC030-G003",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G003 的对象是按题型分类攻克（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC030-G002",
+      "b": "DOC030-G004",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G004 的对象是按面试季调配强度（T013/T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC030-G002",
+      "b": "DOC030-G005",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G005 的对象是难度与推荐用时估算（T019/T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC030-G002",
+      "b": "DOC030-G006",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G006 的对象是题号指认同一题（T005）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC030-G002",
+      "b": "DOC030-G007",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G007 的对象是精炼高频题单（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC030-G002",
+      "b": "DOC030-G008",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G008 的对象是发现新题型（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC030-G002",
+      "b": "DOC030-G009",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G009 的对象是看懂题解推导（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC030-G002",
+      "b": "DOC030-G010",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G010 的对象是隔期回头复习（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC030-G002",
+      "b": "DOC030-G011",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G011 的对象是量化进步（计时+题数）（T029/T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC030-G002",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC030-G002",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC030-G002",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC030-G002",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G002 的对象是提升日常编码能力（T009），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC030-G003",
+      "b": "DOC030-G004",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G004 的对象是按面试季调配强度（T013/T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC030-G003",
+      "b": "DOC030-G005",
+      "label": "related",
+      "rationale": "T023 说平台同时按「类别」与「难度」两个维度组织题目，他两边都用：按类别扫盲、按难度估时。两个维度正交，但共同构成练习计划。",
+      "evidence_ids": [
+        "E0007",
+        "E0013"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC030-G003",
+      "b": "DOC030-G006",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G006 的对象是题号指认同一题（T005）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC030-G003",
+      "b": "DOC030-G007",
+      "label": "related",
+      "rationale": "T011 说 NeetCode 把某一类的题浓缩成十道左右，他按这个清单逐类推进——精炼题单是分类攻克的现成目录。但 G007 还包含「只练高频」这一层筛选。",
+      "evidence_ids": [
+        "E0007",
+        "E0016"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC030-G003",
+      "b": "DOC030-G008",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G008 的对象是发现新题型（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC030-G003",
+      "b": "DOC030-G009",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G009 的对象是看懂题解推导（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC030-G003",
+      "b": "DOC030-G010",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G010 的对象是隔期回头复习（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC030-G003",
+      "b": "DOC030-G011",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G011 的对象是量化进步（计时+题数）（T029/T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC030-G003",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC030-G003",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC030-G003",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC030-G003",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G003 的对象是按题型分类攻克（T011），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC030-G004",
+      "b": "DOC030-G005",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G005 的对象是难度与推荐用时估算（T019/T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC030-G004",
+      "b": "DOC030-G006",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G006 的对象是题号指认同一题（T005）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC030-G004",
+      "b": "DOC030-G007",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G007 的对象是精炼高频题单（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC030-G004",
+      "b": "DOC030-G008",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G008 的对象是发现新题型（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC030-G004",
+      "b": "DOC030-G009",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G009 的对象是看懂题解推导（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC030-G004",
+      "b": "DOC030-G010",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G010 的对象是隔期回头复习（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC030-G004",
+      "b": "DOC030-G011",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G011 的对象是量化进步（计时+题数）（T029/T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC030-G004",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC030-G004",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC030-G004",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC030-G004",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G004 的对象是按面试季调配强度（T013/T015），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC030-G005",
+      "b": "DOC030-G006",
+      "label": "none",
+      "rationale": "DOC030-G005 的对象是难度与推荐用时估算（T019/T031），DOC030-G006 的对象是题号指认同一题（T005）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC030-G005",
+      "b": "DOC030-G007",
+      "label": "none",
+      "rationale": "DOC030-G005 的对象是难度与推荐用时估算（T019/T031），DOC030-G007 的对象是精炼高频题单（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC030-G005",
+      "b": "DOC030-G008",
+      "label": "none",
+      "rationale": "DOC030-G005 的对象是难度与推荐用时估算（T019/T031），DOC030-G008 的对象是发现新题型（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC030-G005",
+      "b": "DOC030-G009",
+      "label": "none",
+      "rationale": "DOC030-G005 的对象是难度与推荐用时估算（T019/T031），DOC030-G009 的对象是看懂题解推导（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC030-G005",
+      "b": "DOC030-G010",
+      "label": "none",
+      "rationale": "DOC030-G005 的对象是难度与推荐用时估算（T019/T031），DOC030-G010 的对象是隔期回头复习（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC030-G005",
+      "b": "DOC030-G011",
+      "label": "related",
+      "rationale": "T029 的计时让「目标用时」变成可验证的数字：20–30 分钟做完一道 medium 就是达标的判据。但 G005 是事前预估，G011 是事后度量。",
+      "evidence_ids": [
+        "E0011",
+        "E0024"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC030-G005",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G005 的对象是难度与推荐用时估算（T019/T031），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC030-G005",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G005 的对象是难度与推荐用时估算（T019/T031），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC030-G005",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G005 的对象是难度与推荐用时估算（T019/T031），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC030-G005",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G005 的对象是难度与推荐用时估算（T019/T031），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC030-G006",
+      "b": "DOC030-G007",
+      "label": "none",
+      "rationale": "DOC030-G006 的对象是题号指认同一题（T005），DOC030-G007 的对象是精炼高频题单（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC030-G006",
+      "b": "DOC030-G008",
+      "label": "none",
+      "rationale": "DOC030-G006 的对象是题号指认同一题（T005），DOC030-G008 的对象是发现新题型（T007）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC030-G006",
+      "b": "DOC030-G009",
+      "label": "none",
+      "rationale": "DOC030-G006 的对象是题号指认同一题（T005），DOC030-G009 的对象是看懂题解推导（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC030-G006",
+      "b": "DOC030-G010",
+      "label": "none",
+      "rationale": "DOC030-G006 的对象是题号指认同一题（T005），DOC030-G010 的对象是隔期回头复习（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC030-G006",
+      "b": "DOC030-G011",
+      "label": "none",
+      "rationale": "DOC030-G006 的对象是题号指认同一题（T005），DOC030-G011 的对象是量化进步（计时+题数）（T029/T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC030-G006",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G006 的对象是题号指认同一题（T005），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P067",
+      "a": "DOC030-G006",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G006 的对象是题号指认同一题（T005），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P068",
+      "a": "DOC030-G006",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G006 的对象是题号指认同一题（T005），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P069",
+      "a": "DOC030-G006",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G006 的对象是题号指认同一题（T005），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P070",
+      "a": "DOC030-G007",
+      "b": "DOC030-G008",
+      "label": "related",
+      "rationale": "T007 明确分工：NeetCode 练面试高频、LeetCode 随机刷来发现没学过的算法。同一目的（面试准备）下的收敛与发散两种策略。",
+      "evidence_ids": [
+        "E0016",
+        "E0018"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P071",
+      "a": "DOC030-G007",
+      "b": "DOC030-G009",
+      "label": "none",
+      "rationale": "DOC030-G007 的对象是精炼高频题单（T007），DOC030-G009 的对象是看懂题解推导（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P072",
+      "a": "DOC030-G007",
+      "b": "DOC030-G010",
+      "label": "none",
+      "rationale": "DOC030-G007 的对象是精炼高频题单（T007），DOC030-G010 的对象是隔期回头复习（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P073",
+      "a": "DOC030-G007",
+      "b": "DOC030-G011",
+      "label": "none",
+      "rationale": "DOC030-G007 的对象是精炼高频题单（T007），DOC030-G011 的对象是量化进步（计时+题数）（T029/T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P074",
+      "a": "DOC030-G007",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G007 的对象是精炼高频题单（T007），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P075",
+      "a": "DOC030-G007",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G007 的对象是精炼高频题单（T007），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P076",
+      "a": "DOC030-G007",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G007 的对象是精炼高频题单（T007），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P077",
+      "a": "DOC030-G007",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G007 的对象是精炼高频题单（T007），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P078",
+      "a": "DOC030-G008",
+      "b": "DOC030-G009",
+      "label": "none",
+      "rationale": "DOC030-G008 的对象是发现新题型（T007），DOC030-G009 的对象是看懂题解推导（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P079",
+      "a": "DOC030-G008",
+      "b": "DOC030-G010",
+      "label": "none",
+      "rationale": "DOC030-G008 的对象是发现新题型（T007），DOC030-G010 的对象是隔期回头复习（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P080",
+      "a": "DOC030-G008",
+      "b": "DOC030-G011",
+      "label": "none",
+      "rationale": "DOC030-G008 的对象是发现新题型（T007），DOC030-G011 的对象是量化进步（计时+题数）（T029/T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P081",
+      "a": "DOC030-G008",
+      "b": "DOC030-G012",
+      "label": "related",
+      "rationale": "T035 说周赛题措辞陌生，练的是把新表述转成熟悉模型——这正是 G008「遇到没学过的题型」的受控版本。但周赛是限时整套，随机题是单题。",
+      "evidence_ids": [
+        "E0019",
+        "E0026"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P082",
+      "a": "DOC030-G008",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G008 的对象是发现新题型（T007），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P083",
+      "a": "DOC030-G008",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G008 的对象是发现新题型（T007），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P084",
+      "a": "DOC030-G008",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G008 的对象是发现新题型（T007），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P085",
+      "a": "DOC030-G009",
+      "b": "DOC030-G010",
+      "label": "related",
+      "rationale": "T017 说看完题解、照着做一遍还不够，隔段时间要回头重做才不会忘。看题解解决「当下不会」，复习解决「过后遗忘」。",
+      "evidence_ids": [
+        "E0020",
+        "E0022"
+      ],
+      "conditions": [
+        "G010 通常在 G009 之后"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P086",
+      "a": "DOC030-G009",
+      "b": "DOC030-G011",
+      "label": "none",
+      "rationale": "DOC030-G009 的对象是看懂题解推导（T003），DOC030-G011 的对象是量化进步（计时+题数）（T029/T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P087",
+      "a": "DOC030-G009",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G009 的对象是看懂题解推导（T003），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P088",
+      "a": "DOC030-G009",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G009 的对象是看懂题解推导（T003），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P089",
+      "a": "DOC030-G009",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G009 的对象是看懂题解推导（T003），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P090",
+      "a": "DOC030-G009",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G009 的对象是看懂题解推导（T003），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P091",
+      "a": "DOC030-G010",
+      "b": "DOC030-G011",
+      "label": "none",
+      "rationale": "DOC030-G010 的对象是隔期回头复习（T017），DOC030-G011 的对象是量化进步（计时+题数）（T029/T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P092",
+      "a": "DOC030-G010",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G010 的对象是隔期回头复习（T017），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P093",
+      "a": "DOC030-G010",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G010 的对象是隔期回头复习（T017），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P094",
+      "a": "DOC030-G010",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G010 的对象是隔期回头复习（T017），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P095",
+      "a": "DOC030-G010",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G010 的对象是隔期回头复习（T017），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P096",
+      "a": "DOC030-G011",
+      "b": "DOC030-G012",
+      "label": "none",
+      "rationale": "DOC030-G011 的对象是量化进步（计时+题数）（T029/T033），DOC030-G012 的对象是周赛题训练读题转化（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P097",
+      "a": "DOC030-G011",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G011 的对象是量化进步（计时+题数）（T029/T033），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P098",
+      "a": "DOC030-G011",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G011 的对象是量化进步（计时+题数）（T029/T033），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P099",
+      "a": "DOC030-G011",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G011 的对象是量化进步（计时+题数）（T029/T033），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P100",
+      "a": "DOC030-G012",
+      "b": "DOC030-G013",
+      "label": "none",
+      "rationale": "DOC030-G012 的对象是周赛题训练读题转化（T035），DOC030-G013 的对象是提交后能立即修正（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P101",
+      "a": "DOC030-G012",
+      "b": "DOC030-G014",
+      "label": "none",
+      "rationale": "DOC030-G012 的对象是周赛题训练读题转化（T035），DOC030-G014 的对象是性能指标可信（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P102",
+      "a": "DOC030-G012",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G012 的对象是周赛题训练读题转化（T035），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P103",
+      "a": "DOC030-G013",
+      "b": "DOC030-G014",
+      "label": "related",
+      "rationale": "两者都在提交环节出问题：一个不让马上重交，一个给出的性能数据不可信。但一个是流程限制、一个是数据质量。",
+      "evidence_ids": [
+        "E0028",
+        "E0030"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P104",
+      "a": "DOC030-G013",
+      "b": "DOC030-G015",
+      "label": "none",
+      "rationale": "DOC030-G013 的对象是提交后能立即修正（T027），DOC030-G015 的对象是更充分的测试用例（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P105",
+      "a": "DOC030-G014",
+      "b": "DOC030-G015",
+      "label": "related",
+      "rationale": "T031 的诉求本质是「别等提交才知道错」：用例充分就能在本地自测，性能与通过率的反馈才可信。但 G015 是输入（用例），G014 是输出（指标）。",
+      "evidence_ids": [
+        "E0030",
+        "E0032"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G001",
+      "b": "DOC030-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P002",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G001",
+      "b": "DOC030-G003"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P003",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G001",
+      "b": "DOC030-G004"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P005",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G001",
+      "b": "DOC030-G006"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P029",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G003",
+      "b": "DOC030-G005"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P031",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G003",
+      "b": "DOC030-G007"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P056",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G005",
+      "b": "DOC030-G011"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P070",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G007",
+      "b": "DOC030-G008"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P081",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G008",
+      "b": "DOC030-G012"
+    },
+    {
+      "edge_id": "R010",
+      "type": "related",
+      "decision_id": "P085",
+      "conditions": [
+        "G010 通常在 G009 之后"
+      ],
+      "review_status": "pending",
+      "a": "DOC030-G009",
+      "b": "DOC030-G010"
+    },
+    {
+      "edge_id": "R011",
+      "type": "related",
+      "decision_id": "P103",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G013",
+      "b": "DOC030-G014"
+    },
+    {
+      "edge_id": "R012",
+      "type": "related",
+      "decision_id": "P105",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC030-G014",
+      "b": "DOC030-G015"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC030:S010",
+      "material_id": "M001",
+      "quote": "the main purpose is just to get a job",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4512,
+      "end_char": 4549,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S010",
+          "segment_start": 27,
+          "segment_end": 64,
+          "start_char": 4512,
+          "end_char": 4549
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 4485,
+        "end_char": 4820
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC030:S002",
+      "material_id": "M001",
+      "quote": "I practice them mainly for the job interviews",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 691,
+      "end_char": 736,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S002",
+          "segment_start": 543,
+          "segment_end": 588,
+          "start_char": 691,
+          "end_char": 736
+        }
+      ],
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 148,
+        "end_char": 737
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC030:S010",
+      "material_id": "M001",
+      "quote": "I want to like practice my coding skills",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4568,
+      "end_char": 4608,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S010",
+          "segment_start": 83,
+          "segment_end": 123,
+          "start_char": 4568,
+          "end_char": 4608
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 4485,
+        "end_char": 4820
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC030:S010",
+      "material_id": "M001",
+      "quote": "beneficial in my daily work as a student, but also my work",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4625,
+      "end_char": 4683,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S010",
+          "segment_start": 140,
+          "segment_end": 198,
+          "start_char": 4625,
+          "end_char": 4683
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 4485,
+        "end_char": 4820
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC030:S012",
+      "material_id": "M001",
+      "quote": "there's questions on arrays. There's questions on trees",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5102,
+      "end_char": 5157,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S012",
+          "segment_start": 142,
+          "segment_end": 197,
+          "start_char": 5102,
+          "end_char": 5157
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 4960,
+        "end_char": 5580
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC030:S012",
+      "material_id": "M001",
+      "quote": "I want to finish all the array questions in this category",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5200,
+      "end_char": 5257,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S012",
+          "segment_start": 240,
+          "segment_end": 297,
+          "start_char": 5200,
+          "end_char": 5257
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 4960,
+        "end_char": 5580
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC030:S012",
+      "material_id": "M001",
+      "quote": "I will fulfill my masterm",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5502,
+      "end_char": 5527,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S012",
+          "segment_start": 542,
+          "segment_end": 567,
+          "start_char": 5502,
+          "end_char": 5527
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 4960,
+        "end_char": 5580
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC030:S014",
+      "material_id": "M001",
+      "quote": "I usually just practicing code practice code questions during the interviewing season",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5737,
+      "end_char": 5822,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S014",
+          "segment_start": 33,
+          "segment_end": 118,
+          "start_char": 5737,
+          "end_char": 5822
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 5704,
+        "end_char": 6194
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC030:S014",
+      "material_id": "M001",
+      "quote": "if my mood is okay, I can do like 10 questions a day",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5836,
+      "end_char": 5888,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S014",
+          "segment_start": 132,
+          "segment_end": 184,
+          "start_char": 5836,
+          "end_char": 5888
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 5704,
+        "end_char": 6194
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC030:S016",
+      "material_id": "M001",
+      "quote": "I will practice daily if I know that an interview is coming",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6598,
+      "end_char": 6657,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S016",
+          "segment_start": 209,
+          "segment_end": 268,
+          "start_char": 6598,
+          "end_char": 6657
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 6389,
+        "end_char": 7306
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC030:S020",
+      "material_id": "M001",
+      "quote": "it does give me like a rough time on how much time I should spend on it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10141,
+      "end_char": 10212,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S020",
+          "segment_start": 559,
+          "segment_end": 630,
+          "start_char": 10141,
+          "end_char": 10212
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 9582,
+        "end_char": 10863
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC030:S032",
+      "material_id": "M001",
+      "quote": "propose like a recommended time for solving a question",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16868,
+      "end_char": 16922,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S032",
+          "segment_start": 1421,
+          "segment_end": 1475,
+          "start_char": 16868,
+          "end_char": 16922
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 15447,
+        "end_char": 16929
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC030:S020",
+      "material_id": "M001",
+      "quote": "Some medium questions actually take long, like a longer time than harder questions",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10472,
+      "end_char": 10554,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S020",
+          "segment_start": 890,
+          "segment_end": 972,
+          "start_char": 10472,
+          "end_char": 10554
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 9582,
+        "end_char": 10863
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC030:S006",
+      "material_id": "M001",
+      "quote": "he just sent me, like the the leetcode question numbers to me",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2711,
+      "end_char": 2772,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S006",
+          "segment_start": 170,
+          "segment_end": 231,
+          "start_char": 2711,
+          "end_char": 2772
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 2541,
+        "end_char": 3222
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC030:S006",
+      "material_id": "M001",
+      "quote": "if we're using the same platform he can just send me the number",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3120,
+      "end_char": 3183,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S006",
+          "segment_start": 579,
+          "segment_end": 642,
+          "start_char": 3120,
+          "end_char": 3183
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 2541,
+        "end_char": 3222
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC030:S008",
+      "material_id": "M001",
+      "quote": "it gives me like a more a more concise list of the questions that I should be practicing",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3581,
+      "end_char": 3669,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S008",
+          "segment_start": 58,
+          "segment_end": 146,
+          "start_char": 3581,
+          "end_char": 3669
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 3523,
+        "end_char": 4368
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC030:S008",
+      "material_id": "M001",
+      "quote": "these questions are more popular in in the job interviews",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3866,
+      "end_char": 3923,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S008",
+          "segment_start": 343,
+          "segment_end": 400,
+          "start_char": 3866,
+          "end_char": 3923
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 3523,
+        "end_char": 4368
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC030:S008",
+      "material_id": "M001",
+      "quote": "I just want to try a random question to just test myself",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4012,
+      "end_char": 4068,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S008",
+          "segment_start": 489,
+          "segment_end": 545,
+          "start_char": 4012,
+          "end_char": 4068
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 3523,
+        "end_char": 4368
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC030:S008",
+      "material_id": "M001",
+      "quote": "to see if there's a new algorithm that I haven't learned",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4119,
+      "end_char": 4175,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S008",
+          "segment_start": 596,
+          "segment_end": 652,
+          "start_char": 4119,
+          "end_char": 4175
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 3523,
+        "end_char": 4368
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC030:S004",
+      "material_id": "M001",
+      "quote": "on GrreksForGreeks. It actually, like, walk through the the exact algorithm",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1992,
+      "end_char": 2067,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S004",
+          "segment_start": 938,
+          "segment_end": 1013,
+          "start_char": 1992,
+          "end_char": 2067
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 1054,
+        "end_char": 2170
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC030:S004",
+      "material_id": "M001",
+      "quote": "provide more descriptions and more examples",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2083,
+      "end_char": 2126,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S004",
+          "segment_start": 1029,
+          "segment_end": 1072,
+          "start_char": 2083,
+          "end_char": 2126
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 1054,
+        "end_char": 2170
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC030:S018",
+      "material_id": "M001",
+      "quote": "it's also really important to go back to this question some other time",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9015,
+      "end_char": 9085,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S018",
+          "segment_start": 1615,
+          "segment_end": 1685,
+          "start_char": 9015,
+          "end_char": 9085
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 7400,
+        "end_char": 9127
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC030:S018",
+      "material_id": "M001",
+      "quote": "to make sure that you don't forget",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9086,
+      "end_char": 9120,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S018",
+          "segment_start": 1686,
+          "segment_end": 1720,
+          "start_char": 9086,
+          "end_char": 9120
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 7400,
+        "end_char": 9127
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC030:S030",
+      "material_id": "M001",
+      "quote": "I usually just time myself on how long it takes for me to solve",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14821,
+      "end_char": 14884,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S030",
+          "segment_start": 38,
+          "segment_end": 101,
+          "start_char": 14821,
+          "end_char": 14884
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 14783,
+        "end_char": 15302
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC030:S034",
+      "material_id": "M001",
+      "quote": "it also have a feature to to track all the questions I did",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17248,
+      "end_char": 17306,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S034",
+          "segment_start": 130,
+          "segment_end": 188,
+          "start_char": 17248,
+          "end_char": 17306
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 17118,
+        "end_char": 17640
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC030:S036",
+      "material_id": "M001",
+      "quote": "the questions from the weekly contest. They are they are worded differently",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18121,
+      "end_char": 18196,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S036",
+          "segment_start": 266,
+          "segment_end": 341,
+          "start_char": 18121,
+          "end_char": 18196
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 17855,
+        "end_char": 18692
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC030:S036",
+      "material_id": "M001",
+      "quote": "helps me to gain the reading skills, to transform, like a new set",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18328,
+      "end_char": 18393,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S036",
+          "segment_start": 473,
+          "segment_end": 538,
+          "start_char": 18328,
+          "end_char": 18393
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 17855,
+        "end_char": 18692
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC030:S028",
+      "material_id": "M001",
+      "quote": "If I click submit right after that the platform doesn't allow me to do that",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13873,
+      "end_char": 13948,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S028",
+          "segment_start": 228,
+          "segment_end": 303,
+          "start_char": 13873,
+          "end_char": 13948
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 13645,
+        "end_char": 14655
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC030:S028",
+      "material_id": "M001",
+      "quote": "you need to wait for a while to submit again",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14029,
+      "end_char": 14073,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S028",
+          "segment_start": 384,
+          "segment_end": 428,
+          "start_char": 14029,
+          "end_char": 14073
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 13645,
+        "end_char": 14655
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC030:S028",
+      "material_id": "M001",
+      "quote": "the performance is not always correct",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14247,
+      "end_char": 14284,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S028",
+          "segment_start": 602,
+          "segment_end": 639,
+          "start_char": 14247,
+          "end_char": 14284
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 13645,
+        "end_char": 14655
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC030:S028",
+      "material_id": "M001",
+      "quote": "it really does not reflect how well my code is",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14490,
+      "end_char": 14536,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S028",
+          "segment_start": 845,
+          "segment_end": 891,
+          "start_char": 14490,
+          "end_char": 14536
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 13645,
+        "end_char": 14655
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0032",
+      "source_id": "DOC030:S032",
+      "material_id": "M001",
+      "quote": "I really want it to add more test cases",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15471,
+      "end_char": 15510,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S032",
+          "segment_start": 24,
+          "segment_end": 63,
+          "start_char": 15471,
+          "end_char": 15510
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 15447,
+        "end_char": 16929
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0033",
+      "source_id": "DOC030:S032",
+      "material_id": "M001",
+      "quote": "they just give us like one to 3 test case",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15534,
+      "end_char": 15575,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S032",
+          "segment_start": 87,
+          "segment_end": 128,
+          "start_char": 15534,
+          "end_char": 15575
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 15447,
+        "end_char": 16929
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0034",
+      "source_id": "DOC030:S032",
+      "material_id": "M001",
+      "quote": "allow other users to add their custom at their test cases",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15915,
+      "end_char": 15972,
+      "candidate_locations": [
+        {
+          "source_id": "DOC030:S032",
+          "segment_start": 468,
+          "segment_end": 525,
+          "start_char": 15915,
+          "end_char": 15972
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 15447,
+        "end_char": 16929
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC030-C001",
+      "goal_id": "DOC030-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C002",
+      "goal_id": "DOC030-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C003",
+      "goal_id": "DOC030-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C004",
+      "goal_id": "DOC030-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C005",
+      "goal_id": "DOC030-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C006",
+      "goal_id": "DOC030-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C007",
+      "goal_id": "DOC030-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C008",
+      "goal_id": "DOC030-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C009",
+      "goal_id": "DOC030-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C010",
+      "goal_id": "DOC030-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C011",
+      "goal_id": "DOC030-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C012",
+      "goal_id": "DOC030-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C013",
+      "goal_id": "DOC030-G013",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C014",
+      "goal_id": "DOC030-G014",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC030-C015",
+      "goal_id": "DOC030-G015",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 105,
+    "evaluated_pairs": 105
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "assemble",
+    "readiness": "unchecked",
+    "limitations": [
+      "模型尚未经过 model-review；导出完整性检查不能替代模型质量审核。",
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。"
+    ],
+    "files": []
+  }
+}

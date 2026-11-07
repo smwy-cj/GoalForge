@@ -1,0 +1,515 @@
+{
+  "schema_version": "model-review-draft-1",
+  "report_id": "REVIEW-8eb1c17c782e61f9",
+  "mode": "inspect",
+  "input_model": {
+    "file_sha256": "f82796c31eec4886b5f6506d85e29a690903ecc2566825b79229ce6cf7814c49",
+    "model_id": "DOC023-goal-model",
+    "version": "v0.1.h1",
+    "core_sha256": "8eb1c17c782e61f9dab54cf1076ab67c5fc22c9fb0cb2af52e226496f69af77d",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "checks": [
+    {
+      "check_id": "integrity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "共享契约、ID、引用、边方向、有向环和关系覆盖检查。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "scope",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查声明的文档范围及证据来源。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "lineage",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查目标与候选双向映射；不自行补造映射。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "representation",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "failed",
+      "evidence": "正向决策与可视化边一致。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "trace_validity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "failed",
+      "evidence": "检查既有支持状态；不重新推断语义支持。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "attachments",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "核对附件安全路径、可取得性和实际字节哈希。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "human_records",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "只核对已提供意见的文件与版本绑定，不认证审核人身份。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "source_location",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "按 Unicode 码点和半开区间核对原句。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "semantic",
+      "type": "semantic",
+      "scope": "current_model",
+      "status": "not_run",
+      "evidence": "未调用独立语义审查模型；只保留上游判断与待审项。",
+      "execution": "not_run"
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "I-48f44687635c",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P001"
+      ],
+      "evidence_ids": [],
+      "reason": "Changed relation requires renewed evidence review",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-df19d94e450e",
+      "rule_id": "unassessed_relation",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P001"
+      ],
+      "evidence_ids": [],
+      "reason": "Relation has not been reassessed after node changes",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-da3a3d9e57f7",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P002"
+      ],
+      "evidence_ids": [],
+      "reason": "Changed relation requires renewed evidence review",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-7b7a2ff8bf4c",
+      "rule_id": "unassessed_relation",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P002"
+      ],
+      "evidence_ids": [],
+      "reason": "Relation has not been reassessed after node changes",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-7d12e0cc4e9e",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P003"
+      ],
+      "evidence_ids": [],
+      "reason": "Changed relation requires renewed evidence review",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-231e7a5c1768",
+      "rule_id": "unassessed_relation",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P003"
+      ],
+      "evidence_ids": [],
+      "reason": "Relation has not been reassessed after node changes",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-c4e034916c5c",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P004"
+      ],
+      "evidence_ids": [],
+      "reason": "Changed relation requires renewed evidence review",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-dd3179cdb5c2",
+      "rule_id": "unassessed_relation",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P004"
+      ],
+      "evidence_ids": [],
+      "reason": "Relation has not been reassessed after node changes",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-f1b81fad9c8c",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P005"
+      ],
+      "evidence_ids": [],
+      "reason": "Changed relation requires renewed evidence review",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-b9a0ec426ba2",
+      "rule_id": "unassessed_relation",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P005"
+      ],
+      "evidence_ids": [],
+      "reason": "Relation has not been reassessed after node changes",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-b4b9c2425e04",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P006"
+      ],
+      "evidence_ids": [],
+      "reason": "Changed relation requires renewed evidence review",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-e2e4be40eed4",
+      "rule_id": "unassessed_relation",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P006"
+      ],
+      "evidence_ids": [],
+      "reason": "Relation has not been reassessed after node changes",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-dbaae642db6b",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P007"
+      ],
+      "evidence_ids": [],
+      "reason": "Changed relation requires renewed evidence review",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-51d478e6bf9a",
+      "rule_id": "unassessed_relation",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P007"
+      ],
+      "evidence_ids": [],
+      "reason": "Relation has not been reassessed after node changes",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-f0dfa82e309b",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P008"
+      ],
+      "evidence_ids": [],
+      "reason": "Changed relation requires renewed evidence review",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-26b478024bb7",
+      "rule_id": "unassessed_relation",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "P008"
+      ],
+      "evidence_ids": [],
+      "reason": "Relation has not been reassessed after node changes",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-05684690c70e",
+      "rule_id": "retrace",
+      "type": "deterministic",
+      "severity": "blocking",
+      "target_ids": [
+        "DOC023-G001"
+      ],
+      "evidence_ids": [],
+      "reason": "Goal has missing or invalidated evidence support",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "open"
+    },
+    {
+      "issue_id": "I-61f7bfcfa650",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G003",
+        "DOC023-G012"
+      ],
+      "evidence_ids": [],
+      "reason": "更多可访问联系人是否改善内推结果未被直接确认，保留待审。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-b480fdf1cf24",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G004",
+        "DOC023-G009"
+      ],
+      "evidence_ids": [],
+      "reason": "内推意愿与简历曝光存在可能的间接路径，但未直接说明，保留不确定。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-354b289a3140",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G008",
+        "DOC023-G012"
+      ],
+      "evidence_ids": [],
+      "reason": "访问更多候选与找到合资格联系人可能有关，但不是所有更多结果都符合资格。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-e3a9687a3742",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G009",
+        "DOC023-G017"
+      ],
+      "evidence_ids": [],
+      "reason": "更充分表达可能影响内推意愿，但访谈未明确该作用。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-fe8a5b0b4a48",
+      "rule_id": "unresolved_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "P001"
+      ],
+      "evidence_ids": [],
+      "reason": "关系尚需人工判断：uncertain",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-74c3322dba7a",
+      "rule_id": "unresolved_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "P002"
+      ],
+      "evidence_ids": [],
+      "reason": "关系尚需人工判断：uncertain",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-90f0ec9acf6b",
+      "rule_id": "unresolved_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "P003"
+      ],
+      "evidence_ids": [],
+      "reason": "关系尚需人工判断：uncertain",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-c5ee8973a75a",
+      "rule_id": "unresolved_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "P004"
+      ],
+      "evidence_ids": [],
+      "reason": "关系尚需人工判断：uncertain",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-9e2eed1ca259",
+      "rule_id": "unresolved_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "P005"
+      ],
+      "evidence_ids": [],
+      "reason": "关系尚需人工判断：uncertain",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-d80a9c0e5253",
+      "rule_id": "unresolved_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "P006"
+      ],
+      "evidence_ids": [],
+      "reason": "关系尚需人工判断：uncertain",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-e0aac9355c18",
+      "rule_id": "unresolved_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "P007"
+      ],
+      "evidence_ids": [],
+      "reason": "关系尚需人工判断：uncertain",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    },
+    {
+      "issue_id": "I-2d201dae2a5c",
+      "rule_id": "unresolved_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "P008"
+      ],
+      "evidence_ids": [],
+      "reason": "关系尚需人工判断：uncertain",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    }
+  ],
+  "summary": {
+    "structure_status": "failed",
+    "semantic_status": "not_run",
+    "goal_count": 9,
+    "pair_count": 36,
+    "blocking_count": 17,
+    "needs_review_count": 12
+  },
+  "repair_attempts": [],
+  "unresolved_issue_ids": [
+    "I-48f44687635c",
+    "I-df19d94e450e",
+    "I-da3a3d9e57f7",
+    "I-7b7a2ff8bf4c",
+    "I-7d12e0cc4e9e",
+    "I-231e7a5c1768",
+    "I-c4e034916c5c",
+    "I-dd3179cdb5c2",
+    "I-f1b81fad9c8c",
+    "I-b9a0ec426ba2",
+    "I-b4b9c2425e04",
+    "I-e2e4be40eed4",
+    "I-dbaae642db6b",
+    "I-51d478e6bf9a",
+    "I-f0dfa82e309b",
+    "I-26b478024bb7",
+    "I-05684690c70e",
+    "I-61f7bfcfa650",
+    "I-b480fdf1cf24",
+    "I-354b289a3140",
+    "I-e3a9687a3742",
+    "I-fe8a5b0b4a48",
+    "I-74c3322dba7a",
+    "I-90f0ec9acf6b",
+    "I-c5ee8973a75a",
+    "I-9e2eed1ca259",
+    "I-d80a9c0e5253",
+    "I-e0aac9355c18",
+    "I-2d201dae2a5c"
+  ],
+  "limitations": [
+    "结构检查不证明语义正确。",
+    "未执行独立语义审查；模型人工状态来自实际反馈，检查报告自身未获人工确认。"
+  ],
+  "model_human_review_status": "pending",
+  "review_status": "pending"
+}

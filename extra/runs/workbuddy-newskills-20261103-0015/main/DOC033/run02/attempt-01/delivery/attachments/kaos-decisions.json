@@ -1,0 +1,168 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "9cc604af87a833177ee3000e67e9ccfe529b377898c23f735909f3d591aeca5a",
+    "judgments_sha256": "1ca8ffcd20d7060cec62e73c970f1da6c0742ba573e9ee59ba2228857f695fd7"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G012",
+      "child_ids": [
+        "G005",
+        "G006"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "两个子目标分别作用于『刷推荐流』与『主动搜索』两种情境，都能帮助找到喜欢的内容；但同时具备并不足以保证找到，且两者并非在同一情境下同时需要，更像按情境的替代而不是共同满足，因此只保留为待确认候选。",
+      "assumptions": [
+        "她会在推荐流与搜索两种情境之间切换",
+        "内容库中存在她可能喜欢的内容"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC033:T123",
+          "quote": "But now I can keep looking until I find something I like, just because of, like the sheer volume of content available.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC033:T049",
+          "quote": "So I don't spend that much time searching. I can just click around in my Youtube recommendations most of the time.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R3"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "她在手机上刷 Shorts 推荐流，觉得当前推荐不合口味",
+          "outcome": "unknown",
+          "rationale": "此情境只用得上个性化推荐（G005），时长/上传日期筛选（G006）不参与，无法证明两者需要同时具备。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "她想学一个已演进的技术概念，套用 >20 分钟与最新上传筛选后仍没有合适视频",
+          "outcome": "counterexample",
+          "rationale": "即使两项能力都在，也可能找不到合适内容，说明该组不满足『共同满足足以实现父目标』，只能算有帮助。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC033-goal-model",
+      "message": "关系判断记录（已逐项检查、无独立依据故未建边）：G001→G007 只有『先看到再分享』的时间先后（T173），未建 precedes；G013 与 G004 是同一睡前场景中的负面因素，不构成贡献关系；G002 与 G003 同为长视频但目的不同（背景占位 vs 深入主题），不构成精化；G006→G012 与 G006→G003 重叠且『找到喜欢的』范围过宽，未重复连边。是否需要补充其中任一条？"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC033-goal-model",
+      "message": "精化组判断记录（已逐项检查）：G003←[G006] 与 G007←[G008] 都只有一个子目标，不能构成 AND 组；G002←[内容选择, 设备/切标签] 属于 G002 已承接的手段，拆出即为机械拆分；G001←[醒后, 回家后] 是同一目标的两个情境例，不构成共同满足。仅 GR1（G012←[G005,G006]）保留为 proposed/partial，并附一条反例检查。是否接受不建立其他精化组？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "G008（搜索 Shorts）与 G011（不要大改）存在张力：她同时说这些问题不是 deal breaker、不会因此换平台（T155）。此外她明确不要『稍后观看列表』（G014），搜索能力是否会被她视为同一类负担？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "G009 是否应保留为正式目标？她自评临时刷新对日常帮助不大、近年很少发生，且更多发生在其他平台（T173/T175）。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "G010 只是『maybe』式建议，且她随后归纳问题时只数了搜索 Shorts 与临时刷新两项（T170-T172）。是否应降级为低优先级建议而非目标？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "G013 仅由『烦人』与『修好会更好』推断，且明确非 deal breaker；保留为独立目标，还是并入 G004 的例外条件更合适？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G015",
+      "message": "T045 结尾『listening to music, probably to be sick』转写含混，『听音乐』是否应作为独立用途保留？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G008",
+      "target_id": "G007",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "When she does not share the Short immediately and wants to share it later"
+      ],
+      "assumptions": [
+        "A Short she watched earlier can be found again if search works well"
+      ],
+      "rationale": "原句直接说搜索 Shorts 会让分享更容易：她常常不是看到就分享，而是过后再找。搜索是帮助分享的手段，但不保证分享一定发生，故为贡献而非精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC033:T173",
+          "quote": "And searching Youtube shorts would help me share videos more easily, because sometimes I don't share videos as soon as I see them.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G006",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "When the subject is a technical concept that has several iterations"
+      ],
+      "assumptions": [
+        "Filtered results still contain a video that explains the concept in depth"
+      ],
+      "rationale": "时长与上传日期筛选帮助找到既新又深入的视频，服务于『看完整长视频以深入主题』的目的；筛选只提高命中率，不保证一定找到或看完。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC033:T135",
+          "quote": "If I want to learn a technical concept right? Sometimes there are several iterations of a technical concept because it's evolved.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC033:T135",
+          "quote": "I would also want a video that explains it in depth.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G005",
+      "target_id": "G012",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "When she browses the recommendation feed rather than searching"
+      ],
+      "assumptions": [
+        "The personalized feed still contains content she may like"
+      ],
+      "rationale": "个性化推荐让她不必搜索、直接在推荐流里点选，帮助她一直看到找到喜欢的内容；推荐质量不等于必然命中，故为贡献而非充分实现。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC033:T049",
+          "quote": "So I don't spend that much time searching. I can just click around in my Youtube recommendations most of the time.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

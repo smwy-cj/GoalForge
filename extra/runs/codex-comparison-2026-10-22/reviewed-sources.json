@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "comparison-coverage",
+      "title": "本轮比对范围",
+      "queries": [
+        {
+          "id": "frozen-counts",
+          "source": {
+            "label": "GoalForge 首轮比对",
+            "files": [
+              {
+                "label": "metrics.json"
+              },
+              {
+                "label": "validation.json"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "比对范围",
+                "definition": "本轮对34篇产物中的398个本地目标建立语义候选对应，并对2263个本地关系对进行结构对应。"
+              }
+            ],
+            "caveats": [
+              "候选对应包含范围差异和部分重叠，不能当作准确率。"
+            ]
+          },
+          "columns": [
+            {
+              "field": "metric",
+              "label": "项目"
+            },
+            {
+              "field": "count",
+              "label": "数量"
+            }
+          ],
+          "rows": [
+            {
+              "metric": "访谈",
+              "count": 34
+            },
+            {
+              "metric": "本地目标",
+              "count": 398
+            },
+            {
+              "metric": "本地关系对",
+              "count": 2263
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "semantic-findings",
+      "title": "目标与精化的具体问题",
+      "queries": [
+        {
+          "id": "source-rechecks",
+          "source": {
+            "label": "逐文档自动评审",
+            "files": [
+              {
+                "label": "DOC023.json"
+              },
+              {
+                "label": "DOC013.json"
+              },
+              {
+                "label": "source-based-relation-reviews.json"
+              }
+            ],
+            "caveats": [
+              "这些判断由Codex结合原文作出，不是独立人工标注。"
+            ]
+          },
+          "summary": "DOC023出现200字符与200字的单位差异；DOC013增加了缺少源文支持的文件大小无限制；DOC010的降雨持续更新不足以实现极端天气告警。"
+        }
+      ]
+    },
+    {
+      "id": "remaining-scope",
+      "title": "结论的适用范围",
+      "queries": [
+        {
+          "id": "scope-limits",
+          "source": {
+            "label": "评审覆盖记录",
+            "files": [
+              {
+                "label": "paper-goal-correspondence.jsonl"
+              },
+              {
+                "label": "metrics.json"
+              }
+            ],
+            "caveats": [
+              "321个论文单方目标尚待完整源文裁决，未计为本地遗漏。",
+              "当前无法据此证明总体优于原论文。"
+            ]
+          },
+          "summary": "全部本地目标已有首轮对应，论文单方目标的全文支持裁决尚未全部完成。"
+        }
+      ]
+    }
+  ]
+}

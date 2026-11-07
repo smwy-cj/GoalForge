@@ -1,0 +1,696 @@
+{
+  "document_id": "DOC026",
+  "review_status": "first_pass_complete",
+  "local_goals": [
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G001",
+      "local_statement": "在步行不现实的距离上，实现从一处到另一处的位移。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自述这是使用 Uber 的主要目标",
+        "对照：能走到的地方就走"
+      ],
+      "paper_ids": [
+        "g0"
+      ],
+      "paper_statements": [
+        "Enable efficient and cost-effective transportation to a destination."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": false,
+      "source_support_judgment": "source_ambiguity",
+      "rationale": "回查 T005/T007，could walk to 与距离远也可能步行均与本地排他限定不一致；转写不清时保留一般位移目的并标歧义。",
+      "evidence": [
+        {
+          "evidence_id": "E0001",
+          "quote": "the main goal is transportation to get from one place to another",
+          "source_turn_ids": [
+            "T005"
+          ],
+          "start_char": 585,
+          "end_char": 649
+        },
+        {
+          "evidence_id": "E0002",
+          "quote": "if it's going to take like an hour and a half to get someplace. So I'll just walk even if it's kind of far away",
+          "source_turn_ids": [
+            "T007"
+          ],
+          "start_char": 1229,
+          "end_char": 1340
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G002",
+      "local_statement": "按耗时与价格权衡是否打车、以及是否改用其他交通方式。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "两条判据：时间成本、价格",
+        "他会主动比较开车、公交、步行"
+      ],
+      "paper_ids": [
+        "g7",
+        "g8"
+      ],
+      "paper_statements": [
+        "Consider time and cost efficiency in deciding transportation options.",
+        "Provide alternative transportation options with comparisons of estimated fares, travel time, and capacity."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "按价格时间比较打车与其他方式，容量是额外维度。",
+      "evidence": [
+        {
+          "evidence_id": "E0003",
+          "quote": "it's usually the amount of time it will take or the price in deciding whether or not to take ride",
+          "source_turn_ids": [
+            "T007"
+          ],
+          "start_char": 936,
+          "end_char": 1033
+        },
+        {
+          "evidence_id": "E0004",
+          "quote": "whether or not I'm able to drive there or I want to drive there or if there are other better means of transportation",
+          "source_turn_ids": [
+            "T007"
+          ],
+          "start_char": 1053,
+          "end_char": 1169
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G003",
+      "local_statement": "在多个车型中选最便宜的一档，人多时改选大车。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "默认选最便宜",
+        "例外：同行人多时看座位数"
+      ],
+      "paper_ids": [
+        "g8"
+      ],
+      "paper_statements": [
+        "Provide alternative transportation options with comparisons of estimated fares, travel time, and capacity."
+      ],
+      "correspondence": "local_narrower",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "最便宜车型和多人座位例外保留。",
+      "evidence": [
+        {
+          "evidence_id": "E0005",
+          "quote": "I usually just go for The cheapest one, to be honest",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 2491,
+          "end_char": 2543
+        },
+        {
+          "evidence_id": "E0006",
+          "quote": "unless if i'm going with more people",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 2545,
+          "end_char": 2581
+        },
+        {
+          "evidence_id": "E0007",
+          "quote": "there's a comfort that can sit four people",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 2598,
+          "end_char": 2640
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G004",
+      "local_statement": "下单前能看到附近车辆与预估到达时间、价格，据此决定是否等待或改期。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "界面会显示地图上的车辆与「X 分钟之外」",
+        "若价格过高可以选择晚点再走"
+      ],
+      "paper_ids": [
+        "g9",
+        "g17",
+        "g20"
+      ],
+      "paper_statements": [
+        "Display an estimated arrival time for each transportation option.",
+        "Show real-time location of available vehicles and drivers on a map.",
+        "Allow users to delay travel if the current price is deemed too high."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "车辆位置、ETA与价格决策整合。",
+      "evidence": [
+        {
+          "evidence_id": "E0008",
+          "quote": "I can also see a map with a couple different Ubers around",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 2767,
+          "end_char": 2824
+        },
+        {
+          "evidence_id": "E0009",
+          "quote": "if the price was too high, then I can choose to wait",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 2965,
+          "end_char": 3017
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G005",
+      "local_statement": "输入地址时实时给出候选，不必打完就能选。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自评「kind of helpful」"
+      ],
+      "paper_ids": [
+        "g1",
+        "g13"
+      ],
+      "paper_statements": [
+        "Provide suggestions for destinations based on travel history.",
+        "Provide autocomplete suggestions for inputted addresses."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "输入补全不等价根据历史建议目的地。",
+      "evidence": [
+        {
+          "evidence_id": "E0010",
+          "quote": "a couple of different options pop up as I'm typing it",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 2204,
+          "end_char": 2257
+        },
+        {
+          "evidence_id": "E0011",
+          "quote": "I can just click on whatever comes up before I necessarily finish typing it",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 2288,
+          "end_char": 2363
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G006",
+      "local_statement": "下单后能真正派到车，不出现长时间等待后「找不到司机」。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "症状：显示有车、点了要等很久，最后说找不到司机",
+        "他猜测是应用夸大供给，或司机看到请求后拒单"
+      ],
+      "paper_ids": [
+        "g3",
+        "g10",
+        "g18",
+        "g21"
+      ],
+      "paper_statements": [
+        "Deliver transportation solutions that minimize wait times.",
+        "Optimize the process of booking a ride for immediate or scheduled travel.",
+        "Display accurate driver availability status.",
+        "Notify the user if no drivers are available after a booking attempt."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "reasonable_inference",
+      "rationale": "实际可派车是诉求，显示无车通知只是失败处理；夸大供给原因尚属猜测。",
+      "evidence": [
+        {
+          "evidence_id": "E0012",
+          "quote": "it will take a really long time to actually schedule it",
+          "source_turn_ids": [
+            "T013"
+          ],
+          "start_char": 3595,
+          "end_char": 3650
+        },
+        {
+          "evidence_id": "E0013",
+          "quote": "it will end up saying that can't find a driver",
+          "source_turn_ids": [
+            "T013"
+          ],
+          "start_char": 3666,
+          "end_char": 3712
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G007",
+      "local_statement": "不因取消订单而拉低自己作为乘客的评分。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "他知道司机能看到乘客评分",
+        "因此尽量不取消，即使等待体验很差"
+      ],
+      "paper_ids": [
+        "g22",
+        "g23"
+      ],
+      "paper_statements": [
+        "Inform the user about the impact of cancellations on their rating.",
+        "Prevent passenger rating from being negatively impacted by ride cancellations."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "reasonable_inference",
+      "rationale": "担心取消损评分反推要求，不能当已证实平台评分机制。",
+      "evidence": [
+        {
+          "evidence_id": "E0014",
+          "quote": "I usually try not to cancel a ride",
+          "source_turn_ids": [
+            "T013"
+          ],
+          "start_char": 3938,
+          "end_char": 3972
+        },
+        {
+          "evidence_id": "E0015",
+          "quote": "the drivers will see a rating of the passenger as well. And I think that that damages my rating",
+          "source_turn_ids": [
+            "T013"
+          ],
+          "start_char": 4015,
+          "end_char": 4110
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G008",
+      "local_statement": "工作出行时以时间优先于价格（费用由公司承担）。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "前提：公司报销",
+        "取舍：多花 20 美元换少等 20 分钟可接受"
+      ],
+      "paper_ids": [
+        "g3",
+        "g7"
+      ],
+      "paper_statements": [
+        "Deliver transportation solutions that minimize wait times.",
+        "Consider time and cost efficiency in deciding transportation options."
+      ],
+      "correspondence": "local_narrower",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "公司报销条件下时间优先，不能泛化全部行程。",
+      "evidence": [
+        {
+          "evidence_id": "E0016",
+          "quote": "i usually care less about the price and more about the time in that case",
+          "source_turn_ids": [
+            "T019"
+          ],
+          "start_char": 5441,
+          "end_char": 5513
+        },
+        {
+          "evidence_id": "E0017",
+          "quote": "my work is going to cover it",
+          "source_turn_ids": [
+            "T019"
+          ],
+          "start_char": 5522,
+          "end_char": 5550
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G009",
+      "local_statement": "按对地区的熟悉度、路线复杂度与停留时长，在公交、租车与网约车之间选择。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "公交：熟悉地区且顺路才坐",
+        "租车：多天行程更自由",
+        "网约车：路线复杂时兜底"
+      ],
+      "paper_ids": [
+        "g2",
+        "g4",
+        "g5",
+        "g6"
+      ],
+      "paper_statements": [
+        "Offer convenient transportation options for unfamiliar areas.",
+        "Facilitate transportation decisions based on area familiarity.",
+        "Provide flexibility and freedom for extended travel.",
+        "Simplify complex transportation routes."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "熟悉度、复杂路线和多日自由度取舍整合。",
+      "evidence": [
+        {
+          "evidence_id": "E0018",
+          "quote": "it usually depends on both how familiar I am with the area",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 6191,
+          "end_char": 6249
+        },
+        {
+          "evidence_id": "E0019",
+          "quote": "if it's complicated like that, I would probably prefer And Uber in that case",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 6595,
+          "end_char": 6671
+        },
+        {
+          "evidence_id": "E0020",
+          "quote": "give me a little bit more freedom to rent a car than to do a ride share every time",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 6888,
+          "end_char": 6970
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G010",
+      "local_statement": "出问题时能联系到真人客服，而不是只能和机器人对话。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "起因：Uber Eats 送餐时间预估错误，客服体验极差，此后停用该服务",
+        "他怀疑对方是聊天机器人"
+      ],
+      "paper_ids": [
+        "g14",
+        "g15",
+        "g26",
+        "g27"
+      ],
+      "paper_statements": [
+        "Allow users to reach and interact with human customer support representatives.",
+        "Inform users when they are interacting with a chat bot versus a human.",
+        "Accurately estimate the time needed to complete services.",
+        "Provide effective customer service for resolving issues."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported_with_scope_note",
+      "rationale": "真人客服愿望明确，起因属于送餐而非单纯乘车；不确定是否机器人。",
+      "evidence": [
+        {
+          "evidence_id": "E0021",
+          "quote": "I wanted to talk to a person",
+          "source_turn_ids": [
+            "T031"
+          ],
+          "start_char": 8188,
+          "end_char": 8216
+        },
+        {
+          "evidence_id": "E0022",
+          "quote": "I think I was probably talking to a chat bot",
+          "source_turn_ids": [
+            "T031"
+          ],
+          "start_char": 8519,
+          "end_char": 8563
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G011",
+      "local_statement": "用应用内通话或消息与司机沟通，解决上车点不清、位置难找、自己会迟到等问题。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "场景：门牌难找、GPS 差、地点太热闹",
+        "用途：提前告知、多停靠时说明延误"
+      ],
+      "paper_ids": [
+        "g11",
+        "g19",
+        "g24"
+      ],
+      "paper_statements": [
+        "Ensure a seamless and efficient experience for booking and managing multi-stop rides.",
+        "Enable direct communication between users and drivers for pickup details or location changes.",
+        "Facilitate users in notifying drivers about delays during multi-stop trips."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "联系司机解决位置/延误目的明确。",
+      "evidence": [
+        {
+          "evidence_id": "E0023",
+          "quote": "I actually find that very helpful",
+          "source_turn_ids": [
+            "T039"
+          ],
+          "start_char": 10498,
+          "end_char": 10531
+        },
+        {
+          "evidence_id": "E0024",
+          "quote": "calling on their way to pick me up is usually really helpful",
+          "source_turn_ids": [
+            "T039"
+          ],
+          "start_char": 10887,
+          "end_char": 10947
+        },
+        {
+          "evidence_id": "E0025",
+          "quote": "maybe the house numbers are hard to see",
+          "source_turn_ids": [
+            "T039"
+          ],
+          "start_char": 10599,
+          "end_char": 10638
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G012",
+      "local_statement": "需要时能方便地修改上车点。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：改版后只在「不用当前定位」时才容易改",
+        "替代做法：直接打电话告诉司机"
+      ],
+      "paper_ids": [
+        "g12"
+      ],
+      "paper_statements": [
+        "Enable users to easily update their pickup location during the booking process."
+      ],
+      "correspondence": "equivalent",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "修改上车点易用性改进。",
+      "evidence": [
+        {
+          "evidence_id": "E0026",
+          "quote": "I think that it's not as simple to change it",
+          "source_turn_ids": [
+            "T041"
+          ],
+          "start_char": 12025,
+          "end_char": 12069
+        },
+        {
+          "evidence_id": "E0027",
+          "quote": "I give the driver a heads up instead of doing it on the app",
+          "source_turn_ids": [
+            "T041"
+          ],
+          "start_char": 12125,
+          "end_char": 12184
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC026",
+      "local_id": "DOC026-G013",
+      "local_statement": "行程结束后能评分、给小费，并查看金额用于分摊或报销。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "最常回看的是评分与小费入口",
+        "金额用于与朋友分摊或作为报销凭证"
+      ],
+      "paper_ids": [
+        "g28",
+        "g29",
+        "g30",
+        "g31"
+      ],
+      "paper_statements": [
+        "Allow users to rate the driver after a ride.",
+        "Allow users to tip the driver after a ride.",
+        "Provide users with a breakdown of ride costs for expense splitting.",
+        "Enable users to access ride details for reimbursement purposes."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "评分、小费和费用分摊报销多个结果合并。",
+      "evidence": [
+        {
+          "evidence_id": "E0028",
+          "quote": "they give you the option to rate the driver",
+          "source_turn_ids": [
+            "T045"
+          ],
+          "start_char": 12661,
+          "end_char": 12704
+        },
+        {
+          "evidence_id": "E0029",
+          "quote": "look at how much the ride was so that I could split split up the charge",
+          "source_turn_ids": [
+            "T045"
+          ],
+          "start_char": 12945,
+          "end_char": 13016
+        },
+        {
+          "evidence_id": "E0030",
+          "quote": "I can use that as a receipt to get reimbursed",
+          "source_turn_ids": [
+            "T045"
+          ],
+          "start_char": 13052,
+          "end_char": 13097
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    }
+  ],
+  "paper_only": [
+    {
+      "document_id": "DOC026",
+      "paper_id": "g16",
+      "statement": "Automatically apply promotional deals to bookings.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC026",
+      "paper_id": "g25",
+      "statement": "Simplify the process for service cancellation.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    }
+  ],
+  "source_review_limits": "Local-goal correspondence is complete; paper-only support outside pilot is not exhaustively judged.",
+  "counts": {
+    "local_goals": 13,
+    "local_with_correspondence": 13,
+    "paper_goals": 32,
+    "paper_with_correspondence": 30,
+    "paper_only": 2,
+    "local_only": 0
+  },
+  "local_refinement_count": 0,
+  "eligible_paper_runs": 9,
+  "relation_semantic_reviews": [],
+  "rubric": {
+    "why_how_hierarchy": "insufficient_expression",
+    "kaos_refinement_groups": "not_expressed_in_old_schema",
+    "full_group_sufficiency": "not_assessed",
+    "alternatives_completeness": "not_assessed",
+    "source_locations": "supported_by_deterministic_checks",
+    "human_or_independent_review": "not_run"
+  }
+}

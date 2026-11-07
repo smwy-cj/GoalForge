@@ -1,0 +1,23 @@
+{
+  "defect": "package replaces template placeholders inside already injected JSON payload",
+  "code": "skills/goal-model-building/scripts/kaos_model.py:607-609",
+  "impact": "Browser startup JSON.parse fails despite passed inspection and completed package; target review/export UI does not initialize.",
+  "results": [
+    {
+      "marker": "__CORE__",
+      "inspection": "passed",
+      "finalize": "completed",
+      "delivery": "case-1\\delivery\\goal-model.html",
+      "html_payload": "invalid",
+      "exception": "Invalid control character at: line 1 column 7102 (char 7101)"
+    },
+    {
+      "marker": "__UI__",
+      "inspection": "passed",
+      "finalize": "completed",
+      "delivery": "case-2\\delivery\\goal-model.html",
+      "html_payload": "invalid",
+      "exception": "Invalid control character at: line 1 column 7099 (char 7098)"
+    }
+  ]
+}

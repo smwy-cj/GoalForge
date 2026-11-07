@@ -1,0 +1,264 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "034c054b05b841b21ff4b1560ba3002ef17f313cb6e32bbdcde7faa395c9848a",
+    "judgments_sha256": "0808c7edf0d76cd6f7ac68f7d897370af798886bd6e02b63e22087128c09bd72"
+  },
+  "groups": [
+    {
+      "group_id": "FG001",
+      "parent_id": "G021",
+      "child_ids": [
+        "G028",
+        "G029",
+        "G032"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "这些辅助方式都可能漏掉重要内容；受访者明确不愿在不可靠时依赖AI。 R008为父目标对招聘目标的贡献，非本组内部依赖，不列入relation_ids。",
+      "assumptions": [
+        "场景仅为作者概念层检查，不是形式化充分性证明。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T059",
+          "quote": "Yeah, I think it would be good to receive notification for some important messages. But I think the point is that for current application. There is no a very good way to identify important messages from the others. Yeah, so I don't. I would probably not want to rely on that. Unless it's really reliable. So, for example, if we have this function of AI not find me the important message. But sometimes AI would miss some important message, and for me it would probably be better to not fully rely on it. Yeah.",
+          "role": "basis",
+          "start_char": 16012,
+          "end_char": 16521
+        }
+      ],
+      "relation_ids": [
+        "R005"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "AI识别准确并提醒且用户注意时，可帮助发现重要邮件。",
+          "outcome": "supports",
+          "rationale": "在所述条件下可解释这些子目标如何服务父目标；不扩大到所有场景。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "AI漏判重要邮件或摘要省略小字时，辅助动作完成仍会漏信息。",
+          "outcome": "counterexample",
+          "rationale": "未解决的充分性缺口保留候选；不补造根、额外前提目标或完整性。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "FG001",
+      "message": "这些辅助方式都可能漏掉重要内容；受访者明确不愿在不可靠时依赖AI。 R008为父目标对招聘目标的贡献，非本组内部依赖，不列入relation_ids。 异常场景：AI漏判重要邮件或摘要省略小字时，辅助动作完成仍会漏信息。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G014",
+      "target_id": "G018",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "AI先起草后人工调整及发送。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T019",
+          "quote": "Yes. So what did I usually do to write an email or respond to an email is that I would usually use AI assistant tool. Not necessarily in build assistant tool. So I would 1st list my main point. For example, I would I would list like my purpose. and then it like in 2 or 3 sentence. And then I would ask the AI Assistant tool to compose an email for me. and I would adjust it a little bit, and.",
+          "role": "basis",
+          "start_char": 6088,
+          "end_char": 6481
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G015",
+      "target_id": "G018",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "受访者在发送前调整AI草稿。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T019",
+          "quote": "Yes. So what did I usually do to write an email or respond to an email is that I would usually use AI assistant tool. Not necessarily in build assistant tool. So I would 1st list my main point. For example, I would I would list like my purpose. and then it like in 2 or 3 sentence. And then I would ask the AI Assistant tool to compose an email for me. and I would adjust it a little bit, and.",
+          "role": "basis",
+          "start_char": 6088,
+          "end_char": 6481
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G019",
+      "target_id": "G020",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "云端链接用于接收者跨设备方便查看。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T023",
+          "quote": "You mean like, do I attach like some files other than just text file, including like motivate medias like images and videos. I would say. Usually it's ha! It didn't happen that much. If I am sending multi media, I would probably upload it to the cloud and then send the link, because I think it's easier for the client to view it in any platform, including like Mobile or laptop. So no, not not really.",
+          "role": "basis",
+          "start_char": 7096,
+          "end_char": 7498
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G028",
+      "target_id": "G030",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "提取要点有助减少逐封阅读时间，不能保证重要细节不漏。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T053",
+          "quote": "Yeah, I would say, the routing test, I think, could be simplified is by reading all the emails. So just as I said, if we have, I assistant for that, that would be very helpful, because I spend a lot of time just reading every email.",
+          "role": "basis",
+          "start_char": 14742,
+          "end_char": 14974
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G029",
+      "target_id": "G021",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "高亮帮助注意容易漏掉的限制，未保证分类或投递无遗漏。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T047",
+          "quote": "Yeah, and then I won't miss missed out some keywords. Ju, just I could give you an example. So I was received. I I received this online assessment from this company called Tiktok. And they send me this online assessment with the link. And then I read it. And I said, Okay, I gonna prepare for it. And then, after I prepare for it after after I done it, I saw there's a small line on in the email saying, like you, we don't recommend you to take this twice like the second time. And I have been taking it once already. So I just missed that night, and and I was like wasting some time. So yeah, I think it's quite.",
+          "role": "basis",
+          "start_char": 12939,
+          "end_char": 13552
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G031",
+      "target_id": "G030",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "定期汇总是获回应的可选简化方案。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T055",
+          "quote": "Yeah, that that could be one solution. Yeah.",
+          "role": "basis",
+          "start_char": 15489,
+          "end_char": 15533
+        }
+      ]
+    },
+    {
+      "relation_id": "R007",
+      "source_id": "G026",
+      "target_id": "G014",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "内置客户端是已有AI起草目标的特定实现情境。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T037",
+          "quote": "Yes, I would definitely say, the feature I want is the AI assistance that is in bills in the email. So for example the ideal scenario would be if I just type. Dear Professor, what does the requirement for homework? One. Do we have to do? A or B, and it will just like compose and more like, well organized email for me. And also I, I I noticed this feature. Now, it's like when I said, Play attach is my resume, for example. But I didn't attach the resume. It will warn me before I send it. I think that is really good.",
+          "role": "basis",
+          "start_char": 11357,
+          "end_char": 11876
+        }
+      ]
+    },
+    {
+      "relation_id": "R008",
+      "source_id": "G021",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "不漏重要邮件帮助不遗漏招聘信息。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T049",
+          "quote": "yeah. So currently, cause I don't want to miss any message recruiting team. So I used at least 5 times a day.",
+          "role": "basis",
+          "start_char": 14266,
+          "end_char": 14375
+        }
+      ]
+    },
+    {
+      "relation_id": "R009",
+      "source_id": "G022",
+      "target_id": "G023",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先修改已发送邮件才可给收件人显示新版本。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T029",
+          "quote": "But for me. It would probably be better if there's an function of editing the email instead of sending a new one. So for the client. They could see the new email and old email, but they will see the new one. And if they want, they could see the editing history. So yeah, that that's something. I think it's a difficulty for me.",
+          "role": "basis",
+          "start_char": 8730,
+          "end_char": 9057
+        }
+      ]
+    },
+    {
+      "relation_id": "R010",
+      "source_id": "G036",
+      "target_id": "G035",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "以标签条件执行的检索属于一般邮件搜索。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T087",
+          "quote": "I say, the most important would definitely be searching. That's really important. I use it every day, and filtering by tags, or like I would say it's it could be done by searching, so I would say the second one will probably be scheduling.",
+          "role": "basis",
+          "start_char": 20014,
+          "end_char": 20253
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

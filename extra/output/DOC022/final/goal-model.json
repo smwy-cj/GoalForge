@@ -1,0 +1,1949 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC022-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "f3bd51fc8cecd2796d6ba03e15beb9d9b898493b29cf6ef9aefc1579126a46cf"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "8e124d1160ee198f7e02cbd5382e86560a57852d46fdffff44d5cdd45ad1bc0a"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "30af9ee6e82aaf7d81ac2829e88703b264144b9a1a6af18b15c283668e48705d"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "23a8f0f90a085f224b23df63f633d36714a3c3971f425614296633839308300a"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC022"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC022-G001",
+      "statement": "在任意机器上都能改代码，尤其是没有图形界面的服务器。",
+      "source_candidate_ids": [
+        "DOC022-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "选择 vim 的实用理由：机器上不一定装了别的编辑器",
+        "服务器只能通过终端访问，无法运行图形界面编辑器"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G002",
+      "statement": "把个人配置带到每一台机器，让各处环境一致。",
+      "source_candidate_ids": [
+        "DOC022-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "做法：维护一份 vim 配置文件，复制到服务器即可复现本地体验",
+        "这也是他称 vim「轻」的第二层含义"
+      ],
+      "evidence_ids": [
+        "E0004",
+        "E0005",
+        "E0006"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G003",
+      "statement": "本地环境可深度定制：外观、快捷键、语法主题都按自己习惯来。",
+      "source_candidate_ids": [
+        "DOC022-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "做法：装一堆插件、改界面「让它看起来很酷」",
+        "快捷键自定义到 ctrl+P / ctrl+E / 反斜杠+P"
+      ],
+      "evidence_ids": [
+        "E0007",
+        "E0008",
+        "E0009"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G004",
+      "statement": "全部操作靠键盘完成，手不离键盘以提升效率。",
+      "source_candidate_ids": [
+        "DOC022-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "自述这是 vim 效率优势的核心",
+        "自评「酷」的旧动机已淡化，但效率理由保留"
+      ],
+      "evidence_ids": [
+        "E0010",
+        "E0011"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G005",
+      "statement": "在大型项目里按文件名快速定位文件，并能跨文件全局搜索。",
+      "source_candidate_ids": [
+        "DOC022-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "手段：模糊搜索插件（fuzzy finder）+ 文件树"
+      ],
+      "evidence_ids": [
+        "E0012",
+        "E0013",
+        "E0014"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G006",
+      "statement": "在同一个终端窗口内分屏：一边编辑、一边执行，立刻看到运行结果。",
+      "source_candidate_ids": [
+        "DOC022-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "工具：tmux 分左右两栏（命令行 / vim）",
+        "修改后切到命令行执行，结果立刻可见"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G007",
+      "statement": "从编码、提交、评审到部署与线上监控，尽量在同一工具内完成。",
+      "source_candidate_ids": [
+        "DOC022-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "现状对比：终端工作流需频繁切浏览器（GitHub/Jenkins/AWS/Kibana）",
+        "VS Code 靠各类扩展把整条流水线收进编辑器"
+      ],
+      "evidence_ids": [
+        "E0017",
+        "E0018",
+        "E0019"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G008",
+      "statement": "编辑器必须支持插件/扩展，好把工具装配到满足自己的全部需求。",
+      "source_candidate_ids": [
+        "DOC022-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "理由：裸编辑器只负责改文本，开发者需要的远不止这些"
+      ],
+      "evidence_ids": [
+        "E0020",
+        "E0021"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G009",
+      "statement": "装扩展应像应用商店一样：可搜索、可看文档与评分，再一键安装。",
+      "source_candidate_ids": [
+        "DOC022-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "对照：vim 插件要翻 GitHub 页面、往配置文件里粘代码"
+      ],
+      "evidence_ids": [
+        "E0022",
+        "E0023"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G010",
+      "statement": "编辑器背后有活跃社区，遇到问题能查到别人的解法。",
+      "source_candidate_ids": [
+        "DOC022-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "他自己的 vim 学习路径：看 YouTube、Stack Overflow、问 GPT，几乎不读官方文档"
+      ],
+      "evidence_ids": [
+        "E0024",
+        "E0025"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC022-G011",
+      "statement": "写代码时获得语言相关的语法高亮与缩进支持，让代码更易读。",
+      "source_candidate_ids": [
+        "DOC022-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生兼开发者，vim 与 VS Code 双栖）",
+      "context": [
+        "他以此区分「代码空间」与记事本",
+        "承认这是编辑器的基础能力，不含个性化"
+      ],
+      "evidence_ids": [
+        "E0026",
+        "E0027"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC022-G001",
+      "b": "DOC022-G002",
+      "label": "related",
+      "rationale": "T031 把配置可迁移直接服务于「换机器也能干活」：把同一份配置放到服务器，远端环境就与本地一致。但 G001 是能不能改，G002 是改得顺不顺手。",
+      "evidence_ids": [
+        "E0001",
+        "E0004"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC022-G001",
+      "b": "DOC022-G003",
+      "label": "related",
+      "rationale": "T015 说本地会装插件、改界面，但服务器上只能用裸 vim——定制被限制在本地，不能破坏服务器可用性。两者共存但边界明确，互不替代。",
+      "evidence_ids": [
+        "E0002",
+        "E0007"
+      ],
+      "conditions": [
+        "G003 的定制不得依赖图形界面，否则在服务器上失效"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC022-G001",
+      "b": "DOC022-G004",
+      "label": "none",
+      "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G004 的对象是全键盘操作提效（T055/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC022-G001",
+      "b": "DOC022-G005",
+      "label": "none",
+      "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC022-G001",
+      "b": "DOC022-G006",
+      "label": "related",
+      "rationale": "T051 描述的工作流整体跑在终端里（tmux + vim + 命令行），终端正是 G001 访问服务器的方式。但 G001 是可达性、G006 是同一终端内的布局效率。",
+      "evidence_ids": [
+        "E0002",
+        "E0015"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC022-G001",
+      "b": "DOC022-G007",
+      "label": "none",
+      "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G007 的对象是全流程收在同一工具（T081/T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC022-G001",
+      "b": "DOC022-G008",
+      "label": "none",
+      "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC022-G001",
+      "b": "DOC022-G009",
+      "label": "none",
+      "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC022-G001",
+      "b": "DOC022-G010",
+      "label": "none",
+      "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC022-G001",
+      "b": "DOC022-G011",
+      "label": "none",
+      "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC022-G002",
+      "b": "DOC022-G003",
+      "label": "related",
+      "rationale": "定制的内容（插件、快捷键、主题）都写在配置文件里，配置可迁移就等于定制可迁移，两者是同一份文件的两面。但 G003 是内容、G002 是分发。",
+      "evidence_ids": [
+        "E0004",
+        "E0007"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC022-G002",
+      "b": "DOC022-G004",
+      "label": "none",
+      "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G004 的对象是全键盘操作提效（T055/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC022-G002",
+      "b": "DOC022-G005",
+      "label": "none",
+      "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC022-G002",
+      "b": "DOC022-G006",
+      "label": "none",
+      "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G006 的对象是终端分屏编辑与执行（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC022-G002",
+      "b": "DOC022-G007",
+      "label": "related",
+      "rationale": "T069 直接对比了两种做法：vim 靠维护并搬移配置文件，VS Code 靠账号同步设置。目标相同——到哪台机器都是熟悉的环境；手段不同。",
+      "evidence_ids": [
+        "E0005",
+        "E0018"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC022-G002",
+      "b": "DOC022-G008",
+      "label": "none",
+      "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC022-G002",
+      "b": "DOC022-G009",
+      "label": "none",
+      "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC022-G002",
+      "b": "DOC022-G010",
+      "label": "none",
+      "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC022-G002",
+      "b": "DOC022-G011",
+      "label": "none",
+      "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC022-G003",
+      "b": "DOC022-G004",
+      "label": "related",
+      "rationale": "T035–T051 的自定义核心就是键位（ctrl+P、ctrl+E、反斜杠+P），把常用动作绑到键盘，正是「手不离键盘」的实现方式。但 G003 还包含外观等与效率无关的部分。",
+      "evidence_ids": [
+        "E0008",
+        "E0010"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC022-G003",
+      "b": "DOC022-G005",
+      "label": "related",
+      "rationale": "T051 把模糊搜索绑到 ctrl+P，说明定位文件这个能力是通过自定义键位接入工作流的。但 G005 解决「找得到」、G003 解决「按我的习惯触发」。",
+      "evidence_ids": [
+        "E0009",
+        "E0012"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC022-G003",
+      "b": "DOC022-G006",
+      "label": "none",
+      "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G006 的对象是终端分屏编辑与执行（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC022-G003",
+      "b": "DOC022-G007",
+      "label": "none",
+      "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G007 的对象是全流程收在同一工具（T081/T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC022-G003",
+      "b": "DOC022-G008",
+      "label": "none",
+      "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC022-G003",
+      "b": "DOC022-G009",
+      "label": "none",
+      "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC022-G003",
+      "b": "DOC022-G010",
+      "label": "none",
+      "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC022-G003",
+      "b": "DOC022-G011",
+      "label": "related",
+      "rationale": "T035 提到语法高亮与配色也能在配置文件里自定义，说明 G011 的基础能力是 G003 的定制对象之一。但 G011 是标配能力，G003 是个性化。",
+      "evidence_ids": [
+        "E0008",
+        "E0026"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC022-G004",
+      "b": "DOC022-G005",
+      "label": "related",
+      "rationale": "模糊搜索被绑成快捷键后，找文件不再需要鼠标点文件树——G005 的效率红利正是靠 G004 的全键盘前提兑现的。",
+      "evidence_ids": [
+        "E0010",
+        "E0012"
+      ],
+      "conditions": [
+        "G005 的收益以 G004 的键位习惯为前提"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC022-G004",
+      "b": "DOC022-G006",
+      "label": "related",
+      "rationale": "T051 的 tmux 切窗口、ctrl+P 开文件全在键盘上完成，分屏本身也靠键盘切换，两者共同构成「手不离键盘」的工作流。但 G006 是多窗口布局、G004 是输入方式。",
+      "evidence_ids": [
+        "E0010",
+        "E0015"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC022-G004",
+      "b": "DOC022-G007",
+      "label": "none",
+      "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G007 的对象是全流程收在同一工具（T081/T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC022-G004",
+      "b": "DOC022-G008",
+      "label": "none",
+      "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC022-G004",
+      "b": "DOC022-G009",
+      "label": "none",
+      "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC022-G004",
+      "b": "DOC022-G010",
+      "label": "none",
+      "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC022-G004",
+      "b": "DOC022-G011",
+      "label": "none",
+      "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC022-G005",
+      "b": "DOC022-G006",
+      "label": "related",
+      "rationale": "T051 的完整流程是：文件树或模糊搜索打开文件 → 编辑 → 切到旁边命令行执行。定位文件是分屏工作流的前半段。",
+      "evidence_ids": [
+        "E0013",
+        "E0015"
+      ],
+      "conditions": [
+        "G006 的编辑动作以 G005 已定位文件为前提"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC022-G005",
+      "b": "DOC022-G007",
+      "label": "none",
+      "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G007 的对象是全流程收在同一工具（T081/T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC022-G005",
+      "b": "DOC022-G008",
+      "label": "none",
+      "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC022-G005",
+      "b": "DOC022-G009",
+      "label": "none",
+      "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC022-G005",
+      "b": "DOC022-G010",
+      "label": "none",
+      "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC022-G005",
+      "b": "DOC022-G011",
+      "label": "none",
+      "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC022-G006",
+      "b": "DOC022-G007",
+      "label": "related",
+      "rationale": "T087 把两套流程逐项对照：终端工作流在改完代码后必须切到浏览器做评审、部署、监控；G007 正是要把这些步骤收回同一界面。但 G006 只覆盖编码与执行。",
+      "evidence_ids": [
+        "E0016",
+        "E0017"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC022-G006",
+      "b": "DOC022-G008",
+      "label": "none",
+      "rationale": "DOC022-G006 的对象是终端分屏编辑与执行（T051），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC022-G006",
+      "b": "DOC022-G009",
+      "label": "none",
+      "rationale": "DOC022-G006 的对象是终端分屏编辑与执行（T051），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC022-G006",
+      "b": "DOC022-G010",
+      "label": "none",
+      "rationale": "DOC022-G006 的对象是终端分屏编辑与执行（T051），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC022-G006",
+      "b": "DOC022-G011",
+      "label": "none",
+      "rationale": "DOC022-G006 的对象是终端分屏编辑与执行（T051），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC022-G007",
+      "b": "DOC022-G008",
+      "label": "related",
+      "rationale": "T091 说明整条流水线是靠一个个扩展接进来的（GitHub、Actions、Azure、Datadog），G008 是 G007 的实现前提。但 G008 是能力开放，G007 是具体结果。",
+      "evidence_ids": [
+        "E0017",
+        "E0020"
+      ],
+      "conditions": [
+        "G007 依赖 G008 提供的扩展机制"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC022-G007",
+      "b": "DOC022-G009",
+      "label": "none",
+      "rationale": "DOC022-G007 的对象是全流程收在同一工具（T081/T087），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC022-G007",
+      "b": "DOC022-G010",
+      "label": "none",
+      "rationale": "DOC022-G007 的对象是全流程收在同一工具（T081/T087），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC022-G007",
+      "b": "DOC022-G011",
+      "label": "none",
+      "rationale": "DOC022-G007 的对象是全流程收在同一工具（T081/T087），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC022-G008",
+      "b": "DOC022-G009",
+      "label": "related",
+      "rationale": "两者都关于扩展：G008 要求「能有扩展」，G009 要求「好找好评估好装」。前者是生态存在性、后者是获取体验；vim 有插件但安装体验差，正好说明二者可分离。",
+      "evidence_ids": [
+        "E0020",
+        "E0022"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC022-G008",
+      "b": "DOC022-G010",
+      "label": "related",
+      "rationale": "T103 把两者直接绑定：「有插件/扩展意味着有整个社区在支持它，没人想用一个没有社区的产品」。但 G008 是机制、G010 是人。",
+      "evidence_ids": [
+        "E0020",
+        "E0024"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC022-G008",
+      "b": "DOC022-G011",
+      "label": "none",
+      "rationale": "DOC022-G008 的对象是支持插件扩展（T103），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC022-G009",
+      "b": "DOC022-G010",
+      "label": "related",
+      "rationale": "T097 说商店里能看到文档、评分与讨论，正是社区信息在安装环节的呈现；G010 要的「能查别人怎么解决」在这个页面就能看到一部分。但 G010 还包括安装之后的长期求助。",
+      "evidence_ids": [
+        "E0022",
+        "E0024"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC022-G009",
+      "b": "DOC022-G011",
+      "label": "none",
+      "rationale": "DOC022-G009 的对象是应用商店式装扩展（T097），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC022-G010",
+      "b": "DOC022-G011",
+      "label": "none",
+      "rationale": "DOC022-G010 的对象是活跃社区可查解法（T109），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G001",
+      "b": "DOC022-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P002",
+      "conditions": [
+        "G003 的定制不得依赖图形界面，否则在服务器上失效"
+      ],
+      "review_status": "pending",
+      "a": "DOC022-G001",
+      "b": "DOC022-G003"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P005",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G001",
+      "b": "DOC022-G006"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P011",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G002",
+      "b": "DOC022-G003"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P015",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G002",
+      "b": "DOC022-G007"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P020",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G003",
+      "b": "DOC022-G004"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P021",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G003",
+      "b": "DOC022-G005"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P027",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G003",
+      "b": "DOC022-G011"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P028",
+      "conditions": [
+        "G005 的收益以 G004 的键位习惯为前提"
+      ],
+      "review_status": "pending",
+      "a": "DOC022-G004",
+      "b": "DOC022-G005"
+    },
+    {
+      "edge_id": "R010",
+      "type": "related",
+      "decision_id": "P029",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G004",
+      "b": "DOC022-G006"
+    },
+    {
+      "edge_id": "R011",
+      "type": "related",
+      "decision_id": "P035",
+      "conditions": [
+        "G006 的编辑动作以 G005 已定位文件为前提"
+      ],
+      "review_status": "pending",
+      "a": "DOC022-G005",
+      "b": "DOC022-G006"
+    },
+    {
+      "edge_id": "R012",
+      "type": "related",
+      "decision_id": "P041",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G006",
+      "b": "DOC022-G007"
+    },
+    {
+      "edge_id": "R013",
+      "type": "related",
+      "decision_id": "P046",
+      "conditions": [
+        "G007 依赖 G008 提供的扩展机制"
+      ],
+      "review_status": "pending",
+      "a": "DOC022-G007",
+      "b": "DOC022-G008"
+    },
+    {
+      "edge_id": "R014",
+      "type": "related",
+      "decision_id": "P050",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G008",
+      "b": "DOC022-G009"
+    },
+    {
+      "edge_id": "R015",
+      "type": "related",
+      "decision_id": "P051",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G008",
+      "b": "DOC022-G010"
+    },
+    {
+      "edge_id": "R016",
+      "type": "related",
+      "decision_id": "P053",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC022-G009",
+      "b": "DOC022-G010"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC022:S016",
+      "material_id": "M001",
+      "quote": "You have to work at different machines",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4131,
+      "end_char": 4169,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S016",
+          "segment_start": 568,
+          "segment_end": 606,
+          "start_char": 4131,
+          "end_char": 4169
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 3563,
+        "end_char": 5456
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC022:S016",
+      "material_id": "M001",
+      "quote": "when I have to like change some things at at the server, I can just easily open the vim and and modify the code",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4640,
+      "end_char": 4751,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S016",
+          "segment_start": 1077,
+          "segment_end": 1188,
+          "start_char": 4640,
+          "end_char": 4751
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 3563,
+        "end_char": 5456
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC022:S022",
+      "material_id": "M001",
+      "quote": "you can only run vim on the terminal, because you can only access to the command line interface",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6448,
+      "end_char": 6543,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S022",
+          "segment_start": 527,
+          "segment_end": 622,
+          "start_char": 6448,
+          "end_char": 6543
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 5921,
+        "end_char": 6792
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC022:S032",
+      "material_id": "M001",
+      "quote": "make every system just like your local local customization",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10289,
+      "end_char": 10347,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S032",
+          "segment_start": 1401,
+          "segment_end": 1459,
+          "start_char": 10289,
+          "end_char": 10347
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 8888,
+        "end_char": 10550
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC022:S032",
+      "material_id": "M001",
+      "quote": "if you put put it in the server and and the server will will be just like your local beam",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10389,
+      "end_char": 10478,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S032",
+          "segment_start": 1501,
+          "segment_end": 1590,
+          "start_char": 10389,
+          "end_char": 10478
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 8888,
+        "end_char": 10550
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC022:S016",
+      "material_id": "M001",
+      "quote": "if I don't get used to the vim, I may find difficulty to easily modify codes on the server",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4774,
+      "end_char": 4864,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S016",
+          "segment_start": 1211,
+          "segment_end": 1301,
+          "start_char": 4774,
+          "end_char": 4864
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 3563,
+        "end_char": 5456
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC022:S016",
+      "material_id": "M001",
+      "quote": "I will like customize them to to. I will install a bunch of like cool plugins",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5004,
+      "end_char": 5081,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S016",
+          "segment_start": 1441,
+          "segment_end": 1518,
+          "start_char": 5004,
+          "end_char": 5081
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 3563,
+        "end_char": 5456
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC022:S036",
+      "material_id": "M001",
+      "quote": "I can customize like, which shortcut I want to activate it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12381,
+      "end_char": 12439,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S036",
+          "segment_start": 211,
+          "segment_end": 269,
+          "start_char": 12381,
+          "end_char": 12439
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 12170,
+        "end_char": 12785
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC022:S052",
+      "material_id": "M001",
+      "quote": "control. P is open the file in this project",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16112,
+      "end_char": 16155,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S052",
+          "segment_start": 1258,
+          "segment_end": 1301,
+          "start_char": 16112,
+          "end_char": 16155
+        }
+      ],
+      "original_locator": {
+        "line_start": 52,
+        "line_end": 52,
+        "start_char": 14854,
+        "end_char": 17255
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC022:S056",
+      "material_id": "M001",
+      "quote": "everything you do is on the keyboard",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19103,
+      "end_char": 19139,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S056",
+          "segment_start": 1309,
+          "segment_end": 1345,
+          "start_char": 19103,
+          "end_char": 19139
+        }
+      ],
+      "original_locator": {
+        "line_start": 56,
+        "line_end": 56,
+        "start_char": 17794,
+        "end_char": 20204
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC022:S064",
+      "material_id": "M001",
+      "quote": "keep keeping your hands on the keyboard. Just do improve your efficiency",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 23764,
+      "end_char": 23836,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S064",
+          "segment_start": 695,
+          "segment_end": 767,
+          "start_char": 23764,
+          "end_char": 23836
+        }
+      ],
+      "original_locator": {
+        "line_start": 64,
+        "line_end": 64,
+        "start_char": 23069,
+        "end_char": 23931
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC022:S034",
+      "material_id": "M001",
+      "quote": "I can install like fuzzy search in in my, in my vein",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11031,
+      "end_char": 11083,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S034",
+          "segment_start": 412,
+          "segment_end": 464,
+          "start_char": 11031,
+          "end_char": 11083
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 10619,
+        "end_char": 12062
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC022:S042",
+      "material_id": "M001",
+      "quote": "helps you to find the file by its name",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13195,
+      "end_char": 13233,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S042",
+          "segment_start": 68,
+          "segment_end": 106,
+          "start_char": 13195,
+          "end_char": 13233
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 13127,
+        "end_char": 14120
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC022:S042",
+      "material_id": "M001",
+      "quote": "you can search the stream across every files in your project",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13971,
+      "end_char": 14031,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S042",
+          "segment_start": 844,
+          "segment_end": 904,
+          "start_char": 13971,
+          "end_char": 14031
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 13127,
+        "end_char": 14120
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC022:S052",
+      "material_id": "M001",
+      "quote": "I will split the tmox split the window into half, and one is for command line one is for vim",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15228,
+      "end_char": 15320,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S052",
+          "segment_start": 374,
+          "segment_end": 466,
+          "start_char": 15228,
+          "end_char": 15320
+        }
+      ],
+      "original_locator": {
+        "line_start": 52,
+        "line_end": 52,
+        "start_char": 14854,
+        "end_char": 17255
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC022:S052",
+      "material_id": "M001",
+      "quote": "I will execute the code. There, I can. I can just see the result immediately",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16749,
+      "end_char": 16825,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S052",
+          "segment_start": 1895,
+          "segment_end": 1971,
+          "start_char": 16749,
+          "end_char": 16825
+        }
+      ],
+      "original_locator": {
+        "line_start": 52,
+        "line_end": 52,
+        "start_char": 14854,
+        "end_char": 17255
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC022:S082",
+      "material_id": "M001",
+      "quote": "the whole pipeline is integrating Vs code like",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 32810,
+      "end_char": 32856,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S082",
+          "segment_start": 1449,
+          "segment_end": 1495,
+          "start_char": 32810,
+          "end_char": 32856
+        }
+      ],
+      "original_locator": {
+        "line_start": 82,
+        "line_end": 82,
+        "start_char": 31361,
+        "end_char": 33174
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC022:S088",
+      "material_id": "M001",
+      "quote": "Everything can be finished on Vs code",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 35476,
+      "end_char": 35513,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S088",
+          "segment_start": 1831,
+          "segment_end": 1868,
+          "start_char": 35476,
+          "end_char": 35513
+        }
+      ],
+      "original_locator": {
+        "line_start": 88,
+        "line_end": 88,
+        "start_char": 33645,
+        "end_char": 36008
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC022:S092",
+      "material_id": "M001",
+      "quote": "There's a extension on the Vs code",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 37537,
+      "end_char": 37571,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S092",
+          "segment_start": 1164,
+          "segment_end": 1198,
+          "start_char": 37537,
+          "end_char": 37571
+        }
+      ],
+      "original_locator": {
+        "line_start": 92,
+        "line_end": 92,
+        "start_char": 36373,
+        "end_char": 37578
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC022:S104",
+      "material_id": "M001",
+      "quote": "there's a must for editor",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 40306,
+      "end_char": 40331,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S104",
+          "segment_start": 68,
+          "segment_end": 93,
+          "start_char": 40306,
+          "end_char": 40331
+        }
+      ],
+      "original_locator": {
+        "line_start": 104,
+        "line_end": 104,
+        "start_char": 40238,
+        "end_char": 40952
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC022:S104",
+      "material_id": "M001",
+      "quote": "The the editor must supports plugins or extensions",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 40832,
+      "end_char": 40882,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S104",
+          "segment_start": 594,
+          "segment_end": 644,
+          "start_char": 40832,
+          "end_char": 40882
+        }
+      ],
+      "original_locator": {
+        "line_start": 104,
+        "line_end": 104,
+        "start_char": 40238,
+        "end_char": 40952
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC022:S098",
+      "material_id": "M001",
+      "quote": "just go to the marketplace and search the extension you want",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 39428,
+      "end_char": 39488,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S098",
+          "segment_start": 367,
+          "segment_end": 427,
+          "start_char": 39428,
+          "end_char": 39488
+        }
+      ],
+      "original_locator": {
+        "line_start": 98,
+        "line_end": 98,
+        "start_char": 39061,
+        "end_char": 39845
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC022:S098",
+      "material_id": "M001",
+      "quote": "You can see the ratings",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 39602,
+      "end_char": 39625,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S098",
+          "segment_start": 541,
+          "segment_end": 564,
+          "start_char": 39602,
+          "end_char": 39625
+        }
+      ],
+      "original_locator": {
+        "line_start": 98,
+        "line_end": 98,
+        "start_char": 39061,
+        "end_char": 39845
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC022:S110",
+      "material_id": "M001",
+      "quote": "when it has a community, you can, you can see how people solve issues",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 42070,
+      "end_char": 42139,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S110",
+          "segment_start": 613,
+          "segment_end": 682,
+          "start_char": 42070,
+          "end_char": 42139
+        }
+      ],
+      "original_locator": {
+        "line_start": 110,
+        "line_end": 110,
+        "start_char": 41457,
+        "end_char": 42787
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC022:S110",
+      "material_id": "M001",
+      "quote": "How big is the community",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 42575,
+      "end_char": 42599,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S110",
+          "segment_start": 1118,
+          "segment_end": 1142,
+          "start_char": 42575,
+          "end_char": 42599
+        }
+      ],
+      "original_locator": {
+        "line_start": 110,
+        "line_end": 110,
+        "start_char": 41457,
+        "end_char": 42787
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC022:S010",
+      "material_id": "M001",
+      "quote": "you may have to like, like customize like in indent distance, or some like highlighting",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1434,
+      "end_char": 1521,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S010",
+          "segment_start": 329,
+          "segment_end": 416,
+          "start_char": 1434,
+          "end_char": 1521
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 1105,
+        "end_char": 1774
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC022:S012",
+      "material_id": "M001",
+      "quote": "The syntax highlighting will help you like read the code better",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2940,
+      "end_char": 3003,
+      "candidate_locations": [
+        {
+          "source_id": "DOC022:S012",
+          "segment_start": 1022,
+          "segment_end": 1085,
+          "start_char": 2940,
+          "end_char": 3003
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 1918,
+        "end_char": 3104
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC022-C001",
+      "goal_id": "DOC022-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C002",
+      "goal_id": "DOC022-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C003",
+      "goal_id": "DOC022-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C004",
+      "goal_id": "DOC022-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C005",
+      "goal_id": "DOC022-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C006",
+      "goal_id": "DOC022-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C007",
+      "goal_id": "DOC022-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C008",
+      "goal_id": "DOC022-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C009",
+      "goal_id": "DOC022-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C010",
+      "goal_id": "DOC022-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC022-C011",
+      "goal_id": "DOC022-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 55,
+    "evaluated_pairs": 55
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "fc856a9511484ea8fdc9df6aca6cb83f2c92e1483e16062d767f858120c5330b",
+    "core_sha256": "4ad55e910f5a641ade6de9a8261b2463dcfcca148aab94d95b337d2cee4483c4",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "3839bc9dae4b91735c2ebe740c476548b4f01bbb0c8f1e5cfec742c5b46cc356"
+}

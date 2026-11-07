@@ -1,0 +1,73 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "618f07deeb337e6a54baa4a54102ae9331fd5b51b1a3b26761a8bbd5812e6fdf",
+    "judgments_sha256": "1d8e87d4367198e055dc640368c997fbbe653f79c8a4ffcec76901ebcb40b9fc"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "jam 仅被评为 really cool，原文没有说明是否实际发起过 jam；是否应保留为独立目标，还是并入 G008 的社交能力偏好？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G012",
+      "message": "G012（首页推荐普通用户的公共歌单）与 G013（按相似听众推荐歌单）机制不同，是否应合并为同一“获取他人歌单”目标？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "sleep timer 是现有能力的偏好表达，是否应提升为硬性要求？当前按 I like that 的强度保留为偏好。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC005-goal-model",
+      "message": "本模型未建立任何 AND 精化组：现有目标之间只有贡献联系，未找到可声称“共同满足即足以实现父目标”的组合；是否需要补充上层目标（如“随时有音频陪伴”）由评审判断。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G003",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "当他使用自己的歌单并以整张循环方式播放时"
+      ],
+      "assumptions": [],
+      "rationale": "整张歌单循环播放使背景音在他不干预的情况下持续，因此该目标帮助维持 G001；不声称它是唯一或充分手段。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC005:T027",
+          "quote": "I put it on shuffle. and then I put it on a repeat once the entire playlist is over.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G001",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "在需要分散现实压力时"
+      ],
+      "assumptions": [],
+      "rationale": "T013 说明背景中的音乐分散现实压力；持续有背景音是获得该效果的前提，故 G001 帮助 G002 而非充分保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC005:T013",
+          "quote": "I think it kind of distracts me from the stress of the real world.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

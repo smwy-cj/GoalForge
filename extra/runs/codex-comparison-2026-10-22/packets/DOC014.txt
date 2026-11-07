@@ -1,0 +1,90 @@
+# DOC014
+## LOCAL
+G001 出门前按温度与降雨预报决定穿什么、骑车还是坐车、要不要带伞。 | context: 通常在前一天查看; 判断依据为温度区间与降雨概率（25% 以上视为可能下雨）
+  E0001 DOC014:S002 I can plan whether I should wear my thick coat or my light coat
+  E0002 DOC014:S002 I make sure I have my umbrella
+  E0003 DOC014:S002 I might skip going through bicycle and just go through the bus
+G002 按出门时段查看逐小时温度与降水概率，而不是只看全天概况。 | context: 关注早晨上课前那一小时的温度与降水
+  E0004 DOC014:S006 it gives my gives me like an hour by hour detail
+  E0005 DOC014:S006 what's the what's the precipitation chances
+  E0006 DOC014:S006 if in in the morning time, you know, like before our classes, what what the temperature is around that time
+G003 极端天气发生时，能获知严重程度与官方建议的应对方式（撤离/躲避/防护）。 | context: 期望应用成为最早看到消息的地方; 现状：严重预警也由地方政府与气象机构发布
+  E0007 DOC014:S016 I'll read for what they recommend
+  E0008 DOC014:S016 Should I evacuate the city? Should I just seek shelter, not go outside
+  E0009 DOC014:S012 weather.com would be a good spot that I'll 1st see it
+G004 旅行前数周查看月/周预报（含云量），据以判断行程是否可行。 | context: 场景：海滩度假要看云量；观星/天文行程怕阴天; 也会先查历史数据
+  E0010 DOC014:S018 I check for future weather focus because it gives you focus
+  E0011 DOC014:S018 not just like the temperature and precipitation. As I mentioned earlier, but also like the cloud coverage
+  E0012 DOC014:S018 if you're going for a beach vacation, let's say, and it's going to be super cloudy. Then, you know, you might need to reconsider
+G005 出发前 2–3 天用更准的短期预报做最终决定（去或不去）。 | context: 自评：几周前的预报很难准，2–3 天内通常可靠; 误差可能正好落在「去/不去」的分界上
+  E0013 DOC014:S020 you should probably wait till the end and then then decide, based on what the final temperature is like
+  E0014 DOC014:S020 at least like 2 or 3 days before. It's it's like, usually right
+G006 雷达图更细致、更直观，并可切换多种参数（降水、积雪等）。 | context: 对标 windy.com：整个应用就是雷达，动画细节多; 自评若做好，可能因此付费
+  E0015 DOC014:S044 the radar could be better
+  E0016 DOC014:S044 There are like multiple parameters that you you can see
+  E0017 DOC014:S044 which has like much detailed and like intuitive like radar map
+G007 页面上减少广告，尤其是不要有视频弹窗广告夹在内容之间。 | context: 现状：一页 4–5 个广告，含视频弹窗; 后果：需要上下滚动确认内容是否刷新
+  E0018 DOC014:S038 there is 1, 2, 3, 4 ads
+  E0019 DOC014:S038 if you have 4 or 5 ads and then couple of video ads. it's just too much
+  E0020 DOC014:S070 everything is separated by ads, like, when I click on from one tap to the next, like there is a big ad chunk between
+G008 界面配色更素净（纯黑或纯白），而不是现在的暗蓝色。 | context: 与广告并列为界面上的两处不满
+  E0021 DOC014:S036 the background, is like a dull blue, which I don't really like
+  E0022 DOC014:S036 they could just make it plain black or plain white
+G009 能按具体地点（徒步起点、山中酒店等）查天气，而不只是按城市。 | context: 场景：目的地不是城市，城市级数据没有参考价值
+  E0023 DOC014:S068 sometimes it's not necessarily like a city that you're going to, or a state that you're going to
+  E0024 DOC014:S068 having having that very local data would be definitely helpful
+  E0025 DOC014:S068 You just want to like, see whether at this particular hotel that's in like middle of nowhere
+G010 默认不接收天气通知，需要时再自行打开。 | context: 自述在电脑上偏好零通知; 通过浏览器站点设置关闭通知权限
+  E0026 DOC014:S056 I usually prefer no notifications
+  E0027 DOC014:S058 I just prefer it off. So I've kept it off.
+G011 看到全球范围的重要天气事件新闻（不限本地）。 | context: 首页有专门区块，点开进入站内新闻页
+  E0028 DOC014:S052 it does have sections for like weather events, not necessarily in my city
+  E0029 DOC014:S052 important weather events. Ha! Happening across the world
+G012 位置数据只留在本地、不被留存，也不因账号泄露而暴露所在城市。 | context: 推断：位置存在本地浏览器缓存，清缓存即可清除; 顾虑集中在已登录状态下的泄露风险
+  E0030 DOC014:S062 if it's in my local cache, you know, I can always just clear it from my cache, and the data is gone
+  E0031 DOC014:S062 If I am logged in, though, I might be a little worried
+  E0032 DOC014:S062 a leak could be a little scary
+G013 保留可用的个性化设置：收藏常看城市、按偏好切换摄氏/华氏。 | context: 已设两个城市（现居与家乡）; 默认华氏，手动切到摄氏
+  E0033 DOC014:S046 I do have my cities set. So it's usually my home city.
+  E0034 DOC014:S048 it is Fahrenheit. There is a option to change it at the top
+  E0035 DOC014:S072 it does have the option to like star your favorite cities
+## PAPER summarized goals
+g0 Provide temperature forecasts for the next day.
+g1 Indicate the chance of rain for the next day.
+g2 Provide hourly weather details for the next day.
+g3 Include parameters like snow coverage and precipitation in a visual display.
+g4 Warn users about important weather events in their area.
+g5 Provide detailed information about severe weather events, including severity and global updates.
+g6 Offer guides or resources to ensure user safety during extreme weather events.
+g7 Include recommendations from local authorities or organizations during weather alerts.
+g8 Enable users to make informed decisions and adjust activities based on weather conditions.
+g9 Provide weather forecasts including cloud coverage for trip planning.
+g10 Allow users to check historical weather data for trip planning.
+g11 Enable monitoring weather forecasts starting weeks before a planned trip.
+g12 Offer accurate weather predictions a few days before a planned event.
+g13 Provide very local weather information for specific locations.
+g14 Allow users to select favorite cities for easy weather access.
+g15 Provide information on the source of its data.
+g16 Allow users to share information with others.
+g17 Provide precise hourly coverage.
+g18 Display detailed information on user interaction with specific data points.
+g19 Allow users to set preferred locations for personalized updates.
+g20 Send a daily notification summarizing the next day's information.
+g21 Provide a user interface to display main weather information including temperature, daily minimum and maximum temperature, and weather events.
+g22 Display detailed weather data, such as wind speed, humidity, UV index, and perceived temperature for specific hours.
+g23 Allow temperature display to switch between Fahrenheit and Celsius.
+g24 Include the ability to switch between different time views such as morning, afternoon, evening, and overnight.
+g25 Provide navigation through tabs for viewing hourly, daily, weekend, monthly, and radar information.
+g26 Minimize the presence of ads to avoid distraction.
+g27 Restrict video and pop-up ads to enhance the user experience.
+g28 Reduce ad-related interruptions between UI elements and transitions.
+g29 Provide an option to change the background color to a plain color.
+g30 Enhance radar functionality with detailed and intuitive features.
+g31 Provide detailed radar data with animations.
+g32 Allow users to manage notification settings.
+g33 Enable users to control whether notifications are on or off on specific devices.
+g34 Manage site permissions.
+g35 Clear location data to ensure privacy.
+g36 Prevent storage of location data on external servers.
+g37 Prevent unauthorized access to user data.
+g38 Improve the readability and navigability of the user interface.

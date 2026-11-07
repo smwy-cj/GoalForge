@@ -1,0 +1,23 @@
+{
+  "decided_at_utc": "2026-10-24T02:43:35.415779+00:00",
+  "decision": "allow_expanded_generation_with_final_pilot_report_pending",
+  "authority": "parent workflow decision based on completed-object review progress and engineering evidence",
+  "evidence": [
+    "six frozen pilot deliveries independently reinspected: structure passed and source/manifest verified",
+    "independent-context reviewer reported all 64 goals and 16 groups checked with source context",
+    "reviewer reported no confirmed revised serious semantic deviation; DOC023 conjunction restricted to two selection conditions",
+    "local ambiguous rain wording being narrowed in a separate DOC010 package"
+  ],
+  "remaining": [
+    "complete pilot alignment/coverage report",
+    "independent recheck of DOC010 wording revision",
+    "expanded documents require their own source-based generation and review"
+  ],
+  "stop_condition": "If final pilot report identifies unresolved serious revised regression, hold affected expanded deliveries and repair without overwriting original versions.",
+  "semantic_acceptance": false,
+  "human_acceptance": false,
+  "final_pilot_report_received": true,
+  "final_pilot_gate": "pass_after_DOC010_outer_v2_followup",
+  "final_pilot_report": "review/pilot-gate.md",
+  "final_pilot_followup": "review/pilot-v2-followup.md"
+}

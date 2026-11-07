@@ -1,0 +1,334 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "15b24f81c61a2eb792bb80a167325b56c3600d50ad0c3ef5beb56530a94079bf",
+    "judgments_sha256": "3f668734d624c9957e86ad7a3e8b8b86eb5c2ee8117a84a13ac6fd1af3f79e37"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G002",
+      "child_ids": [
+        "G007",
+        "G008"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Upload and live stream are described content-sharing methods, but they are alternatives and their completion does not ensure successful permitted publication.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "Sure. So I'll talk about it on a per user basis. So as a viewer first, st so for me, I think it's essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters of some sort. and secondly, to be able to search visually, so I would like to be able to see a large volume of different options and click through it, seeing, perhaps by all sorts of science fiction, or all sorts of live sports. and I can walk through that seeing little images of a thumbnail, so to speak, with a description, perhaps, who made it, the Creator, or the actors in it, or so on, and so forth. and then the other half of it would be from the streamer, or somebody uploading for them. I would want to see some option where I could go and create to upload a video or start a stream. And I would want to be able to either. Take that video, put some sort of description in, add, perhaps a transcript captions of the like. and one thing, I think would be very useful, particularly in a video streaming would be to edit those. So I can add sound effects. Trim crop. that sort of thing.",
+          "role": "basis",
+          "start_char": 1901,
+          "end_char": 3007
+        }
+      ],
+      "relation_ids": [
+        "R003",
+        "R004"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "A valid uploaded video or authorized live stream can make content available for sharing.",
+          "outcome": "supports",
+          "rationale": "This limited constructed scenario explains why the candidate is plausible; it does not establish general sufficiency."
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "An upload can finish but remain unpublished or be prohibited; streaming can be unavailable under the reported wait.",
+          "outcome": "counterexample",
+          "rationale": "The unresolved exception prevents supported/complete status; no extra goal is invented to patch the hierarchy."
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G007",
+      "child_ids": [
+        "G017",
+        "G018"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Format compatibility and length concerns identify possible obstacles but do not ensure successful file transfer.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T018",
+          "quote": "I think there could be some complications there as well in their sense. Let's suppose they have a video that's already made, and they want to upload it, so there might be some technical complications there of making sure their formats are compatible with the system, making sure there's no length requirements. Once it actually starts to get uploaded. How do they actually publish that to the web? Is that a simple process? Do they have to sit and wait for the whole video to be published or uploaded before publication. and things of that nature.",
+          "role": "basis",
+          "start_char": 4474,
+          "end_char": 5021
+        }
+      ],
+      "relation_ids": [
+        "R008",
+        "R009"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "A compatible acceptable-length file removes two potential upload barriers.",
+          "outcome": "supports",
+          "rationale": "This limited constructed scenario explains why the candidate is plausible; it does not establish general sufficiency."
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "Network failure or missing authorization can still prevent upload.",
+          "outcome": "counterexample",
+          "rationale": "The unresolved exception prevents supported/complete status; no extra goal is invented to patch the hierarchy."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "Joint sufficiency is unconfirmed: Upload and live stream are described content-sharing methods, but they are alternatives and their completion does not ensure successful permitted publication."
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "Joint sufficiency is unconfirmed: Format compatibility and length concerns identify possible obstacles but do not ensure successful file transfer."
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G005",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Text or filter search is an explicitly requested means to locate a video to choose.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "Sure. So I'll talk about it on a per user basis. So as a viewer first, st so for me, I think it's essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters of some sort. and secondly, to be able to search visually, so I would like to be able to see a large volume of different options and click through it, seeing, perhaps by all sorts of science fiction, or all sorts of live sports. and I can walk through that seeing little images of a thumbnail, so to speak, with a description, perhaps, who made it, the Creator, or the actors in it, or so on, and so forth. and then the other half of it would be from the streamer, or somebody uploading for them. I would want to see some option where I could go and create to upload a video or start a stream. And I would want to be able to either. Take that video, put some sort of description in, add, perhaps a transcript captions of the like. and one thing, I think would be very useful, particularly in a video streaming would be to edit those. So I can add sound effects. Trim crop. that sort of thing.",
+          "role": "basis",
+          "start_char": 1901,
+          "end_char": 3007
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G006",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Visual thumbnail browsing is a separately requested means to choose among videos.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "Sure. So I'll talk about it on a per user basis. So as a viewer first, st so for me, I think it's essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters of some sort. and secondly, to be able to search visually, so I would like to be able to see a large volume of different options and click through it, seeing, perhaps by all sorts of science fiction, or all sorts of live sports. and I can walk through that seeing little images of a thumbnail, so to speak, with a description, perhaps, who made it, the Creator, or the actors in it, or so on, and so forth. and then the other half of it would be from the streamer, or somebody uploading for them. I would want to see some option where I could go and create to upload a video or start a stream. And I would want to be able to either. Take that video, put some sort of description in, add, perhaps a transcript captions of the like. and one thing, I think would be very useful, particularly in a video streaming would be to edit those. So I can add sound effects. Trim crop. that sort of thing.",
+          "role": "basis",
+          "start_char": 1901,
+          "end_char": 3007
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G007",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Uploading an existing video is one stated way creators share content.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "Sure. So I'll talk about it on a per user basis. So as a viewer first, st so for me, I think it's essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters of some sort. and secondly, to be able to search visually, so I would like to be able to see a large volume of different options and click through it, seeing, perhaps by all sorts of science fiction, or all sorts of live sports. and I can walk through that seeing little images of a thumbnail, so to speak, with a description, perhaps, who made it, the Creator, or the actors in it, or so on, and so forth. and then the other half of it would be from the streamer, or somebody uploading for them. I would want to see some option where I could go and create to upload a video or start a stream. And I would want to be able to either. Take that video, put some sort of description in, add, perhaps a transcript captions of the like. and one thing, I think would be very useful, particularly in a video streaming would be to edit those. So I can add sound effects. Trim crop. that sort of thing.",
+          "role": "basis",
+          "start_char": 1901,
+          "end_char": 3007
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G008",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Live streaming is another stated way creators share content.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "Sure. So I'll talk about it on a per user basis. So as a viewer first, st so for me, I think it's essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters of some sort. and secondly, to be able to search visually, so I would like to be able to see a large volume of different options and click through it, seeing, perhaps by all sorts of science fiction, or all sorts of live sports. and I can walk through that seeing little images of a thumbnail, so to speak, with a description, perhaps, who made it, the Creator, or the actors in it, or so on, and so forth. and then the other half of it would be from the streamer, or somebody uploading for them. I would want to see some option where I could go and create to upload a video or start a stream. And I would want to be able to either. Take that video, put some sort of description in, add, perhaps a transcript captions of the like. and one thing, I think would be very useful, particularly in a video streaming would be to edit those. So I can add sound effects. Trim crop. that sort of thing.",
+          "role": "basis",
+          "start_char": 1901,
+          "end_char": 3007
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G012",
+      "target_id": "G005",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Vague-criteria search is a narrower case of the search capability, adding a meaningful-result expectation.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T014",
+          "quote": "Sure. I think some simple obstacles might be not finding what I'm looking for. even if it hypothetically should exist. I want to be able to search, using vague criteria, but that should still get me meaningful results. and in terms of actually viewing the content. I think some obstacles might be more technical in nature of. I need to receive that content on my machine in a reasonable way. I don't want it to freeze constantly. I want a seamless stream of buffered data.",
+          "role": "basis",
+          "start_char": 3327,
+          "end_char": 3799
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G005",
+      "target_id": "G016",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Quick searching helps obtain needed information, but finding an irrelevant video would not fulfill the information purpose.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T016",
+          "quote": "When does the user? So for me, I would use these sorts of platforms as a viewer for entertainment purposes and for education purposes. I, and I guess that could be summarized in a general sense of I want to gain information. So I don't wanna read a book. I want to have a quick search. Give me some information as to what I'm trying to get. and then I can go from there. Okay.",
+          "role": "basis",
+          "start_char": 3938,
+          "end_char": 4314
+        }
+      ]
+    },
+    {
+      "relation_id": "R007",
+      "source_id": "G015",
+      "target_id": "G016",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Educational viewing can provide information but is not claimed as the only or sufficient path to every information need.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T016",
+          "quote": "When does the user? So for me, I would use these sorts of platforms as a viewer for entertainment purposes and for education purposes. I, and I guess that could be summarized in a general sense of I want to gain information. So I don't wanna read a book. I want to have a quick search. Give me some information as to what I'm trying to get. and then I can go from there. Okay.",
+          "role": "basis",
+          "start_char": 3938,
+          "end_char": 4314
+        }
+      ]
+    },
+    {
+      "relation_id": "R008",
+      "source_id": "G017",
+      "target_id": "G007",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Removing format incompatibility helps upload but does not ensure transfer or publication succeeds.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T018",
+          "quote": "I think there could be some complications there as well in their sense. Let's suppose they have a video that's already made, and they want to upload it, so there might be some technical complications there of making sure their formats are compatible with the system, making sure there's no length requirements. Once it actually starts to get uploaded. How do they actually publish that to the web? Is that a simple process? Do they have to sit and wait for the whole video to be published or uploaded before publication. and things of that nature.",
+          "role": "basis",
+          "start_char": 4474,
+          "end_char": 5021
+        }
+      ]
+    },
+    {
+      "relation_id": "R009",
+      "source_id": "G018",
+      "target_id": "G007",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Avoiding length barriers can help upload; transport and format barriers may remain.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T018",
+          "quote": "I think there could be some complications there as well in their sense. Let's suppose they have a video that's already made, and they want to upload it, so there might be some technical complications there of making sure their formats are compatible with the system, making sure there's no length requirements. Once it actually starts to get uploaded. How do they actually publish that to the web? Is that a simple process? Do they have to sit and wait for the whole video to be published or uploaded before publication. and things of that nature.",
+          "role": "basis",
+          "start_char": 4474,
+          "end_char": 5021
+        }
+      ]
+    },
+    {
+      "relation_id": "R010",
+      "source_id": "G021",
+      "target_id": "G022",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The described latest-content area depends on the user's prior subscription to creators.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T030",
+          "quote": "Sure. So from a viewer's side. I think they have the capability to add things to their watch list. or they can perhaps follow or subscribe to various types of content. so they can, as I mentioned before, go to the accounts or creators and click on a subscribe button, at which point they can access. This in a central area known as the subscriptions tab, which can be accessed below the Hamburger menu on the left hand side of the screen with a small subscriptions icon. and then it will list out the latest content from said creators, who they are subscribed to.",
+          "role": "basis",
+          "start_char": 9369,
+          "end_char": 9932
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

@@ -1,0 +1,418 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC023",
+  "input_binding": {
+    "source_input_sha256": "74562fc114c2b412a6e15d3bd59634d795a092135b8001437d2181158808d6d8",
+    "source_sha256": "2966cdb21f4ac14cb0797faf9c1297e343e83f8b4dd509cd3d473d3048d7bffb",
+    "windows_sha256": "057ba6e2ced0331302cca6690aa8fbc62f327e816f64d015288b311ca7a06eea",
+    "candidates_sha256": "b1537603c82e57fdd4ba77766f953f6d2b68e2ff3009285c9160792f72c6f70f",
+    "extraction_sha256": "7895eb9ed43b15895fc53b8228fa2ff72c516197dc3589317572490c04ceb169"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "unknown",
+    "temperature": "unknown",
+    "budget": "1 initial pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 1,
+    "stop_reason": "完成一轮全窗口捕获与全篇校正，原文较短且无新增有据意图，按预算停止。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC023:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC023:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC023:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC023:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC023:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC023:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC023:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC023:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC023:W0009",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "回看全部 19 轮：核对 T003 两项主要目标与 T007/T009 流程的目的-方式关系；确认 T007、T009 中 'they' 均指搜索结果中的人；核对 T011 的因果解释、T013/T015/T017 的条件（非会员结果受限、成本、字符上限）与 T007 的相反情形（对方不接受时仅保持 pending）。未发现与已建目标相反的陈述。",
+    "source_ids": [
+      "DOC023:T000",
+      "DOC023:T001",
+      "DOC023:T002",
+      "DOC023:T003",
+      "DOC023:T004",
+      "DOC023:T005",
+      "DOC023:T006",
+      "DOC023:T007",
+      "DOC023:T008",
+      "DOC023:T009",
+      "DOC023:T010",
+      "DOC023:T011",
+      "DOC023:T012",
+      "DOC023:T013",
+      "DOC023:T014",
+      "DOC023:T015",
+      "DOC023:T016",
+      "DOC023:T017",
+      "DOC023:T018"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "访谈话题陈述，说明'要谈如何在 LinkedIn 建立连接'，未给出可达到的结果；具体意图在 C002/C004 中。"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "第一个主要目标原句，直接对应扩大连接数。"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "明确说明增加连接数是为了让查看者看到其活跃状态，作为独立的目的目标保留。"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "第二个主要目标原句，主体限定（现任员工）与对象（目标公司）完整保留。"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "是对转介作用的理由陈述（竞争激烈、简历更容易被看到），并入 G003 的目标表述，与核心动作一致。"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "检索动作与两个关键词是其核心内容，条件（为求转介时）保留在 context。"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "查看经历并据匹配与否决定是否发起连接，构成一个条件动作目标。"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "随邀请发送的附言是独立动作，内容项（自我介绍、请求转介）在陈述中保留。"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "以 'I can then' 描述流程可能性而非表达意愿，且以对方接受为前提；已作为 G007 之后的流程说明保留在未决问题中，不另立目标。"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "与 C011 同属一个选择动作的排除项，合并后以 AND 条件与排除项同时保留，未改成 OR。"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "明确的选择规则（现任员工且校友），是 G005 的主句依据。"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "同校说明是附言的内容之一，并入 G007 并保留其提高转介意愿的目的。"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "是对校友互助倾向的信念（'I think'、'tends to'），非目标；作为 G004 选择大学关键词的判断理由保留。"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "是'只有现任员工能转介'的事实性理由，非目标；已作为 G004/G005 的条件与理由保留。"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "障碍陈述（搜索结果常不符合目标），本身不是目标；其影响记录在 GR1 的异常场景检查与未决问题中。"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "障碍/平台限制（非会员只能看有限结果），非目标；已作为 G008/G009 存在的理由及其条件保留。"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "购买 Premium 是有明确结果的行动方案，偏好强度与成本代价保留在 context。"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "调整关键词是替代方式，两种具体做法并列保留，不拆成互斥目标。"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "障碍陈述（200 字符上限与压缩耗时），非目标；约束以 G007 的 context 条件与证据保留。"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "在有限字数内传达想说的内容，属于附言这一动作的质量要求，并入 G007 而非另立节点。"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T003",
+          "quote": "So the 1st one is to enlarge my the number of my connections on my profile",
+          "role": "basis",
+          "start_char": 494,
+          "end_char": 568
+        }
+      ],
+      "candidate_ids": [
+        "C002"
+      ],
+      "final_goal_ids": [
+        "G001"
+      ],
+      "outcome": "represented",
+      "reason": "第一个主要目标原句，G001 完整承接主体、对象与方向。"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T003",
+          "quote": "to make sure that I to to show people that I'm active on Linkedin",
+          "role": "basis",
+          "start_char": 837,
+          "end_char": 902
+        }
+      ],
+      "candidate_ids": [
+        "C003"
+      ],
+      "final_goal_ids": [
+        "G002"
+      ],
+      "outcome": "represented",
+      "reason": "该句是增加连接数的目的，独立成 G002，未被压进 G001。"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T003",
+          "quote": "my sec second goal is to to get referrals from current employees for my 3rd company",
+          "role": "basis",
+          "start_char": 1018,
+          "end_char": 1101
+        }
+      ],
+      "candidate_ids": [
+        "C004",
+        "C005"
+      ],
+      "final_goal_ids": [
+        "G003"
+      ],
+      "outcome": "represented",
+      "reason": "两个候选合并为 G003：目标本体加竞争激烈/简历被看到的理由，主体限定未丢。"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T009",
+          "quote": "I will only choose people who is currently a company employee and who was my university's student",
+          "role": "basis",
+          "start_char": 3998,
+          "end_char": 4095
+        }
+      ],
+      "candidate_ids": [
+        "C011",
+        "C010"
+      ],
+      "final_goal_ids": [
+        "G005"
+      ],
+      "outcome": "represented",
+      "reason": "AND 条件与排除项在同一目标中保留，未拆成两个选择目标。"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "and I will usually like add a message to introduce myself and I maybe will also tell them like I want to. If they will like to refer me for the position",
+          "role": "basis",
+          "start_char": 2621,
+          "end_char": 2773
+        }
+      ],
+      "candidate_ids": [
+        "C008",
+        "C012",
+        "C020"
+      ],
+      "final_goal_ids": [
+        "G007"
+      ],
+      "outcome": "represented",
+      "reason": "附言的三项内容合并为同一动作目标，'usually / maybe' 的语气未被强化为强制。"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T013",
+          "quote": "in the worst case, like there are just like one or 2, or even none of the people in the search result",
+          "role": "basis",
+          "start_char": 5852,
+          "end_char": 5953
+        }
+      ],
+      "candidate_ids": [
+        "C015",
+        "C016"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "障碍陈述不立目标，但作为 GR1 的异常场景证据保留；已在组检查中引用。"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T017",
+          "quote": "usually for a non-member is 200 characters",
+          "role": "basis",
+          "start_char": 7292,
+          "end_char": 7334
+        }
+      ],
+      "candidate_ids": [
+        "C019"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "平台限制作为 G007 的条件保留，未升级为独立的目标或质量指标。"
+    },
+    {
+      "check_id": "S8",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T015",
+          "quote": "to modify the keywords in my when I was doing the searching. so I may kind of like delete one or 2 of the keyword. or like to be more specific",
+          "role": "basis",
+          "start_char": 6446,
+          "end_char": 6588
+        }
+      ],
+      "candidate_ids": [
+        "C018"
+      ],
+      "final_goal_ids": [
+        "G009"
+      ],
+      "outcome": "represented",
+      "reason": "替代方式与其具体做法在同一目标中保留，未与购买 Premium 混为一组必做步骤。"
+    }
+  ],
+  "limitations": [
+    "原始材料为英文访谈自动转写，含识别噪声（如 Linking=LinkedIn、except=accept、'the Madison' 等），未取得音频无法核对。",
+    "受访者口中的 200 字符上限与 Premium 权限为其自述，未经平台资料核实。",
+    "'my 3rd company' 的所指在转写中不明，目标按'所申请的公司'泛化处理并保留为未决问题。"
+  ]
+}

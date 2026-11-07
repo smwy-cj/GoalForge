@@ -1,0 +1,73 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "8dd3ec79d971ccb68dd7078a3a94ef3b25bd015ad742c2debf742fc919d958f3",
+    "judgments_sha256": "cd5b728d903eda8aaf4d6b86e432e6ba078d349d6bd83f2da1aed87cd15a604a"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G001",
+      "child_ids": [
+        "G010",
+        "G012",
+        "G016",
+        "G019"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "防误分类、可靠送达、突出细节和有条件通知有助于不漏招聘消息，但用户阅读与后续行动仍有缺口。",
+      "assumptions": [
+        "分析假设：消息送达且标记正确，用户尚未查看，不能保证及时获知。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T059",
+          "quote": "Yeah, I think it would be good to receive notification for some important messages. But I think the point is that for current application. There is no a very good way to identify important messages from the others. Yeah, so I don't. I would probably not want to rely on that. Unless it's really reliable. So, for example, if we have this function of AI not find me the important message. But sometimes AI would miss some important message, and for me it would probably be better to not fully rely on it. Yeah.",
+          "role": "basis",
+          "start_char": 16012,
+          "end_char": 16521
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G017",
+      "child_ids": [
+        "G015",
+        "G018"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "单信主旨提炼和可考虑的多信汇总能减轻阅读，但原文未确认汇总方式或保证减少全部阅读负担。",
+      "assumptions": [
+        "分析假设：摘要漏掉限制条件时仍需读原文；不能证明方案完整。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T053",
+          "quote": "Yeah, I would say, the routing test, I think, could be simplified is by reading all the emails. So just as I said, if we have, I assistant for that, that would be very helpful, because I spend a lot of time just reading every email.",
+          "role": "basis",
+          "start_char": 14742,
+          "end_char": 14974
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "整组充分性尚未由原文确立；分析假设：消息送达且标记正确，用户尚未查看，不能保证及时获知。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "整组充分性尚未由原文确立；分析假设：摘要漏掉限制条件时仍需读原文；不能证明方案完整。"
+    }
+  ]
+}

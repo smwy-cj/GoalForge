@@ -1,0 +1,96 @@
+# DOC013
+## LOCAL
+G001 按受众与内容类型实施分级：不适宜内容限制可见，违规内容禁止发布。 | context: 背景：被问及平台是否存在合规约束; 举例：含有不当语言的内容
+  E0001 DOC013:S007 there could be types of content that's not suitable for all viewers. so we'll have to make sure that a some viewers can't see certain things
+  E0002 DOC013:S007 there's some sorts of content that streamers should not be allowed to share with anybody
+  E0003 DOC013:S007 things with explicit language, for instance.
+G002 支持用文本与筛选条件精确检索目标内容。 | context: 自述为观众侧的首要必要功能
+  E0004 DOC013:S013 essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters of some sort
+G003 以缩略图加描述的方式批量浏览，便于快速扫视与点开。 | context: 希望看到大量候选后逐个点开; 缩略图旁带标题、作者、演员等信息
+  E0005 DOC013:S013 to be able to search visually, so I would like to be able to see a large volume of different options and click through it
+  E0006 DOC013:S013 seeing little images of a thumbnail, so to speak, with a description, perhaps, who made it, the Creator, or the actors in it
+G004 支持上传视频或开播，并能填写标题、描述与字幕转写。 | context: 从创作者视角提出; 开播另有 24 小时账号等待期（见 C001 的合规语境）
+  E0007 DOC013:S013 I would want to see some option where I could go and create to upload a video or start a stream
+  E0008 DOC013:S013 put some sort of description in, add, perhaps a transcript captions of the like
+G005 在平台内直接编辑视频（裁剪、加音效等），不必导出到第三方工具。 | context: 自评对视频流媒体「very useful」
+  E0009 DOC013:S013 one thing, I think would be very useful, particularly in a video streaming would be to edit those. So I can add sound effects. Trim crop.
+G006 即使查询条件模糊，也能返回有意义的结果。 | context: 对应「找不到想找的内容」这一障碍
+  E0010 DOC013:S015 I want to be able to search, using vague criteria, but that should still get me meaningful results.
+  E0011 DOC013:S015 not finding what I'm looking for. even if it hypothetically should exist
+G007 播放过程流畅、不卡顿，缓冲数据连续。 | context: 被视为技术层面的核心障碍
+  E0012 DOC013:S015 I want a seamless stream of buffered data.
+  E0013 DOC013:S015 I don't want it to freeze constantly.
+G008 上传时兼容常见格式，且不受时长或文件大小限制。 | context: 从创作者侧提出的技术障碍
+  E0014 DOC013:S019 making sure their formats are compatible with the system, making sure there's no length requirements
+G009 在集中的订阅页看到已关注创作者的最新内容。 | context: 通过订阅按钮建立关系，订阅页从侧边菜单进入
+  E0015 DOC013:S031 they can access. This in a central area known as the subscriptions tab
+  E0016 DOC013:S031 it will list out the latest content from said creators, who they are subscribed to
+G010 播放器提供完整控制：播放/暂停、下一个、音量、进度、字幕、设置、全屏。 | context: 描述现有实现，属维持型期望
+  E0017 DOC013:S039 my screen is the video player in the center, where along the bottom there is a play button
+  E0018 DOC013:S039 I can enable disable captions. I have some settings. and I'm able to toggle and untoggle the full screen.
+G011 播放器控件对新用户可被发现（不因自动隐藏而找不到）。 | context: 现状：控件在播放时消失，需移动鼠标才会出现; 熟悉用户不受影响，新用户可能找不到
+  E0019 DOC013:S041 if someone unfamiliar were to arrive and see these 10 icons, they might not be so well known. They actually disappear when the video is playing.
+  E0020 DOC013:S041 someone would need to realize they need to move their mouse down to the bottom to find the buttons.
+G012 自动生成的字幕足够准确，尤其对非英语母语观众可用。 | context: 被问及残障用户的可访问性时提出
+  E0021 DOC013:S041 these captions can be auto generated, but I'm not sure how accurate they always are, particularly for people who don't speak English as a 1st language
+G013 提供面向色盲等用户的可访问性显示调整。 | context: 自评不清楚现有能力，认为是待改进之处
+  E0022 DOC013:S041 I'm also not sure if things like colors can be tweaked for, say. colorblind viewers
+  E0023 DOC013:S041 that could be grounds for some work.
+## PAPER summarized goals
+g0 Restrict certain types of content from being accessed by some users.
+g1 Facilitate control over what content users can view or download.
+g2 Enable users to search for specific content using text or filters.
+g3 Allow users to visually browse a large volume of content with thumbnail images and descriptions.
+g4 Provide entertainment for users.
+g5 Allow users to broadcast their content live.
+g6 Enable users to add content to their watch list.
+g7 Enable users to follow or subscribe to various types of content.
+g8 Maintain visibility of controls for video playback.
+g9 Prevent sharing of unsuitable content.
+g10 Ensure seamless streaming of buffered data.
+g11 Enable users to upload a file.
+g12 Require users to enter a title for their content.
+g13 Require users to enter a description for their content.
+g14 Allow users to provide additional information such as languages.
+g15 Publish content once all necessary information is provided.
+g16 Allow companies to manage and control content uploads.
+g17 Enable users to upload videos to a central system.
+g18 Allow users to start a video stream.
+g19 Allow clicking on a title to play a video.
+g20 Allow users to add descriptions and captions to videos.
+g21 Enable users to edit videos, including trimming, cropping, and adding sound effects.
+g22 Simplify the process of publishing videos to the web.
+g23 Enable users to toggle captions on videos.
+g24 Display video thumbnails with descriptions and additional information.
+g25 Enable users to scroll through video thumbnails using navigation arrows.
+g26 Provide a button for suggesting and navigating to subsequent videos.
+g27 Provide meaningful search results even with vague criteria.
+g28 Allow users to quickly search and obtain information.
+g29 Enable users to search for specific content.
+g30 Include a central search bar for content discovery.
+g31 Provide a voice search option.
+g32 Show sponsored ads among search results.
+g33 Ensure compatibility of video formats with the system.
+g34 Avoid length requirements for video uploads.
+g35 Minimize waiting time for video publication after uploading.
+g36 Allow immediate publication without waiting for the entire video upload.
+g37 Enforce a 24-hour notice requirement before allowing users to start streaming.
+g38 Ensure compliance with security requirements for streaming.
+g39 Display current and total time of a video.
+g40 Allow users to view creator information and account statistics.
+g41 Facilitate video uploads through a content creation interface.
+g42 Provide an option for users to create content channels or accounts.
+g43 Provide a central area for accessing subscribed content.
+g44 List the latest content from subscribed creators.
+g45 Offer an ad-free premium tier.
+g46 Provide various payment options for premium subscriptions, including individual, family, and student plans.
+g47 Provide a 1-month free trial for the student plan.
+g48 Enable users to toggle play and pause for video playback
+g49 Enable users to toggle mute and unmute for audio control
+g50 Enable users to toggle fullscreen mode for video viewing
+g51 Enable volume control through a graphical slider interface
+g52 Provide toggleable caption options
+g53 Improve the accuracy of auto-generated captions
+g54 Provide user interface adjustments for preferences.
+g55 Enhance accessibility by making control icons more intuitive.
+g56 Adjust interface for colorblind users.

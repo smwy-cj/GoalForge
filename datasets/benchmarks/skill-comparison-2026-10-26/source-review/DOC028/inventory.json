@@ -1,0 +1,640 @@
+{
+  "document_id": "DOC028",
+  "artifact_type": "isolated_model_reviewer_source_intent_inventory",
+  "human_gold": false,
+  "source_only": true,
+  "domain": "Reddit 问题求解、经验搜索与休闲浏览",
+  "scope": "区分有明确问题的主动使用与无特定结果的被动浏览；保留移动端体验和社区发现需求。",
+  "methodology": "逐段完整阅读原文后人工式语义判断；条目由评审模型编写，程序仅校验引用和序列化，不以关键词抽取代替理解。未读取技能、论文目标、tests、生成结果或既有评估。条目不是最终目标模型，不规定唯一层次或粒度。",
+  "intents": [
+    {
+      "intent_id": "DOC028:I01",
+      "intent": "用真实、情境化的个人经验快速解决具体问题",
+      "subject": "受访者",
+      "conditions": "有特定疑问时",
+      "modality": "明确主要目的",
+      "exceptions": "个人经验被其认为大多可信，但承认任何网络信息非100%可靠",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T005",
+          "quote": "I get personal experiences over facts",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1985,
+          "quote_end_char": 2022,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T005",
+          "quote": "get more targeted results to the problem that I'm facing.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2247,
+          "quote_end_char": 2304,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T015",
+          "quote": "get to authentic answers much faster.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7268,
+          "quote_end_char": 7305,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I02",
+      "intent": "查城市活动、技术问题、职业升学等主题资料",
+      "subject": "受访者",
+      "conditions": "需要某类具体信息或代码帮助时",
+      "modality": "明确多种用途",
+      "exceptions": "Halloween、LeetCode 等为实例，不限单一领域",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T003",
+          "quote": "I browse my city's subreddit with keyword. Halloween",
+          "speaker": "Stakeholder",
+          "quote_start_char": 616,
+          "quote_end_char": 668,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T003",
+          "quote": "when I'm stuck on a problem or need like other inputs for a problem.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1167,
+          "quote_end_char": 1235,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I03",
+      "intent": "在空闲时浏览感兴趣的社区内容以消遣和发现有趣事物",
+      "subject": "受访者",
+      "conditions": "没有预先定义问题且有闲暇时",
+      "modality": "明确休闲目的",
+      "exceptions": "明确常无特定成果，不应强加所有浏览必须解决问题",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T009",
+          "quote": "if I'm just browsing Reddit, just to look through my interesting subreddits, then there is no particular outcome.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4547,
+          "quote_end_char": 4660,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T025",
+          "quote": "I might just open reddit and scroll to see something interesting.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 13094,
+          "quote_end_char": 13159,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I04",
+      "intent": "特定问题通过 Google 加 Reddit 定位帖子，再与帖子互动",
+      "subject": "受访者",
+      "conditions": "定向问题搜索时",
+      "modality": "明确常用策略",
+      "exceptions": "普通浏览直接 reddit.com；不使用官方移动应用的偏好有体验原因",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T007",
+          "quote": "I Google, the question. And then I put Reddit after that.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2606,
+          "quote_end_char": 2663,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T007",
+          "quote": "it gives me all the relevant posts.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2667,
+          "quote_end_char": 2702,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I05",
+      "intent": "根据个人兴趣跟随社区并获得贴合兴趣的帖子",
+      "subject": "受访者",
+      "conditions": "浏览首页和订阅社区时",
+      "modality": "明确偏好/现状",
+      "exceptions": "大量主题多变；不应把大学或CS设为唯一兴趣",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T019",
+          "quote": "any post that comes on my feed is pretty tailored to my specifications.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8235,
+          "quote_end_char": 8306,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I06",
+      "intent": "在恰当社区发求助帖取得建议或解决方案",
+      "subject": "求助发帖者",
+      "conditions": "自己需要建议时",
+      "modality": "明确目的",
+      "exceptions": "通常互动对象是帖子和社区，不是特定用户或管理员",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T021",
+          "quote": "most of the posts that I've done are posts asking for advice.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8923,
+          "quote_end_char": 8984,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T011",
+          "quote": "I usually interact with posts, I would say, and communities and post within communities.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5796,
+          "quote_end_char": 5884,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I07",
+      "intent": "发布含标题、正文与所需格式或媒体的帖子",
+      "subject": "发帖者",
+      "conditions": "选好社区后",
+      "modality": "明确描述的能力",
+      "exceptions": "Markdown、图片、视频、链接、投票为可用表达方式，不全都必需",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T021",
+          "quote": "Then I can add a title to my post, I can add a body to my post.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9666,
+          "quote_end_char": 9729,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T021",
+          "quote": "You can also add images. You can add video, you can add links. You can add polls.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9931,
+          "quote_end_char": 10012,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I08",
+      "intent": "按社区规则给帖子加标签以便合适的人筛选回答",
+      "subject": "发帖者/回答者",
+      "conditions": "社区要求标签或主题分类有帮助时",
+      "modality": "明确条件性策略",
+      "exceptions": "只有部分社区强制标签；动物医生实例非全局固定类别",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T021",
+          "quote": "some subreddits make it mandatory to add tags.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10128,
+          "quote_end_char": 10174,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T021",
+          "quote": "they'll filter out only the dog posts, and they'll only interact with those posts.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10467,
+          "quote_end_char": 10549,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I09",
+      "intent": "对帖子发表评论或回复特定讨论串",
+      "subject": "参与者",
+      "conditions": "想与帖子互动时",
+      "modality": "明确能力",
+      "exceptions": "本人总体评论少；不能推为强社交交友目标",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T021",
+          "quote": "you can either create a new comment, or you can reply to a thread of comments",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10795,
+          "quote_end_char": 10872,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I10",
+      "intent": "用可信社区的管理减少低质、误导内容",
+      "subject": "读者/社区管理者",
+      "conditions": "评价信息可靠性时",
+      "modality": "明确价值判断；管理细节属受访者认知",
+      "exceptions": "可靠性取决于管理团队；不能完全排除坏回答",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T029",
+          "quote": "if a community has a strong, a strong set of moderators, then the posts themselves are reliable.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 15381,
+          "quote_end_char": 15477,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T029",
+          "quote": "anything you find on the Internet is not 100% reliable.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 15489,
+          "quote_end_char": 15544,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I11",
+      "intent": "依据不同用途用户的产品评价作购买决策",
+      "subject": "受访消费者",
+      "conditions": "研究产品或服务时",
+      "modality": "明确用途",
+      "exceptions": "重视比电商更均衡的体验和使用背景；不要求 Reddit 内交易",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T033",
+          "quote": "you can also find people from varied backgrounds talking about the product.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 17897,
+          "quote_end_char": 17972,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T033",
+          "quote": "I've made a lot of purchase decisions because of reviews I've seen on Reddit.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 18279,
+          "quote_end_char": 18356,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I12",
+      "intent": "学习一般健康、运动等问题的经验",
+      "subject": "受访者",
+      "conditions": "一般信息查询时",
+      "modality": "明确受限用途",
+      "exceptions": "明确不建议具体健康问题依赖 Reddit，也未要求诊疗系统",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T035",
+          "quote": "it's good for general health, related questions.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 19319,
+          "quote_end_char": 19367,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T035",
+          "quote": "for specifics I've not used it, nor do I suggest anyone to use it.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 19372,
+          "quote_end_char": 19438,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I13",
+      "intent": "移动端更快、更直观，并支持中途保留发帖草稿",
+      "subject": "移动用户",
+      "conditions": "手机发帖或使用应用时",
+      "modality": "明确障碍和改进愿望",
+      "exceptions": "desktop 可保存草稿；Android是本人场景，不断言所有设备完全一致",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T027",
+          "quote": "The mobile platform is quite slow and clunky",
+          "speaker": "Stakeholder",
+          "quote_start_char": 13937,
+          "quote_end_char": 13981,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T027",
+          "quote": "you can't save it as a draft which you can do on desktop.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 14275,
+          "quote_end_char": 14332,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I14",
+      "intent": "在手机上清晰跟踪评论层次和讨论串",
+      "subject": "移动读者/参与者",
+      "conditions": "查看评论时",
+      "modality": "明确体验改进线索",
+      "exceptions": "已有 threads；问题是呈现直观性而非无评论能力",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T027",
+          "quote": "you cannot keep track of comments intuitively on Mobile",
+          "speaker": "Stakeholder",
+          "quote_start_char": 14421,
+          "quote_end_char": 14476,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T027",
+          "quote": "the desktop version is much more clearly put out.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 14604,
+          "quote_end_char": 14653,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I15",
+      "intent": "按主动搜索或被动浏览选择合适内容密度",
+      "subject": "受访者",
+      "conditions": "切换搜索/休闲模式时",
+      "modality": "明确视图偏好",
+      "exceptions": "被动用 card，主动搜索用 compact；不是统一最佳视图",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T043",
+          "quote": "I'm just using it as a passive activity, I prefer, like card mode",
+          "speaker": "Stakeholder",
+          "quote_start_char": 22612,
+          "quote_end_char": 22677,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T043",
+          "quote": "searching for something I prefer, like compact mode where I can see all relevant search results.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 22743,
+          "quote_end_char": 22839,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I16",
+      "intent": "按新帖、热门、趋势等标准排序浏览帖子",
+      "subject": "使用者",
+      "conditions": "希望调整 feed 时",
+      "modality": "描述的可用能力",
+      "exceptions": "没有说明本人始终选某一排序",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T041",
+          "quote": "you can sort posts by new by top by trending, rising.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 21710,
+          "quote_end_char": 21763,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I17",
+      "intent": "广告尽量不打扰阅读，必要时用屏蔽或付费获得无广告体验",
+      "subject": "受访者",
+      "conditions": "遇到广告时",
+      "modality": "明确偏好及条件性购买意向",
+      "exceptions": "当前广告较隐蔽且已有 adblock，暂不迫切付费；不可写成广告严重毁坏体验",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T045",
+          "quote": "it doesn't interfere with your post experience or your reading experience.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 23541,
+          "quote_end_char": 23615,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T047",
+          "quote": "in some scenario where ad block is not available, I would buy the premium tier.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 24612,
+          "quote_end_char": 24691,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I18",
+      "intent": "按个人偏好选择外观模式和布局版本",
+      "subject": "使用者",
+      "conditions": "定制视觉体验时",
+      "modality": "描述的可选能力",
+      "exceptions": "light/dark、legacy/current 只是选项；受访者认为 current UX更好，legacy更快",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T049",
+          "quote": "light mode, dark mode.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 25115,
+          "quote_end_char": 25137,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T049",
+          "quote": "There are customizations that are offered to tailor tailor. Your experience.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 25658,
+          "quote_end_char": 25734,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I19",
+      "intent": "用自然语言/生成式AI找到适合自己具体问题的细分社区",
+      "subject": "求助者",
+      "conditions": "不知道最合适 subreddit 时",
+      "modality": "明确首要新增愿望",
+      "exceptions": "不是要求用AI直接编造问题答案；更精准社区仍无法完全消除坏回答",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T059",
+          "quote": "a Gen. AI tool, to figure out what subreddit I should be accessing to ask my particular question",
+          "speaker": "Stakeholder",
+          "quote_start_char": 29406,
+          "quote_end_char": 29502,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T061",
+          "quote": "the answers I'd get would be better",
+          "speaker": "Stakeholder",
+          "quote_start_char": 30181,
+          "quote_end_char": 30216,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC028:I20",
+      "intent": "在有限离线缓存范围内继续阅读已载入的 feed",
+      "subject": "移动读者",
+      "conditions": "失去网络连接时",
+      "modality": "描述可用能力，需求强度不确定",
+      "exceptions": "不能刷新、发布新帖或无限读取；受访者未明确请求扩展离线能力",
+      "epistemic_status": "不确定",
+      "evidence": [
+        {
+          "source_id": "DOC028:T039",
+          "quote": "it will for sure save the existing posts.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 20535,
+          "quote_end_char": 20576,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T039",
+          "quote": "it won't allow you to make new posts, nor will it refresh the feed",
+          "speaker": "Stakeholder",
+          "quote_start_char": 20861,
+          "quote_end_char": 20927,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    }
+  ],
+  "background_candidates": [
+    {
+      "item": "匿名性与隐私信任",
+      "reason": "是使用价值和自述信念，有信息可追溯的自我修正；未提出新的具体隐私机制。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T011",
+          "quote": "the USP. Of Reddit is anonymity",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5548,
+          "quote_end_char": 5579,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T055",
+          "quote": "Figure out who you are based on your post history.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 28233,
+          "quote_end_char": 28283,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    },
+    {
+      "item": "国际/印度新闻和广泛当前事件",
+      "reason": "有限使用且明确不是首要新闻来源，不能把实时全新闻覆盖列为主要需求。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T031",
+          "quote": "Reddit, is not my primary source of news.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 16267,
+          "quote_end_char": 16308,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    },
+    {
+      "item": "社区归属、通知、私信、奖杯和连续登录",
+      "reason": "受访者未亲身获得强归属，通知没有问题，私信/奖杯末尾自称附加功能。可保留为平台能力证据，不能当核心个人目标。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC028:T037",
+          "quote": "I, personally, don't interact much via comments.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 19974,
+          "quote_end_char": 20022,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T053",
+          "quote": "I don't think the notifications are too troublesome.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 27376,
+          "quote_end_char": 27428,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC028:T067",
+          "quote": "additional features",
+          "speaker": "Stakeholder",
+          "quote_start_char": 31935,
+          "quote_end_char": 31954,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "T021“never posted”随即自述曾发多个求助帖，应视为表述不整齐，不能断言从未发帖。",
+    "匿名性是受访者认知；其也说 Google 登录和历史可识别人，不能断言绝对匿名。",
+    "健康相关仅保留一般学习，受访者不建议依赖具体健康建议。",
+    "离线能力、bot事实核查、Google数据同步等是受访者说法，不作为验证事实。"
+  ],
+  "source_document_hash_declared": "8336403cbac134a1f72ea0a195465db926b317b0ce9b2cb5a27893a990a79200",
+  "read_range": {
+    "first_source_id": "DOC028:T000",
+    "last_source_id": "DOC028:T069",
+    "turn_count": 70,
+    "read_completely": true,
+    "reading_note": "全文语义阅读；DOC003首次长输出中段被截断后，已单独补读T066–T096。DOC028、DOC036分别按turn分段读完。其他文档完整读取。"
+  }
+}

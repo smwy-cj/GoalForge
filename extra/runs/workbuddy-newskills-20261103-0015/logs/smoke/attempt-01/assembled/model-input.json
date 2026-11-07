@@ -1,0 +1,551 @@
+{
+  "schema_version": "goalforge-kaos-2",
+  "model_id": "SYN001-goal-model",
+  "version": "v1",
+  "parent": null,
+  "scope": {
+    "document_id": "SYN001",
+    "coverage": {
+      "scope": "provided_material",
+      "source_ids": [
+        "SYN001:T000",
+        "SYN001:T001",
+        "SYN001:T002",
+        "SYN001:T003",
+        "SYN001:T004",
+        "SYN001:T005",
+        "SYN001:T006",
+        "SYN001:T007",
+        "SYN001:T008"
+      ],
+      "omissions": []
+    }
+  },
+  "goals": [
+    {
+      "goal_id": "G001",
+      "statement": "compare three hotels before booking",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "比较三家酒店再预订"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对原句与目标表述"
+        ],
+        "label": "direct",
+        "rationale": "原句明确说明通常比较三家酒店再预订。"
+      },
+      "evidence_ids": [
+        "E0001"
+      ]
+    },
+    {
+      "goal_id": "G002",
+      "statement": "show the total price with breakfast before booking",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "含早餐总价可见"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对原句"
+        ],
+        "label": "direct",
+        "rationale": "原句明确希望看到含早餐的总价。"
+      },
+      "evidence_ids": [
+        "E0002"
+      ]
+    },
+    {
+      "goal_id": "G003",
+      "statement": "avoid a booking being confirmed before the cancellation deadline is shown",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "避免未展示取消期限即确认预订"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对否定与条件"
+        ],
+        "label": "direct",
+        "rationale": "原句以 never want 表达该避免关系。"
+      },
+      "evidence_ids": [
+        "E0003"
+      ]
+    },
+    {
+      "goal_id": "G004",
+      "statement": "remember the traveller's previous filters",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G001",
+          "G002"
+        ],
+        "reason": "受访者称记住筛选条件有帮助，但同时说不确定；结合其反复比较多家酒店推断复用筛选条件有价值。",
+        "assumptions": [
+          "受访者会重复使用相同筛选条件"
+        ]
+      },
+      "support": {
+        "supported_parts": [
+          "复用筛选条件有帮助"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "受访者会重复使用相同筛选条件"
+        ],
+        "reasoning_steps": [
+          "核对问答范围",
+          "比较不确定语气与正面评价"
+        ],
+        "label": "inferred",
+        "rationale": "回答含不确定语气，但有正面评价；据比较酒店与查看完整价格的上下文推断。"
+      },
+      "evidence_ids": [
+        "E0004"
+      ]
+    },
+    {
+      "goal_id": "G005",
+      "statement": "keep the itinerary readable offline, only for trips already booked",
+      "actor": "Stakeholder",
+      "conditions": [
+        "仅限已经预订的行程"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "离线可读",
+          "仅限已预订行程"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对限定范围"
+        ],
+        "label": "direct",
+        "rationale": "原句明确离线可读并以 only 限定范围。"
+      },
+      "evidence_ids": [
+        "E0005"
+      ]
+    },
+    {
+      "goal_id": "G006",
+      "statement": "keep the whole booking process predictable",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "预订流程可预期"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对总体愿望"
+        ],
+        "label": "direct",
+        "rationale": "原句明确希望整个预订流程保持可预期。"
+      },
+      "evidence_ids": [
+        "E0006"
+      ]
+    }
+  ],
+  "refinement_groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G006",
+      "child_ids": [
+        "G001",
+        "G002",
+        "G003"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "若先比较候选、看到含早餐总价、且在确认前看到取消期限，则可预期性在本次材料范围内得到共同满足。",
+      "assumptions": [
+        "酒店比较、价格可见与取消期限展示都发生在确认预订之前"
+      ],
+      "evidence_ids": [
+        "K0001"
+      ],
+      "relation_ids": [
+        "R2"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "用户按常规流程比较酒店、查看含早餐总价后在看到取消期限的情况下确认预订",
+          "outcome": "supports",
+          "rationale": "三个子目标均满足时流程结果可预测"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "用户跳过比较直接预订，但仍在确认页看到取消期限",
+          "outcome": "supports",
+          "rationale": "即使未比较，取消期限展示仍维持可预期性，精化组不因该例外失效"
+        }
+      ]
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "SYN001:T001",
+      "material_id": "M001",
+      "quote": "I usually compare three hotels before booking",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 77,
+      "end_char": 122,
+      "candidate_locations": [
+        {
+          "source_id": "SYN001:T001",
+          "segment_start": 0,
+          "segment_end": 45,
+          "start_char": 77,
+          "end_char": 122
+        }
+      ],
+      "original_locator": {
+        "turn": "1",
+        "start_char": 77,
+        "end_char": 174
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "SYN001:T001",
+      "material_id": "M001",
+      "quote": "I want the total price with breakfast visible",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 128,
+      "end_char": 173,
+      "candidate_locations": [
+        {
+          "source_id": "SYN001:T001",
+          "segment_start": 51,
+          "segment_end": 96,
+          "start_char": 128,
+          "end_char": 173
+        }
+      ],
+      "original_locator": {
+        "turn": "1",
+        "start_char": 77,
+        "end_char": 174
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "SYN001:T003",
+      "material_id": "M001",
+      "quote": "I never want a booking confirmed without me seeing the cancellation deadline first",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 249,
+      "end_char": 331,
+      "candidate_locations": [
+        {
+          "source_id": "SYN001:T003",
+          "segment_start": 6,
+          "segment_end": 88,
+          "start_char": 249,
+          "end_char": 331
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 243,
+        "end_char": 332
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "SYN001:T005",
+      "material_id": "M001",
+      "quote": "That would help, though I am not sure yet",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 422,
+      "end_char": 463,
+      "candidate_locations": [
+        {
+          "source_id": "SYN001:T005",
+          "segment_start": 0,
+          "segment_end": 41,
+          "start_char": 422,
+          "end_char": 463
+        }
+      ],
+      "original_locator": {
+        "turn": "5",
+        "start_char": 422,
+        "end_char": 464
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "SYN001:T007",
+      "material_id": "M001",
+      "quote": "I want the itinerary to stay readable offline, but only for trips I already booked",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 524,
+      "end_char": 606,
+      "candidate_locations": [
+        {
+          "source_id": "SYN001:T007",
+          "segment_start": 0,
+          "segment_end": 82,
+          "start_char": 524,
+          "end_char": 606
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 524,
+        "end_char": 607
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "SYN001:T008",
+      "material_id": "M001",
+      "quote": "Overall I want the whole booking process to stay predictable",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 628,
+      "end_char": 688,
+      "candidate_locations": [
+        {
+          "source_id": "SYN001:T008",
+          "segment_start": 0,
+          "segment_end": 60,
+          "start_char": 628,
+          "end_char": 688
+        }
+      ],
+      "original_locator": {
+        "turn": "8",
+        "start_char": 628,
+        "end_char": 689
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0001",
+      "source_id": "SYN001:T008",
+      "material_id": "M001",
+      "quote": "Overall I want the whole booking process to stay predictable",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 628,
+      "end_char": 688,
+      "candidate_locations": [
+        {
+          "source_id": "SYN001:T008",
+          "segment_start": 0,
+          "segment_end": 60,
+          "start_char": 628,
+          "end_char": 688
+        }
+      ],
+      "original_locator": {
+        "turn": "8",
+        "start_char": 628,
+        "end_char": 689
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0002",
+      "source_id": "SYN001:T005",
+      "material_id": "M001",
+      "quote": "That would help",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 422,
+      "end_char": 437,
+      "candidate_locations": [
+        {
+          "source_id": "SYN001:T005",
+          "segment_start": 0,
+          "segment_end": 15,
+          "start_char": 422,
+          "end_char": 437
+        }
+      ],
+      "original_locator": {
+        "turn": "5",
+        "start_char": 422,
+        "end_char": 464
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0003",
+      "source_id": "SYN001:T001",
+      "material_id": "M001",
+      "quote": "I usually compare three hotels before booking",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 77,
+      "end_char": 122,
+      "candidate_locations": [
+        {
+          "source_id": "SYN001:T001",
+          "segment_start": 0,
+          "segment_end": 45,
+          "start_char": 77,
+          "end_char": 122
+        }
+      ],
+      "original_locator": {
+        "turn": "1",
+        "start_char": 77,
+        "end_char": 174
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "issues": [
+    {
+      "target_type": "goal",
+      "target_id": "G004",
+      "message": "记住筛选条件是否确为需求，或仅为礼貌性回应？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G004",
+      "message": "复用筛选条件是否为确定需求仍需确认。",
+      "blocking": false
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R1",
+      "message": "这项联系尚待确认，不表示充分精化。",
+      "blocking": false
+    }
+  ],
+  "limitations": [
+    "合成材料仅用于工具冒烟检查，不属于论文语料"
+  ],
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "ba7abc5b3cf602a65746abb4a62d82c085274cd83a5320eb2a4a0c5edfb0d2cf"
+    },
+    {
+      "path": "attachments/judgments.json",
+      "sha256": "22981c82c20dc2d87a27339105cb2cdb3d7c190f271ac02b454b111fbf634fdf"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "7a21457b8dc968516aea7f7ac319e4e4ff707365aca72c27478c02d642453f69"
+    },
+    {
+      "path": "attachments/kaos-decisions.json",
+      "sha256": "67699bd26dd32d4e2ed4368d81229b994cd969c70d7b8313bad5c26c23703caa"
+    }
+  ],
+  "review": {
+    "status": "pending"
+  },
+  "changes": [],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G004",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "受访者重复使用相同筛选条件"
+      ],
+      "rationale": "复用筛选条件可减少重复比较，但不确定是否显著帮助。",
+      "evidence_ids": [
+        "K0002"
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G001",
+      "target_id": "G003",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先比较可选酒店，才会进入确认预订环节。",
+      "evidence_ids": [
+        "K0003"
+      ]
+    }
+  ],
+  "source_binding": {
+    "sha256": "7a21457b8dc968516aea7f7ac319e4e4ff707365aca72c27478c02d642453f69"
+  }
+}

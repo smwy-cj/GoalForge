@@ -1,0 +1,909 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC006-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "2805f294ab7edeaadc879da13af60f14567c77709b743a86bff044e5f7e70148"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "58045dda34ec4857d04a31c3b2916a12fc0c3563d0ddb8521a21944df5093142"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "7ad87e1eea9c66c3721cf671ee9e5857904b31e7290c7597507d8df2d3022965"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "b0259e08275f2d410c56604388ceeed755cf6b25e829eeb27a11b1b07f5bc460"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC006"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC006-G001",
+      "statement": "不错过重要的公共信息（国际大事、招聘等）。",
+      "source_candidate_ids": [
+        "DOC006-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，社交网络网页版用户）",
+      "context": [
+        "自述为主要使用动机之一",
+        "判断标准为「重要信息」，未定义阈值"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC006-G002",
+      "statement": "搜索时能按地区/城市限定范围，而不是只拿到随机排序的结果。",
+      "source_candidate_ids": [
+        "DOC006-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，社交网络网页版用户）",
+      "context": [
+        "典型场景：找房源、找本地信息",
+        "现状只能靠其他渠道（房屋中介）补充",
+        "替代平台免费是他继续使用的理由"
+      ],
+      "evidence_ids": [
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC006-G003",
+      "statement": "应聘前了解该岗位的竞争程度与面试门槛。",
+      "source_candidate_ids": [
+        "DOC006-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，社交网络网页版用户）",
+      "context": [
+        "希望看到：已进入招聘流程的人数、近期面试者的反馈"
+      ],
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC006-G004",
+      "statement": "把娱乐内容与实用内容分开，需要时可只看实用信息。",
+      "source_candidate_ids": [
+        "DOC006-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，社交网络网页版用户）",
+      "context": [
+        "现状：平台把娱乐、招聘、房源等内容混在同一信息流推送"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009",
+        "E0010"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC006-G005",
+      "statement": "持续收到符合自己口味的最新信息推送（基于行为记录的 AI 推荐）。",
+      "source_candidate_ids": [
+        "DOC006-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，社交网络网页版用户）",
+      "context": [
+        "依据：点赞、评论等行为记录推断偏好",
+        "受访者认为这是社交应用的必备功能"
+      ],
+      "evidence_ids": [
+        "E0011",
+        "E0012",
+        "E0013"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC006-G006",
+      "statement": "减少营销矩阵号重复刷屏对信息流的干扰。",
+      "source_candidate_ids": [
+        "DOC006-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，社交网络网页版用户）",
+      "context": [
+        "矩阵号特征：批量发布相同内容用于营销",
+        "后果：信息流被无关内容淹没，影响使用体验"
+      ],
+      "evidence_ids": [
+        "E0014",
+        "E0015"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC006-G001",
+      "b": "DOC006-G002",
+      "label": "none",
+      "rationale": "DOC006-G001 的对象是不错过重要公共信息（T003），DOC006-G002 的对象是搜索按地区/城市限定（T011/T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC006-G001",
+      "b": "DOC006-G003",
+      "label": "none",
+      "rationale": "DOC006-G001 的对象是不错过重要公共信息（T003），DOC006-G003 的对象是应聘前了解竞争度与面试门槛（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC006-G001",
+      "b": "DOC006-G004",
+      "label": "none",
+      "rationale": "DOC006-G001 的对象是不错过重要公共信息（T003），DOC006-G004 的对象是娱乐与实用内容分离（T023）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC006-G001",
+      "b": "DOC006-G005",
+      "label": "related",
+      "rationale": "T029 描述推荐的价值时直接指向「不错过」：用户「can just stay there, and they will give you the latest information. That fits your taste continuously」，即推送是 G001 的实现方式。手段与结果不自动构成精化，故为 related。",
+      "evidence_ids": [
+        "E0001",
+        "E0009"
+      ],
+      "conditions": [
+        "依赖平台按行为记录推断偏好"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC006-G001",
+      "b": "DOC006-G006",
+      "label": "related",
+      "rationale": "T043 说明矩阵号刷屏的后果是「flood the feed with irrelevant contents, and it interferes with user experience」，直接干扰 G001 想避免的遗漏风险（有用信息被淹没）；但 G006 针对内容来源治理、G001 针对信息获取结果，非精化。",
+      "evidence_ids": [
+        "E0001",
+        "E0012"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC006-G002",
+      "b": "DOC006-G003",
+      "label": "none",
+      "rationale": "DOC006-G002 的对象是搜索按地区/城市限定（T011/T013），DOC006-G003 的对象是应聘前了解竞争度与面试门槛（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC006-G002",
+      "b": "DOC006-G004",
+      "label": "related",
+      "rationale": "T023 在提出内容分离时把场景一并列出「including job searching and housing rental, searching whatever」，与 G002 的房源/本地搜索场景重叠，二者同属信息流筛选能力；但一个是地区维度、一个是内容类型维度，非精化。",
+      "evidence_ids": [
+        "E0003",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC006-G002",
+      "b": "DOC006-G005",
+      "label": "related",
+      "rationale": "T017 把两者对照：房源因无法按地区收窄而「filter out a lot of useful postings」，而招聘因为「it can push you the right postings with artificial intelligence, recommendations」问题较少——即推荐可部分弥补地区筛选的缺失。二者为实现方式上的替代关系，非精化。",
+      "evidence_ids": [
+        "E0003",
+        "E0009"
+      ],
+      "conditions": [
+        "仅在推荐能覆盖目标地区内容时成立"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC006-G002",
+      "b": "DOC006-G006",
+      "label": "none",
+      "rationale": "DOC006-G002 的对象是搜索按地区/城市限定（T011/T013），DOC006-G006 的对象是减少营销矩阵号刷屏（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC006-G003",
+      "b": "DOC006-G004",
+      "label": "none",
+      "rationale": "DOC006-G003 的对象是应聘前了解竞争度与面试门槛（T019），DOC006-G004 的对象是娱乐与实用内容分离（T023）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC006-G003",
+      "b": "DOC006-G005",
+      "label": "related",
+      "rationale": "T017 明确把招聘信息质量归因于 AI 推荐「it can push you the right postings with artificial intelligence, recommendations」，G005 的推荐机制是 G003 获取岗位情报的渠道。",
+      "evidence_ids": [
+        "E0005",
+        "E0009"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC006-G003",
+      "b": "DOC006-G006",
+      "label": "none",
+      "rationale": "DOC006-G003 的对象是应聘前了解竞争度与面试门槛（T019），DOC006-G006 的对象是减少营销矩阵号刷屏（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC006-G004",
+      "b": "DOC006-G005",
+      "label": "none",
+      "rationale": "DOC006-G004 的对象是娱乐与实用内容分离（T023），DOC006-G005 的对象是按口味持续推送最新信息（T005/T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC006-G004",
+      "b": "DOC006-G006",
+      "label": "related",
+      "rationale": "T023 要求把娱乐内容从实用内容中分离，T043 要求治理刷屏的营销矩阵号，两者都针对信息流内容质量，但一个按内容类型、一个按账号行为，路径不同，非精化。",
+      "evidence_ids": [
+        "E0006",
+        "E0012"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC006-G005",
+      "b": "DOC006-G006",
+      "label": "none",
+      "rationale": "DOC006-G005 的对象是按口味持续推送最新信息（T005/T029），DOC006-G006 的对象是减少营销矩阵号刷屏（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P004",
+      "conditions": [
+        "依赖平台按行为记录推断偏好"
+      ],
+      "review_status": "pending",
+      "a": "DOC006-G001",
+      "b": "DOC006-G005"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P005",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC006-G001",
+      "b": "DOC006-G006"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P007",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC006-G002",
+      "b": "DOC006-G004"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P008",
+      "conditions": [
+        "仅在推荐能覆盖目标地区内容时成立"
+      ],
+      "review_status": "pending",
+      "a": "DOC006-G002",
+      "b": "DOC006-G005"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P011",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC006-G003",
+      "b": "DOC006-G005"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P014",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC006-G004",
+      "b": "DOC006-G006"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC006:S004",
+      "material_id": "M001",
+      "quote": "I do not want to miss out any important information like if there are any great events going on internationally.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 740,
+      "end_char": 852,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S004",
+          "segment_start": 44,
+          "segment_end": 156,
+          "start_char": 740,
+          "end_char": 852
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 696,
+        "end_char": 1024
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC006:S004",
+      "material_id": "M001",
+      "quote": "maybe there are some new job posting I was just.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 908,
+      "end_char": 956,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S004",
+          "segment_start": 212,
+          "segment_end": 260,
+          "start_char": 908,
+          "end_char": 956
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 696,
+        "end_char": 1024
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC006:S012",
+      "material_id": "M001",
+      "quote": "There is no way for me to get the get the information and results for that specific region.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3420,
+      "end_char": 3511,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S012",
+          "segment_start": 304,
+          "segment_end": 395,
+          "start_char": 3420,
+          "end_char": 3511
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 3116,
+        "end_char": 3621
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC006:S014",
+      "material_id": "M001",
+      "quote": "it would be better for for me if there is a specific specific button, or or some feature in the application that I could search in a specific region like the city.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3889,
+      "end_char": 4052,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S014",
+          "segment_start": 80,
+          "segment_end": 243,
+          "start_char": 3889,
+          "end_char": 4052
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 3809,
+        "end_char": 4278
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC006:S012",
+      "material_id": "M001",
+      "quote": "It's it's kind of randomly randomly generated.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3278,
+      "end_char": 3324,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S012",
+          "segment_start": 162,
+          "segment_end": 208,
+          "start_char": 3278,
+          "end_char": 3324
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 3116,
+        "end_char": 3621
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC006:S020",
+      "material_id": "M001",
+      "quote": "how how many people are already entering the hiring process, so that I can see if this company is on a great number of hiring or not",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5559,
+      "end_char": 5691,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S020",
+          "segment_start": 47,
+          "segment_end": 179,
+          "start_char": 5559,
+          "end_char": 5691
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 5512,
+        "end_char": 5932
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC006:S020",
+      "material_id": "M001",
+      "quote": "I can get feedback from them to see if this company is, does it have a high benchmark to to pass the interview or not?",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5814,
+      "end_char": 5932,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S020",
+          "segment_start": 302,
+          "segment_end": 420,
+          "start_char": 5814,
+          "end_char": 5932
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 5512,
+        "end_char": 5932
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC006:S024",
+      "material_id": "M001",
+      "quote": "it would be better if it it can have a feature that you can split the entertainment contents from useful contents",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6508,
+      "end_char": 6621,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S024",
+          "segment_start": 169,
+          "segment_end": 282,
+          "start_char": 6508,
+          "end_char": 6621
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 6339,
+        "end_char": 6902
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC006:S024",
+      "material_id": "M001",
+      "quote": "when sometimes I don't wanna see those entertainment contents, and they can filter them up for me.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6804,
+      "end_char": 6902,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S024",
+          "segment_start": 465,
+          "segment_end": 563,
+          "start_char": 6804,
+          "end_char": 6902
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 6339,
+        "end_char": 6902
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC006:S024",
+      "material_id": "M001",
+      "quote": "They just push all the things together to you.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6714,
+      "end_char": 6760,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S024",
+          "segment_start": 375,
+          "segment_end": 421,
+          "start_char": 6714,
+          "end_char": 6760
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 6339,
+        "end_char": 6902
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC006:S006",
+      "material_id": "M001",
+      "quote": "they will do more like recommendations based on my. on my taste.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1474,
+      "end_char": 1538,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S006",
+          "segment_start": 239,
+          "segment_end": 303,
+          "start_char": 1474,
+          "end_char": 1538
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 1235,
+        "end_char": 1605
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC006:S030",
+      "material_id": "M001",
+      "quote": "they will give you the the latest information. That fits your taste continuously.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8490,
+      "end_char": 8571,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S030",
+          "segment_start": 494,
+          "segment_end": 575,
+          "start_char": 8490,
+          "end_char": 8571
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 7996,
+        "end_char": 8571
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC006:S030",
+      "material_id": "M001",
+      "quote": "It can deduce the taste of your like browsing tastes like, what? What do you like to to see in applications.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8050,
+      "end_char": 8158,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S030",
+          "segment_start": 54,
+          "segment_end": 162,
+          "start_char": 8050,
+          "end_char": 8158
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 7996,
+        "end_char": 8571
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC006:S044",
+      "material_id": "M001",
+      "quote": "the social application platforms should strengthen their efforts to handle with matrix accounts.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11272,
+      "end_char": 11368,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S044",
+          "segment_start": 33,
+          "segment_end": 129,
+          "start_char": 11272,
+          "end_char": 11368
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 11239,
+        "end_char": 11646
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC006:S044",
+      "material_id": "M001",
+      "quote": "they just flood the feed with irrelevant contents, and it interferes with user experience.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11469,
+      "end_char": 11559,
+      "candidate_locations": [
+        {
+          "source_id": "DOC006:S044",
+          "segment_start": 230,
+          "segment_end": 320,
+          "start_char": 11469,
+          "end_char": 11559
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 11239,
+        "end_char": 11646
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC006-C001",
+      "goal_id": "DOC006-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC006-C002",
+      "goal_id": "DOC006-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC006-C003",
+      "goal_id": "DOC006-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC006-C004",
+      "goal_id": "DOC006-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC006-C005",
+      "goal_id": "DOC006-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC006-C006",
+      "goal_id": "DOC006-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 15,
+    "evaluated_pairs": 15
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "6548253eaa5e0ace9efafd0c4e53023b6efdcbd05fd02e1c5c9756d956b7e160",
+    "core_sha256": "56ed0b3c988c00be78dadcc1e45a300b7d243200ad5fd5adebff892035d9384a",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "81583315edf81c5e8f3e2ebd41ab6e272275e0ca1ff8752dd2b5609dfd5ccacd"
+}

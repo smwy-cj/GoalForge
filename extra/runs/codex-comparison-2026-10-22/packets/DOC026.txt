@@ -1,0 +1,78 @@
+# DOC026
+## LOCAL
+G001 在步行不现实的距离上，实现从一处到另一处的位移。 | context: 自述这是使用 Uber 的主要目标; 对照：能走到的地方就走
+  E0001 DOC026:S006 the main goal is transportation to get from one place to another
+  E0002 DOC026:S008 if it's going to take like an hour and a half to get someplace. So I'll just walk even if it's kind of far away
+G002 按耗时与价格权衡是否打车、以及是否改用其他交通方式。 | context: 两条判据：时间成本、价格; 他会主动比较开车、公交、步行
+  E0003 DOC026:S008 it's usually the amount of time it will take or the price in deciding whether or not to take ride
+  E0004 DOC026:S008 whether or not I'm able to drive there or I want to drive there or if there are other better means of transportation
+G003 在多个车型中选最便宜的一档，人多时改选大车。 | context: 默认选最便宜; 例外：同行人多时看座位数
+  E0005 DOC026:S012 I usually just go for The cheapest one, to be honest
+  E0006 DOC026:S012 unless if i'm going with more people
+  E0007 DOC026:S012 there's a comfort that can sit four people
+G004 下单前能看到附近车辆与预估到达时间、价格，据此决定是否等待或改期。 | context: 界面会显示地图上的车辆与「X 分钟之外」; 若价格过高可以选择晚点再走
+  E0008 DOC026:S012 I can also see a map with a couple different Ubers around
+  E0009 DOC026:S012 if the price was too high, then I can choose to wait
+G005 输入地址时实时给出候选，不必打完就能选。 | context: 自评「kind of helpful」
+  E0010 DOC026:S012 a couple of different options pop up as I'm typing it
+  E0011 DOC026:S012 I can just click on whatever comes up before I necessarily finish typing it
+G006 下单后能真正派到车，不出现长时间等待后「找不到司机」。 | context: 症状：显示有车、点了要等很久，最后说找不到司机; 他猜测是应用夸大供给，或司机看到请求后拒单
+  E0012 DOC026:S014 it will take a really long time to actually schedule it
+  E0013 DOC026:S014 it will end up saying that can't find a driver
+G007 不因取消订单而拉低自己作为乘客的评分。 | context: 他知道司机能看到乘客评分; 因此尽量不取消，即使等待体验很差
+  E0014 DOC026:S014 I usually try not to cancel a ride
+  E0015 DOC026:S014 the drivers will see a rating of the passenger as well. And I think that that damages my rating
+G008 工作出行时以时间优先于价格（费用由公司承担）。 | context: 前提：公司报销; 取舍：多花 20 美元换少等 20 分钟可接受
+  E0016 DOC026:S020 i usually care less about the price and more about the time in that case
+  E0017 DOC026:S020 my work is going to cover it
+G009 按对地区的熟悉度、路线复杂度与停留时长，在公交、租车与网约车之间选择。 | context: 公交：熟悉地区且顺路才坐; 租车：多天行程更自由; 网约车：路线复杂时兜底
+  E0018 DOC026:S022 it usually depends on both how familiar I am with the area
+  E0019 DOC026:S022 if it's complicated like that, I would probably prefer And Uber in that case
+  E0020 DOC026:S022 give me a little bit more freedom to rent a car than to do a ride share every time
+G010 出问题时能联系到真人客服，而不是只能和机器人对话。 | context: 起因：Uber Eats 送餐时间预估错误，客服体验极差，此后停用该服务; 他怀疑对方是聊天机器人
+  E0021 DOC026:S032 I wanted to talk to a person
+  E0022 DOC026:S032 I think I was probably talking to a chat bot
+G011 用应用内通话或消息与司机沟通，解决上车点不清、位置难找、自己会迟到等问题。 | context: 场景：门牌难找、GPS 差、地点太热闹; 用途：提前告知、多停靠时说明延误
+  E0023 DOC026:S040 I actually find that very helpful
+  E0024 DOC026:S040 calling on their way to pick me up is usually really helpful
+  E0025 DOC026:S040 maybe the house numbers are hard to see
+G012 需要时能方便地修改上车点。 | context: 现状：改版后只在「不用当前定位」时才容易改; 替代做法：直接打电话告诉司机
+  E0026 DOC026:S042 I think that it's not as simple to change it
+  E0027 DOC026:S042 I give the driver a heads up instead of doing it on the app
+G013 行程结束后能评分、给小费，并查看金额用于分摊或报销。 | context: 最常回看的是评分与小费入口; 金额用于与朋友分摊或作为报销凭证
+  E0028 DOC026:S046 they give you the option to rate the driver
+  E0029 DOC026:S046 look at how much the ride was so that I could split split up the charge
+  E0030 DOC026:S046 I can use that as a receipt to get reimbursed
+## PAPER summarized goals
+g0 Enable efficient and cost-effective transportation to a destination.
+g1 Provide suggestions for destinations based on travel history.
+g2 Offer convenient transportation options for unfamiliar areas.
+g3 Deliver transportation solutions that minimize wait times.
+g4 Facilitate transportation decisions based on area familiarity.
+g5 Provide flexibility and freedom for extended travel.
+g6 Simplify complex transportation routes.
+g7 Consider time and cost efficiency in deciding transportation options.
+g8 Provide alternative transportation options with comparisons of estimated fares, travel time, and capacity.
+g9 Display an estimated arrival time for each transportation option.
+g10 Optimize the process of booking a ride for immediate or scheduled travel.
+g11 Ensure a seamless and efficient experience for booking and managing multi-stop rides.
+g12 Enable users to easily update their pickup location during the booking process.
+g13 Provide autocomplete suggestions for inputted addresses.
+g14 Allow users to reach and interact with human customer support representatives.
+g15 Inform users when they are interacting with a chat bot versus a human.
+g16 Automatically apply promotional deals to bookings.
+g17 Show real-time location of available vehicles and drivers on a map.
+g18 Display accurate driver availability status.
+g19 Enable direct communication between users and drivers for pickup details or location changes.
+g20 Allow users to delay travel if the current price is deemed too high.
+g21 Notify the user if no drivers are available after a booking attempt.
+g22 Inform the user about the impact of cancellations on their rating.
+g23 Prevent passenger rating from being negatively impacted by ride cancellations.
+g24 Facilitate users in notifying drivers about delays during multi-stop trips.
+g25 Simplify the process for service cancellation.
+g26 Accurately estimate the time needed to complete services.
+g27 Provide effective customer service for resolving issues.
+g28 Allow users to rate the driver after a ride.
+g29 Allow users to tip the driver after a ride.
+g30 Provide users with a breakdown of ride costs for expense splitting.
+g31 Enable users to access ride details for reimbursement purposes.

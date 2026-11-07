@@ -1,0 +1,208 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "f84117d92a0886220c91cced28461d996db0bb9d0deeb22b2478a00266b7e462",
+    "input_sha256": "6ea1b8bcbeae60b28979f59a69912d85f2fce3def5478a4d4c4116b5c39be42d"
+  },
+  "judgments": {
+    "DOC024-C001": {
+      "target_statement": "课后遇到不懂的术语或逻辑，随时能得到解释，不必等到答疑时间。",
+      "label": "direct",
+      "rationale": "T005 说课后听不懂且没有答疑时就问 ChatGPT，T009 说明等待成本与随时可问的对比。",
+      "supported_parts": [
+        "场景：T006「I don't understand, or some questions after class」",
+        "痛点：T010「wait till tomorrow, or even next week」",
+        "优势：T010「you can ask it like at any time」"
+      ],
+      "unsupported_parts": [
+        "未说明解释质量的判定标准",
+        "未说明是否替代了向老师提问"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取场景",
+        "2. 取等待成本与随时性",
+        "3. → direct"
+      ]
+    },
+    "DOC024-C002": {
+      "target_statement": "做项目时突破自己的思维局限，获得自己想不到的视角。",
+      "label": "direct",
+      "rationale": "T007 说用于生成项目想法，T009 说明动机是自己视角有限。",
+      "supported_parts": [
+        "用途：T008「generate some ideas for my project」",
+        "动机：T010「my own. Mind is kind of limited」",
+        "收益：T010「giving me more perspective perspectives」"
+      ],
+      "unsupported_parts": [
+        "未说明想法的采纳率",
+        "未说明是否需要多个方案对比"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取用途",
+        "2. 取动机",
+        "3. → direct"
+      ]
+    },
+    "DOC024-C003": {
+      "target_statement": "项目启动阶段拿到大纲与关键要点，明确怎么落地。",
+      "label": "direct",
+      "rationale": "T015 说项目开始时会让它给大纲与要点，据此形成实施思路。",
+      "supported_parts": [
+        "产出：T016「an outline about what you should do」",
+        "产出：T016「what are the points that are important」",
+        "用途：T016「a better idea of how I can. implement my project」"
+      ],
+      "unsupported_parts": [
+        "未说明大纲的详细程度",
+        "中途不用（自述项目中段上下文会丢），阶段边界由他自己划定"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取产出",
+        "2. 取用途",
+        "3. 记录阶段限定",
+        "4. → direct"
+      ]
+    },
+    "DOC024-C004": {
+      "target_statement": "能自行核实答案是否正确（查书论文、自己算一遍）。",
+      "label": "direct",
+      "rationale": "T013 给出两类核实方法，并说明模型并非总对。",
+      "supported_parts": [
+        "方法一：T014「there are a lot of materials online you can find」",
+        "方法二：T014「calculate those by yourself and then check」",
+        "理由：T014「chatgpt is not always correct」"
+      ],
+      "unsupported_parts": [
+        "未说明核实耗时的可接受范围",
+        "高层问题「hard for you to see」错误，核实方法失效——他本人承认这一局限"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取两类方法",
+        "2. 取理由",
+        "3. 记录高层失效",
+        "4. → direct"
+      ]
+    },
+    "DOC024-C005": {
+      "target_statement": "提问时能让模型准确理解自己的问题与上下文。",
+      "label": "direct",
+      "rationale": "T017 说会组织语言、附图片与文档，让模型理解上下文。",
+      "supported_parts": [
+        "做法：T018「organize my language to make chat, gpt, understand」",
+        "做法：T018「attach some images and also some documents」",
+        "理由：T018「better illustration of my questions」"
+      ],
+      "unsupported_parts": [
+        "未说明上下文缺失时的具体表现",
+        "未说明是否用过自定义指令等长期上下文机制"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取两种做法",
+        "2. 取理由",
+        "3. → direct"
+      ]
+    },
+    "DOC024-C006": {
+      "target_statement": "回看历史对话，复习之前学过的逻辑与术语。",
+      "label": "direct",
+      "rationale": "T021 说历史功能用得很多，主要用于复习学过的逻辑与术语。",
+      "supported_parts": [
+        "用法：T022「click the history and see like what Chat Gpt told you before」",
+        "目的：T022「go back and review the chat」"
+      ],
+      "unsupported_parts": [
+        "未说明历史检索能力是否够用",
+        "未提历史整理或分类需求"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取用法",
+        "2. 取目的",
+        "3. → direct"
+      ]
+    },
+    "DOC024-C007": {
+      "target_statement": "用推理更强的模型拿到更准确的逻辑答案。",
+      "label": "direct",
+      "rationale": "T025 说明 o1 更擅长逻辑推理，代价是思考更久但更准。",
+      "supported_parts": [
+        "能力：T026「better at logic and reasoning」",
+        "权衡：T026「take more time to think... but the answer will be more accurate」",
+        "问题：T026「before Chat Gpt will have some logic mistakes」"
+      ],
+      "unsupported_parts": [
+        "未说明准确率提升幅度",
+        "未说明哪些问题值得用更慢的模型"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取能力",
+        "2. 取权衡",
+        "3. → direct"
+      ]
+    },
+    "DOC024-C008": {
+      "target_statement": "连续追问时不被用量额度打断。",
+      "label": "direct",
+      "rationale": "T029 说免费额度低会打断追问，会员可对高等级模型持续提问。",
+      "supported_parts": [
+        "诉求：T030「unlimited access to the highest level model」",
+        "问题：T030「the limit for the normal user is like a little bit low」"
+      ],
+      "unsupported_parts": [
+        "会员实际额度也非无限（他自述 not unlimited）",
+        "未说明可接受的每日上限"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求",
+        "2. 取额度问题",
+        "3. 记录自述修正",
+        "4. → direct"
+      ]
+    },
+    "DOC024-C009": {
+      "target_statement": "需要时生成图像，把产品设计可视化。",
+      "label": "direct",
+      "rationale": "T011 说做产品设计需要可视化时会生成图片，再按需求细化。",
+      "supported_parts": [
+        "场景：T012「design a new product. and I want to visualize it」",
+        "做法：T012「generate the image for me」"
+      ],
+      "unsupported_parts": [
+        "T033 自评「do not use it that often」，需求强度低",
+        "未说明图像质量要求"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取场景与做法",
+        "2. 记录低频",
+        "3. → direct"
+      ]
+    },
+    "DOC024-C010": {
+      "target_statement": "生成过程稳定快速，不因卡住重试而浪费额度。",
+      "label": "direct",
+      "rationale": "T031 说生成耗时长、会卡住，重试还要再扣额度。",
+      "supported_parts": [
+        "问题：T032「take really long time for it to generate the answer」",
+        "代价：T032「if you regenerate it, it will use the limit of your」"
+      ],
+      "unsupported_parts": [
+        "未给出可接受的响应时长",
+        "未说明卡顿发生频率"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题",
+        "2. 取代价",
+        "3. → direct"
+      ]
+    }
+  }
+}

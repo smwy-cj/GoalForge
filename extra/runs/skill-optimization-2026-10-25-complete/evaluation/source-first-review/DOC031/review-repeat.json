@@ -1,0 +1,496 @@
+{
+  "document_id": "DOC031",
+  "round": "repeat",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "blinding_limit": "仅知第二轮A/B匿名代号；没有读取映射或生成分支，不推断跨轮代号对应。语言、粒度和模板特征可被猜测，属于有限盲法。",
+  "policy": "使用同一冻结129条意图，不迎合结果改清单；允许多对多不同粒度。候选/否定关系按其当前状态评价，supported不代表需求已采纳。无标准P/R/F1。",
+  "samples": [
+    {
+      "sample": "repeat:A",
+      "intent_matches": [
+        {
+          "intent_id": "DOC031:I01",
+          "goal_ids": [
+            "G001"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在校园内即时联系同学、助教和教授”的核心结果、条件和所选范围；DOC031:T005「talk to my peers, my teaching, teaching assistants in various subjects, and also…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I02",
+          "goal_ids": [
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“仅凭姓名或姓氏找到校园成员，无需先保存号码或邮箱”的核心结果、条件和所选范围；DOC031:T007「I don't need to like save anybody's information.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I03",
+          "goal_ids": [
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在手机或电脑上便捷沟通”的核心结果、条件和所选范围；DOC031:T007「I can do it over my phone. I can do it if my laptop's open」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I04",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“用频道立即触达广泛受众”的核心结果、条件和所选范围；DOC031:T009「the channel feature within slack, where I can reach a wide audience immediately.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I05",
+          "goal_ids": [
+            "G005",
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“查看入频道前的历史内容与当前校园、专业讨论”的核心结果、条件和所选范围；DOC031:T009「I have access to information that was there before I even joined the channel」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I06",
+          "goal_ids": [
+            "G007"
+          ],
+          "status": "partial",
+          "rationale": "G007共享文档及时，但私信选定渠道未保留。 原文：DOC031:T011「my most used feature is sharing documents when collaborating with teammates.」"
+        },
+        {
+          "intent_id": "DOC031:I07",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“按需格式化消息和附加不同类型文件”；DOC031:T017「I can format the text, whatever, any way I want.」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC031:I08",
+          "goal_ids": [
+            "G008"
+          ],
+          "status": "partial",
+          "rationale": "G008检索效率改善在，T019关键词方式缺失。 原文：DOC031:T019「enter keywords to look, to look for something specific.」"
+        },
+        {
+          "intent_id": "DOC031:I09",
+          "goal_ids": [
+            "G009",
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“更容易发起语音视频通话，尤其群组通话”的核心结果、条件和所选范围；DOC031:T021「it would be easier if it was just more access.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I10",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“已知电话号码时可用直接电话快速沟通”；DOC031:T023「if I have their email with not their emails, or if their phone number with me, I…」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC031:I11",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“从 Slack 快速跳转标准邮件应用给对方发正式邮件”的核心结果、条件和所选范围；DOC031:T027「a feature that would just immediately navigate to an Outlook or Gmail or any, an…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I12",
+          "goal_ids": [
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在桌面浏览器窗口缩窄并排工作时仍易于导航”的核心结果、条件和所选范围；DOC031:T031「shrink the size of slack browser window, I feel like it's a little hard to navig…」。按多对多承接，不要求节点数与冻结清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I01"
+          ],
+          "rationale": "与原文“在校园内即时联系同学、助教和教授”一致；DOC031:T005「talk to my peers, my teaching, teaching assistants in various subjects, and also…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I02"
+          ],
+          "rationale": "与原文“仅凭姓名或姓氏找到校园成员，无需先保存号码或邮箱”一致；DOC031:T007「I don't need to like save anybody's information.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I03"
+          ],
+          "rationale": "与原文“在手机或电脑上便捷沟通”一致；DOC031:T007「I can do it over my phone. I can do it if my laptop's open」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I04"
+          ],
+          "rationale": "与原文“用频道立即触达广泛受众”一致；DOC031:T009「the channel feature within slack, where I can reach a wide audience immediately.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I05"
+          ],
+          "rationale": "与原文“查看入频道前的历史内容与当前校园、专业讨论”一致；DOC031:T009「I have access to information that was there before I even joined the channel」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I05"
+          ],
+          "rationale": "与原文“查看入频道前的历史内容与当前校园、专业讨论”一致；DOC031:T009「I have access to information that was there before I even joined the channel」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC031:I06"
+          ],
+          "rationale": "T011最常用是私信内共享文档；目标和解释只有即时共享，未保留私信作为所选渠道。",
+          "issues": [
+            {
+              "category": "selected_means_loss",
+              "reason": "T011 direct messaging、T017个人页面附件的具体路线在模型目标中消失。"
+            }
+          ]
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC031:I08"
+          ],
+          "rationale": "T019明确输入keywords，当前仅保留更易从匹配中找到内容，整个模型没有关键词检索方式条目。",
+          "issues": [
+            {
+              "category": "selected_means_loss",
+              "reason": "结果级效率目的有据，但关键词方式缺失，不能只因引用T019当完整。"
+            }
+          ]
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I09"
+          ],
+          "rationale": "与原文“更容易发起语音视频通话，尤其群组通话”一致；DOC031:T021「it would be easier if it was just more access.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I11"
+          ],
+          "rationale": "与原文“从 Slack 快速跳转标准邮件应用给对方发正式邮件”一致；DOC031:T027「a feature that would just immediately navigate to an Outlook or Gmail or any, an…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I09"
+          ],
+          "rationale": "与原文“更容易发起语音视频通话，尤其群组通话”一致；DOC031:T021「it would be easier if it was just more access.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I12"
+          ],
+          "rationale": "与原文“在桌面浏览器窗口缩窄并排工作时仍易于导航”一致；DOC031:T031「shrink the size of slack browser window, I feel like it's a little hard to navig…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T007/T013姓名/设备/文件对沟通有用，F001承认对方可达仍未知，partial合理。"
+        }
+      ]
+    },
+    {
+      "sample": "repeat:B",
+      "intent_matches": [
+        {
+          "intent_id": "DOC031:I01",
+          "goal_ids": [
+            "G001"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在校园内即时联系同学、助教和教授”的核心结果、条件和所选范围；DOC031:T005「talk to my peers, my teaching, teaching assistants in various subjects, and also…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I02",
+          "goal_ids": [
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“仅凭姓名或姓氏找到校园成员，无需先保存号码或邮箱”的核心结果、条件和所选范围；DOC031:T007「I don't need to like save anybody's information.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I03",
+          "goal_ids": [
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在手机或电脑上便捷沟通”的核心结果、条件和所选范围；DOC031:T007「I can do it over my phone. I can do it if my laptop's open」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I04",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“用频道立即触达广泛受众”的核心结果、条件和所选范围；DOC031:T009「the channel feature within slack, where I can reach a wide audience immediately.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I05",
+          "goal_ids": [
+            "G005",
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“查看入频道前的历史内容与当前校园、专业讨论”的核心结果、条件和所选范围；DOC031:T009「I have access to information that was there before I even joined the channel」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I06",
+          "goal_ids": [
+            "G007"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过私信即时分享团队协作文件”的核心结果、条件和所选范围；DOC031:T011「my most used feature is sharing documents when collaborating with teammates.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I07",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“按需格式化消息和附加不同类型文件”；DOC031:T017「I can format the text, whatever, any way I want.」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC031:I08",
+          "goal_ids": [
+            "G008",
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“搜索历史讨论或资料并从大量命中中找到具体消息”的核心结果、条件和所选范围；DOC031:T019「enter keywords to look, to look for something specific.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I09",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“更容易发起语音视频通话，尤其群组通话”的核心结果、条件和所选范围；DOC031:T021「it would be easier if it was just more access.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I10",
+          "goal_ids": [
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“已知电话号码时可用直接电话快速沟通”的核心结果、条件和所选范围；DOC031:T023「if I have their email with not their emails, or if their phone number with me, I…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I11",
+          "goal_ids": [
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“从 Slack 快速跳转标准邮件应用给对方发正式邮件”的核心结果、条件和所选范围；DOC031:T027「a feature that would just immediately navigate to an Outlook or Gmail or any, an…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC031:I12",
+          "goal_ids": [
+            "G013"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在桌面浏览器窗口缩窄并排工作时仍易于导航”的核心结果、条件和所选范围；DOC031:T031「shrink the size of slack browser window, I feel like it's a little hard to navig…」。按多对多承接，不要求节点数与冻结清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I01"
+          ],
+          "rationale": "与原文“在校园内即时联系同学、助教和教授”一致；DOC031:T005「talk to my peers, my teaching, teaching assistants in various subjects, and also…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I02"
+          ],
+          "rationale": "与原文“仅凭姓名或姓氏找到校园成员，无需先保存号码或邮箱”一致；DOC031:T007「I don't need to like save anybody's information.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I03"
+          ],
+          "rationale": "与原文“在手机或电脑上便捷沟通”一致；DOC031:T007「I can do it over my phone. I can do it if my laptop's open」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I04"
+          ],
+          "rationale": "与原文“用频道立即触达广泛受众”一致；DOC031:T009「the channel feature within slack, where I can reach a wide audience immediately.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I05"
+          ],
+          "rationale": "与原文“查看入频道前的历史内容与当前校园、专业讨论”一致；DOC031:T009「I have access to information that was there before I even joined the channel」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I05"
+          ],
+          "rationale": "与原文“查看入频道前的历史内容与当前校园、专业讨论”一致；DOC031:T009「I have access to information that was there before I even joined the channel」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I06"
+          ],
+          "rationale": "T011/T013最常用私信即时文档共享的结果和渠道都完整，未混同频道广播。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I08"
+          ],
+          "rationale": "与原文“搜索历史讨论或资料并从大量命中中找到具体消息”一致；DOC031:T019「enter keywords to look, to look for something specific.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I08"
+          ],
+          "rationale": "与原文“搜索历史讨论或资料并从大量命中中找到具体消息”一致；DOC031:T019「enter keywords to look, to look for something specific.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I09"
+          ],
+          "rationale": "T021一般访问改善和T027尤其群组被同一节点保留，条件/粒度合理，不强制另立群组节点。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I10"
+          ],
+          "rationale": "与原文“已知电话号码时可用直接电话快速沟通”一致；DOC031:T023「if I have their email with not their emails, or if their phone number with me, I…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I11"
+          ],
+          "rationale": "与原文“从 Slack 快速跳转标准邮件应用给对方发正式邮件”一致；DOC031:T027「a feature that would just immediately navigate to an Outlook or Gmail or any, an…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC031:I12"
+          ],
+          "rationale": "与原文“在桌面浏览器窗口缩窄并排工作时仍易于导航”一致；DOC031:T031「shrink the size of slack browser window, I feel like it's a little hard to navig…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [
+        {
+          "relation_id": "R001",
+          "judgment": "consistent",
+          "rationale": "T007姓名检索是即时联络校内成员的所选方式。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R002",
+          "judgment": "consistent",
+          "rationale": "T011/T013私信即时文档是即时校园通信的内容特例。 当前按specialization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R003",
+          "judgment": "consistent",
+          "rationale": "T009频道面对广受众是即时沟通的情境特化。 当前按specialization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R004",
+          "judgment": "consistent",
+          "rationale": "T009历史帮助了解讨论，不能保证当前信息全。 当前按contribution/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R005",
+          "judgment": "consistent",
+          "rationale": "T027正式邮件可联系教授，但即时性依邮件，保留为贡献而非保证合理。 当前按contribution/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R006",
+          "judgment": "needs_revision",
+          "rationale": "T017先去对象页面再附件发送有据，但G002“仅凭姓名查找”不在每次文件发送的前序中；支持普通导航的证据不能直接支持这个更具体的目标必然在先。 当前按precedes/supported状态评价，不等同充分精化。"
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T007/T009/T011只覆盖若干通信场景，F001明确不穷尽且partial；不当普遍AND计划。"
+        }
+      ]
+    }
+  ]
+}

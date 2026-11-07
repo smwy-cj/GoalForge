@@ -1,0 +1,223 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "ead82c5f02ec1a838be8a9be064809548131253f659ca1aedeb0b8bdc98ef177",
+    "input_sha256": "403acec4c3003a594e7025e47e87d818ef1900dfb3d6dd6a2cd5dbe4d41d3d2c"
+  },
+  "judgments": {
+    "DOC005-C001": {
+      "target_statement": "始终需要背景中有声音/音乐播放（包括考试、高压期等听歌强度下降的时段；不适应静默）",
+      "label": "direct",
+      "rationale": "受访者在两处独立陈述中以第一人称直接表达对背景声音的持续需求：S012「I still need to have something playing in the background at all」、S080「But I always need something playing in the background.」，并明确不适应静默（S080「doesn't really do well with silence in the background」）。高压/考试期强度下降但需求保持，由 S012 同一句内先说「maybe drops to a 3 or a 2」再以「still need」承接直接支持。主体、对象、情境与目标表述一致，无相反证据。",
+      "supported_parts": [
+        "背景持续有声音/音乐播放：S012、S080 两处第一人称直接陈述",
+        "不适应静默：S080「So I'm someone who doesn't really do well with silence in the background.」",
+        "高压/考试期强度下降但需求保持：S012「when there are exams or peak stress schedules, maybe drops to a 3 or a 2」紧接「I still need...」",
+        "需求稳定性旁证：S080 极端假设下的退路链（电影/Netflix → 电视 → 广播）",
+        "动机：S014「it kind of distracts me from the stress of the real world」"
+      ],
+      "unsupported_parts": [
+        "「始终」若按字面理解为清醒时的每一刻，原文不支持：S008「Music almost all the time, but not every moment. I'm awake.」明确限定为几乎全部时间而非每一刻",
+        "未给出「背景声」的一般性定义；S080 退路链包含电影/电视/广播等非音乐声源，目标以「声音/音乐」并集表述，原文对此未作概括",
+        "自评强度 3-2 的具体情境边界（哪些时段算高压）未定义"
+      ],
+      "assumptions": [
+        "S008 自评数值依赖转写识别；原文 T005 出现「a fool」，疑为「a four」转写误差，未做静默修正，待人工确认",
+        "退路链为假设性回答（流媒体与 YouTube 均不可用），不代表真实发生的行为"
+      ],
+      "reasoning_steps": [
+        "1. 定位两处直接需求陈述（S012、S080），核对主体（受访者本人）、对象（背景声音）、条件（持续状态）与目标一致",
+        "2. 检查限定语境：S012 前置高压期强度降至 3-2 后用 still 维持需求，目标括号中的限定得到支持",
+        "3. 对比 S008「almost all the time, but not every moment」，识别目标「始终」的字面强度高于原文，记为部分不支持",
+        "4. 检查退路链方向：说明需求对象不限于音乐，与目标「声音/音乐」并集相容，不作反对证据",
+        "5. 检索相反证据：全文无「可以接受静默」类表述；两处陈述均为受访者自发而非采访者引导 → direct"
+      ]
+    },
+    "DOC005-C005": {
+      "target_statement": "处于特定情绪时，找到与当前情绪精确匹配的歌曲",
+      "label": "direct",
+      "rationale": "S034 中受访者自述「the 1st 15% would be when I'm feeling a particular way. And then I need some songs to find exactly what I'm feeling.」，条件（处于特定情绪时）、对象（与当前情绪精确匹配的歌曲）、需求动词（need）均由受访者第一人称直接给出，主体与目标一致，所求为结果而非手段。",
+      "supported_parts": [
+        "特定情绪触发：S034「when I'm feeling a particular way」",
+        "精确匹配：S034「find exactly what I'm feeling」",
+        "需求表达：S034「I need some songs」为对期望结果的直接陈述"
+      ],
+      "unsupported_parts": [
+        "未提供「精确匹配」的判定标准或成功条件，受访者未说明如何判断某首歌是否 exactly 匹配情绪",
+        "搜索手段（按情绪词或关键词搜索、直接选用他人公开播放列表）属动作层，不构成目标本体",
+        "15% 的使用占比为自估比例，且原文同时出现「the other 50%」表述，比例划分本身不自洽（见待确认问题）"
+      ],
+      "assumptions": [
+        "15%/15%/70% 的占比划分为受访者口头估算，未经任何实测核验"
+      ],
+      "reasoning_steps": [
+        "1. 提取目标三要素：条件=特定情绪、对象=匹配情绪的歌曲、性质=找到",
+        "2. 在 S034 内逐要素比对，三要素均由受访者直接陈述 → 满足 direct 的主体/对象/条件一致要求",
+        "3. 判定未设阈值类要素，故不适用「只支持方向不支持阈值」的 insufficient 情形",
+        "4. 检索相反证据：无「不需要匹配情绪」类表述 → direct"
+      ]
+    },
+    "DOC005-C006": {
+      "target_statement": "为心中已有的构想（如编舞、购物场景）找到匹配的歌曲并从中获得灵感",
+      "label": "direct",
+      "rationale": "S034 中受访者自述「So if I have something in mind. and I want to find songs to match the vision I have in my mind.」，并给出情境来源「I'm a dancer. and I love going shopping as well.」，结果侧「see if inspiration strikes with any one of them」直接支持从中获得灵感。条件（心中已有构想）、对象（匹配该构想的歌曲）、结果（获得灵感）三要素均由受访者第一人称直接陈述。",
+      "supported_parts": [
+        "心中已有构想：S034「if I have something in mind」「the vision I have in my mind」",
+        "找到匹配歌曲：S034「I want to find songs to match the vision」",
+        "获得灵感：S034「just listen through and see if inspiration strikes with any one of them」",
+        "构想来源举例：S034「I'm a dancer. and I love going shopping as well.」支持编舞与购物场景"
+      ],
+      "unsupported_parts": [
+        "「构想」的类型未穷举，编舞与购物为受访者自举的两例，目标中的「如」已体现开放性，但无完整清单",
+        "未说明灵感产生后的后续行为（是否保存、用于编舞实践等）",
+        "浏览与搜索手段（via search with popular keywords、go through different playlists）属动作层"
+      ],
+      "assumptions": [
+        "占比划分（30% 中的另一个 15%）为受访者口头估算"
+      ],
+      "reasoning_steps": [
+        "1. 拆分目标为：条件=已有构想、行为=找到匹配歌曲、结果=获得灵感",
+        "2. 三要素在 S034 同一段自述中逐一命中，主体一致 → 排除 insufficient",
+        "3. 检查是否存在限定冲突：情境举例与目标「如编舞、购物场景」相容 → 排除 contradicted",
+        "4. 手段描述另行归入动作候选，不影响本目标判定 → direct"
+      ]
+    },
+    "DOC005-C010": {
+      "target_statement": "发现并比较新歌，确认所选歌曲是可发现范围内相对更合心意的选择（从线上听到的片段出发）",
+      "label": "direct",
+      "rationale": "S056 中受访者自述「Discover new songs is, I hear, maybe a small part of it online.」确立起点为线上听到的片段，续以「what are the other songs that are there? Do I like anyone better, or do I like anything worse.」「is this the best I can find?」直接表达发现新歌后的比较与择优取向；S058「Yeah, that is accurate.」为对采访者复述的确认。主体、对象、起点条件与目标一致。",
+      "supported_parts": [
+        "新歌发现为持续行为：S056「Discover new songs is...」",
+        "起点为线上片段：S056「I hear, maybe a small part of it online」",
+        "比较与择优：S056「Do I like anyone better, or do I like anything worse.」「is this the best I can find?」",
+        "受访者确认：S058「Yeah, that is accurate.」"
+      ],
+      "unsupported_parts": [
+        "「可发现范围内」为对 Spotify 相似歌曲续播机制的概括，受访者未显式限定比较范围",
+        "「确认」这一完成态未被明示，原文为探索性自问（is this the best I can find?），未陈述达成确认的判据或终点",
+        "未说明比较所依靠的歌曲集合如何生成（S056 提到 hit on next 后播放相似歌曲，属机制描述而非目标）"
+      ],
+      "assumptions": [
+        "「best I can find」理解为在可得结果中相对更合心意，而非绝对最优"
+      ],
+      "reasoning_steps": [
+        "1. 提取目标要素：发现新歌、比较、确认相对更优、起点为线上片段",
+        "2. S056 逐项命中四个要素，S058 提供确认 → 排除 insufficient",
+        "3. 检查 S054「I don't think so most of the time.」为对前一追问的回答，与本目标不构成相反关系",
+        "4. 「可发现范围内」与「确认」为对原文的概括性收紧，记入部分不支持，不推翻核心支持 → direct"
+      ]
+    },
+    "DOC005-C015": {
+      "target_statement": "期望播放列表/推荐中符合自己口味的歌曲占比高（个性化命中率高）",
+      "label": "inferred",
+      "rationale": "原文无「我希望命中率高的直接诉求句；但 S086 中受访者主动给出两类来源的口味命中比例——普通播放列表「maybe 3 out of 20 songs that I really like」、Made for You「the chances go up to around 10 to 12 songs out of 20」——并以此解释对 Made for You 的偏好。由「偏好 + 以命中率作为理由」可正向推断其评价标准为口味命中比例，进而存在对高命中率的持续期望，属 inferred 而非 insufficient。",
+      "supported_parts": [
+        "存在明确的命中率比较：S086「3 out of 20」与「around 10 to 12 songs out of 20」",
+        "以命中率作为偏好理由：受访者用该对比解释为何更认可 Made for You",
+        "评价对象为推荐/播放列表内容与自身口味的契合程度"
+      ],
+      "unsupported_parts": [
+        "无直接诉求句：原文未出现「我希望/需要命中率更高」一类表达",
+        "无期望阈值：未给出期望达到的比例或可接受下限，3/20 与 10-12/20 均为现状估计而非目标值",
+        "未说明该期望是否适用于所有推荐场景，Made for You 与自建/他人播放列表的对比由受访者自行建立可比性"
+      ],
+      "assumptions": [
+        "受访者以命中率解释偏好，意味着命中率是其评价标准，并进一步反映为持续期望（而非仅对现状满意）",
+        "3/20 与 10-12/20 为受访者自述估计值，未经实测核验",
+        "Made for You（算法推荐）与普通播放列表在受访者认知中可比，二者内容来源差异不影响其比较逻辑"
+      ],
+      "reasoning_steps": [
+        "1. 检索原文是否有直接诉求句 → 未找到，排除 direct",
+        "2. 检索正面推断依据 → S086 主动给出命中比例并据此偏好，构成正向依据",
+        "3. 区分 inferred 与 insufficient：存在正面推断依据而非资料不足，故判 inferred",
+        "4. 检索相反证据 → 无「命中率低也可接受」类表述，排除 contradicted",
+        "5. 记录阈值缺失与估计值性质为推断假设，供人工复核"
+      ]
+    },
+    "DOC005-C016": {
+      "target_statement": "希望应用首页展示「精选播放列表」：由普通用户（而非仅官方策展人）创建、获得最高人气的公开播放列表",
+      "label": "direct",
+      "rationale": "S094 为对采访者「希望新增什么功能」（S093）的直接回答：「I think it would be nice to maybe have something on the home screen, like featured playlists. which are public playlists created by random people, not just by any curators that get the most traction.」。目标四要素——首页展示、精选播放列表、普通用户创建的公开播放列表、获得最高人气——在同一句内完整出现，主体与对象一致。",
+      "supported_parts": [
+        "首页展示：S094「have something on the home screen」",
+        "精选播放列表：S094「like featured playlists」",
+        "由普通用户创建的公开播放列表：S094「public playlists created by random people」",
+        "而非仅官方策展人：S094「not just by any curators」",
+        "获得最高人气：S094「that get the most traction」",
+        "正面评价：S096「I think that would have that would be cool.」"
+      ],
+      "unsupported_parts": [
+        "「最高人气」的度量方式与计算口径未定义（traction 未定义）",
+        "未说明精选列表的更新频率、数量、排序规则与审核机制",
+        "期望强度温和：S094 用「would be nice to maybe」，弱于必需性表述",
+        "社交属性定位未确定：S098「I don't think that's the primary motivation... but it does kind of encompass that.」说明社交只是部分涵盖"
+      ],
+      "assumptions": [
+        "「traction」理解为播放/收藏/关注等人气指标，原文未给出定义",
+        "该回答在采访者「希望新增什么」提问框架下给出，视为受访者持有的期望而非假设性闲谈"
+      ],
+      "reasoning_steps": [
+        "1. 确认提问框架：S093 询问希望新增的功能 → 回答属期望表达",
+        "2. 逐项比对四要素，均在 S094 内命中 → 主体、对象、条件一致",
+        "3. 检查社交属性追问（S097/S098）：受访者确认只是部分涵盖，与本目标不冲突 → 不作反对证据",
+        "4. 无相反证据 → direct；期望强度与实现细节缺失记入部分不支持"
+      ]
+    },
+    "DOC005-C017": {
+      "target_statement": "希望平台基于自己保存与收听的播放列表找到听歌相似的其他用户，并向其推荐对方收听的播放列表",
+      "label": "direct",
+      "rationale": "S100 中受访者主动提出：「maybe if there is an algorithm on Spotify where. based on the playlist, I save, and I listen to if they find someone else listening to kind of the same songs. if they can suggest a playlist that they will listen to.」。目标三要素——基于自己保存与收听的播放列表、找到听歌相似的其他用户、推荐对方收听的播放列表——完整出现于受访者本人提出的构想中，主体一致。",
+      "supported_parts": [
+        "依据为自身保存与收听的播放列表：S100「based on the playlist, I save, and I listen to」",
+        "找到听歌相似的其他用户：S100「find someone else listening to kind of the same songs」",
+        "推荐对方收听的播放列表：S100「if they can suggest a playlist that they will listen to」",
+        "提出方式为受访者主动构想（承接 S093 新增功能提问），非采访者引导的具体选项"
+      ],
+      "unsupported_parts": [
+        "可行性存疑：S104「I'm not sure how much it would work, though.」表明对效果不确定",
+        "措辞保留：S100 以「maybe」「if」提出，为构想时的措辞，未提供必然采纳的承诺",
+        "未定义「听歌相似」的判定口径与相似度阈值",
+        "未说明推荐结果的呈现位置与更新频率"
+      ],
+      "assumptions": [
+        "在「希望新增什么功能」提问框架下主动提出的构想，视为受访者持有的期望而非纯假设性闲谈",
+        "S102「an algorithm cannot really replicate human emotions」是提出人工互荐的动机，不构成对本目标的反对"
+      ],
+      "reasoning_steps": [
+        "1. 确认目标三要素在 S100 内完整出现，且由受访者本人提出 → 排除 insufficient（区别于采访者提问未获回答的情形）",
+        "2. 判断「maybe/if」性质：属提出构想的措辞，非对需求的否定",
+        "3. 检查 S104 犹疑对象：针对效果（how much it would work）而非意愿 → 不改变需求方向",
+        "4. 检查 S102 方向：算法无法复制人类情感，支持以相似用户替代算法的动机 → 同向证据",
+        "5. 无相反证据 → direct；可行性犹疑与口径缺失记入部分不支持并转为人工确认项"
+      ]
+    },
+    "DOC005-C018": {
+      "target_statement": "以自建播放列表为核心组织日常听歌（重复播放常用列表），并将播放列表能力视为流媒体服务不可或缺的功能",
+      "label": "direct",
+      "rationale": "S106 中受访者回答「Definitely. Playlist is one made for use. Another.」并总结「So those 3 things are my most important features in spotify.」，直接确认播放列表为最重要功能之一；行为侧 S028 自述以播放列表为听歌入口（「open the app go to the playlist section」）并重复播放常用列表（「my repeat playlist」），S034 给出约 70% 的使用占比。核心行为与功能重要性确认均由受访者直接陈述。",
+      "supported_parts": [
+        "播放列表为最重要功能之一：S106「Definitely. Playlist is one」「So those 3 things are my most important features in spotify.」",
+        "以播放列表为听歌入口：S028「open the app go to the playlist section... Click on the playlist. I put it on shuffle」",
+        "重复播放常用列表：S028「the playlist that I listen to the most which are usually my repeat playlist」",
+        "使用占比：S034「this is around 70% of my usage」",
+        "环境音为并列第三项：S106「sometimes I like to listen to ambient noise, so without that I don't think spotify would be spotify」"
+      ],
+      "unsupported_parts": [
+        "「自建」未在原文明示：S028 只说明常用的是 repeat playlist 与 a few specific playlists，未说明均由自己创建",
+        "「不可或缺」的强度跨度：该措辞来自采访者提问框架（S105「without which...spotify isn't complete without it」），受访者确认的是 most important features，二者不完全等价",
+        "未说明播放列表数量、维护方式与他人公开列表的使用比例"
+      ],
+      "assumptions": [
+        "70% 使用占比为受访者口头估算",
+        "repeat playlist 由受访者自行积累维护"
+      ],
+      "reasoning_steps": [
+        "1. 拆分目标为行为侧（以播放列表组织日常听歌、重复播放常用列表）与评价侧（视为不可或缺的功能）",
+        "2. 行为侧由 S028、S034 直接支持；评价侧由 S106 在重要性提问下确认 → 排除 insufficient",
+        "3. 检查提问框架影响：S105 的 without which 措辞由采访者引入，受访者以 most important 回应，强度略有差距 → 记入部分不支持",
+        "4. 检查「自建」要素：原文未明示创建归属 → 记入部分不支持",
+        "5. 无相反证据（未表达播放列表不重要） → direct"
+      ]
+    }
+  }
+}

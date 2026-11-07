@@ -1,0 +1,287 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "4de3a5cc481fdd96f58dbff76f694b46657a4c705f9aedfd1c42f345f4787e73",
+    "input_sha256": "e7c57f4f6b847fa5155c142871fba21f704173dd4f66ae0ea5f7d811b1bb1acb"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Check the next day's temperature before going out in order to decide whether to wear a thick or a light coat.",
+      "label": "direct",
+      "rationale": "原句明确说明通常在前一天查温度，用于决定穿厚外套还是薄外套，主体、对象、结果与时间均一致。",
+      "supported_parts": [
+        "查温度的时间（前一天）",
+        "决定外套厚薄的结果"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G002": {
+      "target_statement": "Skip cycling and take the bus instead when the weather is very cold.",
+      "label": "direct",
+      "rationale": "原句以条件句明确表达很冷时可能放弃自行车改坐公交；目标保留条件与方式，未把 might 强化为必须。",
+      "supported_parts": [
+        "条件：非常冷",
+        "方式替换：自行车改公交"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G003": {
+      "target_statement": "Check the rain forecast and make sure to carry an umbrella when rain is forecast.",
+      "label": "direct",
+      "rationale": "原句直接说明会查降雨预报并在有雨时确保带伞，动作与结果一致。",
+      "supported_parts": [
+        "查降雨预报",
+        "有雨时带伞"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G004": {
+      "target_statement": "When first opening the app, look at the temperature and at tomorrow's chance of rain before anything else.",
+      "label": "direct",
+      "rationale": "回答“打开后先看什么”时直接给出温度与明日降雨概率两项，目标保留“先看”的优先级含义。",
+      "supported_parts": [
+        "打开即看",
+        "两项信息：温度、明日降雨概率"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G005": {
+      "target_statement": "Check the next day's hour-by-hour forecast, focused on the temperature and precipitation chance around the morning time before classes when actually going out.",
+      "label": "direct",
+      "rationale": "两段原句分别给出小时级查看、时段聚焦（上课前/出门时）与降水概率判断；合并为同一查看动作的两个参数，未改变 25% 阈值含义。",
+      "supported_parts": [
+        "次日小时级预报",
+        "出门时段聚焦",
+        "降水概率与 25% 判断"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G006": {
+      "target_statement": "Be warned by the app about severe weather events affecting his own city, so he notices them.",
+      "label": "direct",
+      "rationale": "原句明确说应用会给出警告，且本市发生事件时一定会注意到；目标保留“本市”范围，未扩展到全球事件。",
+      "supported_parts": [
+        "应用给出警告",
+        "本市范围",
+        "会注意到"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G007": {
+      "target_statement": "On receiving a typhoon alert, open the notification and check the severity and all the details provided.",
+      "label": "direct",
+      "rationale": "针对“收到台风警报后先做什么”的回答直接给出打开通知、看严重程度与详情，主体与条件一致。",
+      "supported_parts": [
+        "打开通知",
+        "查看严重程度与详情"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G008": {
+      "target_statement": "Read the recommendations from local authorities or the government meteorological organization to decide whether to evacuate, seek shelter, stay inside, or just carry an umbrella and raincoat.",
+      "label": "direct",
+      "rationale": "原句明确会读官方建议并列出可选项；目标保留“取决于严重程度”的开放选择，不替其选定某一方式。",
+      "supported_parts": [
+        "读官方/气象机构建议",
+        "选项包含撤离、避难、不外出、仅带雨具"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G009": {
+      "target_statement": "Adjust the day's plans based on the severity and the information given in the warning.",
+      "label": "direct",
+      "rationale": "原句直接说明依据严重程度与所给信息调整当天安排，条件与结果明确。",
+      "supported_parts": [
+        "依据严重程度与信息",
+        "调整当天安排"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G010": {
+      "target_statement": "Start checking the weather as soon as a trip is decided, using historical data or future/monthly forecasts to get a good estimate of the expected weather.",
+      "label": "direct",
+      "rationale": "原句说明一旦确定出行就立即查历史数据或未来/月度预报以取得估计；两种方式以“或”保留，未强化为同时使用。",
+      "supported_parts": [
+        "确定出行即开始查",
+        "历史数据或未来/月度预报",
+        "目的为获得估计"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G011": {
+      "target_statement": "Check cloud coverage when planning a trip and reconsider or cancel if it will be overcast, for example a beach vacation or an astronomical event trip.",
+      "label": "direct",
+      "rationale": "原句以海滩度假为例说明云量会导致重新考虑；天文观测的取消在后续同段原句亦有依据，属于同一目的的示例而非新增要求。",
+      "supported_parts": [
+        "查云量",
+        "阴天时重新考虑/取消",
+        "示例：海滩、天文观测"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G012": {
+      "target_statement": "Defer the final go/no-go decision on a trip until about two or three days before, when the forecast is more accurate, and then decide based on the final forecast.",
+      "label": "direct",
+      "rationale": "两段原句共同说明临近日期预报更准、应等到最后两三天再据最终预报决定；保留“可能/大概”的建议强度。",
+      "supported_parts": [
+        "等待到两三天前",
+        "依据最终预报决定"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G013": {
+      "target_statement": "Plan to screenshot temperature readings below zero and share them on social media.",
+      "label": "direct",
+      "rationale": "原句明确说计划很快这么做，并给出触发条件（低于 0 度）；目标以“plan to”保留尚未执行的计划状态。",
+      "supported_parts": [
+        "触发条件低于 0 度",
+        "截图并分享到社交媒体",
+        "尚未执行、计划中"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G014": {
+      "target_statement": "Prefer a plain black or plain white background over the current dull blue colour scheme.",
+      "label": "direct",
+      "rationale": "原句明确不喜欢暗蓝色背景并说更偏好纯黑或纯白；作为偏好保留，未升格为强制要求。",
+      "supported_parts": [
+        "不喜欢暗蓝背景",
+        "偏好纯黑或纯白"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G015": {
+      "target_statement": "Avoid pages crowded with four or five ads, including video ads, so the weather can still be checked quickly without distraction.",
+      "label": "direct",
+      "rationale": "原句直接说明 4-5 个广告加视频广告过多、分散注意力并破坏快速查看的体验；保留可接受 1-2 个广告的边界。",
+      "supported_parts": [
+        "4-5 个广告含视频广告过多",
+        "破坏快速查看体验",
+        "可接受 1-2 个广告"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G016": {
+      "target_statement": "Make the layout more compact so related information sits closer together and is easier to read.",
+      "label": "direct",
+      "rationale": "原句提出可以把 UI 压紧、让内容彼此靠近以便阅读；建议以 maybe 表达，目标保留为建议强度而非强制。",
+      "supported_parts": [
+        "布局更紧凑",
+        "便于阅读"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G017": {
+      "target_statement": "Consider paying for the ad-free/premium tier only if daily use exceeds 20-30 minutes or the radar section improves substantially; at current usage it is not required.",
+      "label": "direct",
+      "rationale": "原句分别给出两个触发条件（每日使用超过 20-30 分钟、雷达做好）与当前“不需要”的结论；合并为同一付费决策的两个条件，未把可能购买写成已决定购买。",
+      "supported_parts": [
+        "当前用量下不需要付费",
+        "用量超过 20-30 分钟才考虑",
+        "雷达显著改善才考虑购买"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G018": {
+      "target_statement": "Improve the radar section into a much more detailed, intuitive multi-parameter map (snow coverage, precipitation) with animated visuals.",
+      "label": "direct",
+      "rationale": "原句明确说雷达可以更好、并指出多参数（雪、降水）与直觉化地图的方向；动画偏好来自其对 windy.com 的描述，作为同一雷达改进的内容保留。",
+      "supported_parts": [
+        "雷达可更好",
+        "多参数地图",
+        "动画"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G019": {
+      "target_statement": "View temperatures in Celsius rather than the Fahrenheit default.",
+      "label": "direct",
+      "rationale": "原句直接表达偏好摄氏度，并说明当前默认是华氏度；保留偏好强度。",
+      "supported_parts": [
+        "偏好摄氏度",
+        "默认是华氏度"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G020": {
+      "target_statement": "Keep weather.com notifications off, consistent with a general preference for no notifications.",
+      "label": "direct",
+      "rationale": "原句明确偏好无通知且已保持关闭；目标保留“通常/偏好”的强度，未写成对所有设备一律禁止。",
+      "supported_parts": [
+        "偏好无通知",
+        "目前已关闭"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G021": {
+      "target_statement": "Prefer that location data stay in the local browser cache and be clearable, rather than be stored and be able to identify his city in a leak.",
+      "label": "inferred",
+      "rationale": "受访者未直接提出要求，但以“本地缓存可清除、不必担心被存储”为安心理由，并对登录后泄露可识别城市表示担忧，可正向推断其偏好位置数据留在本地、不被服务端存储或与身份关联；强度为轻微担忧，未写成硬性要求。",
+      "supported_parts": [
+        "对本地缓存可清除的安心",
+        "对登录后泄露可识别城市的担忧"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "受访者的安心与担忧可合理读作对数据存放位置的偏好"
+      ],
+      "reasoning_steps": [
+        "从“不必担心被存储”推断希望不被存储",
+        "从泄露可识别城市推断希望不与身份关联"
+      ]
+    },
+    "G022": {
+      "target_statement": "Have very local weather data for specific non-city places such as hiking trails, a hotel in the middle of nowhere, or a mountain climbing route.",
+      "label": "direct",
+      "rationale": "原句明确说城市级信息在此情境无用、非常本地的数据会有帮助；目标保留非城市地点的适用范围与示例。",
+      "supported_parts": [
+        "非城市地点",
+        "需要更本地数据",
+        "示例：步道、登山、偏远酒店"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    }
+  }
+}

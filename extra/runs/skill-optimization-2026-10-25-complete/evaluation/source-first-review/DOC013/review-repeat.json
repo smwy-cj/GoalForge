@@ -1,0 +1,681 @@
+{
+  "document_id": "DOC013",
+  "round": "repeat",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "blinding_limit": "仅知第二轮A/B匿名代号；没有读取映射或生成分支，不推断跨轮代号对应。语言、粒度和模板特征可被猜测，属于有限盲法。",
+  "policy": "使用同一冻结129条意图，不迎合结果改清单；允许多对多不同粒度。候选/否定关系按其当前状态评价，supported不代表需求已采纳。无标准P/R/F1。",
+  "samples": [
+    {
+      "sample": "repeat:A",
+      "intent_matches": [
+        {
+          "intent_id": "DOC013:I01",
+          "goal_ids": [
+            "G001",
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“控制不适合特定观众的内容可见性及禁止某些上传内容”的核心结果、条件和所选范围；DOC013:T006「there could be types of content that's not suitable for all viewers.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I02",
+          "goal_ids": [
+            "G003",
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按文本、过滤条件找到特定视频或内容”的核心结果、条件和所选范围；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I03",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过缩略图及描述等信息浏览和选择视频”的核心结果、条件和所选范围；DOC013:T012「see a large volume of different options and click through it」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I04",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过观看获取娱乐、教育或快速信息”的核心结果、条件和所选范围；DOC013:T016「for entertainment purposes and for education purposes.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I05",
+          "goal_ids": [
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“获得连续流畅且合理传输的视频播放”的核心结果、条件和所选范围；DOC013:T014「I don't want it to freeze constantly. I want a seamless stream of buffered data.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I06",
+          "goal_ids": [
+            "G005"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“上传既有视频或发起直播来分享内容”的核心结果、条件和所选范围；DOC013:T012「create to upload a video or start a stream.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I07",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“为发布内容补充描述、转录、字幕等元数据”的核心结果、条件和所选范围；DOC013:T012「put some sort of description in, add, perhaps a transcript captions of the like.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I08",
+          "goal_ids": [
+            "G007"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“编辑视频以添加音效、剪辑或裁切”的核心结果、条件和所选范围；DOC013:T012「to edit those. So I can add sound effects. Trim crop.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I09",
+          "goal_ids": [
+            "G011"
+          ],
+          "status": "partial",
+          "rationale": "G011保留格式和上传发布便利，但T018潜在长度限制顾虑未承接。 原文：DOC013:T018「making sure their formats are compatible with the system, making sure there's no…」"
+        },
+        {
+          "intent_id": "DOC013:I10",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“在首次上传时建立频道并发布选择的文件”；DOC013:T026「since I've never done this before. It's prompting me for what my account might b…」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I11",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“满足直播账户启用的等待限制后开播”；DOC013:T028「after a streaming account is set up.」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I12",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“通过观看清单和订阅管理想看的内容并追踪创作者更新”；DOC013:T030「add things to their watch list. or they can perhaps follow or subscribe」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I13",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“以付费方案获得无广告、不间断观看”；DOC013:T032「a premium tier which promises all content, no interruptions」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I14",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“控制视频播放暂停、音量、静音、字幕与全屏”；DOC013:T038「play button, which, when clicked, turns into a pause button」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I15",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“了解播放进度并继续观看下一视频”；DOC013:T038「current time. Slash total time length.」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I16",
+          "goal_ids": [
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“让不熟悉界面的用户发现并理解播放器控制”的核心结果、条件和所选范围；DOC013:T040「if someone unfamiliar were to arrive and see these 10 icons, they might not be s…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I17",
+          "goal_ids": [
+            "G013",
+            "G014"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“改善字幕准确性及考虑色觉障碍等可访问性”的核心结果、条件和所选范围；DOC013:T040「I'm not sure how accurate they always are」。按多对多承接，不要求节点数与冻结清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I01"
+          ],
+          "rationale": "与原文“控制不适合特定观众的内容可见性及禁止某些上传内容”一致；DOC013:T006「there could be types of content that's not suitable for all viewers.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I01"
+          ],
+          "rationale": "与原文“控制不适合特定观众的内容可见性及禁止某些上传内容”一致；DOC013:T006「there could be types of content that's not suitable for all viewers.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I02"
+          ],
+          "rationale": "与原文“按文本、过滤条件找到特定视频或内容”一致；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I03"
+          ],
+          "rationale": "与原文“通过缩略图及描述等信息浏览和选择视频”一致；DOC013:T012「see a large volume of different options and click through it」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I06"
+          ],
+          "rationale": "T012上传或开播为不同发布途径，上位并列能力承接可以接受；但未保留T028账户建立24小时等候，另在I11记缺口。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I07"
+          ],
+          "rationale": "与原文“为发布内容补充描述、转录、字幕等元数据”一致；DOC013:T012「put some sort of description in, add, perhaps a transcript captions of the like.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I08"
+          ],
+          "rationale": "与原文“编辑视频以添加音效、剪辑或裁切”一致；DOC013:T012「to edit those. So I can add sound effects. Trim crop.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I02"
+          ],
+          "rationale": "与原文“按文本、过滤条件找到特定视频或内容”一致；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I05"
+          ],
+          "rationale": "与原文“获得连续流畅且合理传输的视频播放”一致；DOC013:T014「I don't want it to freeze constantly. I want a seamless stream of buffered data.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I04"
+          ],
+          "rationale": "与原文“通过观看获取娱乐、教育或快速信息”一致；DOC013:T016「for entertainment purposes and for education purposes.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I09"
+          ],
+          "rationale": "T018格式兼容、发布简单的潜在顾虑均有据且inferred合适；原文长度限制关注未在目标或解释正面保留。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I16"
+          ],
+          "rationale": "与原文“让不熟悉界面的用户发现并理解播放器控制”一致；DOC013:T040「if someone unfamiliar were to arrive and see these 10 icons, they might not be s…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I17"
+          ],
+          "rationale": "与原文“改善字幕准确性及考虑色觉障碍等可访问性”一致；DOC013:T040「I'm not sure how accurate they always are」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I17"
+          ],
+          "rationale": "与原文“改善字幕准确性及考虑色觉障碍等可访问性”一致；DOC013:T040「I'm not sure how accurate they always are」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "搜索浏览流畅播放对应T012/T014/T016，F001承认内容相关性未知，只候选部分支持，合理。"
+        }
+      ]
+    },
+    {
+      "sample": "repeat:B",
+      "intent_matches": [
+        {
+          "intent_id": "DOC013:I01",
+          "goal_ids": [
+            "G001",
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“控制不适合特定观众的内容可见性及禁止某些上传内容”的核心结果、条件和所选范围；DOC013:T006「there could be types of content that's not suitable for all viewers.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I02",
+          "goal_ids": [
+            "G003",
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按文本、过滤条件找到特定视频或内容”的核心结果、条件和所选范围；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I03",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过缩略图及描述等信息浏览和选择视频”的核心结果、条件和所选范围；DOC013:T012「see a large volume of different options and click through it」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I04",
+          "goal_ids": [
+            "G014",
+            "G015",
+            "G016"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过观看获取娱乐、教育或快速信息”的核心结果、条件和所选范围；DOC013:T016「for entertainment purposes and for education purposes.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I05",
+          "goal_ids": [
+            "G013"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“获得连续流畅且合理传输的视频播放”的核心结果、条件和所选范围；DOC013:T014「I don't want it to freeze constantly. I want a seamless stream of buffered data.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I06",
+          "goal_ids": [
+            "G005",
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“上传既有视频或发起直播来分享内容”的核心结果、条件和所选范围；DOC013:T012「create to upload a video or start a stream.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I07",
+          "goal_ids": [
+            "G007",
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“为发布内容补充描述、转录、字幕等元数据”的核心结果、条件和所选范围；DOC013:T012「put some sort of description in, add, perhaps a transcript captions of the like.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I08",
+          "goal_ids": [
+            "G009",
+            "G010",
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“编辑视频以添加音效、剪辑或裁切”的核心结果、条件和所选范围；DOC013:T012「to edit those. So I can add sound effects. Trim crop.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I09",
+          "goal_ids": [
+            "G017",
+            "G018",
+            "G019"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“减少格式、时长兼容与上传发布流程的技术障碍”的核心结果、条件和所选范围；DOC013:T018「making sure their formats are compatible with the system, making sure there's no…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I10",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“在首次上传时建立频道并发布选择的文件”；DOC013:T026「since I've never done this before. It's prompting me for what my account might b…」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I11",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“满足直播账户启用的等待限制后开播”的核心结果、条件和所选范围；DOC013:T028「after a streaming account is set up.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I12",
+          "goal_ids": [
+            "G020",
+            "G021"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过观看清单和订阅管理想看的内容并追踪创作者更新”的核心结果、条件和所选范围；DOC013:T030「add things to their watch list. or they can perhaps follow or subscribe」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I13",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“以付费方案获得无广告、不间断观看”；DOC013:T032「a premium tier which promises all content, no interruptions」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I14",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“控制视频播放暂停、音量、静音、字幕与全屏”；DOC013:T038「play button, which, when clicked, turns into a pause button」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I15",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“了解播放进度并继续观看下一视频”；DOC013:T038「current time. Slash total time length.」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC013:I16",
+          "goal_ids": [
+            "G022"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“让不熟悉界面的用户发现并理解播放器控制”的核心结果、条件和所选范围；DOC013:T040「if someone unfamiliar were to arrive and see these 10 icons, they might not be s…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC013:I17",
+          "goal_ids": [
+            "G023",
+            "G024"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“改善字幕准确性及考虑色觉障碍等可访问性”的核心结果、条件和所选范围；DOC013:T040「I'm not sure how accurate they always are」。按多对多承接，不要求节点数与冻结清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I01"
+          ],
+          "rationale": "与原文“控制不适合特定观众的内容可见性及禁止某些上传内容”一致；DOC013:T006「there could be types of content that's not suitable for all viewers.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I01"
+          ],
+          "rationale": "与原文“控制不适合特定观众的内容可见性及禁止某些上传内容”一致；DOC013:T006「there could be types of content that's not suitable for all viewers.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I02"
+          ],
+          "rationale": "与原文“按文本、过滤条件找到特定视频或内容”一致；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I03"
+          ],
+          "rationale": "与原文“通过缩略图及描述等信息浏览和选择视频”一致；DOC013:T012「see a large volume of different options and click through it」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I06"
+          ],
+          "rationale": "与原文“上传既有视频或发起直播来分享内容”一致；DOC013:T012「create to upload a video or start a stream.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I06",
+            "DOC013:I11"
+          ],
+          "rationale": "T028账户设置后24小时等待被放condition并明确为现状，不升级监管普遍法律；直播目标条件完整。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I07"
+          ],
+          "rationale": "与原文“为发布内容补充描述、转录、字幕等元数据”一致；DOC013:T012「put some sort of description in, add, perhaps a transcript captions of the like.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I07"
+          ],
+          "rationale": "与原文“为发布内容补充描述、转录、字幕等元数据”一致；DOC013:T012「put some sort of description in, add, perhaps a transcript captions of the like.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I08"
+          ],
+          "rationale": "T012编辑可以加音效，G010 trim时间/G011 crop画面各可独立编辑，作为可选能力分别保留有据；不能因三个例子一律判过拆，也不要求每次做三种。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I08"
+          ],
+          "rationale": "与原文“编辑视频以添加音效、剪辑或裁切”一致；DOC013:T012「to edit those. So I can add sound effects. Trim crop.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I08"
+          ],
+          "rationale": "与原文“编辑视频以添加音效、剪辑或裁切”一致；DOC013:T012「to edit those. So I can add sound effects. Trim crop.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I02"
+          ],
+          "rationale": "与原文“按文本、过滤条件找到特定视频或内容”一致；DOC013:T012「get a specific type of video or content by searching via text, or perhaps by fil…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I05"
+          ],
+          "rationale": "与原文“获得连续流畅且合理传输的视频播放”一致；DOC013:T014「I don't want it to freeze constantly. I want a seamless stream of buffered data.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I04"
+          ],
+          "rationale": "与原文“通过观看获取娱乐、教育或快速信息”一致；DOC013:T016「for entertainment purposes and for education purposes.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I04"
+          ],
+          "rationale": "与原文“通过观看获取娱乐、教育或快速信息”一致；DOC013:T016「for entertainment purposes and for education purposes.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I04"
+          ],
+          "rationale": "与原文“通过观看获取娱乐、教育或快速信息”一致；DOC013:T016「for entertainment purposes and for education purposes.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I09"
+          ],
+          "rationale": "与原文“减少格式、时长兼容与上传发布流程的技术障碍”一致；DOC013:T018「making sure their formats are compatible with the system, making sure there's no…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I09"
+          ],
+          "rationale": "T018假设性长度顾虑保留inferred及未知实际限制，不主张无穷时长上传。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I09"
+          ],
+          "rationale": "与原文“减少格式、时长兼容与上传发布流程的技术障碍”一致；DOC013:T018「making sure their formats are compatible with the system, making sure there's no…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I12"
+          ],
+          "rationale": "与原文“通过观看清单和订阅管理想看的内容并追踪创作者更新”一致；DOC013:T030「add things to their watch list. or they can perhaps follow or subscribe」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G021",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I12"
+          ],
+          "rationale": "T030订阅并从订阅区访问最新内容是手段及目的，合并保留了两者；与待看列表是不同组织方式。",
+          "issues": []
+        },
+        {
+          "goal_id": "G022",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I16"
+          ],
+          "rationale": "与原文“让不熟悉界面的用户发现并理解播放器控制”一致；DOC013:T040「if someone unfamiliar were to arrive and see these 10 icons, they might not be s…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G023",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I17"
+          ],
+          "rationale": "与原文“改善字幕准确性及考虑色觉障碍等可访问性”一致；DOC013:T040「I'm not sure how accurate they always are」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G024",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC013:I17"
+          ],
+          "rationale": "与原文“改善字幕准确性及考虑色觉障碍等可访问性”一致；DOC013:T040「I'm not sure how accurate they always are」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [
+        {
+          "relation_id": "R001",
+          "judgment": "consistent",
+          "rationale": "T014模糊条件搜索是T012特定检索能力的特殊范围。 当前按specialization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R002",
+          "judgment": "consistent",
+          "rationale": "T012/T016文字/筛选搜索为快速获取所需信息方式，有据。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R003",
+          "judgment": "consistent",
+          "rationale": "T012视觉浏览可用于娱乐但未局限娱乐；proposed合理候选，不按已确立充分边处理。 当前按contribution/proposed状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R004",
+          "judgment": "consistent",
+          "rationale": "T018格式兼容帮助上传，不能独立保证成功。 当前按contribution/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R005",
+          "judgment": "consistent",
+          "rationale": "T018上传与发布顺序还以设问提出；proposed保留未知，不当已确立必须上传完才发布。 当前按precedes/proposed状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R006",
+          "judgment": "consistent",
+          "rationale": "T014/T016流畅观看有助获得视频信息，内容仍可能不相关，贡献合理。 当前按contribution/supported状态评价，不等同充分精化。"
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T018格式和长度是潜在上传障碍，F001保留partial及网络等未知；分析假设反例没有冒充源文事实。"
+        }
+      ]
+    }
+  ]
+}

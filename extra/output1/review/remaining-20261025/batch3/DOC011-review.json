@@ -1,0 +1,765 @@
+{
+  "document_id": "DOC011",
+  "model_path": "revised/DOC011/v2/delivery/goal-model.json",
+  "model_sha256": "d3081675d97a0d090a6fb8dd5177f48c4b0705af94e9178698cebdd88f800872",
+  "source_sha256": "a7bcaec88a1d4bedcf6d5a97bd0a20e516e63b2b5b0c092f499e9430128b50df",
+  "hashes_match_assignment": true,
+  "source_read_ranges": [
+    {
+      "start_source_id": "DOC011:T000",
+      "end_source_id": "DOC011:T055",
+      "complete": true
+    },
+    {
+      "start_source_id": "DOC011:T056",
+      "end_source_id": "DOC011:T085",
+      "complete": true
+    },
+    {
+      "start_source_id": "DOC011:T086",
+      "end_source_id": "DOC011:T110",
+      "complete": true
+    }
+  ],
+  "source_complete_read": true,
+  "reviewed_goal_ids": [
+    "DOC011-G02",
+    "DOC011-G05",
+    "DOC011-G08",
+    "DOC011-G09",
+    "DOC011-G10",
+    "DOC011-G11",
+    "DOC011-G12",
+    "DOC011-G13",
+    "DOC011-G14",
+    "DOC011-G15"
+  ],
+  "required_goal_ids": [
+    "DOC011-G02",
+    "DOC011-G05",
+    "DOC011-G08",
+    "DOC011-G09",
+    "DOC011-G10",
+    "DOC011-G11",
+    "DOC011-G12",
+    "DOC011-G13",
+    "DOC011-G14",
+    "DOC011-G15"
+  ],
+  "goal_reviews": [
+    {
+      "goal_id": "DOC011-G02",
+      "statement": "通过他人审查后再合并，保护主仓库免受未经审查的未知代码变更",
+      "actor": "受访者",
+      "conditions": [
+        "协作项目，审查按团队或审阅者标准可批准或拒绝。"
+      ],
+      "author_origin": "explicit",
+      "author_inference": null,
+      "author_support": {
+        "supported_parts": [
+          "通过他人审查后再合并，保护主仓库免受未经审查的未知代码变更"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确保护结果与审查方式，已实现也含继续使用动机；不承诺审查后绝无缺陷。"
+        ],
+        "label": "direct",
+        "rationale": "明确保护结果与审查方式，已实现也含继续使用动机；不承诺审查后绝无缺陷。"
+      },
+      "independent_support": "direct",
+      "assessment": "supported_with_boundaries",
+      "reason": "T083明确喜欢PR是为使主仓库在他人审查前免受未知变更；T107互审意图和T031/033按标准批准或拒绝支持先审后合并。条件已限定协作项目，未把个人不用PR的T045例外抹掉，也未承诺审后零缺陷。",
+      "actual_source_ids": [
+        "DOC011:T083",
+        "DOC011:T107",
+        "DOC011:T031",
+        "DOC011:T033",
+        "DOC011:T045"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T083",
+          "speaker": "Stakeholder",
+          "quote": "That's a that's a good question. I think my most like feature would probably have it would probably have to be the port request feature simply because it's a great way to make sure that the main repository stays safe from unknown code changes before they are reviewed by others. It's also a very convenient way to track history. because once a pull request is made, it is it's not deleted. It is simply saved in a backlog. and in that backlog I mean to see, like what changes were made with this pull request. What changes were made with this pull request I can somewhat see, like a history of the Repository. plus other like changes that were made by my collaborators."
+        },
+        {
+          "source_id": "DOC011:T107",
+          "speaker": "Stakeholder",
+          "quote": "In terms of like having people collaborate on my code. I want to ensure that I review their code. If I am collaborating someone else's code. They review my code. So it's for sure, the the most used feature I have."
+        },
+        {
+          "source_id": "DOC011:T031",
+          "speaker": "Stakeholder",
+          "quote": "Or, like the code, is up to standard of the team or their personal standard, to have those changes made in the main branch of the Repository. and."
+        },
+        {
+          "source_id": "DOC011:T033",
+          "speaker": "Stakeholder",
+          "quote": "Either approved, or they can also be denied if they don't meet the standards."
+        },
+        {
+          "source_id": "DOC011:T045",
+          "speaker": "Stakeholder",
+          "quote": "It provides less content for my collaborators to have to review. and it keeps a more flowing process. But if I was to like that's that's me as a student, as a collaborator. But me individually well, I wouldn't even use pull requests, in the 1st place, because I don't have any collaborators except for myself. But if I were to use pull requests I would have rather larger pull request, because it's just me reviewing myself. So it's very much a personal choice."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC011:T083",
+          "quote": "it's a great way to make sure that the main repository stays safe from unknown code changes before they are reviewed by others.",
+          "evidence_role": "supporting"
+        }
+      ],
+      "questions_issues_checked": [
+        {
+          "target_type": "goal",
+          "target_id": "DOC011-G02",
+          "message": "团队对必须审阅、质量标准及AI反馈的接受界限是什么？",
+          "blocking": false
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "goal_id": "DOC011-G05",
+      "statement": "团队协作时偏好增量提交，降低每次审查内容量并保持流程顺畅",
+      "actor": "受访者",
+      "conditions": [
+        "团队协作个人偏好；独立开发通常不用PR，假如用也可更大。"
+      ],
+      "author_origin": "explicit",
+      "author_inference": null,
+      "author_support": {
+        "supported_parts": [
+          "团队协作时偏好增量提交，降低每次审查内容量并保持流程顺畅"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确个人偏好，不将小PR变全体要求；独立项目反例保留。"
+        ],
+        "label": "direct",
+        "rationale": "明确个人偏好，不将小PR变全体要求；独立项目反例保留。"
+      },
+      "independent_support": "direct",
+      "assessment": "supported_with_boundaries",
+      "reason": "T043说个人偏好增量，T045给出减少队友审查量、让流程更顺的目的，同时明说独立开发通常不用PR、若用则可更大。当前句保留团队情境和偏好强度，未把本地增量工作变平台强制流程。",
+      "actual_source_ids": [
+        "DOC011:T040",
+        "DOC011:T042",
+        "DOC011:T043",
+        "DOC011:T045",
+        "DOC011:T047",
+        "DOC011:T049"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T040",
+          "speaker": "Interviewer",
+          "quote": "Oh, okay, got you got you? I understand more now. Thank you so much for that. Yeah. I don't. I had a doubt. you said that you pushed the code right. Can can I ask? Do you like, I understand that projects are like done in increment done done incrementally. So do you just push the code all at once? Or is there any feature to break the code and like, how do you do it actually. How do you manage that code? Oh. on the main bench."
+        },
+        {
+          "source_id": "DOC011:T042",
+          "speaker": "Interviewer",
+          "quote": "Yeah. Yeah. How do you? How do you manage the changes? Do do it. Do you do it incrementally, or do you do it all at once?"
+        },
+        {
+          "source_id": "DOC011:T043",
+          "speaker": "Stakeholder",
+          "quote": "I would say, that's very much like an individual choice based on how you want to work with the like. The application I personally prefer to do it incrementally, because it."
+        },
+        {
+          "source_id": "DOC011:T045",
+          "speaker": "Stakeholder",
+          "quote": "It provides less content for my collaborators to have to review. and it keeps a more flowing process. But if I was to like that's that's me as a student, as a collaborator. But me individually well, I wouldn't even use pull requests, in the 1st place, because I don't have any collaborators except for myself. But if I were to use pull requests I would have rather larger pull request, because it's just me reviewing myself. So it's very much a personal choice."
+        },
+        {
+          "source_id": "DOC011:T047",
+          "speaker": "Stakeholder",
+          "quote": "So in terms of incrementally pushing changes. That's something that's more done like independently based on like."
+        },
+        {
+          "source_id": "DOC011:T049",
+          "speaker": "Stakeholder",
+          "quote": "Local development, the commits what files like, how many files you're changing at a time. But in terms of managing all of these there is a feature on Github, called projects, which you can see on the main toggle switch tab. I mentioned earlier."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC011:T045",
+          "quote": "It provides less content for my collaborators to have to review. and it keeps a more flowing process.",
+          "evidence_role": "supporting"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC011:T043",
+          "quote": "I personally prefer to do it incrementally",
+          "evidence_role": "context"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC011:T045",
+          "quote": "I wouldn't even use pull requests, in the 1st place, because I don't have any collaborators except for myself.",
+          "evidence_role": "context"
+        }
+      ],
+      "questions_issues_checked": [],
+      "finding_ids": []
+    },
+    {
+      "goal_id": "DOC011-G08",
+      "statement": "方便且安全地在云端保存代码，在本机损坏或遗失后可取回到另一机器继续工作",
+      "actor": "受访者",
+      "conditions": [
+        "同步需手工pull/push；未上传的本地变化不在已云存代码范围。"
+      ],
+      "author_origin": "explicit",
+      "author_inference": null,
+      "author_support": {
+        "supported_parts": [
+          "方便且安全地在云端保存代码，在本机损坏或遗失后可取回到另一机器继续工作"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确避免丢失和恢复结果，保留云端/pull方式；未扩为自动备份或实时同步。"
+        ],
+        "label": "direct",
+        "rationale": "明确避免丢失和恢复结果，保留云端/pull方式；未扩为自动备份或实时同步。"
+      },
+      "independent_support": "direct",
+      "assessment": "supported_with_boundaries",
+      "reason": "T075直接将安全云存与本机损坏/遗失后在另一机器继续工作相连。T015说明需手工pull/push，条件正确排除尚未上传的本地改动，不把恢复目标写成自动实时备份。",
+      "actual_source_ids": [
+        "DOC011:T074",
+        "DOC011:T075",
+        "DOC011:T015"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T074",
+          "speaker": "Interviewer",
+          "quote": "Okay, got you got you got you? I are there any other goals? Apart from collaborating with your team teammates that you use Github for."
+        },
+        {
+          "source_id": "DOC011:T075",
+          "speaker": "Stakeholder",
+          "quote": "Yeah, actually, I guess another use case is just having a convenient place to store my code in a in a in a safe manner. Were my machine to go corrupt, were it to be lost, I would still have my work in a cloud environment that I could simply I'm gonna use the keyword pull onto a different machine and continue working on my code base."
+        },
+        {
+          "source_id": "DOC011:T015",
+          "speaker": "Stakeholder",
+          "quote": "Yes, it's it's it's it's synced in the sense that you would have like. It's not automatically synced. But you would have to manually synchronize it by running commands, such as get pull, which will pull in the latest code from the repository, or you can run, get, push, to push your latest code into the online repository."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC011:T075",
+          "quote": "Were my machine to go corrupt, were it to be lost, I would still have my work in a cloud environment that I could simply I'm gonna use the keyword pull onto a different machine and continue working on my code base.",
+          "evidence_role": "supporting"
+        },
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC011:T015",
+          "quote": "It's not automatically synced.",
+          "evidence_role": "context"
+        }
+      ],
+      "questions_issues_checked": [
+        {
+          "target_type": "goal",
+          "target_id": "DOC011-G08",
+          "message": "哪些代码需要云端保留，何时推送及如何确认已保存？",
+          "blocking": false
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "goal_id": "DOC011-G09",
+      "statement": "能回看保留的PR及其变更，追踪仓库和协作者的历史",
+      "actor": "受访者",
+      "conditions": [
+        "不是所有历史关系已被当前线性视图清楚表达，G12另含可视化建议。"
+      ],
+      "author_origin": "explicit",
+      "author_inference": null,
+      "author_support": {
+        "supported_parts": [
+          "能回看保留的PR及其变更，追踪仓库和协作者的历史"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "已有能力的历史用途明确，不因现状而删除维持意图。"
+        ],
+        "label": "direct",
+        "rationale": "已有能力的历史用途明确，不因现状而删除维持意图。"
+      },
+      "independent_support": "direct",
+      "assessment": "supported_with_boundaries",
+      "reason": "T083在最喜欢功能的回答中明确说PR保留且可回看每次变更，借此追踪仓库与协作者历史，具有继续使用的正向目的。T087另求更清晰的分支合并可视化不否认该维持目标，条件区分现有线性视图的局限。",
+      "actual_source_ids": [
+        "DOC011:T082",
+        "DOC011:T083",
+        "DOC011:T087"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T082",
+          "speaker": "Interviewer",
+          "quote": "Okay, that's quite nice to hear. Man. yeah. If if what? What are the what are the most like features about Github that you like like. What are what are your most like features about Github?"
+        },
+        {
+          "source_id": "DOC011:T083",
+          "speaker": "Stakeholder",
+          "quote": "That's a that's a good question. I think my most like feature would probably have it would probably have to be the port request feature simply because it's a great way to make sure that the main repository stays safe from unknown code changes before they are reviewed by others. It's also a very convenient way to track history. because once a pull request is made, it is it's not deleted. It is simply saved in a backlog. and in that backlog I mean to see, like what changes were made with this pull request. What changes were made with this pull request I can somewhat see, like a history of the Repository. plus other like changes that were made by my collaborators."
+        },
+        {
+          "source_id": "DOC011:T087",
+          "speaker": "Stakeholder",
+          "quote": "I think I'm very much. It's it's not an essential feature, it's more so. Just like convenience. Nice to have feature. It would be to see a visual mapping of the repository history. So I mentioned, there's like branches for like copies of my repository, but they can get merged into the main repository. If there was a way now, I could look at the commit history, which all have timestamps. So it's all like very much a linear stack of changes you could look at, but it's it very much. Doesn't give like a an exact history of the repository because of visual mapping. For this to visually see there was new branches made where they were merged in and within those branches like see issues with like their corresponding timeline. That'd be it would be really great for context on the repository."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC011:T083",
+          "quote": "It's also a very convenient way to track history.",
+          "evidence_role": "supporting"
+        }
+      ],
+      "questions_issues_checked": [],
+      "finding_ids": []
+    },
+    {
+      "goal_id": "DOC011-G10",
+      "statement": "作为助教查看学生项目代码并了解他们的进展",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_inference": null,
+      "author_support": {
+        "supported_parts": [
+          "作为助教查看学生项目代码并了解他们的进展"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确角色目的，未附自动评分或监控指标。"
+        ],
+        "label": "direct",
+        "rationale": "明确角色目的，未附自动评分或监控指标。"
+      },
+      "independent_support": "direct",
+      "assessment": "supported_with_boundaries",
+      "reason": "T017明确作为助教花时间monitor学生代码、看项目做得如何，T007确认助教身份。目标只保留查看和了解进展，没有虚构评分、自动监控或由软件承担教学责任。",
+      "actual_source_ids": [
+        "DOC011:T007",
+        "DOC011:T016",
+        "DOC011:T017"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T007",
+          "speaker": "Stakeholder",
+          "quote": "Yes, I use it as a student, as an independent developer, and I also use it as a teaching assistant for my undergraduate courses."
+        },
+        {
+          "source_id": "DOC011:T016",
+          "speaker": "Interviewer",
+          "quote": "Oh, got you? Okay? So you have to do manual actions to like, actually push and put the code. Got you got you? so. What would you say your usage of Github would look like in terms of weekly hours. How often do you use it, and how much they use it?"
+        },
+        {
+          "source_id": "DOC011:T017",
+          "speaker": "Stakeholder",
+          "quote": "Yeah, so this very much depends on what I'm using it for. If as a student, I'm only really using it to pull code and push code so I could estimate approximately 2Â h per week on that as an independent developer. This is really just me working on my own personal projects on ad hoc basis, and with the same case use case of pushing and pulling. I'd be working maybe 1Â h per week. But as a teaching assistant for my undergrad courses. I'm spending around 5Â h per week. so I can monitor my students code and actually look through and see how they're doing on their in their projects."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC011:T017",
+          "quote": "so I can monitor my students code and actually look through and see how they're doing on their in their projects.",
+          "evidence_role": "supporting"
+        }
+      ],
+      "questions_issues_checked": [],
+      "finding_ids": []
+    },
+    {
+      "goal_id": "DOC011-G11",
+      "statement": "更容易找到指导构建Actions工作流的资料，可考虑论坛或博客讨论入口",
+      "actor": "受访者",
+      "conditions": [
+        "论坛/博客为可考虑方式，未指定唯一实现。"
+      ],
+      "author_origin": "explicit",
+      "author_inference": null,
+      "author_support": {
+        "supported_parts": [
+          "更容易找到指导构建Actions工作流的资料，可考虑论坛或博客讨论入口"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确建议，文档难找为背景；未认证产品无论坛或文档缺陷客观事实。"
+        ],
+        "label": "direct",
+        "rationale": "明确建议，文档难找为背景；未认证产品无论坛或文档缺陷客观事实。"
+      },
+      "independent_support": "direct",
+      "assessment": "supported_with_boundaries",
+      "reason": "T085回答需改善之处，说明Actions文档宽泛难找，并提出论坛/博客讨论工作流资料会很好。当前句保留寻找指导资料的结果和可考虑入口，未把抱怨认证为客观产品缺陷或唯一设计。",
+      "actual_source_ids": [
+        "DOC011:T084",
+        "DOC011:T085"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T084",
+          "speaker": "Interviewer",
+          "quote": "Right right now. Thank you for the answer. If there, if there are any other features that you might find buggy or need improvement. And, Github, what what might they be if you can identify."
+        },
+        {
+          "source_id": "DOC011:T085",
+          "speaker": "Stakeholder",
+          "quote": "In terms of need improvement. There's a feature on Github or Github actions. If I elaborate on that, it's essentially running, it compiles your code that you, your repository code and you can configure a Yaml file to run that code, run test cases on the Github environment on their server space. The issue I have with this feature is their documentation overall is a little broad. or it's it's very. It's very difficult to find. And most of the documentation, I find is from other external sources. Stack, overflow, for example. So if they. Could have a forum or such, or like a a blog, tab forward discussions or information on building these action workflows. It'd be great."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC011:T085",
+          "quote": "So if they. Could have a forum or such, or like a a blog, tab forward discussions or information on building these action workflows. It'd be great.",
+          "evidence_role": "supporting"
+        }
+      ],
+      "questions_issues_checked": [],
+      "finding_ids": []
+    },
+    {
+      "goal_id": "DOC011-G12",
+      "statement": "可取但非必需地将分支创建、合并和相关问题按时间可视化，以理解仓库上下文",
+      "actor": "受访者",
+      "conditions": [
+        "非必要功能，仅便利；既有带时间戳线性提交历史仍可查看。"
+      ],
+      "author_origin": "explicit",
+      "author_inference": null,
+      "author_support": {
+        "supported_parts": [
+          "可取但非必需地将分支创建、合并和相关问题按时间可视化，以理解仓库上下文"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "显式nice to have，保留可视化方式和历史关系，不强化为必需。"
+        ],
+        "label": "direct",
+        "rationale": "显式nice to have，保留可视化方式和历史关系，不强化为必需。"
+      },
+      "independent_support": "direct",
+      "assessment": "supported_with_boundaries",
+      "reason": "T087主动提出按时间看到分支创建、合并及分支内相关issues，以获得仓库上下文；开头明说not essential、nice to have。当前标题和条件均保持非必需，既有时间戳历史没有被误写成不存在。",
+      "actual_source_ids": [
+        "DOC011:T086",
+        "DOC011:T087"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T086",
+          "speaker": "Interviewer",
+          "quote": "Okay, that's thank you for elaborating on that. Yeah. what kind of features would you want to see in Github in the future?"
+        },
+        {
+          "source_id": "DOC011:T087",
+          "speaker": "Stakeholder",
+          "quote": "I think I'm very much. It's it's not an essential feature, it's more so. Just like convenience. Nice to have feature. It would be to see a visual mapping of the repository history. So I mentioned, there's like branches for like copies of my repository, but they can get merged into the main repository. If there was a way now, I could look at the commit history, which all have timestamps. So it's all like very much a linear stack of changes you could look at, but it's it very much. Doesn't give like a an exact history of the repository because of visual mapping. For this to visually see there was new branches made where they were merged in and within those branches like see issues with like their corresponding timeline. That'd be it would be really great for context on the repository."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC011:T087",
+          "quote": "For this to visually see there was new branches made where they were merged in and within those branches like see issues with like their corresponding timeline.",
+          "evidence_role": "supporting"
+        },
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC011:T087",
+          "quote": "It's it's not an essential feature, it's more so. Just like convenience.",
+          "evidence_role": "context"
+        }
+      ],
+      "questions_issues_checked": [],
+      "finding_ids": []
+    },
+    {
+      "goal_id": "DOC011-G13",
+      "statement": "可以考虑集成AI咨询助手，帮助利用GitHub已有资源并指导创建PR或Actions文件",
+      "actor": "受访者",
+      "conditions": [
+        "建议采纳和产品当前有无同类能力未知。"
+      ],
+      "author_origin": "explicit",
+      "author_inference": null,
+      "author_support": {
+        "supported_parts": [
+          "可以考虑集成AI咨询助手，帮助利用GitHub已有资源并指导创建PR或Actions文件"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "直接提出集成建议；后续给出指导PR与action文件实例。"
+        ],
+        "label": "direct",
+        "rationale": "直接提出集成建议；后续给出指导PR与action文件实例。"
+      },
+      "independent_support": "direct",
+      "assessment": "supported_with_boundaries",
+      "reason": "采访者问自动化后，T093本人提出集成可咨询的AI以更好利用GitHub资源，T097补充引导PR和action文件。目标以可以考虑表达建议，未依据行业潮流宣称已采纳或当前没有此能力。",
+      "actual_source_ids": [
+        "DOC011:T088",
+        "DOC011:T090",
+        "DOC011:T091",
+        "DOC011:T092",
+        "DOC011:T093",
+        "DOC011:T094",
+        "DOC011:T097"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T088",
+          "speaker": "Interviewer",
+          "quote": "Hmm! That actually makes sense. I I think that's a very good idea. Nice anything, anything, any of the features that you use that you think should be automated."
+        },
+        {
+          "source_id": "DOC011:T090",
+          "speaker": "Interviewer",
+          "quote": "They can be automated."
+        },
+        {
+          "source_id": "DOC011:T091",
+          "speaker": "Stakeholder",
+          "quote": "Like a new feature. For example."
+        },
+        {
+          "source_id": "DOC011:T092",
+          "speaker": "Interviewer",
+          "quote": "Yeah, any any kind of features that you currently use, that you find Hassle to use. And you think that this can be automated. Instead of doing yourself."
+        },
+        {
+          "source_id": "DOC011:T093",
+          "speaker": "Stakeholder",
+          "quote": "Yeah, in terms of automation. I don't have much else to say. But I do think we are live like in the current space and into the tech world, where AI assistants are being integrated everywhere. I think if a Github was to integrate such an assistant to allow users to consult with it to have better to use all the resources available on Github. It'd be really nice."
+        },
+        {
+          "source_id": "DOC011:T094",
+          "speaker": "Interviewer",
+          "quote": "Nice, nice idea. So do you think? Ai in this space could help you AI can AI help you with the code as well like the code is."
+        },
+        {
+          "source_id": "DOC011:T097",
+          "speaker": "Stakeholder",
+          "quote": "I was to like, for example, as an independent collaborator like me, reviewing my own code. I will only get so far with that. But if I was to have maybe an AI assistant or something that would review help me with code reviews, provide suggestions. I have another source of feedback that I can incorporate, or I could have a almost like an assistant to guide me through. maybe making a pull request, or, as I mentioned earlier, making like, you know, sending an action file."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC011:T093",
+          "quote": "an assistant to allow users to consult with it to have better to use all the resources available on Github.",
+          "evidence_role": "supporting"
+        },
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC011:T097",
+          "quote": "an assistant to guide me through. maybe making a pull request",
+          "evidence_role": "context"
+        }
+      ],
+      "questions_issues_checked": [],
+      "finding_ids": []
+    },
+    {
+      "goal_id": "DOC011-G14",
+      "statement": "独立开发时希望AI辅助代码审查并提供可参考的额外反馈",
+      "actor": "受访者",
+      "conditions": [
+        "个人自审视角有限；AI是额外来源。"
+      ],
+      "author_origin": "explicit",
+      "author_inference": null,
+      "author_support": {
+        "supported_parts": [
+          "独立开发时希望AI辅助代码审查并提供可参考的额外反馈"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "直接期望额外反馈，未替代所有人类审查或保证代码正确。"
+        ],
+        "label": "direct",
+        "rationale": "直接期望额外反馈，未替代所有人类审查或保证代码正确。"
+      },
+      "independent_support": "direct",
+      "assessment": "supported_with_boundaries",
+      "reason": "T097以独立开发自审视野有限为例，明确希望AI帮助code reviews、建议和another source of feedback。目标只求可参考额外反馈，未授权替代协作人审或保证建议正确；接受界限仍可保持问题。",
+      "actual_source_ids": [
+        "DOC011:T094",
+        "DOC011:T095",
+        "DOC011:T097"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T094",
+          "speaker": "Interviewer",
+          "quote": "Nice, nice idea. So do you think? Ai in this space could help you AI can AI help you with the code as well like the code is."
+        },
+        {
+          "source_id": "DOC011:T095",
+          "speaker": "Stakeholder",
+          "quote": "Yeah. AI, for sure."
+        },
+        {
+          "source_id": "DOC011:T097",
+          "speaker": "Stakeholder",
+          "quote": "I was to like, for example, as an independent collaborator like me, reviewing my own code. I will only get so far with that. But if I was to have maybe an AI assistant or something that would review help me with code reviews, provide suggestions. I have another source of feedback that I can incorporate, or I could have a almost like an assistant to guide me through. maybe making a pull request, or, as I mentioned earlier, making like, you know, sending an action file."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC011:T097",
+          "quote": "an AI assistant or something that would review help me with code reviews, provide suggestions. I have another source of feedback that I can incorporate",
+          "evidence_role": "supporting"
+        }
+      ],
+      "questions_issues_checked": [
+        {
+          "target_type": "goal",
+          "target_id": "DOC011-G14",
+          "message": "团队对必须审阅、质量标准及AI反馈的接受界限是什么？",
+          "blocking": false
+        }
+      ],
+      "finding_ids": []
+    },
+    {
+      "goal_id": "DOC011-G15",
+      "statement": "按需要将远端最新代码拉到本地并上传自己的更新",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "inferred",
+      "author_inference": {
+        "basis_candidate_ids": [],
+        "reason": "课程和个人代码工作都以推拉代码为主要用途，正面支持维持手动同步能力；未把技术解释等同明确新增要求。",
+        "assumptions": [
+          "主要使用用途体现继续使用此能力的意图。"
+        ]
+      },
+      "author_support": {
+        "supported_parts": [
+          "按需要将远端最新代码拉到本地并上传自己的更新"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "主要使用用途体现继续使用此能力的意图。"
+        ],
+        "reasoning_steps": [
+          "课程和个人代码工作都以推拉代码为主要用途，正面支持维持手动同步能力；未把技术解释等同明确新增要求。"
+        ],
+        "label": "inferred",
+        "rationale": "同步方式属现状；结合学生/独立开发主要拉推用途推断继续可同步的目标，而不要求自动。"
+      },
+      "independent_support": "inferred",
+      "assessment": "supported_with_boundaries",
+      "reason": "T015是手工同步机制说明，本身不等于新增需求；但T009课程取代码、T017学生和独立开发都把pull/push作为主要用途，T075恢复继续工作给出正向使用目的。以继续保有按需同步能力为假设的维持目标合理，origin与support均inferred恰当，不扩为自动同步。",
+      "actual_source_ids": [
+        "DOC011:T009",
+        "DOC011:T013",
+        "DOC011:T014",
+        "DOC011:T015",
+        "DOC011:T016",
+        "DOC011:T017",
+        "DOC011:T075"
+      ],
+      "source_evidence": [
+        {
+          "source_id": "DOC011:T009",
+          "speaker": "Stakeholder",
+          "quote": "Yeah. So I actually learned about Github, my freshman year. It was just mainly just a lot of the my classes were, had all their code published on Github and required us to work with the Github repositories online to pull code for our assignments. And that's how I got familiar with it. Overall."
+        },
+        {
+          "source_id": "DOC011:T013",
+          "speaker": "Stakeholder",
+          "quote": "Yeah, for sure, I can elaborate. So if when I say Pull, I mean, I am essentially copying whatever code is online on the online folder or slash repository onto my local machine. Like my, for example, my Mac."
+        },
+        {
+          "source_id": "DOC011:T014",
+          "speaker": "Interviewer",
+          "quote": "Right. and you're able to access that like directly on a Mac. And is it synced to the Github cloud? Or it just stays in a Mac."
+        },
+        {
+          "source_id": "DOC011:T015",
+          "speaker": "Stakeholder",
+          "quote": "Yes, it's it's it's it's synced in the sense that you would have like. It's not automatically synced. But you would have to manually synchronize it by running commands, such as get pull, which will pull in the latest code from the repository, or you can run, get, push, to push your latest code into the online repository."
+        },
+        {
+          "source_id": "DOC011:T016",
+          "speaker": "Interviewer",
+          "quote": "Oh, got you? Okay? So you have to do manual actions to like, actually push and put the code. Got you got you? so. What would you say your usage of Github would look like in terms of weekly hours. How often do you use it, and how much they use it?"
+        },
+        {
+          "source_id": "DOC011:T017",
+          "speaker": "Stakeholder",
+          "quote": "Yeah, so this very much depends on what I'm using it for. If as a student, I'm only really using it to pull code and push code so I could estimate approximately 2Â h per week on that as an independent developer. This is really just me working on my own personal projects on ad hoc basis, and with the same case use case of pushing and pulling. I'd be working maybe 1Â h per week. But as a teaching assistant for my undergrad courses. I'm spending around 5Â h per week. so I can monitor my students code and actually look through and see how they're doing on their in their projects."
+        },
+        {
+          "source_id": "DOC011:T075",
+          "speaker": "Stakeholder",
+          "quote": "Yeah, actually, I guess another use case is just having a convenient place to store my code in a in a in a safe manner. Were my machine to go corrupt, were it to be lost, I would still have my work in a cloud environment that I could simply I'm gonna use the keyword pull onto a different machine and continue working on my code base."
+        }
+      ],
+      "all_bound_evidence": [
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC011:T015",
+          "quote": "you would have to manually synchronize it by running commands, such as get pull",
+          "evidence_role": "supporting"
+        },
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC011:T017",
+          "quote": "I'm only really using it to pull code and push code",
+          "evidence_role": "context"
+        }
+      ],
+      "questions_issues_checked": [
+        {
+          "target_type": "goal",
+          "target_id": "DOC011-G15",
+          "message": "哪些代码需要云端保留，何时推送及如何确认已保存？",
+          "blocking": false
+        }
+      ],
+      "finding_ids": []
+    }
+  ],
+  "reviewed_group_ids": [],
+  "status": "complete",
+  "context_only_goal_ids": [
+    "DOC011-G01",
+    "DOC011-G03",
+    "DOC011-G04",
+    "DOC011-G06",
+    "DOC011-G07"
+  ],
+  "reading_limit": "初始合并输出有截断，最终判断前已按T000–T055、T056–T085、T086–T110补齐；未将截断输出当完整读取。"
+}

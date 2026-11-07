@@ -1,0 +1,578 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "c545800c71f6b2129192f45bab7ee0c97298cdc6fe2471019b2368c6053d8880",
+    "judgments_sha256": "1b40f3a2ef1ff41ed94f7b42918ac54682178d863aadd6ef72d007b8e9f573a8"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G027",
+      "child_ids": [
+        "G033",
+        "G045",
+        "G042",
+        "G058"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "T127 总结并经本人确认的活动（推荐发现、推荐失效时的 Watch later/搜索兜底、按可用时长选片、长途预下载）共同构成其‘在各种活动时间里被娱乐/打发时间’的既有做法；但原文未声称这些方式合起来就足以实现该目标，也未覆盖播放与网络等前提，故只作候选组。",
+      "assumptions": [
+        "该组只覆盖原文明确提到的内容发现与可获得性方式，未包含实际播放、账号、设备与网络等前提",
+        "Watch later 中存有可用视频"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T127",
+          "quote": "your goal is to get entertain for many for the time you spend biking and driving and cooking and other stuff",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC012:T098",
+          "quote": "I would aim for like filling exactly that time",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC012:T104",
+          "quote": "There's no videos I really want to watch. So then I would I solve that by usually going to the watch later.",
+          "role": "context"
+        }
+      ],
+      "relation_ids": [
+        "R3",
+        "R6"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "在健身房骑车：打开 YouTube 推荐页能刷到想看的视频，并按剩余时间挑一条长度合适的视频",
+          "outcome": "supports",
+          "rationale": "该场景同时用上推荐浏览与按时长选片，与原文描述一致，未发现反例。"
+        },
+        {
+          "kind": "exception",
+          "origin": "source",
+          "scenario": "推荐页没有想看的视频（T104），改去 Watch later 或搜索感兴趣的主题",
+          "outcome": "supports",
+          "rationale": "原文明确给出该兜底路径，组内 G045 覆盖，场景检查通过。",
+          "evidence_ids": [
+            "K0003"
+          ]
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "长途驾车或网络不畅（T118 提到缓冲但归为应用之外），需提前下载",
+          "outcome": "supports",
+          "rationale": "组内 G058 覆盖预下载，与原文一致；但该场景依赖提前有良好 Wi-Fi，属假设条件。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "推荐与 Watch later 都没有想看的内容，又没有明确的兴趣方向，且不属于可提前下载的长途场景",
+          "outcome": "unknown",
+          "rationale": "原文未说明此时的做法，组内没有对应子目标，故该组不能声称完整，保持 partial 并记录缺口。"
+        }
+      ]
+    },
+    {
+      "group_id": "GR2",
+      "parent_id": "G009",
+      "child_ids": [
+        "G008",
+        "G015",
+        "G010",
+        "G011"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "成绩、rubric 分项、随作业查看批注与评论绑定到具体位置共同构成其‘知道哪里可以改进’的信息来源；但原文明确存在教师把评论放在全局位置的反例（T061），且未声称这些信息合起来就足以达成该目标，故只作候选组。",
+      "assumptions": [
+        "反馈确实由教师或助教给出",
+        "分项成绩与批注覆盖其需要改进的部分"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T033",
+          "quote": "I will generally get feedback, that's in the like that is in the form of a document with some comments after the assignment is created. So I can get some more detail like information, for where I can improve.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC012:T061",
+          "quote": "the feedback we'll be detached from the assignments. So I need to find really hard, like what the comment or feedback is related to which part of my assignment",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC012:T059",
+          "quote": "what part of your assignment received better grade like a subgrade. And what part of it is not as good.",
+          "role": "context"
+        }
+      ],
+      "relation_ids": [
+        "R17",
+        "R18",
+        "R20"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "source",
+          "scenario": "评分完成后，成绩、rubric 分项与带位置的批注都可用（T037、T059）",
+          "outcome": "supports",
+          "rationale": "该场景下组内子目标均成立，与其描述的正常流程一致。",
+          "evidence_ids": [
+            "K0006"
+          ]
+        },
+        {
+          "kind": "exception",
+          "origin": "source",
+          "scenario": "教师或助教不熟悉应用，把评论插在全局位置而非具体位置（T061）",
+          "outcome": "counterexample",
+          "rationale": "该场景下 G011 不成立，其明确表示需要费力定位，构成未解决反例，故该组不能标为成立或完整。",
+          "evidence_ids": [
+            "K0005"
+          ]
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G043",
+      "message": "原文同时表达‘在 YouTube 上不想看 shorts、想看更长的视频’（T098）与‘想要更多短内容/短形式’（T114），是否分别指 Shorts 与 10 到 30 分钟短片两种粒度？若是，两者是否应视为冲突？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G023",
+      "message": "Gradescope 的剩余时间提示是需求还是仅为功能描述？原文只把该功能列为举例，未说明其是否使用或重视。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G024",
+      "message": "作业与成绩页混用造成的困惑，希望如何改进（例如分离入口、单独作业入口）原文未说明，需确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G031",
+      "message": "‘无广告’是由长期持有付费 Premium 方案推断而来，原文未直接表达该意图，是否应保留为需求需确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G056",
+      "message": "推荐体现长期偏好基于其对算法的主观判断（‘I think it knows my preferences’），是否为明确需求需确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "是否确实希望 Canvas 也提供 regrade 请求功能？原文只说明缺失与不便，未提出该要求。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G058",
+      "message": "缓冲被明确归为手机/网络而非应用（T118），是否仍应作为流媒体体验的改进诉求，还是仅作为使用情境记录？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "‘评论绑定到作业具体位置’是由障碍推断的目标状态，是否等同于其期望的改进方式需确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "‘立即知道成绩’由提交流程的结果推断，是其主动期望还是仅接受现状，需确认。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC012-goal-model",
+      "message": "本文含两段互相采访（作业提交与视频/音乐流媒体），说话人标签固定而后半段身份互换（Interviewer 实为流媒体使用者）；模型按说话人标签归属目标，需确认这种归属方式是否符合预期。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G028",
+      "target_id": "G027",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "运动时（跑步/骑车）被娱乐是总体‘在各种活动时间被娱乐’的一个具体情境，情境更窄、目标更具体。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T082",
+          "quote": "I want to be able to be entertained as I run or or go on the bike and do exercise on the bike, which can be monotonous",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G029",
+      "target_id": "G027",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "在家做饭等做事时看视频是总体娱乐/打发时间目标在家庭情境下的具体化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T082",
+          "quote": "sometimes at home. Maybe when I'm like cooking or like something like or something, I'll watch a video, too.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G042",
+      "target_id": "G027",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "按可用时长选片长（正好填满剩余骑行时间，否则 10 到 30 分钟）是他实现‘填满这段时间’的明确做法。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T098",
+          "quote": "I would aim for like filling exactly that time",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G033",
+      "target_id": "G055",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "浏览推荐页是他找到新内容的主要途径，有帮助但不是充分保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T092",
+          "quote": "they have this screen that you go where it recommends you videos. So usually, what I do is I I go on that screen, for maybe, like 5 or 10 videos, see if I see one that like calls out to me",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G034",
+      "target_id": "G045",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "Watch later 是他明确说明的、推荐失效时的补救手段，有帮助但不等于足以解决。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T104",
+          "quote": "There's no videos I really want to watch. So then I would I solve that by usually going to the watch later.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G058",
+      "target_id": "G027",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "长途出行前预下载使其能在开车时继续听/看，原文明确说是‘a way to fill the time’；有帮助而非充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T118",
+          "quote": "that's just a way to fill the time",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G049",
+      "target_id": "G048",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "评论前设置基础测试是他为提升评论者质量而明确提出的实现方式；建议语气已保留。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T110",
+          "quote": "maybe if they had like, an IQ test, or even just like like, just sort of basic any sort of basic test before people were allowed to comment.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G056",
+      "target_id": "G057",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "推荐体现长期偏好被本人确认为不换到别的平台的一大原因；有帮助而非唯一原因。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T115",
+          "quote": "the recommendation is the main part that motivated you not to switch to another platform",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G003",
+      "target_id": "G004",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文明确‘before I submit’先打开说明取信息，再提交文件，顺序来自原句而非推断。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T031",
+          "quote": "before I submit an assignment I will open the description for that assignment and fetch the information that I need to do the assignment first, st",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R10",
+      "source_id": "G005",
+      "target_id": "G007",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原句顺序为提交代码库后再构建、自动评分并立即出分，先发生后发生方向明确。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T031",
+          "quote": "and then it will evaluate it like you will try to build a project and give me an auto auto auto grading, so I will know my grade immediately.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R11",
+      "source_id": "G006",
+      "target_id": "G007",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "自动评分是立即出分的直接来源；有帮助关系不声称充分保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T031",
+          "quote": "give me an auto auto auto grading, so I will know my grade immediately",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R12",
+      "source_id": "G004",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "PDF 报告用 Canvas 上传器提交是‘按课程应用提交作业’在 PDF 文件类型下的具体化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T031",
+          "quote": "if it's a Pdf report, then I will just upload the file using the file uploaded in the, for example, canvas",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R13",
+      "source_id": "G005",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "代码库经 Gradescope 抓取 GitHub 提交是同一总目标在代码作业类型下的具体化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T031",
+          "quote": "if I'm going to submit a code repository, I will. for example, go to grade scope, and I will use the feature in the grade school to fetch my latest commit from the Github and submit the my code base",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R14",
+      "source_id": "G019",
+      "target_id": "G020",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原句用 1st / then / and finally 给出顺序：先经首页与课程进入页面，再看到已交与未交列表。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T039",
+          "quote": "I 1st we'll go to the homepage or the dashboard page of the canvas or grade school. Then I choose the course I'm taking that, I submitted the assignment. then there will be a a link that I can click to get into the assignment page or the grading page. and finally, there will be the will be some.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R15",
+      "source_id": "G016",
+      "target_id": "G017",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文明确该间接反馈‘can be helpful to decide’投入多少时间，属有帮助而非充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T059",
+          "quote": "an indirect feedback that can be helpful to decide like how much time you are going to spend on the course",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R16",
+      "source_id": "G016",
+      "target_id": "G018",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "同一句把预估成绩与‘是否争取额外学分提分’的决定相连，属有帮助关系。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T059",
+          "quote": "and whether or not you are going to try an extra extra credit to try to boost your grades",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R17",
+      "source_id": "G015",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "rubric 的分项成绩让他看到哪部分好、哪部分不好，原文称其为‘really helps’的间接反馈，有助于知道改进之处但不充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T059",
+          "quote": "what part of your assignment received better grade like a subgrade. And what part of it is not as good.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R18",
+      "source_id": "G010",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "边看作业边看批注使反馈落到具体位置，有助于知道改进之处；不声称足以实现。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T037",
+          "quote": "generally I'll just be able to see the comment while I'm viewing my submitted assignment",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R19",
+      "source_id": "G021",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "当某个应用功能不足时改用别的应用，使其能完成提交；有帮助而非充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T049",
+          "quote": "sometimes it's basically like there's not enough features for one of the apps. So we need to use another app to support that feature.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R20",
+      "source_id": "G011",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "评论绑定到作业具体位置可消除其描述的定位困难，有助于获得改进信息；该目标本身为推断，故只作为有帮助联系。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T061",
+          "quote": "the feedback we'll be detached from the assignments. So I need to find really hard, like what the comment or feedback is related to which part of my assignment",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R21",
+      "source_id": "G022",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "教授把作业放在自己网站时，先从网站取全部信息再经链接应用提交，是完成提交的路径之一，有帮助而非充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC012:T049",
+          "quote": "and in that case I need to get all the details from the website and then get a link to the gray scope, for example, and submit my assignment",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

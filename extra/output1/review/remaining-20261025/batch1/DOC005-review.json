@@ -1,0 +1,529 @@
+{
+  "document_id": "DOC005",
+  "model_path": "revised/DOC005/v1/delivery/goal-model.json",
+  "required_goal_ids": [
+    "DOC005-G01",
+    "DOC005-G02",
+    "DOC005-G03",
+    "DOC005-G04",
+    "DOC005-G05",
+    "DOC005-G08",
+    "DOC005-G09",
+    "DOC005-G10",
+    "DOC005-G13"
+  ],
+  "model_sha256": "212523f6f6b9a5f63ceba5bceac2ef89496e6e3e34d5ec38094f113e5a21d44e",
+  "source_sha256": "80bf36e1f60b4154c928f32c1b892cf54ac2a943a352a576afc415ef5afb530c",
+  "hashes_match_assignment": true,
+  "source_read_ranges": [
+    {
+      "first_turn": "T000",
+      "last_turn": "T115",
+      "complete": true
+    }
+  ],
+  "source_complete_read": true,
+  "reviewed_goal_ids": [
+    "DOC005-G01",
+    "DOC005-G02",
+    "DOC005-G03",
+    "DOC005-G04",
+    "DOC005-G05",
+    "DOC005-G08",
+    "DOC005-G09",
+    "DOC005-G10",
+    "DOC005-G13"
+  ],
+  "goal_reviews": [
+    {
+      "goal_id": "DOC005-G01",
+      "statement": "通过背景音乐缓解现实生活压力并感觉生活仍在继续",
+      "actor": "受访者",
+      "conditions": [
+        "考试或压力大时听得较少，但仍需要背景声音。"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "通过背景音乐缓解现实生活压力并感觉生活仍在继续"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "回答为何高频听音乐，直接表达主观作用和动机；不声明医疗效果。"
+        ],
+        "label": "direct",
+        "rationale": "回答为何高频听音乐，直接表达主观作用和动机；不声明医疗效果。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T012问高频听歌的原因，T013直接说分散现实压力并感到生活仍在继续；T011说明考试或压力大时减少而非完全停止。当前句为主观目的，未声称音乐有经验证医疗效果，explicit/direct可保留。",
+      "source_ids": [
+        "DOC005:T011",
+        "DOC005:T012",
+        "DOC005:T013"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC005:T013",
+          "quote": "I think it kind of distracts me from the stress of the real world.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC005-G02",
+      "statement": "尽量有声音在背景播放，以避免难以适应的安静",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "尽量有声音在背景播放，以避免难以适应的安静"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "在应用都不可用的假设问题下明确持续背景声音需求，音乐、电影、电视、广播是可替代策略，不强制单一应用。"
+        ],
+        "label": "direct",
+        "rationale": "在应用都不可用的假设问题下明确持续背景声音需求，音乐、电影、电视、广播是可替代策略，不强制单一应用。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "在所有音乐应用及YouTube不可用的假设下，T079仍明确需要背景声且不适应安静，并列电影、电视、广播替代。尽量维持声音的范围忠实，不应收窄为必须音乐或必须Spotify。",
+      "source_ids": [
+        "DOC005:T072",
+        "DOC005:T074",
+        "DOC005:T075",
+        "DOC005:T078",
+        "DOC005:T079"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC005:T079",
+          "quote": "But I always need something playing in the background.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC005-G03",
+      "statement": "按当下需要播放熟悉的歌单，并使用随机播放及整单循环",
+      "actor": "受访者",
+      "conditions": [
+        "约七成使用为此方式，其余使用会搜索新曲。"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "按当下需要播放熟悉的歌单，并使用随机播放及整单循环"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "有结果意图的常用方式，保留已选shuffle及整单重复，不改成固定流程适用于所有使用。"
+        ],
+        "label": "direct",
+        "rationale": "有结果意图的常用方式，保留已选shuffle及整单重复，不改成固定流程适用于所有使用。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T027本人选择按当下需要选熟悉歌单、shuffle、整单结束后repeat。T033七成/其余搜索的说明被条件保存，因此是带目的的常用方式，未被升级为每次强制流程。",
+      "source_ids": [
+        "DOC005:T026",
+        "DOC005:T027",
+        "DOC005:T032",
+        "DOC005:T033"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC005:T027",
+          "quote": "Think of what do I really read? Need right now? Click on the playlist. I put it on shuffle. and then I put it on a repeat once the entire playlist is over.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC005-G04",
+      "statement": "通过情绪或关键词搜索公共歌单，找到贴合当前感受的歌",
+      "actor": "受访者",
+      "conditions": [
+        "感到特定情绪时。"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "通过情绪或关键词搜索公共歌单，找到贴合当前感受的歌"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确情绪匹配意图，搜索方式来自本人。"
+        ],
+        "label": "direct",
+        "rationale": "明确情绪匹配意图，搜索方式来自本人。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T033明确在某种情绪下寻找恰好匹配感受的歌，并用情绪或关键词搜可能由别人建立的公共歌单。目标保留搜索方式和情绪条件，没有把推荐算法补为必需。",
+      "source_ids": [
+        "DOC005:T032",
+        "DOC005:T033"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC005:T033",
+          "quote": "I search for either the emotion that I'm feeling or keywords that I feel like someone might have already created a public playlist, too.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC005-G05",
+      "statement": "为脑中舞蹈等创作构想寻找匹配歌曲并获得灵感",
+      "actor": "受访者",
+      "conditions": [
+        "通过关键词试听不同歌单和歌曲，是否获得灵感未保证。"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "为脑中舞蹈等创作构想寻找匹配歌曲并获得灵感"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确构想匹配及灵感目标，未将不清楚的shopping转写擅自解释成编舞事实。"
+        ],
+        "label": "direct",
+        "rationale": "明确构想匹配及灵感目标，未将不清楚的shopping转写擅自解释成编舞事实。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "同轮明确自称舞者、要找匹配脑中vision的歌并试听看是否出现灵感。当前句将舞蹈作为构想例子，条件未保证灵感发生；未把转写shopping擅自改成确定的编舞活动。",
+      "source_ids": [
+        "DOC005:T033"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC005:T033",
+          "quote": "I want to find songs to match the vision I have in my mind.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC005:T033",
+          "quote": "just listen through and see if inspiration strikes with any one of them.",
+          "evidence_role": "context",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC005-G08",
+      "statement": "睡前可按歌曲结束或所选时长停止播放音乐",
+      "actor": "受访者",
+      "conditions": [
+        "睡前使用，原文时间为选项示例。"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "睡前可按歌曲结束或所选时长停止播放音乐"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "本人喜欢已有sleep timer并说明睡着情境，支持维持此方式，不自动补所有分钟选项。"
+        ],
+        "label": "direct",
+        "rationale": "本人喜欢已有sleep timer并说明睡着情境，支持维持此方式，不自动补所有分钟选项。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T065赞赏sleep timer的歌曲结束或时长选项，T067紧接说明入睡时喜欢该方式。当前维持目标有使用意图；30/25分钟仅示例，具体选项的非阻塞问题仍合理。",
+      "source_ids": [
+        "DOC005:T060",
+        "DOC005:T063",
+        "DOC005:T064",
+        "DOC005:T065",
+        "DOC005:T067"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC005:T065",
+          "quote": "at the end of the song music stops playing, or 30Â min or 25Â min.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        },
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC005:T067",
+          "quote": "And fall asleep. I I like that.",
+          "evidence_role": "context",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [
+          {
+            "target_type": "goal",
+            "target_id": "DOC005-G08",
+            "message": "睡眠计时所需的具体可选时长有哪些？",
+            "blocking": false
+          }
+        ],
+        "extraction_questions": [
+          {
+            "candidate_ids": [
+              "DOC005-G08"
+            ],
+            "question": "睡眠计时所需的具体可选时长有哪些？",
+            "reason": "25/30分钟及歌曲结束只是原文示例。"
+          }
+        ]
+      }
+    },
+    {
+      "goal_id": "DOC005-G09",
+      "statement": "能创建便于他人查看的共享歌单，并保留一起听歌的社交选项",
+      "actor": "受访者",
+      "conditions": [
+        "关于Apple Music缺失的判断仅为过去使用经验，当前是否更新本人未知。"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "能创建便于他人查看的共享歌单，并保留一起听歌的社交选项"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确赞赏的社交用途且转平台回答提到能力价值；为偏好维持意图，未断言竞争产品当前缺失。"
+        ],
+        "label": "direct",
+        "rationale": "明确赞赏的社交用途且转平台回答提到能力价值；为偏好维持意图，未断言竞争产品当前缺失。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T047的换平台理由和T067的cool评价支持保留jam社交选项及创建供他人看的共享歌单。T069明确不知Apple Music是否更新，当前条件保留这一过去经验限制，未断言竞品现状。",
+      "source_ids": [
+        "DOC005:T046",
+        "DOC005:T047",
+        "DOC005:T050",
+        "DOC005:T051",
+        "DOC005:T065",
+        "DOC005:T067",
+        "DOC005:T068",
+        "DOC005:T069"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC005:T067",
+          "quote": "And then Scott also has the starter jam options, which I think is really cool, and the shared playlists over here.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        },
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC005:T067",
+          "quote": "So creating a playlist for people to view is quite easy.",
+          "evidence_role": "context",
+          "quote_exact_in_source_segment": true
+        },
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC005:T069",
+          "quote": "I don't know if it is updated.",
+          "evidence_role": "context",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC005-G10",
+      "statement": "保留可收听的优质环境声音内容",
+      "actor": "受访者",
+      "conditions": [
+        "有时听环境声音；音乐内容还包含电影、音乐剧和独立艺术家作品。"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "保留可收听的优质环境声音内容"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "不可缺陈述明确维持意图，不能因已实现而排除。"
+        ],
+        "label": "direct",
+        "rationale": "不可缺陈述明确维持意图，不能因已实现而排除。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "在询问缺少什么会不完整后，T105明确ambient noise不可缺并称质量很好，足以支持已有内容的维持意图。只是有时听的内容选择，无统一音质阈值；T109其他音乐来源是背景。",
+      "source_ids": [
+        "DOC005:T104",
+        "DOC005:T105",
+        "DOC005:T106",
+        "DOC005:T109"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC005:T105",
+          "quote": "sometimes I like to listen to ambient noise, so without that I don't think spotify would be spotify.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC005-G13",
+      "statement": "在主要平台找不到特定混音时仍能通过其他平台听到它",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "inferred",
+      "author_support": {
+        "supported_parts": [
+          "在主要平台找不到特定混音时仍能通过其他平台听到它"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "替代平台使用与前句内容缺失是因果说明。"
+        ],
+        "reasoning_steps": [
+          "受访者解释约5%改用另一平台是因为特定混音缺失，行为正面支持仍想听该内容。"
+        ],
+        "label": "inferred",
+        "rationale": "由缺内容时改用YouTube Music的明确情境推断可获得内容的意图，非要求Spotify拥有全部版权。"
+      },
+      "author_inference": {
+        "basis_candidate_ids": [],
+        "reason": "受访者解释约5%改用另一平台是因为特定混音缺失，行为正面支持仍想听该内容。",
+        "assumptions": [
+          "替代平台使用与前句内容缺失是因果说明。"
+        ]
+      },
+      "independent_origin": "inferred",
+      "independent_support": "inferred",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T031将主平台缺某些mixes与约5%改用YouTube Music连在一起。由替代使用推断仍希望听到特定内容有正面依据；保留inferred及因果假设，不推出Spotify必须拥有全部混音。",
+      "source_ids": [
+        "DOC005:T028",
+        "DOC005:T029",
+        "DOC005:T030",
+        "DOC005:T031"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC005:T031",
+          "quote": "Sometimes spotify don't have specific mixes that maybe I find on the Internet or something.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    }
+  ],
+  "reviewed_group_ids": [],
+  "group_review_scope": "本轮只补指定目标；无需重开此前组结论，未对组作新充分性裁决。"
+}

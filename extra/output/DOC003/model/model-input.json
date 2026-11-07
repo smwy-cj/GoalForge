@@ -1,0 +1,2793 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC003-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "17fd84cc0b7ee16dc934b192b164945f0c325e2794ac98d0bc49dc5f1873642f"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "93c73afc2b633c4ffeac99fc08283498e01e8482a8a2c58bbb689884413bc798"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "d43e4455b07b2a0a4b6e20478556b835020f14a53de6ff53cb7ed78effb100f4"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "3032b7ea3172c5caf65b213b02082dc97c1a99d5a9bf23baafeb27d45937f39e"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC003"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC003-G001",
+      "statement": "拿到当前可找到的最优票价（价格合理，且是认真比价后的结果）。",
+      "source_candidate_ids": [
+        "DOC003-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "自述为主要目标之一",
+        "价格判断依赖多年订票经验，无客观阈值",
+        "比价会持续多次、跨数天进行"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G002",
+      "statement": "拿到行程本身合适（时间与衔接可行）的机票，而不只是便宜。",
+      "source_candidate_ids": [
+        "DOC003-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "自述「best results」为物流/行程、价格与灵活性的组合，前两者为主",
+        "行程是否合适取决于当时的个人处境，无法给出客观标准"
+      ],
+      "evidence_ids": [
+        "E0004",
+        "E0005",
+        "E0006"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G003",
+      "statement": "中转停留时间不低于最短衔接时间（MCT）的 1.5 倍。",
+      "source_candidate_ids": [
+        "DOC003-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "MCT 为 IATA 定义的最短衔接时间（含行李转运与最远登机口移动）",
+        "一般取 1.5× 或 2× 作为自设缓冲",
+        "除非有签证限制，否则不介意中转次数本身"
+      ],
+      "evidence_ids": [
+        "E0007",
+        "E0008"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G004",
+      "statement": "航班起降时间能与后续接驳交通、以及要会面对象的日程衔接，避免长时间空等。",
+      "source_candidate_ids": [
+        "DOC003-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "典型场景：落地后需转乘火车去另一城市",
+        "判断标准包含是否需要在城市里空等约 20 小时"
+      ],
+      "evidence_ids": [
+        "E0009",
+        "E0010",
+        "E0011"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G005",
+      "statement": "避开耗时过长（40–60 小时）与红眼时段的航班，保证行程时长与睡眠。",
+      "source_candidate_ids": [
+        "DOC003-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "国际航线的「最便宜」列表常被 40–60 小时行程占满",
+        "对红眼航班不完全排斥，但更希望不牺牲夜间睡眠"
+      ],
+      "evidence_ids": [
+        "E0012",
+        "E0013"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G006",
+      "statement": "对同一行程比较多个订票供应商的最终价格与可用折扣，再决定在哪下单。",
+      "source_candidate_ids": [
+        "DOC003-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "比较项：价格、评分、折扣码、最终总价",
+        "价格随时变动，折扣并非固定"
+      ],
+      "evidence_ids": [
+        "E0014",
+        "E0015",
+        "E0016"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G007",
+      "statement": "一次并行比较大量出发地/目的地/日期/舱位组合，而不是逐个查询。",
+      "source_candidate_ids": [
+        "DOC003-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "自估组合规模约 11,760（20 个出发机场 × 49 个日期组合 × 2 个舱位）",
+        "还需对里程票单独重复一轮",
+        "现实中没有网站允许同时跑这么多查询"
+      ],
+      "evidence_ids": [
+        "E0017",
+        "E0018",
+        "E0019"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G008",
+      "statement": "提前约 1–2 个月订票，以换取更好的价格。",
+      "source_candidate_ids": [
+        "DOC003-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "理想为提前两个月以上；实际常拖到出发前 1–2 周，价格明显更高",
+        "国际长途线曾提前约两个月订"
+      ],
+      "evidence_ids": [
+        "E0020",
+        "E0021"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G009",
+      "statement": "搜索与比价时保持匿名、不登录，避免个人数据被共享或被追踪抬价。",
+      "source_candidate_ids": [
+        "DOC003-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "手段：不登录、无痕窗口、屏蔽 cookie",
+        "两个动机：避免按搜索行为抬价；不愿把数据交给不信任的第三方",
+        "例外：用里程/积分订票必须登录航司账户"
+      ],
+      "evidence_ids": [
+        "E0022",
+        "E0023",
+        "E0024",
+        "E0025"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G010",
+      "statement": "在陌生市场能判断票价相对水平（高于/低于中位），以便决定是否值得下单。",
+      "source_candidate_ids": [
+        "DOC003-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "对熟悉市场凭经验判断，不需要该功能",
+        "在美国等新市场需要外部参考价"
+      ],
+      "evidence_ids": [
+        "E0026",
+        "E0027",
+        "E0028"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G011",
+      "statement": "对多条候选航线设置降价提醒，价格下探时及时获知并下单。",
+      "source_candidate_ids": [
+        "DOC003-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "仅在必须成行、且价格暴涨的紧迫场景下使用过",
+        "当时借用已登录的 Google 账号，回避新建账号"
+      ],
+      "evidence_ids": [
+        "E0029",
+        "E0030"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G012",
+      "statement": "在一个平台上集齐比价、行程与订票信息，不必往返十余个网站。",
+      "source_candidate_ids": [
+        "DOC003-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "自估一次订票至少访问 10–12 个网站",
+        "表述为当前最大的两个障碍之一"
+      ],
+      "evidence_ids": [
+        "E0031",
+        "E0032"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G013",
+      "statement": "输入全部参数后，由平台直接给出最优方案，不必自己逐轮迭代。",
+      "source_candidate_ids": [
+        "DOC003-C013"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "表述为当前最大的两个障碍之一",
+        "受访者同时认为票价与个人处境的动态性使该设想难以实现（T086）"
+      ],
+      "evidence_ids": [
+        "E0033",
+        "E0034",
+        "E0035"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC003-G014",
+      "statement": "把信用卡权益与机场休息室准入信息整合进比价流程，便于在中转时使用休息室。",
+      "source_candidate_ids": [
+        "DOC003-C014"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，机票比价用户）",
+      "context": [
+        "持约 30 张信用卡，不同卡对不同休息室、不同时段与次数限制不同",
+        "受访者认为第三方整合难以保持准确，倾向直接查发卡行",
+        "愿望强度为 would be wonderful，但同时表示不愿深入讨论"
+      ],
+      "evidence_ids": [
+        "E0036",
+        "E0037",
+        "E0038"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC003-G001",
+      "b": "DOC003-G002",
+      "label": "none",
+      "rationale": "DOC003-G001 的对象是拿到当前可找到的最优票价（T025/T115），DOC003-G002 的对象是行程本身合适（时间与衔接可行）（T108/T130）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC003-G001",
+      "b": "DOC003-G003",
+      "label": "none",
+      "rationale": "DOC003-G001 的对象是拿到当前可找到的最优票价（T025/T115），DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC003-G001",
+      "b": "DOC003-G004",
+      "label": "none",
+      "rationale": "DOC003-G001 的对象是拿到当前可找到的最优票价（T025/T115），DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC003-G001",
+      "b": "DOC003-G005",
+      "label": "none",
+      "rationale": "DOC003-G001 的对象是拿到当前可找到的最优票价（T025/T115），DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC003-G001",
+      "b": "DOC003-G006",
+      "label": "related",
+      "rationale": "同一票价目标的两个阶段：T103 把聚合器的作用分为「找到合适行程」与「为该行程找最低价」，后者正是 G006 的内容；G006 是达成 G001 的手段，手段不自动构成精化，故为 related。",
+      "evidence_ids": [
+        "E0001",
+        "E0016"
+      ],
+      "conditions": [
+        "G006 的比较只覆盖同一行程下的供应商，不改变行程本身"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC003-G001",
+      "b": "DOC003-G007",
+      "label": "related",
+      "rationale": "T095 说明并行搜索的目的在于确认「what's the best」，而 T108 把 best 定义为行程与价格的组合；G007 通过扩大搜索面来压低价格，属 G001 的实现手段，非精化。",
+      "evidence_ids": [
+        "E0001",
+        "E0019"
+      ],
+      "conditions": [
+        "组合搜索同时服务于行程与价格两个目标，此处只记录与价格的连接"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC003-G001",
+      "b": "DOC003-G008",
+      "label": "related",
+      "rationale": "T015 直接说明提前订票的理由是「just to get like a better price at a better deal」，提前量是达成低价的手段，与 G001 构成手段—结果关系。",
+      "evidence_ids": [
+        "E0001",
+        "E0021"
+      ],
+      "conditions": [
+        "前提是价格随提前期下降，原文以经验陈述，未给数据"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC003-G001",
+      "b": "DOC003-G009",
+      "label": "none",
+      "rationale": "DOC003-G001 的对象是拿到当前可找到的最优票价（T025/T115），DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC003-G001",
+      "b": "DOC003-G010",
+      "label": "related",
+      "rationale": "T109-T112 中，相对中位价的判断被用于决定是否值得下单，服务于价格目标；但 G010 只在陌生市场需要，G001 覆盖所有市场，范围不同，故为 related。",
+      "evidence_ids": [
+        "E0001",
+        "E0026",
+        "E0027"
+      ],
+      "conditions": [
+        "G010 仅在受访者不熟悉的市场成立"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC003-G001",
+      "b": "DOC003-G011",
+      "label": "related",
+      "rationale": "T087 设置提醒的动机是价格暴涨后需要「if any one of them goes down in price, I book it」，提醒服务于低价目标；但 G011 引入时间窗口与多航线监控，条件多于 G001。",
+      "evidence_ids": [
+        "E0001",
+        "E0029"
+      ],
+      "conditions": [
+        "仅在必须成行且价格波动的紧迫场景下使用"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC003-G001",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G001 的对象是拿到当前可找到的最优票价（T025/T115），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC003-G001",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G001 的对象是拿到当前可找到的最优票价（T025/T115），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC003-G001",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G001 的对象是拿到当前可找到的最优票价（T025/T115），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC003-G002",
+      "b": "DOC003-G003",
+      "label": "refinement",
+      "rationale": "T116 直接追问「good itinerary 能否拆成子目标」，T123 随即给出中转时长的自设规则，属父目标在衔接维度上的情境具体化；二者范围不同（父为整体行程合适，子为单一可量化条件），因此是精化而非等价。",
+      "evidence_ids": [
+        "E0004",
+        "E0007",
+        "E0008"
+      ],
+      "conditions": [
+        "仅适用于需要中转的行程；有签证限制时该规则不适用（T123）"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed",
+      "parent_id": "DOC003-G002",
+      "child_id": "DOC003-G003",
+      "interpretation": "把「行程合适」中的中转衔接维度具体化为可执行阈值：停留时间不低于 MCT 的 1.5 倍。"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC003-G002",
+      "b": "DOC003-G004",
+      "label": "refinement",
+      "rationale": "T031 在描述规划顺序时把接续交通与落地时间直接挂钩，T119 又把「与接驳/会面日程是否对得上」列为行程是否合适的具体判断项，构成父目标的情境具体化。",
+      "evidence_ids": [
+        "E0005",
+        "E0009",
+        "E0010",
+        "E0011"
+      ],
+      "conditions": [
+        "依赖受访者自行掌握接驳班次信息；平台侧未提供该数据"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed",
+      "parent_id": "DOC003-G002",
+      "child_id": "DOC003-G004",
+      "interpretation": "把「行程合适」中的时间衔接维度具体化为：起降时间需与后续接驳交通及会面对象日程对齐。"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC003-G002",
+      "b": "DOC003-G005",
+      "label": "refinement",
+      "rationale": "T073 解释为何国际线不用 cheapest 而用 best，理由是低价段被超长行程占满；T119 把「是否是合适的飞行时段」列为行程合适的判断项，二者共同构成父目标在时长/作息维度上的具体化。",
+      "evidence_ids": [
+        "E0005",
+        "E0012",
+        "E0013"
+      ],
+      "conditions": [
+        "红眼为弱偏好，超长行程为较强规避，两者的强制程度不同"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed",
+      "parent_id": "DOC003-G002",
+      "child_id": "DOC003-G005",
+      "interpretation": "把「行程合适」中的时长与作息维度具体化为：避开 40–60 小时行程与红眼时段。"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC003-G002",
+      "b": "DOC003-G006",
+      "label": "related",
+      "rationale": "T103 明确把流程分为两步：「once I've found the right itinerary... they allow me to find the best price for that itinerary」，G006 以 G002 已完成（行程确定）为前提，属先后条件关系，非精化。",
+      "evidence_ids": [
+        "E0004",
+        "E0016"
+      ],
+      "conditions": [
+        "G006 在行程确定之后进行"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC003-G002",
+      "b": "DOC003-G007",
+      "label": "related",
+      "rationale": "并行组合搜索的另一个目的是找到可行的行程组合（T099 以机场对与日期范围作为搜索维度），与 G002 相接；但 G007 是搜索方式、G002 是结果质量，非精化。",
+      "evidence_ids": [
+        "E0005",
+        "E0017",
+        "E0018"
+      ],
+      "conditions": [
+        "组合搜索同时服务于行程与价格"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC003-G002",
+      "b": "DOC003-G008",
+      "label": "none",
+      "rationale": "DOC003-G002 的对象是行程本身合适（时间与衔接可行）（T108/T130），DOC003-G008 的对象是提前 1–2 个月订票（T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC003-G002",
+      "b": "DOC003-G009",
+      "label": "none",
+      "rationale": "DOC003-G002 的对象是行程本身合适（时间与衔接可行）（T108/T130），DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC003-G002",
+      "b": "DOC003-G010",
+      "label": "none",
+      "rationale": "DOC003-G002 的对象是行程本身合适（时间与衔接可行）（T108/T130），DOC003-G010 的对象是判断票价相对中位水平（T109/T111）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC003-G002",
+      "b": "DOC003-G011",
+      "label": "none",
+      "rationale": "DOC003-G002 的对象是行程本身合适（时间与衔接可行）（T108/T130），DOC003-G011 的对象是对多条航线设置降价提醒（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC003-G002",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G002 的对象是行程本身合适（时间与衔接可行）（T108/T130），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC003-G002",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G002 的对象是行程本身合适（时间与衔接可行）（T108/T130），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC003-G002",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G002 的对象是行程本身合适（时间与衔接可行）（T108/T130），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC003-G003",
+      "b": "DOC003-G004",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC003-G003",
+      "b": "DOC003-G005",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC003-G003",
+      "b": "DOC003-G006",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC003-G003",
+      "b": "DOC003-G007",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G007 的对象是一次并行比较大量机场/日期/舱位组合（T095/T099）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC003-G003",
+      "b": "DOC003-G008",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G008 的对象是提前 1–2 个月订票（T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC003-G003",
+      "b": "DOC003-G009",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC003-G003",
+      "b": "DOC003-G010",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G010 的对象是判断票价相对中位水平（T109/T111）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC003-G003",
+      "b": "DOC003-G011",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G011 的对象是对多条航线设置降价提醒（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC003-G003",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC003-G003",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G003 的对象是中转停留不低于 1.5×MCT（T123），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC003-G003",
+      "b": "DOC003-G014",
+      "label": "related",
+      "rationale": "T124 说明中转停留时会确认休息室是否开放，休息室信息服务于中转体验；但 G003 是中转时长的下限规则，G014 是权益信息整合，对象不同，非精化。",
+      "evidence_ids": [
+        "E0007",
+        "E0037"
+      ],
+      "conditions": [
+        "仅在需要且希望使用休息室的中转场景下成立"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC003-G004",
+      "b": "DOC003-G005",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC003-G004",
+      "b": "DOC003-G006",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC003-G004",
+      "b": "DOC003-G007",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G007 的对象是一次并行比较大量机场/日期/舱位组合（T095/T099）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC003-G004",
+      "b": "DOC003-G008",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G008 的对象是提前 1–2 个月订票（T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC003-G004",
+      "b": "DOC003-G009",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC003-G004",
+      "b": "DOC003-G010",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G010 的对象是判断票价相对中位水平（T109/T111）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC003-G004",
+      "b": "DOC003-G011",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G011 的对象是对多条航线设置降价提醒（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC003-G004",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC003-G004",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC003-G004",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G004 的对象是航班与接驳交通及会面日程衔接（T031/T119），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC003-G005",
+      "b": "DOC003-G006",
+      "label": "none",
+      "rationale": "DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119），DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC003-G005",
+      "b": "DOC003-G007",
+      "label": "none",
+      "rationale": "DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119），DOC003-G007 的对象是一次并行比较大量机场/日期/舱位组合（T095/T099）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC003-G005",
+      "b": "DOC003-G008",
+      "label": "none",
+      "rationale": "DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119），DOC003-G008 的对象是提前 1–2 个月订票（T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC003-G005",
+      "b": "DOC003-G009",
+      "label": "none",
+      "rationale": "DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119），DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC003-G005",
+      "b": "DOC003-G010",
+      "label": "none",
+      "rationale": "DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119），DOC003-G010 的对象是判断票价相对中位水平（T109/T111）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC003-G005",
+      "b": "DOC003-G011",
+      "label": "none",
+      "rationale": "DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119），DOC003-G011 的对象是对多条航线设置降价提醒（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC003-G005",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC003-G005",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC003-G005",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G005 的对象是避开超长行程与红眼时段（T073/T119），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC003-G006",
+      "b": "DOC003-G007",
+      "label": "none",
+      "rationale": "DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103），DOC003-G007 的对象是一次并行比较大量机场/日期/舱位组合（T095/T099）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC003-G006",
+      "b": "DOC003-G008",
+      "label": "none",
+      "rationale": "DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103），DOC003-G008 的对象是提前 1–2 个月订票（T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC003-G006",
+      "b": "DOC003-G009",
+      "label": "none",
+      "rationale": "DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103），DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC003-G006",
+      "b": "DOC003-G010",
+      "label": "none",
+      "rationale": "DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103），DOC003-G010 的对象是判断票价相对中位水平（T109/T111）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC003-G006",
+      "b": "DOC003-G011",
+      "label": "none",
+      "rationale": "DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103），DOC003-G011 的对象是对多条航线设置降价提醒（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC003-G006",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC003-G006",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC003-G006",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G006 的对象是同一行程下比较多个订票供应商的最终价（T077/T103），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC003-G007",
+      "b": "DOC003-G008",
+      "label": "none",
+      "rationale": "DOC003-G007 的对象是一次并行比较大量机场/日期/舱位组合（T095/T099），DOC003-G008 的对象是提前 1–2 个月订票（T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC003-G007",
+      "b": "DOC003-G009",
+      "label": "none",
+      "rationale": "DOC003-G007 的对象是一次并行比较大量机场/日期/舱位组合（T095/T099），DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC003-G007",
+      "b": "DOC003-G010",
+      "label": "none",
+      "rationale": "DOC003-G007 的对象是一次并行比较大量机场/日期/舱位组合（T095/T099），DOC003-G010 的对象是判断票价相对中位水平（T109/T111）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P067",
+      "a": "DOC003-G007",
+      "b": "DOC003-G011",
+      "label": "none",
+      "rationale": "DOC003-G007 的对象是一次并行比较大量机场/日期/舱位组合（T095/T099），DOC003-G011 的对象是对多条航线设置降价提醒（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P068",
+      "a": "DOC003-G007",
+      "b": "DOC003-G012",
+      "label": "related",
+      "rationale": "两者都针对同一结构性负担：组合规模过大（T096「nobody's there to feed you all the different combinations」）与信息分散在十余个站点（T138）；前者要一次跑更多查询，后者要在一处汇总结果。",
+      "evidence_ids": [
+        "E0019",
+        "E0031"
+      ],
+      "conditions": [
+        "联系依据为同一「信息分散与组合爆炸」负担的两个侧面"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P069",
+      "a": "DOC003-G007",
+      "b": "DOC003-G013",
+      "label": "related",
+      "rationale": "T138 的「one click platform... give it all of my parameters, and it will find the best option」是 G007 并行搜索诉求的自动化延伸；但 G013 要求平台直接给结论，G007 只要求能同时比较，自主程度不同，非精化。",
+      "evidence_ids": [
+        "E0033",
+        "E0017"
+      ],
+      "conditions": [
+        "G013 引入「由平台给出最优」这一判断让渡，G007 不包含"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P070",
+      "a": "DOC003-G007",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G007 的对象是一次并行比较大量机场/日期/舱位组合（T095/T099），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P071",
+      "a": "DOC003-G008",
+      "b": "DOC003-G009",
+      "label": "none",
+      "rationale": "DOC003-G008 的对象是提前 1–2 个月订票（T015），DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P072",
+      "a": "DOC003-G008",
+      "b": "DOC003-G010",
+      "label": "none",
+      "rationale": "DOC003-G008 的对象是提前 1–2 个月订票（T015），DOC003-G010 的对象是判断票价相对中位水平（T109/T111）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P073",
+      "a": "DOC003-G008",
+      "b": "DOC003-G011",
+      "label": "none",
+      "rationale": "DOC003-G008 的对象是提前 1–2 个月订票（T015），DOC003-G011 的对象是对多条航线设置降价提醒（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P074",
+      "a": "DOC003-G008",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G008 的对象是提前 1–2 个月订票（T015），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P075",
+      "a": "DOC003-G008",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G008 的对象是提前 1–2 个月订票（T015），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P076",
+      "a": "DOC003-G008",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G008 的对象是提前 1–2 个月订票（T015），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P077",
+      "a": "DOC003-G009",
+      "b": "DOC003-G010",
+      "label": "none",
+      "rationale": "DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093），DOC003-G010 的对象是判断票价相对中位水平（T109/T111）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P078",
+      "a": "DOC003-G009",
+      "b": "DOC003-G011",
+      "label": "uncertain",
+      "rationale": "两者存在实质张力：G009 要求不登录以保持匿名（T053「I avoid logging in」、T093「I would probably never log in」），而 T088-T090 显示设提醒时他借用了已登录的 Google 账号，并明说「Only reason I did it by Google flights is because I was already logged into my Google account by chance」。受访者未表态是否愿为 Skyscanner 登录换提醒，也无法确定该例外是稳定规则还是权宜之计；多种解释并存，不能自行裁决，故记为不确定。",
+      "evidence_ids": [
+        "E0022",
+        "E0024",
+        "E0029"
+      ],
+      "conditions": [
+        "需人工确认：是否接受「仅在必须成行的紧迫场景下例外登录」这一条件；若确认，可改为 related 并写入条件。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P079",
+      "a": "DOC003-G009",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P080",
+      "a": "DOC003-G009",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P081",
+      "a": "DOC003-G009",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G009 的对象是搜索保持匿名、不登录（T053/T093），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P082",
+      "a": "DOC003-G010",
+      "b": "DOC003-G011",
+      "label": "none",
+      "rationale": "DOC003-G010 的对象是判断票价相对中位水平（T109/T111），DOC003-G011 的对象是对多条航线设置降价提醒（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P083",
+      "a": "DOC003-G010",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G010 的对象是判断票价相对中位水平（T109/T111），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P084",
+      "a": "DOC003-G010",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G010 的对象是判断票价相对中位水平（T109/T111），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P085",
+      "a": "DOC003-G010",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G010 的对象是判断票价相对中位水平（T109/T111），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P086",
+      "a": "DOC003-G011",
+      "b": "DOC003-G012",
+      "label": "none",
+      "rationale": "DOC003-G011 的对象是对多条航线设置降价提醒（T087），DOC003-G012 的对象是在一处集齐比价与行程信息（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P087",
+      "a": "DOC003-G011",
+      "b": "DOC003-G013",
+      "label": "none",
+      "rationale": "DOC003-G011 的对象是对多条航线设置降价提醒（T087），DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P088",
+      "a": "DOC003-G011",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G011 的对象是对多条航线设置降价提醒（T087），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P089",
+      "a": "DOC003-G012",
+      "b": "DOC003-G013",
+      "label": "related",
+      "rationale": "T138 把两者并列为两大障碍：信息不在同一处（10–12 个网站）与没有一键给出最优方案的平台；二者共同指向「减少跨站与人工迭代」，但一个是信息聚合、一个是决策自动化。",
+      "evidence_ids": [
+        "E0031",
+        "E0033"
+      ],
+      "conditions": [
+        "同段并列陈述，功能定位不同"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P090",
+      "a": "DOC003-G012",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G012 的对象是在一处集齐比价与行程信息（T138），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P091",
+      "a": "DOC003-G013",
+      "b": "DOC003-G014",
+      "label": "none",
+      "rationale": "DOC003-G013 的对象是输入全部参数后由平台给出最优方案（T138），DOC003-G014 的对象是整合信用卡权益与休息室准入信息（T124/T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P005",
+      "conditions": [
+        "G006 的比较只覆盖同一行程下的供应商，不改变行程本身"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G001",
+      "b": "DOC003-G006"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P006",
+      "conditions": [
+        "组合搜索同时服务于行程与价格两个目标，此处只记录与价格的连接"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G001",
+      "b": "DOC003-G007"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P007",
+      "conditions": [
+        "前提是价格随提前期下降，原文以经验陈述，未给数据"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G001",
+      "b": "DOC003-G008"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P009",
+      "conditions": [
+        "G010 仅在受访者不熟悉的市场成立"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G001",
+      "b": "DOC003-G010"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P010",
+      "conditions": [
+        "仅在必须成行且价格波动的紧迫场景下使用"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G001",
+      "b": "DOC003-G011"
+    },
+    {
+      "edge_id": "R006",
+      "type": "refinement",
+      "decision_id": "P014",
+      "conditions": [
+        "仅适用于需要中转的行程；有签证限制时该规则不适用（T123）"
+      ],
+      "review_status": "pending",
+      "parent_id": "DOC003-G002",
+      "child_id": "DOC003-G003",
+      "interpretation": "把「行程合适」中的中转衔接维度具体化为可执行阈值：停留时间不低于 MCT 的 1.5 倍。"
+    },
+    {
+      "edge_id": "R007",
+      "type": "refinement",
+      "decision_id": "P015",
+      "conditions": [
+        "依赖受访者自行掌握接驳班次信息；平台侧未提供该数据"
+      ],
+      "review_status": "pending",
+      "parent_id": "DOC003-G002",
+      "child_id": "DOC003-G004",
+      "interpretation": "把「行程合适」中的时间衔接维度具体化为：起降时间需与后续接驳交通及会面对象日程对齐。"
+    },
+    {
+      "edge_id": "R008",
+      "type": "refinement",
+      "decision_id": "P016",
+      "conditions": [
+        "红眼为弱偏好，超长行程为较强规避，两者的强制程度不同"
+      ],
+      "review_status": "pending",
+      "parent_id": "DOC003-G002",
+      "child_id": "DOC003-G005",
+      "interpretation": "把「行程合适」中的时长与作息维度具体化为：避开 40–60 小时行程与红眼时段。"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P017",
+      "conditions": [
+        "G006 在行程确定之后进行"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G002",
+      "b": "DOC003-G006"
+    },
+    {
+      "edge_id": "R010",
+      "type": "related",
+      "decision_id": "P018",
+      "conditions": [
+        "组合搜索同时服务于行程与价格"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G002",
+      "b": "DOC003-G007"
+    },
+    {
+      "edge_id": "R011",
+      "type": "related",
+      "decision_id": "P036",
+      "conditions": [
+        "仅在需要且希望使用休息室的中转场景下成立"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G003",
+      "b": "DOC003-G014"
+    },
+    {
+      "edge_id": "R012",
+      "type": "related",
+      "decision_id": "P068",
+      "conditions": [
+        "联系依据为同一「信息分散与组合爆炸」负担的两个侧面"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G007",
+      "b": "DOC003-G012"
+    },
+    {
+      "edge_id": "R013",
+      "type": "related",
+      "decision_id": "P069",
+      "conditions": [
+        "G013 引入「由平台给出最优」这一判断让渡，G007 不包含"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G007",
+      "b": "DOC003-G013"
+    },
+    {
+      "edge_id": "R014",
+      "type": "related",
+      "decision_id": "P089",
+      "conditions": [
+        "同段并列陈述，功能定位不同"
+      ],
+      "review_status": "pending",
+      "a": "DOC003-G012",
+      "b": "DOC003-G013"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC003:S026",
+      "material_id": "M001",
+      "quote": "But my primary focus is to like get a really good deal when I'm actually booking my flights. So I keep on checking at regular intervals, just to make sure. Hey, am I getting a good deal?",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6098,
+      "end_char": 6284,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S026",
+          "segment_start": 158,
+          "segment_end": 344,
+          "start_char": 6098,
+          "end_char": 6284
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 5940,
+        "end_char": 6389
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC003:S116",
+      "material_id": "M001",
+      "quote": "I would do that in terms of finding a good itinerary and finding a good price that works for me.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 41817,
+      "end_char": 41913,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S116",
+          "segment_start": 93,
+          "segment_end": 189,
+          "start_char": 41817,
+          "end_char": 41913
+        }
+      ],
+      "original_locator": {
+        "line_start": 116,
+        "line_end": 116,
+        "start_char": 41724,
+        "end_char": 42173
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC003:S026",
+      "material_id": "M001",
+      "quote": "I check like dozens of different websites to just make sure I'm having the best deal possible.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6285,
+      "end_char": 6379,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S026",
+          "segment_start": 345,
+          "segment_end": 439,
+          "start_char": 6285,
+          "end_char": 6379
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 5940,
+        "end_char": 6389
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC003:S108",
+      "material_id": "M001",
+      "quote": "Best results for me is a combination of the logistics in terms of the itinerary that I want the price and the flexibility.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 39706,
+      "end_char": 39828,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S108",
+          "segment_start": 20,
+          "segment_end": 142,
+          "start_char": 39706,
+          "end_char": 39828
+        }
+      ],
+      "original_locator": {
+        "line_start": 108,
+        "line_end": 108,
+        "start_char": 39686,
+        "end_char": 40078
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC003:S130",
+      "material_id": "M001",
+      "quote": "It should give me a good itinerary in terms of times, and it should match my situations.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 46866,
+      "end_char": 46954,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S130",
+          "segment_start": 101,
+          "segment_end": 189,
+          "start_char": 46866,
+          "end_char": 46954
+        }
+      ],
+      "original_locator": {
+        "line_start": 130,
+        "line_end": 130,
+        "start_char": 46765,
+        "end_char": 47275
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC003:S110",
+      "material_id": "M001",
+      "quote": "it is extremely situational, and I cannot give you like a concrete or objective criteria for that",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 40464,
+      "end_char": 40561,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S110",
+          "segment_start": 288,
+          "segment_end": 385,
+          "start_char": 40464,
+          "end_char": 40561
+        }
+      ],
+      "original_locator": {
+        "line_start": 110,
+        "line_end": 110,
+        "start_char": 40176,
+        "end_char": 41092
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC003:S124",
+      "material_id": "M001",
+      "quote": "Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 43159,
+      "end_char": 43289,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S124",
+          "segment_start": 20,
+          "segment_end": 150,
+          "start_char": 43159,
+          "end_char": 43289
+        }
+      ],
+      "original_locator": {
+        "line_start": 124,
+        "line_end": 124,
+        "start_char": 43139,
+        "end_char": 44314
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC003:S124",
+      "material_id": "M001",
+      "quote": "I generally tend to at least go for 1.5 x or 2 x of that for a stopover.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 43868,
+      "end_char": 43940,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S124",
+          "segment_start": 729,
+          "segment_end": 801,
+          "start_char": 43868,
+          "end_char": 43940
+        }
+      ],
+      "original_locator": {
+        "line_start": 124,
+        "line_end": 124,
+        "start_char": 43139,
+        "end_char": 44314
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC003:S032",
+      "material_id": "M001",
+      "quote": "How does that connect with other modes of transport? So let's say I'm flying into a city, but then I have to travel to a different city by like a train",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8728,
+      "end_char": 8879,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S032",
+          "segment_start": 784,
+          "segment_end": 935,
+          "start_char": 8728,
+          "end_char": 8879
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 7944,
+        "end_char": 10733
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC003:S032",
+      "material_id": "M001",
+      "quote": "I try to plan out my travel, such that things fall into place, and I don't end up having to stay in a city for like 20Â h doing nothing.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8957,
+      "end_char": 9093,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S032",
+          "segment_start": 1013,
+          "segment_end": 1149,
+          "start_char": 8957,
+          "end_char": 9093
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 7944,
+        "end_char": 10733
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC003:S120",
+      "material_id": "M001",
+      "quote": "is it matching up with the schedules of the other modes of transport I'm planning to.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 42557,
+      "end_char": 42642,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S120",
+          "segment_start": 209,
+          "segment_end": 294,
+          "start_char": 42557,
+          "end_char": 42642
+        }
+      ],
+      "original_locator": {
+        "line_start": 120,
+        "line_end": 120,
+        "start_char": 42348,
+        "end_char": 42910
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC003:S074",
+      "material_id": "M001",
+      "quote": "the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 23576,
+      "end_char": 23699,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S074",
+          "segment_start": 327,
+          "segment_end": 450,
+          "start_char": 23576,
+          "end_char": 23699
+        }
+      ],
+      "original_locator": {
+        "line_start": 74,
+        "line_end": 74,
+        "start_char": 23249,
+        "end_char": 24025
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC003:S120",
+      "material_id": "M001",
+      "quote": "I don't mind taking a red eye, but I would rather get my night's sleep.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 42839,
+      "end_char": 42910,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S120",
+          "segment_start": 491,
+          "segment_end": 562,
+          "start_char": 42839,
+          "end_char": 42910
+        }
+      ],
+      "original_locator": {
+        "line_start": 120,
+        "line_end": 120,
+        "start_char": 42348,
+        "end_char": 42910
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC003:S078",
+      "material_id": "M001",
+      "quote": "I look at the price. I take a look at the rating, and I often visit multiple providers from this page.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 26073,
+      "end_char": 26175,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S078",
+          "segment_start": 337,
+          "segment_end": 439,
+          "start_char": 26073,
+          "end_char": 26175
+        }
+      ],
+      "original_locator": {
+        "line_start": 78,
+        "line_end": 78,
+        "start_char": 25736,
+        "end_char": 26639
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC003:S078",
+      "material_id": "M001",
+      "quote": "you can compare prices. Sometimes prices increase, though that's pretty rare, and you can compare discounts on different providers. The final costs on different providers.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 26319,
+      "end_char": 26490,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S078",
+          "segment_start": 583,
+          "segment_end": 754,
+          "start_char": 26319,
+          "end_char": 26490
+        }
+      ],
+      "original_locator": {
+        "line_start": 78,
+        "line_end": 78,
+        "start_char": 25736,
+        "end_char": 26639
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC003:S104",
+      "material_id": "M001",
+      "quote": "they allow me to find the best price for that itinerary. comparing all of the different booking options.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 38329,
+      "end_char": 38433,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S104",
+          "segment_start": 193,
+          "segment_end": 297,
+          "start_char": 38329,
+          "end_char": 38433
+        }
+      ],
+      "original_locator": {
+        "line_start": 104,
+        "line_end": 104,
+        "start_char": 38136,
+        "end_char": 38915
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC003:S100",
+      "material_id": "M001",
+      "quote": "So I'd like to search for all possible airports, let's say, from the Us. All, the top 20 most popular airports from the Us. To the top 5 or 6 most popular airports in India.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 35630,
+      "end_char": 35803,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S100",
+          "segment_start": 20,
+          "segment_end": 193,
+          "start_char": 35630,
+          "end_char": 35803
+        }
+      ],
+      "original_locator": {
+        "line_start": 100,
+        "line_end": 100,
+        "start_char": 35610,
+        "end_char": 36569
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC003:S100",
+      "material_id": "M001",
+      "quote": "So that works out to be 11,760 different combinations of flights, different combinations of dates and itineraries",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 36333,
+      "end_char": 36446,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S100",
+          "segment_start": 723,
+          "segment_end": 836,
+          "start_char": 36333,
+          "end_char": 36446
+        }
+      ],
+      "original_locator": {
+        "line_start": 100,
+        "line_end": 100,
+        "start_char": 35610,
+        "end_char": 36569
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC003:S096",
+      "material_id": "M001",
+      "quote": "you want to do around 500 searches at the same time, because you're doing combinations of city pairs, country pairs, dates. travelers, different classes",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 34294,
+      "end_char": 34446,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S096",
+          "segment_start": 73,
+          "segment_end": 225,
+          "start_char": 34294,
+          "end_char": 34446
+        }
+      ],
+      "original_locator": {
+        "line_start": 96,
+        "line_end": 96,
+        "start_char": 34221,
+        "end_char": 34990
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC003:S016",
+      "material_id": "M001",
+      "quote": "Ideally, I like to do it at least a couple of months before.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2616,
+      "end_char": 2676,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S016",
+          "segment_start": 20,
+          "segment_end": 80,
+          "start_char": 2616,
+          "end_char": 2676
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 2596,
+        "end_char": 3015
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC003:S016",
+      "material_id": "M001",
+      "quote": "Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2910,
+      "end_char": 3015,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S016",
+          "segment_start": 314,
+          "segment_end": 419,
+          "start_char": 2910,
+          "end_char": 3015
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 2596,
+        "end_char": 3015
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC003:S054",
+      "material_id": "M001",
+      "quote": "I generally am very privacy conscious. So I avoid logging in, and I try to keep myself as anonymized as possible.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15167,
+      "end_char": 15280,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S054",
+          "segment_start": 20,
+          "segment_end": 133,
+          "start_char": 15167,
+          "end_char": 15280
+        }
+      ],
+      "original_locator": {
+        "line_start": 54,
+        "line_end": 54,
+        "start_char": 15147,
+        "end_char": 15761
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC003:S054",
+      "material_id": "M001",
+      "quote": "if you end up booking flights or searching for specific flights pretty often they might increase the flight prices for you.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15340,
+      "end_char": 15463,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S054",
+          "segment_start": 193,
+          "segment_end": 316,
+          "start_char": 15340,
+          "end_char": 15463
+        }
+      ],
+      "original_locator": {
+        "line_start": 54,
+        "line_end": 54,
+        "start_char": 15147,
+        "end_char": 15761
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC003:S094",
+      "material_id": "M001",
+      "quote": "considering the way I specifically use skyscanner, I would probably never log in.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 33892,
+      "end_char": 33973,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S094",
+          "segment_start": 451,
+          "segment_end": 532,
+          "start_char": 33892,
+          "end_char": 33973
+        }
+      ],
+      "original_locator": {
+        "line_start": 94,
+        "line_end": 94,
+        "start_char": 33441,
+        "end_char": 34115
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC003:S090",
+      "material_id": "M001",
+      "quote": "skyscanner is a Chinese company, and I generally don't want my data to be shared.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 32744,
+      "end_char": 32825,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S090",
+          "segment_start": 607,
+          "segment_end": 688,
+          "start_char": 32744,
+          "end_char": 32825
+        }
+      ],
+      "original_locator": {
+        "line_start": 90,
+        "line_end": 90,
+        "start_char": 32137,
+        "end_char": 32958
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC003:S110",
+      "material_id": "M001",
+      "quote": "I can use Google flights for it because it tells me if the price is above, below, or lower than the Median.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 40985,
+      "end_char": 41092,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S110",
+          "segment_start": 809,
+          "segment_end": 916,
+          "start_char": 40985,
+          "end_char": 41092
+        }
+      ],
+      "original_locator": {
+        "line_start": 110,
+        "line_end": 110,
+        "start_char": 40176,
+        "end_char": 41092
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC003:S112",
+      "material_id": "M001",
+      "quote": "Sure. Yeah, it would help out for the times when I'm not familiar with the specific market.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 41208,
+      "end_char": 41299,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S112",
+          "segment_start": 20,
+          "segment_end": 111,
+          "start_char": 41208,
+          "end_char": 41299
+        }
+      ],
+      "original_locator": {
+        "line_start": 112,
+        "line_end": 112,
+        "start_char": 41188,
+        "end_char": 41499
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC003:S112",
+      "material_id": "M001",
+      "quote": "I won't really need that feature. But yeah, it's it's nice to have.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 41432,
+      "end_char": 41499,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S112",
+          "segment_start": 244,
+          "segment_end": 311,
+          "start_char": 41432,
+          "end_char": 41499
+        }
+      ],
+      "original_locator": {
+        "line_start": 112,
+        "line_end": 112,
+        "start_char": 41188,
+        "end_char": 41499
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC003:S088",
+      "material_id": "M001",
+      "quote": "I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price. I I book it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 31622,
+      "end_char": 31742,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S088",
+          "segment_start": 422,
+          "segment_end": 542,
+          "start_char": 31622,
+          "end_char": 31742
+        }
+      ],
+      "original_locator": {
+        "line_start": 88,
+        "line_end": 88,
+        "start_char": 31200,
+        "end_char": 31928
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC003:S088",
+      "material_id": "M001",
+      "quote": "So that was the only time I set up an alert. And that was through Google flights.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 31847,
+      "end_char": 31928,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S088",
+          "segment_start": 647,
+          "segment_end": 728,
+          "start_char": 31847,
+          "end_char": 31928
+        }
+      ],
+      "original_locator": {
+        "line_start": 88,
+        "line_end": 88,
+        "start_char": 31200,
+        "end_char": 31928
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC003:S138",
+      "material_id": "M001",
+      "quote": "I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 49886,
+      "end_char": 50024,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S138",
+          "segment_start": 294,
+          "segment_end": 432,
+          "start_char": 49886,
+          "end_char": 50024
+        }
+      ],
+      "original_locator": {
+        "line_start": 138,
+        "line_end": 138,
+        "start_char": 49592,
+        "end_char": 50103
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0032",
+      "source_id": "DOC003:S096",
+      "material_id": "M001",
+      "quote": "and nobody's there to feed you all the different combinations.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 34703,
+      "end_char": 34765,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S096",
+          "segment_start": 482,
+          "segment_end": 544,
+          "start_char": 34703,
+          "end_char": 34765
+        }
+      ],
+      "original_locator": {
+        "line_start": 96,
+        "line_end": 96,
+        "start_char": 34221,
+        "end_char": 34990
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0033",
+      "source_id": "DOC003:S138",
+      "material_id": "M001",
+      "quote": "There's no one click platform where I can just give it all of my parameters, and it will find the best option for me.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 49695,
+      "end_char": 49812,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S138",
+          "segment_start": 103,
+          "segment_end": 220,
+          "start_char": 49695,
+          "end_char": 49812
+        }
+      ],
+      "original_locator": {
+        "line_start": 138,
+        "line_end": 138,
+        "start_char": 49592,
+        "end_char": 50103
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0034",
+      "source_id": "DOC003:S138",
+      "material_id": "M001",
+      "quote": "I have to invest a lot of time into finding. What's the ideal option?",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 49813,
+      "end_char": 49882,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S138",
+          "segment_start": 221,
+          "segment_end": 290,
+          "start_char": 49813,
+          "end_char": 49882
+        }
+      ],
+      "original_locator": {
+        "line_start": 138,
+        "line_end": 138,
+        "start_char": 49592,
+        "end_char": 50103
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0035",
+      "source_id": "DOC003:S086",
+      "material_id": "M001",
+      "quote": "it's kind of hard for these websites to also sort of predict what I would do, and let me know at an ideal time where maybe the cost is low for the exact itinerary that I want to take.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 30584,
+      "end_char": 30767,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S086",
+          "segment_start": 619,
+          "segment_end": 802,
+          "start_char": 30584,
+          "end_char": 30767
+        }
+      ],
+      "original_locator": {
+        "line_start": 86,
+        "line_end": 86,
+        "start_char": 29965,
+        "end_char": 31000
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0036",
+      "source_id": "DOC003:S126",
+      "material_id": "M001",
+      "quote": "it would be very nice if I could, input there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner. That would be wonderful.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 45038,
+      "end_char": 45261,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S126",
+          "segment_start": 620,
+          "segment_end": 843,
+          "start_char": 45038,
+          "end_char": 45261
+        }
+      ],
+      "original_locator": {
+        "line_start": 126,
+        "line_end": 126,
+        "start_char": 44418,
+        "end_char": 45545
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0037",
+      "source_id": "DOC003:S124",
+      "material_id": "M001",
+      "quote": "Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 43994,
+      "end_char": 44139,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S124",
+          "segment_start": 855,
+          "segment_end": 1000,
+          "start_char": 43994,
+          "end_char": 44139
+        }
+      ],
+      "original_locator": {
+        "line_start": 124,
+        "line_end": 124,
+        "start_char": 43139,
+        "end_char": 44314
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0038",
+      "source_id": "DOC003:S126",
+      "material_id": "M001",
+      "quote": "I know a few apps that have tried that, but generally it doesn't update well, and it doesn't work well.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 45262,
+      "end_char": 45365,
+      "candidate_locations": [
+        {
+          "source_id": "DOC003:S126",
+          "segment_start": 844,
+          "segment_end": 947,
+          "start_char": 45262,
+          "end_char": 45365
+        }
+      ],
+      "original_locator": {
+        "line_start": 126,
+        "line_end": 126,
+        "start_char": 44418,
+        "end_char": 45545
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC003-C001",
+      "goal_id": "DOC003-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C002",
+      "goal_id": "DOC003-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C003",
+      "goal_id": "DOC003-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C004",
+      "goal_id": "DOC003-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C005",
+      "goal_id": "DOC003-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C006",
+      "goal_id": "DOC003-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C007",
+      "goal_id": "DOC003-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C008",
+      "goal_id": "DOC003-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C009",
+      "goal_id": "DOC003-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C010",
+      "goal_id": "DOC003-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C011",
+      "goal_id": "DOC003-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C012",
+      "goal_id": "DOC003-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C013",
+      "goal_id": "DOC003-G013",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC003-C014",
+      "goal_id": "DOC003-G014",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 91,
+    "evaluated_pairs": 91
+  },
+  "issues": [
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC003-G009",
+        "DOC003-G011"
+      ],
+      "reason": "两者存在实质张力：G009 要求不登录以保持匿名（T053「I avoid logging in」、T093「I would probably never log in」），而 T088-T090 显示设提醒时他借用了已登录的 Google 账号，并明说「Only reason I did it by Google flights is because I was already logged into my Google account by chance」。受访者未表态是否愿为 Skyscanner 登录换提醒，也无法确定该例外是稳定规则还是权宜之计；多种解释并存，不能自行裁决，故记为不确定。"
+    }
+  ],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "assemble",
+    "readiness": "unchecked",
+    "limitations": [
+      "模型尚未经过 model-review；导出完整性检查不能替代模型质量审核。",
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。"
+    ],
+    "files": []
+  }
+}

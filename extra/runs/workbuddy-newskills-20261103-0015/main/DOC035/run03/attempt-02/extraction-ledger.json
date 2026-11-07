@@ -1,0 +1,853 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC035",
+  "input_binding": {
+    "source_input_sha256": "c2b6e41dc0d77dee8b5ae5c3166110b59cc1ba3e519d366ab51c756c677d40d7",
+    "source_sha256": "e6762c502fbd1f1f2eb3be46240e384cbde4480c73eb696651c574511346133a",
+    "windows_sha256": "23dceae97e53f3aa89b597591e81986d448115627d87faccd258c9d5c4084f62",
+    "candidates_sha256": "057260941006ae84948a3d7723ae9cc5362b76a3fc97e3e3019ba794f2f787b5",
+    "extraction_sha256": "822010f50e70de1196e7401185f964b89ab2a3a2f8b94f786c476f89913c9912"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "unknown",
+    "temperature": "unknown",
+    "budget": "1 initial pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 1,
+    "stop_reason": "完成一次全窗口基础提取与全篇校正，24 个窗口全部处理；预算内未发现需新增的独立意图，未决项已登记，停止补查循环。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC035:W0001",
+            "status": "processed",
+            "reason": "T001/T003 捕获每2天看新闻、首选 Google News、浏览 headlines/滚动、没时间只看 headlines、社交媒体检索流程等候选。"
+          },
+          {
+            "window_id": "DOC035:W0002",
+            "status": "processed",
+            "reason": "T005 捕获按兴趣/工作筛选与有趣 headline 就读；重叠 T002/T003 已在前窗处理。"
+          },
+          {
+            "window_id": "DOC035:W0003",
+            "status": "processed",
+            "reason": "T007 捕获 technology、sports/F1/cricket、Indian and American politics 三类兴趣及推荐/headlines 中政治新闻会读。"
+          },
+          {
+            "window_id": "DOC035:W0004",
+            "status": "processed",
+            "reason": "T009 捕获几天内得到新闻、过时新闻无意义、时机对技术/政治重要的时效性意图。"
+          },
+          {
+            "window_id": "DOC035:W0005",
+            "status": "processed",
+            "reason": "T011 捕获来源被引用、不同出版物/来源可见、粘贴到 Google 探索多观点；重叠 T008/T009 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0006",
+            "status": "processed",
+            "reason": "T013 捕获通知 spam 致错过重要新闻、按应用策划通知、长文低效、希望更短内容四个意图。"
+          },
+          {
+            "window_id": "DOC035:W0007",
+            "status": "processed",
+            "reason": "T015 捕获错过演唱会门票的具体实例，回指前一问的 spam 障碍；重叠 T012/T013 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0008",
+            "status": "processed",
+            "reason": "T017 捕获无广告理想体验、广告遮挡障碍、新闻页无广告、短而全面四个意图。"
+          },
+          {
+            "window_id": "DOC035:W0009",
+            "status": "processed",
+            "reason": "新覆盖 T018 为提问、T019 仅为 Yeah, so, so.，无新意图；重叠 T016/T017 的理想体验已在前窗捕获。"
+          },
+          {
+            "window_id": "DOC035:W0010",
+            "status": "processed",
+            "reason": "T021 捕获 Google Search 定制推荐、推荐给出想读文章、按行为定制通知渠道、通知不应 spam 四个意图。"
+          },
+          {
+            "window_id": "DOC035:W0011",
+            "status": "processed",
+            "reason": "T023 捕获通知构成（仅 headline、可选左侧图片、可选前言几字）；重叠 T020/T021 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0012",
+            "status": "processed",
+            "reason": "T025 捕获复制链接分享现状与直接 Whatsapp 分享为最佳方式；重叠 T022/T023 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0013",
+            "status": "processed",
+            "reason": "T027 捕获 archive/bookmark 现状评价与自定义 topic buckets 功能愿望；重叠 T024/T025 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0014",
+            "status": "processed",
+            "reason": "T029 捕获新闻机构偏向/推议程的顾虑与自动策展系统按兴趣推议程的严重顾虑；重叠 T026/T027 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0015",
+            "status": "processed",
+            "reason": "T031 捕获以长度、时效、立场比较来源三个标准（As I said 回指短内容愿望）；重叠 T028/T029 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0016",
+            "status": "processed",
+            "reason": "新覆盖 T032 为提问、T033 仅为 For a news aggregation feature. So again.，无新意图；重叠 T030/T031 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0017",
+            "status": "processed",
+            "reason": "T035 捕获聚合功能成功标准（破碎句，按支持不足保留）；T034 为采访者解释聚合含义，无涉众意图。"
+          },
+          {
+            "window_id": "DOC035:W0018",
+            "status": "processed",
+            "reason": "T037 捕获突发新闻 9/10 重要性与当天结束前给出当天全部突发新闻、非 4 天后；重叠 T034/T035 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0019",
+            "status": "processed",
+            "reason": "T039 捕获推荐（best feature）、多来源多立场、通知不泛滥且有用三项评价及 the 2 features 数字不一致；重叠 T036/T037 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0020",
+            "status": "processed",
+            "reason": "T041 捕获禁用话题功能与其 caveat 例外（仍显示突发新闻、不显示深度文章）；重叠 T038/T039 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0021",
+            "status": "processed",
+            "reason": "T043 捕获按习惯/兴趣推荐、导航不困惑、UI 直观/顺畅三个平台选择标准；重叠 T040/T041 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0022",
+            "status": "processed",
+            "reason": "新覆盖 T044 为提问、T045 仅为 Yeah.，无新意图；重叠 T042/T043 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0023",
+            "status": "processed",
+            "reason": "T047 捕获 big fan of recommendations 重申、公司不应存储全部浏览数据、不应利用数据推议程/宣传、数据使用限于推荐系统；重叠 T044/T045 已处理。"
+          },
+          {
+            "window_id": "DOC035:W0024",
+            "status": "processed",
+            "reason": "新覆盖 T048/T049 为感谢与 Thank you.，无新意图；重叠 T046/T047 已处理，隐私意图已在前窗捕获。"
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "逐窗（4轮/步长2，共24窗）完成基础捕获后，回查全部 50 个源片段：核对 T015 the spam thing ... mentioned in my previous question 回指 T013 通知泛滥、T021 as I said 回指同一障碍、T031 As I said, the content should not be long 回指 T013/T017 短内容愿望、T047 as I said 回指 T029 顾虑与推荐偏好；确认 T041 caveat 的例外（被禁用话题仍显示突发新闻、不显示深度文章）随拆分目标 G009/G010 保留；核对 T039 the 2 features 与实际列举三项的数字不一致、T047 偏好推荐与 T029 顾虑自动策展的条件差异（不判矛盾）、T009 一般事件时效与 T037 突发新闻时效的不同情境；对被排除的现状流程、举例与破碎句逐项登记 source_checks 回查。未发现需新增的独立意图，故无 P2 新候选；未决问题保留在 review_questions 与 decisions.questions。此为生成方全篇校正，不是独立语义评审或形式证明。",
+    "source_ids": [
+      "DOC035:T000",
+      "DOC035:T001",
+      "DOC035:T002",
+      "DOC035:T003",
+      "DOC035:T004",
+      "DOC035:T005",
+      "DOC035:T006",
+      "DOC035:T007",
+      "DOC035:T008",
+      "DOC035:T009",
+      "DOC035:T010",
+      "DOC035:T011",
+      "DOC035:T012",
+      "DOC035:T013",
+      "DOC035:T014",
+      "DOC035:T015",
+      "DOC035:T016",
+      "DOC035:T017",
+      "DOC035:T018",
+      "DOC035:T019",
+      "DOC035:T020",
+      "DOC035:T021",
+      "DOC035:T022",
+      "DOC035:T023",
+      "DOC035:T024",
+      "DOC035:T025",
+      "DOC035:T026",
+      "DOC035:T027",
+      "DOC035:T028",
+      "DOC035:T029",
+      "DOC035:T030",
+      "DOC035:T031",
+      "DOC035:T032",
+      "DOC035:T033",
+      "DOC035:T034",
+      "DOC035:T035",
+      "DOC035:T036",
+      "DOC035:T037",
+      "DOC035:T038",
+      "DOC035:T039",
+      "DOC035:T040",
+      "DOC035:T041",
+      "DOC035:T042",
+      "DOC035:T043",
+      "DOC035:T044",
+      "DOC035:T045",
+      "DOC035:T046",
+      "DOC035:T047",
+      "DOC035:T048",
+      "DOC035:T049"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "现状习惯与频率描述，未表达改变或要求意图；渠道/推荐偏好另由 G008/G024 承接。"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G024"
+      ],
+      "reason": "明确首选平台偏好，保留 preferred 强度，未升级为强制。"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "现状浏览流程描述，未表达改变或要求意图；相关条件行为另见 G023。"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G023"
+      ],
+      "reason": "带条件（没时间）的行为选择，原句明确，保留条件与结果。"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "现状替代流程描述（社交媒体→Google→读文章），非要求；操作先后不自动成为目标。"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "浏览时按兴趣筛选与按兴趣推荐同义方向，作为 G008 的条件，不另造节点。"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "现状浏览行为（有趣 headline 就读），与 G023 条件行为重复且无独立结果，不另造节点。"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G022"
+      ],
+      "reason": "technology 兴趣类别之一，与其他类别合并为兴趣范围目标 G022。"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G022"
+      ],
+      "reason": "sports/F1/cricket 兴趣类别之一，合并到 G022。"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G022"
+      ],
+      "reason": "Indian and American politics 兴趣类别之一，合并到 G022。"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "现状阅读行为描述，非系统要求；内容范围已由 G008/G022 承接。"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "明确意愿（I would like / I like），保留几天内的时间范围。"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "以 F1 过时新闻例子说明时机重要，作为 G001 的相反证据/条件，不另造固定示例目标。"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "重申时机对技术/政治重要，并入 G001 的条件。"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G017"
+      ],
+      "reason": "来源被引用的正面评价，推断为维持意图，保留为推断目标 G017。"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G016"
+      ],
+      "reason": "不同出版物/来源可见，并入多来源多立场目标 G016。"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "粘贴新闻到 Google 搜索是现状验证做法，非要求；多观点意图已由 G016 承接。"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "通知泛滥致错过重要新闻的障碍，与 G005 同一避免结果，合并并保留后果。"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "按应用策划通知是现状应对方式；不从抱怨取反造唯一补救目标。"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "长文低效障碍，作为 G003 短内容目标的依据，不另造障碍目标。"
+    },
+    {
+      "candidate_id": "C021",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "明确愿望（would love），保留 some of the articles 范围与 get up to speed 目的。"
+    },
+    {
+      "candidate_id": "C022",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "错过演唱会门票是具体经历举例，佐证 spam 障碍，不另造固定业务目标。"
+    },
+    {
+      "candidate_id": "C023",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "理想体验不被广告打扰，与 G004 同义，合并。"
+    },
+    {
+      "candidate_id": "C024",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "广告遮挡内容的障碍，作为 G004 依据，不另造障碍目标。"
+    },
+    {
+      "candidate_id": "C025",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "明确目标（would be not having ads），保留否定。"
+    },
+    {
+      "candidate_id": "C026",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "明确质量意图，保留 short but comprehensive 的 AND 约束（覆盖事件各方面）。"
+    },
+    {
+      "candidate_id": "C027",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "按搜索/行为定制的推荐，与 G008 同义方向，合并并保留定制方式。"
+    },
+    {
+      "candidate_id": "C028",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "推荐给出想读文章的同义重申，合并到 G008。"
+    },
+    {
+      "candidate_id": "C029",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "明确渠道偏好，保留按行为定制方式与偏好强度。"
+    },
+    {
+      "candidate_id": "C030",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "明确约束（should not be spammed），保留后果，与 C018 合并簇共同支撑 G005。"
+    },
+    {
+      "candidate_id": "C031",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "明确通知构成，保留 headline/图片/前言的条件、顺序与可选强度。"
+    },
+    {
+      "candidate_id": "C032",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "复制链接到聊天应用是现状做法；偏好选项另由 G012 承接。"
+    },
+    {
+      "candidate_id": "C033",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G012"
+      ],
+      "reason": "明确偏好（the best way），保留直接 Whatsapp 分享方式，未升级为强制。"
+    },
+    {
+      "candidate_id": "C034",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "archive/bookmark 是现有功能正面评价，与所求 topic buckets 是不同结果，未表达新要求；所求功能另见 G011。"
+    },
+    {
+      "candidate_id": "C035",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G011"
+      ],
+      "reason": "明确功能愿望（would love），保留自定义桶、多文章加入、按主题稍后读取。"
+    },
+    {
+      "candidate_id": "C036",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G021"
+      ],
+      "reason": "新闻机构偏向/推议程的顾虑背景，作为 G021 的依据，信念不当事实用。"
+    },
+    {
+      "candidate_id": "C037",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G021"
+      ],
+      "reason": "明确且 very serious 的顾虑，保留 may/might 的不确定性。"
+    },
+    {
+      "candidate_id": "C038",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "content should not be long 回指短内容愿望，合并到 G003。"
+    },
+    {
+      "candidate_id": "C039",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "以出版时效比较来源，作为 G001 时效目标的支持，不另造目标。"
+    },
+    {
+      "candidate_id": "C040",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G016"
+      ],
+      "reason": "以立场比较来源，并入多来源/多立场目标 G016。"
+    },
+    {
+      "candidate_id": "C041",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G013"
+      ],
+      "reason": "聚合成功标准可辨但原句破碎，按支持不足如实保留并升级为问题，不凑数。"
+    },
+    {
+      "candidate_id": "C042",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "9/10 强度信息并入 G002 的 context，不另造目标。"
+    },
+    {
+      "candidate_id": "C043",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "明确要求，保留当天全部、当天结束前、非 4 天后及强度。"
+    },
+    {
+      "candidate_id": "C044",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "推荐功能最高评价，与 G008 同义，合并。"
+    },
+    {
+      "candidate_id": "C045",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G016"
+      ],
+      "reason": "明确说不只看到一个来源/一面，作为推断维持意图的主依据。"
+    },
+    {
+      "candidate_id": "C046",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "通知不泛滥且有用的正面评价，与 G005 避免 spam 同向，合并。"
+    },
+    {
+      "candidate_id": "C047",
+      "disposition": "split",
+      "final_goal_ids": [
+        "G009",
+        "G010"
+      ],
+      "reason": "同一功能愿望含独立结果（禁用话题）与明确 caveat（仍显示突发新闻、不显示深度文章），按独立意图拆为两个目标，例外随 G010 保留。"
+    },
+    {
+      "candidate_id": "C048",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "caveat 作为 G010 的独立结果，保留例外方向与条件。"
+    },
+    {
+      "candidate_id": "C049",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "选择平台的推荐标准，与 G008 同义，合并。"
+    },
+    {
+      "candidate_id": "C050",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G014"
+      ],
+      "reason": "明确导航范围与 should not get very confused 要求。"
+    },
+    {
+      "candidate_id": "C051",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G015"
+      ],
+      "reason": "明确用户友好/直观要求及换平台后果与顺畅目的。"
+    },
+    {
+      "candidate_id": "C052",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "重申偏好，与 G008 同义，合并；与 T029 顾虑条件不同，不判矛盾。"
+    },
+    {
+      "candidate_id": "C053",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G018"
+      ],
+      "reason": "明确约束（should not be able to），保留否定与 all 范围。"
+    },
+    {
+      "candidate_id": "C054",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G019"
+      ],
+      "reason": "明确约束，保留自己的议程/宣传范围。"
+    },
+    {
+      "candidate_id": "C055",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G020"
+      ],
+      "reason": "明确边界（the only limit），保留限于推荐系统。"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC035:T015",
+          "quote": "I missed the concert because of the spam thing that I mentioned in my previous question.",
+          "role": "basis",
+          "start_char": 7015,
+          "end_char": 7103
+        },
+        {
+          "source_id": "DOC035:T013",
+          "quote": "if you turn the notifications on for for these websites, or for these applications, they tend to spam a lot. They tend to spam a lot in in a day, and this might lead to missing a few important news that would really affect me.",
+          "role": "basis",
+          "start_char": 5311,
+          "end_char": 5537
+        },
+        {
+          "source_id": "DOC035:T021",
+          "quote": "But again, notification should not be should not be spammed, because again, as I said, it leads to it leads to missing some important news.",
+          "role": "basis",
+          "start_char": 8897,
+          "end_char": 9036
+        }
+      ],
+      "candidate_ids": [
+        "C018",
+        "C022",
+        "C030"
+      ],
+      "final_goal_ids": [
+        "G005"
+      ],
+      "outcome": "represented",
+      "reason": "跨窗指代回查：T015 具体实例与 T021 as I said 均回指 T013 通知 spam 致错过重要新闻；实例不另造目标，三窗合并支撑 G005。"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC035:T041",
+          "quote": "But another, there is a caveat with this, with this feature that if there is a breaking news with that in that event that you're not interested in, it should still show you the breaking news, but not the not the in depth articles or not. Like not the in depth, analysis of those events or topics, but they should show breaking news.",
+          "role": "basis",
+          "start_char": 16445,
+          "end_char": 16777
+        }
+      ],
+      "candidate_ids": [
+        "C047",
+        "C048"
+      ],
+      "final_goal_ids": [
+        "G009",
+        "G010"
+      ],
+      "outcome": "represented",
+      "reason": "例外回查：拆分为禁用话题目标 G009 与仍显示突发新闻/不显示深度文章 G010，例外方向、条件与两处否定逐项保留。"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC035:T001",
+          "quote": "typically I check the news I check the news through the news application once in 2 days",
+          "role": "basis",
+          "start_char": 218,
+          "end_char": 305
+        },
+        {
+          "source_id": "DOC035:T003",
+          "quote": "And another process would be finding finding some information on any social media. And then I I would search the event on Google. And then Google would Google would direct me to Google News or any news article. And then I tend to read that article.",
+          "role": "basis",
+          "start_char": 1414,
+          "end_char": 1662
+        }
+      ],
+      "candidate_ids": [
+        "C001",
+        "C003",
+        "C005"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "被排除项回查：现状习惯与浏览/检索流程描述，未表达改变或维持要求，按目标边界排除，不因出现在流程里就造目标。"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC035:T047",
+          "quote": "Yeah, about about data privacy. Yeah. So as I said, no, I am. I am a big fan of recommendations.",
+          "role": "basis",
+          "start_char": 18193,
+          "end_char": 18289
+        },
+        {
+          "source_id": "DOC035:T029",
+          "quote": "And that is why that is one concern that I have with automated news curation systems that if they are able to. If they're able to get my interests, they they might be they might be able to push some agenda on me. And this is a this is a very serious concern that I have with automated use curation.",
+          "role": "basis",
+          "start_char": 11469,
+          "end_char": 11767
+        }
+      ],
+      "candidate_ids": [
+        "C037",
+        "C052"
+      ],
+      "final_goal_ids": [
+        "G021",
+        "G008"
+      ],
+      "outcome": "represented",
+      "reason": "相反证据回查：两处表面相反但条件不同（接受推荐功能 vs 拒绝利用兴趣/数据推议程），不判矛盾，分别保留偏好 G008 与顾虑 G021。"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC035:T035",
+          "quote": "Yeah. if a news aggregation feature is there, it should provide a law. It should provide not a lot, but it should provide all the relevant information that again, relevant information compared with my interest in a short amount of time, if that is.",
+          "role": "basis",
+          "start_char": 13418,
+          "end_char": 13666
+        }
+      ],
+      "candidate_ids": [
+        "C041"
+      ],
+      "final_goal_ids": [
+        "G013"
+      ],
+      "outcome": "uncertain",
+      "reason": "不确定项回查：原句破碎，not a lot 与 all the relevant information 的关系及成功判据无法确证，保留支持不足目标并列为未决问题。"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC035:T039",
+          "quote": "So, yeah, that is like that are the 2 features that I love about Google when you.",
+          "role": "basis",
+          "start_char": 15778,
+          "end_char": 15859
+        }
+      ],
+      "candidate_ids": [
+        "C044",
+        "C045",
+        "C046"
+      ],
+      "final_goal_ids": [
+        "G008",
+        "G016",
+        "G005"
+      ],
+      "outcome": "represented",
+      "reason": "数字不一致回查：原文说 2 features 却列举推荐/多来源/通知三项，按实际列举保留三项目标，不因数字删节点也不凑数造节点。"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC035:T011",
+          "quote": "and to to dig more like to dig more into some sources of some articles. I get the same news and like paste it on Google to see if I can get like explore more on the same news, and see similar, or if similar opinions, or there are differentiating opinions, there.",
+          "role": "basis",
+          "start_char": 4684,
+          "end_char": 4946
+        }
+      ],
+      "candidate_ids": [
+        "C017"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "被排除项回查：粘贴新闻到 Google 搜索是现状验证做法，非系统要求；多来源/多观点意图已由 G016 承接。"
+    },
+    {
+      "check_id": "S8",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC035:T013",
+          "quote": "So a huge, like the huge content in these articles, is also a challenge that I am that I have been facing with, and would I would love to have smaller content for some of for for some of the articles to get up to speed with.",
+          "role": "basis",
+          "start_char": 6073,
+          "end_char": 6297
+        },
+        {
+          "source_id": "DOC035:T017",
+          "quote": "And another thing would be if the article is smaller but comprehensive, it would be a great experience if the article is, if the article or the news content is small, but it is, it covers every aspect of the it covers every aspect of the event, or whatever it is talking about.",
+          "role": "basis",
+          "start_char": 7584,
+          "end_char": 7861
+        },
+        {
+          "source_id": "DOC035:T031",
+          "quote": "One thing that matters is the length of the article. As I said, the content should not be long",
+          "role": "basis",
+          "start_char": 11940,
+          "end_char": 12034
+        }
+      ],
+      "candidate_ids": [
+        "C020",
+        "C021",
+        "C026",
+        "C038"
+      ],
+      "final_goal_ids": [
+        "G003"
+      ],
+      "outcome": "represented",
+      "reason": "合并簇/条件继承回查：三窗（As I said 回指）同指短而全面的内容愿望，保留 short but comprehensive 的 AND 约束，不拆成两个目标也不丢掉覆盖各方面的要求。"
+    }
+  ],
+  "limitations": [
+    "原文为英文访谈转写，含大量重复、自我修正与破碎语句（如 T035 的 it should provide a law / Make a deem、T019/T033/T045 仅语气词），按原样保留未润色，不静默纠正。",
+    "未联网、未读取任何参考答案、历史目标、关系或评分；仅使用本任务目录的原文与冻结技能只读目录。",
+    "本任务为同一任务的续跑 attempt-02，从原文重新开始；未参考被外部中断的前一 attempt 产物（本目录初始仅有 brief.md 与 source/DOC035.json）。",
+    "转写中的 news caution system (T028)、automated use curation (T029)、a law (T035) 等按原音转写理解，未作拼写或同音纠正。",
+    "语义判断、独立联系与精化组判断由本生成会话编制；未执行独立语义评审或形式证明，人工接受状态保持待审。"
+  ]
+}

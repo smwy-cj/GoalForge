@@ -1,0 +1,2209 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC035-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "4e8b22eb3a0b9bb755cfdbda602ff4d3f5f0edcb823cd3d99ca67e997a9fb903"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "c6809fff639b310414edba113a8dad3187e509bb872cb3bb45f20e1dd88a4468"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "00e31b2623aa7e379046c95c04c1f7ee4d9b3b2f54f5ae1b5dc6001a295d5ff9"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "e6762c502fbd1f1f2eb3be46240e384cbde4480c73eb696651c574511346133a"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC035"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC035-G001",
+      "statement": "每隔一两天快速了解世界上发生了什么（先看头条）。",
+      "source_candidate_ids": [
+        "DOC035-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "频率：两天一次",
+        "路径：打开 Google News → 看头条 → 往下滚"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G002",
+      "statement": "只读与自己兴趣相关的新闻：科技、赛车与板球、印度与美国政治。",
+      "source_candidate_ids": [
+        "DOC035-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "三类主题：科技公司与 AI 模型、F1/板球、政治"
+      ],
+      "evidence_ids": [
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G003",
+      "statement": "新闻要有时效：事件发生几天内就要看到。",
+      "source_candidate_ids": [
+        "DOC035-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "反面例子：F1 新闻提前两周看到没有意义",
+        "判断依据：「relevant」首先看时间"
+      ],
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G004",
+      "statement": "能看到新闻的来源与多源报道，并对比不同立场。",
+      "source_candidate_ids": [
+        "DOC035-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "Google News 会标出来源",
+        "他会把同一新闻再搜一遍看不同观点"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G005",
+      "statement": "通知少而准，不被刷屏，以免漏掉真正重要的消息。",
+      "source_candidate_ids": [
+        "DOC035-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "实例：演唱会开票日被大量推送淹没，错过购票"
+      ],
+      "evidence_ids": [
+        "E0010",
+        "E0011",
+        "E0012"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G006",
+      "statement": "文章要短而全面，能在有限时间里读完并掌握要点。",
+      "source_candidate_ids": [
+        "DOC035-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "现状：大媒体动辄上千词，读完效率低",
+        "期望：small but comprehensive"
+      ],
+      "evidence_ids": [
+        "E0013",
+        "E0014"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G007",
+      "statement": "阅读页不被广告遮挡，能顺畅读完正文。",
+      "source_candidate_ids": [
+        "DOC035-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "问题：广告甚至盖住正文"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G008",
+      "statement": "当天的重要突发新闻当天就能收到，不必等几天。",
+      "source_candidate_ids": [
+        "DOC035-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "自评重要性 9/10",
+        "底线：当天内送达"
+      ],
+      "evidence_ids": [
+        "E0017",
+        "E0018"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G009",
+      "statement": "能关掉不感兴趣的话题，但该话题的突发新闻仍要保留。",
+      "source_candidate_ids": [
+        "DOC035-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "类比 Instagram 的「减少此类内容」",
+        "例外：突发新闻仍要出现，只是不要深度分析"
+      ],
+      "evidence_ids": [
+        "E0019",
+        "E0020"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G010",
+      "statement": "按自定义主题分桶保存文章，方便日后集中阅读。",
+      "source_candidate_ids": [
+        "DOC035-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "参照 Pinterest / Google Images 的 board",
+        "现状：只有 archive / bookmark"
+      ],
+      "evidence_ids": [
+        "E0021",
+        "E0022"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G011",
+      "statement": "一键把文章分享到 WhatsApp 等聊天工具。",
+      "source_candidate_ids": [
+        "DOC035-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "现状：复制链接或直接调起 WhatsApp"
+      ],
+      "evidence_ids": [
+        "E0023",
+        "E0024"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G012",
+      "statement": "推荐贴合自己的行为与兴趣，不必每次主动搜。",
+      "source_candidate_ids": [
+        "DOC035-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "Google 搜索页的推荐、App 通知都按行为推送"
+      ],
+      "evidence_ids": [
+        "E0025",
+        "E0026"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC035-G013",
+      "statement": "平台不得留存全部阅读数据，更不能借数据推送议程。",
+      "source_candidate_ids": [
+        "DOC035-C013"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，印度留学生，用 Google News 看新闻）",
+      "context": [
+        "可接受的边界：仅用于推荐",
+        "担忧：媒体立场通过算法渗透"
+      ],
+      "evidence_ids": [
+        "E0027",
+        "E0028"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC035-G001",
+      "b": "DOC035-G002",
+      "label": "related",
+      "rationale": "T003 描述的动作就是：先扫头条，再往下滚找「与兴趣相关」的文章。看头条是覆盖面，挑兴趣是筛选，前者给范围、后者给取舍。",
+      "evidence_ids": [
+        "E0002",
+        "E0003"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC035-G001",
+      "b": "DOC035-G003",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G003 的对象是新闻要及时（T009）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC035-G001",
+      "b": "DOC035-G004",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G004 的对象是来源可查多源对比（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC035-G001",
+      "b": "DOC035-G005",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G005 的对象是通知少而准（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC035-G001",
+      "b": "DOC035-G006",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G006 的对象是文章短而全面（T013/T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC035-G001",
+      "b": "DOC035-G007",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G007 的对象是阅读页无广告遮挡（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC035-G001",
+      "b": "DOC035-G008",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G008 的对象是突发当天必达（T037）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC035-G001",
+      "b": "DOC035-G009",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G009 的对象是可关话题但保留突发（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC035-G001",
+      "b": "DOC035-G010",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G010 的对象是主题分桶收藏（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC035-G001",
+      "b": "DOC035-G011",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G011 的对象是一键分享到 WhatsApp（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC035-G001",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC035-G001",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G001 的对象是隔天看头条了解大事（T001/T003），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC035-G002",
+      "b": "DOC035-G003",
+      "label": "none",
+      "rationale": "DOC035-G002 的对象是只读兴趣相关内容（T005/T007），DOC035-G003 的对象是新闻要及时（T009）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC035-G002",
+      "b": "DOC035-G004",
+      "label": "none",
+      "rationale": "DOC035-G002 的对象是只读兴趣相关内容（T005/T007），DOC035-G004 的对象是来源可查多源对比（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC035-G002",
+      "b": "DOC035-G005",
+      "label": "none",
+      "rationale": "DOC035-G002 的对象是只读兴趣相关内容（T005/T007），DOC035-G005 的对象是通知少而准（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC035-G002",
+      "b": "DOC035-G006",
+      "label": "none",
+      "rationale": "DOC035-G002 的对象是只读兴趣相关内容（T005/T007），DOC035-G006 的对象是文章短而全面（T013/T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC035-G002",
+      "b": "DOC035-G007",
+      "label": "none",
+      "rationale": "DOC035-G002 的对象是只读兴趣相关内容（T005/T007），DOC035-G007 的对象是阅读页无广告遮挡（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC035-G002",
+      "b": "DOC035-G008",
+      "label": "none",
+      "rationale": "DOC035-G002 的对象是只读兴趣相关内容（T005/T007），DOC035-G008 的对象是突发当天必达（T037）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC035-G002",
+      "b": "DOC035-G009",
+      "label": "related",
+      "rationale": "T041 想在推荐里关掉某些话题，正是对「只看兴趣」的负向操作：既可以加，也可以减。但 G009 附带一条硬约束——突发新闻不受此限。",
+      "evidence_ids": [
+        "E0003",
+        "E0019"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC035-G002",
+      "b": "DOC035-G010",
+      "label": "related",
+      "rationale": "T027 的分桶按主题建（正是他关心的科技/体育/政治），收藏动作以兴趣为前提。但 G010 是事后整理，G002 是当下筛选。",
+      "evidence_ids": [
+        "E0021",
+        "E0003"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC035-G002",
+      "b": "DOC035-G011",
+      "label": "related",
+      "rationale": "T025 说「如果我感兴趣的文章想分享」，分享对象由兴趣筛选决定。但 G011 是社交行为，G002 是筛选标准。",
+      "evidence_ids": [
+        "E0023",
+        "E0003"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC035-G002",
+      "b": "DOC035-G012",
+      "label": "related",
+      "rationale": "T039 说最满意的功能就是「它跟踪我的行为」，把兴趣变成推荐——G012 是 G002 的自动化实现。但 G002 也包括他主动扫首页找内容。",
+      "evidence_ids": [
+        "E0003",
+        "E0025"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC035-G002",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G002 的对象是只读兴趣相关内容（T005/T007），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC035-G003",
+      "b": "DOC035-G004",
+      "label": "none",
+      "rationale": "DOC035-G003 的对象是新闻要及时（T009），DOC035-G004 的对象是来源可查多源对比（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC035-G003",
+      "b": "DOC035-G005",
+      "label": "related",
+      "rationale": "T013 把「通知刷屏」与「漏掉重要新闻」放进同一句因果：通知是时效的兑现渠道，通道太吵反而失效。但 G005 管信噪比，G003 管到达时间。",
+      "evidence_ids": [
+        "E0006",
+        "E0010"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC035-G003",
+      "b": "DOC035-G006",
+      "label": "none",
+      "rationale": "DOC035-G003 的对象是新闻要及时（T009），DOC035-G006 的对象是文章短而全面（T013/T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC035-G003",
+      "b": "DOC035-G007",
+      "label": "none",
+      "rationale": "DOC035-G003 的对象是新闻要及时（T009），DOC035-G007 的对象是阅读页无广告遮挡（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC035-G003",
+      "b": "DOC035-G008",
+      "label": "related",
+      "rationale": "T009 说常规新闻要几天内看到，T037 说突发必须当天到位——同一条时效要求的两档强度。但 G008 的紧迫度明显更高（自评 9/10）。",
+      "evidence_ids": [
+        "E0006",
+        "E0017"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC035-G003",
+      "b": "DOC035-G009",
+      "label": "none",
+      "rationale": "DOC035-G003 的对象是新闻要及时（T009），DOC035-G009 的对象是可关话题但保留突发（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC035-G003",
+      "b": "DOC035-G010",
+      "label": "none",
+      "rationale": "DOC035-G003 的对象是新闻要及时（T009），DOC035-G010 的对象是主题分桶收藏（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC035-G003",
+      "b": "DOC035-G011",
+      "label": "none",
+      "rationale": "DOC035-G003 的对象是新闻要及时（T009），DOC035-G011 的对象是一键分享到 WhatsApp（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC035-G003",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G003 的对象是新闻要及时（T009），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC035-G003",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G003 的对象是新闻要及时（T009），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC035-G004",
+      "b": "DOC035-G005",
+      "label": "none",
+      "rationale": "DOC035-G004 的对象是来源可查多源对比（T011），DOC035-G005 的对象是通知少而准（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC035-G004",
+      "b": "DOC035-G006",
+      "label": "related",
+      "rationale": "T031 说比较不同媒体时看三件事：文章长度、发布时效、立场。G006 正是其中一条比较维度，同时也是阅读负担的约束。",
+      "evidence_ids": [
+        "E0008",
+        "E0014"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC035-G004",
+      "b": "DOC035-G007",
+      "label": "none",
+      "rationale": "DOC035-G004 的对象是来源可查多源对比（T011），DOC035-G007 的对象是阅读页无广告遮挡（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC035-G004",
+      "b": "DOC035-G008",
+      "label": "none",
+      "rationale": "DOC035-G004 的对象是来源可查多源对比（T011），DOC035-G008 的对象是突发当天必达（T037）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC035-G004",
+      "b": "DOC035-G009",
+      "label": "none",
+      "rationale": "DOC035-G004 的对象是来源可查多源对比（T011），DOC035-G009 的对象是可关话题但保留突发（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC035-G004",
+      "b": "DOC035-G010",
+      "label": "none",
+      "rationale": "DOC035-G004 的对象是来源可查多源对比（T011），DOC035-G010 的对象是主题分桶收藏（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC035-G004",
+      "b": "DOC035-G011",
+      "label": "none",
+      "rationale": "DOC035-G004 的对象是来源可查多源对比（T011），DOC035-G011 的对象是一键分享到 WhatsApp（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC035-G004",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G004 的对象是来源可查多源对比（T011），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC035-G004",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G004 的对象是来源可查多源对比（T011），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC035-G005",
+      "b": "DOC035-G006",
+      "label": "none",
+      "rationale": "DOC035-G005 的对象是通知少而准（T013），DOC035-G006 的对象是文章短而全面（T013/T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC035-G005",
+      "b": "DOC035-G007",
+      "label": "none",
+      "rationale": "DOC035-G005 的对象是通知少而准（T013），DOC035-G007 的对象是阅读页无广告遮挡（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC035-G005",
+      "b": "DOC035-G008",
+      "label": "related",
+      "rationale": "两者都在调通知：一个要求重要消息必达（当天），一个要求不刷屏。T021 明确说「通知不该被滥用」，正是因为滥用会让必达失效。",
+      "evidence_ids": [
+        "E0017",
+        "E0010"
+      ],
+      "conditions": [
+        "G008 的必达依赖 G005 不过载"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC035-G005",
+      "b": "DOC035-G009",
+      "label": "none",
+      "rationale": "DOC035-G005 的对象是通知少而准（T013），DOC035-G009 的对象是可关话题但保留突发（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC035-G005",
+      "b": "DOC035-G010",
+      "label": "none",
+      "rationale": "DOC035-G005 的对象是通知少而准（T013），DOC035-G010 的对象是主题分桶收藏（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC035-G005",
+      "b": "DOC035-G011",
+      "label": "none",
+      "rationale": "DOC035-G005 的对象是通知少而准（T013），DOC035-G011 的对象是一键分享到 WhatsApp（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC035-G005",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G005 的对象是通知少而准（T013），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC035-G005",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G005 的对象是通知少而准（T013），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC035-G006",
+      "b": "DOC035-G007",
+      "label": "related",
+      "rationale": "T017 把「短而全面」与「无广告遮挡」并列为理想阅读体验的两条，都服务于「在有限时间里读完」。但一个管内容密度、一个管版面干扰。",
+      "evidence_ids": [
+        "E0013",
+        "E0015"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC035-G006",
+      "b": "DOC035-G008",
+      "label": "none",
+      "rationale": "DOC035-G006 的对象是文章短而全面（T013/T017），DOC035-G008 的对象是突发当天必达（T037）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC035-G006",
+      "b": "DOC035-G009",
+      "label": "none",
+      "rationale": "DOC035-G006 的对象是文章短而全面（T013/T017），DOC035-G009 的对象是可关话题但保留突发（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC035-G006",
+      "b": "DOC035-G010",
+      "label": "none",
+      "rationale": "DOC035-G006 的对象是文章短而全面（T013/T017），DOC035-G010 的对象是主题分桶收藏（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC035-G006",
+      "b": "DOC035-G011",
+      "label": "none",
+      "rationale": "DOC035-G006 的对象是文章短而全面（T013/T017），DOC035-G011 的对象是一键分享到 WhatsApp（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC035-G006",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G006 的对象是文章短而全面（T013/T017），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC035-G006",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G006 的对象是文章短而全面（T013/T017），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC035-G007",
+      "b": "DOC035-G008",
+      "label": "none",
+      "rationale": "DOC035-G007 的对象是阅读页无广告遮挡（T017），DOC035-G008 的对象是突发当天必达（T037）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC035-G007",
+      "b": "DOC035-G009",
+      "label": "none",
+      "rationale": "DOC035-G007 的对象是阅读页无广告遮挡（T017），DOC035-G009 的对象是可关话题但保留突发（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC035-G007",
+      "b": "DOC035-G010",
+      "label": "none",
+      "rationale": "DOC035-G007 的对象是阅读页无广告遮挡（T017），DOC035-G010 的对象是主题分桶收藏（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC035-G007",
+      "b": "DOC035-G011",
+      "label": "none",
+      "rationale": "DOC035-G007 的对象是阅读页无广告遮挡（T017），DOC035-G011 的对象是一键分享到 WhatsApp（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC035-G007",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G007 的对象是阅读页无广告遮挡（T017），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC035-G007",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G007 的对象是阅读页无广告遮挡（T017），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC035-G008",
+      "b": "DOC035-G009",
+      "label": "none",
+      "rationale": "DOC035-G008 的对象是突发当天必达（T037），DOC035-G009 的对象是可关话题但保留突发（T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC035-G008",
+      "b": "DOC035-G010",
+      "label": "none",
+      "rationale": "DOC035-G008 的对象是突发当天必达（T037），DOC035-G010 的对象是主题分桶收藏（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC035-G008",
+      "b": "DOC035-G011",
+      "label": "none",
+      "rationale": "DOC035-G008 的对象是突发当天必达（T037），DOC035-G011 的对象是一键分享到 WhatsApp（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P067",
+      "a": "DOC035-G008",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G008 的对象是突发当天必达（T037），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P068",
+      "a": "DOC035-G008",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G008 的对象是突发当天必达（T037），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P069",
+      "a": "DOC035-G009",
+      "b": "DOC035-G010",
+      "label": "none",
+      "rationale": "DOC035-G009 的对象是可关话题但保留突发（T041），DOC035-G010 的对象是主题分桶收藏（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P070",
+      "a": "DOC035-G009",
+      "b": "DOC035-G011",
+      "label": "none",
+      "rationale": "DOC035-G009 的对象是可关话题但保留突发（T041），DOC035-G011 的对象是一键分享到 WhatsApp（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P071",
+      "a": "DOC035-G009",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G009 的对象是可关话题但保留突发（T041），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P072",
+      "a": "DOC035-G009",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G009 的对象是可关话题但保留突发（T041），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P073",
+      "a": "DOC035-G010",
+      "b": "DOC035-G011",
+      "label": "none",
+      "rationale": "DOC035-G010 的对象是主题分桶收藏（T027），DOC035-G011 的对象是一键分享到 WhatsApp（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P074",
+      "a": "DOC035-G010",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G010 的对象是主题分桶收藏（T027），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P075",
+      "a": "DOC035-G010",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G010 的对象是主题分桶收藏（T027），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P076",
+      "a": "DOC035-G011",
+      "b": "DOC035-G012",
+      "label": "none",
+      "rationale": "DOC035-G011 的对象是一键分享到 WhatsApp（T025），DOC035-G012 的对象是推荐贴合行为兴趣（T021/T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P077",
+      "a": "DOC035-G011",
+      "b": "DOC035-G013",
+      "label": "none",
+      "rationale": "DOC035-G011 的对象是一键分享到 WhatsApp（T025），DOC035-G013 的对象是数据不被留存与议程化（T029/T047）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P078",
+      "a": "DOC035-G012",
+      "b": "DOC035-G013",
+      "label": "related",
+      "rationale": "T047 划了明确边界：推荐可以用我的数据，但平台不能全量留存、更不能借数据推议程。G013 是 G012 的约束条件，不是对立目标。",
+      "evidence_ids": [
+        "E0025",
+        "E0027"
+      ],
+      "conditions": [
+        "G012 的数据使用以 G013 为限"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC035-G001",
+      "b": "DOC035-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P019",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC035-G002",
+      "b": "DOC035-G009"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P020",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC035-G002",
+      "b": "DOC035-G010"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P021",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC035-G002",
+      "b": "DOC035-G011"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P022",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC035-G002",
+      "b": "DOC035-G012"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P025",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC035-G003",
+      "b": "DOC035-G005"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P028",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC035-G003",
+      "b": "DOC035-G008"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P035",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC035-G004",
+      "b": "DOC035-G006"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P045",
+      "conditions": [
+        "G008 的必达依赖 G005 不过载"
+      ],
+      "review_status": "pending",
+      "a": "DOC035-G005",
+      "b": "DOC035-G008"
+    },
+    {
+      "edge_id": "R010",
+      "type": "related",
+      "decision_id": "P051",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC035-G006",
+      "b": "DOC035-G007"
+    },
+    {
+      "edge_id": "R011",
+      "type": "related",
+      "decision_id": "P078",
+      "conditions": [
+        "G012 的数据使用以 G013 为限"
+      ],
+      "review_status": "pending",
+      "a": "DOC035-G012",
+      "b": "DOC035-G013"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC035:S002",
+      "material_id": "M001",
+      "quote": "I check the news through the news application once in 2 days",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 245,
+      "end_char": 305,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S002",
+          "segment_start": 55,
+          "segment_end": 115,
+          "start_char": 245,
+          "end_char": 305
+        }
+      ],
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 190,
+        "end_char": 583
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC035:S004",
+      "material_id": "M001",
+      "quote": "the headlines that they have headline articles of the top stories",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 917,
+      "end_char": 982,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S004",
+          "segment_start": 220,
+          "segment_end": 285,
+          "start_char": 917,
+          "end_char": 982
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 697,
+        "end_char": 1662
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC035:S008",
+      "material_id": "M001",
+      "quote": "some of the content that I'm interested is in technology",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2405,
+      "end_char": 2461,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S008",
+          "segment_start": 41,
+          "segment_end": 97,
+          "start_char": 2405,
+          "end_char": 2461
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 2364,
+        "end_char": 3351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC035:S008",
+      "material_id": "M001",
+      "quote": "another category of content that I'm interested in is in sports",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2761,
+      "end_char": 2824,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S008",
+          "segment_start": 397,
+          "segment_end": 460,
+          "start_char": 2761,
+          "end_char": 2824
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 2364,
+        "end_char": 3351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC035:S008",
+      "material_id": "M001",
+      "quote": "another major aspect of reading news is getting to know",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3076,
+      "end_char": 3131,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S008",
+          "segment_start": 712,
+          "segment_end": 767,
+          "start_char": 3076,
+          "end_char": 3131
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 2364,
+        "end_char": 3351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC035:S010",
+      "material_id": "M001",
+      "quote": "the timing is a very important part for my own personal interests",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3904,
+      "end_char": 3969,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S010",
+          "segment_start": 451,
+          "segment_end": 516,
+          "start_char": 3904,
+          "end_char": 3969
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 3453,
+        "end_char": 4186
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC035:S010",
+      "material_id": "M001",
+      "quote": "If an event has happened today, then I would like to get the news",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4056,
+      "end_char": 4121,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S010",
+          "segment_start": 603,
+          "segment_end": 668,
+          "start_char": 4056,
+          "end_char": 4121
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 3453,
+        "end_char": 4186
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC035:S012",
+      "material_id": "M001",
+      "quote": "all of the sources are cited",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4427,
+      "end_char": 4455,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S012",
+          "segment_start": 135,
+          "segment_end": 163,
+          "start_char": 4427,
+          "end_char": 4455
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 4292,
+        "end_char": 4946
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC035:S012",
+      "material_id": "M001",
+      "quote": "you tend to get what? From where the news is coming from",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4626,
+      "end_char": 4682,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S012",
+          "segment_start": 334,
+          "segment_end": 390,
+          "start_char": 4626,
+          "end_char": 4682
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 4292,
+        "end_char": 4946
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC035:S014",
+      "material_id": "M001",
+      "quote": "they tend to spam a lot",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5395,
+      "end_char": 5418,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S014",
+          "segment_start": 314,
+          "segment_end": 337,
+          "start_char": 5395,
+          "end_char": 5418
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 5081,
+        "end_char": 6297
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC035:S014",
+      "material_id": "M001",
+      "quote": "this might lead to missing a few important news",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5461,
+      "end_char": 5508,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S014",
+          "segment_start": 380,
+          "segment_end": 427,
+          "start_char": 5461,
+          "end_char": 5508
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 5081,
+        "end_char": 6297
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC035:S022",
+      "material_id": "M001",
+      "quote": "notification should not be should not be spammed",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8908,
+      "end_char": 8956,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S022",
+          "segment_start": 844,
+          "segment_end": 892,
+          "start_char": 8908,
+          "end_char": 8956
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 8064,
+        "end_char": 9036
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC035:S014",
+      "material_id": "M001",
+      "quote": "the articles have a huge amount of content",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5856,
+      "end_char": 5898,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S014",
+          "segment_start": 775,
+          "segment_end": 817,
+          "start_char": 5856,
+          "end_char": 5898
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 5081,
+        "end_char": 6297
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC035:S018",
+      "material_id": "M001",
+      "quote": "if the article is smaller but comprehensive",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7611,
+      "end_char": 7654,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S018",
+          "segment_start": 419,
+          "segment_end": 462,
+          "start_char": 7611,
+          "end_char": 7654
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 7192,
+        "end_char": 7861
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC035:S018",
+      "material_id": "M001",
+      "quote": "not hammered by unnecessary ads",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7273,
+      "end_char": 7304,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S018",
+          "segment_start": 81,
+          "segment_end": 112,
+          "start_char": 7273,
+          "end_char": 7304
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 7192,
+        "end_char": 7861
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC035:S018",
+      "material_id": "M001",
+      "quote": "a lot of ads that even cover the content",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7356,
+      "end_char": 7396,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S018",
+          "segment_start": 164,
+          "segment_end": 204,
+          "start_char": 7356,
+          "end_char": 7396
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 7192,
+        "end_char": 7861
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC035:S038",
+      "material_id": "M001",
+      "quote": "it should at least give me all the breaking news from the",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14290,
+      "end_char": 14347,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S038",
+          "segment_start": 317,
+          "segment_end": 374,
+          "start_char": 14290,
+          "end_char": 14347
+        }
+      ],
+      "original_locator": {
+        "line_start": 38,
+        "line_end": 38,
+        "start_char": 13973,
+        "end_char": 14553
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC035:S038",
+      "material_id": "M001",
+      "quote": "9 is my level for importance to see breaking news alerts",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14157,
+      "end_char": 14213,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S038",
+          "segment_start": 184,
+          "segment_end": 240,
+          "start_char": 14157,
+          "end_char": 14213
+        }
+      ],
+      "original_locator": {
+        "line_start": 38,
+        "line_end": 38,
+        "start_char": 13973,
+        "end_char": 14553
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC035:S042",
+      "material_id": "M001",
+      "quote": "there should be a feature to disable that topic",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16396,
+      "end_char": 16443,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S042",
+          "segment_start": 418,
+          "segment_end": 465,
+          "start_char": 16396,
+          "end_char": 16443
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 15978,
+        "end_char": 16777
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC035:S042",
+      "material_id": "M001",
+      "quote": "if there is a breaking news with that in that event that you're not interested in, it should still show you",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16510,
+      "end_char": 16617,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S042",
+          "segment_start": 532,
+          "segment_end": 639,
+          "start_char": 16510,
+          "end_char": 16617
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 15978,
+        "end_char": 16777
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC035:S028",
+      "material_id": "M001",
+      "quote": "defined topic buckets",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10600,
+      "end_char": 10621,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S028",
+          "segment_start": 301,
+          "segment_end": 322,
+          "start_char": 10600,
+          "end_char": 10621
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 10299,
+        "end_char": 10969
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC035:S028",
+      "material_id": "M001",
+      "quote": "you can add multiple news articles to that topic bucket",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10720,
+      "end_char": 10775,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S028",
+          "segment_start": 421,
+          "segment_end": 476,
+          "start_char": 10720,
+          "end_char": 10775
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 10299,
+        "end_char": 10969
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC035:S026",
+      "material_id": "M001",
+      "quote": "just copy the link and share it on various chat applications",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9893,
+      "end_char": 9953,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S026",
+          "segment_start": 131,
+          "segment_end": 191,
+          "start_char": 9893,
+          "end_char": 9953
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 9762,
+        "end_char": 10179
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC035:S026",
+      "material_id": "M001",
+      "quote": "if there is an option to share it directly via Whatsapp",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10010,
+      "end_char": 10065,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S026",
+          "segment_start": 248,
+          "segment_end": 303,
+          "start_char": 10010,
+          "end_char": 10065
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 9762,
+        "end_char": 10179
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC035:S040",
+      "material_id": "M001",
+      "quote": "it tracks my behavior",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14884,
+      "end_char": 14905,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S040",
+          "segment_start": 228,
+          "segment_end": 249,
+          "start_char": 14884,
+          "end_char": 14905
+        }
+      ],
+      "original_locator": {
+        "line_start": 40,
+        "line_end": 40,
+        "start_char": 14656,
+        "end_char": 15859
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC035:S022",
+      "material_id": "M001",
+      "quote": "curated to what you search and what you do on the Google App",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8346,
+      "end_char": 8406,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S022",
+          "segment_start": 282,
+          "segment_end": 342,
+          "start_char": 8346,
+          "end_char": 8406
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 8064,
+        "end_char": 9036
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC035:S048",
+      "material_id": "M001",
+      "quote": "the company should not be able to like store all of the data",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18294,
+      "end_char": 18354,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S048",
+          "segment_start": 121,
+          "segment_end": 181,
+          "start_char": 18294,
+          "end_char": 18354
+        }
+      ],
+      "original_locator": {
+        "line_start": 48,
+        "line_end": 48,
+        "start_char": 18173,
+        "end_char": 18813
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC035:S030",
+      "material_id": "M001",
+      "quote": "they might be able to push some agenda on me",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11636,
+      "end_char": 11680,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:S030",
+          "segment_start": 523,
+          "segment_end": 567,
+          "start_char": 11636,
+          "end_char": 11680
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 11113,
+        "end_char": 11767
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC035-C001",
+      "goal_id": "DOC035-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C002",
+      "goal_id": "DOC035-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C003",
+      "goal_id": "DOC035-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C004",
+      "goal_id": "DOC035-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C005",
+      "goal_id": "DOC035-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C006",
+      "goal_id": "DOC035-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C007",
+      "goal_id": "DOC035-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C008",
+      "goal_id": "DOC035-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C009",
+      "goal_id": "DOC035-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C010",
+      "goal_id": "DOC035-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C011",
+      "goal_id": "DOC035-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C012",
+      "goal_id": "DOC035-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC035-C013",
+      "goal_id": "DOC035-G013",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 78,
+    "evaluated_pairs": 78
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "a188e8d11297534a691930309e18c3b5ac252bbf038d47c2fb526b05f0514e45",
+    "core_sha256": "c8346862fa775f8c0b0558e933d16f27c45583216434a057c4c6d39752a9ba5c",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "3fda44142b42401351a0e3c20427c741a5950eae93b446e228a2c900a6d1033d"
+}

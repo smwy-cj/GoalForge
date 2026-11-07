@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\logs\harness.py", line 301, in <module>
+    main()
+    ~~~~^^
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\logs\harness.py", line 114, in main
+    r.run([PREPARE, target, work, "--window-size", 4, "--window-stride", 2], "prepare_source")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Desktop\summer_pro\GoalForge\GoalForge\extra\runs\workbuddy-newskills-20261103-0015\logs\harness.py", line 65, in run
+    raise RuntimeError(f"{label} failed ({proc.returncode}): {proc.stderr.strip()[-1500:]}")
+RuntimeError: prepare_source failed (2): usage: prepare_source.py [-h] [--document-id DOCUMENT_ID]
+                         [--canonical-text CANONICAL_TEXT]
+                         [--window-size WINDOW_SIZE]
+                         [--window-stride WINDOW_STRIDE]
+                         input output_dir
+prepare_source.py: error: Use a fresh output directory; existing source artifacts will not be overwritten

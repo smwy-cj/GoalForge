@@ -1,0 +1,2259 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC004-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "c13cf4c42c2716481ee79581980d44b46a1c04b0c5c4b329fa7949887a4785ac"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "de0ac6463b0529e8555d70531350d043570ccae51ca7534b7ddbf646b4a17893"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "8a2700a8cd5352e516bb21f1edbf70d65b91740cad655572375d0826be8aff78"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "f9eff81d740b80bd31df2ab1e70ffbb9e8b1b9ce1c57e537a2a21377166bb510"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC004"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC004-G001",
+      "statement": "用 Zelle 在朋友之间快速完成小额转账与费用分摊。",
+      "source_candidate_ids": [
+        "DOC004-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "自述为使用该应用的主要原因",
+        "Zelle 被定义为按手机号瞬时转账小额资金的方式",
+        "当前只能在手机端完成（见 C009）"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G002",
+      "statement": "把闲置在活期账户的资金转入储蓄账户，以获取利息收益。",
+      "source_candidate_ids": [
+        "DOC004-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "持有独立的 checking 与 savings 账户",
+        "触发条件：活期账户余额较多时",
+        "储蓄账户未绑定借记卡，因此多数资金不在可刷卡账户内（见 C006）"
+      ],
+      "evidence_ids": [
+        "E0004"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G003",
+      "statement": "登录后在同一屏看到全部账户余额与近期交易，无需跳转多个页面。",
+      "source_candidate_ids": [
+        "DOC004-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "仪表盘同时展示 checking 与 savings 的余额、存款与取款",
+        "首页折叠区展示最近 5 笔交易"
+      ],
+      "evidence_ids": [
+        "E0005",
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G004",
+      "statement": "设定财务目标，并按月跟踪收支以判断能否在期限内达成。",
+      "source_candidate_ids": [
+        "DOC004-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "对应产品内「plan and track」功能",
+        "受访者以此作为该行优于其他银行之处"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009",
+        "E0010"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G005",
+      "statement": "按消费类别（如日用品、加油等）查看支出明细，而不仅按交易类型区分。",
+      "source_candidate_ids": [
+        "DOC004-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "现状仅按 card / Zelle / fee / account transfer 等交易类型标记，无商户类别",
+        "受访者认为分类在技术上容易实现且对用户有价值"
+      ],
+      "evidence_ids": [
+        "E0011",
+        "E0012",
+        "E0013",
+        "E0014"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G006",
+      "statement": "在网银端设置借记卡的单笔/每日消费限额。",
+      "source_candidate_ids": [
+        "DOC004-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "手机应用内可设置卡片参数，网页端未找到入口",
+        "受访者认为入口不直观：寻找锁卡与限额需多次点击",
+        "当前紧迫性较低：多数资金在未绑定借记卡的储蓄账户"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016",
+        "E0017",
+        "E0018",
+        "E0019"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G007",
+      "statement": "转账提交前核对金额与收款人，避免转错金额或转错对象。",
+      "source_candidate_ids": [
+        "DOC004-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "对应转账流程中的确认步骤"
+      ],
+      "evidence_ids": [
+        "E0020",
+        "E0021"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G008",
+      "statement": "对房租、水电等固定支出设置可重复的定期转账，免去每次手动操作。",
+      "source_candidate_ids": [
+        "DOC004-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "可设频率（每周/每月）、执行日、首次日期、结束日期或次数"
+      ],
+      "evidence_ids": [
+        "E0022",
+        "E0023"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G009",
+      "statement": "网银端也支持 Zelle 转账，不必每次都切换到手机。",
+      "source_candidate_ids": [
+        "DOC004-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "现状：网页端无 Zelle，只能通过外部账户转账（需知道对方账号）",
+        "动机：避免每次拿手机，更方便"
+      ],
+      "evidence_ids": [
+        "E0024",
+        "E0025",
+        "E0026"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G010",
+      "statement": "在网站上提供文字/聊天式客服（含 AI 机器人），可边处理其他事边求助。",
+      "source_candidate_ids": [
+        "DOC004-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "现状：网站只有电话、预约面谈、留言、找网点，无在线文字客服",
+        "动机：文字沟通比电话更放松、不引发焦虑，且可同时做别的事",
+        "受访者认为对不熟悉网站操作的用户尤其有用"
+      ],
+      "evidence_ids": [
+        "E0027",
+        "E0028",
+        "E0029",
+        "E0030"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G011",
+      "statement": "账户与资金安全：新设备登录必须二次验证，且每笔交易即时通知并可在应用内申诉。",
+      "source_candidate_ids": [
+        "DOC004-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "首次在本机登录即触发两步验证",
+        "交易通知可contest（申诉）被受访者视为安全感的来源"
+      ],
+      "evidence_ids": [
+        "E0031",
+        "E0032"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC004-G012",
+      "statement": "能开设投资账户直接交易，并在起步阶段获得顾问一对一指导。",
+      "source_candidate_ids": [
+        "DOC004-C012"
+      ],
+      "origin": "inferred",
+      "actor": "受访者（Stakeholder，Chase 网银/手机银行用户）",
+      "context": [
+        "该行与 J.P. Morgan 合作提供交易账户",
+        "受访者认为对不知如何起步的投资者可避免损失"
+      ],
+      "evidence_ids": [
+        "E0033",
+        "E0034"
+      ],
+      "trace_status": "inferred",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC004-G001",
+      "b": "DOC004-G002",
+      "label": "none",
+      "rationale": "DOC004-G001 的对象是朋友间 Zelle 小额转账与费用分摊（T005），DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC004-G001",
+      "b": "DOC004-G003",
+      "label": "none",
+      "rationale": "DOC004-G001 的对象是朋友间 Zelle 小额转账与费用分摊（T005），DOC004-G003 的对象是登录后一屏总览账户与近期交易（T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC004-G001",
+      "b": "DOC004-G004",
+      "label": "none",
+      "rationale": "DOC004-G001 的对象是朋友间 Zelle 小额转账与费用分摊（T005），DOC004-G004 的对象是设定财务目标并按月跟踪达成进度（T017/T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC004-G001",
+      "b": "DOC004-G005",
+      "label": "none",
+      "rationale": "DOC004-G001 的对象是朋友间 Zelle 小额转账与费用分摊（T005），DOC004-G005 的对象是按消费类别查看支出明细（T021/T023）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC004-G001",
+      "b": "DOC004-G006",
+      "label": "none",
+      "rationale": "DOC004-G001 的对象是朋友间 Zelle 小额转账与费用分摊（T005），DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC004-G001",
+      "b": "DOC004-G007",
+      "label": "related",
+      "rationale": "两者同属一笔转账的完成过程：T045 在评价转账体验时把「不会转错金额或转错人」（it makes sure that you don't send the wrong amount, or like to the wrong person）与 Zelle 缺失并列表述，T043 描述同一流程中的确认步骤。G007 是转账任务的质量要求，G001 是转账用途，对象一致而层次不同，互不具体化。",
+      "evidence_ids": [
+        "E0001",
+        "E0020",
+        "E0021"
+      ],
+      "conditions": [
+        "联系依据为同一转账流程中的用途与防错要求。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC004-G001",
+      "b": "DOC004-G008",
+      "label": "related",
+      "rationale": "T045 在同一段评价网页转账时，把「schedule properly」与「repeat the transactions」列为优点，与 Zelle 的缺失对比；二者是同一转账能力下的不同用途（朋友间一次性付款 vs 房租水电定期付款），但场景、频率与对象均不同，互不具体化。",
+      "evidence_ids": [
+        "E0001",
+        "E0022",
+        "E0023"
+      ],
+      "conditions": [
+        "联系依据为同一转账能力下的两种用途，非实现路径。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC004-G001",
+      "b": "DOC004-G009",
+      "label": "related",
+      "rationale": "T045 直接给出因果：「I would like to see them implement Zelle on on the web app because I think it. It'll just be more convenient, so that I don't have to like reach. Reach my phone every time」。G009 是让既有用途（G001）在网页端可用的渠道诉求，但渠道不等于用途本身，故为 related 而非精化。",
+      "evidence_ids": [
+        "E0024",
+        "E0001"
+      ],
+      "conditions": [
+        "联系为渠道—用途关系：网页端支持 Zelle 使 G001 不必切换到手机。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC004-G001",
+      "b": "DOC004-G010",
+      "label": "none",
+      "rationale": "DOC004-G001 的对象是朋友间 Zelle 小额转账与费用分摊（T005），DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC004-G001",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G001 的对象是朋友间 Zelle 小额转账与费用分摊（T005），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC004-G001",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G001 的对象是朋友间 Zelle 小额转账与费用分摊（T005），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC004-G002",
+      "b": "DOC004-G003",
+      "label": "none",
+      "rationale": "DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005），DOC004-G003 的对象是登录后一屏总览账户与近期交易（T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC004-G002",
+      "b": "DOC004-G004",
+      "label": "none",
+      "rationale": "DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005），DOC004-G004 的对象是设定财务目标并按月跟踪达成进度（T017/T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC004-G002",
+      "b": "DOC004-G005",
+      "label": "none",
+      "rationale": "DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005），DOC004-G005 的对象是按消费类别查看支出明细（T021/T023）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC004-G002",
+      "b": "DOC004-G006",
+      "label": "related",
+      "rationale": "T037 用储蓄与借记卡的绑定关系解释为何卡片限额需求不急迫：「most of my funds are in my savings account, which is not tied to my debit card anyway. So even if let's say that limit really matters to me, I can't really go above it」。资金存放方式（G002）实质性影响限额目标（G006）的紧迫性，但两者对象不同，非精化。",
+      "evidence_ids": [
+        "E0004",
+        "E0016",
+        "E0018"
+      ],
+      "conditions": [
+        "条件性联系：G006 的紧迫度取决于资金是否集中在未绑卡的储蓄账户。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC004-G002",
+      "b": "DOC004-G007",
+      "label": "none",
+      "rationale": "DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005），DOC004-G007 的对象是转账提交前核对金额与收款人（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC004-G002",
+      "b": "DOC004-G008",
+      "label": "none",
+      "rationale": "DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005），DOC004-G008 的对象是房租水电等定期重复转账（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC004-G002",
+      "b": "DOC004-G009",
+      "label": "none",
+      "rationale": "DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005），DOC004-G009 的对象是网银端支持 Zelle（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC004-G002",
+      "b": "DOC004-G010",
+      "label": "none",
+      "rationale": "DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005），DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC004-G002",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC004-G002",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G002 的对象是闲余资金转入储蓄账户以获息（T005），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC004-G003",
+      "b": "DOC004-G004",
+      "label": "related",
+      "rationale": "T015 在描述仪表盘时把可用模块一并列出：「I have access to accounts, pay and transfer plan and track investments, security and all of the other stuff」，即 G004 的目标跟踪与 G003 的总览同属登录首屏的入口。但 G003 关注信息一屏可见、G004 关注目标设定与跟踪，功能不同，非精化。",
+      "evidence_ids": [
+        "E0005",
+        "E0008"
+      ],
+      "conditions": [
+        "联系依据为首屏入口的并列，非实现路径。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC004-G003",
+      "b": "DOC004-G005",
+      "label": "related",
+      "rationale": "T023 是在查看交易列表（G003 的总览内容）时指出缺少类别维度：「as I scroll down I just see what how much is spent, and where... But apart from that, I don't really see it categorizing the thing」。G005 是在同一信息面上的细分诉求，二者对象相同（交易信息）而粒度不同，但 G005 不是 G003 的范围具体化（前者要类别分析，后者要一屏可得），故为 related。",
+      "evidence_ids": [
+        "E0007",
+        "E0012",
+        "E0013"
+      ],
+      "conditions": [
+        "联系依据为同一交易信息面上的不同粒度需求。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC004-G003",
+      "b": "DOC004-G006",
+      "label": "none",
+      "rationale": "DOC004-G003 的对象是登录后一屏总览账户与近期交易（T015），DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC004-G003",
+      "b": "DOC004-G007",
+      "label": "none",
+      "rationale": "DOC004-G003 的对象是登录后一屏总览账户与近期交易（T015），DOC004-G007 的对象是转账提交前核对金额与收款人（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC004-G003",
+      "b": "DOC004-G008",
+      "label": "none",
+      "rationale": "DOC004-G003 的对象是登录后一屏总览账户与近期交易（T015），DOC004-G008 的对象是房租水电等定期重复转账（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC004-G003",
+      "b": "DOC004-G009",
+      "label": "none",
+      "rationale": "DOC004-G003 的对象是登录后一屏总览账户与近期交易（T015），DOC004-G009 的对象是网银端支持 Zelle（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC004-G003",
+      "b": "DOC004-G010",
+      "label": "none",
+      "rationale": "DOC004-G003 的对象是登录后一屏总览账户与近期交易（T015），DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC004-G003",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G003 的对象是登录后一屏总览账户与近期交易（T015），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC004-G003",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G003 的对象是登录后一屏总览账户与近期交易（T015），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC004-G004",
+      "b": "DOC004-G005",
+      "label": "related",
+      "rationale": "T021 在同一段把两者对照：现有 plan and track「keeps track of how much money I'm spending every month and how much money I'm actually getting」，但「I don't really think it gives me like a breakdown of how much I'm spending and where」。G005 是 G004 已有跟踪能力的缺口，二者共用同一数据面，但一个是目标管理、一个是支出分析，非精化。",
+      "evidence_ids": [
+        "E0009",
+        "E0011"
+      ],
+      "conditions": [
+        "同段对照关系：G005 弥补 G004 在分类维度上的空白。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC004-G004",
+      "b": "DOC004-G006",
+      "label": "none",
+      "rationale": "DOC004-G004 的对象是设定财务目标并按月跟踪达成进度（T017/T021），DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC004-G004",
+      "b": "DOC004-G007",
+      "label": "none",
+      "rationale": "DOC004-G004 的对象是设定财务目标并按月跟踪达成进度（T017/T021），DOC004-G007 的对象是转账提交前核对金额与收款人（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC004-G004",
+      "b": "DOC004-G008",
+      "label": "none",
+      "rationale": "DOC004-G004 的对象是设定财务目标并按月跟踪达成进度（T017/T021），DOC004-G008 的对象是房租水电等定期重复转账（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC004-G004",
+      "b": "DOC004-G009",
+      "label": "none",
+      "rationale": "DOC004-G004 的对象是设定财务目标并按月跟踪达成进度（T017/T021），DOC004-G009 的对象是网银端支持 Zelle（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC004-G004",
+      "b": "DOC004-G010",
+      "label": "none",
+      "rationale": "DOC004-G004 的对象是设定财务目标并按月跟踪达成进度（T017/T021），DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC004-G004",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G004 的对象是设定财务目标并按月跟踪达成进度（T017/T021），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC004-G004",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G004 的对象是设定财务目标并按月跟踪达成进度（T017/T021），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC004-G005",
+      "b": "DOC004-G006",
+      "label": "none",
+      "rationale": "DOC004-G005 的对象是按消费类别查看支出明细（T021/T023），DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC004-G005",
+      "b": "DOC004-G007",
+      "label": "none",
+      "rationale": "DOC004-G005 的对象是按消费类别查看支出明细（T021/T023），DOC004-G007 的对象是转账提交前核对金额与收款人（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC004-G005",
+      "b": "DOC004-G008",
+      "label": "none",
+      "rationale": "DOC004-G005 的对象是按消费类别查看支出明细（T021/T023），DOC004-G008 的对象是房租水电等定期重复转账（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC004-G005",
+      "b": "DOC004-G009",
+      "label": "none",
+      "rationale": "DOC004-G005 的对象是按消费类别查看支出明细（T021/T023），DOC004-G009 的对象是网银端支持 Zelle（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC004-G005",
+      "b": "DOC004-G010",
+      "label": "none",
+      "rationale": "DOC004-G005 的对象是按消费类别查看支出明细（T021/T023），DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC004-G005",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G005 的对象是按消费类别查看支出明细（T021/T023），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC004-G005",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G005 的对象是按消费类别查看支出明细（T021/T023），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC004-G006",
+      "b": "DOC004-G007",
+      "label": "none",
+      "rationale": "DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037），DOC004-G007 的对象是转账提交前核对金额与收款人（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC004-G006",
+      "b": "DOC004-G008",
+      "label": "none",
+      "rationale": "DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037），DOC004-G008 的对象是房租水电等定期重复转账（T043/T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC004-G006",
+      "b": "DOC004-G009",
+      "label": "none",
+      "rationale": "DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037），DOC004-G009 的对象是网银端支持 Zelle（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC004-G006",
+      "b": "DOC004-G010",
+      "label": "none",
+      "rationale": "DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037），DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC004-G006",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC004-G006",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G006 的对象是网银端设置借记卡消费限额（T035/T037），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC004-G007",
+      "b": "DOC004-G008",
+      "label": "related",
+      "rationale": "T043 描述同一转账流程时先后提到确认页（「it asks me if everything looks okay」）与重复转账选项（「there's also an option for setup, repeated transfers」），二者是同一流程中的两个环节（提交前校验 vs 周期设置），对象与作用不同，非精化。",
+      "evidence_ids": [
+        "E0020",
+        "E0022"
+      ],
+      "conditions": [
+        "联系依据为同一转账流程中的两个环节。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC004-G007",
+      "b": "DOC004-G009",
+      "label": "related",
+      "rationale": "T045 在同一段评价中把二者并列：既称确认机制「makes sure that you don't send the wrong amount, or like to the wrong person」，又以「My only my only concern is that it does not have cell」收束。二者共同构成对网页转账的完整评价，但一个是质量保障、一个是渠道缺失，非精化。",
+      "evidence_ids": [
+        "E0021",
+        "E0024"
+      ],
+      "conditions": [
+        "联系依据为同一评价段中的并列陈述。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC004-G007",
+      "b": "DOC004-G010",
+      "label": "none",
+      "rationale": "DOC004-G007 的对象是转账提交前核对金额与收款人（T043/T045），DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC004-G007",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G007 的对象是转账提交前核对金额与收款人（T043/T045），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC004-G007",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G007 的对象是转账提交前核对金额与收款人（T043/T045），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC004-G008",
+      "b": "DOC004-G009",
+      "label": "none",
+      "rationale": "DOC004-G008 的对象是房租水电等定期重复转账（T043/T045），DOC004-G009 的对象是网银端支持 Zelle（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC004-G008",
+      "b": "DOC004-G010",
+      "label": "none",
+      "rationale": "DOC004-G008 的对象是房租水电等定期重复转账（T043/T045），DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC004-G008",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G008 的对象是房租水电等定期重复转账（T043/T045），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC004-G008",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G008 的对象是房租水电等定期重复转账（T043/T045），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC004-G009",
+      "b": "DOC004-G010",
+      "label": "none",
+      "rationale": "DOC004-G009 的对象是网银端支持 Zelle（T045），DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC004-G009",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G009 的对象是网银端支持 Zelle（T045），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC004-G009",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G009 的对象是网银端支持 Zelle（T045），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC004-G010",
+      "b": "DOC004-G011",
+      "label": "none",
+      "rationale": "DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055），DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC004-G010",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G010 的对象是网站文字/聊天客服（含 AI 机器人）（T053/T055），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC004-G011",
+      "b": "DOC004-G012",
+      "label": "none",
+      "rationale": "DOC004-G011 的对象是登录二次验证与交易通知可申诉（T019），DOC004-G012 的对象是投资开户与顾问一对一指导（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P006",
+      "conditions": [
+        "联系依据为同一转账流程中的用途与防错要求。"
+      ],
+      "review_status": "pending",
+      "a": "DOC004-G001",
+      "b": "DOC004-G007"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P007",
+      "conditions": [
+        "联系依据为同一转账能力下的两种用途，非实现路径。"
+      ],
+      "review_status": "pending",
+      "a": "DOC004-G001",
+      "b": "DOC004-G008"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P008",
+      "conditions": [
+        "联系为渠道—用途关系：网页端支持 Zelle 使 G001 不必切换到手机。"
+      ],
+      "review_status": "pending",
+      "a": "DOC004-G001",
+      "b": "DOC004-G009"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P015",
+      "conditions": [
+        "条件性联系：G006 的紧迫度取决于资金是否集中在未绑卡的储蓄账户。"
+      ],
+      "review_status": "pending",
+      "a": "DOC004-G002",
+      "b": "DOC004-G006"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P022",
+      "conditions": [
+        "联系依据为首屏入口的并列，非实现路径。"
+      ],
+      "review_status": "pending",
+      "a": "DOC004-G003",
+      "b": "DOC004-G004"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P023",
+      "conditions": [
+        "联系依据为同一交易信息面上的不同粒度需求。"
+      ],
+      "review_status": "pending",
+      "a": "DOC004-G003",
+      "b": "DOC004-G005"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P031",
+      "conditions": [
+        "同段对照关系：G005 弥补 G004 在分类维度上的空白。"
+      ],
+      "review_status": "pending",
+      "a": "DOC004-G004",
+      "b": "DOC004-G005"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P052",
+      "conditions": [
+        "联系依据为同一转账流程中的两个环节。"
+      ],
+      "review_status": "pending",
+      "a": "DOC004-G007",
+      "b": "DOC004-G008"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P053",
+      "conditions": [
+        "联系依据为同一评价段中的并列陈述。"
+      ],
+      "review_status": "pending",
+      "a": "DOC004-G007",
+      "b": "DOC004-G009"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC004:S006",
+      "material_id": "M001",
+      "quote": "the main reason I use the app is to do sell payments to like a few of my friends. Basically split split costs and all of that.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 939,
+      "end_char": 1065,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S006",
+          "segment_start": 64,
+          "segment_end": 190,
+          "start_char": 939,
+          "end_char": 1065
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 875,
+        "end_char": 1844
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC004:S008",
+      "material_id": "M001",
+      "quote": "Zelle is basically like a way to instantaneously transfer small amounts of money between, let's say, 2 different accounts just based on their phone number.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2072,
+      "end_char": 2227,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S008",
+          "segment_start": 34,
+          "segment_end": 189,
+          "start_char": 2072,
+          "end_char": 2227
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 2038,
+        "end_char": 2324
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC004:S008",
+      "material_id": "M001",
+      "quote": "So it's super easy to use.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2228,
+      "end_char": 2254,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S008",
+          "segment_start": 190,
+          "segment_end": 216,
+          "start_char": 2228,
+          "end_char": 2254
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 2038,
+        "end_char": 2324
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC004:S006",
+      "material_id": "M001",
+      "quote": "when I have. Let's say a lot of funds in my checking account, so I normally transfer it over to my savings, so I can get even that little bit of interest I normally get.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1268,
+      "end_char": 1437,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S006",
+          "segment_start": 393,
+          "segment_end": 562,
+          "start_char": 1268,
+          "end_char": 1437
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 875,
+        "end_char": 1844
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC004:S016",
+      "material_id": "M001",
+      "quote": "So it shows me all my bank accounts. So right now I have a checking and a savings account shows me how much it shows me the balance in each of the accounts, and it also shows me my deposits and withdrawals.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3972,
+      "end_char": 4178,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S016",
+          "segment_start": 644,
+          "segment_end": 850,
+          "start_char": 3972,
+          "end_char": 4178
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 3328,
+        "end_char": 4685
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC004:S016",
+      "material_id": "M001",
+      "quote": "it's a good thing that I can like. Just look at all of my spends on like in like a quick glance, and don't really have to go to like multiple screens to check all of that",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4182,
+      "end_char": 4352,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S016",
+          "segment_start": 854,
+          "segment_end": 1024,
+          "start_char": 4182,
+          "end_char": 4352
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 3328,
+        "end_char": 4685
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC004:S016",
+      "material_id": "M001",
+      "quote": "They also have a very small list of all the transactions, like all the recent transactions. So again, that's also good. Also because I don't have to like, you know, click on another link, or like another button, and then I'll check out this.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4411,
+      "end_char": 4652,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S016",
+          "segment_start": 1083,
+          "segment_end": 1324,
+          "start_char": 4411,
+          "end_char": 4652
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 3328,
+        "end_char": 4685
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC004:S018",
+      "material_id": "M001",
+      "quote": "they also have like this plan and track feature where you can like track like, you can basically set monetary goals. And then track how you're doing that.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5608,
+      "end_char": 5762,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S018",
+          "segment_start": 588,
+          "segment_end": 742,
+          "start_char": 5608,
+          "end_char": 5762
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 5020,
+        "end_char": 5768
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC004:S022",
+      "material_id": "M001",
+      "quote": "So it lets me set a goal and then tells me how much exactly I'm supposed to be earning, and are spending every month to make sure I hit that goal by a specified timeframe",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8164,
+      "end_char": 8334,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S022",
+          "segment_start": 426,
+          "segment_end": 596,
+          "start_char": 8164,
+          "end_char": 8334
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 7738,
+        "end_char": 8752
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC004:S022",
+      "material_id": "M001",
+      "quote": "obviously helps me keep on track and not really spend a lot",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8364,
+      "end_char": 8423,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S022",
+          "segment_start": 626,
+          "segment_end": 685,
+          "start_char": 8364,
+          "end_char": 8423
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 7738,
+        "end_char": 8752
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC004:S022",
+      "material_id": "M001",
+      "quote": "But apart from that, I don't really think it gives me like a breakdown of how much I'm spending and where. So I I think that it would be great to see something like that.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8428,
+      "end_char": 8598,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S022",
+          "segment_start": 690,
+          "segment_end": 860,
+          "start_char": 8428,
+          "end_char": 8598
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 7738,
+        "end_char": 8752
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC004:S024",
+      "material_id": "M001",
+      "quote": "it doesn't have any other sort of indicator to show that I've let's say, spend it on groceries or on fuel, or something like that.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10277,
+      "end_char": 10407,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S024",
+          "segment_start": 1196,
+          "segment_end": 1326,
+          "start_char": 10277,
+          "end_char": 10407
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 9081,
+        "end_char": 10413
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC004:S024",
+      "material_id": "M001",
+      "quote": "it just categorizes how I spend it. Like it says, if it's card Zelle or yeah, if it's like another fee or something like that, or if it's like an account transfer.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10092,
+      "end_char": 10255,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S024",
+          "segment_start": 1011,
+          "segment_end": 1174,
+          "start_char": 10092,
+          "end_char": 10255
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 9081,
+        "end_char": 10413
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC004:S022",
+      "material_id": "M001",
+      "quote": "I believe it's pretty easy to like categorize what we are spending on. And then I think it would be like a very valuable insight. For the users.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8602,
+      "end_char": 8746,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S022",
+          "segment_start": 864,
+          "segment_end": 1008,
+          "start_char": 8602,
+          "end_char": 8746
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 7738,
+        "end_char": 8752
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC004:S036",
+      "material_id": "M001",
+      "quote": "I don't think they really have like a specific option where I can, like, you know. change my change the limits on the card per se, yeah.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13447,
+      "end_char": 13583,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S036",
+          "segment_start": 730,
+          "segment_end": 866,
+          "start_char": 13447,
+          "end_char": 13583
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 12717,
+        "end_char": 13583
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC004:S038",
+      "material_id": "M001",
+      "quote": "So obviously, that is something I would really like on my that. That's obviously something I'd really like to have.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13907,
+      "end_char": 14022,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S038",
+          "segment_start": 37,
+          "segment_end": 152,
+          "start_char": 13907,
+          "end_char": 14022
+        }
+      ],
+      "original_locator": {
+        "line_start": 38,
+        "line_end": 38,
+        "start_char": 13870,
+        "end_char": 14601
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC004:S036",
+      "material_id": "M001",
+      "quote": "so obviously, it's not very intuitive. I would really like it to be a bit more better.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13182,
+      "end_char": 13268,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S036",
+          "segment_start": 465,
+          "segment_end": 551,
+          "start_char": 13182,
+          "end_char": 13268
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 12717,
+        "end_char": 13583
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC004:S038",
+      "material_id": "M001",
+      "quote": "the only reason I'm I haven't used it yet is because most of my funds are in my savings account, which is not tied to my debit card anyway.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14032,
+      "end_char": 14171,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S038",
+          "segment_start": 162,
+          "segment_end": 301,
+          "start_char": 14032,
+          "end_char": 14171
+        }
+      ],
+      "original_locator": {
+        "line_start": 38,
+        "line_end": 38,
+        "start_char": 13870,
+        "end_char": 14601
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC004:S060",
+      "material_id": "M001",
+      "quote": "some of the more important features should be more accessible",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 24147,
+      "end_char": 24208,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S060",
+          "segment_start": 906,
+          "segment_end": 967,
+          "start_char": 24147,
+          "end_char": 24208
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 23241,
+        "end_char": 24241
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC004:S044",
+      "material_id": "M001",
+      "quote": "So then it tells me it asks me if everything looks okay. So just to confirm which is a great detail.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18423,
+      "end_char": 18523,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S044",
+          "segment_start": 1664,
+          "segment_end": 1764,
+          "start_char": 18423,
+          "end_char": 18523
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 16759,
+        "end_char": 19050
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC004:S046",
+      "material_id": "M001",
+      "quote": "it makes sure that you don't send the wrong amount, or like to the wrong person.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19595,
+      "end_char": 19675,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S046",
+          "segment_start": 368,
+          "segment_end": 448,
+          "start_char": 19595,
+          "end_char": 19675
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 19227,
+        "end_char": 20011
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC004:S044",
+      "material_id": "M001",
+      "quote": "there's also an option for setup, repeated transfers. That's that I'm assuming is for like stuff like rent or utilities.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17574,
+      "end_char": 17694,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S044",
+          "segment_start": 815,
+          "segment_end": 935,
+          "start_char": 17574,
+          "end_char": 17694
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 16759,
+        "end_char": 19050
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC004:S046",
+      "material_id": "M001",
+      "quote": "it lets you schedule properly. It also lets you repeat the transactions is a great, so you don't have to come and keep on doing it again and again.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19703,
+      "end_char": 19850,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S046",
+          "segment_start": 476,
+          "segment_end": 623,
+          "start_char": 19703,
+          "end_char": 19850
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 19227,
+        "end_char": 20011
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC004:S046",
+      "material_id": "M001",
+      "quote": "I would like to see them implement Zelle on on the web app because I think it. It'll just be more convenient, so that I don't have to like reach. Reach my phone every time.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19264,
+      "end_char": 19436,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S046",
+          "segment_start": 37,
+          "segment_end": 209,
+          "start_char": 19264,
+          "end_char": 19436
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 19227,
+        "end_char": 20011
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC004:S042",
+      "material_id": "M001",
+      "quote": "I don't think Zelle is I don't think we can sell on of the web app.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16265,
+      "end_char": 16332,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S042",
+          "segment_start": 1057,
+          "segment_end": 1124,
+          "start_char": 16265,
+          "end_char": 16332
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 15208,
+        "end_char": 16468
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC004:S042",
+      "material_id": "M001",
+      "quote": "So I'll have to know the I have to know the what do you say? The account number to basically transfer this to someone.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16350,
+      "end_char": 16468,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S042",
+          "segment_start": 1142,
+          "segment_end": 1260,
+          "start_char": 16350,
+          "end_char": 16468
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 15208,
+        "end_char": 16468
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC004:S056",
+      "material_id": "M001",
+      "quote": "I am very used to having a chat based interface when it comes to support, because it lets I don't know. It's just more relaxing.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21662,
+      "end_char": 21790,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S056",
+          "segment_start": 30,
+          "segment_end": 158,
+          "start_char": 21662,
+          "end_char": 21790
+        }
+      ],
+      "original_locator": {
+        "line_start": 56,
+        "line_end": 56,
+        "start_char": 21632,
+        "end_char": 22500
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC004:S056",
+      "material_id": "M001",
+      "quote": "It's not really anxiety inducing as much as the call. So and I can like multitask while texting like, let's say, the bank representative. So that would be a great option.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21819,
+      "end_char": 21989,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S056",
+          "segment_start": 187,
+          "segment_end": 357,
+          "start_char": 21819,
+          "end_char": 21989
+        }
+      ],
+      "original_locator": {
+        "line_start": 56,
+        "line_end": 56,
+        "start_char": 21632,
+        "end_char": 22500
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC004:S056",
+      "material_id": "M001",
+      "quote": "It'd be great to just like text the AI bot. And then, like, get responses",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 22369,
+      "end_char": 22442,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S056",
+          "segment_start": 737,
+          "segment_end": 810,
+          "start_char": 22369,
+          "end_char": 22442
+        }
+      ],
+      "original_locator": {
+        "line_start": 56,
+        "line_end": 56,
+        "start_char": 21632,
+        "end_char": 22500
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC004:S054",
+      "material_id": "M001",
+      "quote": "I don't see like a way to like text or like chat with a with a bank manager",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21358,
+      "end_char": 21433,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S054",
+          "segment_start": 774,
+          "segment_end": 849,
+          "start_char": 21358,
+          "end_char": 21433
+        }
+      ],
+      "original_locator": {
+        "line_start": 54,
+        "line_end": 54,
+        "start_char": 20584,
+        "end_char": 21559
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC004:S020",
+      "material_id": "M001",
+      "quote": "They had this whole 2 factor thing authentication thing set up like from the get go. So that was good. So that way. That's like an additional layer of security.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6486,
+      "end_char": 6646,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S020",
+          "segment_start": 428,
+          "segment_end": 588,
+          "start_char": 6486,
+          "end_char": 6646
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 6058,
+        "end_char": 7024
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0032",
+      "source_id": "DOC004:S020",
+      "material_id": "M001",
+      "quote": "every time I do a transaction. I get a notification on my phone saying that this much amount of money has been spent, and then I can also contest it, which is great.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6721,
+      "end_char": 6886,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S020",
+          "segment_start": 663,
+          "segment_end": 828,
+          "start_char": 6721,
+          "end_char": 6886
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 6058,
+        "end_char": 7024
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0033",
+      "source_id": "DOC004:S062",
+      "material_id": "M001",
+      "quote": "they let you open and like open a trading account, and then trade directly, but they also have, like a team of advisors, or like you can have a 1 to one with an advisor which is a really good features.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 24639,
+      "end_char": 24840,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S062",
+          "segment_start": 176,
+          "segment_end": 377,
+          "start_char": 24639,
+          "end_char": 24840
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 24463,
+        "end_char": 25274
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0034",
+      "source_id": "DOC004:S062",
+      "material_id": "M001",
+      "quote": "because if you're not, if you don't know where to start investing, you can like talk to someone. And instead of like losing a lot of money, you know, you could talk to someone who actually knows what they're doing",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 24865,
+      "end_char": 25078,
+      "candidate_locations": [
+        {
+          "source_id": "DOC004:S062",
+          "segment_start": 402,
+          "segment_end": 615,
+          "start_char": 24865,
+          "end_char": 25078
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 24463,
+        "end_char": 25274
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC004-C001",
+      "goal_id": "DOC004-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C002",
+      "goal_id": "DOC004-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C003",
+      "goal_id": "DOC004-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C004",
+      "goal_id": "DOC004-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C005",
+      "goal_id": "DOC004-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C006",
+      "goal_id": "DOC004-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C007",
+      "goal_id": "DOC004-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C008",
+      "goal_id": "DOC004-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C009",
+      "goal_id": "DOC004-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C010",
+      "goal_id": "DOC004-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C011",
+      "goal_id": "DOC004-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC004-C012",
+      "goal_id": "DOC004-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 66,
+    "evaluated_pairs": 66
+  },
+  "issues": [],
+  "assumptions": [
+    {
+      "candidate_id": "DOC004-C012",
+      "basis_candidate_ids": [],
+      "reason": "原文只有对该功能的正面评价（really good features）与对特定用户价值的说明，没有直接需求句；「希望保留并可获得该能力」由赞许正向推断，故记为推断，并保留未使用过该功能这一事实。",
+      "assumptions": [
+        "对既有功能的正面评价被视为希望其保留",
+        "受访者未使用过投资功能，评价基于介绍而非体验"
+      ]
+    }
+  ],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "51aba40eac6ea7cd86d0d0bc7996331038751f6c88e732373fecfda5af5e812b",
+    "core_sha256": "c0c2140929b3dcc555b1035e1b30c18fd733c610e306780bccaf70ce7eb530cd",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "68b89bc66591a069326b6bfb9e13412a156bff7ab6a3487ee9670a3874fa8b23"
+}

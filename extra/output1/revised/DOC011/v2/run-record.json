@@ -1,0 +1,127 @@
+{
+  "document_id": "DOC011",
+  "arm": "revised",
+  "revision": "v2",
+  "completed_at_utc": "2026-10-24T02:55:14.485074+00:00",
+  "authoring_sha256": "31a4be9bc6e747072096fa5a22b7420061abcb10d0bdf7bc503ed2b9c0704af7",
+  "source_sha256": "a7bcaec88a1d4bedcf6d5a97bd0a20e516e63b2b5b0c092f499e9430128b50df",
+  "skill_manifest_sha256": "7c10b732fef166d4f12fdf457e8808ead7fef6624afb928012ac0da31540387e",
+  "model": "inherited agent model; exact identifier unknown",
+  "sampling_parameters": "unknown",
+  "token_budget": "unknown",
+  "generated_by": "model-authored semantic decisions; deterministic assembly",
+  "goals": 15,
+  "groups": 1,
+  "structure": "passed",
+  "readiness": "reviewable",
+  "independent_semantic": "not_run",
+  "formal_proof": "not_run",
+  "human": "pending",
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\_run\\skill-snapshots\\revised\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\extraction.json",
+        "--judgment-template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\judgment-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\_run\\skill-snapshots\\revised\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\tracing",
+        "--source",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\source.txt",
+        "--judgments",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\judgments.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\_run\\skill-snapshots\\revised\\skills\\goal-extraction\\scripts\\render_review.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\goal-candidates.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\_run\\skill-snapshots\\revised\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\decision-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\_run\\skill-snapshots\\revised\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "assemble",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\source.txt",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\kaos-decisions.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\assembled"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\_run\\skill-snapshots\\revised\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "inspect",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\inspection.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "-X",
+        "utf8",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\_run\\skill-snapshots\\revised\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "finalize",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\inspection.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1\\revised\\DOC011\\v2\\delivery"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    }
+  ]
+}

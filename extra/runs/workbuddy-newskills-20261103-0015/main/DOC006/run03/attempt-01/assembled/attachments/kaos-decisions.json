@@ -1,0 +1,263 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "4500c536238f7483af3d1118753e924b8791019b31364f33457a3f03be9d5429",
+    "judgments_sha256": "b8d21e13007ce4cf505413a74d4e4544f58f2598192a39419a04063cfc8925b4"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G002",
+      "child_ids": [
+        "G001",
+        "G003"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "受访者把新闻/事件浏览与岗位搜索作为获取重要信息的两条主要途径，故提出“两者共同满足不错过重要信息”的候选精化；但 G002 的“any important information”还含其他类型与渠道，无法声称整组充分，故只作 proposed/partial。",
+      "assumptions": [
+        "受访者所指重要信息主要来自国际/国内事件与岗位两类",
+        "该应用是其获取这些信息的主要渠道（每日使用）"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T001",
+          "quote": "So I daily use social network web application for like news browsing.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC006:T003",
+          "quote": "I do not want to miss out any important information like if there are any great events going on internationally.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R1",
+        "R2"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "某日同时发生国际重大事件与新岗位发布，用户通过主页浏览看到事件报道，并通过岗位搜索找到新岗位。",
+          "outcome": "supports",
+          "rationale": "两类重要信息均被覆盖，说明该组在典型日常情境下确实满足父目标的主要部分。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "重要信息只出现在该应用之外（如雇主直邮、地方政府公告）或属于私信/群组内容，用户既不浏览主页也未搜索岗位。",
+          "outcome": "counterexample",
+          "rationale": "父目标为“不错过任何重要信息”，而两个子目标只覆盖应用内的浏览与岗位搜索，无法排除此反例，故不能标 supported/complete。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "该 AND 组只覆盖“事件浏览 + 岗位搜索”，是否还有其他重要信息类型（本地事件、私信、群组公告）应纳入，需要与受访者确认后才能判断共同充分性。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R4",
+      "message": "招聘流程人数究竟帮助求职搜索，还是属于独立的雇主评估需求？当前只能标 proposed。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R5",
+      "message": "面试者反馈是否真的改变其搜索或投递行为，原文未说明；保留待确认。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G001",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "日常新闻与信息浏览这一活动"
+      ],
+      "assumptions": [
+        "受访者所指“重要信息”主要由该应用的信息浏览渠道提供"
+      ],
+      "rationale": "被问“信息浏览为什么重要”时，受访者给出的理由正是不想错过重要信息，浏览是实现该目的的方式，方向为方式→目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T002",
+          "quote": "And for the information browsing, why do you think Cisco is important to you?",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC006:T003",
+          "quote": "I do not want to miss out any important information like if there are any great events going on internationally.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G003",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "岗位信息属受访者所列的重要信息之一"
+      ],
+      "assumptions": [
+        "搜索岗位信息是为了不错过新岗位"
+      ],
+      "rationale": "受访者把新岗位列为不想错过的重要信息，并称会主动搜索岗位信息，故岗位搜索是实现“不错过重要信息”的一种方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T001",
+          "quote": "And sometimes I search for job posting information.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC006:T003",
+          "quote": "maybe there are some new job posting",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G008",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "推荐基于浏览与互动历史"
+      ],
+      "assumptions": [
+        "推送内容属于用户日常浏览的信息类型"
+      ],
+      "rationale": "受访者称推荐使其无需主动搜索即可持续获得符合口味的最新信息，这有助于日常信息浏览，但不等于覆盖全部浏览需求，故为贡献而非实现方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T029",
+          "quote": "But after these AI applications came out you can just stay there, and they will give you the the latest information.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC006:T029",
+          "quote": "That fits your taste continuously.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G005",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [
+        "在浏览具体岗位时"
+      ],
+      "assumptions": [
+        "招聘规模信息会影响其是否关注或投递该岗位"
+      ],
+      "rationale": "原文把该信息放在“求职时想获得什么数据”的问答中，但未说明它如何改变搜索行为；帮助求职搜索属分析推断，故标 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T018",
+          "quote": "So can you describe to me when you are searching a job on the application? What kind of information, or what kind of data you want to get from the application.",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC006:T019",
+          "quote": "so that I can see if this company is on a great number of hiring or not,",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G006",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [
+        "在浏览具体岗位时"
+      ],
+      "assumptions": [
+        "面试门槛反馈会影响其对岗位的判断"
+      ],
+      "rationale": "同 R4：问答框架表明这是求职时想要的信息，但“帮助搜索”的因果未明确，保留待确认。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T018",
+          "quote": "So can you describe to me when you are searching a job on the application? What kind of information, or what kind of data you want to get from the application.",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC006:T019",
+          "quote": "I'll get feedback from the interviewees who just recently has taken the interviews from the company",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G007",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "求职、租房等实用内容检索时",
+        "用户不想看娱乐内容时"
+      ],
+      "assumptions": [
+        "被过滤的娱乐内容原本混在结果中"
+      ],
+      "rationale": "受访者说实用内容与娱乐内容被一起推送，希望在不想看时过滤娱乐内容；该过滤有助于求职检索，但并非搜索本身的实现方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T023",
+          "quote": "when you are doing the including job searching and housing rental, searching whatever.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC006:T023",
+          "quote": "when sometimes I don't wanna see those entertainment contents, and they can filter them up for me.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G010",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "信息流中出现重复营销内容时"
+      ],
+      "assumptions": [
+        "减少此类内容会改善信息流的可读性"
+      ],
+      "rationale": "受访者称此类账号淹没信息流并干扰体验；治理后信息流浏览更顺畅，属帮助关系而非充分精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T043",
+          "quote": "they just flood the feed with irrelevant contents, and it interferes with user experience",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

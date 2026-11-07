@@ -1,0 +1,61 @@
+{
+  "record_type": "independent_context_revision_review",
+  "date_local": "2026-10-24",
+  "scope": "revised DOC010 external v2: G08 full semantics/support/conditions and dependent F02; remaining 12 goals and F01/F03 checked for exact equality to fully reviewed v1",
+  "reviewer": "/root/pilot_review",
+  "model_exact_id": "unknown",
+  "author_self_review_used_as_acceptance": false,
+  "sources": [
+    "DOC010:T049",
+    "DOC010:T063",
+    "DOC010:T066",
+    "DOC010:T067",
+    "DOC010:T069",
+    "DOC010:T041",
+    "DOC010:T065"
+  ],
+  "goal_changes": {
+    "G08": [
+      "/statement",
+      "/support/supported_parts/0"
+    ]
+  },
+  "groups_exactly_equal": true,
+  "source_identical_to_frozen": true,
+  "source_input_identical_to_frozen": true,
+  "assembled_delivery_identical": true,
+  "exact_model_quotes_checked": 50,
+  "errors": [],
+  "lineage_hashes_match": true,
+  "independent_inspection": {
+    "schema_version": "goalforge-kaos-check-1",
+    "model": {
+      "model_id": "DOC010-goal-model",
+      "version": "v1",
+      "sha256": "0d499ab7496a96294704655aa69df917accce3c23957133e9c9873dad831ea63"
+    },
+    "structure": "passed",
+    "independent_semantic": "not_run",
+    "formal_proof": "not_run",
+    "human": "pending",
+    "readiness": "reviewable",
+    "note": "已核验结构、实际原文与版本绑定；精化充分性来自编制判断，未进行形式化证明。"
+  },
+  "semantic_conclusion": "G08的雨情变化表述保守承接是否降雨、开始/停止及变化，不再容易被误读为雨强指标；direct保留合理。频率仍未量化，降雨条件和常规通知例外不变。F02仍正确为proposed/partial：频繁不能保证实时，且降雨局部不覆盖全部天气。",
+  "finding_disposition": {
+    "finding_id": "PR-003",
+    "v1_status": "unresolved_in_v1_preserved",
+    "v2_status": "resolved_by_conservative_wording",
+    "severity_change": "none_needed; original was nonblocking ambiguity"
+  },
+  "version_limitation": {
+    "external_artifact_version": "v2",
+    "internal_model_version": "v1",
+    "internal_parent": null,
+    "assessment": "内部仍version=v1、parent=null，不能声称工具已递增原生模型版本。外层revision-record中的路径、双哈希和ID映射可辨别助手修订谱系；后续引用须同时绑定路径和哈希，不能仅用model_id/version识别。未来需支持非人工反馈的修订入口。该限制已透明记录，不影响当前实际文件的可核验性。"
+  },
+  "gate_after_revision": "pass",
+  "human_acceptance": "pending",
+  "formal_proof": "not_run",
+  "generated_files_modified_by_reviewer": false
+}

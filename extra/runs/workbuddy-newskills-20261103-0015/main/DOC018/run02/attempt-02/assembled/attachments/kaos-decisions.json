@@ -1,0 +1,170 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "ddc926836cd10fc11df539f6ff7bf6cf933976da623741eb083352e661207c80",
+    "judgments_sha256": "d09b565287a2dd392f7f65f048e25505f41f0253315e197249ad11127b8277dc"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G003",
+      "child_ids": [
+        "G002",
+        "G004"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "就学校课程材料而言，如果课程 PDF 能通过导出进入同一个阅读应用，而该应用又能管理 PDF 与 ebook，那么两种格式的阅读确实可以集中到一处。但原文还说'所有阅读'散落多处（含新闻网站），且导出目的地未定，因此不能声称这两项共同足以实现父目标。",
+      "assumptions": [
+        "导出目的地最终是同时能读 PDF 与 ebook 的同一应用",
+        "只考虑学校课程材料，不含新闻网站"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T039",
+          "quote": "It would be very, very good if the if the same and application can handle both Pdfs and Ebook format. so I can open them in just one single place.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC018:T037",
+          "quote": "Because, like right now, I feel all my all. My reading is is scattered among many places.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R2",
+        "R3"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "学生把课程 PDF 导出到已经能读 PDF 的 Kindle 应用，再与从 Kindle 书店买的 ebook 在同一应用里打开。",
+          "outcome": "supports",
+          "rationale": "在该场景中两种格式确实汇到同一应用，导出与格式支持各自承担必要的一步。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "学生仍通过新闻官网阅读新闻，且导出目的地是 Google Drive 而不是阅读应用。",
+          "outcome": "counterexample",
+          "rationale": "此时新闻阅读仍在别处、PDF 也可能停在 Drive，父目标'阅读不再散落多处'未满足，故只能保留 proposed/partial。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "学校门户本身被替换为学校自建阅读应用，教授文章不再需要导出。",
+          "outcome": "unknown",
+          "rationale": "G008 作为替代方式出现时，G002 可能不再是必要环节，本组的共同充分性无法确定。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "G002 的导出目的地尚未确定（Google Drive、Kindle 账户或独立应用），它能被当作通向'一个地方'的稳定手段吗？若目的地不是阅读应用，本组不成立。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "学校自建阅读应用（T057）与门户导出功能（T047/T055）是替代方案还是并存方案？T057 为设想语气，未见采纳确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "'They should be included' 是指学费已包含，还是仅表示不希望额外付费？包含范围（应用本体、功能或内容）不明确。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G002",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "course articles are delivered as links inside the school portal"
+      ],
+      "assumptions": [],
+      "rationale": "直接导出到 Drive 正是受访者用来替代'先下载到电脑、再打开 Drive、再导出 PDF'的做法，因此有助于减少把内容送到 iPad 的步骤；它只是其中一个帮助因素，不保证流程整体无缝。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T037",
+          "quote": "They send some articles I can actually export it to to drive like very easily and not to download it to my computer.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G004",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "the consolidation is placed in the existing Kindle app rather than a new standalone app"
+      ],
+      "assumptions": [],
+      "rationale": "让现有 Kindle 应用也能读 PDF，是把 ebook 与 PDF 合到同一阅读应用的一种被明确选定的实现方式；受访者只称其更容易，未声称它是唯一或充分方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T043",
+          "quote": "I would say, it will be easier if my existing kindle app can manages Pdfs.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G002",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "the export destination is the same place where ebooks are read"
+      ],
+      "assumptions": [],
+      "rationale": "把课程材料导出到唯一一个地方，有助于让 PDF 与 ebook 集中到一处；但若目的地只是 Drive 而不是阅读应用，帮助有限，因此只是贡献而非充分实现。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T055",
+          "quote": "It's like the export somehow export this material to to one only place I don't know Google Drive, or another one standalone application.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G008",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "the school owns and runs the application"
+      ],
+      "assumptions": [],
+      "rationale": "学校自建应用让教授文章直接出现在 iPad 上，是减少下载上传步骤的一种实现方式；原文以设想语气提出，未确认采纳，故只作为方式联系，不当作已定方案。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T057",
+          "quote": "So so the professors just send out to you the articles right, and you have it right there in your in your ipad to read it.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC018:T057",
+          "quote": "I need to download upload. So it's it's very cumbersome.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

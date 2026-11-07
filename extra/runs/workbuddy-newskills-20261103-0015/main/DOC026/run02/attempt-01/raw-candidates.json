@@ -1,0 +1,726 @@
+{
+  "schema_version": "goalforge-extraction-candidates-1",
+  "document_id": "DOC026",
+  "input_binding": {
+    "document_hash": "8d3e25ef9f7d7731190f22bf04d904cac903dc80b248658f575d362e34bedfaa",
+    "source_input_sha256": "fad23136a56eeabedb7dada8d5b2d65fc2eeaf2b5319765176f11c7468b204ed",
+    "windows_sha256": "5850090d93d56cbebc59f0971bdf5e4b06e2053f553873b1bb67ab2975e04dd7"
+  },
+  "candidates": [
+    {
+      "candidate_id": "C001",
+      "statement": "Use Uber mainly to get transportation from one place to another.",
+      "actor": "Stakeholder",
+      "modality": "stated main goal",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0002",
+        "DOC026:W0003"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T005",
+          "quote": "For me, the main goal is transportation to get from one place to another.",
+          "role": "basis",
+          "start_char": 577,
+          "end_char": 650
+        }
+      ]
+    },
+    {
+      "candidate_id": "C002",
+      "statement": "Decide whether to take a ride by weighing how long the trip takes and what it costs.",
+      "actor": "Stakeholder",
+      "modality": "usual decision rule",
+      "context": [
+        "Only when unable or unwilling to drive, or when no better transport option exists"
+      ],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0003",
+        "DOC026:W0004"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T007",
+          "quote": "When I've chosen to look for a ride, it's usually the amount of time it will take or the price in deciding whether or not to take ride.",
+          "role": "basis",
+          "start_char": 899,
+          "end_char": 1034
+        },
+        {
+          "source_id": "DOC026:T007",
+          "quote": "It's usually like whether or not I'm able to drive there or I want to drive there or if there are other better means of transportation, which kind of depends on again the price and duration.",
+          "role": "context",
+          "start_char": 1035,
+          "end_char": 1225
+        }
+      ]
+    },
+    {
+      "candidate_id": "C003",
+      "statement": "Walk instead of taking a ride when the ride would take about an hour and a half.",
+      "actor": "Stakeholder",
+      "modality": "stated fallback rule",
+      "context": [
+        "Even if the destination is far away"
+      ],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0003",
+        "DOC026:W0004"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T007",
+          "quote": "So if it's going to take like an hour and a half to get someplace. So I'll just walk even if it's kind of far away.",
+          "role": "basis",
+          "start_char": 1226,
+          "end_char": 1341
+        }
+      ]
+    },
+    {
+      "candidate_id": "C004",
+      "statement": "Choose the cheapest ride option, except when traveling with more people.",
+      "actor": "Stakeholder",
+      "modality": "usual preference",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0005",
+        "DOC026:W0006"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "I usually just go for The cheapest one, to be honest, unless if i'm going with more people",
+          "role": "basis",
+          "start_char": 2491,
+          "end_char": 2581
+        }
+      ]
+    },
+    {
+      "candidate_id": "C005",
+      "statement": "See nearby drivers on a map to know whether drivers are available near me.",
+      "actor": "Stakeholder",
+      "modality": "valued feature",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0005",
+        "DOC026:W0006"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "I can also see a map with a couple different Ubers around. So I can know if there are other drivers near me.",
+          "role": "basis",
+          "start_char": 2767,
+          "end_char": 2875
+        }
+      ]
+    },
+    {
+      "candidate_id": "C006",
+      "statement": "Wait before booking when the price is too high.",
+      "actor": "Stakeholder",
+      "modality": "stated option",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0005",
+        "DOC026:W0006"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "if the price was too high, then I can choose to wait",
+          "role": "basis",
+          "start_char": 2965,
+          "end_char": 3017
+        }
+      ]
+    },
+    {
+      "candidate_id": "C007",
+      "statement": "Book a driver shown as nearby without a long scheduling wait or a 'can't find a driver' ending.",
+      "actor": "Stakeholder",
+      "modality": "reported problem",
+      "context": [],
+      "origin": "inferred",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0006",
+        "DOC026:W0007"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T013",
+          "quote": "sometimes when I click okay and try to book that driver, it will take a really long time to actually schedule it. And sometimes it will end up saying that can't find a driver.",
+          "role": "basis",
+          "start_char": 3538,
+          "end_char": 3713
+        }
+      ]
+    },
+    {
+      "candidate_id": "C008",
+      "statement": "Avoid canceling rides in order to protect my passenger rating.",
+      "actor": "Stakeholder",
+      "modality": "stated intention",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0006",
+        "DOC026:W0007"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T013",
+          "quote": "I usually try not to cancel a ride because I think that that damages my like the drivers will see a rating of the passenger as well.",
+          "role": "basis",
+          "start_char": 3938,
+          "end_char": 4070
+        }
+      ]
+    },
+    {
+      "candidate_id": "C009",
+      "statement": "Rent a car for work travel or vacations when walkability, driving needs and duration make it worthwhile.",
+      "actor": "Stakeholder",
+      "modality": "stated preference",
+      "context": [
+        "Preferred over rideshare when traveling for work or on vacation"
+      ],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0009",
+        "DOC026:W0010",
+        "DOC026:W0011"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T019",
+          "quote": "Most of the time when I book or when I'm traveling for work or just traveling in general, I would probably prefer to rent a car.",
+          "role": "basis",
+          "start_char": 5148,
+          "end_char": 5276
+        },
+        {
+          "source_id": "DOC026:T021",
+          "quote": "But for the most part, I would choose to rent a car depending on the duration. So if I'm going on vacation for a week. And I know I'm going to need to be traveling a decent amount, then it would make more sense and give me a little bit more freedom to rent a car than to do a ride share every time I want to go someplace.",
+          "role": "basis",
+          "start_char": 6673,
+          "end_char": 6994
+        }
+      ]
+    },
+    {
+      "candidate_id": "C010",
+      "statement": "Care less about price and more about time on work rideshare trips, because the employer covers the cost.",
+      "actor": "Stakeholder",
+      "modality": "stated priority",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0009",
+        "DOC026:W0010"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T019",
+          "quote": "on the times where I have needed to to use a rideshare for work i usually care less about the price and more about the time in that case because my work is going to cover it.",
+          "role": "basis",
+          "start_char": 5377,
+          "end_char": 5551
+        }
+      ]
+    },
+    {
+      "candidate_id": "C011",
+      "statement": "Take the bus for planned routes, including work trips covered by a free bus pass.",
+      "actor": "Stakeholder",
+      "modality": "usual practice",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0010",
+        "DOC026:W0011"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T021",
+          "quote": "So I usually do take a bus for my like planned route. So for work, it's fairly simple. My work gives me a free bus pass, basically.",
+          "role": "basis",
+          "start_char": 5986,
+          "end_char": 6117
+        }
+      ]
+    },
+    {
+      "candidate_id": "C012",
+      "statement": "Avoid taking a bus in an area I am not familiar with.",
+      "actor": "Stakeholder",
+      "modality": "stated limit",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0010",
+        "DOC026:W0011"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T021",
+          "quote": "Because I don't want to take a bus in a place I'm not familiar with",
+          "role": "basis",
+          "start_char": 6254,
+          "end_char": 6321
+        }
+      ]
+    },
+    {
+      "candidate_id": "C013",
+      "statement": "Take Uber instead of the bus when the bus trip would be long, require walking, or involve multiple transfers.",
+      "actor": "Stakeholder",
+      "modality": "stated preference",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0010",
+        "DOC026:W0011"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T021",
+          "quote": "there are a lot of there are a lot of places where either it would take a really long time to take the bus or it just um you have to like end up walking someplace or take a couple different Like. other buses. And so if it's complicated like that, I would probably prefer And Uber in that case.",
+          "role": "basis",
+          "start_char": 6379,
+          "end_char": 6672
+        }
+      ]
+    },
+    {
+      "candidate_id": "C014",
+      "statement": "Avoid using Uber Eats after a bad customer-service experience.",
+      "actor": "Stakeholder",
+      "modality": "stated decision",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0012",
+        "DOC026:W0013",
+        "DOC026:W0014",
+        "DOC026:W0015"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T025",
+          "quote": "I have used it. That is something that I have had bad experiences with, so I've stopped using it.",
+          "role": "basis",
+          "start_char": 7337,
+          "end_char": 7434
+        },
+        {
+          "source_id": "DOC026:T029",
+          "quote": "It was a mixture of a bad estimate poorly estimating the amount of time And then the customer service dealing with that was extraordinarily poor.",
+          "role": "basis",
+          "start_char": 7772,
+          "end_char": 7917
+        }
+      ]
+    },
+    {
+      "candidate_id": "C015",
+      "statement": "Reach a human customer-support agent when I need an issue resolved.",
+      "actor": "Stakeholder",
+      "modality": "reported unmet need",
+      "context": [],
+      "origin": "inferred",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0015",
+        "DOC026:W0016"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T031",
+          "quote": "I found it very difficult because I wanted to talk to a person",
+          "role": "basis",
+          "start_char": 8154,
+          "end_char": 8216
+        },
+        {
+          "source_id": "DOC026:T031",
+          "quote": "if you actually want to actually resolve an issue, you're probably going to need more than what they're like",
+          "role": "basis",
+          "start_char": 8349,
+          "end_char": 8457
+        }
+      ]
+    },
+    {
+      "candidate_id": "C016",
+      "statement": "Prefer a single destination over a multi-stop trip when using Uber.",
+      "actor": "Stakeholder",
+      "modality": "stated preference",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0018",
+        "DOC026:W0019"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T037",
+          "quote": "Most of the time, if I'm going to use Uber, I would prefer to just go to one location versus going to multiple ones.",
+          "role": "basis",
+          "start_char": 9755,
+          "end_char": 9871
+        }
+      ]
+    },
+    {
+      "candidate_id": "C017",
+      "statement": "Keep multi-stop trips as quick as possible, avoiding long in-between stops.",
+      "actor": "Stakeholder",
+      "modality": "stated effort",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0018",
+        "DOC026:W0019"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T037",
+          "quote": "I always feel weird if I'm going to do that where one of the in-between stops takes too much time So I try to to do anything like that. I try to make it as quick as possible",
+          "role": "basis",
+          "start_char": 9938,
+          "end_char": 10111
+        }
+      ]
+    },
+    {
+      "candidate_id": "C018",
+      "statement": "Call or message the driver in the app when the pickup point is hard to find or the area is busy.",
+      "actor": "Stakeholder",
+      "modality": "stated practice",
+      "context": [
+        "House numbers hard to see, poor GPS, no place to pull over, many people around"
+      ],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0019",
+        "DOC026:W0020"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T039",
+          "quote": "I actually find that very helpful. Especially if I'm someplace that's like either a little weird. So maybe the house numbers are hard to see or or GPS just isn't great in that location.",
+          "role": "basis",
+          "start_char": 10498,
+          "end_char": 10683
+        },
+        {
+          "source_id": "DOC026:T039",
+          "quote": "So calling or calling usually calling on their way to pick me up is usually really helpful",
+          "role": "basis",
+          "start_char": 10857,
+          "end_char": 10947
+        }
+      ]
+    },
+    {
+      "candidate_id": "C019",
+      "statement": "Let the driver know in the app when a multi-stop trip is taking longer than expected.",
+      "actor": "Stakeholder",
+      "modality": "hypothetical endorsement",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0019",
+        "DOC026:W0020"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T039",
+          "quote": "in the circumstance where I'm doing a multi-stop letting the driver know if maybe I'm taking a little bit longer or just to give them a heads up about what's going on is also helpful",
+          "role": "basis",
+          "start_char": 11021,
+          "end_char": 11203
+        }
+      ]
+    },
+    {
+      "candidate_id": "C020",
+      "statement": "Give the driver a heads-up directly instead of changing the pickup location in the app.",
+      "actor": "Stakeholder",
+      "modality": "preferred workaround",
+      "context": [
+        "When the pickup point needs to change"
+      ],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0020",
+        "DOC026:W0021"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T041",
+          "quote": "I think most of the time when I do want to change it, I give the driver a heads up instead of doing it on the app.",
+          "role": "basis",
+          "start_char": 12071,
+          "end_char": 12185
+        }
+      ]
+    },
+    {
+      "candidate_id": "C021",
+      "statement": "Adjust the pickup location in the app easily even when it was set from the current location.",
+      "actor": "Stakeholder",
+      "modality": "hedged complaint",
+      "context": [],
+      "origin": "inferred",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0020",
+        "DOC026:W0021"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T041",
+          "quote": "But now I think it's only really easy if you're not using your location from the start",
+          "role": "basis",
+          "start_char": 11568,
+          "end_char": 11654
+        },
+        {
+          "source_id": "DOC026:T041",
+          "quote": "when you have it be your location This is hard to do without actually booking a ride.",
+          "role": "basis",
+          "start_char": 11683,
+          "end_char": 11768
+        }
+      ]
+    },
+    {
+      "candidate_id": "C022",
+      "statement": "Check the ride fare after the trip to split the charge with friends or use it as a receipt for reimbursement.",
+      "actor": "Stakeholder",
+      "modality": "usual practice",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0022",
+        "DOC026:W0023"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T045",
+          "quote": "I will go back And look at how much the ride was so that I could split split up the charge. Or if I'm doing it for work, then I can use that as a receipt to get reimbursed.",
+          "role": "basis",
+          "start_char": 12926,
+          "end_char": 13098
+        }
+      ]
+    },
+    {
+      "candidate_id": "C023",
+      "statement": "Book a ride for now rather than scheduling one for later.",
+      "actor": "Stakeholder",
+      "modality": "usage habit",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0005",
+        "DOC026:W0006"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "I can also book it uh for now or later, I usually just do now. I rarely book something in the future.",
+          "role": "basis",
+          "start_char": 1945,
+          "end_char": 2046
+        }
+      ]
+    },
+    {
+      "candidate_id": "C024",
+      "statement": "Pick an address suggestion while typing instead of finishing the full address.",
+      "actor": "Stakeholder",
+      "modality": "praised feature",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0005",
+        "DOC026:W0006"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "a couple of different options pop up as I'm typing it, which is kind of helpful. So I can just click on whatever comes up before I necessarily finish typing it.",
+          "role": "basis",
+          "start_char": 2204,
+          "end_char": 2364
+        }
+      ]
+    },
+    {
+      "candidate_id": "C025",
+      "statement": "Have a flash promo automatically applied to the fare.",
+      "actor": "Stakeholder",
+      "modality": "observed feature",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0005",
+        "DOC026:W0006"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "telling me that there's a flash promo deal. that I guess it automatically applied.",
+          "role": "basis",
+          "start_char": 2365,
+          "end_char": 2447
+        }
+      ]
+    },
+    {
+      "candidate_id": "C026",
+      "statement": "Rate and tip the driver after the ride.",
+      "actor": "Stakeholder",
+      "modality": "described routine",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0022",
+        "DOC026:W0023"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T045",
+          "quote": "they give you the option to rate the driver And you have the the option to tip the driver too",
+          "role": "basis",
+          "start_char": 12661,
+          "end_char": 12754
+        }
+      ]
+    },
+    {
+      "candidate_id": "C027",
+      "statement": "Know whether a cancellation carries a charge.",
+      "actor": "Stakeholder",
+      "modality": "uncertain knowledge",
+      "context": [],
+      "origin": "unknown",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0006",
+        "DOC026:W0007"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T013",
+          "quote": "I also don't remember if you get a a potential charge for that.",
+          "role": "basis",
+          "start_char": 4186,
+          "end_char": 4249
+        }
+      ]
+    },
+    {
+      "candidate_id": "C028",
+      "statement": "Cancel a ride without first starting the ride just to cancel it.",
+      "actor": "Stakeholder",
+      "modality": "garbled wish",
+      "context": [],
+      "origin": "unknown",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0007",
+        "DOC026:W0008"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T015",
+          "quote": "I kind of wish that I don't want to just start a ride to cancel it.",
+          "role": "basis",
+          "start_char": 4448,
+          "end_char": 4515
+        }
+      ]
+    },
+    {
+      "candidate_id": "C029",
+      "statement": "Not review the ride's location or duration after the trip.",
+      "actor": "Stakeholder",
+      "modality": "described non-use",
+      "context": [],
+      "origin": "explicit",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0022",
+        "DOC026:W0023"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T045",
+          "quote": "But I don't really... look back at it for the location or the duration usually.",
+          "role": "basis",
+          "start_char": 13099,
+          "end_char": 13178
+        }
+      ]
+    },
+    {
+      "candidate_id": "C030",
+      "statement": "Get an accurate time estimate for Uber Eats orders.",
+      "actor": "Stakeholder",
+      "modality": "reported complaint",
+      "context": [],
+      "origin": "inferred",
+      "pass_id": "P1",
+      "window_ids": [
+        "DOC026:W0014",
+        "DOC026:W0015"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T029",
+          "quote": "It was a mixture of a bad estimate poorly estimating the amount of time And then the customer service dealing with that was extraordinarily poor.",
+          "role": "basis",
+          "start_char": 7772,
+          "end_char": 7917
+        }
+      ]
+    }
+  ]
+}
