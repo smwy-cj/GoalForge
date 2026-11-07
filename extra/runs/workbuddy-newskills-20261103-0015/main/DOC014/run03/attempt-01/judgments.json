@@ -1,0 +1,252 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "50fd2c4bfa24ff750c07fa8c86e0a9506e01288980fcc761267d742eeb465f11",
+    "input_sha256": "3bb14fc48d3749b0eca67275623cf3981c804fa5a543af6e8a799fe5ab3c2336"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Check the outside temperature for the next day, usually the day before, including the morning (before-class / when-going-out) hourly values.",
+      "label": "direct",
+      "rationale": "T001 明确说 usually check the temperature outside，especially the day before；T003 与 T005 补充打开时首先看温度、次日按小时以及出门前/上课前早晨时段温度，主体、对象、时间、强度（usually）与选定方式（按小时）均受支持。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G002": {
+      "target_statement": "Check the rain / precipitation chances for tomorrow (the next day), including the hourly percentage where 25+ means a good chance of rain.",
+      "label": "direct",
+      "rationale": "T001 的 I also check for rains、T003 的 rain meter / chance of rain tomorrow、T005 的 precipitation chances 与 25+ 刻度共同明确支持查看降雨/降水概率及其数值口径，主体与 usually 强度一致。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G003": {
+      "target_statement": "Plan whether to wear the thick coat or the light coat based on the checked temperature.",
+      "label": "direct",
+      "rationale": "T001 明确说因此 can plan whether I should wear my thick coat or my light coat，是查温度后的独立决策结果；该决策未附加其他条件或强度。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G004": {
+      "target_statement": "When it is super cold, skip cycling and take the bus instead (to avoid cycling down in the cold).",
+      "label": "direct",
+      "rationale": "T001 明确给出条件（if super cold）与行动（skip bicycle / go through the bus）及原因（cycle down 很冷），并保留 might 的不确定语气；条件与强度均写入目标，未升级为强制。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G005": {
+      "target_statement": "Make sure to have an umbrella when rain is forecast.",
+      "label": "direct",
+      "rationale": "T001 明确以 if 条件句说出 make sure I have my umbrella，条件（有雨预报）与动作均受支持，强度为 make sure。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G006": {
+      "target_statement": "Learn about an important/severe weather event first from weather.com when it has not already been seen in the news, including warnings and definite notice when it happens for my city.",
+      "label": "direct",
+      "rationale": "T011 明确说在未见新闻时 weather.com 会是 first place 得知重要天气事件、会 warn me，且若发生在本城市 will definitely notice it；前提、first 顺序、definitely 强度与 warns 均受支持。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G007": {
+      "target_statement": "Have/consult a safety guide or resources from weather.com during an extreme weather event (so as to stay safe).",
+      "label": "insufficient",
+      "rationale": "T011 中安全指南只是受访者 'I'm pretty sure' 的猜测，T013 明确否认见过并自述 'That's my assumption... probably my guess'；原文无正面依据证明该能力存在或该要求被提出，属信念/猜测，按规定不当作已验证事实或明确要求，保留 insufficient 不升级。",
+      "supported_parts": [],
+      "unsupported_parts": [
+        "指南/资源是否真实存在",
+        "受访者是否将其作为需求而非猜测",
+        "适用条件与采纳状态"
+      ],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G008": {
+      "target_statement": "On a typhoon alert, open the notification to check the severity and all details about the typhoon.",
+      "label": "direct",
+      "rationale": "T015 在假设收到台风警报下明确说 I'll probably open the notification check... severity and all the details，动作、对象与条件（警报场景）均受支持，保留 probably 强度。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G009": {
+      "target_statement": "Read what the authorities recommend (whether to evacuate the city, seek shelter / not go outside, or just carry an umbrella and a raincoat).",
+      "label": "direct",
+      "rationale": "T015 明确说 I'll read for what they recommend 并列出撤离/躲避不外出/带伞雨衣三种可能建议，动作、来源与候选内容均受支持；未把三种建议固化为必须同时执行。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G010": {
+      "target_statement": "Adjust my day based on the severity and the information given.",
+      "label": "direct",
+      "rationale": "T015 明确说 it depends on the severity... based on that, I'll adjust my day，动作与两个条件均受支持；'that' 回指前两句的详情与建议，按全篇校正保留其指代。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G011": {
+      "target_statement": "Read important weather events happening across the world (not necessarily in my city) via the main-page sections / news tab, including the event details.",
+      "label": "direct",
+      "rationale": "T051 说明主页有全球重要天气事件板块、点击打开 news tab，T053 补充给出事件详情；受访者确认其使用方式（if I click on it），范围（not necessarily in my city）与方式（news tab）均受支持。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G012": {
+      "target_statement": "When a trip is known (a couple of weeks ahead), check historical weather data if available, or the future/monthly forecast, to get an estimate of what the weather will be like.",
+      "label": "direct",
+      "rationale": "T017 明确说一旦确定出行就 either check historical data（带 if available 条件）or future/monthly forecast 以获得天气估计，替代方式（either/or）与条件均保留，未改成必须同时采用。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G013": {
+      "target_statement": "Check cloud coverage (in addition to temperature and precipitation) when planning a trip, which may lead to reconsidering or cancelling a beach vacation or astronomical-event trip.",
+      "label": "direct",
+      "rationale": "T017 明确说旅行时除温度降水外 also cloud coverage，并以海滩/天文观测举例说明多云时可能需要重新考虑或取消；举例仅作情境例保留，未固化成固定业务目标，might 强度保留。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G014": {
+      "target_statement": "Wait till a couple of days (2-3 days) before the trip and decide based on the final, more accurate forecast, since a few-weeks-out prediction is hard and can be the difference between going and not going.",
+      "label": "direct",
+      "rationale": "T019 明确建议 should probably wait till the end and then decide based on the final temperature a couple of days before，并说明几周前难准、可能是去不成的差别；T017 补充临近预报更准、前几天可看最终情况。条件、2-3 天时间、should probably 强度均保留。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G015": {
+      "target_statement": "View more precise hourly weather data (including wind speed, humidity, UV index and what it actually feels like) via the hourly tab when wanting more detail.",
+      "label": "direct",
+      "rationale": "T033 明确说想要更精确每小时覆盖可去 hourly tab，并显示风速、湿度、UV 指数与体感温度；条件（if you want）、方式（hourly tab/点击某小时）与附加数据维度均受支持。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G016": {
+      "target_statement": "Screenshot and share on social media a weather reading showing the temperature below 0 (planned, not yet done).",
+      "label": "direct",
+      "rationale": "T027 明确说 planning to do it very soon、若看到低于 0 会 screenshot it and share on my social medias，并两次强调 haven't done it yet；动作、条件、方式与计划/未实现语气均保留，未升级为已完成或强制。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G017": {
+      "target_statement": "Have a plain black or plain white background instead of the dull blue color scheme (preferred).",
+      "label": "direct",
+      "rationale": "T035 明确说 dull blue 背景不喜欢、they could just make it plain black or plain white 且 I would prefer that；偏好对象、方向（纯黑或纯白）与 prefer 强度均保留，未升级为必须。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G018": {
+      "target_statement": "Reduce the number of ads (4-5 ads plus video pop-up ads are too much; 1-2 ads would be acceptable) so they do not distract from quickly checking the weather.",
+      "label": "inferred",
+      "rationale": "T037 明确说 4-5 个广告加视频广告 too much、distracts you、can understand one or 2 ads，T069 说 ads would be an issue、内容被广告分隔；由此正面推断出减少广告数量的改善诉求，保留 1-2 个可接受的边界与抱怨语气，不升级为必须移除全部广告。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [
+        "把'太多/烦人'的评价理解为减少广告数量的改善愿望"
+      ],
+      "reasoning_steps": [
+        "T037 评价 4-5 广告+视频广告 too much 且能接受 1-2 个",
+        "T069 复述广告是问题、内容被广告分隔",
+        "推断目标为把广告数量降到可接受范围以不干扰快速查看"
+      ]
+    },
+    "G019": {
+      "target_statement": "Make the UI more compact (squish it / bring elements closer together) so it is easier to read, instead of having content separated by big ad chunks that require scrolling up and down.",
+      "label": "direct",
+      "rationale": "T069 明确建议 squish the ui a little bit、make it more close to each other 以便 easier to read，并说 that would be definitely on top on the list；动作、预期结果、广告分隔导致的滚动问题与优先级语气均受支持。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G020": {
+      "target_statement": "Improve the radar section to be more detailed and intuitive, with multiple parameters (e.g. snow coverage, precipitation), like the windy.com radar.",
+      "label": "direct",
+      "rationale": "T043 明确说 radar could be better、参照更 detailed/intuitive 且含 snow coverage/precipitation 等多参数的雷达；T067 补充 windy.com 雷达细节多、喜欢动画。改善对象、维度与参照来源均受支持；'might consider buying' 为条件性购买意向，未升级为购买目标。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G021": {
+      "target_statement": "Provide very local weather data for non-city locations (e.g. a hotel in the middle of nowhere, hiking trails, mountain-climbing expeditions) where city-level weather does not help.",
+      "label": "insufficient",
+      "rationale": "G021 是受访者对采访者主动给出的场景（T066/T067）表示 'that would also be a good feature / definitely helpful'，属对提议的认可而非主动提出的需求；且 T065 明确说 'No, no features that I can think of... pretty comprehensive'，构成需回查的相反证据。二者情境不同（自发想不出 vs 被给出具体场景后认可），但采纳程度、强制性与优先级均未知，资料不足以支持把'系统应提供本地化地点天气'当作既定目标，保留 insufficient 不升级，并在 review_questions/questions 记录该张力。",
+      "supported_parts": [],
+      "unsupported_parts": [
+        "受访者是否主动要求该功能（提议来自采访者）",
+        "功能的采纳/强制程度与优先级",
+        "与 T065 '想不出任何要加功能' 的张力如何解决"
+      ],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G022": {
+      "target_statement": "Keep notifications from weather.com turned off (prefer no notifications; if turned on it is only a next-day weather highlight).",
+      "label": "direct",
+      "rationale": "T055/T057 明确说 usually prefer no notifications、notifications are off、I just prefer it off. So I've kept it off，属明确的维持/避免型状态目标；prefer 强度、Mac/PC 情境与'若开启仅次日要点'的例外均保留。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G023": {
+      "target_statement": "View temperatures in Celsius (preferred) instead of the default Fahrenheit, using the C/F drop down at the top.",
+      "label": "direct",
+      "rationale": "T047 明确说 I do prefer Celsius、默认是 Fahrenheit、顶部有 degree C/F 下拉可切换；偏好方向、默认值与明确选定的切换方式均受支持，prefer 未升级为强制。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G024": {
+      "target_statement": "Keep/view weather for the two saved cities (the home city and the city coming from in India).",
+      "label": "direct",
+      "rationale": "T045 明确说设置了两个城市（家乡城市与印度来的城市）并 I have it open，T049 确认除度数与城市外无其他设置；属明确陈述并维持的使用状态，按状态/维持目标保留，未新增为对系统的新功能要求。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G025": {
+      "target_statement": "Avoid location/city data (and email-linked cities) being exposed in a leak when logged in.",
+      "label": "insufficient",
+      "rationale": "T061 仅在'若登录且泄露'的假设下表达 I might be a little worried / a leak could be a little scary，并明确说 other than that I'm not too worried about the privacy aspect；关于数据仅存本地缓存、不被存储均为其 guess 且 not 100% sure。属条件性顾虑与信念，无明确要求或正面依据支持'避免泄露'为既定目标，保留 insufficient 不升级。",
+      "supported_parts": [],
+      "unsupported_parts": [
+        "是否把轻微担忧升级为明确需求",
+        "数据存储位置的真实性（仅为猜测）",
+        "除假设情景外受访者明确表示不太担心"
+      ],
+      "assumptions": [],
+      "reasoning_steps": []
+    }
+  }
+}

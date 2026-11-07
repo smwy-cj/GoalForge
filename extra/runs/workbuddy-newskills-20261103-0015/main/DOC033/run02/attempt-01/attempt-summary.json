@@ -1,0 +1,243 @@
+{
+  "task_attempt": "main\\DOC033\\run02\\attempt-01",
+  "document_id": "DOC033",
+  "started_at": "2026-11-03T20:25:02+08:00",
+  "finished_at": "2026-11-03T20:25:11+08:00",
+  "skill_snapshot": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+  "input_json_sha256": "b6c8af0b6b0d9a971d2d1549edc2b49eb7462352b207c9c3cf9d53cb80f8791e",
+  "source_txt_sha256": "4d8bb64ea7450ae899580103adcebce441bd4338741d416feb3009827065c457",
+  "windows": {
+    "count": 95,
+    "size": 4,
+    "stride": 2
+  },
+  "coverage_check": {
+    "exit_code": 0,
+    "structure": "passed",
+    "workflow": "recorded",
+    "pending": [],
+    "counts": {
+      "source_segments": 191,
+      "windows": 95,
+      "raw_candidates": 48,
+      "final_goals": 15,
+      "source_checks": 12,
+      "actual_passes": 1,
+      "dispositions": {
+        "keep": 15,
+        "merge": 25,
+        "exclude": 8
+      }
+    }
+  },
+  "tracing_status": "completed",
+  "declared_vs_effective_downgraded": [],
+  "inspection": {
+    "structure": "passed",
+    "readiness": "blocked",
+    "independent_semantic": "not_run",
+    "formal_proof": "not_run",
+    "human": "pending"
+  },
+  "counts": {
+    "goals": 15,
+    "relations": 3,
+    "groups": 1,
+    "established_groups": 0,
+    "raw_candidates": 48,
+    "support_labels": {
+      "inferred": 1,
+      "direct": 13,
+      "insufficient": 1,
+      "contradicted": 0
+    },
+    "issues": 13,
+    "blocking_issues": 1
+  },
+  "delivery_files": {
+    "delivery\\attachments\\extraction.json": "9cc604af87a833177ee3000e67e9ccfe529b377898c23f735909f3d591aeca5a",
+    "delivery\\attachments\\inspection.json": "65f3279296356623e953e1b8a06470910cac8d2f978d297a09829cf84692f9aa",
+    "delivery\\attachments\\judgments.json": "1ca8ffcd20d7060cec62e73c970f1da6c0742ba573e9ee59ba2228857f695fd7",
+    "delivery\\attachments\\kaos-decisions.json": "d23c59f4ae3a0c744804448682f26ecd32e17d52d258e4264ab28ad1ca00b063",
+    "delivery\\attachments\\source.txt": "4d8bb64ea7450ae899580103adcebce441bd4338741d416feb3009827065c457",
+    "delivery\\goal-model.html": "d18dc1052cb09d857067811e273d601a0fdd79d61a10b1aa946939ed77d82ca0",
+    "delivery\\goal-model.json": "8125d7505704f536eb642cffd6bb523c3fde93c400faf6fe6dfe10e2956bb105",
+    "delivery\\goal-model.md": "eac7746cde02c0d184ad88df5ac29b7cdcd194b7e42843e0752da12094096c02",
+    "delivery\\goal-model.svg": "1020bf873780388d1284ad5c33152f386b3ad370d59f1fbf0dd129e4d6601e48",
+    "delivery\\goal-relations.svg": "2c2d790ac5953ed988036249f375c2f673ffb402b09e3e1b1ec0065e8481d995",
+    "delivery\\manifest.json": "39586e12c7d9048eb1acb45d8f7ee4d708917b8393f33c68d1eb4986f5526d27"
+  },
+  "warnings": [],
+  "commands": [
+    {
+      "label": "prepare_source",
+      "argv": [
+        "prepare_source.py",
+        "DOC033.json",
+        "work",
+        "--window-size",
+        "4",
+        "--window-stride",
+        "2"
+      ],
+      "exit_code": 0,
+      "seconds": 0.78,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "capture_template",
+      "argv": [
+        "check_coverage.py",
+        "capture-template",
+        "--source-input",
+        "source-input.json",
+        "--source",
+        "source.txt",
+        "--windows",
+        "source-windows.json",
+        "--output",
+        "_tpl-candidates.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.75,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "judgment_template",
+      "argv": [
+        "trace_candidates.py",
+        "extraction.json",
+        "--judgment-template",
+        "judgments.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.79,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "trace_candidates",
+      "argv": [
+        "trace_candidates.py",
+        "extraction.json",
+        "tracing",
+        "--source",
+        "source.txt",
+        "--judgments",
+        "judgments.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.81,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "ledger_template",
+      "argv": [
+        "check_coverage.py",
+        "template",
+        "--source-input",
+        "source-input.json",
+        "--source",
+        "source.txt",
+        "--windows",
+        "source-windows.json",
+        "--candidates",
+        "raw-candidates.json",
+        "--extraction",
+        "extraction.json",
+        "--output",
+        "extraction-ledger.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.79,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "coverage_check",
+      "argv": [
+        "check_coverage.py",
+        "check",
+        "--source-input",
+        "source-input.json",
+        "--source",
+        "source.txt",
+        "--windows",
+        "source-windows.json",
+        "--candidates",
+        "raw-candidates.json",
+        "--extraction",
+        "extraction.json",
+        "--ledger",
+        "extraction-ledger.json",
+        "--output",
+        "coverage-check.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.84,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "kaos_template",
+      "argv": [
+        "kaos_model.py",
+        "template",
+        "extraction.json",
+        "judgments.json",
+        "kaos-decisions.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.86,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "assemble",
+      "argv": [
+        "kaos_model.py",
+        "assemble",
+        "extraction.json",
+        "judgments.json",
+        "source.txt",
+        "kaos-decisions.json",
+        "assembled"
+      ],
+      "exit_code": 0,
+      "seconds": 0.94,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "inspect",
+      "argv": [
+        "kaos_model.py",
+        "inspect",
+        "model-input.json",
+        "inspection.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.95,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "label": "finalize",
+      "argv": [
+        "kaos_model.py",
+        "finalize",
+        "model-input.json",
+        "inspection.json",
+        "delivery",
+        "--svg"
+      ],
+      "exit_code": 0,
+      "seconds": 0.95,
+      "stdout": "{\"readiness\": \"blocked\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    }
+  ]
+}

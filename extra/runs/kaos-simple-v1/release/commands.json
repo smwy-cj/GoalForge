@@ -1,0 +1,116 @@
+[
+  {
+    "arguments": [
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-extraction\\scripts\\render_review.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\extraction.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\目标清单.md"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-tracing\\scripts\\trace_candidates.py",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\extraction.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\tracing",
+      "--source",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\source.md",
+      "--judgments",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\judgments.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\kaos_model.py",
+      "assemble",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\extraction.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\judgments.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\source.md",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\kaos-decisions.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\assembled"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\kaos_model.py",
+      "inspect",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\assembled\\model-input.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inspection.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\kaos_model.py",
+      "finalize",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\assembled\\model-input.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inspection.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\delivery"
+    ],
+    "returncode": 0,
+    "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\kaos_model.py",
+      "feedback",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\delivery\\goal-model.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\simulated-feedback.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\feedback-simulation"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\kaos_model.py",
+      "assemble",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\extraction.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\judgments.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\source.md",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\reassessed-kaos-decisions.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\revised",
+      "--previous",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\delivery\\goal-model.json",
+      "--feedback",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\inputs\\simulated-feedback.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\kaos_model.py",
+      "inspect",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\revised\\model-input.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\revised-inspection.json"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "arguments": [
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\kaos_model.py",
+      "finalize",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\revised\\model-input.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\revised-inspection.json",
+      "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\kaos-simple-v1\\release\\delivery-revised"
+    ],
+    "returncode": 0,
+    "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+    "stderr": ""
+  }
+]

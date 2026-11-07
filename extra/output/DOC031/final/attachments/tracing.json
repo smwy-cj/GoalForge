@@ -1,0 +1,1239 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC031\\extraction.json",
+    "sha256": "cb8f4002c2c38ac656689bcc6f0b18608732bf540baefc30fe34214f026cd854",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "f95fe47d8282f063babd3961083d4f1222fe1f55cbd6a86b8521721deef2e393",
+      "input_sha256": "cb8f4002c2c38ac656689bcc6f0b18608732bf540baefc30fe34214f026cd854"
+    },
+    "bundle_sha256": "3de4ed277126647af31a660dcca474831a57be105aaa2821f2d07103edf3f85b"
+  },
+  "sources": [
+    {
+      "document_id": "DOC031",
+      "expected_hash": "4f4c359b0aa66e459338fef571a2e6e2ddd5badd68f1bfe61e6950016957a6fe",
+      "actual_hash": "4f4c359b0aa66e459338fef571a2e6e2ddd5badd68f1bfe61e6950016957a6fe",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC031-C001",
+      "target_kind": "candidate",
+      "statement": "不先保存联系方式也能即时联系到校内任何人。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC031:S008",
+          "material_id": "M001",
+          "quote": "it's instant communication with anyone I wish to talk to within the university",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1742,
+          "end_char": 1820,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S008",
+              "segment_start": 52,
+              "segment_end": 130,
+              "start_char": 1742,
+              "end_char": 1820
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 1690,
+            "end_char": 2240
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC031:S008",
+          "material_id": "M001",
+          "quote": "I don't need to like save anybody's information",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1900,
+          "end_char": 1947,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S008",
+              "segment_start": 210,
+              "segment_end": 257,
+              "start_char": 1900,
+              "end_char": 1947
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 1690,
+            "end_char": 2240
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC031:S008",
+          "material_id": "M001",
+          "quote": "if I know their name, or sometimes even their last name, I can look them up",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2011,
+          "end_char": 2086,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S008",
+              "segment_start": 321,
+              "segment_end": 396,
+              "start_char": 2011,
+              "end_char": 2086
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 1690,
+            "end_char": 2240
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S008",
+          "DOC031:S008",
+          "DOC031:S008"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "能力：T008「instant communication with anyone... within the university」",
+          "优势：T008「don't need to like save anybody's information」",
+          "方式：T008「if I know their name... I can look them up」"
+        ],
+        "unsupported_parts": [
+          "未说明对方不回复时的处理",
+          "未说明跨院系检索的覆盖范围"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取优势与方式",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T007 明确说优势是不必存联系方式，知道姓名就能找到人并立刻联系。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "不先保存联系方式也能即时联系到校内任何人。",
+        "label": "direct",
+        "rationale": "T007 明确说优势是不必存联系方式，知道姓名就能找到人并立刻联系。",
+        "supported_parts": [
+          "能力：T008「instant communication with anyone... within the university」",
+          "优势：T008「don't need to like save anybody's information」",
+          "方式：T008「if I know their name... I can look them up」"
+        ],
+        "unsupported_parts": [
+          "未说明对方不回复时的处理",
+          "未说明跨院系检索的覆盖范围"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取优势与方式",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC031-C002",
+      "target_kind": "candidate",
+      "statement": "通过频道一次触达一大群人，比邮件快。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC031:S010",
+          "material_id": "M001",
+          "quote": "the channel feature within slack, where I can reach a wide audience immediately",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2531,
+          "end_char": 2610,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S010",
+              "segment_start": 108,
+              "segment_end": 187,
+              "start_char": 2531,
+              "end_char": 2610
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 2423,
+            "end_char": 3333
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC031:S010",
+          "material_id": "M001",
+          "quote": "if I was doing that over email or something, it would take me more time",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2632,
+          "end_char": 2703,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S010",
+              "segment_start": 209,
+              "segment_end": 280,
+              "start_char": 2632,
+              "end_char": 2703
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 2423,
+            "end_char": 3333
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S010",
+          "DOC031:S010"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "能力：T010「reach a wide audience immediately」",
+          "对比：T010「over email... would take me more time」"
+        ],
+        "unsupported_parts": [
+          "未说明频道规模",
+          "未说明是否有通知打扰问题"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取对比",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T009 说频道能一次触达广众，比邮件快。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "通过频道一次触达一大群人，比邮件快。",
+        "label": "direct",
+        "rationale": "T009 说频道能一次触达广众，比邮件快。",
+        "supported_parts": [
+          "能力：T010「reach a wide audience immediately」",
+          "对比：T010「over email... would take me more time」"
+        ],
+        "unsupported_parts": [
+          "未说明频道规模",
+          "未说明是否有通知打扰问题"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取对比",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC031-C003",
+      "target_kind": "candidate",
+      "statement": "加入频道即可看到加入之前的历史消息。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC031:S010",
+          "material_id": "M001",
+          "quote": "I have the history of that channel at my fingertips",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2788,
+          "end_char": 2839,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S010",
+              "segment_start": 365,
+              "segment_end": 416,
+              "start_char": 2788,
+              "end_char": 2839
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 2423,
+            "end_char": 3333
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC031:S010",
+          "material_id": "M001",
+          "quote": "I have access to information that was there before I even joined the channel",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2849,
+          "end_char": 2925,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S010",
+              "segment_start": 426,
+              "segment_end": 502,
+              "start_char": 2849,
+              "end_char": 2925
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 2423,
+            "end_char": 3333
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S010",
+          "DOC031:S010"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "能力：T010「the history of that channel at my fingertips」",
+          "范围：T010「information that was there before I even joined」"
+        ],
+        "unsupported_parts": [
+          "未说明历史是否有限制（免费版消息上限）",
+          "未说明历史对新成员是否造成负担（另一面见 C007）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取范围",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T009 说加入频道就能看到入群前的历史。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "加入频道即可看到加入之前的历史消息。",
+        "label": "direct",
+        "rationale": "T009 说加入频道就能看到入群前的历史。",
+        "supported_parts": [
+          "能力：T010「the history of that channel at my fingertips」",
+          "范围：T010「information that was there before I even joined」"
+        ],
+        "unsupported_parts": [
+          "未说明历史是否有限制（免费版消息上限）",
+          "未说明历史对新成员是否造成负担（另一面见 C007）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取范围",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC031-C004",
+      "target_kind": "candidate",
+      "statement": "知道院系、项目与校园里正在发生什么。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC031:S010",
+          "material_id": "M001",
+          "quote": "I like to hear what's happening around within the department",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3212,
+          "end_char": 3272,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S010",
+              "segment_start": 789,
+              "segment_end": 849,
+              "start_char": 3212,
+              "end_char": 3272
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 2423,
+            "end_char": 3333
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC031:S010",
+          "material_id": "M001",
+          "quote": "what's happening around campus",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3294,
+          "end_char": 3324,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S010",
+              "segment_start": 871,
+              "segment_end": 901,
+              "start_char": 3294,
+              "end_char": 3324
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 2423,
+            "end_char": 3333
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S010",
+          "DOC031:S010"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "范围：T010「what's happening around within the department」",
+          "范围：T010「what's happening around campus」"
+        ],
+        "unsupported_parts": [
+          "未说明关注的具体频道数量",
+          "未说明信息是否可信"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取范围",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T009 说喜欢在频道里了解院系与校园动态。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "知道院系、项目与校园里正在发生什么。",
+        "label": "direct",
+        "rationale": "T009 说喜欢在频道里了解院系与校园动态。",
+        "supported_parts": [
+          "范围：T010「what's happening around within the department」",
+          "范围：T010「what's happening around campus」"
+        ],
+        "unsupported_parts": [
+          "未说明关注的具体频道数量",
+          "未说明信息是否可信"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取范围",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC031-C005",
+      "target_kind": "candidate",
+      "statement": "与队友协作时能立刻把文档发过去，任意格式都行。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC031:S012",
+          "material_id": "M001",
+          "quote": "my most used feature is sharing documents when collaborating with teammates",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3655,
+          "end_char": 3730,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S012",
+              "segment_start": 90,
+              "segment_end": 165,
+              "start_char": 3655,
+              "end_char": 3730
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 3565,
+            "end_char": 3737
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC031:S018",
+          "material_id": "M001",
+          "quote": "at the bottom, there is an option to attach a document",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4999,
+          "end_char": 5053,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S018",
+              "segment_start": 689,
+              "segment_end": 743,
+              "start_char": 4999,
+              "end_char": 5053
+            }
+          ],
+          "original_locator": {
+            "line_start": 18,
+            "line_end": 18,
+            "start_char": 4310,
+            "end_char": 5272
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC031:S018",
+          "material_id": "M001",
+          "quote": "I can attach any type of file I want",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5059,
+          "end_char": 5095,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S018",
+              "segment_start": 749,
+              "segment_end": 785,
+              "start_char": 5059,
+              "end_char": 5095
+            }
+          ],
+          "original_locator": {
+            "line_start": 18,
+            "line_end": 18,
+            "start_char": 4310,
+            "end_char": 5272
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S012",
+          "DOC031:S018",
+          "DOC031:S018"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "频率：T012「my most used feature is sharing documents」",
+          "入口：T018「an option to attach a document」",
+          "格式：T018「any type of file I want」"
+        ],
+        "unsupported_parts": [
+          "未说明文件大小限制",
+          "未说明是否用云盘链接替代"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取频率",
+          "2. 取入口与格式",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T011 说最常用的是协作时分享文档，T017 描述具体操作与格式支持。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "与队友协作时能立刻把文档发过去，任意格式都行。",
+        "label": "direct",
+        "rationale": "T011 说最常用的是协作时分享文档，T017 描述具体操作与格式支持。",
+        "supported_parts": [
+          "频率：T012「my most used feature is sharing documents」",
+          "入口：T018「an option to attach a document」",
+          "格式：T018「any type of file I want」"
+        ],
+        "unsupported_parts": [
+          "未说明文件大小限制",
+          "未说明是否用云盘链接替代"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取频率",
+          "2. 取入口与格式",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC031-C006",
+      "target_kind": "candidate",
+      "statement": "用关键词搜回过去的对话与资料。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC031:S020",
+          "material_id": "M001",
+          "quote": "there is a search feature that I would use to I would enter keywords",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5556,
+          "end_char": 5624,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S020",
+              "segment_start": 51,
+              "segment_end": 119,
+              "start_char": 5556,
+              "end_char": 5624
+            }
+          ],
+          "original_locator": {
+            "line_start": 20,
+            "line_end": 20,
+            "start_char": 5505,
+            "end_char": 6394
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC031:S020",
+          "material_id": "M001",
+          "quote": "it would display a list of you know matches",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5875,
+          "end_char": 5918,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S020",
+              "segment_start": 370,
+              "segment_end": 413,
+              "start_char": 5875,
+              "end_char": 5918
+            }
+          ],
+          "original_locator": {
+            "line_start": 20,
+            "line_end": 20,
+            "start_char": 5505,
+            "end_char": 6394
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S020",
+          "DOC031:S020"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "入口：T020「a search feature... enter keywords」",
+          "结果：T020「display a list of... matches」"
+        ],
+        "unsupported_parts": [
+          "未说明是否用筛选器（频道/人/时间）",
+          "未说明搜索是否覆盖附件内容"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取入口",
+          "2. 取结果",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T019 说用顶部搜索框按关键词找过去的内容。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "用关键词搜回过去的对话与资料。",
+        "label": "direct",
+        "rationale": "T019 说用顶部搜索框按关键词找过去的内容。",
+        "supported_parts": [
+          "入口：T020「a search feature... enter keywords」",
+          "结果：T020「display a list of... matches」"
+        ],
+        "unsupported_parts": [
+          "未说明是否用筛选器（频道/人/时间）",
+          "未说明搜索是否覆盖附件内容"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取入口",
+          "2. 取结果",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC031-C007",
+      "target_kind": "candidate",
+      "statement": "搜索结果要精准，不必在大量历史消息里筛。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC031:S020",
+          "material_id": "M001",
+          "quote": "sometimes when I search for a keyword or keywords, I get way too much information",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6107,
+          "end_char": 6188,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S020",
+              "segment_start": 602,
+              "segment_end": 683,
+              "start_char": 6107,
+              "end_char": 6188
+            }
+          ],
+          "original_locator": {
+            "line_start": 20,
+            "line_end": 20,
+            "start_char": 5505,
+            "end_char": 6394
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC031:S020",
+          "material_id": "M001",
+          "quote": "it's a little difficult to pass through things unless I know exactly what I'm looking for",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6215,
+          "end_char": 6304,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S020",
+              "segment_start": 710,
+              "segment_end": 799,
+              "start_char": 6215,
+              "end_char": 6304
+            }
+          ],
+          "original_locator": {
+            "line_start": 20,
+            "line_end": 20,
+            "start_char": 5505,
+            "end_char": 6394
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S020",
+          "DOC031:S020"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "问题：T020「get way too much information」",
+          "后果：T020「difficult to pass through things」"
+        ],
+        "unsupported_parts": [
+          "未说明可接受的结果条数",
+          "未说明希望按什么维度收窄"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题",
+          "2. 取后果",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T019 说关键词搜出的结果太多，除非确切知道要找什么否则难定位。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "搜索结果要精准，不必在大量历史消息里筛。",
+        "label": "direct",
+        "rationale": "T019 说关键词搜出的结果太多，除非确切知道要找什么否则难定位。",
+        "supported_parts": [
+          "问题：T020「get way too much information」",
+          "后果：T020「difficult to pass through things」"
+        ],
+        "unsupported_parts": [
+          "未说明可接受的结果条数",
+          "未说明希望按什么维度收窄"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题",
+          "2. 取后果",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC031-C008",
+      "target_kind": "candidate",
+      "statement": "在 Slack 内能轻松发起音视频通话，不必绕几层窗口。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC031:S022",
+          "material_id": "M001",
+          "quote": "it's a little harder to have video calls or audio calls",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6774,
+          "end_char": 6829,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S022",
+              "segment_start": 168,
+              "segment_end": 223,
+              "start_char": 6774,
+              "end_char": 6829
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 6606,
+            "end_char": 7030
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC031:S022",
+          "material_id": "M001",
+          "quote": "there are different windows to navigate to to get to that feature",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6913,
+          "end_char": 6978,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S022",
+              "segment_start": 307,
+              "segment_end": 372,
+              "start_char": 6913,
+              "end_char": 6978
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 6606,
+            "end_char": 7030
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S022",
+          "DOC031:S022"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "对比：T022「a little harder to have video calls or audio calls」",
+          "原因：T022「different windows to navigate to」"
+        ],
+        "unsupported_parts": [
+          "未说明实际通话质量",
+          "未说明群组通话的具体问题（T027 只补了一句）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取对比",
+          "2. 取原因",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T021 说从 Teams 转来后觉得通话更难发起，入口要多点几层。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在 Slack 内能轻松发起音视频通话，不必绕几层窗口。",
+        "label": "direct",
+        "rationale": "T021 说从 Teams 转来后觉得通话更难发起，入口要多点几层。",
+        "supported_parts": [
+          "对比：T022「a little harder to have video calls or audio calls」",
+          "原因：T022「different windows to navigate to」"
+        ],
+        "unsupported_parts": [
+          "未说明实际通话质量",
+          "未说明群组通话的具体问题（T027 只补了一句）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取对比",
+          "2. 取原因",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC031-C009",
+      "target_kind": "candidate",
+      "statement": "需要正式沟通时能一键转到邮件客户端给教授/助教发信。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC031:S028",
+          "material_id": "M001",
+          "quote": "I would like a quick email feature",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8294,
+          "end_char": 8328,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S028",
+              "segment_start": 20,
+              "segment_end": 54,
+              "start_char": 8294,
+              "end_char": 8328
+            }
+          ],
+          "original_locator": {
+            "line_start": 28,
+            "line_end": 28,
+            "start_char": 8274,
+            "end_char": 8904
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC031:S028",
+          "material_id": "M001",
+          "quote": "there are certain situations where you know an email is expected",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8421,
+          "end_char": 8485,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S028",
+              "segment_start": 147,
+              "segment_end": 211,
+              "start_char": 8421,
+              "end_char": 8485
+            }
+          ],
+          "original_locator": {
+            "line_start": 28,
+            "line_end": 28,
+            "start_char": 8274,
+            "end_char": 8904
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S028",
+          "DOC031:S028"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "诉求：T028「a quick email feature」",
+          "场景：T028「an email is expected」"
+        ],
+        "unsupported_parts": [
+          "未说明希望跳转到哪个客户端",
+          "未说明是否希望保留往来记录在 Slack"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求",
+          "2. 取场景",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T027 提出快速邮件入口，因为对教授/TA 的正式沟通仍应走邮件。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "需要正式沟通时能一键转到邮件客户端给教授/助教发信。",
+        "label": "direct",
+        "rationale": "T027 提出快速邮件入口，因为对教授/TA 的正式沟通仍应走邮件。",
+        "supported_parts": [
+          "诉求：T028「a quick email feature」",
+          "场景：T028「an email is expected」"
+        ],
+        "unsupported_parts": [
+          "未说明希望跳转到哪个客户端",
+          "未说明是否希望保留往来记录在 Slack"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求",
+          "2. 取场景",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC031-C010",
+      "target_kind": "candidate",
+      "statement": "把窗口缩窄并排多开时，界面仍然好导航。",
+      "document_id": "DOC031",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC031:S032",
+          "material_id": "M001",
+          "quote": "shrink the size of slack browser window",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10032,
+          "end_char": 10071,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S032",
+              "segment_start": 388,
+              "segment_end": 427,
+              "start_char": 10032,
+              "end_char": 10071
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 9644,
+            "end_char": 10209
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC031:S032",
+          "material_id": "M001",
+          "quote": "I feel like it's a little hard to navigate through the application",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10073,
+          "end_char": 10139,
+          "candidate_locations": [
+            {
+              "source_id": "DOC031:S032",
+              "segment_start": 429,
+              "segment_end": 495,
+              "start_char": 10073,
+              "end_char": 10139
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 9644,
+            "end_char": 10209
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC031:S032",
+          "DOC031:S032"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "场景：T032「shrink the size of slack browser window」",
+          "问题：T032「a little hard to navigate through the application」"
+        ],
+        "unsupported_parts": [
+          "未说明在什么宽度以下开始失效",
+          "未说明手机端是否也有类似问题"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取场景",
+          "2. 取问题",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T031 说他习惯并排开三个窗口，缩窄后 Slack 很难导航。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "把窗口缩窄并排多开时，界面仍然好导航。",
+        "label": "direct",
+        "rationale": "T031 说他习惯并排开三个窗口，缩窄后 Slack 很难导航。",
+        "supported_parts": [
+          "场景：T032「shrink the size of slack browser window」",
+          "问题：T032「a little hard to navigate through the application」"
+        ],
+        "unsupported_parts": [
+          "未说明在什么宽度以下开始失效",
+          "未说明手机端是否也有类似问题"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取场景",
+          "2. 取问题",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC031\\tracing\\semantic-judgments.json",
+    "sha256": "e31d5472bb10d153e34d3d92993ee590a7e6aa1ddf92cfbb5e9422b461d0329e"
+  }
+}

@@ -1,0 +1,4370 @@
+{
+  "date": "2026-10-23",
+  "reviewer": "Codex; context-aware authored semantic review, not independent human ground truth",
+  "scope": {
+    "schema_scan_documents": 34,
+    "schema_scan_goals": 398,
+    "targeted_documents": 13,
+    "targeted_goals": 26,
+    "targeted_diagnostics": 5,
+    "sampling": "Purposive boundary/risk cases plus positive controls, not a random sample or all-goal reclassification."
+  },
+  "goal_field_counts": {
+    "goal_id": 398,
+    "statement": 398,
+    "source_candidate_ids": 398,
+    "origin": 398,
+    "actor": 398,
+    "context": 398,
+    "evidence_ids": 398,
+    "trace_status": 398,
+    "review_status": 398
+  },
+  "diagnostic_documents": [
+    "DOC005"
+  ],
+  "diagnostic_category_counts": {
+    "preference": 6,
+    "action": 4,
+    "obstacle": 2
+  },
+  "targeted_verdict_counts": {
+    "representation_gap": 6,
+    "semantic_strengthening": 3,
+    "valid": 12,
+    "source_modality": 5,
+    "boundary": 2,
+    "under_extraction_candidate": 3
+  },
+  "verdict_labels": {
+    "semantic_strengthening": "表述被改强或增加方案约束",
+    "source_modality": "来源模态/显式与推断的边界偏差",
+    "representation_gap": "含义基本忠实，建模角色需明确",
+    "valid": "本次未发现该方面语义偏差",
+    "boundary": "边界案例，保留目标并限制解释",
+    "under_extraction_candidate": "过度过滤导致目标候选遗漏风险"
+  },
+  "literature": [
+    {
+      "title": "Assessing requirements-related risks through probabilistic goals and obstacles",
+      "authors": "Antoine Cailliau; Axel van Lamsweerde",
+      "year": 2013,
+      "url": "https://webperso.info.ucl.ac.be/~avl/files/rej13.pdf",
+      "reviewed_sections": [
+        "2.1 Goal-oriented system modeling",
+        "2.2 Obstacle analysis"
+      ]
+    },
+    {
+      "title": "Specifying and Reasoning about Contextual Preferences in the Goal-oriented Requirements Modelling",
+      "authors": "Botangen et al.",
+      "year": 2018,
+      "url": "https://arxiv.org/abs/1905.06437",
+      "reviewed_sections": [
+        "Introduction",
+        "2.1 Overview of Goal Modelling",
+        "3.2 Contextual Preference Specification"
+      ]
+    }
+  ],
+  "ppt_scope": "Native-text extraction, slides 9–18 and classification slide 12; no claim of diagram/layout inspection.",
+  "cases": [
+    {
+      "item_id": "DOC003-G003",
+      "document_id": "DOC003",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC003-G003",
+        "statement": "中转停留时间不低于最短衔接时间（MCT）的 1.5 倍。",
+        "source_candidate_ids": [
+          "DOC003-C003"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，机票比价用户）",
+        "context": [
+          "MCT 为 IATA 定义的最短衔接时间（含行李转运与最远登机口移动）",
+          "一般取 1.5× 或 2× 作为自设缓冲",
+          "除非有签证限制，否则不介意中转次数本身"
+        ],
+        "evidence_ids": [
+          "E0007",
+          "E0008"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "representation_gap",
+      "verdict_zh": "含义基本忠实，建模角色需明确",
+      "rationale": "1.5×/2×是受访者为安全留出的个人缓冲。当前上下文保留了这一点，目标可以成立；不能把1.5倍误作IATA规定，严格性与可配置性尚未明确。",
+      "recommended_treatment": "保留个人中转安全目标；将缓冲标为涉众自设约束/策略，严格性待确认。IATA相关事实在本轮仅作为受访者说法，未外部核实。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC003",
+          "source_id": "DOC003:T123",
+          "turn": "123",
+          "speaker": "Stakeholder",
+          "text": "Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport. So let me just clarify that Mct is the minimum connection time defined at a iata level. Iata is the organization that regulates and manages airports and airlines everything aerospace around the world. That time is basically. The minimum time somebody would need to connect including taking their luggage out and putting their luggage back in in one airport. going from the furthest away combination of gates. What is the furthest distance they might have to travel. That's how they come up with that time. Just to be safe and to account for delays based on the flight length. I I generally tend to at least go for 1.5 x or 2 x of that for a stopover. That's that's only my motive. I also end up looking. Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries. I like to maintain global access through priority pass. And if I'm in a different city, I wanted to check it out. What's it like. So that's also one factor that goes into it.",
+          "start_char": 43159,
+          "end_char": 44314
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0007",
+            "source_id": "DOC003:S124",
+            "material_id": "M001",
+            "quote": "Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 43159,
+            "end_char": 43289,
+            "candidate_locations": [
+              {
+                "source_id": "DOC003:S124",
+                "segment_start": 20,
+                "segment_end": 150,
+                "start_char": 43159,
+                "end_char": 43289
+              }
+            ],
+            "original_locator": {
+              "line_start": 124,
+              "line_end": 124,
+              "start_char": 43139,
+              "end_char": 44314
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC003:T123",
+              "start_char": 43159,
+              "end_char": 43289
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0008",
+            "source_id": "DOC003:S124",
+            "material_id": "M001",
+            "quote": "I generally tend to at least go for 1.5 x or 2 x of that for a stopover.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 43868,
+            "end_char": 43940,
+            "candidate_locations": [
+              {
+                "source_id": "DOC003:S124",
+                "segment_start": 729,
+                "segment_end": 801,
+                "start_char": 43868,
+                "end_char": 43940
+              }
+            ],
+            "original_locator": {
+              "line_start": 124,
+              "line_end": 124,
+              "start_char": 43139,
+              "end_char": 44314
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC003:T123",
+              "start_char": 43868,
+              "end_char": 43940
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC003-G005",
+      "document_id": "DOC003",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC003-G005",
+        "statement": "避开耗时过长（40–60 小时）与红眼时段的航班，保证行程时长与睡眠。",
+        "source_candidate_ids": [
+          "DOC003-C005"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，机票比价用户）",
+        "context": [
+          "国际航线的「最便宜」列表常被 40–60 小时行程占满",
+          "对红眼航班不完全排斥，但更希望不牺牲夜间睡眠"
+        ],
+        "evidence_ids": [
+          "E0012",
+          "E0013"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "semantic_strengthening",
+      "verdict_zh": "表述被改强或增加方案约束",
+      "rationale": "受访者明确可以接受红眼航班，只是更希望保证睡眠。标题“避开红眼”比该可让步偏好更强，且与自身context相抵触；40–60小时过长行程是另一项权衡，不宜混成统一禁用条件。",
+      "recommended_treatment": "拆为控制行程耗时/保障休息的质量目标与偏好：其他条件合适时优先非红眼，红眼仍可接受。不得自动作为排除所有红眼航班的筛选约束。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC003",
+          "source_id": "DOC003:T073",
+          "turn": "73",
+          "speaker": "Stakeholder",
+          "text": "No, I don't really use it for this purpose. I just look at it to see what are the best options it's giving me, because generally there are dozens of city pairs, and especially when I'm booking international flights. There are so many different combinations of paths that you can take to go from X to Y that the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in. So the best is like a more medium section, like something that balances between price and the time taken. So that's what I refer to when I'm booking international, when I'm booking domestic, it's mostly going through the cheapest tab. And just the options are limited enough that I can figure out something that works for me.",
+          "start_char": 23269,
+          "end_char": 24025
+        },
+        {
+          "document_id": "DOC003",
+          "source_id": "DOC003:T119",
+          "turn": "119",
+          "speaker": "Stakeholder",
+          "text": "It's it's quite subjective and situational, so I'm not fully sure how to do it. But a way to do it would be to say that if I'm like, I said, if I'm transiting on or off from the same city, is it matching up with the schedules of the other modes of transport I'm planning to. Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules. Is it a good time of the day to fly? I would, I mean, I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "start_char": 42368,
+          "end_char": 42910
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0012",
+            "source_id": "DOC003:S074",
+            "material_id": "M001",
+            "quote": "the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 23576,
+            "end_char": 23699,
+            "candidate_locations": [
+              {
+                "source_id": "DOC003:S074",
+                "segment_start": 327,
+                "segment_end": 450,
+                "start_char": 23576,
+                "end_char": 23699
+              }
+            ],
+            "original_locator": {
+              "line_start": 74,
+              "line_end": 74,
+              "start_char": 23249,
+              "end_char": 24025
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC003:T073",
+              "start_char": 23576,
+              "end_char": 23699
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0013",
+            "source_id": "DOC003:S120",
+            "material_id": "M001",
+            "quote": "I don't mind taking a red eye, but I would rather get my night's sleep.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 42839,
+            "end_char": 42910,
+            "candidate_locations": [
+              {
+                "source_id": "DOC003:S120",
+                "segment_start": 491,
+                "segment_end": 562,
+                "start_char": 42839,
+                "end_char": 42910
+              }
+            ],
+            "original_locator": {
+              "line_start": 120,
+              "line_end": 120,
+              "start_char": 42348,
+              "end_char": 42910
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC003:T119",
+              "start_char": 42839,
+              "end_char": 42910
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC003-G008",
+      "document_id": "DOC003",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC003-G008",
+        "statement": "提前约 1–2 个月订票，以换取更好的价格。",
+        "source_candidate_ids": [
+          "DOC003-C008"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，机票比价用户）",
+        "context": [
+          "理想为提前两个月以上；实际常拖到出发前 1–2 周，价格明显更高",
+          "国际长途线曾提前约两个月订"
+        ],
+        "evidence_ids": [
+          "E0020",
+          "E0021"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "representation_gap",
+      "verdict_zh": "含义基本忠实，建模角色需明确",
+      "rationale": "提前订票是获得较好价格的个人策略和理想计划，原文也承认实际经常提前1–2周订。作为涉众策略可保留，不能自动成为系统强制提前期。",
+      "recommended_treatment": "分开记录较好价格这一结果与提前订票这一策略；保留理想/实际差异，不增加强制日期规则。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC003",
+          "source_id": "DOC003:T015",
+          "turn": "15",
+          "speaker": "Stakeholder",
+          "text": "Ideally, I like to do it at least a couple of months before. Unfortunately for my at least my last few domestic flights, it's always ended up being like a 1 or 2 weeks before making them pretty pricey my flight for coming to the Us. Though I I did end up booking that almost like 2 months out. Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal.",
+          "start_char": 2616,
+          "end_char": 3015
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0020",
+            "source_id": "DOC003:S016",
+            "material_id": "M001",
+            "quote": "Ideally, I like to do it at least a couple of months before.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 2616,
+            "end_char": 2676,
+            "candidate_locations": [
+              {
+                "source_id": "DOC003:S016",
+                "segment_start": 20,
+                "segment_end": 80,
+                "start_char": 2616,
+                "end_char": 2676
+              }
+            ],
+            "original_locator": {
+              "line_start": 16,
+              "line_end": 16,
+              "start_char": 2596,
+              "end_char": 3015
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC003:T015",
+              "start_char": 2616,
+              "end_char": 2676
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0021",
+            "source_id": "DOC003:S016",
+            "material_id": "M001",
+            "quote": "Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 2910,
+            "end_char": 3015,
+            "candidate_locations": [
+              {
+                "source_id": "DOC003:S016",
+                "segment_start": 314,
+                "segment_end": 419,
+                "start_char": 2910,
+                "end_char": 3015
+              }
+            ],
+            "original_locator": {
+              "line_start": 16,
+              "line_end": 16,
+              "start_char": 2596,
+              "end_char": 3015
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC003:T015",
+              "start_char": 2910,
+              "end_char": 3015
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC007-G001",
+      "document_id": "DOC007",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC007-G001",
+        "statement": "在忙碌周或只需补常规库存时，用线上采购替代去实体店，以节省时间。",
+        "source_candidate_ids": [
+          "DOC007-C001"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，线上生鲜采购用户）",
+        "context": [
+          "触发条件一：当周安排很忙、没有时间亲自到店",
+          "触发条件二：只需买固定不变的常规商品、无需探索或挑选新品",
+          "履约方式偏好：到店自提（免配送费、门店离家近）而非配送",
+          "自评频率：约每两周一次，不固定"
+        ],
+        "evidence_ids": [
+          "E0001",
+          "E0002",
+          "E0003",
+          "E0004",
+          "E0005",
+          "E0006",
+          "E0007"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "节省忙碌周采购时间是目标，自提优于配送是有费用、距离条件的履约偏好，当前context保存了这个区别。",
+      "recommended_treatment": "保留目标和条件；后续需要方案比较时再结构化自提/配送的条件偏好。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC007",
+          "source_id": "DOC007:T018",
+          "turn": "18",
+          "speaker": "Stakeholder",
+          "text": "Hmm good question, I think. how often do I? Typically, I feel like I. It's not very regular, but maybe, like every 2 weeks or so roughly give or take.",
+          "start_char": 2149,
+          "end_char": 2299
+        },
+        {
+          "document_id": "DOC007",
+          "source_id": "DOC007:T022",
+          "turn": "22",
+          "speaker": "Stakeholder",
+          "text": "Let's see, I feel like this kind of relates to your last question, too. Sometimes I still go to the grocery store in person and other times I don't. So that's I was like trying to figure out about like, how often I do online versus just going person. And to your last question. I think I'll do. My motivation for online grocery shopping are. if I have like, a really busy week, and I don't have time to physically go or if I'm just buying the same things that I always buy and like don't need to explore. So like picking up just my regular stock for the month. I'll just do online.",
+          "start_char": 2626,
+          "end_char": 3207
+        },
+        {
+          "document_id": "DOC007",
+          "source_id": "DOC007:T050",
+          "turn": "50",
+          "speaker": "Stakeholder",
+          "text": "That's a great question. I think now that I'm reflecting on it, it's I'll I never looked at it, and I probably never will, because it contradicts why I'm going online grocery shopping in the 1st place, like I'm really there for efficiency. I'm not there to look around. It's different than me shopping for clothes like these groceries are like exactly what I want. And I don't wanna waste time like randomly exploring grocery items on my computer. I think personally, I prefer exploring in a physical grocery store if I have to do that. But I'm not very big on like cooking, so I don't know if this, maybe someone who cooks more would feel more comfortable navigating an online exploration of ingredients. but yeah, for me, it's just like I'm not interested really in that function when I'm shopping for food online.",
+          "start_char": 11628,
+          "end_char": 12444
+        },
+        {
+          "document_id": "DOC007",
+          "source_id": "DOC007:T056",
+          "turn": "56",
+          "speaker": "Stakeholder",
+          "text": "I typically like picking it up. because I think it's like the perfect balance of cost saving, since I don't have to pay for shipping, but also time saving and I live actually like kind of embarrassingly close to grocery stores that I ship. Be physically going, but it does save a lot of time for me, like wandering through the aisles, and like physically having to go back and forth, and like I don't know the optimal route to go through a grocery store so.",
+          "start_char": 14337,
+          "end_char": 14794
+        },
+        {
+          "document_id": "DOC007",
+          "source_id": "DOC007:T058",
+          "turn": "58",
+          "speaker": "Stakeholder",
+          "text": "Saved me time that way. And then typically pickup is free. at least at target. I actually don't know about whole foods. So then I'll just pick it up myself, because I'm pretty close by, and it's like just in the sweet spot.",
+          "start_char": 14841,
+          "end_char": 15064
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0001",
+            "source_id": "DOC007:S023",
+            "material_id": "M001",
+            "quote": "if I have like, a really busy week, and I don't have time to physically go or if I'm just buying the same things that I always buy and like don't need to explore.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 2968,
+            "end_char": 3130,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S023",
+                "segment_start": 362,
+                "segment_end": 524,
+                "start_char": 2968,
+                "end_char": 3130
+              }
+            ],
+            "original_locator": {
+              "line_start": 23,
+              "line_end": 23,
+              "start_char": 2606,
+              "end_char": 3207
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T022",
+              "start_char": 2968,
+              "end_char": 3130
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0002",
+            "source_id": "DOC007:S023",
+            "material_id": "M001",
+            "quote": "So like picking up just my regular stock for the month. I'll just do online.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 3131,
+            "end_char": 3207,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S023",
+                "segment_start": 525,
+                "segment_end": 601,
+                "start_char": 3131,
+                "end_char": 3207
+              }
+            ],
+            "original_locator": {
+              "line_start": 23,
+              "line_end": 23,
+              "start_char": 2606,
+              "end_char": 3207
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T022",
+              "start_char": 3131,
+              "end_char": 3207
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0003",
+            "source_id": "DOC007:S057",
+            "material_id": "M001",
+            "quote": "it does save a lot of time for me",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 14602,
+            "end_char": 14635,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S057",
+                "segment_start": 285,
+                "segment_end": 318,
+                "start_char": 14602,
+                "end_char": 14635
+              }
+            ],
+            "original_locator": {
+              "line_start": 57,
+              "line_end": 57,
+              "start_char": 14317,
+              "end_char": 14794
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T056",
+              "start_char": 14602,
+              "end_char": 14635
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0004",
+            "source_id": "DOC007:S051",
+            "material_id": "M001",
+            "quote": "I'm really there for efficiency. I'm not there to look around.",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 11835,
+            "end_char": 11897,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S051",
+                "segment_start": 227,
+                "segment_end": 289,
+                "start_char": 11835,
+                "end_char": 11897
+              }
+            ],
+            "original_locator": {
+              "line_start": 51,
+              "line_end": 51,
+              "start_char": 11608,
+              "end_char": 12444
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T050",
+              "start_char": 11835,
+              "end_char": 11897
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0005",
+            "source_id": "DOC007:S057",
+            "material_id": "M001",
+            "quote": "I typically like picking it up. because I think it's like the perfect balance of cost saving",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 14337,
+            "end_char": 14429,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S057",
+                "segment_start": 20,
+                "segment_end": 112,
+                "start_char": 14337,
+                "end_char": 14429
+              }
+            ],
+            "original_locator": {
+              "line_start": 57,
+              "line_end": 57,
+              "start_char": 14317,
+              "end_char": 14794
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T056",
+              "start_char": 14337,
+              "end_char": 14429
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0006",
+            "source_id": "DOC007:S059",
+            "material_id": "M001",
+            "quote": "And then typically pickup is free. at least at target.",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 14865,
+            "end_char": 14919,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S059",
+                "segment_start": 44,
+                "segment_end": 98,
+                "start_char": 14865,
+                "end_char": 14919
+              }
+            ],
+            "original_locator": {
+              "line_start": 59,
+              "line_end": 59,
+              "start_char": 14821,
+              "end_char": 15064
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T058",
+              "start_char": 14865,
+              "end_char": 14919
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0007",
+            "source_id": "DOC007:S019",
+            "material_id": "M001",
+            "quote": "It's not very regular, but maybe, like every 2 weeks or so roughly give or take.",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 2219,
+            "end_char": 2299,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S019",
+                "segment_start": 90,
+                "segment_end": 170,
+                "start_char": 2219,
+                "end_char": 2299
+              }
+            ],
+            "original_locator": {
+              "line_start": 19,
+              "line_end": 19,
+              "start_char": 2129,
+              "end_char": 2299
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T018",
+              "start_char": 2219,
+              "end_char": 2299
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC007-G008",
+      "document_id": "DOC007",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC007-G008",
+        "statement": "在浏览特定类目（如零食）时，获得类似信息流的商品推荐。",
+        "source_candidate_ids": [
+          "DOC007-C008"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，线上生鲜采购用户）",
+        "context": [
+          "仅在有探索意愿的类目下成立（零食为例），与 C002 的「不探索」并存于不同类目",
+          "受访者对该提议用词为「would kind of be interesting」，强度弱于明确需求",
+          "受访者推测平台后台可能已有类似机制"
+        ],
+        "evidence_ids": [
+          "E0031",
+          "E0032",
+          "E0033"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "推荐信息流是弱强度的明确建议，当前context已经保留仅在零食等探索情境成立及would kind of be interesting的语气。与常规补货不探索并不矛盾。",
+      "recommended_treatment": "保留待确认提议与情境，不升级为所有类目必备功能。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC007",
+          "source_id": "DOC007:T046",
+          "turn": "46",
+          "speaker": "Stakeholder",
+          "text": "What I want, but if it's, I guess sometimes there are items like snacks when I want to explore some like other snacks, and I'll type in just like generally like snacks. And then what due to filter, I honest, I don't really think I filter when I'm like trying to explore. It's either like I know exactly what I want, or I'm like, more like, I know, a category of items I want. Then I just like start. Scrolling and it would kind of be interesting if they like made it when I'm scrolling through like more of, or they probably do this on the back end. But like a Facebook news feed where it's like recommending things.",
+          "start_char": 10634,
+          "end_char": 11250
+        },
+        {
+          "document_id": "DOC007",
+          "source_id": "DOC007:T050",
+          "turn": "50",
+          "speaker": "Stakeholder",
+          "text": "That's a great question. I think now that I'm reflecting on it, it's I'll I never looked at it, and I probably never will, because it contradicts why I'm going online grocery shopping in the 1st place, like I'm really there for efficiency. I'm not there to look around. It's different than me shopping for clothes like these groceries are like exactly what I want. And I don't wanna waste time like randomly exploring grocery items on my computer. I think personally, I prefer exploring in a physical grocery store if I have to do that. But I'm not very big on like cooking, so I don't know if this, maybe someone who cooks more would feel more comfortable navigating an online exploration of ingredients. but yeah, for me, it's just like I'm not interested really in that function when I'm shopping for food online.",
+          "start_char": 11628,
+          "end_char": 12444
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0031",
+            "source_id": "DOC007:S047",
+            "material_id": "M001",
+            "quote": "it would kind of be interesting if they like made it when I'm scrolling through like more of, or they probably do this on the back end. But like a Facebook news feed where it's like recommending things.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 11048,
+            "end_char": 11250,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S047",
+                "segment_start": 434,
+                "segment_end": 636,
+                "start_char": 11048,
+                "end_char": 11250
+              }
+            ],
+            "original_locator": {
+              "line_start": 47,
+              "line_end": 47,
+              "start_char": 10614,
+              "end_char": 11250
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T046",
+              "start_char": 11048,
+              "end_char": 11250
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0032",
+            "source_id": "DOC007:S047",
+            "material_id": "M001",
+            "quote": "sometimes there are items like snacks when I want to explore some like other snacks, and I'll type in just like generally like snacks.",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 10668,
+            "end_char": 10802,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S047",
+                "segment_start": 54,
+                "segment_end": 188,
+                "start_char": 10668,
+                "end_char": 10802
+              }
+            ],
+            "original_locator": {
+              "line_start": 47,
+              "line_end": 47,
+              "start_char": 10614,
+              "end_char": 11250
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T046",
+              "start_char": 10668,
+              "end_char": 10802
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0033",
+            "source_id": "DOC007:S051",
+            "material_id": "M001",
+            "quote": "I'm not interested really in that function when I'm shopping for food online.",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 12367,
+            "end_char": 12444,
+            "candidate_locations": [
+              {
+                "source_id": "DOC007:S051",
+                "segment_start": 759,
+                "segment_end": 836,
+                "start_char": 12367,
+                "end_char": 12444
+              }
+            ],
+            "original_locator": {
+              "line_start": 51,
+              "line_end": 51,
+              "start_char": 11608,
+              "end_char": 12444
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC007:T050",
+              "start_char": 12367,
+              "end_char": 12444
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC008-G007",
+      "document_id": "DOC008",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC008-G007",
+        "statement": "语音通话保持稳定，不出现莫名断连。",
+        "source_candidate_ids": [
+          "DOC008-C007"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，Discord 用户，以游戏社交为主）",
+        "context": [
+          "对照：同期其他网络活动正常，问题只在 Discord 通话",
+          "当前应对：只能等它自行恢复"
+        ],
+        "evidence_ids": [
+          "E0019",
+          "E0020",
+          "E0021"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "source_modality",
+      "verdict_zh": "来源模态/显式与推断的边界偏差",
+      "rationale": "原句报告通话随机断连及等待恢复。稳定通话是合理的Maintain目标候选，但从故障陈述到规范性目标的推断没有在explicit/direct标签中体现。不能据此证明故障根因。",
+      "recommended_treatment": "保留断连这一障碍候选，关联连续通话目标；若无另外的明确要求，将目标记为inferred并写出推理和假设。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC008",
+          "source_id": "DOC008:T071",
+          "turn": "71",
+          "speaker": "Stakeholder",
+          "text": "There are a few challenges. I say that I don't. One thing that happened actually, recently. I was in a call with some of my friends, and then randomly, like our our my Wi-fi was fine, like my Wi-fi connection. Everything else on my computer is working fine. But the discord call just kept on like cutting out and everything.",
+          "start_char": 8665,
+          "end_char": 8989
+        },
+        {
+          "document_id": "DOC008",
+          "source_id": "DOC008:T073",
+          "turn": "73",
+          "speaker": "Stakeholder",
+          "text": "Yeah, I couldn't. I really like I had to like, just wait a little bit. and then, like the call would return back to normal. Finally and like, there's sometimes just like discord has some like connectivity issues.",
+          "start_char": 9057,
+          "end_char": 9269
+        },
+        {
+          "document_id": "DOC008",
+          "source_id": "DOC008:T075",
+          "turn": "75",
+          "speaker": "Stakeholder",
+          "text": "Yeah, like, my, my computer is connected to the Wi-fi was perfectly fine.",
+          "start_char": 9371,
+          "end_char": 9444
+        },
+        {
+          "document_id": "DOC008",
+          "source_id": "DOC008:T077",
+          "turn": "77",
+          "speaker": "Stakeholder",
+          "text": "I kind of just manage it myself a lot of times. I just have to wait for a problem to like. Just roll over.",
+          "start_char": 9610,
+          "end_char": 9716
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0019",
+            "source_id": "DOC008:S072",
+            "material_id": "M001",
+            "quote": "the discord call just kept on like cutting out and everything.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 8927,
+            "end_char": 8989,
+            "candidate_locations": [
+              {
+                "source_id": "DOC008:S072",
+                "segment_start": 282,
+                "segment_end": 344,
+                "start_char": 8927,
+                "end_char": 8989
+              }
+            ],
+            "original_locator": {
+              "line_start": 72,
+              "line_end": 72,
+              "start_char": 8645,
+              "end_char": 8989
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC008:T071",
+              "start_char": 8927,
+              "end_char": 8989
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0020",
+            "source_id": "DOC008:S074",
+            "material_id": "M001",
+            "quote": "there's sometimes just like discord has some like connectivity issues.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 9199,
+            "end_char": 9269,
+            "candidate_locations": [
+              {
+                "source_id": "DOC008:S074",
+                "segment_start": 162,
+                "segment_end": 232,
+                "start_char": 9199,
+                "end_char": 9269
+              }
+            ],
+            "original_locator": {
+              "line_start": 74,
+              "line_end": 74,
+              "start_char": 9037,
+              "end_char": 9269
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC008:T073",
+              "start_char": 9199,
+              "end_char": 9269
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0021",
+            "source_id": "DOC008:S078",
+            "material_id": "M001",
+            "quote": "I kind of just manage it myself a lot of times. I just have to wait for a problem to like. Just roll over.",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 9610,
+            "end_char": 9716,
+            "candidate_locations": [
+              {
+                "source_id": "DOC008:S078",
+                "segment_start": 20,
+                "segment_end": 126,
+                "start_char": 9610,
+                "end_char": 9716
+              }
+            ],
+            "original_locator": {
+              "line_start": 78,
+              "line_end": 78,
+              "start_char": 9590,
+              "end_char": 9716
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC008:T077",
+              "start_char": 9610,
+              "end_char": 9716
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC014-G008",
+      "document_id": "DOC014",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC014-G008",
+        "statement": "界面配色更素净（纯黑或纯白），而不是现在的暗蓝色。",
+        "source_candidate_ids": [
+          "DOC014-C008"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+        "context": [
+          "与广告并列为界面上的两处不满"
+        ],
+        "evidence_ids": [
+          "E0021",
+          "E0022"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "representation_gap",
+      "verdict_zh": "含义基本忠实，建模角色需明确",
+      "rationale": "原文明确偏好黑色或白色界面，足以支持外观改善目标候选。偏好进入目标列表本身不构成错误，但黑/白是备选方案，不能要求同时满足，也未承诺必须改色。",
+      "recommended_treatment": "保留外观偏好及黑/白备选，不标成必选方案或无依据功能需求。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC014",
+          "source_id": "DOC014:T035",
+          "turn": "35",
+          "speaker": "Stakeholder",
+          "text": "I think probably the ads, and maybe the color scheme, too, because, like the background, is like a dull blue, which I don't really like, you know, they could just make it plain black or plain white. And I would prefer that. But yeah. maybe that year.",
+          "start_char": 12493,
+          "end_char": 12743
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0021",
+            "source_id": "DOC014:S036",
+            "material_id": "M001",
+            "quote": "the background, is like a dull blue, which I don't really like",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 12566,
+            "end_char": 12628,
+            "candidate_locations": [
+              {
+                "source_id": "DOC014:S036",
+                "segment_start": 93,
+                "segment_end": 155,
+                "start_char": 12566,
+                "end_char": 12628
+              }
+            ],
+            "original_locator": {
+              "line_start": 36,
+              "line_end": 36,
+              "start_char": 12473,
+              "end_char": 12743
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC014:T035",
+              "start_char": 12566,
+              "end_char": 12628
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0022",
+            "source_id": "DOC014:S036",
+            "material_id": "M001",
+            "quote": "they could just make it plain black or plain white",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 12640,
+            "end_char": 12690,
+            "candidate_locations": [
+              {
+                "source_id": "DOC014:S036",
+                "segment_start": 167,
+                "segment_end": 217,
+                "start_char": 12640,
+                "end_char": 12690
+              }
+            ],
+            "original_locator": {
+              "line_start": 36,
+              "line_end": 36,
+              "start_char": 12473,
+              "end_char": 12743
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC014:T035",
+              "start_char": 12640,
+              "end_char": 12690
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC014-G010",
+      "document_id": "DOC014",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC014-G010",
+        "statement": "默认不接收天气通知，需要时再自行打开。",
+        "source_candidate_ids": [
+          "DOC014-C010"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+        "context": [
+          "自述在电脑上偏好零通知",
+          "通过浏览器站点设置关闭通知权限"
+        ],
+        "evidence_ids": [
+          "E0026",
+          "E0027"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "semantic_strengthening",
+      "verdict_zh": "表述被改强或增加方案约束",
+      "rationale": "原文说本人在PC上偏好关闭通知并已自行关闭，没有规定产品初始默认值。标题增加“默认”引入了设置状态/产品行为含义。",
+      "recommended_treatment": "改为本人在电脑上倾向不接收通知，需要时自主打开；产品默认状态保持未决，不由个人习惯直接推出。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC014",
+          "source_id": "DOC014:T055",
+          "turn": "55",
+          "speaker": "Stakeholder",
+          "text": "No, I think, besides, one notification a day. I don't really get it, but I don't really use it that much. I usually prefer no notifications, like, when I'm on my Mac, like on my PC, basically, so yeah, usually the notifications are off. But I yeah, if I do set it on. It's usually just like a highlight of the next days, you know whether",
+          "start_char": 17030,
+          "end_char": 17367
+        },
+        {
+          "document_id": "DOC014",
+          "source_id": "DOC014:T057",
+          "turn": "57",
+          "speaker": "Stakeholder",
+          "text": "Yeah, I just prefer it off. So I've kept it off.",
+          "start_char": 17448,
+          "end_char": 17496
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0026",
+            "source_id": "DOC014:S056",
+            "material_id": "M001",
+            "quote": "I usually prefer no notifications",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 17136,
+            "end_char": 17169,
+            "candidate_locations": [
+              {
+                "source_id": "DOC014:S056",
+                "segment_start": 126,
+                "segment_end": 159,
+                "start_char": 17136,
+                "end_char": 17169
+              }
+            ],
+            "original_locator": {
+              "line_start": 56,
+              "line_end": 56,
+              "start_char": 17010,
+              "end_char": 17367
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC014:T055",
+              "start_char": 17136,
+              "end_char": 17169
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0027",
+            "source_id": "DOC014:S058",
+            "material_id": "M001",
+            "quote": "I just prefer it off. So I've kept it off.",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 17454,
+            "end_char": 17496,
+            "candidate_locations": [
+              {
+                "source_id": "DOC014:S058",
+                "segment_start": 26,
+                "segment_end": 68,
+                "start_char": 17454,
+                "end_char": 17496
+              }
+            ],
+            "original_locator": {
+              "line_start": 58,
+              "line_end": 58,
+              "start_char": 17428,
+              "end_char": 17496
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC014:T057",
+              "start_char": 17454,
+              "end_char": 17496
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC014-G012",
+      "document_id": "DOC014",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC014-G012",
+        "statement": "位置数据只留在本地、不被留存，也不因账号泄露而暴露所在城市。",
+        "source_candidate_ids": [
+          "DOC014-C012"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+        "context": [
+          "推断：位置存在本地浏览器缓存，清缓存即可清除",
+          "顾虑集中在已登录状态下的泄露风险"
+        ],
+        "evidence_ids": [
+          "E0030",
+          "E0031",
+          "E0032"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "semantic_strengthening",
+      "verdict_zh": "表述被改强或增加方案约束",
+      "rationale": "原文多次明确本地缓存只是猜测，并表达登录后泄露城市的条件性担忧。输出把猜测变成只存本地/不留存的明确方案目标，explicit/direct不足以支持整句。隐私意图有依据，本地唯一存储架构未被确认。",
+      "recommended_treatment": "保留防止未授权披露位置的隐私目标候选、泄露风险和登录条件；缓存位置记为未证实信念，本地存储仅作为待评估方案。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC014",
+          "source_id": "DOC014:T061",
+          "turn": "61",
+          "speaker": "Stakeholder",
+          "text": "Yeah, I'm I'm pretty sure it's it's like stored in my local chrome cache. I don't think they are storing it. That's that's my guess, though I'm I'm not 100% sure, cause I cause I rarely logging log into the application. But it still shows me the city. So yeah, I think if it's in my local cache, you know, I can always just clear it from my cache, and the data is gone right. I don't have to worry about it being stored anywhere. If I am logged in, though, I might be a little worried, because if there is a leak, then someone can identify which city I'm from or like, at least you know, guess which city I may may have been from just based on my email and the cities that I've said. So yeah, a leak could be a little scary. But other than that, I'm not. I'm not too worried about the privacy aspect.",
+          "start_char": 18425,
+          "end_char": 19225
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0030",
+            "source_id": "DOC014:S062",
+            "material_id": "M001",
+            "quote": "if it's in my local cache, you know, I can always just clear it from my cache, and the data is gone",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 18694,
+            "end_char": 18793,
+            "candidate_locations": [
+              {
+                "source_id": "DOC014:S062",
+                "segment_start": 289,
+                "segment_end": 388,
+                "start_char": 18694,
+                "end_char": 18793
+              }
+            ],
+            "original_locator": {
+              "line_start": 62,
+              "line_end": 62,
+              "start_char": 18405,
+              "end_char": 19225
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC014:T061",
+              "start_char": 18694,
+              "end_char": 18793
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0031",
+            "source_id": "DOC014:S062",
+            "material_id": "M001",
+            "quote": "If I am logged in, though, I might be a little worried",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 18855,
+            "end_char": 18909,
+            "candidate_locations": [
+              {
+                "source_id": "DOC014:S062",
+                "segment_start": 450,
+                "segment_end": 504,
+                "start_char": 18855,
+                "end_char": 18909
+              }
+            ],
+            "original_locator": {
+              "line_start": 62,
+              "line_end": 62,
+              "start_char": 18405,
+              "end_char": 19225
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC014:T061",
+              "start_char": 18855,
+              "end_char": 18909
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0032",
+            "source_id": "DOC014:S062",
+            "material_id": "M001",
+            "quote": "a leak could be a little scary",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 19118,
+            "end_char": 19148,
+            "candidate_locations": [
+              {
+                "source_id": "DOC014:S062",
+                "segment_start": 713,
+                "segment_end": 743,
+                "start_char": 19118,
+                "end_char": 19148
+              }
+            ],
+            "original_locator": {
+              "line_start": 62,
+              "line_end": 62,
+              "start_char": 18405,
+              "end_char": 19225
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC014:T061",
+              "start_char": 19118,
+              "end_char": 19148
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC015-G001",
+      "document_id": "DOC015",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC015-G001",
+        "statement": "用户一登录就能看到贴合自己的内容（推荐系统为最高优先级）。",
+        "source_candidate_ids": [
+          "DOC015-C001"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+        "context": [
+          "自述为当前第一优先级",
+          "优先级排序：推荐 > 无障碍 > 社区 > 创作者工具"
+        ],
+        "evidence_ids": [
+          "E0001",
+          "E0002"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "个性化推荐是目标，最高优先级是附加排序；两者可以同时成立。",
+      "recommended_treatment": "保留目标，另表达推荐>无障碍>社区>创作者工具的排序，不把较低优先级等同可删除。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC015",
+          "source_id": "DOC015:T017",
+          "turn": "17",
+          "speaker": "Stakeholder",
+          "text": "Oh, okay, so as of now, I would say, our primary goals are, you know, focusing on the recommendation system. Since you know, the Ml. Hype train is so much right now, so giving the users the right experience as soon as they log on to spotify is our main goal. You know, podcast is one thing that even people with special needs can listen to so improving accessibility features in our platform is of utmost importance to us. And apart from that, you know, just strengthening the overall community engagement among listeners. And if you'd asked me to prioritize it I would say the recommendations comes in at 1st followed by the accessibility. Then comes, you know, the community engagement, and the tools that we can offer to the creators to stay on our platform.",
+          "start_char": 3568,
+          "end_char": 4329
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0001",
+            "source_id": "DOC015:S018",
+            "material_id": "M001",
+            "quote": "giving the users the right experience as soon as they log on to spotify is our main goal",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 3737,
+            "end_char": 3825,
+            "candidate_locations": [
+              {
+                "source_id": "DOC015:S018",
+                "segment_start": 189,
+                "segment_end": 277,
+                "start_char": 3737,
+                "end_char": 3825
+              }
+            ],
+            "original_locator": {
+              "line_start": 18,
+              "line_end": 18,
+              "start_char": 3548,
+              "end_char": 4329
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC015:T017",
+              "start_char": 3737,
+              "end_char": 3825
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0002",
+            "source_id": "DOC015:S018",
+            "material_id": "M001",
+            "quote": "if you'd asked me to prioritize it I would say the recommendations comes in at 1st",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 4095,
+            "end_char": 4177,
+            "candidate_locations": [
+              {
+                "source_id": "DOC015:S018",
+                "segment_start": 547,
+                "segment_end": 629,
+                "start_char": 4095,
+                "end_char": 4177
+              }
+            ],
+            "original_locator": {
+              "line_start": 18,
+              "line_end": 18,
+              "start_char": 3548,
+              "end_char": 4329
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC015:T017",
+              "start_char": 4095,
+              "end_char": 4177
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC015-G002",
+      "document_id": "DOC015",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC015-G002",
+        "statement": "播客对特殊需求用户可用：转录与字幕、语音与键盘导航（第二优先级）。",
+        "source_candidate_ids": [
+          "DOC015-C002"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+        "context": [
+          "自评无障碍曾是技术欠账，最近才开始补",
+          "理由：播客是特殊需求用户也能消费的媒介"
+        ],
+        "evidence_ids": [
+          "E0003",
+          "E0004",
+          "E0005"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "无障碍能力是目标，其第二优先级是相对排序，不能因此降为非目标。",
+      "recommended_treatment": "保留无障碍目标和排序；是否强制履行不能仅由排名判断。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC015",
+          "source_id": "DOC015:T017",
+          "turn": "17",
+          "speaker": "Stakeholder",
+          "text": "Oh, okay, so as of now, I would say, our primary goals are, you know, focusing on the recommendation system. Since you know, the Ml. Hype train is so much right now, so giving the users the right experience as soon as they log on to spotify is our main goal. You know, podcast is one thing that even people with special needs can listen to so improving accessibility features in our platform is of utmost importance to us. And apart from that, you know, just strengthening the overall community engagement among listeners. And if you'd asked me to prioritize it I would say the recommendations comes in at 1st followed by the accessibility. Then comes, you know, the community engagement, and the tools that we can offer to the creators to stay on our platform.",
+          "start_char": 3568,
+          "end_char": 4329
+        },
+        {
+          "document_id": "DOC015",
+          "source_id": "DOC015:T043",
+          "turn": "43",
+          "speaker": "Stakeholder",
+          "text": "Oh, okay, great question. So yeah. One of the features that you know, I wish we did sooner was bringing on people from multiple ethnic backgrounds. And you know, varying languages onto our podcast while we just focused majorly on the English speaking audience. So in terms of scalability, that's what we've started. Now, we've slowly started to onboard people from all over the world onto our platform. When it comes to tech. I guess. you know, the usual scalability challenges. While we try and implement more AI driven recommendation systems and stuff. We really don't wanna process such huge amounts of data that it kind of ruins the user experience because of the low, latent high latency and the low loading times due to the you know the computationally expensive resources that it takes. And you know, we also one thing that was a technical limitation on our side was not enabling the accessibility stuff which I mentioned earlier, so supporting multiple languages, allowing the users to navigate, spotify via voice or via their keyboards. So this is one thing that we really avoided and have recently started implementing. And yeah, one thing that I haven't mentioned is maintaining consistent sort of behavior throughout all the devices, you know. Be it an ipad or Samsung mobile phone or an apple phone we try and ensure the apps. Performance is consistent throughout all the devices.",
+          "start_char": 15961,
+          "end_char": 17354
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0003",
+            "source_id": "DOC015:S018",
+            "material_id": "M001",
+            "quote": "improving accessibility features in our platform is of utmost importance to us",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 3911,
+            "end_char": 3989,
+            "candidate_locations": [
+              {
+                "source_id": "DOC015:S018",
+                "segment_start": 363,
+                "segment_end": 441,
+                "start_char": 3911,
+                "end_char": 3989
+              }
+            ],
+            "original_locator": {
+              "line_start": 18,
+              "line_end": 18,
+              "start_char": 3548,
+              "end_char": 4329
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC015:T017",
+              "start_char": 3911,
+              "end_char": 3989
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0004",
+            "source_id": "DOC015:S044",
+            "material_id": "M001",
+            "quote": "allowing the users to navigate, spotify via voice or via their keyboards",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 16933,
+            "end_char": 17005,
+            "candidate_locations": [
+              {
+                "source_id": "DOC015:S044",
+                "segment_start": 992,
+                "segment_end": 1064,
+                "start_char": 16933,
+                "end_char": 17005
+              }
+            ],
+            "original_locator": {
+              "line_start": 44,
+              "line_end": 44,
+              "start_char": 15941,
+              "end_char": 17354
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC015:T043",
+              "start_char": 16933,
+              "end_char": 17005
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0005",
+            "source_id": "DOC015:S018",
+            "material_id": "M001",
+            "quote": "podcast is one thing that even people with special needs can listen to",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 3837,
+            "end_char": 3907,
+            "candidate_locations": [
+              {
+                "source_id": "DOC015:S018",
+                "segment_start": 289,
+                "segment_end": 359,
+                "start_char": 3837,
+                "end_char": 3907
+              }
+            ],
+            "original_locator": {
+              "line_start": 18,
+              "line_end": 18,
+              "start_char": 3548,
+              "end_char": 4329
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC015:T017",
+              "start_char": 3837,
+              "end_char": 3907
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC015-G003",
+      "document_id": "DOC015",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC015-G003",
+        "statement": "强化听众之间的社区参与（第三优先级）。",
+        "source_candidate_ids": [
+          "DOC015-C003"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+        "context": [
+          "手段：歌单式播放列表、点赞与保存、主题小组与论坛、直播与创作者问答"
+        ],
+        "evidence_ids": [
+          "E0006",
+          "E0007"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "社区参与是目标，第三优先级是目标间偏好，现有文本保留了含义。",
+      "recommended_treatment": "保留社区目标及相对排序，不将排序当精化或冲突关系。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC015",
+          "source_id": "DOC015:T017",
+          "turn": "17",
+          "speaker": "Stakeholder",
+          "text": "Oh, okay, so as of now, I would say, our primary goals are, you know, focusing on the recommendation system. Since you know, the Ml. Hype train is so much right now, so giving the users the right experience as soon as they log on to spotify is our main goal. You know, podcast is one thing that even people with special needs can listen to so improving accessibility features in our platform is of utmost importance to us. And apart from that, you know, just strengthening the overall community engagement among listeners. And if you'd asked me to prioritize it I would say the recommendations comes in at 1st followed by the accessibility. Then comes, you know, the community engagement, and the tools that we can offer to the creators to stay on our platform.",
+          "start_char": 3568,
+          "end_char": 4329
+        },
+        {
+          "document_id": "DOC015",
+          "source_id": "DOC015:T037",
+          "turn": "37",
+          "speaker": "Stakeholder",
+          "text": "Okay, okay. So we try. And you know, within the podcast itself, like, we'll have a share button or a rate button, for example. And so this kind of tells users who are currently looking at that podcast about how others feel about it and we also started this new feature, basically where you know, anyone and everyone can create their own playlists and people can like and even save that playlist for a matter of fact. So a particular playlist can have, you know, let's say, a, podcast that talks about geopolitics. Let's say so this also really helps try and bring communities together, communities of users. And we also try and create a theme based groups and forums. Basically like, I explained. And we also started recently hosting live events. So offering live podcast sessions and QA, with creators.",
+          "start_char": 11685,
+          "end_char": 12488
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0006",
+            "source_id": "DOC015:S018",
+            "material_id": "M001",
+            "quote": "strengthening the overall community engagement among listeners",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 4027,
+            "end_char": 4089,
+            "candidate_locations": [
+              {
+                "source_id": "DOC015:S018",
+                "segment_start": 479,
+                "segment_end": 541,
+                "start_char": 4027,
+                "end_char": 4089
+              }
+            ],
+            "original_locator": {
+              "line_start": 18,
+              "line_end": 18,
+              "start_char": 3548,
+              "end_char": 4329
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC015:T017",
+              "start_char": 4027,
+              "end_char": 4089
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0007",
+            "source_id": "DOC015:S038",
+            "material_id": "M001",
+            "quote": "anyone and everyone can create their own playlists and people can like and even save that playlist",
+            "evidence_role": "context",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 11981,
+            "end_char": 12079,
+            "candidate_locations": [
+              {
+                "source_id": "DOC015:S038",
+                "segment_start": 316,
+                "segment_end": 414,
+                "start_char": 11981,
+                "end_char": 12079
+              }
+            ],
+            "original_locator": {
+              "line_start": 38,
+              "line_end": 38,
+              "start_char": 11665,
+              "end_char": 12488
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC015:T037",
+              "start_char": 11981,
+              "end_char": 12079
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC015-G004",
+      "document_id": "DOC015",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC015-G004",
+        "statement": "为创作者提供留在平台的工具（第四优先级）。",
+        "source_candidate_ids": [
+          "DOC015-C004"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，Spotify 播客创新负责人，以平台目标视角作答）",
+        "context": [
+          "与创作者协作、听取其需求",
+          "提供优化建议等创作者侧能力"
+        ],
+        "evidence_ids": [
+          "E0008",
+          "E0009"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "创作者工具是平台目标，第四优先级本身不意味着可选或无需求价值。",
+      "recommended_treatment": "保留目标及排序；如需mandatory/optional应另取证。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC015",
+          "source_id": "DOC015:T017",
+          "turn": "17",
+          "speaker": "Stakeholder",
+          "text": "Oh, okay, so as of now, I would say, our primary goals are, you know, focusing on the recommendation system. Since you know, the Ml. Hype train is so much right now, so giving the users the right experience as soon as they log on to spotify is our main goal. You know, podcast is one thing that even people with special needs can listen to so improving accessibility features in our platform is of utmost importance to us. And apart from that, you know, just strengthening the overall community engagement among listeners. And if you'd asked me to prioritize it I would say the recommendations comes in at 1st followed by the accessibility. Then comes, you know, the community engagement, and the tools that we can offer to the creators to stay on our platform.",
+          "start_char": 3568,
+          "end_char": 4329
+        },
+        {
+          "document_id": "DOC015",
+          "source_id": "DOC015:T023",
+          "turn": "23",
+          "speaker": "Stakeholder",
+          "text": "Oh, great question, great question. So so we ensure our high quality standards by you know, for each and every, podcast we provide transcriptions and closed captions. So we essentially give the users away. Multiple ways in fact to you know watch or get the experience of a podcast so this in turn, helps people with special needs also to get a hold of our content and enjoy it to the utmost point. And we also implement our content moderation tools. So basically using machine requirements to detect and flag inappropriate content. So you know, we just don't want it to be an anarchy at the end of the day, at spotify where anyone just uploads anything. and we also offer content optimization suggestions. So we give creators some sort of insights, and that in turn helps improve their podcasts.",
+          "start_char": 5649,
+          "end_char": 6444
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0008",
+            "source_id": "DOC015:S018",
+            "material_id": "M001",
+            "quote": "the tools that we can offer to the creators to stay on our platform",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 4261,
+            "end_char": 4328,
+            "candidate_locations": [
+              {
+                "source_id": "DOC015:S018",
+                "segment_start": 713,
+                "segment_end": 780,
+                "start_char": 4261,
+                "end_char": 4328
+              }
+            ],
+            "original_locator": {
+              "line_start": 18,
+              "line_end": 18,
+              "start_char": 3548,
+              "end_char": 4329
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC015:T017",
+              "start_char": 4261,
+              "end_char": 4328
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0009",
+            "source_id": "DOC015:S024",
+            "material_id": "M001",
+            "quote": "we also offer content optimization suggestions",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 6307,
+            "end_char": 6353,
+            "candidate_locations": [
+              {
+                "source_id": "DOC015:S024",
+                "segment_start": 678,
+                "segment_end": 724,
+                "start_char": 6307,
+                "end_char": 6353
+              }
+            ],
+            "original_locator": {
+              "line_start": 24,
+              "line_end": 24,
+              "start_char": 5629,
+              "end_char": 6444
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC015:T023",
+              "start_char": 6307,
+              "end_char": 6353
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC017-G004",
+      "document_id": "DOC017",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC017-G004",
+        "statement": "按角色匹配度、薪资、地点、公司声誉的顺序权衡是否投递。",
+        "source_candidate_ids": [
+          "DOC017-C004"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+        "context": [
+          "自述为明确的优先级顺序"
+        ],
+        "evidence_ids": [
+          "E0009"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "representation_gap",
+      "verdict_zh": "含义基本忠实，建模角色需明确",
+      "rationale": "主体内容是投递决策中各评价标准的优先顺序。文本忠实，但将其仅作普通目标节点，后续难以区分决策偏好和希望达到的结果。",
+      "recommended_treatment": "表示为选择合适职位目标下的评价标准排序：角色匹配度>薪资>地点>公司声誉；不增加任何具体阈值。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC017",
+          "source_id": "DOC017:T019",
+          "turn": "19",
+          "speaker": "Stakeholder",
+          "text": "Okay, so one is the role like, I'll see if the role is really interesting. And I'm suitable for that role second is the payment. And then comes the location. And of course the company reputation. So, considering all these factors, I think I'll be like writing, seeing the job listing. And yeah, I'll apply for it.",
+          "start_char": 4428,
+          "end_char": 4741
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0009",
+            "source_id": "DOC017:S020",
+            "material_id": "M001",
+            "quote": "one is the role like, I'll see if the role is really interesting. And I'm suitable for that role second is the payment. And then comes the location. And of course the company reputation",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 4437,
+            "end_char": 4622,
+            "candidate_locations": [
+              {
+                "source_id": "DOC017:S020",
+                "segment_start": 29,
+                "segment_end": 214,
+                "start_char": 4437,
+                "end_char": 4622
+              }
+            ],
+            "original_locator": {
+              "line_start": 20,
+              "line_end": 20,
+              "start_char": 4408,
+              "end_char": 4741
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC017:T019",
+              "start_char": 4437,
+              "end_char": 4622
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC020-G011",
+      "document_id": "DOC020",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC020-G011",
+        "statement": "重要邮件不被自动分类误判进垃圾箱。",
+        "source_candidate_ids": [
+          "DOC020-C011"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，2001 年出生的学生，正在求职）",
+        "context": [
+          "自述第一个痛点",
+          "取舍偏好：宁可多收垃圾，也不愿漏掉重要邮件"
+        ],
+        "evidence_ids": [
+          "E0023",
+          "E0024"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "重要邮件不误入垃圾箱是Avoid目标，不是因为含否定词就变成障碍。误分类是障碍候选，宁可多收垃圾也不漏重要邮件是取舍偏好，当前context已经保留。",
+      "recommended_treatment": "保留目标；如扩展模型，可将误分类链接到该目标，并表达降低重要邮件漏判优先于减少垃圾邮件。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC020",
+          "source_id": "DOC020:T025",
+          "turn": "25",
+          "speaker": "Stakeholder",
+          "text": "Yeah, sure. So, the 1st challenge I think about is that the function of usually for emails on provider, they would give this function of mark your email as like, categorize your email automatically. But sometimes there are some important emails that will like end up in the spans folder.",
+          "start_char": 7986,
+          "end_char": 8273
+        },
+        {
+          "document_id": "DOC020",
+          "source_id": "DOC020:T027",
+          "turn": "27",
+          "speaker": "Stakeholder",
+          "text": "Which is a little bit annoying to me. because I would rather receive some spans instead of ignoring some important messages. Yeah, I think that's 1 difficulties and another one would probably be of the function of unsending effort. An email. So, for for now I cause I use Gmail. And after you're sending an email, you could cancel the sending action in 3 seconds.",
+          "start_char": 8319,
+          "end_char": 8682
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0023",
+            "source_id": "DOC020:S026",
+            "material_id": "M001",
+            "quote": "there are some important emails that will like end up in the spans folder",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 8199,
+            "end_char": 8272,
+            "candidate_locations": [
+              {
+                "source_id": "DOC020:S026",
+                "segment_start": 233,
+                "segment_end": 306,
+                "start_char": 8199,
+                "end_char": 8272
+              }
+            ],
+            "original_locator": {
+              "line_start": 26,
+              "line_end": 26,
+              "start_char": 7966,
+              "end_char": 8273
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC020:T025",
+              "start_char": 8199,
+              "end_char": 8272
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0024",
+            "source_id": "DOC020:S028",
+            "material_id": "M001",
+            "quote": "I would rather receive some spans instead of ignoring some important messages",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 8365,
+            "end_char": 8442,
+            "candidate_locations": [
+              {
+                "source_id": "DOC020:S028",
+                "segment_start": 66,
+                "segment_end": 143,
+                "start_char": 8365,
+                "end_char": 8442
+              }
+            ],
+            "original_locator": {
+              "line_start": 28,
+              "line_end": 28,
+              "start_char": 8299,
+              "end_char": 8682
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC020:T027",
+              "start_char": 8365,
+              "end_char": 8442
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC020-G015",
+      "document_id": "DOC020",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC020-G015",
+        "statement": "只在真正重要时收到提醒，且重要性的判定足够可靠才愿意依赖。",
+        "source_candidate_ids": [
+          "DOC020-C015"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，2001 年出生的学生，正在求职）",
+        "context": [
+          "现状：应用没有可靠办法区分重要邮件",
+          "态度：宁可不用，也不依赖会漏判的 AI 判定"
+        ],
+        "evidence_ids": [
+          "E0036",
+          "E0037"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "可靠性达到足够程度后才愿依赖提醒，是有条件的目标/接受态度。当前标题保留了条件，没有给出不存在的准确率阈值。",
+      "recommended_treatment": "保留条件和待确认的可靠程度，不擅自添加百分比指标。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC020",
+          "source_id": "DOC020:T059",
+          "turn": "59",
+          "speaker": "Stakeholder",
+          "text": "Yeah, I think it would be good to receive notification for some important messages. But I think the point is that for current application. There is no a very good way to identify important messages from the others. Yeah, so I don't. I would probably not want to rely on that. Unless it's really reliable. So, for example, if we have this function of AI not find me the important message. But sometimes AI would miss some important message, and for me it would probably be better to not fully rely on it. Yeah.",
+          "start_char": 16012,
+          "end_char": 16521
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0036",
+            "source_id": "DOC020:S060",
+            "material_id": "M001",
+            "quote": "it would be good to receive notification for some important messages",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 16026,
+            "end_char": 16094,
+            "candidate_locations": [
+              {
+                "source_id": "DOC020:S060",
+                "segment_start": 34,
+                "segment_end": 102,
+                "start_char": 16026,
+                "end_char": 16094
+              }
+            ],
+            "original_locator": {
+              "line_start": 60,
+              "line_end": 60,
+              "start_char": 15992,
+              "end_char": 16521
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC020:T059",
+              "start_char": 16026,
+              "end_char": 16094
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0037",
+            "source_id": "DOC020:S060",
+            "material_id": "M001",
+            "quote": "I would probably not want to rely on that. Unless it's really reliable",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 16245,
+            "end_char": 16315,
+            "candidate_locations": [
+              {
+                "source_id": "DOC020:S060",
+                "segment_start": 253,
+                "segment_end": 323,
+                "start_char": 16245,
+                "end_char": 16315
+              }
+            ],
+            "original_locator": {
+              "line_start": 60,
+              "line_end": 60,
+              "start_char": 15992,
+              "end_char": 16521
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC020:T059",
+              "start_char": 16245,
+              "end_char": 16315
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC023-G008",
+      "document_id": "DOC023",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC023-G008",
+        "statement": "搜索结果精确命中目标人群，不必翻大量不对口的人。",
+        "source_candidate_ids": [
+          "DOC023-C008"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，在 LinkedIn 上寻找实习与全职机会的学生）",
+        "context": [
+          "现状：结果常只满足一个条件或都不满足"
+        ],
+        "evidence_ids": [
+          "E0016",
+          "E0017"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "原文不仅陈述困难，也说明所寻找的人群和希望得到更精确背景结果。不能机械地因出现抱怨就把整项目标判错或强制改成inferred。精度改善是有依据的目标。",
+      "recommended_treatment": "保留目标；将不相关结果作为障碍候选。对“精确命中”的可检验标准保留未决。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC023",
+          "source_id": "DOC023:T011",
+          "turn": "11",
+          "speaker": "Stakeholder",
+          "text": "So let me just go answer this question in 2 parts. So the 1st part is like, when I'm looking. applying for a certain position, like, for example, like the A role at company, then only company employee is able to refer me. So that's the reason for me to add the company name to the to the when I was doing the searching and the reason for me to add my university to the search. keywords is that, I think? Students who attend the same university tends to like want to help the alumni. or like. So a current student. because they may have, like a great experience in the university. and this will increase their their wellness or the possibility that they want to refer me.",
+          "start_char": 4363,
+          "end_char": 5033
+        },
+        {
+          "document_id": "DOC023",
+          "source_id": "DOC023:T013",
+          "turn": "13",
+          "speaker": "Stakeholder",
+          "text": "Actually, yeah. So, as I mentioned, like previously. So Linking doesn't like always provides me with the result I want. So sometimes I may go through like a lot of people in the search result. And I and found out they are not like satisfied with my target potential connections and also linking has this. seeing his sub membership. Is that so if you're a member, you are a linking premium user, then you are able to check like as many as result of. So when you're doing the searching for people. But if you are not, you're probably gonna able to access like a limited list of people. So, and in the worst case, like there are just like one or 2, or even none of the people in the search result. It's the one that you want to be a connect with.",
+          "start_char": 5260,
+          "end_char": 6003
+        },
+        {
+          "document_id": "DOC023",
+          "source_id": "DOC023:T015",
+          "turn": "15",
+          "speaker": "Stakeholder",
+          "text": "So usually I would just like as a most ease, like simplest way, I think, is just to purchase the linking premium, because, like this, allow me to access like as much as possible potential connections as I want to. But this is pretty like this costs a lot. And so sometimes I may turn to the other. Option is that to modify the keywords in my when I was doing the searching. so I may kind of like delete one or 2 of the keyword. or like to be more specific, so to see like, if Lincoln is giving me so like a more precise people with like a more precise background that I'm looking for.",
+          "start_char": 6133,
+          "end_char": 6717
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0016",
+            "source_id": "DOC023:S014",
+            "material_id": "M001",
+            "quote": "Linking doesn't like always provides me with the result I want",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 5316,
+            "end_char": 5378,
+            "candidate_locations": [
+              {
+                "source_id": "DOC023:S014",
+                "segment_start": 76,
+                "segment_end": 138,
+                "start_char": 5316,
+                "end_char": 5378
+              }
+            ],
+            "original_locator": {
+              "line_start": 14,
+              "line_end": 14,
+              "start_char": 5240,
+              "end_char": 6003
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC023:T013",
+              "start_char": 5316,
+              "end_char": 5378
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0017",
+            "source_id": "DOC023:S014",
+            "material_id": "M001",
+            "quote": "I may go through like a lot of people in the search result",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 5393,
+            "end_char": 5451,
+            "candidate_locations": [
+              {
+                "source_id": "DOC023:S014",
+                "segment_start": 153,
+                "segment_end": 211,
+                "start_char": 5393,
+                "end_char": 5451
+              }
+            ],
+            "original_locator": {
+              "line_start": 14,
+              "line_end": 14,
+              "start_char": 5240,
+              "end_char": 6003
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC023:T013",
+              "start_char": 5393,
+              "end_char": 5451
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC023-G009",
+      "document_id": "DOC023",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC023-G009",
+        "statement": "访问足够多的潜在候选，不被免费账号的结果上限卡住。",
+        "source_candidate_ids": [
+          "DOC023-C009"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，在 LinkedIn 上寻找实习与全职机会的学生）",
+        "context": [
+          "现状：非会员只能看有限列表，最坏情况只给一两条甚至没有"
+        ],
+        "evidence_ids": [
+          "E0018",
+          "E0019"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "boundary",
+      "verdict_zh": "边界案例，保留目标并限制解释",
+      "rationale": "访问更多潜在联系人有明确目的依据，付费也被接受为解决办法。“不被免费账号上限卡住”可描述受阻处境，但不能据此推成永久免费无限访问。当前文本尚未明确作此承诺，不能直接判幻觉。",
+      "recommended_treatment": "保留足够候选覆盖目标，分开免费上限障碍、购买会员/调整关键词策略及费用权衡。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC023",
+          "source_id": "DOC023:T013",
+          "turn": "13",
+          "speaker": "Stakeholder",
+          "text": "Actually, yeah. So, as I mentioned, like previously. So Linking doesn't like always provides me with the result I want. So sometimes I may go through like a lot of people in the search result. And I and found out they are not like satisfied with my target potential connections and also linking has this. seeing his sub membership. Is that so if you're a member, you are a linking premium user, then you are able to check like as many as result of. So when you're doing the searching for people. But if you are not, you're probably gonna able to access like a limited list of people. So, and in the worst case, like there are just like one or 2, or even none of the people in the search result. It's the one that you want to be a connect with.",
+          "start_char": 5260,
+          "end_char": 6003
+        },
+        {
+          "document_id": "DOC023",
+          "source_id": "DOC023:T015",
+          "turn": "15",
+          "speaker": "Stakeholder",
+          "text": "So usually I would just like as a most ease, like simplest way, I think, is just to purchase the linking premium, because, like this, allow me to access like as much as possible potential connections as I want to. But this is pretty like this costs a lot. And so sometimes I may turn to the other. Option is that to modify the keywords in my when I was doing the searching. so I may kind of like delete one or 2 of the keyword. or like to be more specific, so to see like, if Lincoln is giving me so like a more precise people with like a more precise background that I'm looking for.",
+          "start_char": 6133,
+          "end_char": 6717
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0018",
+            "source_id": "DOC023:S014",
+            "material_id": "M001",
+            "quote": "you're probably gonna able to access like a limited list of people",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 5776,
+            "end_char": 5842,
+            "candidate_locations": [
+              {
+                "source_id": "DOC023:S014",
+                "segment_start": 536,
+                "segment_end": 602,
+                "start_char": 5776,
+                "end_char": 5842
+              }
+            ],
+            "original_locator": {
+              "line_start": 14,
+              "line_end": 14,
+              "start_char": 5240,
+              "end_char": 6003
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC023:T013",
+              "start_char": 5776,
+              "end_char": 5842
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0019",
+            "source_id": "DOC023:S016",
+            "material_id": "M001",
+            "quote": "purchase the linking premium",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 6217,
+            "end_char": 6245,
+            "candidate_locations": [
+              {
+                "source_id": "DOC023:S016",
+                "segment_start": 104,
+                "segment_end": 132,
+                "start_char": 6217,
+                "end_char": 6245
+              }
+            ],
+            "original_locator": {
+              "line_start": 16,
+              "line_end": 16,
+              "start_char": 6113,
+              "end_char": 6717
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC023:T015",
+              "start_char": 6217,
+              "end_char": 6245
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC026-G003",
+      "document_id": "DOC026",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC026-G003",
+        "statement": "在多个车型中选最便宜的一档，人多时改选大车。",
+        "source_candidate_ids": [
+          "DOC026-C003"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+        "context": [
+          "默认选最便宜",
+          "例外：同行人多时看座位数"
+        ],
+        "evidence_ids": [
+          "E0005",
+          "E0006",
+          "E0007"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "representation_gap",
+      "verdict_zh": "含义基本忠实，建模角色需明确",
+      "rationale": "最便宜车型是通常选择，多人出行是明确例外。当前含义忠实，属于情境性方案偏好，不是普遍最低价硬要求。",
+      "recommended_treatment": "保留条件偏好与人数约束；必要时置于完成适当出行这一目标的方案选择层。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC026",
+          "source_id": "DOC026:T011",
+          "turn": "11",
+          "speaker": "Stakeholder",
+          "text": "Sure. So I can pull it up right now. So when I click on it, it takes me to this opening screen where it asks me where I want to go to shows me some of the places I've gone before. a couple of different option or suggestions. I can also book it uh for now or later, I usually just do now. I rarely book something in the future. But when I do want to go someplace, I click on where to And it takes me to some place where I can input an address I'll just input my work address. And then a couple of different options pop up as I'm typing it, which is kind of helpful. So I can just click on whatever comes up before I necessarily finish typing it. telling me that there's a flash promo deal. that I guess it automatically applied. It gives me a couple of different options. I usually just go for The cheapest one, to be honest, unless if i'm going with more people So for this one there's a comfort that can sit four people that's only seven minutes away And it says that can get me there In about 24 minutes. Which isn't too bad. It's about $13.86. I can also see a map with a couple different Ubers around. So I can know if there are other drivers near me. So for example, if I wanted to go someplace. I didn't necessarily want to leave now like if the price was too high, then I can choose to wait.",
+          "start_char": 1720,
+          "end_char": 3018
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0005",
+            "source_id": "DOC026:S012",
+            "material_id": "M001",
+            "quote": "I usually just go for The cheapest one, to be honest",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 2491,
+            "end_char": 2543,
+            "candidate_locations": [
+              {
+                "source_id": "DOC026:S012",
+                "segment_start": 791,
+                "segment_end": 843,
+                "start_char": 2491,
+                "end_char": 2543
+              }
+            ],
+            "original_locator": {
+              "line_start": 12,
+              "line_end": 12,
+              "start_char": 1700,
+              "end_char": 3018
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC026:T011",
+              "start_char": 2491,
+              "end_char": 2543
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0006",
+            "source_id": "DOC026:S012",
+            "material_id": "M001",
+            "quote": "unless if i'm going with more people",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 2545,
+            "end_char": 2581,
+            "candidate_locations": [
+              {
+                "source_id": "DOC026:S012",
+                "segment_start": 845,
+                "segment_end": 881,
+                "start_char": 2545,
+                "end_char": 2581
+              }
+            ],
+            "original_locator": {
+              "line_start": 12,
+              "line_end": 12,
+              "start_char": 1700,
+              "end_char": 3018
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC026:T011",
+              "start_char": 2545,
+              "end_char": 2581
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0007",
+            "source_id": "DOC026:S012",
+            "material_id": "M001",
+            "quote": "there's a comfort that can sit four people",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 2598,
+            "end_char": 2640,
+            "candidate_locations": [
+              {
+                "source_id": "DOC026:S012",
+                "segment_start": 898,
+                "segment_end": 940,
+                "start_char": 2598,
+                "end_char": 2640
+              }
+            ],
+            "original_locator": {
+              "line_start": 12,
+              "line_end": 12,
+              "start_char": 1700,
+              "end_char": 3018
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC026:T011",
+              "start_char": 2598,
+              "end_char": 2640
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC026-G007",
+      "document_id": "DOC026",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC026-G007",
+        "statement": "不因取消订单而拉低自己作为乘客的评分。",
+        "source_candidate_ids": [
+          "DOC026-C007"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+        "context": [
+          "他知道司机能看到乘客评分",
+          "因此尽量不取消，即使等待体验很差"
+        ],
+        "evidence_ids": [
+          "E0014",
+          "E0015"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "source_modality",
+      "verdict_zh": "来源模态/显式与推断的边界偏差",
+      "rationale": "受访者认为取消可能损害乘客评分并因此尽量不取消。输出context将“I think”强化成“他知道”，目标又标explicit/direct。可推断维护评分的关切，但取消影响评分的实际规则及取消免责诉求均未得到证实。",
+      "recommended_treatment": "区分维护评分的推断目标、对取消后果的未证实信念及少取消策略；不得把信念提升为平台业务规则或已确认免责要求。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC026",
+          "source_id": "DOC026:T013",
+          "turn": "13",
+          "speaker": "Stakeholder",
+          "text": "I definitely have had issues where you would put in you would put in a destination It might even tell you that there are some drivers around. I usually don't have too many issues when there are a lot of drivers around. But if it says that there is a driver around and maybe I have to wait for it, sometimes when I click okay and try to book that driver, it will take a really long time to actually schedule it. And sometimes it will end up saying that can't find a driver. I believe that that could be either that the app is kind of over exaggerating its abilities or that a driver sees that I'm requesting something and they decide to decline it and then there aren't any other available drivers I usually try not to cancel a ride because I think that that damages my like the drivers will see a rating of the passenger as well. And I think that that damages my rating um rating But I don't really remember a time where I had issues canceling. I also don't remember if you get a a potential charge for that. But again, I don't really remember",
+          "start_char": 3241,
+          "end_char": 4284
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0014",
+            "source_id": "DOC026:S014",
+            "material_id": "M001",
+            "quote": "I usually try not to cancel a ride",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 3938,
+            "end_char": 3972,
+            "candidate_locations": [
+              {
+                "source_id": "DOC026:S014",
+                "segment_start": 717,
+                "segment_end": 751,
+                "start_char": 3938,
+                "end_char": 3972
+              }
+            ],
+            "original_locator": {
+              "line_start": 14,
+              "line_end": 14,
+              "start_char": 3221,
+              "end_char": 4284
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC026:T013",
+              "start_char": 3938,
+              "end_char": 3972
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0015",
+            "source_id": "DOC026:S014",
+            "material_id": "M001",
+            "quote": "the drivers will see a rating of the passenger as well. And I think that that damages my rating",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 4015,
+            "end_char": 4110,
+            "candidate_locations": [
+              {
+                "source_id": "DOC026:S014",
+                "segment_start": 794,
+                "segment_end": 889,
+                "start_char": 4015,
+                "end_char": 4110
+              }
+            ],
+            "original_locator": {
+              "line_start": 14,
+              "line_end": 14,
+              "start_char": 3221,
+              "end_char": 4284
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC026:T013",
+              "start_char": 4015,
+              "end_char": 4110
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC026-G008",
+      "document_id": "DOC026",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC026-G008",
+        "statement": "工作出行时以时间优先于价格（费用由公司承担）。",
+        "source_candidate_ids": [
+          "DOC026-C008"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，Uber 个人与工作出行用户）",
+        "context": [
+          "前提：公司报销",
+          "取舍：多花 20 美元换少等 20 分钟可接受"
+        ],
+        "evidence_ids": [
+          "E0016",
+          "E0017"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "representation_gap",
+      "verdict_zh": "含义基本忠实，建模角色需明确",
+      "rationale": "公司报销时愿多花20美元少等20分钟是情境性取舍，当前文本保留了关键条件，本身没有改错。缺少结构化偏好不能直接算语义错误。",
+      "recommended_treatment": "表达公司报销情境下等待时间优先于车费；该示例不能外推为任何情况下每分钟价值1美元。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC026",
+          "source_id": "DOC026:T019",
+          "turn": "19",
+          "speaker": "Stakeholder",
+          "text": "Yeah, so when i Most of the time when I book or when I'm traveling for work or just traveling in general, I would probably prefer to rent a car. It sort of depends on how walkable the area is or how much drive I'm going to need to be doing. But on the times where I have needed to to use a rideshare for work i usually care less about the price and more about the time in that case because my work is going to cover it. So if the Uber XL is the only one that's available then I don't care if it's an extra $20 for not having to wait an extra 20 minutes.",
+          "start_char": 5132,
+          "end_char": 5685
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0016",
+            "source_id": "DOC026:S020",
+            "material_id": "M001",
+            "quote": "i usually care less about the price and more about the time in that case",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 5441,
+            "end_char": 5513,
+            "candidate_locations": [
+              {
+                "source_id": "DOC026:S020",
+                "segment_start": 329,
+                "segment_end": 401,
+                "start_char": 5441,
+                "end_char": 5513
+              }
+            ],
+            "original_locator": {
+              "line_start": 20,
+              "line_end": 20,
+              "start_char": 5112,
+              "end_char": 5685
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC026:T019",
+              "start_char": 5441,
+              "end_char": 5513
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0017",
+            "source_id": "DOC026:S020",
+            "material_id": "M001",
+            "quote": "my work is going to cover it",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 5522,
+            "end_char": 5550,
+            "candidate_locations": [
+              {
+                "source_id": "DOC026:S020",
+                "segment_start": 410,
+                "segment_end": 438,
+                "start_char": 5522,
+                "end_char": 5550
+              }
+            ],
+            "original_locator": {
+              "line_start": 20,
+              "line_end": 20,
+              "start_char": 5112,
+              "end_char": 5685
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC026:T019",
+              "start_char": 5522,
+              "end_char": 5550
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC027-G007",
+      "document_id": "DOC027",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC027-G007",
+        "statement": "平台稳定可用，宕机不要成为常态。",
+        "source_candidate_ids": [
+          "DOC027-C007"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，24 岁，从印度到美国，跨平台社媒重度用户）",
+        "context": [
+          "可接受偶发中断",
+          "频繁宕机会直接导致流失"
+        ],
+        "evidence_ids": [
+          "E0016",
+          "E0017"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "原文明确不希望频繁宕机，同时接受偶发中断。标题和context忠实，属于可用性质量目标，不能因涉及坏事件就归为纯障碍。",
+      "recommended_treatment": "保留目标和容忍度；频繁/偶发阈值待确认，不能改为零宕机。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC027",
+          "source_id": "DOC027:T013",
+          "turn": "13",
+          "speaker": "Stakeholder",
+          "text": "Want my tweets or my posts on Instagram, or my post on Reddit to just mysteriously disappear. I they should be there until, and unless I delete them or I archive them. So so yeah, so, data being in its own place is important other thing is speed. I know of the times like it actually depends on the the network I am on but sometimes there are like outages on, like even big platforms like Instagram. I don't want those outages to be that often, if they are like sporadic, I'm fine with it, but if they are too regular, then they might lose me as a customer, because such outages.",
+          "start_char": 4831,
+          "end_char": 5410
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0016",
+            "source_id": "DOC027:S014",
+            "material_id": "M001",
+            "quote": "I don't want those outages to be that often",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 5231,
+            "end_char": 5274,
+            "candidate_locations": [
+              {
+                "source_id": "DOC027:S014",
+                "segment_start": 420,
+                "segment_end": 463,
+                "start_char": 5231,
+                "end_char": 5274
+              }
+            ],
+            "original_locator": {
+              "line_start": 14,
+              "line_end": 14,
+              "start_char": 4811,
+              "end_char": 5410
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC027:T013",
+              "start_char": 5231,
+              "end_char": 5274
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0017",
+            "source_id": "DOC027:S014",
+            "material_id": "M001",
+            "quote": "if they are too regular, then they might lose me as a customer",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 5325,
+            "end_char": 5387,
+            "candidate_locations": [
+              {
+                "source_id": "DOC027:S014",
+                "segment_start": 514,
+                "segment_end": 576,
+                "start_char": 5325,
+                "end_char": 5387
+              }
+            ],
+            "original_locator": {
+              "line_start": 14,
+              "line_end": 14,
+              "start_char": 4811,
+              "end_char": 5410
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC027:T013",
+              "start_char": 5325,
+              "end_char": 5387
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC027-G009",
+      "document_id": "DOC027",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC027-G009",
+        "statement": "信息流能连续加载，不出现内容断层。",
+        "source_candidate_ids": [
+          "DOC027-C009"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，24 岁，从印度到美国，跨平台社媒重度用户）",
+        "context": [
+          "症状：滑到某处加载不出来，只能回顶部刷新",
+          "代价：担心错过中间漏掉的帖子"
+        ],
+        "evidence_ids": [
+          "E0021",
+          "E0022",
+          "E0023"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "source_modality",
+      "verdict_zh": "来源模态/显式与推断的边界偏差",
+      "rationale": "原句描述信息流停止加载、回顶刷新及可能漏帖的困难。连续加载目标推断合理，但explicit/direct没有表达从症状推导维护目标的步骤。",
+      "recommended_treatment": "保留停止加载障碍候选、连续浏览目标候选与回顶刷新策略，目标推断注明依据。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC027",
+          "source_id": "DOC027:T047",
+          "turn": "47",
+          "speaker": "Stakeholder",
+          "text": "Like especially data encryption. apart from that, I would say, the lack of content like whenever I scroll through like reddit or twitter. At 1 point there will be like kind of like a lag where the data isn't being loaded or the.",
+          "start_char": 12612,
+          "end_char": 12840
+        },
+        {
+          "document_id": "DOC027",
+          "source_id": "DOC027:T049",
+          "turn": "49",
+          "speaker": "Stakeholder",
+          "text": "Like more posts are being aren't being loaded. So it's easier for me to just go at like the top and then start like a new kind of like a refresh, instead of just like going through the same kind of my session. So that's kind of annoying, because I have to like go back up. And I'm just like, Oh, maybe I just missed one particular post or one particular item because.",
+          "start_char": 12885,
+          "end_char": 13252
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0021",
+            "source_id": "DOC027:S048",
+            "material_id": "M001",
+            "quote": "At 1 point there will be like kind of like a lag where the data isn't being loaded",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 12750,
+            "end_char": 12832,
+            "candidate_locations": [
+              {
+                "source_id": "DOC027:S048",
+                "segment_start": 158,
+                "segment_end": 240,
+                "start_char": 12750,
+                "end_char": 12832
+              }
+            ],
+            "original_locator": {
+              "line_start": 48,
+              "line_end": 48,
+              "start_char": 12592,
+              "end_char": 12840
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC027:T047",
+              "start_char": 12750,
+              "end_char": 12832
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0022",
+            "source_id": "DOC027:S050",
+            "material_id": "M001",
+            "quote": "start like a new kind of like a refresh",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 12990,
+            "end_char": 13029,
+            "candidate_locations": [
+              {
+                "source_id": "DOC027:S050",
+                "segment_start": 125,
+                "segment_end": 164,
+                "start_char": 12990,
+                "end_char": 13029
+              }
+            ],
+            "original_locator": {
+              "line_start": 50,
+              "line_end": 50,
+              "start_char": 12865,
+              "end_char": 13252
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC027:T049",
+              "start_char": 12990,
+              "end_char": 13029
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0023",
+            "source_id": "DOC027:S050",
+            "material_id": "M001",
+            "quote": "maybe I just missed one particular post",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 13181,
+            "end_char": 13220,
+            "candidate_locations": [
+              {
+                "source_id": "DOC027:S050",
+                "segment_start": 316,
+                "segment_end": 355,
+                "start_char": 13181,
+                "end_char": 13220
+              }
+            ],
+            "original_locator": {
+              "line_start": 50,
+              "line_end": 50,
+              "start_char": 12865,
+              "end_char": 13252
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC027:T049",
+              "start_char": 13181,
+              "end_char": 13220
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC028-G013",
+      "document_id": "DOC028",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC028-G013",
+        "statement": "断网时仍能读已加载的帖子。",
+        "source_candidate_ids": [
+          "DOC028-C013"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+        "context": [
+          "限制：不能刷新、不能发新帖",
+          "自评「not very comprehensive」"
+        ],
+        "evidence_ids": [
+          "E0030",
+          "E0031"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "source_modality",
+      "verdict_zh": "来源模态/显式与推断的边界偏差",
+      "rationale": "原句描述现有缓存能力及离线限制，并未明确要求新增或保证离线阅读。现有能力可以支持Maintain目标候选，但需要意图依据，不能仅凭能力事实标为explicit/direct。",
+      "recommended_treatment": "将已缓存帖子可读记录为现状，离线读帖维持目标作为待确认推断；保留无法刷新/发帖限制，不扩为完整离线功能。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC028",
+          "source_id": "DOC028:T039",
+          "turn": "39",
+          "speaker": "Stakeholder",
+          "text": "So I don't think it allows you to save data offline. But your feeds are saved like once. If you lose Internet connection it does save your feed. So while it won't refresh and get new data, it will for sure save the existing posts. So this is mainly on mobile if you're on flight, if you refresh your app and you're on flight mode it, it won't. It will still allow you to open the app. It'll still allow you to view posts like view comments, view pictures on the app I'm sorry. Not on the app, but on your feed. But it won't allow you to make new posts, nor will it refresh the feed so you can use it offline. But I'd say, after you exhaust like, after you're done using that part of it like, after you're done interacting with all the posts, you can't really use it further. Yeah. So I'd say, yes, there is an offline capability, but it's not very comprehensive.",
+          "start_char": 20346,
+          "end_char": 21208
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0030",
+            "source_id": "DOC028:S040",
+            "material_id": "M001",
+            "quote": "If you lose Internet connection it does save your feed",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 20435,
+            "end_char": 20489,
+            "candidate_locations": [
+              {
+                "source_id": "DOC028:S040",
+                "segment_start": 109,
+                "segment_end": 163,
+                "start_char": 20435,
+                "end_char": 20489
+              }
+            ],
+            "original_locator": {
+              "line_start": 40,
+              "line_end": 40,
+              "start_char": 20326,
+              "end_char": 21208
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC028:T039",
+              "start_char": 20435,
+              "end_char": 20489
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0031",
+            "source_id": "DOC028:S040",
+            "material_id": "M001",
+            "quote": "it won't allow you to make new posts, nor will it refresh the feed",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 20861,
+            "end_char": 20927,
+            "candidate_locations": [
+              {
+                "source_id": "DOC028:S040",
+                "segment_start": 535,
+                "segment_end": 601,
+                "start_char": 20861,
+                "end_char": 20927
+              }
+            ],
+            "original_locator": {
+              "line_start": 40,
+              "line_end": 40,
+              "start_char": 20326,
+              "end_char": 21208
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC028:T039",
+              "start_char": 20861,
+              "end_char": 20927
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC031-G007",
+      "document_id": "DOC031",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC031-G007",
+        "statement": "搜索结果要精准，不必在大量历史消息里筛。",
+        "source_candidate_ids": [
+          "DOC031-C007"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+        "context": [
+          "问题：结果太多，除非确切知道要找什么否则很难定位"
+        ],
+        "evidence_ids": [
+          "E0015",
+          "E0016"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "source_modality",
+      "verdict_zh": "来源模态/显式与推断的边界偏差",
+      "rationale": "原文的直接表达是历史信息多导致难定位消息，查找特定消息的目的也明确。更精准搜索是合理抽象，整句直接支持的强度仍需说明；“不必筛大量历史消息”不是用户明确批准的唯一解决方案。",
+      "recommended_treatment": "保留定位所需消息的目标和结果过多障碍候选；精准检索这一补救质量目标记推断或补充明确支持，不能自行要求删除历史消息。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC031",
+          "source_id": "DOC031:T019",
+          "turn": "19",
+          "speaker": "Stakeholder",
+          "text": "Yeah. So on top of the screen, there is a search feature that I would use to I would enter keywords to look, to look for something specific. So if you know, for example, business and marketing strategies was a subject I had last semester, last mini semester. So I would search for something that the professor said, using the keyword over there, and it would display a list of you know matches a problem that I encountered is again, coming back to the slack, showing me everything from a channel that you know before I even joined. So because there's so much information out there, sometimes when I search for a keyword or keywords, I get way too much information in the search results. So it's a little difficult to pass through things unless I know exactly what I'm looking for. It's a little difficult to find. You know the message that I want to find? Yeah, yeah, I",
+          "start_char": 5525,
+          "end_char": 6394
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0015",
+            "source_id": "DOC031:S020",
+            "material_id": "M001",
+            "quote": "sometimes when I search for a keyword or keywords, I get way too much information",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 6107,
+            "end_char": 6188,
+            "candidate_locations": [
+              {
+                "source_id": "DOC031:S020",
+                "segment_start": 602,
+                "segment_end": 683,
+                "start_char": 6107,
+                "end_char": 6188
+              }
+            ],
+            "original_locator": {
+              "line_start": 20,
+              "line_end": 20,
+              "start_char": 5505,
+              "end_char": 6394
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC031:T019",
+              "start_char": 6107,
+              "end_char": 6188
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0016",
+            "source_id": "DOC031:S020",
+            "material_id": "M001",
+            "quote": "it's a little difficult to pass through things unless I know exactly what I'm looking for",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 6215,
+            "end_char": 6304,
+            "candidate_locations": [
+              {
+                "source_id": "DOC031:S020",
+                "segment_start": 710,
+                "segment_end": 799,
+                "start_char": 6215,
+                "end_char": 6304
+              }
+            ],
+            "original_locator": {
+              "line_start": 20,
+              "line_end": 20,
+              "start_char": 5505,
+              "end_char": 6394
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC031:T019",
+              "start_char": 6215,
+              "end_char": 6304
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC031-G010",
+      "document_id": "DOC031",
+      "item_kind": "goal",
+      "original": {
+        "goal_id": "DOC031-G010",
+        "statement": "把窗口缩窄并排多开时，界面仍然好导航。",
+        "source_candidate_ids": [
+          "DOC031-C010"
+        ],
+        "origin": "explicit",
+        "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+        "context": [
+          "个人习惯：同时开三个窗口并排",
+          "现状：缩小后很难操作"
+        ],
+        "evidence_ids": [
+          "E0021",
+          "E0022"
+        ],
+        "trace_status": "direct",
+        "review_status": "pending"
+      },
+      "verdict": "boundary",
+      "verdict_zh": "边界案例，保留目标并限制解释",
+      "rationale": "受访者除了抱怨小窗口难导航，还明确称这是可考虑改善的方面。目标有效。不能仅因目标采用正向表达就断言必须从explicit改inferred，但“可考虑”的承诺强度应保留。",
+      "recommended_treatment": "保留小窗口易导航目标候选，标明改善提议/待确认；不升级为已承诺的强制需求。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC031",
+          "source_id": "DOC031:T031",
+          "turn": "31",
+          "speaker": "Stakeholder",
+          "text": "Um, yeah, I would like to talk about the layout of slack some. I feel like it works well on a phone and if on a big screen, like a 14 inch laptop. But then, as this is my personal habit, I tend to have multiple windows open at the same time. So yeah, when I have and I have them side by side, so I would have like three windows open. So when I minimize, not minimize, shrink the size of slack browser window, I feel like it's a little hard to navigate through the application. I feel like that is an area of improvement that could be considered.",
+          "start_char": 9664,
+          "end_char": 10209
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0021",
+            "source_id": "DOC031:S032",
+            "material_id": "M001",
+            "quote": "shrink the size of slack browser window",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 10032,
+            "end_char": 10071,
+            "candidate_locations": [
+              {
+                "source_id": "DOC031:S032",
+                "segment_start": 388,
+                "segment_end": 427,
+                "start_char": 10032,
+                "end_char": 10071
+              }
+            ],
+            "original_locator": {
+              "line_start": 32,
+              "line_end": 32,
+              "start_char": 9644,
+              "end_char": 10209
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC031:T031",
+              "start_char": 10032,
+              "end_char": 10071
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "evidence_id": "E0022",
+            "source_id": "DOC031:S032",
+            "material_id": "M001",
+            "quote": "I feel like it's a little hard to navigate through the application",
+            "evidence_role": "supporting",
+            "location_status": "exact",
+            "verification_scope": "full_text",
+            "start_char": 10073,
+            "end_char": 10139,
+            "candidate_locations": [
+              {
+                "source_id": "DOC031:S032",
+                "segment_start": 429,
+                "segment_end": 495,
+                "start_char": 10073,
+                "end_char": 10139
+              }
+            ],
+            "original_locator": {
+              "line_start": 32,
+              "line_end": 32,
+              "start_char": 9644,
+              "end_char": 10209
+            },
+            "recognition_status": "native_text",
+            "source_version_status": "verified",
+            "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC031:T031",
+              "start_char": 10073,
+              "end_char": 10139
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC005-C002",
+      "document_id": "DOC005",
+      "item_kind": "diagnostic",
+      "original": {
+        "candidate_id": "DOC005-C002",
+        "category": "preference",
+        "subtype": "experience",
+        "statement": "最常听 K-pop 与 R&B（两者交替为最爱、重复度最高），其余类型也广泛收听；听歌类型随人生阶段演变（青少年期为 Pop/焦虑系与摇滚/垃圾摇滚等）",
+        "origin": null,
+        "actor": "受访者（Stakeholder，流媒体听歌用户）",
+        "context": [
+          "近期以 K-pop 与 R&B 为主，但整体类型范围很广"
+        ],
+        "evidence_candidates": [
+          {
+            "source_id": "DOC005:S020",
+            "quote": "I like K-pop. I like R and B. Those are my 2, I alternate between one of the 2, but basically all the other genres as well. But these 2 are my most highly repeated ones.",
+            "role": "basis",
+            "start_char": 1962,
+            "end_char": 2131
+          },
+          {
+            "source_id": "DOC005:S022",
+            "quote": "While I was a teenager it was more of, you know. Angst and Pop definitely evolves range.",
+            "role": "context",
+            "start_char": 2291,
+            "end_char": 2379
+          },
+          {
+            "source_id": "DOC005:S024",
+            "quote": "but yeah, it's more of rock or grunge. I would say I might be, but approximately.",
+            "role": "context",
+            "start_char": 2613,
+            "end_char": 2694
+          }
+        ],
+        "classification_reason": "内容口味的事实性偏好陈述，未表达改变现状的期望；作为体验类诊断项供后续内容相关审核参考。",
+        "inference": null,
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "K-pop/R&B等是内容口味和背景；没有直接推出“平台只应提供这两类音乐”的依据。保留为偏好且不凭空制造专属功能目标是合理的。",
+      "recommended_treatment": "保留个人口味背景。若用于推荐目标，作为条件/偏好证据使用，不推成排他内容约束。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T019",
+          "turn": "19",
+          "speaker": "Stakeholder",
+          "text": "Lately, but most of the time it is more of, you know. k-pop! I like K-pop. I like R and B. Those are my 2, I alternate between one of the 2, but basically all the other genres as well. But these 2 are my most highly repeated ones.",
+          "start_char": 1901,
+          "end_char": 2131
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T021",
+          "turn": "21",
+          "speaker": "Stakeholder",
+          "text": "No, definitely, not definitely, not. This is definitely involved. While I was a teenager it was more of, you know. Angst and Pop definitely evolves range.",
+          "start_char": 2225,
+          "end_char": 2379
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T023",
+          "turn": "23",
+          "speaker": "Stakeholder",
+          "text": "the has. I just don't really know how to classify it. Okay. but yeah, it's more of rock or grunge. I would say I might be, but approximately.",
+          "start_char": 2553,
+          "end_char": 2694
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S020",
+            "quote": "I like K-pop. I like R and B. Those are my 2, I alternate between one of the 2, but basically all the other genres as well. But these 2 are my most highly repeated ones.",
+            "role": "basis",
+            "start_char": 1962,
+            "end_char": 2131
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T019",
+              "start_char": 1962,
+              "end_char": 2131
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S022",
+            "quote": "While I was a teenager it was more of, you know. Angst and Pop definitely evolves range.",
+            "role": "context",
+            "start_char": 2291,
+            "end_char": 2379
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T021",
+              "start_char": 2291,
+              "end_char": 2379
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S024",
+            "quote": "but yeah, it's more of rock or grunge. I would say I might be, but approximately.",
+            "role": "context",
+            "start_char": 2613,
+            "end_char": 2694
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T023",
+              "start_char": 2613,
+              "end_char": 2694
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC005-C004",
+      "document_id": "DOC005",
+      "item_kind": "diagnostic",
+      "original": {
+        "candidate_id": "DOC005-C004",
+        "category": "obstacle",
+        "subtype": "limitation",
+        "statement": "Spotify 有时缺少其在互联网上发现的特定混音，需转用 YouTube Music 收听（约 5% 使用量）",
+        "origin": null,
+        "actor": "受访者（Stakeholder，流媒体听歌用户）",
+        "context": [
+          "受访者以平常语气陈述现状，未表达不满或改变期望"
+        ],
+        "evidence_candidates": [
+          {
+            "source_id": "DOC005:S032",
+            "quote": "Sometimes spotify don't have specific mixes that maybe I find on the Internet or something.",
+            "role": "basis",
+            "start_char": 3634,
+            "end_char": 3725
+          },
+          {
+            "source_id": "DOC005:S032",
+            "quote": "while around 5% is Youtube music.",
+            "role": "context",
+            "start_char": 3772,
+            "end_char": 3805
+          }
+        ],
+        "classification_reason": "内容可得性限制的陈述；未表达改变现状的愿望，按分类口径仅保留障碍并提出审核问题，不自行推断新增目标。",
+        "inference": null,
+        "review_status": "pending"
+      },
+      "verdict": "valid",
+      "verdict_zh": "本次未发现该方面语义偏差",
+      "rationale": "Spotify缺某些混音导致转用YouTube，是内容可得性限制/障碍候选。保留它且不直接要求Spotify收录全部混音是合理的；正式障碍仍需标出相对于哪个目标。",
+      "recommended_treatment": "关联找到并听到特定混音的涉众目的，区分跨平台策略与单平台全曲库方案。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T031",
+          "turn": "31",
+          "speaker": "Stakeholder",
+          "text": "Sometimes spotify don't have specific mixes that maybe I find on the Internet or something. Actually, I would say, around 95% is spotify. while around 5% is Youtube music.",
+          "start_char": 3634,
+          "end_char": 3805
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S032",
+            "quote": "Sometimes spotify don't have specific mixes that maybe I find on the Internet or something.",
+            "role": "basis",
+            "start_char": 3634,
+            "end_char": 3725
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T031",
+              "start_char": 3634,
+              "end_char": 3725
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S032",
+            "quote": "while around 5% is Youtube music.",
+            "role": "context",
+            "start_char": 3772,
+            "end_char": 3805
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T031",
+              "start_char": 3772,
+              "end_char": 3805
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC005-C009",
+      "document_id": "DOC005",
+      "item_kind": "diagnostic",
+      "original": {
+        "candidate_id": "DOC005-C009",
+        "category": "preference",
+        "subtype": "solution",
+        "statement": "更看重流媒体平台的社交能力（jam、共享播放列表、公开分享便利与更大的活跃用户群），并因此认为 Spotify 优于 Apple Music",
+        "origin": null,
+        "actor": "受访者（Stakeholder，流媒体听歌用户）",
+        "context": [
+          "2021 年 Spotify/Apple Music 各半，2022 年全面切换至 Spotify，此前以 Apple Music 为主",
+          "口碑影响（everyone kept saying that）是开始使用 Spotify 的动因之一",
+          "认可 Apple Music 在「已有特定歌曲」场景下够用"
+        ],
+        "evidence_candidates": [
+          {
+            "source_id": "DOC005:S048",
+            "quote": "Spotify has quite a few capabilities, like, you know, starting a jam. or like I said, playlists and all of that apple. Music is a little limited in that sense.",
+            "role": "basis",
+            "start_char": 6247,
+            "end_char": 6406
+          },
+          {
+            "source_id": "DOC005:S048",
+            "quote": "I feel spotify is better for more of social aspect.",
+            "role": "basis",
+            "start_char": 6465,
+            "end_char": 6516
+          },
+          {
+            "source_id": "DOC005:S068",
+            "quote": "And then Scott also has the starter jam options, which I think is really cool, and the shared playlists over here. People use spotify much more than they do apple music. So creating a playlist for people to view is quite easy.",
+            "role": "basis",
+            "start_char": 9072,
+            "end_char": 9298
+          },
+          {
+            "source_id": "DOC005:S046",
+            "quote": "I think I started using spotify only around 2021, which was 50, 50, and then 2022 I made the full split switch over into spotify. but before that I was primarily using apple music.",
+            "role": "context",
+            "start_char": 5915,
+            "end_char": 6095
+          },
+          {
+            "source_id": "DOC005:S048",
+            "quote": "So the reason I started Spotify is because everyone kept saying that.",
+            "role": "context",
+            "start_char": 6610,
+            "end_char": 6679
+          },
+          {
+            "source_id": "DOC005:S048",
+            "quote": "If you had specific songs in mind. apple music works.",
+            "role": "context",
+            "start_char": 6407,
+            "end_char": 6460
+          }
+        ],
+        "classification_reason": "对平台能力维度的偏好判断与对比，未单独表达具体结果诉求；历史切换与口碑动因保留为上下文。",
+        "inference": null,
+        "review_status": "pending"
+      },
+      "verdict": "under_extraction_candidate",
+      "verdict_zh": "过度过滤导致目标候选遗漏风险",
+      "rationale": "对Spotify的方案偏好是正确的一面；访谈同时讨论过去想做但做不到的社交活动和如今可用的共享能力。仅以“未表达具体结果”挡住后续目标推断，可能遗漏共同听歌/分享的维持目标候选。G017的相似听众推荐并不等同共同听歌。",
+      "recommended_treatment": "保留Spotify优于Apple的方案偏好，同时提出共同听歌/分享播放列表的维持目标候选，注明推断和历史障碍已缓解；不强制新增指定功能。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T045",
+          "turn": "45",
+          "speaker": "Stakeholder",
+          "text": "Yes, yes, actually so I think I started using spotify only around 2021, which was 50, 50, and then 2022 I made the full split switch over into spotify. but before that I was primarily using apple music.",
+          "start_char": 5893,
+          "end_char": 6095
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T047",
+          "turn": "47",
+          "speaker": "Stakeholder",
+          "text": "I think it so. Spotify has quite a few capabilities, like, you know, starting a jam. or like I said, playlists and all of that apple. Music is a little limited in that sense. If you had specific songs in mind. apple music works. but I feel spotify is better for more of social aspect. And also there is this public thing that people say, Oh, spotify is better than apple music. So the reason I started Spotify is because everyone kept saying that.",
+          "start_char": 6232,
+          "end_char": 6679
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T063",
+          "turn": "63",
+          "speaker": "Stakeholder",
+          "text": "I actually don't think so. I mean, there were a lot of things when I was on apple music that I wanted to, that I couldn't get done. but I think Spotify actually covers that pretty well.",
+          "start_char": 8384,
+          "end_char": 8569
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T065",
+          "turn": "65",
+          "speaker": "Stakeholder",
+          "text": "Okay, so I like the sleep timer that spotify has it. Apple music also does have a sleep timer. But Spotify has more options like Spotify has, you know, at the end of the song music stops playing, or 30Â min or 25Â min. So if I want.",
+          "start_char": 8761,
+          "end_char": 8993
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T067",
+          "turn": "67",
+          "speaker": "Stakeholder",
+          "text": "And fall asleep. I I like that. And then Scott also has the starter jam options, which I think is really cool, and the shared playlists over here. People use spotify much more than they do apple music. So creating a playlist for people to view is quite easy.",
+          "start_char": 9040,
+          "end_char": 9298
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T069",
+          "turn": "69",
+          "speaker": "Stakeholder",
+          "text": "Actually back when I used it. No, I don't know if it is updated.",
+          "start_char": 9428,
+          "end_char": 9492
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S048",
+            "quote": "Spotify has quite a few capabilities, like, you know, starting a jam. or like I said, playlists and all of that apple. Music is a little limited in that sense.",
+            "role": "basis",
+            "start_char": 6247,
+            "end_char": 6406
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T047",
+              "start_char": 6247,
+              "end_char": 6406
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S048",
+            "quote": "I feel spotify is better for more of social aspect.",
+            "role": "basis",
+            "start_char": 6465,
+            "end_char": 6516
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T047",
+              "start_char": 6465,
+              "end_char": 6516
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S068",
+            "quote": "And then Scott also has the starter jam options, which I think is really cool, and the shared playlists over here. People use spotify much more than they do apple music. So creating a playlist for people to view is quite easy.",
+            "role": "basis",
+            "start_char": 9072,
+            "end_char": 9298
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T067",
+              "start_char": 9072,
+              "end_char": 9298
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S046",
+            "quote": "I think I started using spotify only around 2021, which was 50, 50, and then 2022 I made the full split switch over into spotify. but before that I was primarily using apple music.",
+            "role": "context",
+            "start_char": 5915,
+            "end_char": 6095
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T045",
+              "start_char": 5915,
+              "end_char": 6095
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S048",
+            "quote": "So the reason I started Spotify is because everyone kept saying that.",
+            "role": "context",
+            "start_char": 6610,
+            "end_char": 6679
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T047",
+              "start_char": 6610,
+              "end_char": 6679
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S048",
+            "quote": "If you had specific songs in mind. apple music works.",
+            "role": "context",
+            "start_char": 6407,
+            "end_char": 6460
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T047",
+              "start_char": 6407,
+              "end_char": 6460
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC005-C013",
+      "document_id": "DOC005",
+      "item_kind": "diagnostic",
+      "original": {
+        "candidate_id": "DOC005-C013",
+        "category": "preference",
+        "subtype": "solution",
+        "statement": "喜欢 Spotify 睡眠定时器的丰富停止选项（如当前歌曲结束时停止、25/30 分钟等），用于入睡场景",
+        "origin": null,
+        "actor": "受访者（Stakeholder，流媒体听歌用户）",
+        "context": [
+          "使用场景：入睡时",
+          "原文「30Â min」含编码异常（疑为 30 分钟），引文按原样保留"
+        ],
+        "evidence_candidates": [
+          {
+            "source_id": "DOC005:S066",
+            "quote": "I like the sleep timer that spotify has it.",
+            "role": "basis",
+            "start_char": 8770,
+            "end_char": 8813
+          },
+          {
+            "source_id": "DOC005:S066",
+            "quote": "at the end of the song music stops playing, or 30Â min or 25Â min",
+            "role": "basis",
+            "start_char": 8913,
+            "end_char": 8978
+          },
+          {
+            "source_id": "DOC005:S068",
+            "quote": "And fall asleep. I I like that.",
+            "role": "context",
+            "start_char": 9040,
+            "end_char": 9071
+          }
+        ],
+        "classification_reason": "「I like the sleep timer」为对现有功能方式的偏好陈述；入睡目的保留在上下文，不推断额外的自动停止目标。",
+        "inference": null,
+        "review_status": "pending"
+      },
+      "verdict": "under_extraction_candidate",
+      "verdict_zh": "过度过滤导致目标候选遗漏风险",
+      "rationale": "喜欢睡眠定时器确实是方案偏好，但停止播放条件和入睡场景也支持目标候选。现有功能并不自动失去目标资格。当前仅保留诊断、拒绝推断额外目标过于保守，仍需确认其期望而非直接判为强制需求。",
+      "recommended_treatment": "候选目标为入睡使用音乐时，能按选定时间或曲终条件停止播放；与25/30分钟等选项偏好分开，明确inferred/pending。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T063",
+          "turn": "63",
+          "speaker": "Stakeholder",
+          "text": "I actually don't think so. I mean, there were a lot of things when I was on apple music that I wanted to, that I couldn't get done. but I think Spotify actually covers that pretty well.",
+          "start_char": 8384,
+          "end_char": 8569
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T065",
+          "turn": "65",
+          "speaker": "Stakeholder",
+          "text": "Okay, so I like the sleep timer that spotify has it. Apple music also does have a sleep timer. But Spotify has more options like Spotify has, you know, at the end of the song music stops playing, or 30Â min or 25Â min. So if I want.",
+          "start_char": 8761,
+          "end_char": 8993
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T067",
+          "turn": "67",
+          "speaker": "Stakeholder",
+          "text": "And fall asleep. I I like that. And then Scott also has the starter jam options, which I think is really cool, and the shared playlists over here. People use spotify much more than they do apple music. So creating a playlist for people to view is quite easy.",
+          "start_char": 9040,
+          "end_char": 9298
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S066",
+            "quote": "I like the sleep timer that spotify has it.",
+            "role": "basis",
+            "start_char": 8770,
+            "end_char": 8813
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T065",
+              "start_char": 8770,
+              "end_char": 8813
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S066",
+            "quote": "at the end of the song music stops playing, or 30Â min or 25Â min",
+            "role": "basis",
+            "start_char": 8913,
+            "end_char": 8978
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T065",
+              "start_char": 8913,
+              "end_char": 8978
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S068",
+            "quote": "And fall asleep. I I like that.",
+            "role": "context",
+            "start_char": 9040,
+            "end_char": 9071
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T067",
+              "start_char": 9040,
+              "end_char": 9071
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "item_id": "DOC005-C019",
+      "document_id": "DOC005",
+      "item_kind": "diagnostic",
+      "original": {
+        "candidate_id": "DOC005-C019",
+        "category": "preference",
+        "subtype": "experience",
+        "statement": "喜欢收听环境音，认为 Spotify 提供的环境音质量好，并将其列为三大最重要功能之一",
+        "origin": null,
+        "actor": "受访者（Stakeholder，流媒体听歌用户）",
+        "context": [
+          "三大最重要功能：播放列表、Made for You、环境音"
+        ],
+        "evidence_candidates": [
+          {
+            "source_id": "DOC005:S106",
+            "quote": "sometimes I like to listen to ambient noise, so without that I don't think spotify would be spotify.",
+            "role": "basis",
+            "start_char": 14500,
+            "end_char": 14600
+          },
+          {
+            "source_id": "DOC005:S106",
+            "quote": "Spotify has some really good ambient noises available.",
+            "role": "basis",
+            "start_char": 14601,
+            "end_char": 14655
+          },
+          {
+            "source_id": "DOC005:S106",
+            "quote": "So those 3 things are my most important features in spotify.",
+            "role": "context",
+            "start_char": 14656,
+            "end_char": 14716
+          }
+        ],
+        "classification_reason": "内容类型与质量的体验偏好陈述，重要性评价保留在表述中。",
+        "inference": null,
+        "review_status": "pending"
+      },
+      "verdict": "under_extraction_candidate",
+      "verdict_zh": "过度过滤导致目标候选遗漏风险",
+      "rationale": "回答的问题明确询问缺少哪些功能产品就不完整；受访者说没有环境音便不完整，并列为最重要功能。仅作体验偏好弱化了维持环境音可用这一意图。G001仅粗略覆盖背景声音，未明确环境音能力与质量。",
+      "recommended_treatment": "补充环境音可用/满足收听目的的维持目标候选或补充G001范围；保留重要性偏好，不把“已具备”作为排除理由。",
+      "source_scope": "Attached evidence plus listed source turns; not a new full-document adjudication.",
+      "source_turns": [
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T104",
+          "turn": "104",
+          "speaker": "Interviewer",
+          "text": "Got it. Got it? Okay? one second. So yeah, so like, just just summarizing. If I had to ask you to list down, let's say, the 3 or 4 most important features of spotify, without which you can't, you or you would say that spotify isn't complete without it. So what would you say? What are those 3? 4 things?",
+          "start_char": 14086,
+          "end_char": 14389
+        },
+        {
+          "document_id": "DOC005",
+          "source_id": "DOC005:T105",
+          "turn": "105",
+          "speaker": "Stakeholder",
+          "text": "Definitely. Playlist is one made for use. Another. Yeah. And I guess. Pub, oh, also, like sometimes I like to listen to ambient noise, so without that I don't think spotify would be spotify. Spotify has some really good ambient noises available. So those 3 things are my most important features in spotify.",
+          "start_char": 14410,
+          "end_char": 14716
+        }
+      ],
+      "mapped_evidence": [
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S106",
+            "quote": "sometimes I like to listen to ambient noise, so without that I don't think spotify would be spotify.",
+            "role": "basis",
+            "start_char": 14500,
+            "end_char": 14600
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T105",
+              "start_char": 14500,
+              "end_char": 14600
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S106",
+            "quote": "Spotify has some really good ambient noises available.",
+            "role": "basis",
+            "start_char": 14601,
+            "end_char": 14655
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T105",
+              "start_char": 14601,
+              "end_char": 14655
+            }
+          ]
+        },
+        {
+          "submitted_evidence": {
+            "source_id": "DOC005:S106",
+            "quote": "So those 3 things are my most important features in spotify.",
+            "role": "context",
+            "start_char": 14656,
+            "end_char": 14716
+          },
+          "canonical_matches": [
+            {
+              "source_id": "DOC005:T105",
+              "start_char": 14656,
+              "end_char": 14716
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

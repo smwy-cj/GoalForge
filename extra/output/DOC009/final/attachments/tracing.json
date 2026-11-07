@@ -1,0 +1,1663 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC009\\extraction.json",
+    "sha256": "c882f103aa8c32615d1d72b174d6ffeca925c0bb797ba786ee7e01d662f55d9c",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "d79c99244904c93807ad9b92d4db4a325b940c02563edffe2df1a8fa65de4071",
+      "input_sha256": "c882f103aa8c32615d1d72b174d6ffeca925c0bb797ba786ee7e01d662f55d9c"
+    },
+    "bundle_sha256": "799da4a49a63f2ac2ac1442cebada6d33f91c4bc40d3e27e5ae444ddda6da751"
+  },
+  "sources": [
+    {
+      "document_id": "DOC009",
+      "expected_hash": "adf4e5a39e038c01ccb4d4d843f5a00b96bf58879bacce1c803ee3000bca53d4",
+      "actual_hash": "adf4e5a39e038c01ccb4d4d843f5a00b96bf58879bacce1c803ee3000bca53d4",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC009-C001",
+      "target_kind": "candidate",
+      "statement": "把 AI 助手当作常规搜索的替代，用来直接拿到答案。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC009:S004",
+          "material_id": "M001",
+          "quote": "They have Camus to serve as a replacement for a lot of traditional searching that I used to do",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 922,
+          "end_char": 1016,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S004",
+              "segment_start": 250,
+              "segment_end": 344,
+              "start_char": 922,
+              "end_char": 1016
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 672,
+            "end_char": 1227
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC009:S004",
+          "material_id": "M001",
+          "quote": "unless I need them to be perfectly, factually correct these days, I defer to any assistant to get my results",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1074,
+          "end_char": 1182,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S004",
+              "segment_start": 402,
+              "segment_end": 510,
+              "start_char": 1074,
+              "end_char": 1182
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 672,
+            "end_char": 1227
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC009:S006",
+          "material_id": "M001",
+          "quote": "I use it 15 to 20 times daily.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1328,
+          "end_char": 1358,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S006",
+              "segment_start": 22,
+              "segment_end": 52,
+              "start_char": 1328,
+              "end_char": 1358
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 1306,
+            "end_char": 1358
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S004",
+          "DOC009:S004",
+          "DOC009:S006"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "替代搜索：T003「a replacement for a lot of traditional searching」",
+          "默认路径：T004「I defer to any assistant to get my results」",
+          "例外条件：T004「unless I need them to be perfectly, factually correct」"
+        ],
+        "unsupported_parts": [
+          "「Camus」为转写噪音，按上下文理解为模型能力/容量",
+          "未说明哪些查询类型不适用"
+        ],
+        "assumptions": [
+          "把「they have Camus to serve as」理解为「模型具备足够能力充当」"
+        ],
+        "reasoning_steps": [
+          "1. 取替代关系与例外",
+          "2. 例外条件说明其边界意识，不否定目标",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T003 直接说明替代关系与例外：「They have Camus to serve as a replacement for a lot of traditional searching that I used to do」，「unless I need them to be perfectly, factually correct... I defer to any assistant」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "把 AI 助手当作常规搜索的替代，用来直接拿到答案。",
+        "label": "direct",
+        "rationale": "T003 直接说明替代关系与例外：「They have Camus to serve as a replacement for a lot of traditional searching that I used to do」，「unless I need them to be perfectly, factually correct... I defer to any assistant」。",
+        "supported_parts": [
+          "替代搜索：T003「a replacement for a lot of traditional searching」",
+          "默认路径：T004「I defer to any assistant to get my results」",
+          "例外条件：T004「unless I need them to be perfectly, factually correct」"
+        ],
+        "unsupported_parts": [
+          "「Camus」为转写噪音，按上下文理解为模型能力/容量",
+          "未说明哪些查询类型不适用"
+        ],
+        "assumptions": [
+          "把「they have Camus to serve as」理解为「模型具备足够能力充当」"
+        ],
+        "reasoning_steps": [
+          "1. 取替代关系与例外",
+          "2. 例外条件说明其边界意识，不否定目标",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C002",
+      "target_kind": "candidate",
+      "statement": "用 AI 生成可直接发出的专业邮件。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC009:S012",
+          "material_id": "M001",
+          "quote": "I use it to compose professional emails, primarily, but to a lesser extent, personal emails as well.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2223,
+          "end_char": 2323,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S012",
+              "segment_start": 20,
+              "segment_end": 120,
+              "start_char": 2223,
+              "end_char": 2323
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 2203,
+            "end_char": 3107
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC009:S012",
+          "material_id": "M001",
+          "quote": "with just a few prompts, I'm able to generate professional emails",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2539,
+          "end_char": 2604,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S012",
+              "segment_start": 336,
+              "segment_end": 401,
+              "start_char": 2539,
+              "end_char": 2604
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 2203,
+            "end_char": 3107
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC009:S012",
+          "material_id": "M001",
+          "quote": "things that I wish to communicate with people that I know personally, I tend to. Maybe you know just quickly whatsapp them",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2658,
+          "end_char": 2780,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S012",
+              "segment_start": 455,
+              "segment_end": 577,
+              "start_char": 2658,
+              "end_char": 2780
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 2203,
+            "end_char": 3107
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S012",
+          "DOC009:S012",
+          "DOC009:S012"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "主要用途：T011「compose professional emails, primarily」",
+          "效果：T011「with just a few prompts, I'm able to generate professional emails」"
+        ],
+        "unsupported_parts": [
+          "私人邮件只是次要用途，且他更倾向直接在聊天软件手写",
+          "未说明对邮件语气/长度的具体要求"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分主次用途",
+          "2. 主用途为直接陈述",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T011 明确「I use it to compose professional emails, primarily」，并说明效果「with just a few prompts, I'm able to generate professional emails」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "用 AI 生成可直接发出的专业邮件。",
+        "label": "direct",
+        "rationale": "T011 明确「I use it to compose professional emails, primarily」，并说明效果「with just a few prompts, I'm able to generate professional emails」。",
+        "supported_parts": [
+          "主要用途：T011「compose professional emails, primarily」",
+          "效果：T011「with just a few prompts, I'm able to generate professional emails」"
+        ],
+        "unsupported_parts": [
+          "私人邮件只是次要用途，且他更倾向直接在聊天软件手写",
+          "未说明对邮件语气/长度的具体要求"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分主次用途",
+          "2. 主用途为直接陈述",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C003",
+      "target_kind": "candidate",
+      "statement": "用 AI 撰写并校对文档（含工作长文档与作业），做拼写、语法与语气检查。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC009:S010",
+          "material_id": "M001",
+          "quote": "writing and proofreading documents",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1781,
+          "end_char": 1815,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S010",
+              "segment_start": 152,
+              "segment_end": 186,
+              "start_char": 1781,
+              "end_char": 1815
+            }
+          ],
+          "original_locator": {
+            "line_start": 10,
+            "line_end": 10,
+            "start_char": 1629,
+            "end_char": 1920
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC009:S022",
+          "material_id": "M001",
+          "quote": "proofreading like documents that I've written myself, for which, like, I want spelling checks, grammar checks, tone checks",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5476,
+          "end_char": 5598,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S022",
+              "segment_start": 186,
+              "segment_end": 308,
+              "start_char": 5476,
+              "end_char": 5598
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 5290,
+            "end_char": 5729
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC009:S018",
+          "material_id": "M001",
+          "quote": "for for writing documents and for assignments, maybe 3 to 4 times a a week",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4451,
+          "end_char": 4525,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S018",
+              "segment_start": 254,
+              "segment_end": 328,
+              "start_char": 4451,
+              "end_char": 4525
+            }
+          ],
+          "original_locator": {
+            "line_start": 18,
+            "line_end": 18,
+            "start_char": 4197,
+            "end_char": 4717
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S010",
+          "DOC009:S022",
+          "DOC009:S018"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "用途：T009「writing and proofreading documents」",
+          "校对项：T021「spelling checks, grammar checks, tone checks」",
+          "频率与场景：T017「for writing documents and for assignments, maybe 3 to 4 times a a week」"
+        ],
+        "unsupported_parts": [
+          "作业使用受课程许可限制，原文未说明未获许可时如何替代",
+          "未说明文档长度与类型"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 三处互证",
+          "2. 对象（文档）与动作（撰写+校对）一致",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T009 把「writing and proofreading documents」列为三大用途之一，T021 具体化校对项（拼写、语法、语气），T017 给出使用频率。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "用 AI 撰写并校对文档（含工作长文档与作业），做拼写、语法与语气检查。",
+        "label": "direct",
+        "rationale": "T009 把「writing and proofreading documents」列为三大用途之一，T021 具体化校对项（拼写、语法、语气），T017 给出使用频率。",
+        "supported_parts": [
+          "用途：T009「writing and proofreading documents」",
+          "校对项：T021「spelling checks, grammar checks, tone checks」",
+          "频率与场景：T017「for writing documents and for assignments, maybe 3 to 4 times a a week」"
+        ],
+        "unsupported_parts": [
+          "作业使用受课程许可限制，原文未说明未获许可时如何替代",
+          "未说明文档长度与类型"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 三处互证",
+          "2. 对象（文档）与动作（撰写+校对）一致",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C004",
+      "target_kind": "candidate",
+      "statement": "用 AI 生成可嵌入博客与社交帖子的数字图像。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC009:S014",
+          "material_id": "M001",
+          "quote": "I use them to create you know, digital art that I often embed in my blog posts or social media posts",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3433,
+          "end_char": 3533,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S014",
+              "segment_start": 40,
+              "segment_end": 140,
+              "start_char": 3433,
+              "end_char": 3533
+            }
+          ],
+          "original_locator": {
+            "line_start": 14,
+            "line_end": 14,
+            "start_char": 3393,
+            "end_char": 3733
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC009:S014",
+          "material_id": "M001",
+          "quote": "I'm a terrible artist myself, but Gpt makes me look as though I'm not",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3655,
+          "end_char": 3724,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S014",
+              "segment_start": 262,
+              "segment_end": 331,
+              "start_char": 3655,
+              "end_char": 3724
+            }
+          ],
+          "original_locator": {
+            "line_start": 14,
+            "line_end": 14,
+            "start_char": 3393,
+            "end_char": 3733
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S014",
+          "DOC009:S014"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "用途：T013「create you know, digital art」",
+          "产出位置：T013「embed in my blog posts or social media posts」",
+          "受益：T013「Gpt makes me look as though I'm not」"
+        ],
+        "unsupported_parts": [
+          "未说明风格、分辨率或版权要求",
+          "未说明文生图与文生视频的优先级"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取用途与产出句",
+          "2. 受益说明支持其持续性",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T013 明确用途与产出位置：「create digital art that I often embed in my blog posts or social media posts」，并说明受益。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "用 AI 生成可嵌入博客与社交帖子的数字图像。",
+        "label": "direct",
+        "rationale": "T013 明确用途与产出位置：「create digital art that I often embed in my blog posts or social media posts」，并说明受益。",
+        "supported_parts": [
+          "用途：T013「create you know, digital art」",
+          "产出位置：T013「embed in my blog posts or social media posts」",
+          "受益：T013「Gpt makes me look as though I'm not」"
+        ],
+        "unsupported_parts": [
+          "未说明风格、分辨率或版权要求",
+          "未说明文生图与文生视频的优先级"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取用途与产出句",
+          "2. 受益说明支持其持续性",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C005",
+      "target_kind": "candidate",
+      "statement": "借 AI 头脑风暴，并把自己已有的想法表达得更清楚。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC009:S018",
+          "material_id": "M001",
+          "quote": "it helps me like brainstorm, different ideas and articulate some of the ideas that I have of my own better",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4538,
+          "end_char": 4644,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S018",
+              "segment_start": 341,
+              "segment_end": 447,
+              "start_char": 4538,
+              "end_char": 4644
+            }
+          ],
+          "original_locator": {
+            "line_start": 18,
+            "line_end": 18,
+            "start_char": 4197,
+            "end_char": 4717
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC009:S022",
+          "material_id": "M001",
+          "quote": "Brainstorming is one of the primary tasks for which I use an a assistant as well.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5333,
+          "end_char": 5414,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S022",
+              "segment_start": 43,
+              "segment_end": 124,
+              "start_char": 5333,
+              "end_char": 5414
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 5290,
+            "end_char": 5729
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S018",
+          "DOC009:S022"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "头脑风暴：T022「Brainstorming is one of the primary tasks」",
+          "表达优化：T018「articulate some of the ideas that I have of my own better」"
+        ],
+        "unsupported_parts": [
+          "未说明希望 AI 提供多少候选或如何筛选",
+          "未说明头脑风暴失败的判断标准"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 两处互证",
+          "2. 「articulate」部分常被忽略，单独记录",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T017 与 T021 两次说明头脑风暴用途，并补充「articulate some of the ideas that I have of my own better」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "借 AI 头脑风暴，并把自己已有的想法表达得更清楚。",
+        "label": "direct",
+        "rationale": "T017 与 T021 两次说明头脑风暴用途，并补充「articulate some of the ideas that I have of my own better」。",
+        "supported_parts": [
+          "头脑风暴：T022「Brainstorming is one of the primary tasks」",
+          "表达优化：T018「articulate some of the ideas that I have of my own better」"
+        ],
+        "unsupported_parts": [
+          "未说明希望 AI 提供多少候选或如何筛选",
+          "未说明头脑风暴失败的判断标准"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 两处互证",
+          "2. 「articulate」部分常被忽略，单独记录",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C006",
+      "target_kind": "candidate",
+      "statement": "编程任务中输入与输出支持 JSON、XML 等标准格式。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC009:S028",
+          "material_id": "M001",
+          "quote": "when I use a assistance for programming tasks, I often need the input or the output to be in certain formats. Json or Xml is an example",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7112,
+          "end_char": 7247,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S028",
+              "segment_start": 409,
+              "segment_end": 544,
+              "start_char": 7112,
+              "end_char": 7247
+            }
+          ],
+          "original_locator": {
+            "line_start": 28,
+            "line_end": 28,
+            "start_char": 6703,
+            "end_char": 7508
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC009:S028",
+          "material_id": "M001",
+          "quote": "I think it would make sense if it is able to format these into other standardized formats that we use",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7334,
+          "end_char": 7435,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S028",
+              "segment_start": 631,
+              "segment_end": 732,
+              "start_char": 7334,
+              "end_char": 7435
+            }
+          ],
+          "original_locator": {
+            "line_start": 28,
+            "line_end": 28,
+            "start_char": 6703,
+            "end_char": 7508
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S028",
+          "DOC009:S028"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "需求：T027「I often need the input or the output to be in certain formats」",
+          "期望：T028「format these into other standardized formats」"
+        ],
+        "unsupported_parts": [
+          "只举例 JSON/XML，未穷举（如 YAML、SQL、CSV）",
+          "未说明是输入解析还是输出生成更重要"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取需求与期望句",
+          "2. 场景（编程）明确",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T027 说明编程场景需要结构化格式「Json or Xml is an example」，并直接提出期望「it would make sense if it is able to format these into other standardized formats」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "编程任务中输入与输出支持 JSON、XML 等标准格式。",
+        "label": "direct",
+        "rationale": "T027 说明编程场景需要结构化格式「Json or Xml is an example」，并直接提出期望「it would make sense if it is able to format these into other standardized formats」。",
+        "supported_parts": [
+          "需求：T027「I often need the input or the output to be in certain formats」",
+          "期望：T028「format these into other standardized formats」"
+        ],
+        "unsupported_parts": [
+          "只举例 JSON/XML，未穷举（如 YAML、SQL、CSV）",
+          "未说明是输入解析还是输出生成更重要"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取需求与期望句",
+          "2. 场景（编程）明确",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C007",
+      "target_kind": "candidate",
+      "statement": "得到简洁直接的答复，而不是冗长的对话式回复。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC009:S032",
+          "material_id": "M001",
+          "quote": "I would definitely appreciate brevity over a a verbose response",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8549,
+          "end_char": 8612,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S032",
+              "segment_start": 167,
+              "segment_end": 230,
+              "start_char": 8549,
+              "end_char": 8612
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 8382,
+            "end_char": 8766
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC009:S032",
+          "material_id": "M001",
+          "quote": "having a succinct response to my question rather than having a big conversational response",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8647,
+          "end_char": 8737,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S032",
+              "segment_start": 265,
+              "segment_end": 355,
+              "start_char": 8647,
+              "end_char": 8737
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 8382,
+            "end_char": 8766
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S032",
+          "DOC009:S032"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "偏好：T031「brevity over a a verbose response」",
+          "理由：T031 以 productivity 与 time 为前提下结论",
+          "具体形态：T032「a succinct response... rather than a big conversational response」"
+        ],
+        "unsupported_parts": [
+          "「简洁」无长度标准",
+          "未说明复杂任务是否也需要牺牲完整性"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取偏好与理由",
+          "2. 明确为交互风格诉求",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T031 直接对比两种回复风格并给出偏好：「I would definitely appreciate brevity over a a verbose response」，理由是与时间/效率有关。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "得到简洁直接的答复，而不是冗长的对话式回复。",
+        "label": "direct",
+        "rationale": "T031 直接对比两种回复风格并给出偏好：「I would definitely appreciate brevity over a a verbose response」，理由是与时间/效率有关。",
+        "supported_parts": [
+          "偏好：T031「brevity over a a verbose response」",
+          "理由：T031 以 productivity 与 time 为前提下结论",
+          "具体形态：T032「a succinct response... rather than a big conversational response」"
+        ],
+        "unsupported_parts": [
+          "「简洁」无长度标准",
+          "未说明复杂任务是否也需要牺牲完整性"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取偏好与理由",
+          "2. 明确为交互风格诉求",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C008",
+      "target_kind": "candidate",
+      "statement": "AI 能记住过往交互与要求，不必每次重复交代背景。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC009:S034",
+          "material_id": "M001",
+          "quote": "I think it's super important that I don't have to repeat myself in every query or every conversation",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8898,
+          "end_char": 8998,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S034",
+              "segment_start": 26,
+              "segment_end": 126,
+              "start_char": 8898,
+              "end_char": 8998
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 8872,
+            "end_char": 9213
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC009:S034",
+          "material_id": "M001",
+          "quote": "hold some sort of memory or history of previous interactions",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9063,
+          "end_char": 9123,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S034",
+              "segment_start": 191,
+              "segment_end": 251,
+              "start_char": 9063,
+              "end_char": 9123
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 8872,
+            "end_char": 9213
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S034",
+          "DOC009:S034"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "重要性：T033「it's super important」",
+          "需求：T034「hold some sort of memory or history of previous interactions」",
+          "用途：T034「giving it context, or like what my requirements are」"
+        ],
+        "unsupported_parts": [
+          "未说明记忆范围、保留时长与隐私边界",
+          "未说明跨产品是否要共享记忆"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取重要性判断与需求句",
+          "2. 未涉及隐私，记入部分不支持",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T033 以 super important 表达记忆需求：「I don't have to repeat myself in every query」，并说明用途（提供上下文与要求）。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "AI 能记住过往交互与要求，不必每次重复交代背景。",
+        "label": "direct",
+        "rationale": "T033 以 super important 表达记忆需求：「I don't have to repeat myself in every query」，并说明用途（提供上下文与要求）。",
+        "supported_parts": [
+          "重要性：T033「it's super important」",
+          "需求：T034「hold some sort of memory or history of previous interactions」",
+          "用途：T034「giving it context, or like what my requirements are」"
+        ],
+        "unsupported_parts": [
+          "未说明记忆范围、保留时长与隐私边界",
+          "未说明跨产品是否要共享记忆"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取重要性判断与需求句",
+          "2. 未涉及隐私，记入部分不支持",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C009",
+      "target_kind": "candidate",
+      "statement": "数学类问题用多个助手交叉验证答案后再采用。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC009:S036",
+          "material_id": "M001",
+          "quote": "when it comes to solving mathematical problems, I often find the need to cross check the answers generated by any given a assistant with multiple others",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9987,
+          "end_char": 10139,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S036",
+              "segment_start": 498,
+              "segment_end": 650,
+              "start_char": 9987,
+              "end_char": 10139
+            }
+          ],
+          "original_locator": {
+            "line_start": 36,
+            "line_end": 36,
+            "start_char": 9489,
+            "end_char": 10220
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC009:S036",
+          "material_id": "M001",
+          "quote": "they seem to be prone to making mistakes when it comes to math",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10148,
+          "end_char": 10210,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S036",
+              "segment_start": 659,
+              "segment_end": 721,
+              "start_char": 10148,
+              "end_char": 10210
+            }
+          ],
+          "original_locator": {
+            "line_start": 36,
+            "line_end": 36,
+            "start_char": 9489,
+            "end_char": 10220
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S036",
+          "DOC009:S036"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "交叉验证：T036「cross check the answers... with multiple others」",
+          "原因：T036「prone to making mistakes when it comes to math」",
+          "对照：T036 语言任务「without having to compare it」"
+        ],
+        "unsupported_parts": [
+          "这是受访者的自保做法，未要求平台内置互校",
+          "未说明需要几个模型或判定分歧的规则"
+        ],
+        "assumptions": [
+          "把交叉验证视为其达到可信答案的手段"
+        ],
+        "reasoning_steps": [
+          "1. 区分任务类型下的不同做法",
+          "2. 数学场景的需求为直接陈述",
+          "3. → direct，并转为人工问题"
+        ],
+        "label": "direct",
+        "rationale": "T035 按任务类型区分做法：语言任务不必比较，数学任务「I often find the need to cross check the answers... with multiple others」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "数学类问题用多个助手交叉验证答案后再采用。",
+        "label": "direct",
+        "rationale": "T035 按任务类型区分做法：语言任务不必比较，数学任务「I often find the need to cross check the answers... with multiple others」。",
+        "supported_parts": [
+          "交叉验证：T036「cross check the answers... with multiple others」",
+          "原因：T036「prone to making mistakes when it comes to math」",
+          "对照：T036 语言任务「without having to compare it」"
+        ],
+        "unsupported_parts": [
+          "这是受访者的自保做法，未要求平台内置互校",
+          "未说明需要几个模型或判定分歧的规则"
+        ],
+        "assumptions": [
+          "把交叉验证视为其达到可信答案的手段"
+        ],
+        "reasoning_steps": [
+          "1. 区分任务类型下的不同做法",
+          "2. 数学场景的需求为直接陈述",
+          "3. → direct，并转为人工问题"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C010",
+      "target_kind": "candidate",
+      "statement": "输出事实可靠，使关键流程可以在无人复核的情况下自动完成。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC009:S042",
+          "material_id": "M001",
+          "quote": "the very nature of how the assistants have been trained make them very prone to hallucinations",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 11303,
+          "end_char": 11397,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S042",
+              "segment_start": 187,
+              "segment_end": 281,
+              "start_char": 11303,
+              "end_char": 11397
+            }
+          ],
+          "original_locator": {
+            "line_start": 42,
+            "line_end": 42,
+            "start_char": 11116,
+            "end_char": 11775
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC009:S044",
+          "material_id": "M001",
+          "quote": "I have not been able to completely automate certain pipelines, because that needs to be a human eye looking over the content",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12055,
+          "end_char": 12179,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S044",
+              "segment_start": 143,
+              "segment_end": 267,
+              "start_char": 12055,
+              "end_char": 12179
+            }
+          ],
+          "original_locator": {
+            "line_start": 44,
+            "line_end": 44,
+            "start_char": 11912,
+            "end_char": 12590
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC009:S042",
+          "material_id": "M001",
+          "quote": "for tasks that are critical. They do need a human eye to go over them still",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 11623,
+          "end_char": 11698,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S042",
+              "segment_start": 507,
+              "segment_end": 582,
+              "start_char": 11623,
+              "end_char": 11698
+            }
+          ],
+          "original_locator": {
+            "line_start": 42,
+            "line_end": 42,
+            "start_char": 11116,
+            "end_char": 11775
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S042",
+          "DOC009:S044",
+          "DOC009:S042"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "原因：T042「very prone to hallucinations」",
+          "后果：T042「need a human eye to go over them」",
+          "损失：T044「I have not been able to automate certain pipelines」"
+        ],
+        "unsupported_parts": [
+          "受访者明确表示提不出解法（T045），目标存在但路径未知",
+          "「critical」的范围未定义"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取原因与后果",
+          "2. 目标（可无人复核地自动化）由后果反推但表述明确",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T041 指出幻觉导致必须人工复核「For tasks that are critical. They do need a human eye」，T043 明确后果「I have not been able to automate certain pipelines」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "输出事实可靠，使关键流程可以在无人复核的情况下自动完成。",
+        "label": "direct",
+        "rationale": "T041 指出幻觉导致必须人工复核「For tasks that are critical. They do need a human eye」，T043 明确后果「I have not been able to automate certain pipelines」。",
+        "supported_parts": [
+          "原因：T042「very prone to hallucinations」",
+          "后果：T042「need a human eye to go over them」",
+          "损失：T044「I have not been able to automate certain pipelines」"
+        ],
+        "unsupported_parts": [
+          "受访者明确表示提不出解法（T045），目标存在但路径未知",
+          "「critical」的范围未定义"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取原因与后果",
+          "2. 目标（可无人复核地自动化）由后果反推但表述明确",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C011",
+      "target_kind": "candidate",
+      "statement": "界面简洁不干扰，避免分散注意力的多余元素。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC009:S054",
+          "material_id": "M001",
+          "quote": "in the case of perplexity, I think there's just too much happening on the screen that it distracts me",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 14674,
+          "end_char": 14775,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S054",
+              "segment_start": 502,
+              "segment_end": 603,
+              "start_char": 14674,
+              "end_char": 14775
+            }
+          ],
+          "original_locator": {
+            "line_start": 54,
+            "line_end": 54,
+            "start_char": 14172,
+            "end_char": 14889
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC009:S054",
+          "material_id": "M001",
+          "quote": "in the case of Gemini, it's a simple case of the design of their web page. That kind of throws me off",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 14781,
+          "end_char": 14882,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S054",
+              "segment_start": 609,
+              "segment_end": 710,
+              "start_char": 14781,
+              "end_char": 14882
+            }
+          ],
+          "original_locator": {
+            "line_start": 54,
+            "line_end": 54,
+            "start_char": 14172,
+            "end_char": 14889
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S054",
+          "DOC009:S054"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "干扰：T054「too much happening on the screen that it distracts me」",
+          "设计出戏：T054「the design of their web page. That kind of throws me off」"
+        ],
+        "unsupported_parts": [
+          "未说明具体要什么样的布局",
+          "可能混有使用习惯（他承认可能只是习惯了 ChatGPT）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两处具体抱怨",
+          "2. 受访者自己承认可能是习惯因素，记入部分不支持",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T053 用两个竞品具体说明干扰：「too much happening on the screen that it distracts me」（Perplexity）、「the design of their web page. That kind of throws me off」（Gemini）。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "界面简洁不干扰，避免分散注意力的多余元素。",
+        "label": "direct",
+        "rationale": "T053 用两个竞品具体说明干扰：「too much happening on the screen that it distracts me」（Perplexity）、「the design of their web page. That kind of throws me off」（Gemini）。",
+        "supported_parts": [
+          "干扰：T054「too much happening on the screen that it distracts me」",
+          "设计出戏：T054「the design of their web page. That kind of throws me off」"
+        ],
+        "unsupported_parts": [
+          "未说明具体要什么样的布局",
+          "可能混有使用习惯（他承认可能只是习惯了 ChatGPT）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取两处具体抱怨",
+          "2. 受访者自己承认可能是习惯因素，记入部分不支持",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C012",
+      "target_kind": "candidate",
+      "statement": "支持文生视频（当前只有文生图）。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC009:S056",
+          "material_id": "M001",
+          "quote": "If they could help me do text to video as well. They do support text image right now.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15189,
+          "end_char": 15274,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S056",
+              "segment_start": 123,
+              "segment_end": 208,
+              "start_char": 15189,
+              "end_char": 15274
+            }
+          ],
+          "original_locator": {
+            "line_start": 56,
+            "line_end": 56,
+            "start_char": 15066,
+            "end_char": 16292
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC009:S056",
+          "material_id": "M001",
+          "quote": "But text to video would be in useful addition.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15275,
+          "end_char": 15321,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S056",
+              "segment_start": 209,
+              "segment_end": 255,
+              "start_char": 15275,
+              "end_char": 15321
+            }
+          ],
+          "original_locator": {
+            "line_start": 56,
+            "line_end": 56,
+            "start_char": 15066,
+            "end_char": 16292
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S056",
+          "DOC009:S056"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "期望：T056「help me do text to video as well」",
+          "现状对照：T056「They do support text image right now」"
+        ],
+        "unsupported_parts": [
+          "未说明视频用途（是否也用于博客配图）",
+          "未说明时长、分辨率等要求"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取期望与现状对照",
+          "2. 属功能缺口型诉求",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T055 明确提出文生视频的缺失：「If they could help me do text to video as well. They do support text image right now」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "支持文生视频（当前只有文生图）。",
+        "label": "direct",
+        "rationale": "T055 明确提出文生视频的缺失：「If they could help me do text to video as well. They do support text image right now」。",
+        "supported_parts": [
+          "期望：T056「help me do text to video as well」",
+          "现状对照：T056「They do support text image right now」"
+        ],
+        "unsupported_parts": [
+          "未说明视频用途（是否也用于博客配图）",
+          "未说明时长、分辨率等要求"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取期望与现状对照",
+          "2. 属功能缺口型诉求",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC009-C013",
+      "target_kind": "candidate",
+      "statement": "从「问答式模型」升级为可代执行任务的 agent（如直接写好并发出邮件）。",
+      "document_id": "DOC009",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC009:S056",
+          "material_id": "M001",
+          "quote": "If we can move from that model to having large language agents instead of large language models",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15649,
+          "end_char": 15744,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S056",
+              "segment_start": 583,
+              "segment_end": 678,
+              "start_char": 15649,
+              "end_char": 15744
+            }
+          ],
+          "original_locator": {
+            "line_start": 56,
+            "line_end": 56,
+            "start_char": 15066,
+            "end_char": 16292
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0030",
+          "source_id": "DOC009:S056",
+          "material_id": "M001",
+          "quote": "it just goes ahead and opens the email client of its own, composes the email and sends it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 16041,
+          "end_char": 16130,
+          "candidate_locations": [
+            {
+              "source_id": "DOC009:S056",
+              "segment_start": 975,
+              "segment_end": 1064,
+              "start_char": 16041,
+              "end_char": 16130
+            }
+          ],
+          "original_locator": {
+            "line_start": 56,
+            "line_end": 56,
+            "start_char": 15066,
+            "end_char": 16292
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC009:S056",
+          "DOC009:S056"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "形态：T056「large language agents instead of large language models」",
+          "举例：T056「opens the email client of its own, composes the email and sends it」",
+          "动机：T056「instead of it giving me the response... that I could copy and paste」"
+        ],
+        "unsupported_parts": [
+          "未说明授权边界（agent 可自行发送是否需确认）",
+          "未说明失败回滚与责任归属"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取形态陈述与举例",
+          "2. 动机为减少复制粘贴环节",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T055 明确要求从模型转向 agent：「If we can move from that model to having large language agents instead of large language models」，并以自动发邮件为例。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "从「问答式模型」升级为可代执行任务的 agent（如直接写好并发出邮件）。",
+        "label": "direct",
+        "rationale": "T055 明确要求从模型转向 agent：「If we can move from that model to having large language agents instead of large language models」，并以自动发邮件为例。",
+        "supported_parts": [
+          "形态：T056「large language agents instead of large language models」",
+          "举例：T056「opens the email client of its own, composes the email and sends it」",
+          "动机：T056「instead of it giving me the response... that I could copy and paste」"
+        ],
+        "unsupported_parts": [
+          "未说明授权边界（agent 可自行发送是否需确认）",
+          "未说明失败回滚与责任归属"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取形态陈述与举例",
+          "2. 动机为减少复制粘贴环节",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC009\\tracing\\semantic-judgments.json",
+    "sha256": "ae65422c0bc2306e8cba7b2779d0a8f6cc104072a88447c948d56035355161d3"
+  }
+}

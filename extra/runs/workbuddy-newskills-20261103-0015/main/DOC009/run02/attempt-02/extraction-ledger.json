@@ -1,0 +1,1147 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC009",
+  "input_binding": {
+    "source_input_sha256": "afdf6d843c8831a8510f89eb06d25dbbfded534c2266c597f009143e9bdcdb13",
+    "source_sha256": "adf4e5a39e038c01ccb4d4d843f5a00b96bf58879bacce1c803ee3000bca53d4",
+    "windows_sha256": "a63db6bfc6bae854fb68af0967d1ce3ddc323157d6c54b31fca4b23189137534",
+    "candidates_sha256": "aef2d2b1424fc415861cf70ed2ddcfa871ee36b881424d1de7755ef289c4e749",
+    "extraction_sha256": "e0e03b3548666e960779251e9efa03222f057249ae7e85dcc52fe46b170cd104"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "unknown",
+    "temperature": "unknown",
+    "budget": "1 initial pass + 1 full-context pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 2,
+    "stop_reason": "完成逐窗捕获与一次全篇校正；补查未发现新的有据意图，剩余缺口为原文未说明（阈值、范围、方案），转为问题保留",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC009:W0001",
+            "status": "processed",
+            "reason": "捕获 C001（替代传统搜索）、C002（每天 15-20 次频率）"
+          },
+          {
+            "window_id": "DOC009:W0002",
+            "status": "processed",
+            "reason": "复述 15-20 次/天的使用频率，与 C001 同源，无新候选"
+          },
+          {
+            "window_id": "DOC009:W0003",
+            "status": "processed",
+            "reason": "采访者评价与单字应答，无涉众意图候选"
+          },
+          {
+            "window_id": "DOC009:W0004",
+            "status": "processed",
+            "reason": "捕获 C003（top 用例复合：邮件/文档撰写与校对/多媒体）"
+          },
+          {
+            "window_id": "DOC009:W0005",
+            "status": "processed",
+            "reason": "捕获 C004（专业邮件为主）、C005（个人通讯自行撰写）"
+          },
+          {
+            "window_id": "DOC009:W0006",
+            "status": "processed",
+            "reason": "捕获 C006（生成数字艺术嵌入帖子）、C007（弥补绘画能力不足）"
+          },
+          {
+            "window_id": "DOC009:W0007",
+            "status": "processed",
+            "reason": "捕获 C008（三类用例复述，补充长文档用于工作或作业）"
+          },
+          {
+            "window_id": "DOC009:W0008",
+            "status": "processed",
+            "reason": "捕获 C009（作业允许时使用）、C010（头脑风暴）、C011（更好表达已有想法）"
+          },
+          {
+            "window_id": "DOC009:W0009",
+            "status": "processed",
+            "reason": "追问常见任务类型与请求澄清，无新候选"
+          },
+          {
+            "window_id": "DOC009:W0010",
+            "status": "processed",
+            "reason": "捕获 C012（校对自撰文档）、C013（头脑风暴复述）"
+          },
+          {
+            "window_id": "DOC009:W0011",
+            "status": "processed",
+            "reason": "捕获 C014（语音提示，might consider）、C015（文本框+附件现状）"
+          },
+          {
+            "window_id": "DOC009:W0012",
+            "status": "processed",
+            "reason": "追问格式与反问确认，无新候选"
+          },
+          {
+            "window_id": "DOC009:W0013",
+            "status": "processed",
+            "reason": "捕获 C016（编程/编码帮助）、C017（标准格式输入输出）"
+          },
+          {
+            "window_id": "DOC009:W0014",
+            "status": "processed",
+            "reason": "追问反馈方式与反问澄清（语气/呈现），无新候选"
+          },
+          {
+            "window_id": "DOC009:W0015",
+            "status": "processed",
+            "reason": "捕获 C018（提高生产力）、C019（简洁回答胜冗长）"
+          },
+          {
+            "window_id": "DOC009:W0016",
+            "status": "processed",
+            "reason": "捕获 C020（不必重复自己）、C021（保留交互记忆/历史）"
+          },
+          {
+            "window_id": "DOC009:W0017",
+            "status": "processed",
+            "reason": "捕获 C022（数学交叉核对）、C023（语言任务无需比较）"
+          },
+          {
+            "window_id": "DOC009:W0018",
+            "status": "processed",
+            "reason": "过渡语与单字应答，无候选"
+          },
+          {
+            "window_id": "DOC009:W0019",
+            "status": "processed",
+            "reason": "捕获 C024（偏好 ChatGPT 及原因）"
+          },
+          {
+            "window_id": "DOC009:W0020",
+            "status": "processed",
+            "reason": "捕获 C025（关键任务需人工复核）、C026（事实准确）"
+          },
+          {
+            "window_id": "DOC009:W0021",
+            "status": "processed",
+            "reason": "捕获 C027（未能完全自动化流水线）"
+          },
+          {
+            "window_id": "DOC009:W0022",
+            "status": "processed",
+            "reason": "捕获 C028（检测纠正幻觉，自述无方案）"
+          },
+          {
+            "window_id": "DOC009:W0023",
+            "status": "processed",
+            "reason": "捕获 C029（严重不准确的顾虑）"
+          },
+          {
+            "window_id": "DOC009:W0024",
+            "status": "processed",
+            "reason": "追问竞品负面体验与反问澄清，无新候选"
+          },
+          {
+            "window_id": "DOC009:W0025",
+            "status": "processed",
+            "reason": "确认与单字应答，无候选"
+          },
+          {
+            "window_id": "DOC009:W0026",
+            "status": "processed",
+            "reason": "捕获 C030（界面不分散注意力）、C031（GPT 更准确）"
+          },
+          {
+            "window_id": "DOC009:W0027",
+            "status": "processed",
+            "reason": "捕获 C032（文本转视频）、C033（agent）、C034（自动发邮件示例）"
+          },
+          {
+            "window_id": "DOC009:W0028",
+            "status": "processed",
+            "reason": "采访者致谢与客套，无候选"
+          },
+          {
+            "window_id": "DOC009:W0029",
+            "status": "processed",
+            "reason": "致谢结束，无候选"
+          }
+        ]
+      },
+      {
+        "pass_id": "P2",
+        "kind": "full_context",
+        "context": "shared",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC009:W0001",
+            "status": "processed",
+            "reason": "回查：搜索替代的条件（除非需完全事实正确）已写入 G001"
+          },
+          {
+            "window_id": "DOC009:W0002",
+            "status": "processed",
+            "reason": "回查：频率为现状描述，不升级为要求"
+          },
+          {
+            "window_id": "DOC009:W0003",
+            "status": "processed",
+            "reason": "回查：无语义内容"
+          },
+          {
+            "window_id": "DOC009:W0004",
+            "status": "processed",
+            "reason": "回查：复合用例已在 T011/T013/T015/T021 展开为独立任务"
+          },
+          {
+            "window_id": "DOC009:W0005",
+            "status": "processed",
+            "reason": "回查：个人通讯自撰为偏好，非对助手的要求"
+          },
+          {
+            "window_id": "DOC009:W0006",
+            "status": "processed",
+            "reason": "回查：加速创作是已实现现状，作为 G006 背景而非独立要求"
+          },
+          {
+            "window_id": "DOC009:W0007",
+            "status": "processed",
+            "reason": "回查：与 C003 同义复述，不新增节点"
+          },
+          {
+            "window_id": "DOC009:W0008",
+            "status": "processed",
+            "reason": "回查：作业条件（允许使用）继承到 G007；两类用途分别成目标"
+          },
+          {
+            "window_id": "DOC009:W0009",
+            "status": "processed",
+            "reason": "回查：澄清回合不产生目标"
+          },
+          {
+            "window_id": "DOC009:W0010",
+            "status": "processed",
+            "reason": "回查：proofreading 与撰写分为独立目标（G004）"
+          },
+          {
+            "window_id": "DOC009:W0011",
+            "status": "processed",
+            "reason": "回查：语音为条件性考虑，保留 insufficient；文本交互为现状"
+          },
+          {
+            "window_id": "DOC009:W0012",
+            "status": "processed",
+            "reason": "回查：澄清回合不产生目标"
+          },
+          {
+            "window_id": "DOC009:W0013",
+            "status": "processed",
+            "reason": "回查：格式需求限定在编码任务，未扩到 HTML/LaTeX"
+          },
+          {
+            "window_id": "DOC009:W0014",
+            "status": "processed",
+            "reason": "回查：澄清回合不产生目标"
+          },
+          {
+            "window_id": "DOC009:W0015",
+            "status": "processed",
+            "reason": "回查：提高生产力为前提性目的；简洁为偏好强度（appreciate）"
+          },
+          {
+            "window_id": "DOC009:W0016",
+            "status": "processed",
+            "reason": "回查：记忆与不重复是手段与结果，分别成目标"
+          },
+          {
+            "window_id": "DOC009:W0017",
+            "status": "processed",
+            "reason": "回查：语言任务不比较为现状，交叉核对因数学易错"
+          },
+          {
+            "window_id": "DOC009:W0018",
+            "status": "processed",
+            "reason": "回查：无语义内容"
+          },
+          {
+            "window_id": "DOC009:W0019",
+            "status": "processed",
+            "reason": "回查：ChatGPT 偏好为现状偏好，不转为产品要求"
+          },
+          {
+            "window_id": "DOC009:W0020",
+            "status": "processed",
+            "reason": "回查：人工在环作为 G019 的相反/限制证据保留"
+          },
+          {
+            "window_id": "DOC009:W0021",
+            "status": "processed",
+            "reason": "回查：自动化愿望以反事实表达，判 inferred"
+          },
+          {
+            "window_id": "DOC009:W0022",
+            "status": "processed",
+            "reason": "回查：自述无方案，G020 保留 insufficient 不升级"
+          },
+          {
+            "window_id": "DOC009:W0023",
+            "status": "processed",
+            "reason": "回查：与 C026 同义，合并入 G018"
+          },
+          {
+            "window_id": "DOC009:W0024",
+            "status": "processed",
+            "reason": "回查：澄清回合不产生目标"
+          },
+          {
+            "window_id": "DOC009:W0025",
+            "status": "processed",
+            "reason": "回查：无语义内容"
+          },
+          {
+            "window_id": "DOC009:W0026",
+            "status": "processed",
+            "reason": "回查：界面判断含不确定（习惯还是界面本身），写入 G021 理由"
+          },
+          {
+            "window_id": "DOC009:W0027",
+            "status": "processed",
+            "reason": "回查：邮件示例是演示 agent 能力，不另建固定业务目标"
+          },
+          {
+            "window_id": "DOC009:W0028",
+            "status": "processed",
+            "reason": "回查：客套，无语义内容"
+          },
+          {
+            "window_id": "DOC009:W0029",
+            "status": "processed",
+            "reason": "回查：致谢，无语义内容"
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "全篇回查：核对指代（these assistants/Gpt/it 指向 AI 助手）、问答范围（T019/T025/T029/T049 为反问澄清，不产生目标）、条件继承（作业允许使用、编码任务限定、除非需完全事实正确）、让步与例外（个人邮件次要、个人通讯自撰、语言任务不比较）、相反证据（T041/T043/T047 的不准确与人工在环对自动化的限制）。逐窗回查结果见 passes。",
+    "source_ids": [
+      "DOC009:T000",
+      "DOC009:T001",
+      "DOC009:T002",
+      "DOC009:T003",
+      "DOC009:T004",
+      "DOC009:T005",
+      "DOC009:T006",
+      "DOC009:T007",
+      "DOC009:T008",
+      "DOC009:T009",
+      "DOC009:T010",
+      "DOC009:T011",
+      "DOC009:T012",
+      "DOC009:T013",
+      "DOC009:T014",
+      "DOC009:T015",
+      "DOC009:T016",
+      "DOC009:T017",
+      "DOC009:T018",
+      "DOC009:T019",
+      "DOC009:T020",
+      "DOC009:T021",
+      "DOC009:T022",
+      "DOC009:T023",
+      "DOC009:T024",
+      "DOC009:T025",
+      "DOC009:T026",
+      "DOC009:T027",
+      "DOC009:T028",
+      "DOC009:T029",
+      "DOC009:T030",
+      "DOC009:T031",
+      "DOC009:T032",
+      "DOC009:T033",
+      "DOC009:T034",
+      "DOC009:T035",
+      "DOC009:T036",
+      "DOC009:T037",
+      "DOC009:T038",
+      "DOC009:T039",
+      "DOC009:T040",
+      "DOC009:T041",
+      "DOC009:T042",
+      "DOC009:T043",
+      "DOC009:T044",
+      "DOC009:T045",
+      "DOC009:T046",
+      "DOC009:T047",
+      "DOC009:T048",
+      "DOC009:T049",
+      "DOC009:T050",
+      "DOC009:T051",
+      "DOC009:T052",
+      "DOC009:T053",
+      "DOC009:T054",
+      "DOC009:T055",
+      "DOC009:T056",
+      "DOC009:T057",
+      "DOC009:T058"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "以助手替代传统搜索的意图明确，例外条件（除非需完全事实正确）保留在 G001"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "每天 15-20 次是使用频率的现状陈述，无维持或改进意图依据，不因已实现而另立维持目标"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "split",
+      "final_goal_ids": [
+        "G002",
+        "G003",
+        "G004",
+        "G005"
+      ],
+      "reason": "同一句列举的三类用例在 T011/T013/T015/T021 各自展开为独立任务（邮件、撰写长文档、校对、多媒体创作），分别成立目标；条件与方式随各自目标保留"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "专业邮件为主、个人邮件为次的范围与'少量提示'的方式均保留在 G002"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "受访者明确表示个人通讯倾向自己写短消息、不借助助手，属偏好而非对助手的要求；不把偏好升级为需求"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "生成数字艺术并嵌入博客/社交帖子为独立结果，保留为 G006"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "弥补自身绘画能力不足是 G006 同一创作结果的质量意图，写入 G006 context，不另立目标"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "T015 复述三类用例，其中'为工作或作业写长文档'为 G003 提供直接依据；邮件与多媒体已由 C003/C004/C006 承接"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "作业允许使用 AI 的条件与使用场景明确，保留为 G007"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "头脑风暴为独立结果，保留为 G008"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "更好表达自己已有想法与头脑风暴是可独立满足的两个结果，保留为 G009"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "T021 的校对（拼写/语法/语气）与 T009 的 proofreading 同义，合并入 G004"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "T021 复述头脑风暴为主要任务之一，与 C010 同义，合并入 G008"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "语音提示为条件性考虑（might consider），如实保留为 insufficient 目标，不升级"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "通过文本框与附件交互是现状描述，无维持或改进意图依据，不因已实现而成为要求"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G011"
+      ],
+      "reason": "用助手帮助编码/编程为独立活动，保留为 G011"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G012"
+      ],
+      "reason": "处理并输出 JSON/XML 等标准格式为独立期望，条件（编码任务）保留在 G012"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G014"
+      ],
+      "reason": "以提高生产力为使用助手的前提目的，原文明示，保留为 G014"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G013"
+      ],
+      "reason": "简洁胜冗长的偏好强度（appreciate / more towards）在 G013 中保留，未改为强制"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G016"
+      ],
+      "reason": "不必重复自己是明确期望结果，保留为 G016"
+    },
+    {
+      "candidate_id": "C021",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G015"
+      ],
+      "reason": "保存交互记忆/历史是明确选定的方式且有独立依据，与 G016 分开保留"
+    },
+    {
+      "candidate_id": "C022",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G017"
+      ],
+      "reason": "数学问题交叉核对为独立做法与结果，条件（数学易错）保留在 G017"
+    },
+    {
+      "candidate_id": "C023",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "语言任务任选一助手而不比较是对现状做法的说明，非对助手的要求"
+    },
+    {
+      "candidate_id": "C024",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "偏好 ChatGPT 及其原因是个人平台选择现状，不转为对助手能力的要求；未据保守推断'应持续改进'"
+    },
+    {
+      "candidate_id": "C025",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "关键任务需人工复核是受访者的现状判断/信念，作为 G019 的相反与限制信息写入其 context 与问题，不单列为目标"
+    },
+    {
+      "candidate_id": "C026",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G018"
+      ],
+      "reason": "由负面体验推断的事实准确性期望，保留为 inferred 目标 G018"
+    },
+    {
+      "candidate_id": "C027",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G019"
+      ],
+      "reason": "自动化流水线的愿望以反事实方式表达，保留为 inferred 目标 G019"
+    },
+    {
+      "candidate_id": "C028",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G020"
+      ],
+      "reason": "检测纠正幻觉因自述无方案而保留为 insufficient 目标 G020，不升级"
+    },
+    {
+      "candidate_id": "C029",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G018"
+      ],
+      "reason": "T047 的严重不准确顾虑与 C026 同属事实准确性诉求，合并入 G018"
+    },
+    {
+      "candidate_id": "C030",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G021"
+      ],
+      "reason": "界面不分散注意力为负面体验对应的避免型期望，保留为 inferred 目标 G021"
+    },
+    {
+      "candidate_id": "C031",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G018"
+      ],
+      "reason": "更准确是选择平台的原因，作为事实准确性诉求的佐证合并入 G018，不另立比较类目标"
+    },
+    {
+      "candidate_id": "C032",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G022"
+      ],
+      "reason": "文本转视频为明确期望功能，保留为 G022"
+    },
+    {
+      "candidate_id": "C033",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G023"
+      ],
+      "reason": "从文本补全转向 agent 为明确方向性期望，保留为 G023"
+    },
+    {
+      "candidate_id": "C034",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G023"
+      ],
+      "reason": "自动撰写发送邮件是演示 agent 能力的假设示例，按目标边界不另立固定业务目标，并入 G023 context"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T003",
+          "quote": "They have Camus to serve as a replacement for a lot of traditional searching that I used to do so. Even the things that I used to Google or Bing before unless I need them to be perfectly, factually correct these days, I defer to any assistant to get my results.",
+          "role": "basis",
+          "start_char": 922,
+          "end_char": 1183
+        }
+      ],
+      "candidate_ids": [
+        "C001",
+        "C002"
+      ],
+      "final_goal_ids": [
+        "G001"
+      ],
+      "outcome": "represented",
+      "reason": "回查：替代传统搜索的核心意图落在 G001，'除非需要完全事实正确'作为例外保留；同句使用频率未成为目标"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T011",
+          "quote": "I use it to compose professional emails, primarily, but to a lesser extent, personal emails as well.",
+          "role": "basis",
+          "start_char": 2223,
+          "end_char": 2323
+        },
+        {
+          "source_id": "DOC009:T011",
+          "quote": "So I prefer to just compose the short messages myself. In the case of like, you know, personal communication.",
+          "role": "basis",
+          "start_char": 2998,
+          "end_char": 3107
+        }
+      ],
+      "candidate_ids": [
+        "C004",
+        "C005"
+      ],
+      "final_goal_ids": [
+        "G002"
+      ],
+      "outcome": "represented",
+      "reason": "回查：专业邮件主、个人邮件次的范围与少量提示方式落在 G002；个人通讯自撰偏好为受访者明确表示不用助手，排除"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T009",
+          "quote": "composing emails, writing and proofreading documents and multimedia creation such as ideation for blog posts or social media posts, or even in my work",
+          "role": "basis",
+          "start_char": 1763,
+          "end_char": 1913
+        },
+        {
+          "source_id": "DOC009:T015",
+          "quote": "Emails, multimedia content creation and writing documents like writing long form documents for work or for assignments.",
+          "role": "basis",
+          "start_char": 3892,
+          "end_char": 4011
+        }
+      ],
+      "candidate_ids": [
+        "C003",
+        "C008"
+      ],
+      "final_goal_ids": [
+        "G002",
+        "G003",
+        "G004",
+        "G005"
+      ],
+      "outcome": "represented",
+      "reason": "回查合并簇：T009 与 T015 的用例列举被拆为 G002-G005，各自在 T011/T013/T015/T021 有独立展开依据"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T013",
+          "quote": "I I use them to create you know, digital art that I often embed in my blog posts or social media posts",
+          "role": "basis",
+          "start_char": 3431,
+          "end_char": 3533
+        },
+        {
+          "source_id": "DOC009:T013",
+          "quote": "but Gpt makes me look as though I'm not",
+          "role": "basis",
+          "start_char": 3685,
+          "end_char": 3724
+        }
+      ],
+      "candidate_ids": [
+        "C006",
+        "C007"
+      ],
+      "final_goal_ids": [
+        "G006"
+      ],
+      "outcome": "represented",
+      "reason": "回查：数字艺术嵌入帖子与弥补绘画能力的质量意图均在 G006；'加速创作'为已实现现状，只作背景"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T017",
+          "quote": "There are a few assignments which permit the use of AI assistant tools for these assignments, where we are permitted to use a assistant tools like I use them quite liberally.",
+          "role": "basis",
+          "start_char": 4229,
+          "end_char": 4403
+        },
+        {
+          "source_id": "DOC009:T017",
+          "quote": "Primarily, it helps me like brainstorm, different ideas and articulate some of the ideas that I have of my own better.",
+          "role": "basis",
+          "start_char": 4527,
+          "end_char": 4645
+        }
+      ],
+      "candidate_ids": [
+        "C009",
+        "C010",
+        "C011"
+      ],
+      "final_goal_ids": [
+        "G007",
+        "G008",
+        "G009"
+      ],
+      "outcome": "represented",
+      "reason": "回查：作业允许使用的条件落在 G007，头脑风暴与更好表达想法拆为 G008/G009；每周 3-4 次为现状"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T023",
+          "quote": "if they had capabilities for you know, directly picking up prompts over voice, I I might consider using them as well.",
+          "role": "basis",
+          "start_char": 6102,
+          "end_char": 6219
+        },
+        {
+          "source_id": "DOC009:T023",
+          "quote": "The the current way that you know, I interface with these assistance is through a text box that is usually embedded in the site providing these a assistance",
+          "role": "basis",
+          "start_char": 5945,
+          "end_char": 6101
+        }
+      ],
+      "candidate_ids": [
+        "C014",
+        "C015"
+      ],
+      "final_goal_ids": [
+        "G010"
+      ],
+      "outcome": "uncertain",
+      "reason": "回查：语音提示为 might consider 的条件性考虑，保留为 insufficient 目标 G010；文本框+附件为现状，排除"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T027",
+          "quote": "one other significant activity. That I use a assistance for is to help me with my work. And when I say work, I mean doing coding or programming.",
+          "role": "basis",
+          "start_char": 6963,
+          "end_char": 7107
+        },
+        {
+          "source_id": "DOC009:T027",
+          "quote": "I think it would make sense if it is able to format these into other standardized formats that we use in, for instance, like different coding tasks.",
+          "role": "basis",
+          "start_char": 7334,
+          "end_char": 7482
+        }
+      ],
+      "candidate_ids": [
+        "C016",
+        "C017"
+      ],
+      "final_goal_ids": [
+        "G011",
+        "G012"
+      ],
+      "outcome": "represented",
+      "reason": "回查：编程帮助落在 G011；标准格式需求限定在编码任务，未扩展到其反问提到的 HTML/LaTeX"
+    },
+    {
+      "check_id": "S8",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T031",
+          "quote": "given the premise that I I use a assistance to improve my productivity",
+          "role": "basis",
+          "start_char": 8416,
+          "end_char": 8486
+        },
+        {
+          "source_id": "DOC009:T031",
+          "quote": "I would definitely appreciate brevity over a a verbose response. So I am more towards the side of having a succinct response to my question rather than having a big conversational response.",
+          "role": "basis",
+          "start_char": 8549,
+          "end_char": 8738
+        }
+      ],
+      "candidate_ids": [
+        "C018",
+        "C019"
+      ],
+      "final_goal_ids": [
+        "G013",
+        "G014"
+      ],
+      "outcome": "represented",
+      "reason": "回查：提高生产力作为前提目的落在 G014，简洁偏好落在 G013，两者为手段与目的关系，不合并"
+    },
+    {
+      "check_id": "S9",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T033",
+          "quote": "I think it's super important that I don't have to repeat myself in every query or every conversation that I start with any assistant.",
+          "role": "basis",
+          "start_char": 8898,
+          "end_char": 9031
+        },
+        {
+          "source_id": "DOC009:T033",
+          "quote": "if it is able to, you know, hold some sort of memory or history of previous interactions, I think they'll be super helpful in giving it context, or like what my requirements are.",
+          "role": "basis",
+          "start_char": 9035,
+          "end_char": 9213
+        }
+      ],
+      "candidate_ids": [
+        "C020",
+        "C021"
+      ],
+      "final_goal_ids": [
+        "G015",
+        "G016"
+      ],
+      "outcome": "represented",
+      "reason": "回查：不重复自己是结果、保留记忆是方式，两者分别成目标"
+    },
+    {
+      "check_id": "S10",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T035",
+          "quote": "when it comes to solving mathematical problems, I often find the need to cross check the answers generated by any given a assistant with multiple others because they seem to be prone to making mistakes when it comes to math.",
+          "role": "basis",
+          "start_char": 9987,
+          "end_char": 10211
+        },
+        {
+          "source_id": "DOC009:T035",
+          "quote": "I could just pick up any one of these Gemini gpt perplexity, Claude, or any one of these, and go ahead and complete a language task without having to compare it with multiple other assistance.",
+          "role": "basis",
+          "start_char": 9790,
+          "end_char": 9982
+        }
+      ],
+      "candidate_ids": [
+        "C022",
+        "C023"
+      ],
+      "final_goal_ids": [
+        "G017"
+      ],
+      "outcome": "represented",
+      "reason": "回查：数学交叉核对落在 G017；语言任务不比较为现状说明，排除"
+    },
+    {
+      "check_id": "S11",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T039",
+          "quote": "I I do have a preferred platform. Chat. Gpt is currently what we prefer the most.",
+          "role": "basis",
+          "start_char": 10700,
+          "end_char": 10781
+        }
+      ],
+      "candidate_ids": [
+        "C024"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "回查：平台偏好为现状选择，未表达对助手能力的要求，排除"
+    },
+    {
+      "check_id": "S12",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T041",
+          "quote": "I feel like, the very nature of how the assistants have been trained make them very prone to hallucinations. and that affects the factual accuracy of a lot of statements that they generate.",
+          "role": "basis",
+          "start_char": 11290,
+          "end_char": 11479
+        },
+        {
+          "source_id": "DOC009:T041",
+          "quote": "for tasks that are critical. They do need a human eye to go over them still, And and they they can't be used to automate things out of the box.",
+          "role": "basis",
+          "start_char": 11623,
+          "end_char": 11766
+        }
+      ],
+      "candidate_ids": [
+        "C026"
+      ],
+      "final_goal_ids": [
+        "G018"
+      ],
+      "outcome": "represented",
+      "reason": "回查：幻觉影响准确性落在 inferred 目标 G018；同一段的'关键任务需人工复核'由 C025 承接（见 S18），作为 G019 的限制与相反证据保留在其 context"
+    },
+    {
+      "check_id": "S13",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T043",
+          "quote": "I could have used that to productivize my tasks much better if I were able to do that automated automation.",
+          "role": "basis",
+          "start_char": 12477,
+          "end_char": 12584
+        },
+        {
+          "source_id": "DOC009:T043",
+          "quote": "because the content that they generate could be factually inaccurate at times. So that needs to be a human in the loop, and because that needs to be human in the loop. I have not been able to automate certain pipelines.",
+          "role": "basis",
+          "start_char": 12199,
+          "end_char": 12418
+        }
+      ],
+      "candidate_ids": [
+        "C027"
+      ],
+      "final_goal_ids": [
+        "G019"
+      ],
+      "outcome": "represented",
+      "reason": "回查：自动化愿望以反事实句表达，判 inferred；未能自动化的原因是需人工在环，写入 G019 context"
+    },
+    {
+      "check_id": "S14",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T045",
+          "quote": "I think this requires technological breakthrough for in order to be able to detect and correct hallucinations.",
+          "role": "basis",
+          "start_char": 12829,
+          "end_char": 12939
+        },
+        {
+          "source_id": "DOC009:T045",
+          "quote": "at this moment I recognize it as a challenge to be solved. But I don't have a solution of the top of my head myself.",
+          "role": "basis",
+          "start_char": 13034,
+          "end_char": 13150
+        }
+      ],
+      "candidate_ids": [
+        "C028"
+      ],
+      "final_goal_ids": [
+        "G020"
+      ],
+      "outcome": "uncertain",
+      "reason": "回查：自述无方案并归为更广泛技术挑战，保留 insufficient 目标 G020，不升级"
+    },
+    {
+      "check_id": "S15",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T047",
+          "quote": "The fact that it could spew statements that could be wildly inaccurate, or something that concerns me.",
+          "role": "basis",
+          "start_char": 13489,
+          "end_char": 13591
+        }
+      ],
+      "candidate_ids": [
+        "C029"
+      ],
+      "final_goal_ids": [
+        "G018"
+      ],
+      "outcome": "represented",
+      "reason": "回查：严重不准确的顾虑与 C026 同属事实准确性诉求，并入 G018"
+    },
+    {
+      "check_id": "S16",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T053",
+          "quote": "in the case of perplexity, I think there's just too much happening on the screen that it distracts me. And in the case of Gemini, it's a simple case of the design of their web page. That kind of throws me off.",
+          "role": "basis",
+          "start_char": 14674,
+          "end_char": 14883
+        },
+        {
+          "source_id": "DOC009:T053",
+          "quote": "I feel like Gpt is a little bit more accurate for most tasks than the rest of the assistance.",
+          "role": "basis",
+          "start_char": 14299,
+          "end_char": 14392
+        }
+      ],
+      "candidate_ids": [
+        "C030",
+        "C031"
+      ],
+      "final_goal_ids": [
+        "G021",
+        "G018"
+      ],
+      "outcome": "represented",
+      "reason": "回查：界面分散注意力落在 G021；更准确的比较作为准确性诉求佐证并入 G018"
+    },
+    {
+      "check_id": "S18",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T041",
+          "quote": "for tasks that are critical. They do need a human eye to go over them still, And and they they can't be used to automate things out of the box.",
+          "role": "basis",
+          "start_char": 11623,
+          "end_char": 11766
+        }
+      ],
+      "candidate_ids": [
+        "C025"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "回查：关键任务需人工复核是受访者的现状判断与信念，不单列为目标；其含义作为相反/限制证据写入 G019 的 context 与 model 问题，故该候选不带最终目标"
+    },
+    {
+      "check_id": "S17",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC009:T055",
+          "quote": "I think will be super helpful. If they could help me do text to video as well. They do support text image right now. But text to video would be in useful addition.",
+          "role": "basis",
+          "start_char": 15158,
+          "end_char": 15321
+        },
+        {
+          "source_id": "DOC009:T055",
+          "quote": "I think that you'll be It'll be pivotal if we can move from just using these a assistance in the manner that we currently use them in the sense you ask questions and you get responses. If we can move from that model to having large language agents instead of large language models.",
+          "role": "basis",
+          "start_char": 15464,
+          "end_char": 15745
+        }
+      ],
+      "candidate_ids": [
+        "C032",
+        "C033",
+        "C034"
+      ],
+      "final_goal_ids": [
+        "G022",
+        "G023"
+      ],
+      "outcome": "represented",
+      "reason": "回查：文生视频落在 G022；agent 方向落在 G023，自动发邮件示例仅作演示并入 G023 context"
+    }
+  ],
+  "limitations": [
+    "仅依据分配的 DOC009 转写（59 轮），未读取仓库其他目录、未联网、未参考任何历史目标或参考答案",
+    "转写为口语，存在重复、自我修正与疑似转写错误（如 T003 的 Camus、T043 的 automated automation、T031 的 give given），均按原文原样引用，未做校正或润色",
+    "T025、T029、T049 等回合受访者仅作反问确认，未形成新目标",
+    "本轮为生成方自检，独立语义审查与形式证明未执行（not_run），人工接受状态为 pending",
+    "未做逐句分类；source_checks 只登记实际回查的重要片段，空处不代表已穷尽意图"
+  ]
+}

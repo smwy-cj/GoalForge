@@ -1,0 +1,524 @@
+{
+  "document_id": "DOC013",
+  "artifact_type": "isolated_model_reviewer_source_intent_inventory",
+  "human_gold": false,
+  "source_only": true,
+  "domain": "视频观看、发现、上传与直播",
+  "scope": "受访者以泛化视频服务及现场界面示范讨论 viewer、creator 和平台经营者需求。",
+  "methodology": "逐段完整阅读原文后人工式语义判断；条目由评审模型编写，程序仅校验引用和序列化，不以关键词抽取代替理解。未读取技能、论文目标、tests、生成结果或既有评估。条目不是最终目标模型，不规定唯一层次或粒度。",
+  "intents": [
+    {
+      "intent_id": "DOC013:I01",
+      "intent": "控制不适合特定观众的内容可见性及禁止某些上传内容",
+      "subject": "平台经营者/内容发布者/观众",
+      "conditions": "内容含不适宜或不允许传播的材料时",
+      "modality": "试探性约束建议",
+      "exceptions": "未指定年龄阈值、法律、地区或明确分类标准",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T006",
+          "quote": "there could be types of content that's not suitable for all viewers.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 614,
+          "quote_end_char": 682,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T006",
+          "quote": "some sorts of content that streamers should not be allowed to share with anybody",
+          "speaker": "Stakeholder",
+          "quote_start_char": 788,
+          "quote_end_char": 868,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I02",
+      "intent": "按文本、过滤条件找到特定视频或内容",
+      "subject": "观众",
+      "conditions": "有明确观看目标时",
+      "modality": "明确必要能力",
+      "exceptions": "支持模糊条件仍应有意义结果",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "get a specific type of video or content by searching via text, or perhaps by filters of some sort.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2030,
+          "quote_end_char": 2128,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T014",
+          "quote": "search, using vague criteria, but that should still get me meaningful results.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3467,
+          "quote_end_char": 3545,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I03",
+      "intent": "通过缩略图及描述等信息浏览和选择视频",
+      "subject": "观众",
+      "conditions": "视觉发现内容时",
+      "modality": "明确必要能力",
+      "exceptions": "题材、演员、创作者等是举例，不要求固定分类全集",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "see a large volume of different options and click through it",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2204,
+          "quote_end_char": 2264,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T012",
+          "quote": "a thumbnail, so to speak, with a description, perhaps, who made it",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2396,
+          "quote_end_char": 2462,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I04",
+      "intent": "通过观看获取娱乐、教育或快速信息",
+      "subject": "观众/受访者",
+      "conditions": "使用视频平台时",
+      "modality": "明确目的",
+      "exceptions": "不是强制替代所有书籍",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T016",
+          "quote": "for entertainment purposes and for education purposes.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4018,
+          "quote_end_char": 4072,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T016",
+          "quote": "I want to have a quick search. Give me some information",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4193,
+          "quote_end_char": 4248,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I05",
+      "intent": "获得连续流畅且合理传输的视频播放",
+      "subject": "观众",
+      "conditions": "观看内容时",
+      "modality": "明确质量要求",
+      "exceptions": "没有指定带宽、启动时间或缓冲数值",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T014",
+          "quote": "I don't want it to freeze constantly. I want a seamless stream of buffered data.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3719,
+          "quote_end_char": 3799,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I06",
+      "intent": "上传既有视频或发起直播来分享内容",
+      "subject": "创作者/代上传者",
+      "conditions": "发布内容时",
+      "modality": "明确功能目的",
+      "exceptions": "直播与上传是两条分支，不能视为同一文件发布动作",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "create to upload a video or start a stream.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2665,
+          "quote_end_char": 2708,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I07",
+      "intent": "为发布内容补充描述、转录、字幕等元数据",
+      "subject": "创作者",
+      "conditions": "上传/制作内容时",
+      "modality": "希望能力，部分是 perhaps",
+      "exceptions": "语言、标题等亦在示范中出现；未要求所有字段均必填",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "put some sort of description in, add, perhaps a transcript captions of the like.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2765,
+          "quote_end_char": 2845,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T026",
+          "quote": "I am asked to give a title",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8456,
+          "quote_end_char": 8482,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T026",
+          "quote": "languages and things of that nature.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8581,
+          "quote_end_char": 8617,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I08",
+      "intent": "编辑视频以添加音效、剪辑或裁切",
+      "subject": "创作者",
+      "conditions": "视频制作/发布时",
+      "modality": "明确认为有用",
+      "exceptions": "未声称现有平台已全部支持",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "to edit those. So I can add sound effects. Trim crop.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2934,
+          "quote_end_char": 2987,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I09",
+      "intent": "减少格式、时长兼容与上传发布流程的技术障碍",
+      "subject": "创作者",
+      "conditions": "上传已制作视频时",
+      "modality": "潜在障碍对应意图",
+      "exceptions": "是设问式顾虑，并未确证实际失败或要求没有任何长度限制",
+      "epistemic_status": "推断",
+      "evidence": [
+        {
+          "source_id": "DOC013:T018",
+          "quote": "making sure their formats are compatible with the system, making sure there's no length requirements.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4683,
+          "quote_end_char": 4784,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T018",
+          "quote": "Is that a simple process? Do they have to sit and wait for the whole video to be published or uploaded before publication.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4872,
+          "quote_end_char": 4994,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I10",
+      "intent": "在首次上传时建立频道并发布选择的文件",
+      "subject": "新创作者",
+      "conditions": "现场演示第一次创建内容时",
+      "modality": "流程性能力",
+      "exceptions": "不是每次上传都要新建频道",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T026",
+          "quote": "since I've never done this before. It's prompting me for what my account might be.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8007,
+          "quote_end_char": 8089,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T026",
+          "quote": "So now I have a channel",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8120,
+          "quote_end_char": 8143,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I11",
+      "intent": "满足直播账户启用的等待限制后开播",
+      "subject": "直播创作者/平台",
+      "conditions": "现场示范首次启用直播时",
+      "modality": "被描述的现有约束",
+      "exceptions": "24小时从 streaming account 设置起算；无证据为法律要求或每次直播都等待",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T028",
+          "quote": "after a streaming account is set up.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9168,
+          "quote_end_char": 9204,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I12",
+      "intent": "通过观看清单和订阅管理想看的内容并追踪创作者更新",
+      "subject": "观众",
+      "conditions": "组织后续观看时",
+      "modality": "明确/部分 perhaps",
+      "exceptions": "订阅列表展示最新内容；不等同用户上传管理",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T030",
+          "quote": "add things to their watch list. or they can perhaps follow or subscribe",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9436,
+          "quote_end_char": 9507,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T030",
+          "quote": "list out the latest content from said creators, who they are subscribed to.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9857,
+          "quote_end_char": 9932,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I13",
+      "intent": "以付费方案获得无广告、不间断观看",
+      "subject": "愿意订阅的观众",
+      "conditions": "选择 premium 时",
+      "modality": "描述的平台可选能力",
+      "exceptions": "个人月/年、最多5人家庭、学生试用是方案示例；受访者没有明确购买承诺",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T032",
+          "quote": "a premium tier which promises all content, no interruptions",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10200,
+          "quote_end_char": 10259,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T032",
+          "quote": "access without the aforementioned ads.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10278,
+          "quote_end_char": 10316,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I14",
+      "intent": "控制视频播放暂停、音量、静音、字幕与全屏",
+      "subject": "观众",
+      "conditions": "观看视频时",
+      "modality": "现场描述可达操作目的",
+      "exceptions": "不把按钮图标、位置或切换动画独立当高层目标",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T038",
+          "quote": "play button, which, when clicked, turns into a pause button",
+          "speaker": "Stakeholder",
+          "quote_start_char": 11439,
+          "quote_end_char": 11498,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T038",
+          "quote": "control the volume manually",
+          "speaker": "Stakeholder",
+          "quote_start_char": 11855,
+          "quote_end_char": 11882,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T038",
+          "quote": "I'm able to toggle and untoggle the full screen.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12187,
+          "quote_end_char": 12235,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I15",
+      "intent": "了解播放进度并继续观看下一视频",
+      "subject": "观众",
+      "conditions": "播放中",
+      "modality": "现场描述能力",
+      "exceptions": "下一条在非播放清单场景由内部推荐决定；不是个人化算法新需求",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T038",
+          "quote": "current time. Slash total time length.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12058,
+          "quote_end_char": 12096,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T038",
+          "quote": "give me the next video it suggests.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 11602,
+          "quote_end_char": 11637,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I16",
+      "intent": "让不熟悉界面的用户发现并理解播放器控制",
+      "subject": "新观众",
+      "conditions": "控件自动隐藏尤其全屏时",
+      "modality": "潜在可用性改进",
+      "exceptions": "熟悉者自身没有同样困难；未指定工具提示或新按钮方案",
+      "epistemic_status": "推断",
+      "evidence": [
+        {
+          "source_id": "DOC013:T040",
+          "quote": "if someone unfamiliar were to arrive and see these 10 icons, they might not be so well known.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12589,
+          "quote_end_char": 12682,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T040",
+          "quote": "They actually disappear when the video is playing.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12683,
+          "quote_end_char": 12733,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC013:I17",
+      "intent": "改善字幕准确性及考虑色觉障碍等可访问性",
+      "subject": "非英语母语/需要无障碍的观众",
+      "conditions": "自动字幕、颜色显示等场景",
+      "modality": "不确定的改进线索",
+      "exceptions": "受访者不知道字幕准确率或颜色设置能力，不可断言不存在",
+      "epistemic_status": "不确定",
+      "evidence": [
+        {
+          "source_id": "DOC013:T040",
+          "quote": "I'm not sure how accurate they always are",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12989,
+          "quote_end_char": 13030,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T040",
+          "quote": "I'm also not sure if things like colors can be tweaked for, say. colorblind viewers",
+          "speaker": "Stakeholder",
+          "quote_start_char": 13103,
+          "quote_end_char": 13186,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    }
+  ],
+  "background_candidates": [
+    {
+      "item": "公司服务器和上传下载定义",
+      "reason": "说明平台管理控制权，不代表单独存储规模或基础设施目标。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T010",
+          "quote": "some large company that's going to host all of these videos on their servers.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1386,
+          "quote_end_char": 1463,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    },
+    {
+      "item": "篮球搜索、广告、图标和屏幕几何位置",
+      "reason": "现场演示/观察；明确说不喜欢篮球，不能当兴趣画像或必须投放广告的目标。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC013:T024",
+          "quote": "I don't like basketball",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7142,
+          "quote_end_char": 7165,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC013:T024",
+          "quote": "every 10th or so is a sponsored ad.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7552,
+          "quote_end_char": 7587,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "若干观点用 think/could/perhaps 表达，不应升级为确定合规法规。",
+    "现场描述的24小时等待是平台现象，不等同普适安全法律。",
+    "无障碍颜色可调性与字幕准确性明确未知。"
+  ],
+  "source_document_hash_declared": "f91319c2d822e5b70651d3ef319b32e3829a431db0fe31fb9e7bee9f395c2435",
+  "read_range": {
+    "first_source_id": "DOC013:T000",
+    "last_source_id": "DOC013:T049",
+    "turn_count": 50,
+    "read_completely": true,
+    "reading_note": "全文语义阅读；DOC003首次长输出中段被截断后，已单独补读T066–T096。DOC028、DOC036分别按turn分段读完。其他文档完整读取。"
+  }
+}

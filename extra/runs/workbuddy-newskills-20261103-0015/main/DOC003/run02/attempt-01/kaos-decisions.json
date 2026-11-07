@@ -1,0 +1,409 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "39de6ebfc8a65fd980bca9ee1c79085821e82531c2316a1fbb09630d80dada96",
+    "judgments_sha256": "d00c02a6664d008e5bbb9608c9868d9f4ad7264956fb3db16063db128e4b6243"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G020",
+      "child_ids": [
+        "G001",
+        "G002",
+        "G003"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "受访者自述只有三个目标：找到好行程、找到好价格、比较预订网站。对现金票而言，三者齐备即可认为已完成'找出该行程最优预订方案'。限定为现金票，里程票不在本组范围。",
+      "assumptions": [
+        "父目标限定为现金票（revenue booking）的聚合器研究",
+        "最优按 T107/T115 的定义：可行行程、可接受票价、最优最终实付价的组合"
+      ],
+      "evidence_ids": [],
+      "relation_ids": [
+        "R14",
+        "R15",
+        "R16"
+      ],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T115",
+          "quote": "The 1st perspective is finding, doing research, and I would do that in terms of finding a good itinerary and finding a good price that works for me.",
+          "role": "basis"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "计划一次圣诞假期的现金票行程：先筛出时间与衔接可行的行程，确认票价在可接受区间，再在候选中转供应商里比出最低最终价，然后下单。",
+          "outcome": "supports",
+          "rationale": "三项子目标都被实际执行且覆盖他的决策依据（T131 的流程复述一致）。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "临时出行且只剩一条可用行程（T081）：行程无可替代，供应商可能只有一家，仍按当时的票价与唯一渠道完成预订。",
+          "outcome": "supports",
+          "rationale": "子目标退化为唯一选项但结论仍成立，未发现组内缺口；该情形下他本人也接受'so be it'。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC003-goal-model",
+      "message": "已检查但未建立联系：G011（排除 40-60 小时行程）与 G018（偏好增加中转、最大化空中时间）分属最低价列表与度假体验两种情境，原文没有把两者放在同一约束下的句子，未建边，也未判为冲突。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC003-goal-model",
+      "message": "已检查但未建立联系：G017（里程票须登录航司）与 G005（匿名检索）在原文是例外关系（T053 'unless I'm booking with points'），已写成 G005 的 context，不构成贡献或精化边。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC003-goal-model",
+      "message": "已检查但未建立联系：G006（数据不被共享）与 G002/G003（比价）在原文没有相互影响的表述；G006 只与 G005 有实现方式联系，未额外连边。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC003-goal-model",
+      "message": "已评估但未成立的第二个精化组：G008/G004/G007/G003 对 G002 只有帮助，票价由航空公司控制，原文未声称这些动作共同足以保证最优价，故不建组。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G014",
+      "message": "休息室权益聚合的愿望与'更信任发卡方源头信息'并存，是否保留为需求待确认。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "组内三项在紧急出行只剩一条行程时会退化为单一选项，是否仍视为满足父目标，需人工确认。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R11",
+      "message": "G014 对 G013 的帮助未被原文直接断言，保持 proposed，待确认是否应否定。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G008",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "提前订票的目的就是拿到更低票价，属有帮助但非充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T009",
+          "quote": "looking for good itineraries to plan to book things early so that I can get it at a better price",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G004",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "并行铺开大量组合是为确认拿到的是最优报价。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T095",
+          "quote": "combinations of city pairs, country pairs, dates. travelers, different classes, all sorts of combinations to make sure what's the best.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G003",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "逐家供应商比价才能得到最低的最终实付价。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T077",
+          "quote": "you can compare discounts on different providers.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G005",
+      "target_id": "G006",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "不登录、匿名是他用来减少数据被收集与追踪的具体方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T053",
+          "quote": "So I avoid logging in, and I try to keep myself as anonymized as possible.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G007",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "降价提醒用于在价格下探时立即下单，帮助拿到低价。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T087",
+          "quote": "I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G009",
+      "target_id": "G004",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "以国家/区域为输入是一次查询覆盖多机场的手段。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T065",
+          "quote": "I generally put in a country or a region that gives me way. More airports looked up at the same time.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G010",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "需要衔接其他交通或长途国际行程"
+      ],
+      "assumptions": [],
+      "rationale": "用时段与总时长上限把结果收敛到可接受的时间范围。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T069",
+          "quote": "change the departure and the arrival time to be in the zone. I want it to be.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G011",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "剔除 40-60 小时行程使结果符合他对行程时长的要求。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T073",
+          "quote": "the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G012",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "MCT 缓冲保证中转衔接可行，是行程可用的条件之一。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "I generally tend to at least go for 1.5 x or 2 x of that for a stopover.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R10",
+      "source_id": "G013",
+      "target_id": "G018",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "确认休息室开放时间是为了在行程中真的用上休息室。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "I also end up looking. Oh, will the lounge at that airport be open at that point of time?",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R11",
+      "source_id": "G014",
+      "target_id": "G013",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [
+        "权益信息须可靠更新"
+      ],
+      "assumptions": [
+        "把权益集中一处可帮助判断能否进入休息室"
+      ],
+      "rationale": "原文只说整合'会很好'，且他更信任发卡方源头信息，未直接断言该帮助，故标 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T125",
+          "quote": "a website that keeps everything updated about what I have and what that would grant me access to.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R12",
+      "source_id": "G015",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "仅在没经验的市场"
+      ],
+      "assumptions": [],
+      "rationale": "中位价对比帮助他判断报价是偏高还是偏低。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T109",
+          "quote": "I can use Google flights for it because it tells me if the price is above, below, or lower than the Median.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R13",
+      "source_id": "G019",
+      "target_id": "G016",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "熟悉界面直接减少每次检索的操作时间。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T147",
+          "quote": "being familiar with the user interface and being able to quickly key in things and search for things just saves you time.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R14",
+      "source_id": "G001",
+      "target_id": "G020",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "找到可用行程是聚合器研究的第一项产出。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T115",
+          "quote": "I would do that in terms of finding a good itinerary and finding a good price that works for me.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R15",
+      "source_id": "G002",
+      "target_id": "G020",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "确认理想价格是研究的第二项产出。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T129",
+          "quote": "It should show me what the ideal prices are",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R16",
+      "source_id": "G003",
+      "target_id": "G020",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "比较预订网站是受访者列出的第三项目标，服务于找到最优预订方案。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T115",
+          "quote": "I would also use it to compare different booking websites, just to figure out which one is giving me the best possible combination of options.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R17",
+      "source_id": "G001",
+      "target_id": "G003",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先定下候选中转行程，再进入供应商页面比价选伙伴；只表示先后，不表示因果或精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T131",
+          "quote": "Once I've settled on a couple of itineraries, I would check out which one of them is giving me the best price which one of them works out best for me overall. I would then check out what is the best booking partner for these?",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

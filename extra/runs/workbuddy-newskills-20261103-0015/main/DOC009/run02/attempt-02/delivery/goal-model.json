@@ -1,0 +1,2612 @@
+{
+  "schema_version": "goalforge-kaos-2",
+  "model_id": "DOC009-goal-model",
+  "version": "v1",
+  "parent": null,
+  "scope": {
+    "document_id": "DOC009",
+    "coverage": {
+      "scope": "provided_material",
+      "source_ids": [
+        "DOC009:T000",
+        "DOC009:T001",
+        "DOC009:T002",
+        "DOC009:T003",
+        "DOC009:T004",
+        "DOC009:T005",
+        "DOC009:T006",
+        "DOC009:T007",
+        "DOC009:T008",
+        "DOC009:T009",
+        "DOC009:T010",
+        "DOC009:T011",
+        "DOC009:T012",
+        "DOC009:T013",
+        "DOC009:T014",
+        "DOC009:T015",
+        "DOC009:T016",
+        "DOC009:T017",
+        "DOC009:T018",
+        "DOC009:T019",
+        "DOC009:T020",
+        "DOC009:T021",
+        "DOC009:T022",
+        "DOC009:T023",
+        "DOC009:T024",
+        "DOC009:T025",
+        "DOC009:T026",
+        "DOC009:T027",
+        "DOC009:T028",
+        "DOC009:T029",
+        "DOC009:T030",
+        "DOC009:T031",
+        "DOC009:T032",
+        "DOC009:T033",
+        "DOC009:T034",
+        "DOC009:T035",
+        "DOC009:T036",
+        "DOC009:T037",
+        "DOC009:T038",
+        "DOC009:T039",
+        "DOC009:T040",
+        "DOC009:T041",
+        "DOC009:T042",
+        "DOC009:T043",
+        "DOC009:T044",
+        "DOC009:T045",
+        "DOC009:T046",
+        "DOC009:T047",
+        "DOC009:T048",
+        "DOC009:T049",
+        "DOC009:T050",
+        "DOC009:T051",
+        "DOC009:T052",
+        "DOC009:T053",
+        "DOC009:T054",
+        "DOC009:T055",
+        "DOC009:T056",
+        "DOC009:T057",
+        "DOC009:T058"
+      ],
+      "omissions": []
+    }
+  },
+  "goals": [
+    {
+      "goal_id": "G001",
+      "statement": "Use an AI assistant as a replacement for traditional web search to get results, except when the results must be perfectly factually correct.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "例外：需要结果完全事实正确时不交给助手（改用传统搜索）"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "以助手替代传统搜索",
+          "把取结果交给助手"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T003 陈述传统搜索被助手取代",
+          "同一句给出例外条件并已保留"
+        ],
+        "label": "direct",
+        "rationale": "T003 明确说助手已在很大程度上取代其过去用 Google/Bing 做的传统搜索，并说现在把取结果的事交给助手，主体与对象一致；同一句内的'除非需要完全事实正确'作为例外已写入 context，未改写为绝对要求。"
+      },
+      "evidence_ids": [
+        "E0001"
+      ]
+    },
+    {
+      "goal_id": "G002",
+      "statement": "Compose professional emails (and, to a lesser extent, personal emails) with an AI assistant from just a few prompts.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "主要用于专业邮件，个人邮件次要",
+        "方式是少量提示"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "撰写专业邮件",
+          "个人邮件为次要范围",
+          "少量提示的方式"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T011 首句给出主次范围",
+          "T011 后续句给出少量提示的方式"
+        ],
+        "label": "direct",
+        "rationale": "T011 明确说明用助手撰写专业邮件为主、个人邮件为次，且说明只需少量提示即可生成可在专业语境发送的邮件；主次范围与方式均已保留在 statement/context 中。"
+      },
+      "evidence_ids": [
+        "E0002",
+        "E0003",
+        "E0004"
+      ]
+    },
+    {
+      "goal_id": "G003",
+      "statement": "Write long-form documents for work or assignments with AI assistance.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "适用于工作文档与作业",
+        "与校对（G004）为分开的独立任务"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "撰写长文档",
+          "工作与作业两类场景"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T009、T015 列举撰写文档用例",
+          "T021 将校对单列为另一任务，故拆开"
+        ],
+        "label": "direct",
+        "rationale": "T015 明确列举'为工作或作业写长文档'，T009 亦把撰写文档列为前三用例；撰写与校对在 T021 被分别表述为两类任务，故未合并进 G004。"
+      },
+      "evidence_ids": [
+        "E0005",
+        "E0006"
+      ]
+    },
+    {
+      "goal_id": "G004",
+      "statement": "Proofread self-written documents with AI assistance for spelling, grammar and tone checks.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "对象是本人已写好的文档",
+        "检查项为拼写、语法、语气"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "校对本人所写文档",
+          "拼写、语法、语气检查"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T021 说明校对对象与检查项",
+          "T009 同句提及 proofreading 作为佐证"
+        ],
+        "label": "direct",
+        "rationale": "T021 明确把校对本人所写文档（拼写、语法、语气检查）列为除头脑风暴之外的主要任务之一，对象、检查项与主体均一致。"
+      },
+      "evidence_ids": [
+        "E0007",
+        "E0008"
+      ]
+    },
+    {
+      "goal_id": "G006",
+      "statement": "Generate digital art with AI and embed it in blog posts or social media posts, despite the stakeholder not being a skilled artist.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "用途是嵌入博客与社交媒体帖子",
+        "自述本人绘画能力差，AI 使其作品看起来不像外行（T013）",
+        "加速创作过程是已实现的现状，未作为独立要求"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "生成数字艺术",
+          "嵌入博客/社交帖子",
+          "弥补自身绘画能力的质量意图"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T013 给出用途与对象",
+          "T013 末句给出质量意图并写入 context"
+        ],
+        "label": "direct",
+        "rationale": "T013 明确说用助手生成数字艺术并嵌入博客/社交媒体帖子，并自述本人绘画能力差而 AI 使其看起来不像外行；质量意图与用途均保留，'加速创作'作为已实现现状只写入 context，未升级为新目标。"
+      },
+      "evidence_ids": [
+        "E0009",
+        "E0010"
+      ]
+    },
+    {
+      "goal_id": "G005",
+      "statement": "Create multimedia content with AI assistance for blog posts and social media posts.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "用途包括博客与社交媒体帖子的构思",
+        "也用于工作场景"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "多媒体内容创作",
+          "用于博客与社交媒体帖子"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T009 列举用例",
+          "T015 复述确认",
+          "T013 具体化为数字艺术，另立 G006"
+        ],
+        "label": "direct",
+        "rationale": "T009 把多媒体创作（博客/社交媒体帖子构思）列为前三用例之一，T015 复述确认；T013 进一步具体化为生成数字艺术，作为具体情境另立 G006。"
+      },
+      "evidence_ids": [
+        "E0011",
+        "E0012"
+      ]
+    },
+    {
+      "goal_id": "G007",
+      "statement": "Use AI assistant tools for assignments whose rules permit their use.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "仅限允许使用 AI 助手的作业",
+        "使用频率约每周 3-4 次（写文档与作业合计，现状）",
+        "主要用途为头脑风暴与更好表达已有想法"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "在允许使用 AI 的作业中使用助手"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T017 给出允许使用的条件",
+          "频率作为现状保留在 context"
+        ],
+        "label": "direct",
+        "rationale": "T017 明确说只有部分作业允许使用 AI 助手，并在这些作业中用得很自由；允许使用的条件已写入 statement，未扩大到不允许的作业。频率为现状，只写入 context。"
+      },
+      "evidence_ids": [
+        "E0013",
+        "E0014"
+      ]
+    },
+    {
+      "goal_id": "G008",
+      "statement": "Use AI assistance to brainstorm different ideas.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "用于写文档与作业",
+        "被列为主要任务之一"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "借助助手进行头脑风暴"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T017 说明助手帮助其头脑风暴",
+          "T021 复述为主要任务之一"
+        ],
+        "label": "direct",
+        "rationale": "T017 与 T021 均明确把头脑风暴列为其使用助手的主要任务之一，动作与对象一致；与'更好表达已有想法'是两个可独立满足的结果，故分开。"
+      },
+      "evidence_ids": [
+        "E0015",
+        "E0016"
+      ]
+    },
+    {
+      "goal_id": "G009",
+      "statement": "Use AI assistance to articulate the stakeholder's own existing ideas better.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "用于写文档与作业",
+        "对象是本人已有的想法"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "更好表达本人已有想法"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T017 同一句中与头脑风暴并列给出"
+        ],
+        "label": "direct",
+        "rationale": "T017 明确说助手帮助其更好地表达自己已有的想法，与头脑风暴是并列的另一结果，各有独立表述依据。"
+      },
+      "evidence_ids": [
+        "E0017"
+      ]
+    },
+    {
+      "goal_id": "G010",
+      "statement": "Give prompts to the AI assistant over voice, if the capability existed.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "条件是助手具备直接接收语音提示的能力",
+        "原文为'might consider'，采纳未确认",
+        "目前主要通过内嵌文本框输入文本并附带附件"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [
+          "是否希望/要求具备语音输入能力未确认"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T023 为条件句且语气为 might consider",
+          "无后续确认"
+        ],
+        "label": "insufficient",
+        "rationale": "T023 只说若助手具备语音接收提示的能力'我可能会考虑也使用'（might consider），是在假设能力存在条件下的考虑，未确认其希望或要求具备该能力；按证据口径对未确认采纳保持 insufficient，不升级为 direct/inferred。"
+      },
+      "evidence_ids": [
+        "E0018"
+      ]
+    },
+    {
+      "goal_id": "G011",
+      "statement": "Use AI assistance for coding or programming tasks at work.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "工作场景限定为编码/编程",
+        "与邮件、文档、多媒体并列的重要活动"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "用助手帮助编码/编程工作"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T027 给出活动与其对'工作'的定义"
+        ],
+        "label": "direct",
+        "rationale": "T027 明确说除前述用例外，另一项重要活动是用助手帮助工作，并把工作明确限定为编码/编程，主体、范围与对象一致。"
+      },
+      "evidence_ids": [
+        "E0019"
+      ]
+    },
+    {
+      "goal_id": "G012",
+      "statement": "Have the AI assistant process and output standardized formats such as JSON or XML in addition to natural language for coding tasks.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "限定在编程/编码任务的输入输出",
+        "例举格式为 JSON、XML",
+        "原文语气为建议（it would make sense）"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "处理并输出标准格式",
+          "JSON/XML 例举",
+          "限定在编码任务"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T027 说明编程任务中需要特定格式",
+          "T027 提出格式化为标准格式的期望"
+        ],
+        "label": "direct",
+        "rationale": "T027 明确说除处理与输出自然语言外，能格式化成编码任务使用的其他标准格式'是合理的'，并直接例举 JSON、XML；范围限定在编程任务，未扩展到其反问中提到的 HTML/LaTeX。语气为建议但含义明确，已保留在 context。"
+      },
+      "evidence_ids": [
+        "E0020",
+        "E0021"
+      ]
+    },
+    {
+      "goal_id": "G013",
+      "statement": "Receive succinct responses from the AI assistant rather than verbose conversational ones.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "前提：使用助手是为了提高生产力且时间是关键要素",
+        "强度为偏好（appreciate / more towards），非硬性要求"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "偏好简洁回答",
+          "相对冗长对话式回答的取舍"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T031 给出前提",
+          "T031 给出简洁胜冗长的偏好"
+        ],
+        "label": "direct",
+        "rationale": "T031 明确说在提高生产力、时间关键的前提下更看重简洁而非冗长对话式回答；偏好强度（appreciate / more towards）已写入 context，未改写为必须。"
+      },
+      "evidence_ids": [
+        "E0022"
+      ]
+    },
+    {
+      "goal_id": "G014",
+      "statement": "Improve the stakeholder's productivity by using AI assistant tools.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "原文以'given the premise'方式陈述为使用助手的前提目的",
+        "未给出可验证指标或阈值"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "通过使用助手提高生产力这一目的"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T031 明确给出使用助手的前提目的"
+        ],
+        "label": "direct",
+        "rationale": "T031 以'前提'方式明确陈述其使用助手是为了提高生产力，属原文明示的总体目的；未给出指标或阈值，也未虚构阈值，指标未知已在 context 与问题记录。"
+      },
+      "evidence_ids": [
+        "E0023"
+      ]
+    },
+    {
+      "goal_id": "G015",
+      "statement": "Have the AI assistant hold memory or history of previous interactions to provide context about the stakeholder's requirements.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "目的：为助手提供上下文与自身需求",
+        "与'不必重复自己'（G016）为手段与结果，分别保留"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "保存以往交互的记忆/历史",
+          "用于提供上下文与需求"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T033 提出记忆/历史能力及其作用"
+        ],
+        "label": "direct",
+        "rationale": "T033 明确说若助手能保存以往交互的某种记忆或历史，对提供上下文与自身需求会非常有帮助；方式与目的均来自同一句，未扩写为长期用户画像。"
+      },
+      "evidence_ids": [
+        "E0024"
+      ]
+    },
+    {
+      "goal_id": "G016",
+      "statement": "Not have to repeat the stakeholder's context in every query or conversation with the AI assistant.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "适用于每次查询与每次对话",
+        "强度为 super important"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "不必在每次查询/对话中重复自己"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T033 直接陈述该结果与强度"
+        ],
+        "label": "direct",
+        "rationale": "T033 明确说不必在每次查询或对话中重复自己非常重要，范围（每次查询与对话）与强度（super important）一致并已保留。"
+      },
+      "evidence_ids": [
+        "E0025"
+      ]
+    },
+    {
+      "goal_id": "G017",
+      "statement": "Cross-check answers to mathematical problems with multiple AI assistants.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "仅限数学/解题场景",
+        "原因是助手在数学上容易出错",
+        "语言任务不需比较（现状，未写入本目标）"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "数学问题用多个助手交叉核对",
+          "原因：数学易错"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T035 给出场景与做法",
+          "T035 给出原因"
+        ],
+        "label": "direct",
+        "rationale": "T035 明确说解数学问题时常需要用多个其他助手交叉核对某个助手给出的答案，并说明原因是数学易错；场景限定已写入 context，未扩展到语言任务。"
+      },
+      "evidence_ids": [
+        "E0026"
+      ]
+    },
+    {
+      "goal_id": "G018",
+      "statement": "Have AI assistant output be factually accurate rather than hallucinated.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "由负面体验、顾虑与条件推断的期望，原文未直接提出改进请求",
+        "T045 中受访者自述对如何达成没有解决方案",
+        "T003 中'需要完全事实正确时改用传统搜索'为其条件"
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G001"
+        ],
+        "reason": "由 T041 把易产生幻觉并影响事实准确性列为负面体验、T047 把可能输出严重不准确列为阻碍使用的顾虑，以及 G001 中'需要结果完全事实正确时就不交给助手'的条件共同推断：受访者希望助手输出不因幻觉而失实。原文未以要求句式直接提出，故源为推断而非明确表达。",
+        "assumptions": [
+          "假设把不准确列为负面体验与阻碍使用的顾虑，等同于希望该状态被消除"
+        ]
+      },
+      "support": {
+        "supported_parts": [
+          "希望输出不具有幻觉导致的 factual inaccuracy"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "假设把不准确列为负面体验与顾虑等同于希望其消除"
+        ],
+        "reasoning_steps": [
+          "T041 负面体验指向事实准确性",
+          "T047 顾虑指向严重不准确",
+          "T003 条件显示其在意完全事实正确"
+        ],
+        "label": "inferred",
+        "rationale": "原文未以'我希望输出准确'句式直接提出要求，但 T041 把易产生幻觉并影响事实准确性列为负面体验，T047 把可能输出严重不准确列为阻碍使用的顾虑，T003 以'需要完全事实正确'作为不交给助手的条件；三处共同构成正面推断依据，故判 inferred 而非 direct。推断假设：受访者希望消除该负面体验。未设定阈值，也未把 T045 的技术挑战判断固化为方案。"
+      },
+      "evidence_ids": [
+        "E0027",
+        "E0028",
+        "E0029"
+      ]
+    },
+    {
+      "goal_id": "G019",
+      "statement": "Fully automate certain pipelines with AI assistance without needing a human in the loop.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "当前因生成内容可能事实不准确、需人工在环而未能实现",
+        "原文以反事实方式表达愿望（若能做到自动化就能更好提升生产力）",
+        "未说明是哪些流水线，也未给出实现方式"
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G014"
+        ],
+        "reason": "由 T043'若能做到自动化就能更好地把任务生产力化'的反事实表述推断其对自动化的期望，并与 G014 以提高生产力为目的直接相连；该愿望以遗憾句式给出而非要求句式，故源为推断。",
+        "assumptions": [
+          "假设反事实愿望表达对自动化的期望",
+          "假设 better productivize 与 G014 的生产力目的同义"
+        ]
+      },
+      "support": {
+        "supported_parts": [
+          "希望实现某些流水线的完全自动化"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "假设反事实愿望表达对自动化的期望"
+        ],
+        "reasoning_steps": [
+          "T043 说明未能自动化的现状与原因",
+          "T043 以反事实句表达自动化愿望"
+        ],
+        "label": "inferred",
+        "rationale": "T043 说因需要人工在环而一直未能完全自动化某些流水线，并以反事实方式说若能自动化就能更好地提升生产力；这是明确的愿望表达但以遗憾句式给出，故判 inferred。'无需人工在环'来自 T043 对现状原因的说明，未声称其要求取消人工复核。"
+      },
+      "evidence_ids": [
+        "E0030",
+        "E0031"
+      ]
+    },
+    {
+      "goal_id": "G020",
+      "statement": "Have hallucinations detected and corrected, which the stakeholder sees as requiring a technological breakthrough and for which no solution is offered.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "受访者明确自述想不出解决方案",
+        "被视为更广泛的技术挑战，尚未解决",
+        "未确认是否作为对助手的具体要求"
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G018"
+        ],
+        "reason": "由 T045 在采访者追问改进办法时的回答推断：检测并纠正幻觉被视为消除不准确输出所需的方向，与 G018 的事实准确性诉求相连；但受访者同时自述想不出解决方案，故源为推断且支持为 insufficient。",
+        "assumptions": [
+          "假设该方向服务于 G018 的事实准确性诉求",
+          "未假设其已提出或采纳任何实现方式"
+        ]
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [
+          "是否要求助手具备检测与纠正幻觉的能力未确认",
+          "实现方式未知"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T045 自述无解决方案",
+          "T045 仅将其描述为待解决的技术挑战"
+        ],
+        "label": "insufficient",
+        "rationale": "T045 在采访者追问改进办法时回答想不出解决方案，只说检测并纠正幻觉需要技术突破、属于更广泛的技术挑战；这不足以确认其把'检测并纠正幻觉'作为对助手的具体要求或已采纳的方案，故保留 insufficient，不升级。"
+      },
+      "evidence_ids": [
+        "E0032",
+        "E0033"
+      ]
+    },
+    {
+      "goal_id": "G021",
+      "statement": "Have an AI assistant interface that is not cluttered or distracting.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "来自对 perplexity（屏幕上元素过多而分散注意力）与 Gemini（网页设计令人不适）的负面体验",
+        "不满本身为明确表达，目标表述（界面应不杂乱）含泛化推断，故 origin 为 explicit 而支持判断为 inferred",
+        "受访者自述不确定偏好是出于习惯还是界面本身更好",
+        "未要求统一的具体界面规范"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "希望界面不过度堆砌元素、不分散注意力"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "假设把界面分散注意力列为不满原因等同于希望界面简洁"
+        ],
+        "reasoning_steps": [
+          "T053 列出界面相关的负面体验",
+          "负面体验对应避免型期望"
+        ],
+        "label": "inferred",
+        "rationale": "T052 问有哪些令人 frustration 的特性，受访者明确把竞品界面元素过多导致分心、网页设计令人不适列为原因，故 origin 为 explicit；但目标表述'界面应不杂乱分散注意力'把具体竞品问题泛化为一般期望，原文未作此泛化陈述，需要该推断步骤，故支持判 inferred（origin 与 support 分别判断，差异在此说明）。其自述'不确定是习惯还是界面本身更好'作为限制写入 context；未虚构具体界面规范。"
+      },
+      "evidence_ids": [
+        "E0034"
+      ]
+    },
+    {
+      "goal_id": "G022",
+      "statement": "Have the AI assistant support text-to-video generation.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "现有能力支持文生图，文生视频是有用的补充",
+        "受访者称该方向已有研究但尚未产品化"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "支持文本转视频"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T055 直接提出文生视频为期望功能"
+        ],
+        "label": "direct",
+        "rationale": "T055 在被问及缺失功能时明确说若助手能支持文本转视频会非常有用，是现有文生图能力的有用补充；能力与方向一致，未扩展其未提及的视频用途。"
+      },
+      "evidence_ids": [
+        "E0035"
+      ]
+    },
+    {
+      "goal_id": "G023",
+      "statement": "Have AI assistants act as agents that perform described tasks, rather than only returning text to copy and paste.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "方向是从问答式文本补全转向可自主执行任务的 agent",
+        "示例（自动打开邮件客户端撰写并发送邮件）用于演示该能力，不另立为固定业务目标",
+        "未说明适用范围与验收标准"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "从文本补全转向可自主执行任务的 agent"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T055 提出 agent 方向",
+          "T055 以邮件示例演示能力，保留为 context"
+        ],
+        "label": "direct",
+        "rationale": "T055 明确说从当前的问答模式转向具备 agent 能力'将是关键性的'，并说可描述任务交由其执行；示例仅用于演示该一般能力，按目标边界未另立固定业务目标，只写入 context。"
+      },
+      "evidence_ids": [
+        "E0036",
+        "E0037"
+      ]
+    }
+  ],
+  "refinement_groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G014",
+      "child_ids": [
+        "G013",
+        "G019"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "候选层级：T031 把简洁回应作为提高生产力的实现方式，T043 把自动化与更好地提升生产力相连，故提出由 G013 与 G019 共同支撑 G014。但受访者在 T009/T015/T027 还列举邮件、文档、多媒体、编程等用途，原文未说明这组子目标共同满足即可实现提高生产力，故不声称充分，保持 proposed 与 partial。",
+      "assumptions": [
+        "假设主要生产力收益来自简洁回应与流水线自动化",
+        "假设'提高生产力'的可验收含义只由原文给出的两类途径构成（原文未给指标）"
+      ],
+      "evidence_ids": [
+        "K0003",
+        "K0002",
+        "K0001"
+      ],
+      "relation_ids": [
+        "R3",
+        "R5"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "日常问答与可自动化的流水线场景中，先获得简洁回应再将流程自动化",
+          "outcome": "supports",
+          "rationale": "两类途径各自在 T031、T043 有提高生产力的依据，分析上支持该组方向"
+        },
+        {
+          "kind": "exception",
+          "origin": "source",
+          "scenario": "关键任务仍需人工复核（T041/T043），此时自动化不成立，仅靠简洁回应不足以实现提高生产力",
+          "outcome": "counterexample",
+          "rationale": "T041 说明关键任务仍需人眼复核、不能开箱即用地自动化，构成该组充分性的反例",
+          "evidence_ids": [
+            "K0003"
+          ]
+        }
+      ]
+    },
+    {
+      "group_id": "GR2",
+      "parent_id": "G007",
+      "child_ids": [
+        "G008",
+        "G009"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "候选层级：T017 在作业场景中说助手主要帮助头脑风暴与更好地表达已有想法，故提出由 G008 与 G009 共同支撑 G007。但原文只说这是两个主要用例，未声称二者共同满足即可完成作业，且 T015/T021 表明作业还涉及撰写长文档与校对，故不声称充分，保持 proposed 与 partial。",
+      "assumptions": [
+        "假设作业场景的主要用途即为头脑风暴与表达想法",
+        "假设作业还需要的撰写与校对等环节不由本组覆盖"
+      ],
+      "evidence_ids": [
+        "K0005",
+        "K0004"
+      ],
+      "relation_ids": [],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "作业仅需产生与组织想法、无需成稿与校对的情形",
+          "outcome": "supports",
+          "rationale": "在该限定情形下两者可覆盖作业中的助手用途"
+        },
+        {
+          "kind": "exception",
+          "origin": "source",
+          "scenario": "作业需要撰写长文档并对成稿做拼写/语法/语气校对（T015/T021）",
+          "outcome": "unknown",
+          "rationale": "原文未说明头脑风暴与表达想法在此情形下是否足够，无法判定，缺口保留",
+          "evidence_ids": [
+            "K0005"
+          ]
+        }
+      ]
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC009:T003",
+      "material_id": "M001",
+      "quote": "They have Camus to serve as a replacement for a lot of traditional searching that I used to do so. Even the things that I used to Google or Bing before unless I need them to be perfectly, factually correct these days, I defer to any assistant to get my results.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 922,
+      "end_char": 1183,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T003",
+          "segment_start": 230,
+          "segment_end": 491,
+          "start_char": 922,
+          "end_char": 1183
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 692,
+        "end_char": 1227
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC009:T011",
+      "material_id": "M001",
+      "quote": "I use it to compose professional emails, primarily, but to a lesser extent, personal emails as well.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2223,
+      "end_char": 2323,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T011",
+          "segment_start": 0,
+          "segment_end": 100,
+          "start_char": 2223,
+          "end_char": 2323
+        }
+      ],
+      "original_locator": {
+        "turn": "11",
+        "start_char": 2223,
+        "end_char": 3107
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC009:T011",
+      "material_id": "M001",
+      "quote": "with just a few prompts, I'm able to generate professional emails to a lesser extent, personal emails as well.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2539,
+      "end_char": 2649,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T011",
+          "segment_start": 316,
+          "segment_end": 426,
+          "start_char": 2539,
+          "end_char": 2649
+        }
+      ],
+      "original_locator": {
+        "turn": "11",
+        "start_char": 2223,
+        "end_char": 3107
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC009:T009",
+      "material_id": "M001",
+      "quote": "composing emails, writing and proofreading documents and multimedia creation such as ideation for blog posts or social media posts, or even in my work",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1763,
+      "end_char": 1913,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T009",
+          "segment_start": 114,
+          "segment_end": 264,
+          "start_char": 1763,
+          "end_char": 1913
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 1649,
+        "end_char": 1920
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC009:T015",
+      "material_id": "M001",
+      "quote": "writing documents like writing long form documents for work or for assignments",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3932,
+      "end_char": 4010,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T015",
+          "segment_start": 40,
+          "segment_end": 118,
+          "start_char": 3932,
+          "end_char": 4010
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 3892,
+        "end_char": 4037
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC009:T009",
+      "material_id": "M001",
+      "quote": "composing emails, writing and proofreading documents and multimedia creation such as ideation for blog posts or social media posts, or even in my work",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1763,
+      "end_char": 1913,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T009",
+          "segment_start": 114,
+          "segment_end": 264,
+          "start_char": 1763,
+          "end_char": 1913
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 1649,
+        "end_char": 1920
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC009:T021",
+      "material_id": "M001",
+      "quote": "something like proofreading like documents that I've written myself, for which, like, I want spelling checks, grammar checks, tone checks and stuff like that. I I use assistance for that, too.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5461,
+      "end_char": 5653,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T021",
+          "segment_start": 151,
+          "segment_end": 343,
+          "start_char": 5461,
+          "end_char": 5653
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 5310,
+        "end_char": 5729
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC009:T009",
+      "material_id": "M001",
+      "quote": "writing and proofreading documents",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1781,
+      "end_char": 1815,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T009",
+          "segment_start": 132,
+          "segment_end": 166,
+          "start_char": 1781,
+          "end_char": 1815
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 1649,
+        "end_char": 1920
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC009:T013",
+      "material_id": "M001",
+      "quote": "I I use them to create you know, digital art that I often embed in my blog posts or social media posts",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3431,
+      "end_char": 3533,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T013",
+          "segment_start": 18,
+          "segment_end": 120,
+          "start_char": 3431,
+          "end_char": 3533
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 3413,
+        "end_char": 3733
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC009:T013",
+      "material_id": "M001",
+      "quote": "but Gpt makes me look as though I'm not",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3685,
+      "end_char": 3724,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T013",
+          "segment_start": 272,
+          "segment_end": 311,
+          "start_char": 3685,
+          "end_char": 3724
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 3413,
+        "end_char": 3733
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC009:T009",
+      "material_id": "M001",
+      "quote": "multimedia creation such as ideation for blog posts or social media posts, or even in my work",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1820,
+      "end_char": 1913,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T009",
+          "segment_start": 171,
+          "segment_end": 264,
+          "start_char": 1820,
+          "end_char": 1913
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 1649,
+        "end_char": 1920
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC009:T015",
+      "material_id": "M001",
+      "quote": "Emails, multimedia content creation and writing documents like writing long form documents for work or for assignments.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3892,
+      "end_char": 4011,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T015",
+          "segment_start": 0,
+          "segment_end": 119,
+          "start_char": 3892,
+          "end_char": 4011
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 3892,
+        "end_char": 4037
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC009:T017",
+      "material_id": "M001",
+      "quote": "There are a few assignments which permit the use of AI assistant tools for these assignments, where we are permitted to use a assistant tools like I use them quite liberally.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4229,
+      "end_char": 4403,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T017",
+          "segment_start": 12,
+          "segment_end": 186,
+          "start_char": 4229,
+          "end_char": 4403
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 4217,
+        "end_char": 4717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC009:T017",
+      "material_id": "M001",
+      "quote": "maybe for for writing documents and for assignments, maybe 3 to 4 times a a week.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4445,
+      "end_char": 4526,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T017",
+          "segment_start": 228,
+          "segment_end": 309,
+          "start_char": 4445,
+          "end_char": 4526
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 4217,
+        "end_char": 4717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC009:T017",
+      "material_id": "M001",
+      "quote": "Primarily, it helps me like brainstorm, different ideas and articulate some of the ideas that I have of my own better.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4527,
+      "end_char": 4645,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T017",
+          "segment_start": 310,
+          "segment_end": 428,
+          "start_char": 4527,
+          "end_char": 4645
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 4217,
+        "end_char": 4717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC009:T021",
+      "material_id": "M001",
+      "quote": "Brainstorming is one of the primary tasks for which I use an a assistant as well.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5333,
+      "end_char": 5414,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T021",
+          "segment_start": 23,
+          "segment_end": 104,
+          "start_char": 5333,
+          "end_char": 5414
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 5310,
+        "end_char": 5729
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC009:T017",
+      "material_id": "M001",
+      "quote": "and articulate some of the ideas that I have of my own better.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4583,
+      "end_char": 4645,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T017",
+          "segment_start": 366,
+          "segment_end": 428,
+          "start_char": 4583,
+          "end_char": 4645
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 4217,
+        "end_char": 4717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC009:T023",
+      "material_id": "M001",
+      "quote": "if they had capabilities for you know, directly picking up prompts over voice, I I might consider using them as well.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6102,
+      "end_char": 6219,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T023",
+          "segment_start": 157,
+          "segment_end": 274,
+          "start_char": 6102,
+          "end_char": 6219
+        }
+      ],
+      "original_locator": {
+        "turn": "23",
+        "start_char": 5945,
+        "end_char": 6388
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC009:T027",
+      "material_id": "M001",
+      "quote": "one other significant activity. That I use a assistance for is to help me with my work. And when I say work, I mean doing coding or programming.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6963,
+      "end_char": 7107,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T027",
+          "segment_start": 240,
+          "segment_end": 384,
+          "start_char": 6963,
+          "end_char": 7107
+        }
+      ],
+      "original_locator": {
+        "turn": "27",
+        "start_char": 6723,
+        "end_char": 7508
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC009:T027",
+      "material_id": "M001",
+      "quote": "I think it would make sense if it is able to format these into other standardized formats that we use in, for instance, like different coding tasks.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7334,
+      "end_char": 7482,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T027",
+          "segment_start": 611,
+          "segment_end": 759,
+          "start_char": 7334,
+          "end_char": 7482
+        }
+      ],
+      "original_locator": {
+        "turn": "27",
+        "start_char": 6723,
+        "end_char": 7508
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC009:T027",
+      "material_id": "M001",
+      "quote": "when I use a assistance for programming tasks, I often need the input or the output to be in certain formats. Json or Xml is an example, for instance.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7112,
+      "end_char": 7262,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T027",
+          "segment_start": 389,
+          "segment_end": 539,
+          "start_char": 7112,
+          "end_char": 7262
+        }
+      ],
+      "original_locator": {
+        "turn": "27",
+        "start_char": 6723,
+        "end_char": 7508
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC009:T031",
+      "material_id": "M001",
+      "quote": "I would definitely appreciate brevity over a a verbose response. So I am more towards the side of having a succinct response to my question rather than having a big conversational response.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8549,
+      "end_char": 8738,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T031",
+          "segment_start": 147,
+          "segment_end": 336,
+          "start_char": 8549,
+          "end_char": 8738
+        }
+      ],
+      "original_locator": {
+        "turn": "31",
+        "start_char": 8402,
+        "end_char": 8766
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC009:T031",
+      "material_id": "M001",
+      "quote": "given the premise that I I use a assistance to improve my productivity",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8416,
+      "end_char": 8486,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T031",
+          "segment_start": 14,
+          "segment_end": 84,
+          "start_char": 8416,
+          "end_char": 8486
+        }
+      ],
+      "original_locator": {
+        "turn": "31",
+        "start_char": 8402,
+        "end_char": 8766
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC009:T033",
+      "material_id": "M001",
+      "quote": "if it is able to, you know, hold some sort of memory or history of previous interactions, I think they'll be super helpful in giving it context, or like what my requirements are.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9035,
+      "end_char": 9213,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T033",
+          "segment_start": 143,
+          "segment_end": 321,
+          "start_char": 9035,
+          "end_char": 9213
+        }
+      ],
+      "original_locator": {
+        "turn": "33",
+        "start_char": 8892,
+        "end_char": 9213
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC009:T033",
+      "material_id": "M001",
+      "quote": "I think it's super important that I don't have to repeat myself in every query or every conversation that I start with any assistant.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8898,
+      "end_char": 9031,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T033",
+          "segment_start": 6,
+          "segment_end": 139,
+          "start_char": 8898,
+          "end_char": 9031
+        }
+      ],
+      "original_locator": {
+        "turn": "33",
+        "start_char": 8892,
+        "end_char": 9213
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC009:T035",
+      "material_id": "M001",
+      "quote": "when it comes to solving mathematical problems, I often find the need to cross check the answers generated by any given a assistant with multiple others because they seem to be prone to making mistakes when it comes to math.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9987,
+      "end_char": 10211,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T035",
+          "segment_start": 478,
+          "segment_end": 702,
+          "start_char": 9987,
+          "end_char": 10211
+        }
+      ],
+      "original_locator": {
+        "turn": "35",
+        "start_char": 9509,
+        "end_char": 10220
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC009:T041",
+      "material_id": "M001",
+      "quote": "I feel like, the very nature of how the assistants have been trained make them very prone to hallucinations. and that affects the factual accuracy of a lot of statements that they generate.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11290,
+      "end_char": 11479,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T041",
+          "segment_start": 154,
+          "segment_end": 343,
+          "start_char": 11290,
+          "end_char": 11479
+        }
+      ],
+      "original_locator": {
+        "turn": "41",
+        "start_char": 11136,
+        "end_char": 11775
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC009:T047",
+      "material_id": "M001",
+      "quote": "The fact that it could spew statements that could be wildly inaccurate, or something that concerns me.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13489,
+      "end_char": 13591,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T047",
+          "segment_start": 82,
+          "segment_end": 184,
+          "start_char": 13489,
+          "end_char": 13591
+        }
+      ],
+      "original_locator": {
+        "turn": "47",
+        "start_char": 13407,
+        "end_char": 13599
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC009:T003",
+      "material_id": "M001",
+      "quote": "unless I need them to be perfectly, factually correct these days",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1074,
+      "end_char": 1138,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T003",
+          "segment_start": 382,
+          "segment_end": 446,
+          "start_char": 1074,
+          "end_char": 1138
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 692,
+        "end_char": 1227
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC009:T043",
+      "material_id": "M001",
+      "quote": "I have not been able to automate certain pipelines.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12367,
+      "end_char": 12418,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T043",
+          "segment_start": 435,
+          "segment_end": 486,
+          "start_char": 12367,
+          "end_char": 12418
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 11932,
+        "end_char": 12590
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC009:T043",
+      "material_id": "M001",
+      "quote": "I could have used that to productivize my tasks much better if I were able to do that automated automation.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12477,
+      "end_char": 12584,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T043",
+          "segment_start": 545,
+          "segment_end": 652,
+          "start_char": 12477,
+          "end_char": 12584
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 11932,
+        "end_char": 12590
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0032",
+      "source_id": "DOC009:T045",
+      "material_id": "M001",
+      "quote": "I think this requires technological breakthrough for in order to be able to detect and correct hallucinations.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12829,
+      "end_char": 12939,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T045",
+          "segment_start": 74,
+          "segment_end": 184,
+          "start_char": 12829,
+          "end_char": 12939
+        }
+      ],
+      "original_locator": {
+        "turn": "45",
+        "start_char": 12755,
+        "end_char": 13150
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0033",
+      "source_id": "DOC009:T045",
+      "material_id": "M001",
+      "quote": "at this moment I recognize it as a challenge to be solved. But I don't have a solution of the top of my head myself.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13034,
+      "end_char": 13150,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T045",
+          "segment_start": 279,
+          "segment_end": 395,
+          "start_char": 13034,
+          "end_char": 13150
+        }
+      ],
+      "original_locator": {
+        "turn": "45",
+        "start_char": 12755,
+        "end_char": 13150
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0034",
+      "source_id": "DOC009:T053",
+      "material_id": "M001",
+      "quote": "in the case of perplexity, I think there's just too much happening on the screen that it distracts me. And in the case of Gemini, it's a simple case of the design of their web page. That kind of throws me off.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14674,
+      "end_char": 14883,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T053",
+          "segment_start": 482,
+          "segment_end": 691,
+          "start_char": 14674,
+          "end_char": 14883
+        }
+      ],
+      "original_locator": {
+        "turn": "53",
+        "start_char": 14192,
+        "end_char": 14889
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0035",
+      "source_id": "DOC009:T055",
+      "material_id": "M001",
+      "quote": "I think will be super helpful. If they could help me do text to video as well. They do support text image right now. But text to video would be in useful addition.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15158,
+      "end_char": 15321,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T055",
+          "segment_start": 72,
+          "segment_end": 235,
+          "start_char": 15158,
+          "end_char": 15321
+        }
+      ],
+      "original_locator": {
+        "turn": "55",
+        "start_char": 15086,
+        "end_char": 16292
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0036",
+      "source_id": "DOC009:T055",
+      "material_id": "M001",
+      "quote": "I think that you'll be It'll be pivotal if we can move from just using these a assistance in the manner that we currently use them in the sense you ask questions and you get responses. If we can move from that model to having large language agents instead of large language models.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15464,
+      "end_char": 15745,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T055",
+          "segment_start": 378,
+          "segment_end": 659,
+          "start_char": 15464,
+          "end_char": 15745
+        }
+      ],
+      "original_locator": {
+        "turn": "55",
+        "start_char": 15086,
+        "end_char": 16292
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0037",
+      "source_id": "DOC009:T055",
+      "material_id": "M001",
+      "quote": "Maybe it just goes ahead and opens the email client of its own, composes the email and sends it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16035,
+      "end_char": 16130,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T055",
+          "segment_start": 949,
+          "segment_end": 1044,
+          "start_char": 16035,
+          "end_char": 16130
+        }
+      ],
+      "original_locator": {
+        "turn": "55",
+        "start_char": 15086,
+        "end_char": 16292
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0001",
+      "source_id": "DOC009:T031",
+      "material_id": "M001",
+      "quote": "given the premise that I I use a assistance to improve my productivity. And given the time is a crucial element in this whole thing. I would definitely appreciate brevity over a a verbose response.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8416,
+      "end_char": 8613,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T031",
+          "segment_start": 14,
+          "segment_end": 211,
+          "start_char": 8416,
+          "end_char": 8613
+        }
+      ],
+      "original_locator": {
+        "turn": "31",
+        "start_char": 8402,
+        "end_char": 8766
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0002",
+      "source_id": "DOC009:T043",
+      "material_id": "M001",
+      "quote": "I could have used that to productivize my tasks much better if I were able to do that automated automation.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12477,
+      "end_char": 12584,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T043",
+          "segment_start": 545,
+          "segment_end": 652,
+          "start_char": 12477,
+          "end_char": 12584
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 11932,
+        "end_char": 12590
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0003",
+      "source_id": "DOC009:T041",
+      "material_id": "M001",
+      "quote": "for tasks that are critical. They do need a human eye to go over them still, And and they they can't be used to automate things out of the box.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11623,
+      "end_char": 11766,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T041",
+          "segment_start": 487,
+          "segment_end": 630,
+          "start_char": 11623,
+          "end_char": 11766
+        }
+      ],
+      "original_locator": {
+        "turn": "41",
+        "start_char": 11136,
+        "end_char": 11775
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0004",
+      "source_id": "DOC009:T017",
+      "material_id": "M001",
+      "quote": "Primarily, it helps me like brainstorm, different ideas and articulate some of the ideas that I have of my own better.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4527,
+      "end_char": 4645,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T017",
+          "segment_start": 310,
+          "segment_end": 428,
+          "start_char": 4527,
+          "end_char": 4645
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 4217,
+        "end_char": 4717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0005",
+      "source_id": "DOC009:T015",
+      "material_id": "M001",
+      "quote": "Emails, multimedia content creation and writing documents like writing long form documents for work or for assignments.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3892,
+      "end_char": 4011,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T015",
+          "segment_start": 0,
+          "segment_end": 119,
+          "start_char": 3892,
+          "end_char": 4011
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 3892,
+        "end_char": 4037
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0006",
+      "source_id": "DOC009:T009",
+      "material_id": "M001",
+      "quote": "multimedia creation such as ideation for blog posts or social media posts, or even in my work",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1820,
+      "end_char": 1913,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T009",
+          "segment_start": 171,
+          "segment_end": 264,
+          "start_char": 1820,
+          "end_char": 1913
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 1649,
+        "end_char": 1920
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0007",
+      "source_id": "DOC009:T013",
+      "material_id": "M001",
+      "quote": "I I use them to create you know, digital art that I often embed in my blog posts or social media posts",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3431,
+      "end_char": 3533,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T013",
+          "segment_start": 18,
+          "segment_end": 120,
+          "start_char": 3431,
+          "end_char": 3533
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 3413,
+        "end_char": 3733
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0008",
+      "source_id": "DOC009:T027",
+      "material_id": "M001",
+      "quote": "when I use a assistance for programming tasks, I often need the input or the output to be in certain formats. Json or Xml is an example, for instance. So yes, in addition to be able to process and output natural language, I think it would make sense if it is able to format these into other standardized formats that we use in, for instance, like different coding tasks.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7112,
+      "end_char": 7482,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T027",
+          "segment_start": 389,
+          "segment_end": 759,
+          "start_char": 7112,
+          "end_char": 7482
+        }
+      ],
+      "original_locator": {
+        "turn": "27",
+        "start_char": 6723,
+        "end_char": 7508
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0009",
+      "source_id": "DOC009:T031",
+      "material_id": "M001",
+      "quote": "given the premise that I I use a assistance to improve my productivity. And given the time is a crucial element in this whole thing. I would definitely appreciate brevity over a a verbose response.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8416,
+      "end_char": 8613,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T031",
+          "segment_start": 14,
+          "segment_end": 211,
+          "start_char": 8416,
+          "end_char": 8613
+        }
+      ],
+      "original_locator": {
+        "turn": "31",
+        "start_char": 8402,
+        "end_char": 8766
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0010",
+      "source_id": "DOC009:T033",
+      "material_id": "M001",
+      "quote": "I think it's super important that I don't have to repeat myself in every query or every conversation that I start with any assistant. So if it is able to, you know, hold some sort of memory or history of previous interactions, I think they'll be super helpful in giving it context, or like what my requirements are.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8898,
+      "end_char": 9213,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T033",
+          "segment_start": 6,
+          "segment_end": 321,
+          "start_char": 8898,
+          "end_char": 9213
+        }
+      ],
+      "original_locator": {
+        "turn": "33",
+        "start_char": 8892,
+        "end_char": 9213
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0011",
+      "source_id": "DOC009:T043",
+      "material_id": "M001",
+      "quote": "I could have used that to productivize my tasks much better if I were able to do that automated automation.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12477,
+      "end_char": 12584,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T043",
+          "segment_start": 545,
+          "segment_end": 652,
+          "start_char": 12477,
+          "end_char": 12584
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 11932,
+        "end_char": 12590
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0012",
+      "source_id": "DOC009:T043",
+      "material_id": "M001",
+      "quote": "because the content that they generate could be factually inaccurate at times. So that needs to be a human in the loop, and because that needs to be human in the loop. I have not been able to automate certain pipelines.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12199,
+      "end_char": 12418,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T043",
+          "segment_start": 267,
+          "segment_end": 486,
+          "start_char": 12199,
+          "end_char": 12418
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 11932,
+        "end_char": 12590
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0013",
+      "source_id": "DOC009:T045",
+      "material_id": "M001",
+      "quote": "I think this requires technological breakthrough for in order to be able to detect and correct hallucinations.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12829,
+      "end_char": 12939,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T045",
+          "segment_start": 74,
+          "segment_end": 184,
+          "start_char": 12829,
+          "end_char": 12939
+        }
+      ],
+      "original_locator": {
+        "turn": "45",
+        "start_char": 12755,
+        "end_char": 13150
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0014",
+      "source_id": "DOC009:T041",
+      "material_id": "M001",
+      "quote": "the very nature of how the assistants have been trained make them very prone to hallucinations. and that affects the factual accuracy of a lot of statements that they generate.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11303,
+      "end_char": 11479,
+      "candidate_locations": [
+        {
+          "source_id": "DOC009:T041",
+          "segment_start": 167,
+          "segment_end": 343,
+          "start_char": 11303,
+          "end_char": 11479
+        }
+      ],
+      "original_locator": {
+        "turn": "41",
+        "start_char": 11136,
+        "end_char": 11775
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "issues": [
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "原文尚不足以支持这项目标，或存在相反证据。",
+      "blocking": true
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G020",
+      "message": "原文尚不足以支持这项目标，或存在相反证据。",
+      "blocking": true
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G021",
+      "message": "来源与支持标签不同；两者不必相等，请在判断理由中解释差异，未自动覆盖原值。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "语音输入提示是您希望具备的能力，还是仅在具备时会考虑使用？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G020",
+      "message": "检测并纠正幻觉是您期望助手具备的能力，还是仅视为行业技术挑战？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G018",
+      "message": "事实准确是普遍要求还是仅在关键任务/需要完全正确时适用？是否有可接受的错误率？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G019",
+      "message": "希望自动化的'某些流水线'具体指哪些任务？是否要求取消人工复核？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G021",
+      "message": "界面简洁的诉求适用于所有助手还是仅针对竞品的具体界面？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "作业场景与撰写文档、头脑风暴之间是并列用途还是层级关系？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G003",
+      "message": "作业场景与撰写文档、头脑风暴之间是并列用途还是层级关系？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "作业场景与撰写文档、头脑风暴之间是并列用途还是层级关系？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "作业场景与撰写文档、头脑风暴之间是并列用途还是层级关系？",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC009-goal-model",
+      "message": "已检查但无依据（并列用例）：G002（邮件）、G003（撰写文档）、G004（校对）、G005/G006（多媒体）、G011（编程）之间的四类联系均已逐对检查。原文在 T009、T015、T027 中并列列举这些用例，未说明任一项服务于另一项、或构成另一项的具体情境/实现方式，属同主题并列，按联系发现规则不构成联系，故不建边。",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC009-goal-model",
+      "message": "已检查但无依据（用途与目的）：G008（头脑风暴）、G009（更好表达想法）与 G003（撰写文档）、G007（作业）之间已检查 contribution。T017 的语义是'助手帮助我头脑风暴与表达想法'，并非'头脑风暴有助于完成作业或文档'，未给出目的—手段依据，故不建边。",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC009-goal-model",
+      "message": "已检查但无依据（precedes）：全篇已检查是否存在两个目标结果之间的先后依赖。T055 的'描述任务→执行任务'属同一目标（G023）内部的步骤，不构成两个目标之间的 precedes；其余目标间原文未给出先后依赖，故 precedes 关系为 0 条。",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC009-goal-model",
+      "message": "已检查但无依据（G017 与 G018）：交叉核对是受访者为应对数学易错而采取的核对做法，原文未说明该做法会使助手输出更准确，贡献方向不成立；也不构成具体化或实现方式，故不建边。",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC009-goal-model",
+      "message": "已检查但无依据（G022 与 G005/G006）：文本转视频与多媒体创作同属多媒体主题，T055 只说视频是现有文生图能力的有用补充，未说明它服务于博客/社交帖子创作目标；同主题不构成联系，故不建边。",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC009-goal-model",
+      "message": "已检查但无依据（G021、G010、G001、G012 与其他目标）：G021 界面诉求在 T053 中仅作为令人 frustration 的竞品特性列出，未连接到生产力或其他结果；G010 语音输入为条件性考虑，无共同场景；G001 与 G018 之间是 T003 的例外条件关系，已写入 G001 context 而非联系；G012 的格式需求与 G023 的 agent 方向无共同依据。均不建边。",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC009-goal-model",
+      "message": "已检查但不足以成立（精化组）：对 G014（提高生产力）判断，G013 与 G019 只覆盖回应风格与自动化两条途径，原文另列举邮件、文档、多媒体、编程等用途，不能声称共同充分，GR1 保持 proposed+partial；对 G007（作业）判断，G008+G009 仅为原文所说的主要用例，作业还涉及撰写与校对，GR2 保持 proposed+partial。其余目标 G001-G006、G008-G013、G015-G023 均无原文依据可声称存在共同充分的子目标组（原访谈未以整组方式描述任何父目标的实现条件），故成立精化组数为 0，不为凑层级硬造根或组。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "语音输入提示是您实际希望助手具备的能力，还是仅在具备时会考虑使用？T023 使用 might consider，采纳强度未确认。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G020",
+      "message": "检测并纠正幻觉是您期望助手具备的能力，还是仅视为行业待解决的技术挑战？T045 明确自述想不出解决方案。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G018",
+      "message": "事实准确是普遍硬性要求，还是仅在关键任务或需要完全正确时适用？原文未给阈值或适用范围。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G019",
+      "message": "希望自动化的'某些流水线'具体指哪些任务？原文未列举，也未说明是否需要取消人工复核。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G021",
+      "message": "界面简洁的诉求适用于所有助手，还是仅针对 perplexity 与 Gemini 的具体界面？受访者自述不确定是出于习惯还是界面本身更好。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G012",
+      "message": "标准化格式支持是否需要覆盖您在反问中提到的 HTML 或 LaTeX，还是仅限编码任务中的 JSON/XML 一类格式？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G014",
+      "message": "提高生产力是否有可验证的指标或阈值？原文仅以前提方式陈述该目的。",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "GR1 未成立：缺少能证明 G013 与 G019 共同充分实现 G014 的依据，且异常场景（关键任务仍需人工复核，T041/T043）为反例；是否还有原文未覆盖的生产力途径需补充？",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR2",
+      "message": "GR2 未成立：T017 只说明头脑风暴与表达想法是作业中的主要用例，未声称二者共同充分；作业还需撰写与校对（T015/T021），缺口未解决。",
+      "blocking": false
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R7",
+      "message": "R7 保持 proposed：端点 G020 的支持为 insufficient（T045 自述无方案），端点支持不足时不能标 supported；若确认检测纠正幻觉是明确要求，可重评该联系与相关组。",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "这组层级仍需确认，尚未作为成立的精化展示。",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR2",
+      "message": "这组层级仍需确认，尚未作为成立的精化展示。",
+      "blocking": false
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R7",
+      "message": "这项联系尚待确认，不表示充分精化。",
+      "blocking": false
+    }
+  ],
+  "limitations": [
+    "仅依据分配的 DOC009 转写（59 轮），未读取仓库其他目录、未联网、未参考任何历史目标或参考答案",
+    "转写为口语，存在重复、自我修正与疑似转写错误（如 T003 的 Camus、T043 的 automated automation、T031 的 give given），均按原文原样引用，未做校正或润色",
+    "T025、T029、T049 等回合受访者仅作反问确认，未形成新目标",
+    "本轮为生成方自检，独立语义审查与形式证明未执行（not_run），人工接受状态为 pending",
+    "未做逐句分类；source_checks 只登记实际回查的重要片段，空处不代表已穷尽意图"
+  ],
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "e0e03b3548666e960779251e9efa03222f057249ae7e85dcc52fe46b170cd104"
+    },
+    {
+      "path": "attachments/judgments.json",
+      "sha256": "fb1e620825e89ed8941b0c85c50fed7a46402283bca1c5400ba67df35a0927b5"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "adf4e5a39e038c01ccb4d4d843f5a00b96bf58879bacce1c803ee3000bca53d4"
+    },
+    {
+      "path": "attachments/kaos-decisions.json",
+      "sha256": "6361e600397c10b96ffcacf28b544f6f955121fe40ce167878ea58c78de508ab"
+    }
+  ],
+  "review": {
+    "status": "pending"
+  },
+  "changes": [],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G006",
+      "target_id": "G005",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "假设 T013 的数字艺术生成是 T009 多媒体创作用例的实际形态"
+      ],
+      "rationale": "T009 把多媒体创作列为前三用例并以博客/社交媒体帖子为例，T013 在追问多媒体时把同一用途具体化为生成数字艺术并嵌入博客/社交媒体帖子；G006 是 G005 在同一用途下的具体情境，方向为具体情境指向一般目标。未声称数字艺术覆盖 G005 的全部适用范围。",
+      "evidence_ids": [
+        "K0007",
+        "K0006"
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G012",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "限定在编码/编程任务的输入输出"
+      ],
+      "assumptions": [],
+      "rationale": "T027 同一段中，先说明用助手做编程工作时常需要输入输出为特定格式，再提出应能格式化为编码任务使用的标准格式；格式能力有助于完成编程任务，但原文未声称其足以实现编程帮助，故为 contribution 而非精化。",
+      "evidence_ids": [
+        "K0008"
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G013",
+      "target_id": "G014",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "假设节省阅读冗长回答的时间即为提高生产力的途径之一"
+      ],
+      "rationale": "T031 以'前提是我用助手提高生产力、且时间是关键要素'直接给出偏好简洁回答的理由，简洁回应是服务于提高生产力这一目的的实现方式；未声称简洁回答在所有情况下足以提高生产力。",
+      "evidence_ids": [
+        "K0009"
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G015",
+      "target_id": "G016",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T033 先说不必在每次查询或对话中重复自己非常重要，紧接着以'因此若它能保存以往交互的记忆或历史会非常有帮助'给出实现方式；方式与结果在同一问答中明确对应，未声称记忆在所有情况下足以避免重复。",
+      "evidence_ids": [
+        "K0010"
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G019",
+      "target_id": "G014",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "假设'更好地提升生产力'中的 productivize 与 G014 的生产力目的同义"
+      ],
+      "rationale": "T043 明确说若能做到自动化就能更好地把任务生产力化（productivize my tasks much better），自动化对提高生产力有帮助；原文未说明实现自动化的条件与范围，故为 contribution 而非精化。",
+      "evidence_ids": [
+        "K0011"
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G018",
+      "target_id": "G019",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "假设消除事实不准确即可移除人工在环这一阻碍"
+      ],
+      "rationale": "T043 说明未能自动化某些流水线的原因是生成内容可能事实不准确、因此需要人工在环；输出事实准确有助于实现自动化。未声称准确性单独足以实现自动化（T045 仍认为需要技术突破）。",
+      "evidence_ids": [
+        "K0012"
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G020",
+      "target_id": "G018",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "假设检测并纠正幻觉能够减少不准确输出"
+      ],
+      "rationale": "T041 说明易产生幻觉影响生成陈述的事实准确性，T045 在追问改进时说需要技术突破才能检测并纠正幻觉；据此提出检测纠正幻觉有助于事实准确。因端点 G020 支持为 insufficient（受访者自述无方案），按联系发现规则不能标 supported，保留 proposed 待确认。",
+      "evidence_ids": [
+        "K0014",
+        "K0013"
+      ]
+    }
+  ],
+  "source_binding": {
+    "sha256": "adf4e5a39e038c01ccb4d4d843f5a00b96bf58879bacce1c803ee3000bca53d4"
+  }
+}

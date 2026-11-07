@@ -1,0 +1,85 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "b6534cafd931b70f4f651ea35777bb233bc60753e401b9561d44db7029c0b854",
+    "judgments_sha256": "ab061d6d97e2f6cb6a418ac43cfced41a40e6fdcd4dfc1268156eff3e6113427"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "G002 与 G007 是否重复？若把'学校提供'并入 G002 的 context，会丢失提供方要求；若保留两个节点，需确认这是粒度差异还是同一目标。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "'included' 的承载对象未说明（学费/学校订阅/既有平台），无法据此判断验收条件。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G001",
+      "message": "导出目的地（Google Drive vs Kindle 账户）原文为 'I don't know'，是否需要定死以判断与 G006 的关系。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R1",
+      "message": "T043 的回答对象存在指代歧义（应用 vs 门户），若按门户理解，R1 的 operationalization 方向需重判。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "G002",
+      "message": "本次未建立任何 AND 精化组：现有目标均为并列功能诉求，缺少'子目标共同满足父目标'的原文依据；如需层级，应先确认 G002/G007 与 G001 是否存在共同上层目的。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G006",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "以现有 Kindle 应用作为承载应用时"
+      ],
+      "assumptions": [
+        "若 Kindle 能管理 PDF，课程 PDF 与电子书可在同一应用中打开"
+      ],
+      "rationale": "T042 问合并应用应为独立应用还是并入现有应用，T043 直接回答'如果现有 Kindle 应用能管理 PDF 会更省事'，即把 Kindle 承载 PDF 作为实现'一个应用打开两种格式'的具体方式。方式与目的均为原话可追溯；T044 之后的澄清只说明问句对象有歧义，不否定该方式偏好本身。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T043",
+          "quote": "I would say, it will be easier if my existing kindle app can manages Pdfs.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G004",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "时间筛选作用于已保存/已读材料，而非未保存的课程链接"
+      ],
+      "rationale": "同一段排序回答中，第二项是'把有价值的资料保存到某处以便日后查看'，第三项是'按月份/年份归类以便检索读过的内容'，后者服务于前者所述的日后回看目的；只声称有帮助，不声称足以替代保存。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T055",
+          "quote": "to save these valuable resources somewhere to for me to be able to check them later",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC018:T055",
+          "quote": "I would love to actually have like a way to yeah, to categorize in time",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

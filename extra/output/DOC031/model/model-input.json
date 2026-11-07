@@ -1,0 +1,1574 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC031-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "cb8f4002c2c38ac656689bcc6f0b18608732bf540baefc30fe34214f026cd854"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "8d6746ae2c7dba5cd3512daab074002dc4fa7006a2c4c3f83442e61cbc5bb250"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "d730328336a79efb471aa4d41464bf8aca0c4664117eea4e897540a8ea3234f5"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "4f4c359b0aa66e459338fef571a2e6e2ddd5badd68f1bfe61e6950016957a6fe"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC031"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC031-G001",
+      "statement": "不先保存联系方式也能即时联系到校内任何人。",
+      "source_candidate_ids": [
+        "DOC031-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "自评这是 Slack 优于其他应用之处",
+        "只需知道姓名即可检索并发起对话"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC031-G002",
+      "statement": "通过频道一次触达一大群人，比邮件快。",
+      "source_candidate_ids": [
+        "DOC031-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "对比对象：邮件"
+      ],
+      "evidence_ids": [
+        "E0004",
+        "E0005"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC031-G003",
+      "statement": "加入频道即可看到加入之前的历史消息。",
+      "source_candidate_ids": [
+        "DOC031-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "自评这是相对其他应用的优势"
+      ],
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC031-G004",
+      "statement": "知道院系、项目与校园里正在发生什么。",
+      "source_candidate_ids": [
+        "DOC031-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "渠道：如软件工程项目的 MSC 频道"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC031-G005",
+      "statement": "与队友协作时能立刻把文档发过去，任意格式都行。",
+      "source_candidate_ids": [
+        "DOC031-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "自评这是最常用的功能",
+        "流程：打开对方页面 → 点附件 → 选文件 → 发送"
+      ],
+      "evidence_ids": [
+        "E0010",
+        "E0011",
+        "E0012"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC031-G006",
+      "statement": "用关键词搜回过去的对话与资料。",
+      "source_candidate_ids": [
+        "DOC031-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "场景：找上学期某位教授说过的内容"
+      ],
+      "evidence_ids": [
+        "E0013",
+        "E0014"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC031-G007",
+      "statement": "搜索结果要精准，不必在大量历史消息里筛。",
+      "source_candidate_ids": [
+        "DOC031-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "问题：结果太多，除非确切知道要找什么否则很难定位"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC031-G008",
+      "statement": "在 Slack 内能轻松发起音视频通话，不必绕几层窗口。",
+      "source_candidate_ids": [
+        "DOC031-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "对照：Microsoft Teams 里更直接",
+        "现状：功能存在但入口深"
+      ],
+      "evidence_ids": [
+        "E0017",
+        "E0018"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC031-G009",
+      "statement": "需要正式沟通时能一键转到邮件客户端给教授/助教发信。",
+      "source_candidate_ids": [
+        "DOC031-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "场景：对 TA 或教授的正式往来仍以邮件为准"
+      ],
+      "evidence_ids": [
+        "E0019",
+        "E0020"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC031-G010",
+      "statement": "把窗口缩窄并排多开时，界面仍然好导航。",
+      "source_candidate_ids": [
+        "DOC031-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，研究生，校内以 Slack 为主要沟通工具）",
+      "context": [
+        "个人习惯：同时开三个窗口并排",
+        "现状：缩小后很难操作"
+      ],
+      "evidence_ids": [
+        "E0021",
+        "E0022"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC031-G001",
+      "b": "DOC031-G002",
+      "label": "related",
+      "rationale": "T007–T009 是同一条沟通需求的两个尺度：一对一即时触达、一对多广播。前者靠姓名检索，后者靠频道，都省去先建立联系的成本。",
+      "evidence_ids": [
+        "E0001",
+        "E0004"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC031-G001",
+      "b": "DOC031-G003",
+      "label": "none",
+      "rationale": "DOC031-G001 的对象是无需存联系方式即可联系（T007），DOC031-G003 的对象是频道历史触手可及（T009）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC031-G001",
+      "b": "DOC031-G004",
+      "label": "none",
+      "rationale": "DOC031-G001 的对象是无需存联系方式即可联系（T007），DOC031-G004 的对象是知晓院系与校园动态（T009）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC031-G001",
+      "b": "DOC031-G005",
+      "label": "related",
+      "rationale": "T013 自己把文件分享归到第一个目标下：「circling back to the first goal... share a document instantly」。分享文档是即时沟通的具体内容之一。",
+      "evidence_ids": [
+        "E0001",
+        "E0010"
+      ],
+      "conditions": [
+        "G005 发生在 G001 建立的联系之上"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC031-G001",
+      "b": "DOC031-G006",
+      "label": "none",
+      "rationale": "DOC031-G001 的对象是无需存联系方式即可联系（T007），DOC031-G006 的对象是关键词搜回旧内容（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC031-G001",
+      "b": "DOC031-G007",
+      "label": "none",
+      "rationale": "DOC031-G001 的对象是无需存联系方式即可联系（T007），DOC031-G007 的对象是搜索精准不过载（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC031-G001",
+      "b": "DOC031-G008",
+      "label": "none",
+      "rationale": "DOC031-G001 的对象是无需存联系方式即可联系（T007），DOC031-G008 的对象是音视频通话易发起（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC031-G001",
+      "b": "DOC031-G009",
+      "label": "related",
+      "rationale": "T027 点出 Slack 的边界：对教授与 TA 的正式沟通仍应走邮件，所以在即时沟通之后还需要一条转邮件的出口。但 G009 是跨应用衔接，G001 是站内即时性。",
+      "evidence_ids": [
+        "E0001",
+        "E0020"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC031-G001",
+      "b": "DOC031-G010",
+      "label": "none",
+      "rationale": "DOC031-G001 的对象是无需存联系方式即可联系（T007），DOC031-G010 的对象是窄窗口可导航（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC031-G002",
+      "b": "DOC031-G003",
+      "label": "related",
+      "rationale": "T009 把频道的好处说成两层：能广而告之，也能翻看入群前的历史。前者是发送侧、后者是接收侧，共用同一容器。",
+      "evidence_ids": [
+        "E0004",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC031-G002",
+      "b": "DOC031-G004",
+      "label": "related",
+      "rationale": "T009 说频道让他知道系里、项目与校园在发生什么——G004 是加入频道后的实际收益。但 G002 是自己发声，G004 是接收信息。",
+      "evidence_ids": [
+        "E0004",
+        "E0008"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC031-G002",
+      "b": "DOC031-G005",
+      "label": "none",
+      "rationale": "DOC031-G002 的对象是频道一次触达广众（T009），DOC031-G005 的对象是协作时快速发文档（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC031-G002",
+      "b": "DOC031-G006",
+      "label": "none",
+      "rationale": "DOC031-G002 的对象是频道一次触达广众（T009），DOC031-G006 的对象是关键词搜回旧内容（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC031-G002",
+      "b": "DOC031-G007",
+      "label": "none",
+      "rationale": "DOC031-G002 的对象是频道一次触达广众（T009），DOC031-G007 的对象是搜索精准不过载（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC031-G002",
+      "b": "DOC031-G008",
+      "label": "none",
+      "rationale": "DOC031-G002 的对象是频道一次触达广众（T009），DOC031-G008 的对象是音视频通话易发起（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC031-G002",
+      "b": "DOC031-G009",
+      "label": "none",
+      "rationale": "DOC031-G002 的对象是频道一次触达广众（T009），DOC031-G009 的对象是一键转邮件（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC031-G002",
+      "b": "DOC031-G010",
+      "label": "none",
+      "rationale": "DOC031-G002 的对象是频道一次触达广众（T009），DOC031-G010 的对象是窄窗口可导航（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC031-G003",
+      "b": "DOC031-G004",
+      "label": "none",
+      "rationale": "DOC031-G003 的对象是频道历史触手可及（T009），DOC031-G004 的对象是知晓院系与校园动态（T009）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC031-G003",
+      "b": "DOC031-G005",
+      "label": "none",
+      "rationale": "DOC031-G003 的对象是频道历史触手可及（T009），DOC031-G005 的对象是协作时快速发文档（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC031-G003",
+      "b": "DOC031-G006",
+      "label": "related",
+      "rationale": "T019 说搜索结果里会出现「入群之前的频道内容」——正因为历史全量可检索，搜索才有那么多可搜的东西。G003 是 G006 的数据基础，也是它过载的根源。",
+      "evidence_ids": [
+        "E0006",
+        "E0013"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC031-G003",
+      "b": "DOC031-G007",
+      "label": "uncertain",
+      "rationale": "同一特性既是优势也是负担：T009 称赞「加入频道就能看到入群前所有历史」，T019 又抱怨正因为历史全量可见，关键词搜索会返回过多结果、难以定位。是保留全量历史并改进检索，还是收窄历史范围，受访者没有表态，两种取舍都成立。",
+      "evidence_ids": [
+        "E0006",
+        "E0015"
+      ],
+      "conditions": [
+        "需人工确认：是否接受「保留全量历史 + 增加时间/频道筛选」的方案；若确认，可改为 related 并写入条件。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed",
+      "interpretation": "解释一：历史全量是核心价值，问题在检索，应改搜索；解释二：历史本身过载，应设可见范围。"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC031-G003",
+      "b": "DOC031-G008",
+      "label": "none",
+      "rationale": "DOC031-G003 的对象是频道历史触手可及（T009），DOC031-G008 的对象是音视频通话易发起（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC031-G003",
+      "b": "DOC031-G009",
+      "label": "none",
+      "rationale": "DOC031-G003 的对象是频道历史触手可及（T009），DOC031-G009 的对象是一键转邮件（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC031-G003",
+      "b": "DOC031-G010",
+      "label": "none",
+      "rationale": "DOC031-G003 的对象是频道历史触手可及（T009），DOC031-G010 的对象是窄窗口可导航（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC031-G004",
+      "b": "DOC031-G005",
+      "label": "none",
+      "rationale": "DOC031-G004 的对象是知晓院系与校园动态（T009），DOC031-G005 的对象是协作时快速发文档（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC031-G004",
+      "b": "DOC031-G006",
+      "label": "none",
+      "rationale": "DOC031-G004 的对象是知晓院系与校园动态（T009），DOC031-G006 的对象是关键词搜回旧内容（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC031-G004",
+      "b": "DOC031-G007",
+      "label": "none",
+      "rationale": "DOC031-G004 的对象是知晓院系与校园动态（T009），DOC031-G007 的对象是搜索精准不过载（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC031-G004",
+      "b": "DOC031-G008",
+      "label": "none",
+      "rationale": "DOC031-G004 的对象是知晓院系与校园动态（T009），DOC031-G008 的对象是音视频通话易发起（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC031-G004",
+      "b": "DOC031-G009",
+      "label": "none",
+      "rationale": "DOC031-G004 的对象是知晓院系与校园动态（T009），DOC031-G009 的对象是一键转邮件（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC031-G004",
+      "b": "DOC031-G010",
+      "label": "none",
+      "rationale": "DOC031-G004 的对象是知晓院系与校园动态（T009），DOC031-G010 的对象是窄窗口可导航（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC031-G005",
+      "b": "DOC031-G006",
+      "label": "related",
+      "rationale": "T018–T019 连着问「怎么搜回过去的对话或文件」，说明分享过的文档也要靠搜索找回。但 G005 是发送、G006 是事后检索。",
+      "evidence_ids": [
+        "E0010",
+        "E0013"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC031-G005",
+      "b": "DOC031-G007",
+      "label": "none",
+      "rationale": "DOC031-G005 的对象是协作时快速发文档（T011），DOC031-G007 的对象是搜索精准不过载（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC031-G005",
+      "b": "DOC031-G008",
+      "label": "none",
+      "rationale": "DOC031-G005 的对象是协作时快速发文档（T011），DOC031-G008 的对象是音视频通话易发起（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC031-G005",
+      "b": "DOC031-G009",
+      "label": "none",
+      "rationale": "DOC031-G005 的对象是协作时快速发文档（T011），DOC031-G009 的对象是一键转邮件（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC031-G005",
+      "b": "DOC031-G010",
+      "label": "none",
+      "rationale": "DOC031-G005 的对象是协作时快速发文档（T011），DOC031-G010 的对象是窄窗口可导航（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC031-G006",
+      "b": "DOC031-G007",
+      "label": "related",
+      "rationale": "T019 把搜索能力与搜索精度放在同一段：能搜到，但结果太多。G007 是对 G006 的质量要求，不是另一项能力。",
+      "evidence_ids": [
+        "E0013",
+        "E0015"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC031-G006",
+      "b": "DOC031-G008",
+      "label": "none",
+      "rationale": "DOC031-G006 的对象是关键词搜回旧内容（T019），DOC031-G008 的对象是音视频通话易发起（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC031-G006",
+      "b": "DOC031-G009",
+      "label": "none",
+      "rationale": "DOC031-G006 的对象是关键词搜回旧内容（T019），DOC031-G009 的对象是一键转邮件（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC031-G006",
+      "b": "DOC031-G010",
+      "label": "none",
+      "rationale": "DOC031-G006 的对象是关键词搜回旧内容（T019），DOC031-G010 的对象是窄窗口可导航（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC031-G007",
+      "b": "DOC031-G008",
+      "label": "none",
+      "rationale": "DOC031-G007 的对象是搜索精准不过载（T019），DOC031-G008 的对象是音视频通话易发起（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC031-G007",
+      "b": "DOC031-G009",
+      "label": "none",
+      "rationale": "DOC031-G007 的对象是搜索精准不过载（T019），DOC031-G009 的对象是一键转邮件（T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC031-G007",
+      "b": "DOC031-G010",
+      "label": "none",
+      "rationale": "DOC031-G007 的对象是搜索精准不过载（T019），DOC031-G010 的对象是窄窗口可导航（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC031-G008",
+      "b": "DOC031-G009",
+      "label": "related",
+      "rationale": "T027 在同一回答里并列提出「快速邮件」与「通话入口更显眼」，两者都是补齐 Slack 相对 Teams 的短板。但一个是站内能力、一个是跨应用跳转。",
+      "evidence_ids": [
+        "E0017",
+        "E0019"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC031-G008",
+      "b": "DOC031-G010",
+      "label": "none",
+      "rationale": "DOC031-G008 的对象是音视频通话易发起（T021），DOC031-G010 的对象是窄窗口可导航（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC031-G009",
+      "b": "DOC031-G010",
+      "label": "none",
+      "rationale": "DOC031-G009 的对象是一键转邮件（T027），DOC031-G010 的对象是窄窗口可导航（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC031-G001",
+      "b": "DOC031-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P004",
+      "conditions": [
+        "G005 发生在 G001 建立的联系之上"
+      ],
+      "review_status": "pending",
+      "a": "DOC031-G001",
+      "b": "DOC031-G005"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P008",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC031-G001",
+      "b": "DOC031-G009"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P010",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC031-G002",
+      "b": "DOC031-G003"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P011",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC031-G002",
+      "b": "DOC031-G004"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P020",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC031-G003",
+      "b": "DOC031-G006"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P031",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC031-G005",
+      "b": "DOC031-G006"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P036",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC031-G006",
+      "b": "DOC031-G007"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P043",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC031-G008",
+      "b": "DOC031-G009"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC031:S008",
+      "material_id": "M001",
+      "quote": "it's instant communication with anyone I wish to talk to within the university",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1742,
+      "end_char": 1820,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S008",
+          "segment_start": 52,
+          "segment_end": 130,
+          "start_char": 1742,
+          "end_char": 1820
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 1690,
+        "end_char": 2240
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC031:S008",
+      "material_id": "M001",
+      "quote": "I don't need to like save anybody's information",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1900,
+      "end_char": 1947,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S008",
+          "segment_start": 210,
+          "segment_end": 257,
+          "start_char": 1900,
+          "end_char": 1947
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 1690,
+        "end_char": 2240
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC031:S008",
+      "material_id": "M001",
+      "quote": "if I know their name, or sometimes even their last name, I can look them up",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2011,
+      "end_char": 2086,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S008",
+          "segment_start": 321,
+          "segment_end": 396,
+          "start_char": 2011,
+          "end_char": 2086
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 1690,
+        "end_char": 2240
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC031:S010",
+      "material_id": "M001",
+      "quote": "the channel feature within slack, where I can reach a wide audience immediately",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2531,
+      "end_char": 2610,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S010",
+          "segment_start": 108,
+          "segment_end": 187,
+          "start_char": 2531,
+          "end_char": 2610
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 2423,
+        "end_char": 3333
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC031:S010",
+      "material_id": "M001",
+      "quote": "if I was doing that over email or something, it would take me more time",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2632,
+      "end_char": 2703,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S010",
+          "segment_start": 209,
+          "segment_end": 280,
+          "start_char": 2632,
+          "end_char": 2703
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 2423,
+        "end_char": 3333
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC031:S010",
+      "material_id": "M001",
+      "quote": "I have the history of that channel at my fingertips",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2788,
+      "end_char": 2839,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S010",
+          "segment_start": 365,
+          "segment_end": 416,
+          "start_char": 2788,
+          "end_char": 2839
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 2423,
+        "end_char": 3333
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC031:S010",
+      "material_id": "M001",
+      "quote": "I have access to information that was there before I even joined the channel",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2849,
+      "end_char": 2925,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S010",
+          "segment_start": 426,
+          "segment_end": 502,
+          "start_char": 2849,
+          "end_char": 2925
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 2423,
+        "end_char": 3333
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC031:S010",
+      "material_id": "M001",
+      "quote": "I like to hear what's happening around within the department",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3212,
+      "end_char": 3272,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S010",
+          "segment_start": 789,
+          "segment_end": 849,
+          "start_char": 3212,
+          "end_char": 3272
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 2423,
+        "end_char": 3333
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC031:S010",
+      "material_id": "M001",
+      "quote": "what's happening around campus",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3294,
+      "end_char": 3324,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S010",
+          "segment_start": 871,
+          "segment_end": 901,
+          "start_char": 3294,
+          "end_char": 3324
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 2423,
+        "end_char": 3333
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC031:S012",
+      "material_id": "M001",
+      "quote": "my most used feature is sharing documents when collaborating with teammates",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3655,
+      "end_char": 3730,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S012",
+          "segment_start": 90,
+          "segment_end": 165,
+          "start_char": 3655,
+          "end_char": 3730
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 3565,
+        "end_char": 3737
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC031:S018",
+      "material_id": "M001",
+      "quote": "at the bottom, there is an option to attach a document",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4999,
+      "end_char": 5053,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S018",
+          "segment_start": 689,
+          "segment_end": 743,
+          "start_char": 4999,
+          "end_char": 5053
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 4310,
+        "end_char": 5272
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC031:S018",
+      "material_id": "M001",
+      "quote": "I can attach any type of file I want",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5059,
+      "end_char": 5095,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S018",
+          "segment_start": 749,
+          "segment_end": 785,
+          "start_char": 5059,
+          "end_char": 5095
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 4310,
+        "end_char": 5272
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC031:S020",
+      "material_id": "M001",
+      "quote": "there is a search feature that I would use to I would enter keywords",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5556,
+      "end_char": 5624,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S020",
+          "segment_start": 51,
+          "segment_end": 119,
+          "start_char": 5556,
+          "end_char": 5624
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 5505,
+        "end_char": 6394
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC031:S020",
+      "material_id": "M001",
+      "quote": "it would display a list of you know matches",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5875,
+      "end_char": 5918,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S020",
+          "segment_start": 370,
+          "segment_end": 413,
+          "start_char": 5875,
+          "end_char": 5918
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 5505,
+        "end_char": 6394
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC031:S020",
+      "material_id": "M001",
+      "quote": "sometimes when I search for a keyword or keywords, I get way too much information",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6107,
+      "end_char": 6188,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S020",
+          "segment_start": 602,
+          "segment_end": 683,
+          "start_char": 6107,
+          "end_char": 6188
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 5505,
+        "end_char": 6394
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC031:S020",
+      "material_id": "M001",
+      "quote": "it's a little difficult to pass through things unless I know exactly what I'm looking for",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6215,
+      "end_char": 6304,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S020",
+          "segment_start": 710,
+          "segment_end": 799,
+          "start_char": 6215,
+          "end_char": 6304
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 5505,
+        "end_char": 6394
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC031:S022",
+      "material_id": "M001",
+      "quote": "it's a little harder to have video calls or audio calls",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6774,
+      "end_char": 6829,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S022",
+          "segment_start": 168,
+          "segment_end": 223,
+          "start_char": 6774,
+          "end_char": 6829
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 6606,
+        "end_char": 7030
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC031:S022",
+      "material_id": "M001",
+      "quote": "there are different windows to navigate to to get to that feature",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6913,
+      "end_char": 6978,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S022",
+          "segment_start": 307,
+          "segment_end": 372,
+          "start_char": 6913,
+          "end_char": 6978
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 6606,
+        "end_char": 7030
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC031:S028",
+      "material_id": "M001",
+      "quote": "I would like a quick email feature",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8294,
+      "end_char": 8328,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S028",
+          "segment_start": 20,
+          "segment_end": 54,
+          "start_char": 8294,
+          "end_char": 8328
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 8274,
+        "end_char": 8904
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC031:S028",
+      "material_id": "M001",
+      "quote": "there are certain situations where you know an email is expected",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8421,
+      "end_char": 8485,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S028",
+          "segment_start": 147,
+          "segment_end": 211,
+          "start_char": 8421,
+          "end_char": 8485
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 8274,
+        "end_char": 8904
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC031:S032",
+      "material_id": "M001",
+      "quote": "shrink the size of slack browser window",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10032,
+      "end_char": 10071,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S032",
+          "segment_start": 388,
+          "segment_end": 427,
+          "start_char": 10032,
+          "end_char": 10071
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 9644,
+        "end_char": 10209
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC031:S032",
+      "material_id": "M001",
+      "quote": "I feel like it's a little hard to navigate through the application",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10073,
+      "end_char": 10139,
+      "candidate_locations": [
+        {
+          "source_id": "DOC031:S032",
+          "segment_start": 429,
+          "segment_end": 495,
+          "start_char": 10073,
+          "end_char": 10139
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 9644,
+        "end_char": 10209
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC031-C001",
+      "goal_id": "DOC031-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC031-C002",
+      "goal_id": "DOC031-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC031-C003",
+      "goal_id": "DOC031-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC031-C004",
+      "goal_id": "DOC031-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC031-C005",
+      "goal_id": "DOC031-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC031-C006",
+      "goal_id": "DOC031-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC031-C007",
+      "goal_id": "DOC031-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC031-C008",
+      "goal_id": "DOC031-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC031-C009",
+      "goal_id": "DOC031-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC031-C010",
+      "goal_id": "DOC031-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 45,
+    "evaluated_pairs": 45
+  },
+  "issues": [
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC031-G003",
+        "DOC031-G007"
+      ],
+      "reason": "同一特性既是优势也是负担：T009 称赞「加入频道就能看到入群前所有历史」，T019 又抱怨正因为历史全量可见，关键词搜索会返回过多结果、难以定位。是保留全量历史并改进检索，还是收窄历史范围，受访者没有表态，两种取舍都成立。"
+    }
+  ],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "assemble",
+    "readiness": "unchecked",
+    "limitations": [
+      "模型尚未经过 model-review；导出完整性检查不能替代模型质量审核。",
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。"
+    ],
+    "files": []
+  }
+}

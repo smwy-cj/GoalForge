@@ -1,0 +1,74 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "f2c2256dea089af1f73c82c92310560a21b8c359ea012433e3754c06af0814a7",
+    "judgments_sha256": "34ff2d85cf68c6cd4c385a5581779668aec8b09bf5459b72d3b53051cd5c86bb"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G001",
+      "child_ids": [
+        "G002",
+        "G003"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "原文以行程、价格和灵活性定义好结果；当前子项没有独立承接全部灵活性，不能称充分。",
+      "assumptions": [
+        "分析假设：价格和时间合适，但退改安排不适合，则两项仍不足。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T107",
+          "quote": "Best results for me is a combination of the logistics in terms of the itinerary that I want the price and the flexibility. All 3 aspects combined. mostly focusing on the 1st 2. So if I have a good price and a good itinerary, that's what's best for me. If I don't have a good flight like in terms of itinerary, or I don't have a good price. Then then it comes into caution.",
+          "role": "basis",
+          "start_char": 39706,
+          "end_char": 40078
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G002",
+      "child_ids": [
+        "G009",
+        "G022",
+        "G023",
+        "G024",
+        "G025"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "这些是受访者给出的好行程相关例子，情境、签证、预算和其他因素尚不能穷尽。",
+      "assumptions": [
+        "分析假设：交通衔接正常但签证不允许中转，仍无法确定好行程。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "It's it's quite subjective and situational, so I'm not fully sure how to do it. But a way to do it would be to say that if I'm like, I said, if I'm transiting on or off from the same city, is it matching up with the schedules of the other modes of transport I'm planning to. Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules. Is it a good time of the day to fly? I would, I mean, I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "role": "basis",
+          "start_char": 42368,
+          "end_char": 42910
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "整组充分性尚未由原文确立；分析假设：价格和时间合适，但退改安排不适合，则两项仍不足。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "整组充分性尚未由原文确立；分析假设：交通衔接正常但签证不允许中转，仍无法确定好行程。"
+    }
+  ]
+}

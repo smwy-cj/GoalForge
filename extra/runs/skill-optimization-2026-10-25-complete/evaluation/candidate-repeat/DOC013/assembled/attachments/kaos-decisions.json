@@ -1,0 +1,183 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "fe3e9d4a3f7db62324fa68d4292ec51b5367155b75889b05a27c99a343cd6f62",
+    "judgments_sha256": "802cd698528a1d5f29ed4826abb99a02d2dba22af212e8fd9410722616c14f23"
+  },
+  "groups": [
+    {
+      "group_id": "FG001",
+      "parent_id": "G005",
+      "child_ids": [
+        "G017",
+        "G018"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "格式兼容和无妨碍的时长限制只是可能的技术前提，不能充分保证上传成功。",
+      "assumptions": [
+        "场景仅为作者概念层检查，不是形式化充分性证明。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T018",
+          "quote": "I think there could be some complications there as well in their sense. Let's suppose they have a video that's already made, and they want to upload it, so there might be some technical complications there of making sure their formats are compatible with the system, making sure there's no length requirements. Once it actually starts to get uploaded. How do they actually publish that to the web? Is that a simple process? Do they have to sit and wait for the whole video to be published or uploaded before publication. and things of that nature.",
+          "role": "basis",
+          "start_char": 4474,
+          "end_char": 5021
+        }
+      ],
+      "relation_ids": [
+        "R004"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "格式可接受且时长允许时消除了两类提到的障碍。",
+          "outcome": "supports",
+          "rationale": "在所述条件下可解释这些子目标如何服务父目标；不扩大到所有场景。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "网络断开或发布权限不足仍会阻止上传/发布，原文没有完整上传充分条件。",
+          "outcome": "counterexample",
+          "rationale": "未解决的充分性缺口保留候选；不补造根、额外前提目标或完整性。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "FG001",
+      "message": "格式兼容和无妨碍的时长限制只是可能的技术前提，不能充分保证上传成功。 异常场景：网络断开或发布权限不足仍会阻止上传/发布，原文没有完整上传充分条件。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G012",
+      "target_id": "G003",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "含糊条件是文本/条件检索的具体使用情境。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T014",
+          "quote": "Sure. I think some simple obstacles might be not finding what I'm looking for. even if it hypothetically should exist. I want to be able to search, using vague criteria, but that should still get me meaningful results. and in terms of actually viewing the content. I think some obstacles might be more technical in nature of. I need to receive that content on my machine in a reasonable way. I don't want it to freeze constantly. I want a seamless stream of buffered data.",
+          "role": "basis",
+          "start_char": 3327,
+          "end_char": 3799
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G003",
+      "target_id": "G016",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "快速搜索是获取所需信息的明确方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T016",
+          "quote": "When does the user? So for me, I would use these sorts of platforms as a viewer for entertainment purposes and for education purposes. I, and I guess that could be summarized in a general sense of I want to gain information. So I don't wanna read a book. I want to have a quick search. Give me some information as to what I'm trying to get. and then I can go from there. Okay.",
+          "role": "basis",
+          "start_char": 3938,
+          "end_char": 4314
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G004",
+      "target_id": "G014",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "浏览可帮助找到娱乐内容，但原文未直接将全部视觉浏览归为娱乐。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "Sure. So I'll talk about it on a per user basis. So as a viewer first, st so for me, I think it's essential to be able to try to get a specific type of video or content by searching via text, or perhaps by filters of some sort. and secondly, to be able to search visually, so I would like to be able to see a large volume of different options and click through it, seeing, perhaps by all sorts of science fiction, or all sorts of live sports. and I can walk through that seeing little images of a thumbnail, so to speak, with a description, perhaps, who made it, the Creator, or the actors in it, or so on, and so forth. and then the other half of it would be from the streamer, or somebody uploading for them. I would want to see some option where I could go and create to upload a video or start a stream. And I would want to be able to either. Take that video, put some sort of description in, add, perhaps a transcript captions of the like. and one thing, I think would be very useful, particularly in a video streaming would be to edit those. So I can add sound effects. Trim crop. that sort of thing.",
+          "role": "basis",
+          "start_char": 1901,
+          "end_char": 3007
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G017",
+      "target_id": "G005",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "格式兼容帮助已有视频上传，未保证网络等条件。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T018",
+          "quote": "I think there could be some complications there as well in their sense. Let's suppose they have a video that's already made, and they want to upload it, so there might be some technical complications there of making sure their formats are compatible with the system, making sure there's no length requirements. Once it actually starts to get uploaded. How do they actually publish that to the web? Is that a simple process? Do they have to sit and wait for the whole video to be published or uploaded before publication. and things of that nature.",
+          "role": "basis",
+          "start_char": 4474,
+          "end_char": 5021
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G005",
+      "target_id": "G019",
+      "type": "precedes",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文考虑上传与发布顺序，但是否必须整段上传完才发布尚不确定。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T018",
+          "quote": "I think there could be some complications there as well in their sense. Let's suppose they have a video that's already made, and they want to upload it, so there might be some technical complications there of making sure their formats are compatible with the system, making sure there's no length requirements. Once it actually starts to get uploaded. How do they actually publish that to the web? Is that a simple process? Do they have to sit and wait for the whole video to be published or uploaded before publication. and things of that nature.",
+          "role": "basis",
+          "start_char": 4474,
+          "end_char": 5021
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G013",
+      "target_id": "G016",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "流畅接收有助获取视频信息，不保证内容有用。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T014",
+          "quote": "Sure. I think some simple obstacles might be not finding what I'm looking for. even if it hypothetically should exist. I want to be able to search, using vague criteria, but that should still get me meaningful results. and in terms of actually viewing the content. I think some obstacles might be more technical in nature of. I need to receive that content on my machine in a reasonable way. I don't want it to freeze constantly. I want a seamless stream of buffered data.",
+          "role": "basis",
+          "start_char": 3327,
+          "end_char": 3799
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

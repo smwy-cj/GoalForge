@@ -1,0 +1,125 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "e0d3287938ef993c3dd01153bc208d3132688144c578d6a2a66113e3b48510d4",
+    "judgments_sha256": "eae81cc99861b7bb1a9ef48fb1acde755ce4aae60fc9e0a2ff210bd6627a5560"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G018",
+      "child_ids": [
+        "G016",
+        "G017"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "受访者把“读所有邮件”列为可简化的日常任务，并提出 AI 提炼要点与高亮关键词两项；二者合起来可减少通读，但原文没有声称足以覆盖所有邮件，T047 的漏读例子还显示关键小字可能既不在要点也不在关键词里，故只作候选组。",
+      "assumptions": [
+        "AI 摘要与关键词能覆盖邮件中需要用户注意的内容"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T053",
+          "quote": "So just as I said, if we have, I assistant for that, that would be very helpful, because I spend a lot of time just reading every email.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R1"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "收件箱有 30 封未读邮件，AI 给出每封要点并高亮关键词，用户跳过大部分正文，只精读少数邮件。",
+          "outcome": "supports",
+          "rationale": "这正是受访者描述的一般情形：他花很多时间读每一封邮件，摘要与关键词可减少通读量。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "邮件的关键限制只出现在正文小字中（如在线测评“不建议做第二次”的说明），摘要要点与关键词都没有覆盖，用户仍然漏看。",
+          "outcome": "counterexample",
+          "rationale": "受访者的漏读例子说明要点与关键词不能保证不漏关键信息，因此该组不足以声称共同充分，维持 proposed/partial。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "“AI 提取要点 + 关键词高亮”是否足以实现“减少读信时间”？T047 的例子说明关键小字可能既不在摘要也不在关键词中，需确认补足手段。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G019",
+      "message": "自动识别重要邮件要达到什么可靠性才可依赖？原文只说“除非它真的可靠”，没有阈值或降级方案。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G024",
+      "message": "分类/协议邮箱地址是否继续推进？受访者自评“probably not that practical”，采纳程度未知。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "发送后可编辑的时限与范围（是否任何时间、是否所有收件人可见历史）原文未说明。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC020-goal-model",
+      "message": "面试官提出的按早/午/晚把 30 封汇总成 3 封的周期摘要（T054）只得到“可以是其中一种方案”的弱回应，是否纳入需求未定。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G016",
+      "target_id": "G018",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "适用于收件箱中需要快速判断内容的邮件"
+      ],
+      "assumptions": [
+        "AI 提炼的要点足以部分代替通读全文"
+      ],
+      "rationale": "受访者说读所有邮件这项日常任务可以简化，AI 助手会很有帮助，因为他花很多时间读每一封邮件；AI 提取要点是减少通读的方式，服务于“减少读信时间”这一目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T053",
+          "quote": "if we have, I assistant for that, that would be very helpful, because I spend a lot of time just reading every email",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G012",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "在邮件服务商自动分类时"
+      ],
+      "assumptions": [
+        "招聘邮件属于受访者所说的“重要邮件”"
+      ],
+      "rationale": "重要邮件被自动分进垃圾箱会直接造成漏看，受访者宁可多收垃圾邮件也不愿忽略重要邮件；让要事邮件留在收件箱有助于“不漏招聘信息”，但帮助不等于保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T027",
+          "quote": "I would rather receive some spans instead of ignoring some important messages.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "c4ae61c1c36280cb50c66c5d762afae5d7c60d31a7d1837576155d5955bbd17f",
+    "judgments_sha256": "3a036b4b90e3838e2848ac25936ea6b6e61268df64779c625338f4efe386c10c"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G001",
+      "child_ids": [
+        "G004",
+        "G005"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "类型轮播与相似片推荐都能让呈现更贴合需要，但两者合起来仍不覆盖按场合或无法命名的情绪选片，故只作为待确认的 AND 候选。",
+      "assumptions": [
+        "用户对类型有可命名的偏好时，类型轮播与相似推荐覆盖主要选片路径"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC029:T021",
+          "quote": "so I guess that is where Netflix shines like it is able to correctly identify what shows are in line with the similar show that I want to watch.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC029:T017",
+          "quote": "So it becomes pretty easy for me to decide if I'm in the mood of something special, specific, like some specific genre.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "用户明确想看纪录片或喜剧，类型轮播给出该类型片单，相似片推荐补充相近作品，用户能快速选定。",
+          "outcome": "supports",
+          "rationale": "两类子目标在该场景下共同覆盖选片需要。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "用户想按场合选片（如母亲节与母亲共看）或只有模糊情绪，类型与相似推荐可能都给不出合适候选，仍需场合型策展（见 T043）。",
+          "outcome": "counterexample",
+          "rationale": "存在两子目标合起来也不覆盖的情境，因此不能声称共同充分，组保持 proposed/partial。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G006",
+      "message": "下架前提醒是否要同时给出该片之后在哪个平台可看？原文只表达“找不到在哪个平台”，没有提出由 Netflix 提供跨平台信息。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "少点击的起点是否包含登录与选择 profile？原文以点开影片到开始播放为语境。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "预览片段是正片片段、预告还是“personalized review”？原文以 maybe 收尾，形态未定。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "类型轮播与相似推荐是否被视为满足个性化呈现的主要方式？场合型个性化（母亲节例）不在两者覆盖内，组暂不成立。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC029-goal-model",
+      "message": "games 仅被描述为既有功能且受访者自述不用，模型未纳入游戏相关目标，是否符合预期？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G007",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "用户因犹豫看什么而可能转向 YouTube"
+      ],
+      "assumptions": [],
+      "rationale": "受访者明确说片段预览功能可降低 churn、留住犹豫用户并让其留在平台；这是有帮助的贡献，不声称足以保证留存。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC029:T037",
+          "quote": "So I think definitely like, this feature can help reduce the churn rate of Netflix also retain the users if they're even confused about watching a TV show or a movie. So yeah, it can help the user stay on the platform itself.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G007",
+      "target_id": "G008",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先看片段再做决定，决定后才用 play option 进入正片；原句顺序与条件都指向先后关系，而非因果充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC029:T033",
+          "quote": "if I want to watch them, then over there, Netflix can probably provide me with a play option, and I can directly jump back to the show that I wanna watch.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G010",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "受访者说长期一致的软件/推荐引擎与整体熟悉感是他仍“stuck to the platform”的原因之一，故对留存有贡献；未声称一致即可保证留存。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC029:T047",
+          "quote": "apart from that, I think everyone, everything around Netflix seems very familiar to me. That's 1 of the reasons why I think I am very stuck to the platform.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

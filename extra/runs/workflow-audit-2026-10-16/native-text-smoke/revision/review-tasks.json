@@ -1,0 +1,73 @@
+{
+  "schema_version": "goalforge-review-tasks-1",
+  "target_model": {
+    "model_id": "AUDIT-goal-model",
+    "version": "v0.1.h1",
+    "core_sha256": "e84e284455da675b1e4b400f8dfab5be7506bcbd0978c9f37403780d2b4b709b"
+  },
+  "goal_ids": [
+    "AUDIT-G001"
+  ],
+  "pair_ids": [
+    "P12",
+    "P13"
+  ],
+  "relations": [
+    {
+      "pair_id": "P12",
+      "a": "AUDIT-G001",
+      "b": "AUDIT-G002",
+      "label": "uncertain",
+      "interpretation": "scope_specialization",
+      "rationale": "目标或证据已变化，该关系退回待评估；原判断保留在previous_decision。",
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "previous_decision": {
+        "pair_id": "P12",
+        "a": "AUDIT-G001",
+        "b": "AUDIT-G002",
+        "label": "refinement",
+        "parent_id": "AUDIT-G001",
+        "child_id": "AUDIT-G002",
+        "interpretation": "scope_specialization",
+        "rationale": "受控示例：降雨与户外活动是范围具体化。",
+        "evidence_ids": [
+          "E0001",
+          "E0002"
+        ],
+        "conditions": [],
+        "review_status": "pending"
+      },
+      "assessment_status": "not_run",
+      "trace_status": "needs_retrace"
+    },
+    {
+      "pair_id": "P13",
+      "a": "AUDIT-G001",
+      "b": "AUDIT-G003",
+      "label": "uncertain",
+      "rationale": "目标或证据已变化，该关系退回待评估；原判断保留在previous_decision。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "previous_decision": {
+        "pair_id": "P13",
+        "a": "AUDIT-G001",
+        "b": "AUDIT-G003",
+        "label": "none",
+        "rationale": "夹具未建立联系。",
+        "evidence_ids": [],
+        "conditions": [],
+        "review_status": "pending"
+      },
+      "assessment_status": "not_run",
+      "trace_status": "needs_retrace"
+    }
+  ],
+  "instructions": "先重新判断目标证据支持，再评估列出的关系；不得以旧判断或none填充未评估项。",
+  "retrace_input_status": "prepared"
+}

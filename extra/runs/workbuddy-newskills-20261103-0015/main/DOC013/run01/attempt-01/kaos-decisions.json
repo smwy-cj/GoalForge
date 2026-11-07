@@ -1,0 +1,221 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "baae9aa913159e1d666a5443b230e99c158dbfbc9ee707e743d02b7f98f64ca7",
+    "judgments_sha256": "24b5ce8708902676c261bae940bbe302eaa240e33af6dca85d34355ee360540a"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G010",
+      "child_ids": [
+        "G001",
+        "G008"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "候选组：能按类型定位内容（G001）且模糊条件仍得有意义结果（G008），共同支撑'快速获得信息'。核验后认为不足以声称共同充分：缺少播放质量（G009）与内容是否收录，故保留 proposed/partial。",
+      "assumptions": [
+        "观众的目标内容确实存在于平台",
+        "检索与结果相关性共同构成快速获得信息的主要手段"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T016",
+          "quote": "I want to gain information. So I don't wanna read a book. I want to have a quick search",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R1",
+        "R2"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "观众想快速了解某话题，用文字或筛选检索，即使关键词模糊也能得到相关结果，然后直接查看所需信息。",
+          "outcome": "supports",
+          "rationale": "两个子目标同时满足时，检索路径本身足以支撑快速获取信息这一常态场景。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "检索命中但视频持续卡顿需长时间缓冲，或平台未收录该主题内容。",
+          "outcome": "counterexample",
+          "rationale": "此时 G001+G008 均已满足但'快速获得信息'仍失败，说明组不充分；缺口指向 G009 与内容可得性。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G016",
+      "message": "字幕准确度对非母语英语观众是否有明确要求或可接受阈值？原文仅有不确定表述。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "'发布流程简单'是否为要求？判定标准与验收方式未给出。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G014",
+      "message": "是否要求上传完成前即可发布？原句为未获回答的反问。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G018",
+      "message": "premium 承诺'all content'与 G006 的合规屏蔽如何协调？原文未给优先级。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "是否需把播放质量（G009）与内容可得性纳入子目标，才能声称共同充分？"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R4",
+      "message": "24 小时等待是否确为流媒体内容合规的手段？原文只称'安全与合规'，未说明机制。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC013-goal-model",
+      "message": "已检查 G021→G002（观看列表 vs 浏览）：两者同属内容发现但原文未说明列表帮助浏览，无依据，不建联系。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC013-goal-model",
+      "message": "已检查 G019→G018（订阅方案 vs 高级档权益）：原文并列描述定价方案与权益，未说明方案是实现无广告全内容的手段，无依据，不建联系。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC013-goal-model",
+      "message": "已检查 G009→G010（播放流畅 vs 快速获得信息）：T014 分别谈检索与观看障碍，未把播放质量联系到信息获取，依据不足，不建联系。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC013-goal-model",
+      "message": "已检查 G006/G007→G023：观众侧屏蔽、streamer 禁分享与 24 小时账号等待属不同机制，原文未说明前后依赖，无依据，不建联系。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC013-goal-model",
+      "message": "平台运营方（大型公司）与内容合规责任方的边界未在原文确定，G006/G007 的责任主体不分配给软件。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G001",
+      "target_id": "G010",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "viewer seeks information on a topic covered by video content"
+      ],
+      "assumptions": [
+        "按特定类型定位内容是实现快速获取信息的手段"
+      ],
+      "rationale": "受访者把'快速搜索拿到所要的信息'作为使用平台的方式，文字搜索/筛选正是这一方式的具体化，故按实现方式→目的建边。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T016",
+          "quote": "I want to have a quick search. Give me some information as to what I'm trying to get",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G008",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "search terms are vague or imprecise"
+      ],
+      "assumptions": [
+        "有意义的结果使文字/筛选搜索达到定位目的"
+      ],
+      "rationale": "模糊条件仍返回有意义结果是搜索可用性的质量要求，直接帮助'定位特定内容'这一目标，但不保证其充分实现。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T014",
+          "quote": "I want to be able to search, using vague criteria, but that should still get me meaningful results",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G004",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "creator supplies the description at publish time"
+      ],
+      "assumptions": [
+        "浏览列表展示的是创作者填写的描述"
+      ],
+      "rationale": "浏览目标要求缩略图附描述，而描述由创作者在上传时填写，故创作者侧的描述录入帮助观众侧的浏览发现；两者为同一段需求的两端。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "with a description, perhaps, who made it, the Creator, or the actors in it",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G023",
+      "target_id": "G007",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [
+        "new streaming account"
+      ],
+      "assumptions": [
+        "24 小时等待用于在开播前完成账号/内容合规处理"
+      ],
+      "rationale": "受访者把 24 小时等待显式连回'安全与合规'问题，二者主题相连；但原文未说明该等待如何阻止违规内容，机制属分析推断，故标 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T028",
+          "quote": "back to your original question of some sorts of security and compliance things",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G005",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "剪辑是上传流程中的可选增强"
+      ],
+      "rationale": "剪辑能力与上传同属创作者流程，剪辑可提升上传成品的质量；但原文只说编辑'很有用'，未说明其服务于上传目标，帮助关系属推测，故标 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC013:T012",
+          "quote": "one thing, I think would be very useful, particularly in a video streaming would be to edit those",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

@@ -1,0 +1,774 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "2b95ad1f7b323142cb5394b7a7092ce19a1a493f4d822d45f62077ff4ae568b0",
+    "judgments_sha256": "ebf7f5aad2df2220261e8bcc4881bc28c45479ef57b75553a91b73c6358663e9"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G022",
+      "child_ids": [
+        "G023",
+        "G026",
+        "G029"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "字幕、内容审核与音质评估是原文给出的质量保证组成部分，但没有一句说明这三者合起来足以确保高质量标准，故只作候选组。",
+      "assumptions": [
+        "播客质量由可及性（字幕）、内容合规（审核）与音质制作水准共同构成",
+        "原文未提出其他质量维度不等于不存在"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T023",
+          "quote": "we ensure our high quality standards by you know, for each and every, podcast we provide transcriptions and closed captions",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R17"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "一个新播客通过自动筛查（内容合规）、提供转写字幕且音频与制作水准达标",
+          "outcome": "supports",
+          "rationale": "三个子目标均被满足，符合原文对高质量标准的描述。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "内容合规、音质达标但创作者未提供转写文本的播客（如小语种新创作者）",
+          "outcome": "counterexample",
+          "rationale": "该组未包含对字幕缺失情形的处理，也未说明是否允许例外或补救，故不能声称共同充分；完整性缺口写入问题。"
+        }
+      ]
+    },
+    {
+      "group_id": "GR2",
+      "parent_id": "G032",
+      "child_ids": [
+        "G033",
+        "G034",
+        "G035"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "付费订阅、定向广告与广告负载控制是原文给出的变现与体验平衡做法，但缺少创作者变现、广告主约束等维度，不能声称共同充分。",
+      "assumptions": [
+        "用户侧广告体验是平衡的主要方面",
+        "广告收入目标未量化，无法检验取舍规则"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T027",
+          "quote": "we kind of balance our ad load, we ensure that the frequency and the placement of ads does not at the end of the day distract, or rather detract the user from his or her experience",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R14",
+        "R15",
+        "R16"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "免费用户在片头片尾听到少量定向广告，付费用户完全没有广告",
+          "outcome": "supports",
+          "rationale": "与原文描述的付费订阅、定向投放和片头片尾放置一致，体验不受打扰。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "广告主要求的投放量超过'不打扰'上限，或用户完全不接受任何广告",
+          "outcome": "counterexample",
+          "rationale": "原文未说明广告收入与体验冲突时的取舍规则，该组无法保证平衡成立，故保持 partial 并记录问题。"
+        }
+      ]
+    },
+    {
+      "group_id": "GR3",
+      "parent_id": "G047",
+      "child_ids": [
+        "G048",
+        "G049",
+        "G050",
+        "G051"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "分享/评分按钮、播放列表、主题小组与论坛、直播活动是原文列举的参与手段，但原文以'we try'列举且未说明其穷尽，也无被动收听型用户的处理，故仅作候选。",
+      "assumptions": [
+        "所列举功能是参与激励的主要方式",
+        "四类功能对全部新用户均可用"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T037",
+          "quote": "So we try. And you know, within the podcast itself, like, we'll have a share button or a rate button, for example.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R8",
+        "R9",
+        "R10",
+        "R11"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "新用户在播客页看到分享与评分按钮、创建并收藏播放列表、加入主题小组、参加直播问答",
+          "outcome": "supports",
+          "rationale": "四个子目标均被满足，对应原文列举的参与路径。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "只想安静收听、不愿参与社区互动的新用户",
+          "outcome": "counterexample",
+          "rationale": "该组全部为社区与互动型手段，未覆盖被动收听型新用户的参与定义，故不能声称共同充分。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G012",
+      "message": "让创作者留在平台的工具具体是哪些？原文只给出'the tools'而未列举，无法判断是否应拆为多个目标。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G054",
+      "message": "T043 的'bringing on people'指创作者、听众还是两者兼有？影响该目标的主体与范围。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "T009 的'I try to get them on board'中 them 指代不确定（创作者或终端用户），当前按创作者承接，需向涉众确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "用户参与度与留存仅作为被关注指标出现，是否等同于明确的提升目标、是否有目标值？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "'the right experience'与'as soon as they log on'缺少判定标准与时限，是否需要补充验收口径？"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR2",
+      "message": "变现与体验平衡的 AND 组缺少创作者变现、广告主约束等子节点，且无冲突取舍规则，是否补充或改述父目标？"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "质量组的异常场景（字幕缺失）无处理方式，是否需补一条字幕生成/补救目标或承认例外？"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC015-goal-model",
+      "message": "全文未出现明确的 precedes（先后）关系，也未给出任何量化阈值或验收指标，故未建 precedes 边、未补阈值；是否接受该模型粒度？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G018",
+      "target_id": "G019",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文说明建设推荐引擎后'this helps us in delivering personalized content'，引擎是实现个性化内容交付的方式；未声称该方式在所有情况下都充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T019",
+          "quote": "So this helps us in delivering personalized content.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G020",
+      "target_id": "G019",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文说明让用户公开输入兴趣、填反馈表单是为了 tailor their experience，即帮助个性化内容交付；有帮助不等于充分保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T019",
+          "quote": "allowing users to input their interest openly by frequently giving them feedback forms to fill to tailor their experience",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G043",
+      "target_id": "G019",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文直接说社交分享与社交媒体整合用于 enhance recommendations，服务于个性化推荐交付。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T031",
+          "quote": "to basically enhance recommendations based on the contents that people are sharing with their friends or family",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G038",
+      "target_id": "G019",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "长期听众的按历史定制推荐是个性化内容交付在特定人群中的具体化；不声称它覆盖个性化交付的全部适用范围。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T029",
+          "quote": "for a long time listeners. We offer customized recommendation based on their listening history",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G049",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文说明播放列表'really helps try and bring communities together'，直接有助于社区凝聚。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T037",
+          "quote": "this also really helps try and bring communities together, communities of users",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G050",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "原句'Basically like, I explained'回指前文社区凝聚的作用"
+      ],
+      "rationale": "主题小组与论坛的社区作用依赖'like I explained'的回指，方向合理但原句未直接重述，故记 proposed 待确认。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T037",
+          "quote": "we also try and create a theme based groups and forums. Basically like, I explained.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G051",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "直播与创作者问答被社区化使用"
+      ],
+      "rationale": "直播播客与创作者问答出现在社区参与的列举中，但原句未直接说明其社区贡献，故记 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T037",
+          "quote": "we also started recently hosting live events. So offering live podcast sessions and QA, with creators",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G048",
+      "target_id": "G047",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "这些功能是回答'如何鼓励新用户更多参与播客'时给出的做法"
+      ],
+      "rationale": "分享/评分按钮是在被问到如何鼓励新用户参与时列举的做法，贡献方向来自问答结构而非明示因果，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T037",
+          "quote": "within the podcast itself, like, we'll have a share button or a rate button, for example",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G049",
+      "target_id": "G047",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "自建播放列表的参与行为面向新用户同样开放"
+      ],
+      "rationale": "自建、点赞、收藏播放列表同属该问答列举的参与手段，原句未显式说明对新用户的鼓励作用，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T037",
+          "quote": "anyone and everyone can create their own playlists and people can like and even save that playlist for a matter of fact",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R10",
+      "source_id": "G050",
+      "target_id": "G047",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "主题小组与论坛对新用户同样可用"
+      ],
+      "rationale": "主题小组与论坛同属该问答列举的参与手段，因果未明示，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T037",
+          "quote": "we also try and create a theme based groups and forums",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R11",
+      "source_id": "G051",
+      "target_id": "G047",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "直播活动对新用户同样开放"
+      ],
+      "rationale": "直播与创作者问答同属该问答列举的参与手段，原句未说明对新用户的鼓励作用，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T037",
+          "quote": "we also started recently hosting live events",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R12",
+      "source_id": "G040",
+      "target_id": "G035",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T027 要求广告频率与位置不打扰，T041 给出只放片头片尾的具体做法，后者是前者的实现方式；未声称片头片尾在所有情况下都足够。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T041",
+          "quote": "So we place ads usually just at the start or just at the end of podcasts",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R13",
+      "source_id": "G036",
+      "target_id": "G035",
+      "type": "specialization",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "新用户减少广告是广告负载原则在该人群的具体应用"
+      ],
+      "rationale": "对新用户尽量减少广告可视为广告不打扰原则在某一人群的具体化，但其直接目的原文说是鼓励探索与取数据，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T029",
+          "quote": "for new users, what we do is we try and minimize ads. So this encourages exploration.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R14",
+      "source_id": "G034",
+      "target_id": "G032",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "在回答变现与体验如何平衡时，定向广告被作为做法给出，并明示 minimizing disruption，故视为该平衡目标的实现方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T027",
+          "quote": "we also implement targeted targeted advertising. So we show the users relevant ad according to what suits them minimizing disruption",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R15",
+      "source_id": "G033",
+      "target_id": "G032",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "付费订阅提供无广告体验是在同一问答中给出的变现方式，服务于变现同时保持体验的目标。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T027",
+          "quote": "we provide users with ad free experience, provided they pay a certain amount to us on a monthly or a yearly basis",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R16",
+      "source_id": "G035",
+      "target_id": "G032",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "平衡广告负载、避免广告打扰用户是同一问答中给出的保持体验的做法，服务于变现与体验的平衡目标。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T027",
+          "quote": "we kind of balance our ad load, we ensure that the frequency and the placement of ads does not at the end of the day distract, or rather detract the user from his or her experience",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R17",
+      "source_id": "G023",
+      "target_id": "G022",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文以'we ensure our high quality standards by ... provide transcriptions and closed captions'直接表明字幕做法服务于质量标准，未声称仅靠字幕即充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T023",
+          "quote": "we ensure our high quality standards by you know, for each and every, podcast we provide transcriptions and closed captions",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R18",
+      "source_id": "G024",
+      "target_id": "G025",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文说明提供多种消费方式'helps people with special needs'获取并充分享受内容，帮助关系由原句直接给出。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T023",
+          "quote": "so this in turn, helps people with special needs also to get a hold of our content and enjoy it to the utmost point",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R19",
+      "source_id": "G025",
+      "target_id": "G010",
+      "type": "specialization",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "无障碍功能的改进包含让特殊需求人群获取内容"
+      ],
+      "rationale": "让特殊需求人群获取并享受内容可视为改进无障碍功能的具体情境，但原文未在原句中显式归类，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T023",
+          "quote": "this in turn, helps people with special needs also to get a hold of our content and enjoy it to the utmost point",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R20",
+      "source_id": "G056",
+      "target_id": "G010",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T043 把语音与键盘导航直接列在'the accessibility stuff'之下，是改进无障碍功能的具体项。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T043",
+          "quote": "not enabling the accessibility stuff which I mentioned earlier, so supporting multiple languages, allowing the users to navigate, spotify via voice or via their keyboards",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R21",
+      "source_id": "G017",
+      "target_id": "G010",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T043 明确把支持多语言列入无障碍项，故多语言支持为无障碍改进的具体化；不声称它覆盖无障碍全部范围。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T043",
+          "quote": "not enabling the accessibility stuff which I mentioned earlier, so supporting multiple languages",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R22",
+      "source_id": "G017",
+      "target_id": "G016",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文说明支持多语言方言的原因是非英语人群更多、'we just want to broaden our reach'，方式为扩大覆盖服务。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T019",
+          "quote": "we also recently from the past 2 to 3 years, started supporting multiple languages and dialects as well. And because at the end of the day there are way more non English speakers in the world, and we just want to broaden our reach",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R23",
+      "source_id": "G054",
+      "target_id": "G016",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "引入多民族多语言人群有助于扩大覆盖"
+      ],
+      "rationale": "全球引入多民族多语言人群与扩大覆盖方向一致，但原句未直接说明其服务于扩大覆盖，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T043",
+          "quote": "we've slowly started to onboard people from all over the world onto our platform",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R24",
+      "source_id": "G021",
+      "target_id": "G052",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文明确说'by offering users open ended questions every now and then ... is how we try and avoid saturation'，提问做法是避免饱和的实现方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T039",
+          "quote": "by offering users open ended questions every now and then, and giving them something refreshing to watch is. you know how we try and avoid saturation",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R25",
+      "source_id": "G044",
+      "target_id": "G052",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "推荐更多独特内容有助于缓解饱和带来的发现困难"
+      ],
+      "rationale": "更独特内容出现在回答饱和问题的同一段，但原句未直接说明其服务于避免饱和，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T039",
+          "quote": "enhancing a recommendation in such a way recommendation system in such a way that people don't just get what they ask for. They also get something more unique",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R26",
+      "source_id": "G002",
+      "target_id": "G053",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文先说不愿平台被少数创作者垄断，紧接着以'So'引出大量引入新创作者，后者是避免该局面的实现方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T039",
+          "quote": "So last month itself we bought over 2,000 new creators on our platform, offering them great deals which other platforms would not offer them",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R27",
+      "source_id": "G030",
+      "target_id": "G019",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文说明分类'helps ... giving the users what they actually need. In terms of suggestions'，直接有助于个性化建议交付。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T025",
+          "quote": "which in turn helps the you know, giving the users what they actually need. In terms of suggestions",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R28",
+      "source_id": "G009",
+      "target_id": "G008",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文在说完聚焦推荐系统后以'so'引出登录后即刻给到正确体验是主要目标，推荐聚焦服务于该体验结果。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T017",
+          "quote": "focusing on the recommendation system. Since you know, the Ml. Hype train is so much right now, so giving the users the right experience as soon as they log on to spotify is our main goal",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R29",
+      "source_id": "G026",
+      "target_id": "G022",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "内容审核是保证内容质量的一部分"
+      ],
+      "rationale": "内容审核出现在回答如何保证内容质量的一轮中，但原句未显式说它服务于质量标准，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T023",
+          "quote": "we also implement our content moderation tools. So basically using machine requirements to detect and flag inappropriate content",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R30",
+      "source_id": "G028",
+      "target_id": "G022",
+      "type": "operationalization",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "严格流程管线用于达成质量标准"
+      ],
+      "rationale": "流程管线是回答'如何评估播客是否达标'时给出的过程，与质量标准相关但原文未明示其服务于'high quality standards'这一表述，故 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T025",
+          "quote": "we have a very strict sort of process pipeline that we follow",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R31",
+      "source_id": "G019",
+      "target_id": "G045",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文以'since'说明推荐系统优先的原因是希望用户留在平台、不因内容不合意转向 Youtube music，个性化推荐服务于留住用户。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC015:T053",
+          "quote": "it's probably our user recommendation system, since at the end of the day we want users to be on our platform and not move to something like Youtube music, just because they did not like the content that we offered to them",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

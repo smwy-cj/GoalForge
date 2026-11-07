@@ -1,0 +1,742 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "c18e722de582eb6671e56338e7b7639b40e2ae7b8411bf358fa3f59898f4718e",
+    "judgments_sha256": "5a96e5dab52a8fa16898c900ca22b00928beb8c57d0c82e57e8ec65f4158f6e2"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G025",
+      "child_ids": [
+        "G011",
+        "G036",
+        "G037",
+        "G038"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Timing and connection checks are plausible itinerary-fit criteria, but they are expressly examples and depend on visa, cost and the actual journey.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "It's it's quite subjective and situational, so I'm not fully sure how to do it. But a way to do it would be to say that if I'm like, I said, if I'm transiting on or off from the same city, is it matching up with the schedules of the other modes of transport I'm planning to. Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules. Is it a good time of the day to fly? I would, I mean, I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "role": "basis",
+          "start_char": 42368,
+          "end_char": 42910
+        }
+      ],
+      "relation_ids": [
+        "R016",
+        "R017",
+        "R018"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "A trip with matching host and train schedules, sufficient stopover buffer and acceptable sleep is more likely to fit the plans.",
+          "outcome": "supports",
+          "rationale": "This limited constructed scenario explains why the candidate is plausible; it does not establish general sufficiency."
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "A visa restriction, cancellation or unacceptable price can leave an itinerary unsuitable even when these timing criteria hold.",
+          "outcome": "counterexample",
+          "rationale": "The unresolved exception prevents supported/complete status; no extra goal is invented to patch the hierarchy."
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G003",
+      "child_ids": [
+        "G008",
+        "G004",
+        "G026",
+        "G029"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "These strategies can improve deal finding but cannot jointly ensure a good fare; early booking and alerts are situational alternatives, not a compulsory AND plan.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T025",
+          "quote": "So yeah, obviously, I'm reminiscing over what it would be like to be actually in that flight, or like in that in the middle of that trip. But my primary focus is to like get a really good deal when I'm actually booking my flights. So I keep on checking at regular intervals, just to make sure. Hey, am I getting a good deal? I check like dozens of different websites to just make sure I'm having the best deal possible. So, yeah.",
+          "role": "basis",
+          "start_char": 5960,
+          "end_char": 6389
+        }
+      ],
+      "relation_ids": [
+        "R001",
+        "R003",
+        "R011"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "When comparable fares exist and booking time is flexible, repeated comparisons can reveal a suitable deal.",
+          "outcome": "supports",
+          "rationale": "This limited constructed scenario explains why the candidate is plausible; it does not establish general sufficiency."
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "A fare surge or lack of seats leaves no good deal despite all research; urgent travel may preclude early booking.",
+          "outcome": "counterexample",
+          "rationale": "The unresolved exception prevents supported/complete status; no extra goal is invented to patch the hierarchy."
+        }
+      ]
+    },
+    {
+      "group_id": "F003",
+      "parent_id": "G047",
+      "child_ids": [
+        "G031",
+        "G046"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Parallel searches and consolidated information address stated effort but are not proven sufficient for all research time or mental effort.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T137",
+          "quote": "So the biggest obstacle the 2 main obstacles is one. Research is very complicated. There's no one click platform where I can just give it all of my parameters, and it will find the best option for me. I have to invest a lot of time into finding. What's the ideal option? 2. I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum. just to make sure I'm hitting all of the right things while making my booking.",
+          "role": "basis",
+          "start_char": 49612,
+          "end_char": 50103
+        }
+      ],
+      "relation_ids": [
+        "R021",
+        "R022"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "A broad matrix with accurate consolidated details can reduce repetitive visits and search entry.",
+          "outcome": "supports",
+          "rationale": "This limited constructed scenario explains why the candidate is plausible; it does not establish general sufficiency."
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "Slow or stale consolidated results can require manual checking and negate the expected saving.",
+          "outcome": "unknown",
+          "rationale": "The unresolved exception prevents supported/complete status; no extra goal is invented to patch the hierarchy."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "Joint sufficiency is unconfirmed: Timing and connection checks are plausible itinerary-fit criteria, but they are expressly examples and depend on visa, cost and the actual journey."
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "Joint sufficiency is unconfirmed: These strategies can improve deal finding but cannot jointly ensure a good fare; early booking and alerts are situational alternatives, not a compulsory AND plan."
+    },
+    {
+      "target_type": "group",
+      "target_id": "F003",
+      "message": "Joint sufficiency is unconfirmed: Parallel searches and consolidated information address stated effort but are not proven sufficient for all research time or mental effort."
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G004",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Booking further ahead is a chosen attempt to obtain better prices; the respondent reports recent last-minute exceptions.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T015",
+          "quote": "Ideally, I like to do it at least a couple of months before. Unfortunately for my at least my last few domestic flights, it's always ended up being like a 1 or 2 weeks before making them pretty pricey my flight for coming to the Us. Though I I did end up booking that almost like 2 months out. Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal.",
+          "role": "basis",
+          "start_char": 2616,
+          "end_char": 3015
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G006",
+      "target_id": "G005",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Spare vouchers or points are a stated way to help book other people's flights.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T017",
+          "quote": "Oh, no, I absolutely use it for friends and family family more so than friends. But so all sorts of travel, plans for my parents, my sister, my girlfriend. I book their flights. In many cases. I also end up booking flights for my friends. Men like we are going on a vacation to let's say Goa, or if I've got like extra points, or like gift vouchers left over, so I can help friends book their own flights, or like their relatives, flights. That helps them saving money as well. And it I get rid of the gift voucher as well. So it's like a win-win. But yeah, mostly it's it's booking flights. For myself. I would say it's like 80 20 like myself to everybody else.",
+          "role": "basis",
+          "start_char": 3294,
+          "end_char": 3956
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G008",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Repeated cross-site comparisons are explicitly used to seek a good deal, without guaranteeing the lowest obtainable price.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T025",
+          "quote": "So yeah, obviously, I'm reminiscing over what it would be like to be actually in that flight, or like in that in the middle of that trip. But my primary focus is to like get a really good deal when I'm actually booking my flights. So I keep on checking at regular intervals, just to make sure. Hey, am I getting a good deal? I check like dozens of different websites to just make sure I'm having the best deal possible. So, yeah.",
+          "role": "basis",
+          "start_char": 5960,
+          "end_char": 6389
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G020",
+      "target_id": "G010",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Country or regional inputs are the selected way to search many origin and destination airports.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T065",
+          "quote": "So I generally start off by changing the origin because it's generally specific to my local airport. I would rather search with a series of different airports. I generally put in a country or a region that gives me way. More airports looked up at the same time. So let's say right now it's been set to the city, but I can just set it to United States. So it the Origin Airport becomes anywhere in the Us. And if I want to fly to India. Then I can put the destination as India. so that looks at all of the combinations from the Us. To India. Then I'd go ahead and select a departure date. Let me put that for like, let's say tomorrow. And if I want to have a return date, let me add that for a couple of days later once I've set all of this up, it just wants to make sure I have the number of adults right as well as that. I'm searching for economy business class, 1st class. So once I've selected all that I can get ready to search, do you want me to proceed.",
+          "role": "basis",
+          "start_char": 18855,
+          "end_char": 19814
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G021",
+      "target_id": "G011",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The respondent applies time filters when matching another connection.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T069",
+          "quote": "So mostly I just switch over to the cheapest or the best tabs. Those are the 2 ones I'm taking a look at. The filters. I don't use it very often unless I'm connecting onto something. So if I'm connecting to something, then I can put the like, change the departure and the arrival time to be in the zone. I want it to be. If I also have a hard limit on the number of hours I want to spend in the sky. Let's say I'm I'm flying internationally. I don't want to spend 55Â h continuously flying, so I can just set that to a more reasonable limit. yeah, that's that's all about it. I I rarely make much differentiation over here in terms of the filters.",
+          "role": "basis",
+          "start_char": 21767,
+          "end_char": 22414
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G023",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The international scenario narrows the general evaluation of price and other travel benefits.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T073",
+          "quote": "No, I don't really use it for this purpose. I just look at it to see what are the best options it's giving me, because generally there are dozens of city pairs, and especially when I'm booking international flights. There are so many different combinations of paths that you can take to go from X to Y that the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in. So the best is like a more medium section, like something that balances between price and the time taken. So that's what I refer to when I'm booking international, when I'm booking domestic, it's mostly going through the cheapest tab. And just the options are limited enough that I can figure out something that works for me.",
+          "role": "basis",
+          "start_char": 23269,
+          "end_char": 24025
+        }
+      ]
+    },
+    {
+      "relation_id": "R007",
+      "source_id": "G024",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The domestic scenario uses a cheaper-options preference within the more general alternative evaluation.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T073",
+          "quote": "No, I don't really use it for this purpose. I just look at it to see what are the best options it's giving me, because generally there are dozens of city pairs, and especially when I'm booking international flights. There are so many different combinations of paths that you can take to go from X to Y that the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in. So the best is like a more medium section, like something that balances between price and the time taken. So that's what I refer to when I'm booking international, when I'm booking domestic, it's mostly going through the cheapest tab. And just the options are limited enough that I can figure out something that works for me.",
+          "role": "basis",
+          "start_char": 23269,
+          "end_char": 24025
+        }
+      ]
+    },
+    {
+      "relation_id": "R008",
+      "source_id": "G026",
+      "target_id": "G033",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Comparing providers, discounts and final costs serves the best price objective.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T077",
+          "quote": "I use both of these very extensively. I make sure all the flight details like I said. All the connections and all the times are right for me, and they work for my schedule. specifically based on what my plans are, and when it comes to booking my ticket, when I go through the list of different options and providers. I look at the price. I take a look at the rating, and I often visit multiple providers from this page. So there's like a select button. You can click for every provider, and it takes you to their page with all the itinerary already loaded in, so you can compare prices. Sometimes prices increase, though that's pretty rare, and you can compare discounts on different providers. The final costs on different providers. Some providers have, like special discount codes for coming through a sky scanner. It it ends up, differing every time. It's not like a fixed thing.",
+          "role": "basis",
+          "start_char": 25756,
+          "end_char": 26639
+        }
+      ]
+    },
+    {
+      "relation_id": "R009",
+      "source_id": "G027",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Rechecking alternatives when details are unsuitable serves finding a workable option.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T081",
+          "quote": "So it it sort of depends on the situation. If it's an urgent booking, and I do not have any other good alternative itineraries. I don't really have a choice. I end up doing a lot more research, though, when I run into a situation where things are not as conveniently working out to be the way I wished they were in those cases. I try to just rerun through all of my options. Make sure I'm not missing something. but if that is the only option I have, so be it. I have to make that booking.",
+          "role": "basis",
+          "start_char": 27245,
+          "end_char": 27734
+        }
+      ]
+    },
+    {
+      "relation_id": "R010",
+      "source_id": "G028",
+      "target_id": "G011",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Catching the last train is a concrete instance of onward-transport coordination, subject to affordability.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T083",
+          "quote": "I mean, yeah, there have been many such scenarios, but I I cannot exactly recall a specific one with all the details about it. But I could walk through a potential scenario with you. For example, let's say I'll give you a common example that used to happen with me. My university bachelor's university was in Vellor, and the closest airport ended up being Chennai. and to get to my home I ended up flying to Kolkata. so I would end up regularly, flying between Chennai and Kolkata, and the cheapest flight and the most convenient for me usually worked out to be the night flight. and it used to land at around 1020 pm. Now, to get from the airport to the train station where my the last train for the day would be leaving would be at 1145 pm. So I would run into a situation where I only had, like an hour, 20Â min gap. From the time I landed to the time I had to make on this make it on the station. So this was a logistical challenge for me, because I knew it was like a 50 50 situation. I knew half the times I'd make it half the times I didn't, which is, which is what actually ended up happening. So it was a risk. If I had a better option available, something that just maybe lands like 1Â h earlier, so that I would be able to make sure that I get home that night, and I don't miss my train, and I don't end up having to stay up for like 6, 7Â h, waiting for the next train early in the morning. Then I would go for that option. but it again depends on the price differential. If the price. Differential was way too high. Then I just couldn't afford to like, you know. Spend that much extra as a college student for the luxury of potentially not missing my train. as my time was cheaper compared to actual money. so I think priorities change with time. That's that's 1 of the common examples that used to happen to me back during my bachelor's.",
+          "role": "basis",
+          "start_char": 27971,
+          "end_char": 29822
+        }
+      ]
+    },
+    {
+      "relation_id": "R011",
+      "source_id": "G029",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Price-drop reminders help urgent price-sensitive travel but cannot force a low fare to appear.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T087",
+          "quote": "There was only one time I used it, and I used it on Google flights. So I had to go back to my native place for a religious ceremony. The flight was like 3,000 one day. And I was like, Okay, I'm gonna book it tomorrow, after confirming everything, and the next day it was 18,000, literally 6 x so at that point of time I needed a reminder, because that was just way too much money to spend on a flight. I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price. I I book it in just because I have to make it there, and I have to find a relatively cheap flight to make it there. So that was the only time I set up an alert. And that was through Google flights.",
+          "role": "basis",
+          "start_char": 31220,
+          "end_char": 31928
+        }
+      ]
+    },
+    {
+      "relation_id": "R012",
+      "source_id": "G016",
+      "target_id": "G017",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Anonymous use is the stakeholder's chosen data-protection strategy; the claimed pricing effect is only a belief.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T053",
+          "quote": "I generally am very privacy conscious. So I avoid logging in, and I try to keep myself as anonymized as possible. It also helps doing this because people can track you, and if you end up booking flights or searching for specific flights pretty often they might increase the flight prices for you. So I prefer going the anonymous route, especially when I'm searching for flights, that is, unless I'm booking with points because you just can't book flights with points without while still being anonymous. So so most of the time when I'm booking revenue flights. Yes, I do prefer to be anonymous.",
+          "role": "basis",
+          "start_char": 15167,
+          "end_char": 15761
+        }
+      ]
+    },
+    {
+      "relation_id": "R013",
+      "source_id": "G030",
+      "target_id": "G017",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Avoiding an additional party's data collection is a more specific privacy case.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T089",
+          "quote": "It does have the same functionality. Only reason I did it by Google flights is because I was already logged into my Google account by chance. Generally, I don't look through Google flights while logged in. I go through an incognito window route. and I block all the cookies. But since I knew I had to do that, I just went to my Google flights, went to the Google flights app through my normal browser where my Google credentials were already logged in. So it already knew who I was, and I didn't have to go through the pain of, you know. setting up an account. And stuff like that. plus skyscanner is a Chinese company, and I generally don't want my data to be shared. Google already has my data. Why give it to another party as well. So I was like, Okay. that's that's why I went through that option.",
+          "role": "basis",
+          "start_char": 32157,
+          "end_char": 32958
+        }
+      ]
+    },
+    {
+      "relation_id": "R014",
+      "source_id": "G032",
+      "target_id": "G031",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The US-to-India airport/date/class matrix is a concrete example of broad parallel research, not a universal fixed capacity.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T099",
+          "quote": "So I'd like to search for all possible airports, let's say, from the Us. All, the top 20 most popular airports from the Us. To the top 5 or 6 most popular airports in India. That's 20 times 5 or 6. Let's just say 1, 20 times. Let's just say a date range of 7 days on one side, 7 days on the return side. So into 49, so 1, 20 into 49 times different classes of service. So sometimes premium economy works out to be cheaper than economy. So 2 classes of service over there. and this thing, but also repeated for the points segment, which works completely differently. So you end up with like a huge amount of searches. So it is 1, 20 into 49 into 2. Let me just calculate what that turns out to be. Yeah. So that works out to be 11,760 different combinations of flights, different combinations of dates and itineraries within that you would have different combinations of flights as well within those dates. So there's a lot that goes to it.",
+          "role": "basis",
+          "start_char": 35630,
+          "end_char": 36569
+        }
+      ]
+    },
+    {
+      "relation_id": "R015",
+      "source_id": "G035",
+      "target_id": "G033",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Market-price context helps judge unfamiliar prices but does not itself produce or select the best fare.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T111",
+          "quote": "Sure. Yeah, it would help out for the times when I'm not familiar with the specific market. So since I'm new to the us. I'm not very familiar here. but once I become more familiar with the prices I would I would be able to. I won't really need that feature. But yeah, it's it's nice to have.",
+          "role": "basis",
+          "start_char": 41208,
+          "end_char": 41499
+        }
+      ]
+    },
+    {
+      "relation_id": "R016",
+      "source_id": "G036",
+      "target_id": "G025",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Matching a host's schedule is a concrete itinerary suitability criterion when visiting someone.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "It's it's quite subjective and situational, so I'm not fully sure how to do it. But a way to do it would be to say that if I'm like, I said, if I'm transiting on or off from the same city, is it matching up with the schedules of the other modes of transport I'm planning to. Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules. Is it a good time of the day to fly? I would, I mean, I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "role": "basis",
+          "start_char": 42368,
+          "end_char": 42910
+        }
+      ]
+    },
+    {
+      "relation_id": "R017",
+      "source_id": "G037",
+      "target_id": "G025",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Sleep-friendly timing helps suitability but red-eye flights remain acceptable.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "It's it's quite subjective and situational, so I'm not fully sure how to do it. But a way to do it would be to say that if I'm like, I said, if I'm transiting on or off from the same city, is it matching up with the schedules of the other modes of transport I'm planning to. Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules. Is it a good time of the day to fly? I would, I mean, I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "role": "basis",
+          "start_char": 42368,
+          "end_char": 42910
+        }
+      ]
+    },
+    {
+      "relation_id": "R018",
+      "source_id": "G038",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "A larger connection-time buffer helps manage delay risk but cannot guarantee onward travel.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport. So let me just clarify that Mct is the minimum connection time defined at a iata level. Iata is the organization that regulates and manages airports and airlines everything aerospace around the world. That time is basically. The minimum time somebody would need to connect including taking their luggage out and putting their luggage back in in one airport. going from the furthest away combination of gates. What is the furthest distance they might have to travel. That's how they come up with that time. Just to be safe and to account for delays based on the flight length. I I generally tend to at least go for 1.5 x or 2 x of that for a stopover. That's that's only my motive. I also end up looking. Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries. I like to maintain global access through priority pass. And if I'm in a different city, I wanted to check it out. What's it like. So that's also one factor that goes into it.",
+          "role": "basis",
+          "start_char": 43159,
+          "end_char": 44314
+        }
+      ]
+    },
+    {
+      "relation_id": "R019",
+      "source_id": "G041",
+      "target_id": "G039",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Accurate integrated entitlements could help check lounge opportunities, conditional on reliable updates.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T125",
+          "quote": "Sure. But there, there's a lot of logistics and complexity that goes into it. So I'll not get into this too much. But because this this is a whole different line of questioning. But I have around 30 different credit cards, and there are various combinations of these cards that can get me into various lounges at various costs and times during the day. So it's it's not as simple as hey? You'll get lounge at this airport there, and the provider. In this case, whether it's skyscanner or whether it's any other booking website, they're not aware of what my options are so ideally. That's not the way it would be very nice if I could, input there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner. That would be wonderful. I know a few apps that have tried that, but generally it doesn't update well, and it doesn't work well. So I prefer going to the source of the truth for the lounge access and get my information from there, instead of like relying on any 3rd party service to give me that information.",
+          "role": "basis",
+          "start_char": 44438,
+          "end_char": 45545
+        }
+      ]
+    },
+    {
+      "relation_id": "R020",
+      "source_id": "G042",
+      "target_id": "G039",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The issuer's lounge information is the chosen source for checking policies and opening times.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T127",
+          "quote": "It is very situational again. Depends on the issuer of the card. or whatever pass I'm holding. Let's say I'm holding my diners card. So I just go to the Diners club website, go to airport lounges, go to the airport, go to the correct terminal, figure out. What's the lounge. What's their access policy? What's their timings? Is the renovation going on? Stuff like that? it it ends up varying in my case I have unlimited access, so I don't need to worry about. Oh, have I used the access on this card? If it's a card with limited access? I need to make sure. Oh, this card does still work at this airport, and it still has remaining balance in terms of usages, for, let's say, the month or the quarter or the year there are. There's like I told you, there's a huge amount of logistics that goes into just managing this yourself. let alone somebody else managing this for you. So there isn't a clear, defined answer I can give you so as to this is the exact way somebody can do it. It's very situational.",
+          "role": "basis",
+          "start_char": 45633,
+          "end_char": 46635
+        }
+      ]
+    },
+    {
+      "relation_id": "R021",
+      "source_id": "G031",
+      "target_id": "G047",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Simultaneous combination searches reduce repeated manual research effort under the described obstacle.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T095",
+          "quote": "The research aspect is the biggest obstacle, because you want to do around 500 searches at the same time, because you're doing combinations of city pairs, country pairs, dates. travelers, different classes, all sorts of combinations to make sure what's the best. So it just grows exponentially. You want to do hundreds of searches at the same time, but nobody wants to let you do those searches at the same time. So it ends up being a very time intensive thing. and nobody's there to feed you all the different combinations. You need to find all the possible routes you need to know the different tricks for getting cheaper prices, better pathways, better deals. So all of that goes into play. And it does end up being a significant time investment.",
+          "role": "basis",
+          "start_char": 34241,
+          "end_char": 34990
+        }
+      ]
+    },
+    {
+      "relation_id": "R022",
+      "source_id": "G046",
+      "target_id": "G047",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Having booking information in one place can reduce visits to many sites; it does not guarantee accurate optimal research.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T137",
+          "quote": "So the biggest obstacle the 2 main obstacles is one. Research is very complicated. There's no one click platform where I can just give it all of my parameters, and it will find the best option for me. I have to invest a lot of time into finding. What's the ideal option? 2. I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum. just to make sure I'm hitting all of the right things while making my booking.",
+          "role": "basis",
+          "start_char": 49612,
+          "end_char": 50103
+        }
+      ]
+    },
+    {
+      "relation_id": "R023",
+      "source_id": "G015",
+      "target_id": "G014",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The described flow reaches the provider page before confirming details and making payment.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T047",
+          "quote": "I'm I'm okay with either concept. Like we, we could go into both as well. But generally the booking website. I don't really use it to search for flights. I just use it to just make the final booking. So Skyscanner directly takes me to the exact booking page with all of my details already added in. So it's just like a confirmation of details and making the final payment. I don't really very rarely execute searches on the booking websites themselves. All of the research takes place on Skyscann directly.",
+          "role": "basis",
+          "start_char": 14270,
+          "end_char": 14776
+        }
+      ]
+    },
+    {
+      "relation_id": "R024",
+      "source_id": "G013",
+      "target_id": "G014",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Checking logistics is described before deciding and paying, without claiming that checking alone enables a complete booking.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T031",
+          "quote": "Sure. So generally my process starts with an aggregator. I generally have 3 to 4 aggregators that I take a look at. I start off with using skyscanner. I put in a few of the like. I generally do country to country pairs, or like a relative area of the destination to the relative area of sorry relative area of the origin to the relative area of the destination. So like nearby airports, potential dates. So I try to mix it up with all sorts of options. and if I'm finding something that I'm liking, I might search for that in more detail. Let's say I'm liking a certain city pair, or I'm liking a specific date. Then I might search for options around that I look around the timings that are available. how that would factor it into whether I have to book a hotel. How does that connect with other modes of transport? So let's say I'm flying into a city, but then I have to travel to a different city by like a train, or something like that which is pretty common for me back home in India. So I try to plan out my travel, such that things fall into place, and I don't end up having to stay in a city for like 20Â h doing nothing. So my 1st priority starts with getting the price down, getting the city pairs slash country pairs down. Then I move on to the dates. and finally onto like time and overall logistics. That's that's the way I do it. Once I have a set of flights like in mind that are my ideal options. Then, depending on how expensive they are, I might check out other aggregators like Google flights, Kayak. There are bunches of them. That you can take a look at if it's not that expensive, then I'll just go through one of the platforms that are part of like skyscanner so bunch of different travel companies partner with skyscanner and have their prices come through. And I'll look at my ideal flights. I'll go to the actual providers website. I'll check out how much it costs me. I'll check out what sort of coupon options I have upgrade options I have. I'll just make sure all the terminal, all the logistics. Information is correct. I also sometimes check out providers directly without going through an aggregator. Sometimes you can get a better discount that way. So there's a lot of research that goes into it before I finally make the decision to book a flight. It's a pretty involved process. I end up taking, like at least an hour or so, just to scar out different options, combinations to find. What's the you know? Potential best option for booking. Once I've finalized on an itinerary and on a provider. I just fill out my information. If they need my passport details, my date of birth. My legal name and other details fill out the declaration forms. And I just pay the amount through my credit card website. That's that's generally the flow.",
+          "role": "basis",
+          "start_char": 7964,
+          "end_char": 10733
+        }
+      ]
+    },
+    {
+      "relation_id": "R025",
+      "source_id": "G039",
+      "target_id": "G051",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Subject to the actual airport, timing and valid entitlement."
+      ],
+      "assumptions": [],
+      "rationale": "Checking that a lounge is open helps make a desired lounge visit possible, but does not ensure access or a completed visit.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport. So let me just clarify that Mct is the minimum connection time defined at a iata level. Iata is the organization that regulates and manages airports and airlines everything aerospace around the world. That time is basically. The minimum time somebody would need to connect including taking their luggage out and putting their luggage back in in one airport. going from the furthest away combination of gates. What is the furthest distance they might have to travel. That's how they come up with that time. Just to be safe and to account for delays based on the flight length. I I generally tend to at least go for 1.5 x or 2 x of that for a stopover. That's that's only my motive. I also end up looking. Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries. I like to maintain global access through priority pass. And if I'm in a different city, I wanted to check it out. What's it like. So that's also one factor that goes into it.",
+          "role": "basis",
+          "start_char": 43159,
+          "end_char": 44314
+        }
+      ]
+    },
+    {
+      "relation_id": "R026",
+      "source_id": "G040",
+      "target_id": "G051",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Subject to the actual airport, timing and valid entitlement."
+      ],
+      "assumptions": [],
+      "rationale": "Maintained lounge access supports the desired visits; opening times and specific entitlement constraints still apply.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport. So let me just clarify that Mct is the minimum connection time defined at a iata level. Iata is the organization that regulates and manages airports and airlines everything aerospace around the world. That time is basically. The minimum time somebody would need to connect including taking their luggage out and putting their luggage back in in one airport. going from the furthest away combination of gates. What is the furthest distance they might have to travel. That's how they come up with that time. Just to be safe and to account for delays based on the flight length. I I generally tend to at least go for 1.5 x or 2 x of that for a stopover. That's that's only my motive. I also end up looking. Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries. I like to maintain global access through priority pass. And if I'm in a different city, I wanted to check it out. What's it like. So that's also one factor that goes into it.",
+          "role": "basis",
+          "start_char": 43159,
+          "end_char": 44314
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

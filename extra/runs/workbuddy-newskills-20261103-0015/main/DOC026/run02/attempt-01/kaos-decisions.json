@@ -1,0 +1,73 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "8b0de38d641ef457e1a4d5790a6bbea053dc55c83f418527e1492c4505bb7a04",
+    "judgments_sha256": "2e2a84d444e6c99101cbfbe341b1b6e7397b90184bfb648e1333242cc0f1eec2"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "‘显示附近有司机却长时间匹配或最终找不到司机’是否应作为需改进的目标？原文只描述问题与猜测，没有明确改进要求。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G019",
+      "message": "多站点迟到时告知司机，是受访者评价为有帮助但自述未必做过的做法；是否保留为软目标而非既有习惯？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G021",
+      "message": "使用当前位置时改上车点较难，依据的是有保留的记忆与绕行做法；是否需要向受访者确认具体版本与操作路径？"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC026-goal-model",
+      "message": "本次为单一样本访谈，个人偏好（如最便宜选项、单目的地）是否可视为产品层面的通用需求？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G010",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "工作出行且费用由雇主承担"
+      ],
+      "assumptions": [],
+      "rationale": "工作出行是‘按时间与价格决定是否乘车’的具体情境；该情境下价格由雇主承担、时间权重上升，属于同一判断在特定条件下的具体化，而非另立一般目标。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC026:T019",
+          "quote": "on the times where I have needed to to use a rideshare for work i usually care less about the price and more about the time in that case because my work is going to cover it.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G006",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "当前报价过高且行程可以延后"
+      ],
+      "assumptions": [],
+      "rationale": "价格过高时选择等待，是落实‘按时间与价格决定是否乘车’的具体策略，服务同一取舍目的，不声称等待总能使价格下降。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "if the price was too high, then I can choose to wait",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

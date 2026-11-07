@@ -1,0 +1,268 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "d79c99244904c93807ad9b92d4db4a325b940c02563edffe2df1a8fa65de4071",
+    "input_sha256": "c882f103aa8c32615d1d72b174d6ffeca925c0bb797ba786ee7e01d662f55d9c"
+  },
+  "judgments": {
+    "DOC009-C001": {
+      "target_statement": "把 AI 助手当作常规搜索的替代，用来直接拿到答案。",
+      "label": "direct",
+      "rationale": "T003 直接说明替代关系与例外：「They have Camus to serve as a replacement for a lot of traditional searching that I used to do」，「unless I need them to be perfectly, factually correct... I defer to any assistant」。",
+      "supported_parts": [
+        "替代搜索：T003「a replacement for a lot of traditional searching」",
+        "默认路径：T004「I defer to any assistant to get my results」",
+        "例外条件：T004「unless I need them to be perfectly, factually correct」"
+      ],
+      "unsupported_parts": [
+        "「Camus」为转写噪音，按上下文理解为模型能力/容量",
+        "未说明哪些查询类型不适用"
+      ],
+      "assumptions": [
+        "把「they have Camus to serve as」理解为「模型具备足够能力充当」"
+      ],
+      "reasoning_steps": [
+        "1. 取替代关系与例外",
+        "2. 例外条件说明其边界意识，不否定目标",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C002": {
+      "target_statement": "用 AI 生成可直接发出的专业邮件。",
+      "label": "direct",
+      "rationale": "T011 明确「I use it to compose professional emails, primarily」，并说明效果「with just a few prompts, I'm able to generate professional emails」。",
+      "supported_parts": [
+        "主要用途：T011「compose professional emails, primarily」",
+        "效果：T011「with just a few prompts, I'm able to generate professional emails」"
+      ],
+      "unsupported_parts": [
+        "私人邮件只是次要用途，且他更倾向直接在聊天软件手写",
+        "未说明对邮件语气/长度的具体要求"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 区分主次用途",
+        "2. 主用途为直接陈述",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C003": {
+      "target_statement": "用 AI 撰写并校对文档（含工作长文档与作业），做拼写、语法与语气检查。",
+      "label": "direct",
+      "rationale": "T009 把「writing and proofreading documents」列为三大用途之一，T021 具体化校对项（拼写、语法、语气），T017 给出使用频率。",
+      "supported_parts": [
+        "用途：T009「writing and proofreading documents」",
+        "校对项：T021「spelling checks, grammar checks, tone checks」",
+        "频率与场景：T017「for writing documents and for assignments, maybe 3 to 4 times a a week」"
+      ],
+      "unsupported_parts": [
+        "作业使用受课程许可限制，原文未说明未获许可时如何替代",
+        "未说明文档长度与类型"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 三处互证",
+        "2. 对象（文档）与动作（撰写+校对）一致",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C004": {
+      "target_statement": "用 AI 生成可嵌入博客与社交帖子的数字图像。",
+      "label": "direct",
+      "rationale": "T013 明确用途与产出位置：「create digital art that I often embed in my blog posts or social media posts」，并说明受益。",
+      "supported_parts": [
+        "用途：T013「create you know, digital art」",
+        "产出位置：T013「embed in my blog posts or social media posts」",
+        "受益：T013「Gpt makes me look as though I'm not」"
+      ],
+      "unsupported_parts": [
+        "未说明风格、分辨率或版权要求",
+        "未说明文生图与文生视频的优先级"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取用途与产出句",
+        "2. 受益说明支持其持续性",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C005": {
+      "target_statement": "借 AI 头脑风暴，并把自己已有的想法表达得更清楚。",
+      "label": "direct",
+      "rationale": "T017 与 T021 两次说明头脑风暴用途，并补充「articulate some of the ideas that I have of my own better」。",
+      "supported_parts": [
+        "头脑风暴：T022「Brainstorming is one of the primary tasks」",
+        "表达优化：T018「articulate some of the ideas that I have of my own better」"
+      ],
+      "unsupported_parts": [
+        "未说明希望 AI 提供多少候选或如何筛选",
+        "未说明头脑风暴失败的判断标准"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 两处互证",
+        "2. 「articulate」部分常被忽略，单独记录",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C006": {
+      "target_statement": "编程任务中输入与输出支持 JSON、XML 等标准格式。",
+      "label": "direct",
+      "rationale": "T027 说明编程场景需要结构化格式「Json or Xml is an example」，并直接提出期望「it would make sense if it is able to format these into other standardized formats」。",
+      "supported_parts": [
+        "需求：T027「I often need the input or the output to be in certain formats」",
+        "期望：T028「format these into other standardized formats」"
+      ],
+      "unsupported_parts": [
+        "只举例 JSON/XML，未穷举（如 YAML、SQL、CSV）",
+        "未说明是输入解析还是输出生成更重要"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取需求与期望句",
+        "2. 场景（编程）明确",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C007": {
+      "target_statement": "得到简洁直接的答复，而不是冗长的对话式回复。",
+      "label": "direct",
+      "rationale": "T031 直接对比两种回复风格并给出偏好：「I would definitely appreciate brevity over a a verbose response」，理由是与时间/效率有关。",
+      "supported_parts": [
+        "偏好：T031「brevity over a a verbose response」",
+        "理由：T031 以 productivity 与 time 为前提下结论",
+        "具体形态：T032「a succinct response... rather than a big conversational response」"
+      ],
+      "unsupported_parts": [
+        "「简洁」无长度标准",
+        "未说明复杂任务是否也需要牺牲完整性"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取偏好与理由",
+        "2. 明确为交互风格诉求",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C008": {
+      "target_statement": "AI 能记住过往交互与要求，不必每次重复交代背景。",
+      "label": "direct",
+      "rationale": "T033 以 super important 表达记忆需求：「I don't have to repeat myself in every query」，并说明用途（提供上下文与要求）。",
+      "supported_parts": [
+        "重要性：T033「it's super important」",
+        "需求：T034「hold some sort of memory or history of previous interactions」",
+        "用途：T034「giving it context, or like what my requirements are」"
+      ],
+      "unsupported_parts": [
+        "未说明记忆范围、保留时长与隐私边界",
+        "未说明跨产品是否要共享记忆"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取重要性判断与需求句",
+        "2. 未涉及隐私，记入部分不支持",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C009": {
+      "target_statement": "数学类问题用多个助手交叉验证答案后再采用。",
+      "label": "direct",
+      "rationale": "T035 按任务类型区分做法：语言任务不必比较，数学任务「I often find the need to cross check the answers... with multiple others」。",
+      "supported_parts": [
+        "交叉验证：T036「cross check the answers... with multiple others」",
+        "原因：T036「prone to making mistakes when it comes to math」",
+        "对照：T036 语言任务「without having to compare it」"
+      ],
+      "unsupported_parts": [
+        "这是受访者的自保做法，未要求平台内置互校",
+        "未说明需要几个模型或判定分歧的规则"
+      ],
+      "assumptions": [
+        "把交叉验证视为其达到可信答案的手段"
+      ],
+      "reasoning_steps": [
+        "1. 区分任务类型下的不同做法",
+        "2. 数学场景的需求为直接陈述",
+        "3. → direct，并转为人工问题"
+      ]
+    },
+    "DOC009-C010": {
+      "target_statement": "输出事实可靠，使关键流程可以在无人复核的情况下自动完成。",
+      "label": "direct",
+      "rationale": "T041 指出幻觉导致必须人工复核「For tasks that are critical. They do need a human eye」，T043 明确后果「I have not been able to automate certain pipelines」。",
+      "supported_parts": [
+        "原因：T042「very prone to hallucinations」",
+        "后果：T042「need a human eye to go over them」",
+        "损失：T044「I have not been able to automate certain pipelines」"
+      ],
+      "unsupported_parts": [
+        "受访者明确表示提不出解法（T045），目标存在但路径未知",
+        "「critical」的范围未定义"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取原因与后果",
+        "2. 目标（可无人复核地自动化）由后果反推但表述明确",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C011": {
+      "target_statement": "界面简洁不干扰，避免分散注意力的多余元素。",
+      "label": "direct",
+      "rationale": "T053 用两个竞品具体说明干扰：「too much happening on the screen that it distracts me」（Perplexity）、「the design of their web page. That kind of throws me off」（Gemini）。",
+      "supported_parts": [
+        "干扰：T054「too much happening on the screen that it distracts me」",
+        "设计出戏：T054「the design of their web page. That kind of throws me off」"
+      ],
+      "unsupported_parts": [
+        "未说明具体要什么样的布局",
+        "可能混有使用习惯（他承认可能只是习惯了 ChatGPT）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取两处具体抱怨",
+        "2. 受访者自己承认可能是习惯因素，记入部分不支持",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C012": {
+      "target_statement": "支持文生视频（当前只有文生图）。",
+      "label": "direct",
+      "rationale": "T055 明确提出文生视频的缺失：「If they could help me do text to video as well. They do support text image right now」。",
+      "supported_parts": [
+        "期望：T056「help me do text to video as well」",
+        "现状对照：T056「They do support text image right now」"
+      ],
+      "unsupported_parts": [
+        "未说明视频用途（是否也用于博客配图）",
+        "未说明时长、分辨率等要求"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取期望与现状对照",
+        "2. 属功能缺口型诉求",
+        "3. → direct"
+      ]
+    },
+    "DOC009-C013": {
+      "target_statement": "从「问答式模型」升级为可代执行任务的 agent（如直接写好并发出邮件）。",
+      "label": "direct",
+      "rationale": "T055 明确要求从模型转向 agent：「If we can move from that model to having large language agents instead of large language models」，并以自动发邮件为例。",
+      "supported_parts": [
+        "形态：T056「large language agents instead of large language models」",
+        "举例：T056「opens the email client of its own, composes the email and sends it」",
+        "动机：T056「instead of it giving me the response... that I could copy and paste」"
+      ],
+      "unsupported_parts": [
+        "未说明授权边界（agent 可自行发送是否需确认）",
+        "未说明失败回滚与责任归属"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取形态陈述与举例",
+        "2. 动机为减少复制粘贴环节",
+        "3. → direct"
+      ]
+    }
+  }
+}

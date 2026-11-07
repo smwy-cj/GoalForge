@@ -1,0 +1,196 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "1c12ab408c773ba08e5ff2ec07f049f5272a21bc83392fa43d24d55cb9232c6a",
+    "judgments_sha256": "8f854d442193159201e9c95e3b18210dd709dbc54287c67276bda250f7fa4960"
+  },
+  "groups": [
+    {
+      "group_id": "F1",
+      "parent_id": "G1",
+      "child_ids": [
+        "G2",
+        "G3"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "原文明确说明登记和送达共同满足上层目标。",
+      "assumptions": [],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN-RELEASE:S003",
+          "quote": "有效申请得到完整登记、有效回执送达，两项都满足即可实现上述目标。",
+          "role": "basis",
+          "start_char": 44,
+          "end_char": 76
+        }
+      ],
+      "relation_ids": [
+        "R1"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "指定有效申请按允许渠道处理。",
+          "outcome": "supports",
+          "rationale": "仅针对合成资料定义的有效申请和允许渠道，未扩展到其他系统。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "未送达或登记不全时，子目标也不满足，不构成子目标满足而父目标不满足的反例。",
+          "outcome": "supports",
+          "rationale": "仅针对合成资料定义的有效申请和允许渠道，未扩展到其他系统。"
+        }
+      ]
+    },
+    {
+      "group_id": "F2",
+      "parent_id": "G3",
+      "child_ids": [
+        "G4"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "原文允许邮件作为一种完整送达方案。",
+      "assumptions": [
+        "邮件和短信均为本场景允许的回执渠道。"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN-RELEASE:S004",
+          "quote": "回执允许通过邮件或短信送达，任一种渠道送达都算完成。",
+          "role": "basis",
+          "start_char": 77,
+          "end_char": 103
+        }
+      ],
+      "relation_ids": [],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "指定有效申请按允许渠道处理。",
+          "outcome": "supports",
+          "rationale": "仅针对合成资料定义的有效申请和允许渠道，未扩展到其他系统。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "未送达或登记不全时，子目标也不满足，不构成子目标满足而父目标不满足的反例。",
+          "outcome": "supports",
+          "rationale": "仅针对合成资料定义的有效申请和允许渠道，未扩展到其他系统。"
+        }
+      ]
+    },
+    {
+      "group_id": "F3",
+      "parent_id": "G3",
+      "child_ids": [
+        "G5"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "原文允许短信作为另一种完整送达方案。",
+      "assumptions": [
+        "邮件和短信均为本场景允许的回执渠道。"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN-RELEASE:S004",
+          "quote": "回执允许通过邮件或短信送达，任一种渠道送达都算完成。",
+          "role": "basis",
+          "start_char": 77,
+          "end_char": 103
+        }
+      ],
+      "relation_ids": [],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "指定有效申请按允许渠道处理。",
+          "outcome": "supports",
+          "rationale": "仅针对合成资料定义的有效申请和允许渠道，未扩展到其他系统。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "未送达或登记不全时，子目标也不满足，不构成子目标满足而父目标不满足的反例。",
+          "outcome": "supports",
+          "rationale": "仅针对合成资料定义的有效申请和允许渠道，未扩展到其他系统。"
+        }
+      ]
+    }
+  ],
+  "questions": [],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G2",
+      "target_id": "G1",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "登记有助于申请处理目标，单独登记不保证回执送达。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN-RELEASE:S003",
+          "quote": "有效申请得到完整登记、有效回执送达，两项都满足即可实现上述目标。",
+          "role": "basis",
+          "start_char": 44,
+          "end_char": 76
+        }
+      ]
+    }
+  ],
+  "reassessments": [
+    {
+      "assessment_id": "A1",
+      "target_type": "relation",
+      "target_id": "R1",
+      "reason": "合成工程重评，仍只认定部分贡献。"
+    },
+    {
+      "assessment_id": "A2",
+      "target_type": "group",
+      "target_id": "F1",
+      "reason": "重新核对原句及正常异常场景。"
+    }
+  ],
+  "feedback_dispositions": [
+    {
+      "target_type": "relation",
+      "target_id": "R1",
+      "status": "addressed",
+      "reason": "合成重评完成，结果仍待真实用户审核。"
+    }
+  ]
+}

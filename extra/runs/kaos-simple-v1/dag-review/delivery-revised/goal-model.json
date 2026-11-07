@@ -1,0 +1,641 @@
+{
+  "schema_version": "goalforge-kaos-1",
+  "model_id": "SYN-KAOS-goal-model",
+  "version": "v1.r1",
+  "parent": {
+    "model_id": "SYN-KAOS-goal-model",
+    "version": "v1",
+    "sha256": "c42cdeedc7c9062408a8632a16a87cd37ad1150e095ebcac69e3b6f7ad1ffd3c"
+  },
+  "scope": {
+    "document_id": "SYN-KAOS",
+    "coverage": {
+      "scope": "provided_material",
+      "source_ids": [
+        "SYN-KAOS:S1"
+      ],
+      "omissions": []
+    }
+  },
+  "goals": [
+    {
+      "goal_id": "G1",
+      "statement": "有效申请得到登记，并收到有效回执",
+      "actor": "用户",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "有效申请得到登记，并收到有效回执"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+      },
+      "evidence_ids": [
+        "E0001"
+      ]
+    },
+    {
+      "goal_id": "G2",
+      "statement": "有效申请得到完整登记",
+      "actor": "用户",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "有效申请得到完整登记"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+      },
+      "evidence_ids": [
+        "E0002"
+      ]
+    },
+    {
+      "goal_id": "G3",
+      "statement": "有效回执送达",
+      "actor": "用户",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "有效回执送达"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+      },
+      "evidence_ids": [
+        "E0003"
+      ]
+    },
+    {
+      "goal_id": "G4",
+      "statement": "收到邮件回执",
+      "actor": "用户",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "收到邮件回执"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+      },
+      "evidence_ids": [
+        "E0004"
+      ]
+    },
+    {
+      "goal_id": "G5",
+      "statement": "收到短信回执",
+      "actor": "用户",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "收到短信回执"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+      },
+      "evidence_ids": [
+        "E0005"
+      ]
+    }
+  ],
+  "refinement_groups": [
+    {
+      "group_id": "F1",
+      "parent_id": "G1",
+      "child_ids": [
+        "G2",
+        "G3"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "原文明确说明登记和送达共同满足上层目标。",
+      "assumptions": [],
+      "evidence_ids": [
+        "K0001",
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005"
+      ]
+    },
+    {
+      "group_id": "F2",
+      "parent_id": "G3",
+      "child_ids": [
+        "G4"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "本材料明确允许邮件或短信任一种渠道完成送达；因此邮件回执送达是一套单成员的完整替代方案。仅适用于本材料约定的有效回执。",
+      "assumptions": [
+        "邮件和短信均为本场景允许的回执渠道。"
+      ],
+      "evidence_ids": [
+        "K0002",
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005"
+      ]
+    },
+    {
+      "group_id": "F3",
+      "parent_id": "G3",
+      "child_ids": [
+        "G5"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "原文允许短信作为另一种完整送达方案。",
+      "assumptions": [
+        "邮件和短信均为本场景允许的回执渠道。"
+      ],
+      "evidence_ids": [
+        "K0003",
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005"
+      ]
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "SYN-KAOS:S1",
+      "material_id": "M1",
+      "quote": "有效申请得到登记，并收到有效回执",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 26,
+      "end_char": 42,
+      "candidate_locations": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "segment_start": 26,
+          "segment_end": 42,
+          "start_char": 26,
+          "end_char": 42
+        }
+      ],
+      "original_locator": {
+        "start_char": 0,
+        "paragraph": 1
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "SYN-KAOS:S1",
+      "material_id": "M1",
+      "quote": "有效申请得到完整登记",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 44,
+      "end_char": 54,
+      "candidate_locations": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "segment_start": 44,
+          "segment_end": 54,
+          "start_char": 44,
+          "end_char": 54
+        }
+      ],
+      "original_locator": {
+        "start_char": 0,
+        "paragraph": 1
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "SYN-KAOS:S1",
+      "material_id": "M1",
+      "quote": "有效回执送达",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 55,
+      "end_char": 61,
+      "candidate_locations": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "segment_start": 55,
+          "segment_end": 61,
+          "start_char": 55,
+          "end_char": 61
+        }
+      ],
+      "original_locator": {
+        "start_char": 0,
+        "paragraph": 1
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "SYN-KAOS:S1",
+      "material_id": "M1",
+      "quote": "收到邮件回执",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 108,
+      "end_char": 114,
+      "candidate_locations": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "segment_start": 108,
+          "segment_end": 114,
+          "start_char": 108,
+          "end_char": 114
+        }
+      ],
+      "original_locator": {
+        "start_char": 0,
+        "paragraph": 1
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "SYN-KAOS:S1",
+      "material_id": "M1",
+      "quote": "收到短信回执",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 116,
+      "end_char": 122,
+      "candidate_locations": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "segment_start": 116,
+          "segment_end": 122,
+          "start_char": 116,
+          "end_char": 122
+        }
+      ],
+      "original_locator": {
+        "start_char": 0,
+        "paragraph": 1
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0001",
+      "source_id": "SYN-KAOS:S1",
+      "material_id": "M1",
+      "quote": "有效申请得到完整登记、有效回执送达，两项都满足即可实现上述目标。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 44,
+      "end_char": 76,
+      "candidate_locations": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "segment_start": 44,
+          "segment_end": 76,
+          "start_char": 44,
+          "end_char": 76
+        }
+      ],
+      "original_locator": {
+        "start_char": 0,
+        "paragraph": 1
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0002",
+      "source_id": "SYN-KAOS:S1",
+      "material_id": "M1",
+      "quote": "回执允许通过邮件或短信送达，任一种渠道送达都算完成。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 77,
+      "end_char": 103,
+      "candidate_locations": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "segment_start": 77,
+          "segment_end": 103,
+          "start_char": 77,
+          "end_char": 103
+        }
+      ],
+      "original_locator": {
+        "start_char": 0,
+        "paragraph": 1
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0003",
+      "source_id": "SYN-KAOS:S1",
+      "material_id": "M1",
+      "quote": "回执允许通过邮件或短信送达，任一种渠道送达都算完成。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 77,
+      "end_char": 103,
+      "candidate_locations": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "segment_start": 77,
+          "segment_end": 103,
+          "start_char": 77,
+          "end_char": 103
+        }
+      ],
+      "original_locator": {
+        "start_char": 0,
+        "paragraph": 1
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "issues": [
+    {
+      "target_type": "model",
+      "target_id": "SYN-KAOS-goal-model",
+      "message": "前轮整体补充（请核对）：工程模拟反馈，不是用户意见或人工认可。",
+      "blocking": false
+    }
+  ],
+  "limitations": [
+    "本示例为合成资料与开发判断，用于审核新版表达方式，不代表真实资料准确率。"
+  ],
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "91262c318e6513f8d1f0313b2f63934ede083cafa9eb2388d4d760b175f29621"
+    },
+    {
+      "path": "attachments/judgments.json",
+      "sha256": "b4b694cc7b20bc536e67b7d05be7122fda8a2377b1684129d8a118f23d8206a9"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "2d5610dba8bc1576aeb161f061b580afd709baf92da9774b48441c20721a9b49"
+    },
+    {
+      "path": "attachments/kaos-decisions.json",
+      "sha256": "13c6cd45f0aeafaa5ec376be70ce82e44435629bea5e3952b747955ebc8f075c"
+    },
+    {
+      "path": "attachments/previous-model.json",
+      "sha256": "4c46c013b30021e11ba32bca3405cf9302bddecf85b85027c2478ac7e995bdda"
+    },
+    {
+      "path": "attachments/review-feedback.json",
+      "sha256": "0661cabd92d8bf481f2afae6372301aaa5be0c794ae794c53db9991f6256d0a6"
+    }
+  ],
+  "review": {
+    "status": "pending"
+  },
+  "changes": [
+    {
+      "kind": "rebuild_after_feedback",
+      "feedback_sha256": "cf1497864b07a70f7bb3c82fcad1c7719824d8e7a18a442881caf4d28170f47e",
+      "before_goals": [
+        {
+          "goal_id": "G1",
+          "statement": "有效申请得到登记，并收到有效回执",
+          "actor": "用户",
+          "conditions": [],
+          "origin": "explicit",
+          "inference": null,
+          "support": {
+            "supported_parts": [
+              "有效申请得到登记，并收到有效回执"
+            ],
+            "unsupported_parts": [],
+            "assumptions": [],
+            "reasoning_steps": [],
+            "label": "direct",
+            "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+          },
+          "evidence_ids": [
+            "E0001"
+          ]
+        },
+        {
+          "goal_id": "G2",
+          "statement": "有效申请得到完整登记",
+          "actor": "用户",
+          "conditions": [],
+          "origin": "explicit",
+          "inference": null,
+          "support": {
+            "supported_parts": [
+              "有效申请得到完整登记"
+            ],
+            "unsupported_parts": [],
+            "assumptions": [],
+            "reasoning_steps": [],
+            "label": "direct",
+            "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+          },
+          "evidence_ids": [
+            "E0002"
+          ]
+        },
+        {
+          "goal_id": "G3",
+          "statement": "有效回执送达",
+          "actor": "用户",
+          "conditions": [],
+          "origin": "explicit",
+          "inference": null,
+          "support": {
+            "supported_parts": [
+              "有效回执送达"
+            ],
+            "unsupported_parts": [],
+            "assumptions": [],
+            "reasoning_steps": [],
+            "label": "direct",
+            "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+          },
+          "evidence_ids": [
+            "E0003"
+          ]
+        },
+        {
+          "goal_id": "G4",
+          "statement": "收到邮件回执",
+          "actor": "用户",
+          "conditions": [],
+          "origin": "explicit",
+          "inference": null,
+          "support": {
+            "supported_parts": [
+              "收到邮件回执"
+            ],
+            "unsupported_parts": [],
+            "assumptions": [],
+            "reasoning_steps": [],
+            "label": "direct",
+            "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+          },
+          "evidence_ids": [
+            "E0004"
+          ]
+        },
+        {
+          "goal_id": "G5",
+          "statement": "收到短信回执",
+          "actor": "用户",
+          "conditions": [],
+          "origin": "explicit",
+          "inference": null,
+          "support": {
+            "supported_parts": [
+              "收到短信回执"
+            ],
+            "unsupported_parts": [],
+            "assumptions": [],
+            "reasoning_steps": [],
+            "label": "direct",
+            "rationale": "合成资料直接陈述该结果，本判断由开发者编制。"
+          },
+          "evidence_ids": [
+            "E0005"
+          ]
+        }
+      ],
+      "before_groups": [
+        {
+          "group_id": "F1",
+          "parent_id": "G1",
+          "child_ids": [
+            "G2",
+            "G3"
+          ],
+          "kind": "and",
+          "status": "supported",
+          "completeness": "complete",
+          "rationale": "原文明确说明登记和送达共同满足上层目标。",
+          "assumptions": [],
+          "evidence_ids": [
+            "K0001",
+            "E0001",
+            "E0002",
+            "E0003",
+            "E0004",
+            "E0005"
+          ]
+        },
+        {
+          "group_id": "F2",
+          "parent_id": "G3",
+          "child_ids": [
+            "G4"
+          ],
+          "kind": "and",
+          "status": "supported",
+          "completeness": "complete",
+          "rationale": "原文允许邮件作为一种完整送达方案。",
+          "assumptions": [
+            "邮件和短信均为本场景允许的回执渠道。"
+          ],
+          "evidence_ids": [
+            "K0002",
+            "E0001",
+            "E0002",
+            "E0003",
+            "E0004",
+            "E0005"
+          ]
+        },
+        {
+          "group_id": "F3",
+          "parent_id": "G3",
+          "child_ids": [
+            "G5"
+          ],
+          "kind": "and",
+          "status": "supported",
+          "completeness": "complete",
+          "rationale": "原文允许短信作为另一种完整送达方案。",
+          "assumptions": [
+            "邮件和短信均为本场景允许的回执渠道。"
+          ],
+          "evidence_ids": [
+            "K0003",
+            "E0001",
+            "E0002",
+            "E0003",
+            "E0004",
+            "E0005"
+          ]
+        }
+      ],
+      "removed_goal_ids": [],
+      "feedback_dispositions": [
+        {
+          "target_type": "group",
+          "target_id": "F2",
+          "status": "addressed",
+          "reason": "依据原文渠道说明重评，已补充该方案足以满足送达目标的解释；仍需人工审核。"
+        }
+      ]
+    }
+  ]
+}

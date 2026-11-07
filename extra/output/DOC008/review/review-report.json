@@ -1,0 +1,120 @@
+{
+  "schema_version": "model-review-draft-1",
+  "report_id": "REVIEW-f0df620b94c82c26",
+  "mode": "inspect",
+  "input_model": {
+    "file_sha256": "5bc25ac35732da008ae835cd0c9c53c0b57e46783d6004e00a26bc829fae1597",
+    "model_id": "DOC008-goal-model",
+    "version": "v0.1",
+    "core_sha256": "f0df620b94c82c262048f656b29d848a66cf801b53171ea6a69b49a49e2fe79e",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "checks": [
+    {
+      "check_id": "integrity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "共享契约、ID、引用、边方向、有向环和关系覆盖检查。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "scope",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查声明的文档范围及证据来源。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "lineage",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查目标与候选双向映射；不自行补造映射。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "representation",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "正向决策与可视化边一致。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "trace_validity",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "检查既有支持状态；不重新推断语义支持。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "attachments",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "核对附件安全路径、可取得性和实际字节哈希。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "human_records",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "只核对已提供意见的文件与版本绑定，不认证审核人身份。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "source_location",
+      "type": "deterministic",
+      "scope": "current_model",
+      "status": "passed",
+      "evidence": "按 Unicode 码点和半开区间核对原句。",
+      "execution": "python-stdlib"
+    },
+    {
+      "check_id": "semantic",
+      "type": "semantic",
+      "scope": "current_model",
+      "status": "not_run",
+      "evidence": "未调用独立语义审查模型；只保留上游判断与待审项。",
+      "execution": "not_run"
+    }
+  ],
+  "issues": [
+    {
+      "issue_id": "I-5c85d5ad0240",
+      "rule_id": "model_uncertain_relation",
+      "type": "semantic",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC008-G006",
+        "DOC008-G008"
+      ],
+      "evidence_ids": [],
+      "reason": "两者可能冲突也可能相容：T037 把「bare、no fluff」当作优点，倾向不加功能；T089-T093 又要求把私信与加好友拆开、减少菜单拥挤。若「拆分」只是重排现有元素则与精简一致，若需新增分区与设置项则相悖；受访者未就二者的取舍表态，无法裁决，故记为不确定。",
+      "suggested_action": "核对问题对象与原始依据，保留修订记录。",
+      "status": "needs_review"
+    }
+  ],
+  "summary": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "goal_count": 8,
+    "pair_count": 28,
+    "blocking_count": 0,
+    "needs_review_count": 1
+  },
+  "repair_attempts": [],
+  "unresolved_issue_ids": [
+    "I-5c85d5ad0240"
+  ],
+  "limitations": [
+    "结构检查不证明语义正确。",
+    "未执行独立语义审查；模型人工状态来自实际反馈，检查报告自身未获人工确认。"
+  ],
+  "model_human_review_status": "pending",
+  "review_status": "pending"
+}

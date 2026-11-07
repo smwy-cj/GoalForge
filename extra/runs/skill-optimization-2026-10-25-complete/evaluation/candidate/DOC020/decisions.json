@@ -1,0 +1,447 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "aba144c589d47e1e29427fca0bd76a3edeb17e41297d3fe0bdf0ef4dc06cf1fc",
+    "judgments_sha256": "bae9215fc001813b55f18d4db40fb6fa1427f05e5d47005e6c07a91b58655d94"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G023",
+      "child_ids": [
+        "G015",
+        "G026",
+        "G009"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Conservative spam handling, reliable alerts and separated accounts can help; the speaker expressly declines reliance when AI can miss importance.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T059",
+          "quote": "Yeah, I think it would be good to receive notification for some important messages. But I think the point is that for current application. There is no a very good way to identify important messages from the others. Yeah, so I don't. I would probably not want to rely on that. Unless it's really reliable. So, for example, if we have this function of AI not find me the important message. But sometimes AI would miss some important message, and for me it would probably be better to not fully rely on it. Yeah.",
+          "role": "basis",
+          "start_char": 16012,
+          "end_char": 16521
+        }
+      ],
+      "relation_ids": [
+        "R004",
+        "R009",
+        "R014"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "Correct classification and notification of a delivered recruiting message helps the person notice it.",
+          "outcome": "supports",
+          "rationale": "This limited constructed scenario explains why the candidate is plausible; it does not establish general sufficiency."
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "A registration or recruiting email may not arrive at all, or importance detection may miss it, despite those arrangements.",
+          "outcome": "counterexample",
+          "rationale": "The unresolved exception prevents supported/complete status; no extra goal is invented to patch the hierarchy."
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G024",
+      "child_ids": [
+        "G021",
+        "G022",
+        "G025"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Summaries, highlighting and a tentative batch digest may reduce reading effort but accuracy and completeness are unproven.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T053",
+          "quote": "Yeah, I would say, the routing test, I think, could be simplified is by reading all the emails. So just as I said, if we have, I assistant for that, that would be very helpful, because I spend a lot of time just reading every email.",
+          "role": "basis",
+          "start_char": 14742,
+          "end_char": 14974
+        }
+      ],
+      "relation_ids": [
+        "R011",
+        "R013"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "An accurate concise summary with salient details can save reading time.",
+          "outcome": "supports",
+          "rationale": "This limited constructed scenario explains why the candidate is plausible; it does not establish general sufficiency."
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "An omitted assessment restriction forces rereading or leads to wasted work; a batch summary may omit a message.",
+          "outcome": "counterexample",
+          "rationale": "The unresolved exception prevents supported/complete status; no extra goal is invented to patch the hierarchy."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "Joint sufficiency is unconfirmed: Conservative spam handling, reliable alerts and separated accounts can help; the speaker expressly declines reliance when AI can miss importance."
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "Joint sufficiency is unconfirmed: Summaries, highlighting and a tentative batch digest may reduce reading effort but accuracy and completeness are unproven."
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G004",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Marking important messages helps triage but follows and does not itself perform the unread-message review.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T015",
+          "quote": "Yeah, yeah, gotcha, gotcha. Yeah. So I think a typical flow that I use email is that, I open the browser. I get it into Gmail. And then I look at those mails that I haven't read, and I take a quick glance on every mail, and if that's something I think is important. I will 1st market. and then, if those are like trash or spam, I will just delete it. and then I will. Read those emails that that is important. And if there's some task I have to, I have to do after reply or something. But I couldn't do it now. I would just like tag it and then leave it there. and when I'm available I will check in and finish the task.",
+          "role": "basis",
+          "start_char": 3574,
+          "end_char": 4194
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G003",
+      "target_id": "G006",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The respondent first glances over unread mail, then reads important messages in detail.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T015",
+          "quote": "Yeah, yeah, gotcha, gotcha. Yeah. So I think a typical flow that I use email is that, I open the browser. I get it into Gmail. And then I look at those mails that I haven't read, and I take a quick glance on every mail, and if that's something I think is important. I will 1st market. and then, if those are like trash or spam, I will just delete it. and then I will. Read those emails that that is important. And if there's some task I have to, I have to do after reply or something. But I couldn't do it now. I would just like tag it and then leave it there. and when I'm available I will check in and finish the task.",
+          "role": "basis",
+          "start_char": 3574,
+          "end_char": 4194
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G007",
+      "target_id": "G038",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "When a reply cannot be done now, tagging records it before later completion.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T015",
+          "quote": "Yeah, yeah, gotcha, gotcha. Yeah. So I think a typical flow that I use email is that, I open the browser. I get it into Gmail. And then I look at those mails that I haven't read, and I take a quick glance on every mail, and if that's something I think is important. I will 1st market. and then, if those are like trash or spam, I will just delete it. and then I will. Read those emails that that is important. And if there's some task I have to, I have to do after reply or something. But I couldn't do it now. I would just like tag it and then leave it there. and when I'm available I will check in and finish the task.",
+          "role": "basis",
+          "start_char": 3574,
+          "end_char": 4194
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G009",
+      "target_id": "G023",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Separate accounts help isolate important recruiting or school mail, without ensuring delivery or attention.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T017",
+          "quote": "Yes, So the tips I follow myself to make sure that my inbox is manageable is by as I, as I said, I would delete those mails that are not that important to make it more clear, and also even for the the important males. But if the conversation has reached to the end. I also did it. And also, I use it. I, I do this by have separate emails. So for some emails, it's really important like, I use it for recruiting. I use it for receive the notification from schools for some emails. I use it to receive some special deals. So for those emails is that's important. Yeah. So that's kind of 2 strategy. I used.",
+          "role": "basis",
+          "start_char": 4816,
+          "end_char": 5420
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G010",
+      "target_id": "G037",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The described AI composition happens before the sender adjusts the output.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T019",
+          "quote": "Yes. So what did I usually do to write an email or respond to an email is that I would usually use AI assistant tool. Not necessarily in build assistant tool. So I would 1st list my main point. For example, I would I would list like my purpose. and then it like in 2 or 3 sentence. And then I would ask the AI Assistant tool to compose an email for me. and I would adjust it a little bit, and.",
+          "role": "basis",
+          "start_char": 6088,
+          "end_char": 6481
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G037",
+      "target_id": "G013",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The sender adjusts content or formatting before sending.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T021",
+          "quote": "Also adjust the font size and mark the marks. The sentence. mark the important sentence as bold, and then send it. yeah.",
+          "role": "basis",
+          "start_char": 6528,
+          "end_char": 6648
+        }
+      ]
+    },
+    {
+      "relation_id": "R007",
+      "source_id": "G011",
+      "target_id": "G013",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Font formatting is a described pre-send step, not a sufficient cause of sending.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T021",
+          "quote": "Also adjust the font size and mark the marks. The sentence. mark the important sentence as bold, and then send it. yeah.",
+          "role": "basis",
+          "start_char": 6528,
+          "end_char": 6648
+        }
+      ]
+    },
+    {
+      "relation_id": "R008",
+      "source_id": "G012",
+      "target_id": "G013",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Important sentences are made bold before the described send.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T021",
+          "quote": "Also adjust the font size and mark the marks. The sentence. mark the important sentence as bold, and then send it. yeah.",
+          "role": "basis",
+          "start_char": 6528,
+          "end_char": 6648
+        }
+      ]
+    },
+    {
+      "relation_id": "R009",
+      "source_id": "G015",
+      "target_id": "G023",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Avoiding erroneous spam placement helps avoid missed recruiting messages; missing mail can have other causes.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T027",
+          "quote": "Which is a little bit annoying to me. because I would rather receive some spans instead of ignoring some important messages. Yeah, I think that's 1 difficulties and another one would probably be of the function of unsending effort. An email. So, for for now I cause I use Gmail. And after you're sending an email, you could cancel the sending action in 3 seconds.",
+          "role": "basis",
+          "start_char": 8319,
+          "end_char": 8682
+        }
+      ]
+    },
+    {
+      "relation_id": "R010",
+      "source_id": "G019",
+      "target_id": "G010",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "A built-in assistant is explicitly proposed as a means to compose from short main-point input.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T037",
+          "quote": "Yes, I would definitely say, the feature I want is the AI assistance that is in bills in the email. So for example the ideal scenario would be if I just type. Dear Professor, what does the requirement for homework? One. Do we have to do? A or B, and it will just like compose and more like, well organized email for me. And also I, I I noticed this feature. Now, it's like when I said, Play attach is my resume, for example. But I didn't attach the resume. It will warn me before I send it. I think that is really good.",
+          "role": "basis",
+          "start_char": 11357,
+          "end_char": 11876
+        }
+      ]
+    },
+    {
+      "relation_id": "R011",
+      "source_id": "G021",
+      "target_id": "G024",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Summarization is explicitly suggested to reduce the time spent reading every message.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T053",
+          "quote": "Yeah, I would say, the routing test, I think, could be simplified is by reading all the emails. So just as I said, if we have, I assistant for that, that would be very helpful, because I spend a lot of time just reading every email.",
+          "role": "basis",
+          "start_char": 14742,
+          "end_char": 14974
+        }
+      ]
+    },
+    {
+      "relation_id": "R012",
+      "source_id": "G022",
+      "target_id": "G006",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Highlighting overlooked details supports careful reading but does not ensure understanding of the entire message.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T047",
+          "quote": "Yeah, and then I won't miss missed out some keywords. Ju, just I could give you an example. So I was received. I I received this online assessment from this company called Tiktok. And they send me this online assessment with the link. And then I read it. And I said, Okay, I gonna prepare for it. And then, after I prepare for it after after I done it, I saw there's a small line on in the email saying, like you, we don't recommend you to take this twice like the second time. And I have been taking it once already. So I just missed that night, and and I was like wasting some time. So yeah, I think it's quite.",
+          "role": "basis",
+          "start_char": 12939,
+          "end_char": 13552
+        }
+      ]
+    },
+    {
+      "relation_id": "R013",
+      "source_id": "G025",
+      "target_id": "G024",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Periodic batch summaries are tentatively accepted as one way to reduce reading effort.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T055",
+          "quote": "Yeah, that that could be one solution. Yeah.",
+          "role": "basis",
+          "start_char": 15489,
+          "end_char": 15533
+        }
+      ]
+    },
+    {
+      "relation_id": "R014",
+      "source_id": "G026",
+      "target_id": "G023",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "Reliable important-message alerts could reduce missed mail, with the acknowledged failure condition if detection misses an item.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T059",
+          "quote": "Yeah, I think it would be good to receive notification for some important messages. But I think the point is that for current application. There is no a very good way to identify important messages from the others. Yeah, so I don't. I would probably not want to rely on that. Unless it's really reliable. So, for example, if we have this function of AI not find me the important message. But sometimes AI would miss some important message, and for me it would probably be better to not fully rely on it. Yeah.",
+          "role": "basis",
+          "start_char": 16012,
+          "end_char": 16521
+        }
+      ]
+    },
+    {
+      "relation_id": "R015",
+      "source_id": "G029",
+      "target_id": "G030",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Only in the source-described scenario; endpoint conditions and defeasible preferences remain applicable."
+      ],
+      "assumptions": [],
+      "rationale": "The respondent says tag filtering can be done through searching; searching is the proposed means to obtain the filtered messages.",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T087",
+          "quote": "I say, the most important would definitely be searching. That's really important. I use it every day, and filtering by tags, or like I would say it's it could be done by searching, so I would say the second one will probably be scheduling.",
+          "role": "basis",
+          "start_char": 20014,
+          "end_char": 20253
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

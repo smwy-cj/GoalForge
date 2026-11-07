@@ -1,0 +1,2327 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC028-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "5dcf09b4221afb39b594c52fb1a76a2a597e2fea8d797e8d930810a58a4cba44"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "77d188c481778de844f18bbd5749ef438104c5acf4974ad2b1714292fc1a85f8"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "99fff378c09a8a933a049e956e124102ad6179b3f5e542f8de2ca5999d8b51a5"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "8336403cbac134a1f72ea0a195465db926b317b0ce9b2cb5a27893a990a79200"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC028"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC028-G001",
+      "statement": "用真实用户的亲历经验回答具体问题，比泛化搜索更贴合处境。",
+      "source_candidate_ids": [
+        "DOC028-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "自述这是使用 Reddit 的首要理由",
+        "对比对象：Google 只给泛化结果"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G002",
+      "statement": "卡在技术问题上时，用社区问答替代 Stack Overflow 求解。",
+      "source_candidate_ids": [
+        "DOC028-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "自述用途之一",
+        "场景：代码问题、需要他人思路"
+      ],
+      "evidence_ids": [
+        "E0004",
+        "E0005"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G003",
+      "statement": "在碎片时间里无目的地刷，满足好奇心、打发时间。",
+      "source_candidate_ids": [
+        "DOC028-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "没有预设目标时即为此模式",
+        "常见时段：吃饭、坐车"
+      ],
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G004",
+      "statement": "查本地或具体事件的信息（如所在城市万圣节怎么过）。",
+      "source_candidate_ids": [
+        "DOC028-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "做法：在城市 subreddit 内按关键词搜"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G005",
+      "statement": "保持匿名，发帖内容无法轻易追到本人。",
+      "source_candidate_ids": [
+        "DOC028-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "自述这是 Reddit 的核心卖点",
+        "机制：除用户名外不公开任何信息"
+      ],
+      "evidence_ids": [
+        "E0010",
+        "E0011"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G006",
+      "statement": "找到最对口的具体 subreddit 提问，以拿到更专业的回答。",
+      "source_candidate_ids": [
+        "DOC028-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "现状：subreddit 数量庞大且重叠，难找对",
+        "期望：用 AI 帮忙定位该发到哪个版块"
+      ],
+      "evidence_ids": [
+        "E0012",
+        "E0013",
+        "E0014"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G007",
+      "statement": "买产品前看到多方背景的平衡评价，而非清一色好评。",
+      "source_candidate_ids": [
+        "DOC028-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "对比：亚马逊多是好评，Reddit 有不同背景的人的看法",
+        "实例：买笔记本前做过大量调研"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G008",
+      "statement": "健康类问题只取常识性建议，不用于具体诊疗。",
+      "source_candidate_ids": [
+        "DOC028-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "渠道：AskDocs 等有医护回答的版块",
+        "边界：一般性问题可信，具体病症不信"
+      ],
+      "evidence_ids": [
+        "E0017",
+        "E0018"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G009",
+      "statement": "移动端要顺畅好用：能存草稿、能看清评论层级，别比第三方客户端差。",
+      "source_candidate_ids": [
+        "DOC028-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "现状：官方 App 慢且笨重，只能用桌面端",
+        "自评第三方套壳 App 反而更好"
+      ],
+      "evidence_ids": [
+        "E0019",
+        "E0020",
+        "E0021"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G010",
+      "statement": "看到的内容可信，靠版主与自动审核兜住质量。",
+      "source_candidate_ids": [
+        "DOC028-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "机制：自动机器人初筛 + 人工版主把关",
+        "判断：有人工介入比纯算法可靠"
+      ],
+      "evidence_ids": [
+        "E0022",
+        "E0023"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G011",
+      "statement": "按场景切换浏览形态：闲逛用卡片、检索用紧凑，并能按时间或热度排序。",
+      "source_candidate_ids": [
+        "DOC028-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "排序：new / top / trending / rising",
+        "视图：card / compact"
+      ],
+      "evidence_ids": [
+        "E0024",
+        "E0025",
+        "E0026"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G012",
+      "statement": "广告存在但不打断阅读，最好能完全去掉。",
+      "source_candidate_ids": [
+        "DOC028-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "评价：广告克制、位置固定、一次只有一条",
+        "他自己装了广告拦截，也考虑过买会员去广告"
+      ],
+      "evidence_ids": [
+        "E0027",
+        "E0028",
+        "E0029"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC028-G013",
+      "statement": "断网时仍能读已加载的帖子。",
+      "source_candidate_ids": [
+        "DOC028-C013"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，计算机专业学生，Reddit 桌面端用户）",
+      "context": [
+        "限制：不能刷新、不能发新帖",
+        "自评「not very comprehensive」"
+      ],
+      "evidence_ids": [
+        "E0030",
+        "E0031"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC028-G001",
+      "b": "DOC028-G002",
+      "label": "related",
+      "rationale": "两者都是「向有经验的人要答案」，技术求助只是其中一个专业领域；T003 把 Reddit 当 Stack Overflow 替代，依据仍是 G001 的亲历经验优于泛化结论。但 G002 有明确的技术正确性判据，G001 更依赖情境。",
+      "evidence_ids": [
+        "E0001",
+        "E0004"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC028-G001",
+      "b": "DOC028-G003",
+      "label": "related",
+      "rationale": "T009 把使用分成两种状态：有预设问题（G001 的搜索模式）与无预设目标（G003 的闲逛模式）。同一平台、两套行为，他自己做了明确区分。",
+      "evidence_ids": [
+        "E0001",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC028-G001",
+      "b": "DOC028-G004",
+      "label": "related",
+      "rationale": "T003 的万圣节例子本质也是「问有本地经验的人」，只是把范围收窄到城市版块。G004 是 G001 在地域维度上的具体化。",
+      "evidence_ids": [
+        "E0001",
+        "E0008"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC028-G001",
+      "b": "DOC028-G005",
+      "label": "related",
+      "rationale": "T011 把匿名列为平台核心价值；匿名使他能问出不便具名的问题（求职、健康、职业困惑），这正是 G001 的适用场景。但匿名是条件，不是答案本身。",
+      "evidence_ids": [
+        "E0001",
+        "E0010"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC028-G001",
+      "b": "DOC028-G006",
+      "label": "none",
+      "rationale": "DOC028-G001 的对象是用亲历经验答具体问题（T005），DOC028-G006 的对象是找到最对口 subreddit（T051/T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC028-G001",
+      "b": "DOC028-G007",
+      "label": "related",
+      "rationale": "T033 说 Reddit 的评价优势正是「不同背景的人的真实体验」，与 G001 的「personal experiences over facts」同一逻辑，只是对象换成商品。",
+      "evidence_ids": [
+        "E0001",
+        "E0015"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC028-G001",
+      "b": "DOC028-G008",
+      "label": "related",
+      "rationale": "T035 的健康咨询同样是「向有经验者提问」，但他主动划了边界：只取常识、不用于具体诊疗。说明 G001 的适用范围有领域差异。",
+      "evidence_ids": [
+        "E0001",
+        "E0017"
+      ],
+      "conditions": [
+        "G008 仅限常识性问题"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC028-G001",
+      "b": "DOC028-G009",
+      "label": "none",
+      "rationale": "DOC028-G001 的对象是用亲历经验答具体问题（T005），DOC028-G009 的对象是移动端顺畅（T027/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC028-G001",
+      "b": "DOC028-G010",
+      "label": "related",
+      "rationale": "T029 说帖子可信靠版主把关——如果内容不可信，G001 要的「可用经验」就不成立。但 G010 是质量保障机制，G001 是内容诉求。",
+      "evidence_ids": [
+        "E0001",
+        "E0022"
+      ],
+      "conditions": [
+        "G001 的可信度依赖 G010"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC028-G001",
+      "b": "DOC028-G011",
+      "label": "none",
+      "rationale": "DOC028-G001 的对象是用亲历经验答具体问题（T005），DOC028-G011 的对象是视图与排序可切换（T041/T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC028-G001",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G001 的对象是用亲历经验答具体问题（T005），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC028-G001",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G001 的对象是用亲历经验答具体问题（T005），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC028-G002",
+      "b": "DOC028-G003",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G003 的对象是碎片时间闲逛（T003/T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC028-G002",
+      "b": "DOC028-G004",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G004 的对象是查本地事件信息（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC028-G002",
+      "b": "DOC028-G005",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G005 的对象是保持匿名（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC028-G002",
+      "b": "DOC028-G006",
+      "label": "related",
+      "rationale": "T059 举的例子（发在泛版 food 可能没人答，发在细分版更可能有懂行的人回）与 G002 的处境一致：技术问题也需落到对口版块才有人接。但 G006 是所有提问的通用前置。",
+      "evidence_ids": [
+        "E0004",
+        "E0012"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC028-G002",
+      "b": "DOC028-G007",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G007 的对象是买前看平衡评价（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC028-G002",
+      "b": "DOC028-G008",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G008 的对象是健康常识咨询（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC028-G002",
+      "b": "DOC028-G009",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G009 的对象是移动端顺畅（T027/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC028-G002",
+      "b": "DOC028-G010",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G010 的对象是内容可信靠审核（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC028-G002",
+      "b": "DOC028-G011",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G011 的对象是视图与排序可切换（T041/T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC028-G002",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC028-G002",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G002 的对象是技术问题求助（T003），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC028-G003",
+      "b": "DOC028-G004",
+      "label": "none",
+      "rationale": "DOC028-G003 的对象是碎片时间闲逛（T003/T025），DOC028-G004 的对象是查本地事件信息（T003）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC028-G003",
+      "b": "DOC028-G005",
+      "label": "none",
+      "rationale": "DOC028-G003 的对象是碎片时间闲逛（T003/T025），DOC028-G005 的对象是保持匿名（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC028-G003",
+      "b": "DOC028-G006",
+      "label": "none",
+      "rationale": "DOC028-G003 的对象是碎片时间闲逛（T003/T025），DOC028-G006 的对象是找到最对口 subreddit（T051/T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC028-G003",
+      "b": "DOC028-G007",
+      "label": "none",
+      "rationale": "DOC028-G003 的对象是碎片时间闲逛（T003/T025），DOC028-G007 的对象是买前看平衡评价（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC028-G003",
+      "b": "DOC028-G008",
+      "label": "none",
+      "rationale": "DOC028-G003 的对象是碎片时间闲逛（T003/T025），DOC028-G008 的对象是健康常识咨询（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC028-G003",
+      "b": "DOC028-G009",
+      "label": "none",
+      "rationale": "DOC028-G003 的对象是碎片时间闲逛（T003/T025），DOC028-G009 的对象是移动端顺畅（T027/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC028-G003",
+      "b": "DOC028-G010",
+      "label": "none",
+      "rationale": "DOC028-G003 的对象是碎片时间闲逛（T003/T025），DOC028-G010 的对象是内容可信靠审核（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC028-G003",
+      "b": "DOC028-G011",
+      "label": "related",
+      "rationale": "T043 直接按使用模式选视图：闲逛用卡片、检索用紧凑。G011 是 G003 的界面适配手段，但 G011 也服务于检索场景。",
+      "evidence_ids": [
+        "E0006",
+        "E0026"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC028-G003",
+      "b": "DOC028-G012",
+      "label": "related",
+      "rationale": "T045 说广告只出现在首页且位置固定——受影响最直接的正是无目标浏览（G003）这种长时间停留在信息流的行为。但 G012 是干扰控制，G003 是使用动机。",
+      "evidence_ids": [
+        "E0027",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC028-G003",
+      "b": "DOC028-G013",
+      "label": "related",
+      "rationale": "T039 说断网时只能读已缓存的 feed——可用的正是浏览模式，不能发帖也就做不了 G001 的提问。两者是同一能力在不同网络条件下的边界。",
+      "evidence_ids": [
+        "E0030",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC028-G004",
+      "b": "DOC028-G005",
+      "label": "none",
+      "rationale": "DOC028-G004 的对象是查本地事件信息（T003），DOC028-G005 的对象是保持匿名（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC028-G004",
+      "b": "DOC028-G006",
+      "label": "none",
+      "rationale": "DOC028-G004 的对象是查本地事件信息（T003），DOC028-G006 的对象是找到最对口 subreddit（T051/T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC028-G004",
+      "b": "DOC028-G007",
+      "label": "none",
+      "rationale": "DOC028-G004 的对象是查本地事件信息（T003），DOC028-G007 的对象是买前看平衡评价（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC028-G004",
+      "b": "DOC028-G008",
+      "label": "none",
+      "rationale": "DOC028-G004 的对象是查本地事件信息（T003），DOC028-G008 的对象是健康常识咨询（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC028-G004",
+      "b": "DOC028-G009",
+      "label": "none",
+      "rationale": "DOC028-G004 的对象是查本地事件信息（T003），DOC028-G009 的对象是移动端顺畅（T027/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC028-G004",
+      "b": "DOC028-G010",
+      "label": "none",
+      "rationale": "DOC028-G004 的对象是查本地事件信息（T003），DOC028-G010 的对象是内容可信靠审核（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC028-G004",
+      "b": "DOC028-G011",
+      "label": "none",
+      "rationale": "DOC028-G004 的对象是查本地事件信息（T003），DOC028-G011 的对象是视图与排序可切换（T041/T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC028-G004",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G004 的对象是查本地事件信息（T003），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC028-G004",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G004 的对象是查本地事件信息（T003），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC028-G005",
+      "b": "DOC028-G006",
+      "label": "none",
+      "rationale": "DOC028-G005 的对象是保持匿名（T011），DOC028-G006 的对象是找到最对口 subreddit（T051/T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC028-G005",
+      "b": "DOC028-G007",
+      "label": "none",
+      "rationale": "DOC028-G005 的对象是保持匿名（T011），DOC028-G007 的对象是买前看平衡评价（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC028-G005",
+      "b": "DOC028-G008",
+      "label": "none",
+      "rationale": "DOC028-G005 的对象是保持匿名（T011），DOC028-G008 的对象是健康常识咨询（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC028-G005",
+      "b": "DOC028-G009",
+      "label": "none",
+      "rationale": "DOC028-G005 的对象是保持匿名（T011），DOC028-G009 的对象是移动端顺畅（T027/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC028-G005",
+      "b": "DOC028-G010",
+      "label": "none",
+      "rationale": "DOC028-G005 的对象是保持匿名（T011），DOC028-G010 的对象是内容可信靠审核（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC028-G005",
+      "b": "DOC028-G011",
+      "label": "none",
+      "rationale": "DOC028-G005 的对象是保持匿名（T011），DOC028-G011 的对象是视图与排序可切换（T041/T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC028-G005",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G005 的对象是保持匿名（T011），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC028-G005",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G005 的对象是保持匿名（T011），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC028-G006",
+      "b": "DOC028-G007",
+      "label": "none",
+      "rationale": "DOC028-G006 的对象是找到最对口 subreddit（T051/T059），DOC028-G007 的对象是买前看平衡评价（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC028-G006",
+      "b": "DOC028-G008",
+      "label": "none",
+      "rationale": "DOC028-G006 的对象是找到最对口 subreddit（T051/T059），DOC028-G008 的对象是健康常识咨询（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC028-G006",
+      "b": "DOC028-G009",
+      "label": "none",
+      "rationale": "DOC028-G006 的对象是找到最对口 subreddit（T051/T059），DOC028-G009 的对象是移动端顺畅（T027/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC028-G006",
+      "b": "DOC028-G010",
+      "label": "related",
+      "rationale": "T029 与 T057 都说内容质量「取决于 subreddit」：版主强则帖子可靠。而 G006 要找的正是这类版块，两者互为条件——找到对口版块才有强审核，强审核才让对口版块的回答可信。",
+      "evidence_ids": [
+        "E0012",
+        "E0022"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC028-G006",
+      "b": "DOC028-G011",
+      "label": "none",
+      "rationale": "DOC028-G006 的对象是找到最对口 subreddit（T051/T059），DOC028-G011 的对象是视图与排序可切换（T041/T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC028-G006",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G006 的对象是找到最对口 subreddit（T051/T059），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC028-G006",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G006 的对象是找到最对口 subreddit（T051/T059），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC028-G007",
+      "b": "DOC028-G008",
+      "label": "none",
+      "rationale": "DOC028-G007 的对象是买前看平衡评价（T033），DOC028-G008 的对象是健康常识咨询（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC028-G007",
+      "b": "DOC028-G009",
+      "label": "none",
+      "rationale": "DOC028-G007 的对象是买前看平衡评价（T033），DOC028-G009 的对象是移动端顺畅（T027/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC028-G007",
+      "b": "DOC028-G010",
+      "label": "none",
+      "rationale": "DOC028-G007 的对象是买前看平衡评价（T033），DOC028-G010 的对象是内容可信靠审核（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC028-G007",
+      "b": "DOC028-G011",
+      "label": "none",
+      "rationale": "DOC028-G007 的对象是买前看平衡评价（T033），DOC028-G011 的对象是视图与排序可切换（T041/T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC028-G007",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G007 的对象是买前看平衡评价（T033），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC028-G007",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G007 的对象是买前看平衡评价（T033），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC028-G008",
+      "b": "DOC028-G009",
+      "label": "none",
+      "rationale": "DOC028-G008 的对象是健康常识咨询（T035），DOC028-G009 的对象是移动端顺畅（T027/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC028-G008",
+      "b": "DOC028-G010",
+      "label": "none",
+      "rationale": "DOC028-G008 的对象是健康常识咨询（T035），DOC028-G010 的对象是内容可信靠审核（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC028-G008",
+      "b": "DOC028-G011",
+      "label": "none",
+      "rationale": "DOC028-G008 的对象是健康常识咨询（T035），DOC028-G011 的对象是视图与排序可切换（T041/T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P067",
+      "a": "DOC028-G008",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G008 的对象是健康常识咨询（T035），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P068",
+      "a": "DOC028-G008",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G008 的对象是健康常识咨询（T035），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P069",
+      "a": "DOC028-G009",
+      "b": "DOC028-G010",
+      "label": "none",
+      "rationale": "DOC028-G009 的对象是移动端顺畅（T027/T063），DOC028-G010 的对象是内容可信靠审核（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P070",
+      "a": "DOC028-G009",
+      "b": "DOC028-G011",
+      "label": "related",
+      "rationale": "T027 抱怨移动端评论层级看不清，而 T043 说的卡片/紧凑视图正是同一类「呈现密度」问题。但 G009 是平台端体验，G011 是用户可调的偏好。",
+      "evidence_ids": [
+        "E0019",
+        "E0024"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P071",
+      "a": "DOC028-G009",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G009 的对象是移动端顺畅（T027/T063），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P072",
+      "a": "DOC028-G009",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G009 的对象是移动端顺畅（T027/T063），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P073",
+      "a": "DOC028-G010",
+      "b": "DOC028-G011",
+      "label": "none",
+      "rationale": "DOC028-G010 的对象是内容可信靠审核（T029），DOC028-G011 的对象是视图与排序可切换（T041/T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P074",
+      "a": "DOC028-G010",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G010 的对象是内容可信靠审核（T029），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P075",
+      "a": "DOC028-G010",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G010 的对象是内容可信靠审核（T029），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P076",
+      "a": "DOC028-G011",
+      "b": "DOC028-G012",
+      "label": "none",
+      "rationale": "DOC028-G011 的对象是视图与排序可切换（T041/T043），DOC028-G012 的对象是广告不干扰（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P077",
+      "a": "DOC028-G011",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G011 的对象是视图与排序可切换（T041/T043），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P078",
+      "a": "DOC028-G012",
+      "b": "DOC028-G013",
+      "label": "none",
+      "rationale": "DOC028-G012 的对象是广告不干扰（T045），DOC028-G013 的对象是离线可读（T039）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G001",
+      "b": "DOC028-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P002",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G001",
+      "b": "DOC028-G003"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P003",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G001",
+      "b": "DOC028-G004"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P004",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G001",
+      "b": "DOC028-G005"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P006",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G001",
+      "b": "DOC028-G007"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P007",
+      "conditions": [
+        "G008 仅限常识性问题"
+      ],
+      "review_status": "pending",
+      "a": "DOC028-G001",
+      "b": "DOC028-G008"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P009",
+      "conditions": [
+        "G001 的可信度依赖 G010"
+      ],
+      "review_status": "pending",
+      "a": "DOC028-G001",
+      "b": "DOC028-G010"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P016",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G002",
+      "b": "DOC028-G006"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P031",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G003",
+      "b": "DOC028-G011"
+    },
+    {
+      "edge_id": "R010",
+      "type": "related",
+      "decision_id": "P032",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G003",
+      "b": "DOC028-G012"
+    },
+    {
+      "edge_id": "R011",
+      "type": "related",
+      "decision_id": "P033",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G003",
+      "b": "DOC028-G013"
+    },
+    {
+      "edge_id": "R012",
+      "type": "related",
+      "decision_id": "P054",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G006",
+      "b": "DOC028-G010"
+    },
+    {
+      "edge_id": "R013",
+      "type": "related",
+      "decision_id": "P070",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC028-G009",
+      "b": "DOC028-G011"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC028:S006",
+      "material_id": "M001",
+      "quote": "I get personal experiences over facts",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1985,
+      "end_char": 2022,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S006",
+          "segment_start": 524,
+          "segment_end": 561,
+          "start_char": 1985,
+          "end_char": 2022
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 1461,
+        "end_char": 2304
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC028:S006",
+      "material_id": "M001",
+      "quote": "these personal experiences are mostly legitimate",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2028,
+      "end_char": 2076,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S006",
+          "segment_start": 567,
+          "segment_end": 615,
+          "start_char": 2028,
+          "end_char": 2076
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 1461,
+        "end_char": 2304
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC028:S006",
+      "material_id": "M001",
+      "quote": "to get more targeted results to the problem that I'm facing",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2244,
+      "end_char": 2303,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S006",
+          "segment_start": 783,
+          "segment_end": 842,
+          "start_char": 2244,
+          "end_char": 2303
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 1461,
+        "end_char": 2304
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC028:S004",
+      "material_id": "M001",
+      "quote": "I also use Reddit as an alternative for stack overflow",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1007,
+      "end_char": 1061,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S004",
+          "segment_start": 758,
+          "segment_end": 812,
+          "start_char": 1007,
+          "end_char": 1061
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 249,
+        "end_char": 1323
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC028:S004",
+      "material_id": "M001",
+      "quote": "I use those when I'm stuck on a problem",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1155,
+      "end_char": 1194,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S004",
+          "segment_start": 906,
+          "segment_end": 945,
+          "start_char": 1155,
+          "end_char": 1194
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 249,
+        "end_char": 1323
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC028:S004",
+      "material_id": "M001",
+      "quote": "I log in just to kill some time",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 807,
+      "end_char": 838,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S004",
+          "segment_start": 558,
+          "segment_end": 589,
+          "start_char": 807,
+          "end_char": 838
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 249,
+        "end_char": 1323
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC028:S026",
+      "material_id": "M001",
+      "quote": "it's usually when I have like some downtime",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12935,
+      "end_char": 12978,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S026",
+          "segment_start": 227,
+          "segment_end": 270,
+          "start_char": 12935,
+          "end_char": 12978
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 12708,
+        "end_char": 13558
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC028:S004",
+      "material_id": "M001",
+      "quote": "I browse my city's subreddit with keyword",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 616,
+      "end_char": 657,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S004",
+          "segment_start": 367,
+          "segment_end": 408,
+          "start_char": 616,
+          "end_char": 657
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 249,
+        "end_char": 1323
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC028:S004",
+      "material_id": "M001",
+      "quote": "I wanted to know what happens during Halloween",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 565,
+      "end_char": 611,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S004",
+          "segment_start": 316,
+          "segment_end": 362,
+          "start_char": 565,
+          "end_char": 611
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 249,
+        "end_char": 1323
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC028:S012",
+      "material_id": "M001",
+      "quote": "the USP. Of Reddit is anonymity",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5548,
+      "end_char": 5579,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S012",
+          "segment_start": 344,
+          "segment_end": 375,
+          "start_char": 5548,
+          "end_char": 5579
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 5204,
+        "end_char": 6527
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC028:S012",
+      "material_id": "M001",
+      "quote": "it's really hard to trace a post back to the person",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5584,
+      "end_char": 5635,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S012",
+          "segment_start": 380,
+          "segment_end": 431,
+          "start_char": 5584,
+          "end_char": 5635
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 5204,
+        "end_char": 6527
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC028:S052",
+      "material_id": "M001",
+      "quote": "the ability to find a subreddit is quite complicated",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 26322,
+      "end_char": 26374,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S052",
+          "segment_start": 446,
+          "segment_end": 498,
+          "start_char": 26322,
+          "end_char": 26374
+        }
+      ],
+      "original_locator": {
+        "line_start": 52,
+        "line_end": 52,
+        "start_char": 25876,
+        "end_char": 26838
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC028:S060",
+      "material_id": "M001",
+      "quote": "there's much more value in posting in a specific subreddit",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 29909,
+      "end_char": 29967,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S060",
+          "segment_start": 547,
+          "segment_end": 605,
+          "start_char": 29909,
+          "end_char": 29967
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 29362,
+        "end_char": 30088
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC028:S060",
+      "material_id": "M001",
+      "quote": "a geni tool to find a particular subreddit",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 30045,
+      "end_char": 30087,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S060",
+          "segment_start": 683,
+          "segment_end": 725,
+          "start_char": 30045,
+          "end_char": 30087
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 29362,
+        "end_char": 30088
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC028:S034",
+      "material_id": "M001",
+      "quote": "Reddit is more of a balanced perspective",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17851,
+      "end_char": 17891,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S034",
+          "segment_start": 293,
+          "segment_end": 333,
+          "start_char": 17851,
+          "end_char": 17891
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 17558,
+        "end_char": 18356
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC028:S034",
+      "material_id": "M001",
+      "quote": "I've made a lot of purchase decisions because of reviews I've seen on Reddit",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18279,
+      "end_char": 18355,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S034",
+          "segment_start": 721,
+          "segment_end": 797,
+          "start_char": 18279,
+          "end_char": 18355
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 17558,
+        "end_char": 18356
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC028:S036",
+      "material_id": "M001",
+      "quote": "it's good for general health, related questions",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19319,
+      "end_char": 19366,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S036",
+          "segment_start": 774,
+          "segment_end": 821,
+          "start_char": 19319,
+          "end_char": 19366
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 18545,
+        "end_char": 19616
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC028:S036",
+      "material_id": "M001",
+      "quote": "I would not trust for health, related things specific",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19536,
+      "end_char": 19589,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S036",
+          "segment_start": 991,
+          "segment_end": 1044,
+          "start_char": 19536,
+          "end_char": 19589
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 18545,
+        "end_char": 19616
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC028:S028",
+      "material_id": "M001",
+      "quote": "The mobile platform is quite slow and clunky",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13937,
+      "end_char": 13981,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S028",
+          "segment_start": 145,
+          "segment_end": 189,
+          "start_char": 13937,
+          "end_char": 13981
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 13792,
+        "end_char": 14741
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC028:S028",
+      "material_id": "M001",
+      "quote": "you can't save it as a draft which you can do on desktop",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14275,
+      "end_char": 14331,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S028",
+          "segment_start": 483,
+          "segment_end": 539,
+          "start_char": 14275,
+          "end_char": 14331
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 13792,
+        "end_char": 14741
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC028:S064",
+      "material_id": "M001",
+      "quote": "the mobile app ui again should be much better",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 30737,
+      "end_char": 30782,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S064",
+          "segment_start": 41,
+          "segment_end": 86,
+          "start_char": 30737,
+          "end_char": 30782
+        }
+      ],
+      "original_locator": {
+        "line_start": 64,
+        "line_end": 64,
+        "start_char": 30696,
+        "end_char": 31273
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC028:S030",
+      "material_id": "M001",
+      "quote": "if a community has a strong, a strong set of moderators, then the posts themselves are reliable",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15381,
+      "end_char": 15476,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S030",
+          "segment_start": 500,
+          "segment_end": 595,
+          "start_char": 15381,
+          "end_char": 15476
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 14881,
+        "end_char": 15693
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC028:S030",
+      "material_id": "M001",
+      "quote": "since there is a human element involved in moderating a community",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15561,
+      "end_char": 15626,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S030",
+          "segment_start": 680,
+          "segment_end": 745,
+          "start_char": 15561,
+          "end_char": 15626
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 14881,
+        "end_char": 15693
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC028:S042",
+      "material_id": "M001",
+      "quote": "you can sort posts by new by top by trending, rising",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21710,
+      "end_char": 21762,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S042",
+          "segment_start": 243,
+          "segment_end": 295,
+          "start_char": 21710,
+          "end_char": 21762
+        }
+      ],
+      "original_locator": {
+        "line_start": 42,
+        "line_end": 42,
+        "start_char": 21467,
+        "end_char": 21900
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC028:S044",
+      "material_id": "M001",
+      "quote": "you can have like card view or compact view",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 22101,
+      "end_char": 22144,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S044",
+          "segment_start": 83,
+          "segment_end": 126,
+          "start_char": 22101,
+          "end_char": 22144
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 22018,
+        "end_char": 22872
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC028:S044",
+      "material_id": "M001",
+      "quote": "when I said that, I'm just using it as a passive activity, I prefer, like card mode",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 22594,
+      "end_char": 22677,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S044",
+          "segment_start": 576,
+          "segment_end": 659,
+          "start_char": 22594,
+          "end_char": 22677
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 22018,
+        "end_char": 22872
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC028:S046",
+      "material_id": "M001",
+      "quote": "The ads are quite subtle",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 23510,
+      "end_char": 23534,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S046",
+          "segment_start": 476,
+          "segment_end": 500,
+          "start_char": 23510,
+          "end_char": 23534
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 23034,
+        "end_char": 24080
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC028:S046",
+      "material_id": "M001",
+      "quote": "There's only one at any given time",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 23851,
+      "end_char": 23885,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S046",
+          "segment_start": 817,
+          "segment_end": 851,
+          "start_char": 23851,
+          "end_char": 23885
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 23034,
+        "end_char": 24080
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC028:S046",
+      "material_id": "M001",
+      "quote": "it is better to have an ad free experience",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 23967,
+      "end_char": 24009,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S046",
+          "segment_start": 933,
+          "segment_end": 975,
+          "start_char": 23967,
+          "end_char": 24009
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 23034,
+        "end_char": 24080
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC028:S040",
+      "material_id": "M001",
+      "quote": "If you lose Internet connection it does save your feed",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 20435,
+      "end_char": 20489,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S040",
+          "segment_start": 109,
+          "segment_end": 163,
+          "start_char": 20435,
+          "end_char": 20489
+        }
+      ],
+      "original_locator": {
+        "line_start": 40,
+        "line_end": 40,
+        "start_char": 20326,
+        "end_char": 21208
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC028:S040",
+      "material_id": "M001",
+      "quote": "it won't allow you to make new posts, nor will it refresh the feed",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 20861,
+      "end_char": 20927,
+      "candidate_locations": [
+        {
+          "source_id": "DOC028:S040",
+          "segment_start": 535,
+          "segment_end": 601,
+          "start_char": 20861,
+          "end_char": 20927
+        }
+      ],
+      "original_locator": {
+        "line_start": 40,
+        "line_end": 40,
+        "start_char": 20326,
+        "end_char": 21208
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC028-C001",
+      "goal_id": "DOC028-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C002",
+      "goal_id": "DOC028-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C003",
+      "goal_id": "DOC028-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C004",
+      "goal_id": "DOC028-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C005",
+      "goal_id": "DOC028-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C006",
+      "goal_id": "DOC028-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C007",
+      "goal_id": "DOC028-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C008",
+      "goal_id": "DOC028-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C009",
+      "goal_id": "DOC028-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C010",
+      "goal_id": "DOC028-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C011",
+      "goal_id": "DOC028-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C012",
+      "goal_id": "DOC028-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC028-C013",
+      "goal_id": "DOC028-G013",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 78,
+    "evaluated_pairs": 78
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "fe267d00c4e2683b2dce053a407f56153c8ab722292d90e526cdeec087b16ddb",
+    "core_sha256": "af03b40fe6561369d315f9ed5ac21c8720a9878ed56483ac80fc8358c32ea5d2",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "3beb1367cf1fc6198694b816aa09880c66eccccc454983ab71533fc4e145ad32"
+}

@@ -1,0 +1,908 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC026",
+  "input_binding": {
+    "source_input_sha256": "fad23136a56eeabedb7dada8d5b2d65fc2eeaf2b5319765176f11c7468b204ed",
+    "source_sha256": "8d3e25ef9f7d7731190f22bf04d904cac903dc80b248658f575d362e34bedfaa",
+    "windows_sha256": "5850090d93d56cbebc59f0971bdf5e4b06e2053f553873b1bb67ab2975e04dd7",
+    "candidates_sha256": "f47d7a1d38e270862f3c9c4d3d1ae8410e8bab452d28b950eed2fb4a3f5d320e",
+    "extraction_sha256": "d0248a32fda6e12af7a9d12eb05025321f1a896be59f9f780b0479e4df03de96"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "deepseek-v4.1-flash",
+    "temperature": "unknown",
+    "budget": "1 initial pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 1,
+    "stop_reason": "完成全部 23 个窗口的首轮捕获与全篇回查；补查未发现需要新增依据的意图，剩余含混与推断项已记录为问题，按预算停止。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC026:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0009",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0010",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0011",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0012",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0013",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0014",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0015",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0016",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0017",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0018",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0019",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0020",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0021",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0022",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC026:W0023",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "回读全部 48 轮：核对采访者提问与受访者回答的对应关系、跨窗口重复陈述（T011/T013/T019/T021/T037/T041/T045）、指代（it/that/there 指向 Uber 功能或价格）、条件继承（工作出行、同行多人、不熟悉区域、多点行程）以及例外与相反证据（个人出行价格优先 vs 工作出行时间优先；偏好单点但仍偶用多点）。",
+    "source_ids": [
+      "DOC026:T000",
+      "DOC026:T001",
+      "DOC026:T002",
+      "DOC026:T003",
+      "DOC026:T004",
+      "DOC026:T005",
+      "DOC026:T006",
+      "DOC026:T007",
+      "DOC026:T008",
+      "DOC026:T009",
+      "DOC026:T010",
+      "DOC026:T011",
+      "DOC026:T012",
+      "DOC026:T013",
+      "DOC026:T014",
+      "DOC026:T015",
+      "DOC026:T016",
+      "DOC026:T017",
+      "DOC026:T018",
+      "DOC026:T019",
+      "DOC026:T020",
+      "DOC026:T021",
+      "DOC026:T022",
+      "DOC026:T023",
+      "DOC026:T024",
+      "DOC026:T025",
+      "DOC026:T026",
+      "DOC026:T027",
+      "DOC026:T028",
+      "DOC026:T029",
+      "DOC026:T030",
+      "DOC026:T031",
+      "DOC026:T032",
+      "DOC026:T033",
+      "DOC026:T034",
+      "DOC026:T035",
+      "DOC026:T036",
+      "DOC026:T037",
+      "DOC026:T038",
+      "DOC026:T039",
+      "DOC026:T040",
+      "DOC026:T041",
+      "DOC026:T042",
+      "DOC026:T043",
+      "DOC026:T044",
+      "DOC026:T045",
+      "DOC026:T046",
+      "DOC026:T047"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "原句直接陈述主要目标；保留“可为步行目的地”的常用情境。"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "时间/价格权衡与“一个半小时就走路”的例子在同一回答中，属同一决策意图。"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "最便宜选项与同行多人例外同句，保留为带例外的单一选择目标。"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "高价时等待是可选择做法，与“换更便宜选项”不同，单独保留。"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对预订时点的习惯描述（通常立即叫车、很少预约），未表达期望或改变意图。"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对地址联想功能的正面评价，属现有能力，无维持或改善要求。"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "流程描述中的信息用途说明，未表达独立目标。"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "预订卡住或最终提示找不到司机属障碍线索与抱怨，未提出改善要求；作为问题保留。"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "明确尽量不取消及原因（评分受损），属避免型目标。"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "uncertain",
+      "final_goal_ids": [],
+      "reason": "转写含混（wish 与 don't want 叠用），无法确定是否要求无需先开始行程即可取消，不设目标。"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G017"
+      ],
+      "reason": "工作或一般出行更愿租车，条件为步行便利度与驾驶需求，作为租车目标的主候选。"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "工作出行由公司报销时更看重时间并接受多付费用，条件明确。"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对日常通勤方式的现状说明（有免费公交卡），用于解释方式选择，无目标意图。"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G015"
+      ],
+      "reason": "明确不想在不熟悉的地方坐公交，属带条件的避免目标。"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G016"
+      ],
+      "reason": "公交线路复杂或耗时时更愿选 Uber，属方式选择偏好。"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G017"
+      ],
+      "reason": "一周假期需较多出行时租车更自由；与 C011 同一核心动作（租车），条件互补，合并为 G017。"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G014"
+      ],
+      "reason": "明确因糟糕体验已停止使用 Uber Eats，属避免/不使用目标。"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对糟糕体验的归因（时间估计差、客服差），服务于 C017 的目标，不单独成目标。"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "明确想和人说话且解决纠纷需要人工，保留为找人工客服的目标。"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "收费与报价一致的现状确认，无维持或改善要求。"
+    },
+    {
+      "candidate_id": "C021",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "明确更愿单一目的地而非多点，保留“多数时候”的强度。"
+    },
+    {
+      "candidate_id": "C022",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "多点行程中希望中途停靠尽快，属局部意图，单独保留。"
+    },
+    {
+      "candidate_id": "C023",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "受访者明确表示未使用过位置共享，无使用意图。"
+    },
+    {
+      "candidate_id": "C024",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "明确使用应用内通话/消息并认为很有帮助，尤其在上车点难找或繁忙时。"
+    },
+    {
+      "candidate_id": "C025",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G012"
+      ],
+      "reason": "由“以前容易、现在只有不用当前位置才容易”的落差与绕行做法推断改善意图；无直接改善请求。"
+    },
+    {
+      "candidate_id": "C026",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G011"
+      ],
+      "reason": "明确改点时直接告知司机而不在应用内改，采访者总结后受访者确认。"
+    },
+    {
+      "candidate_id": "C027",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G013"
+      ],
+      "reason": "明确回看车费用于分摊或报销，用途即目标结果。"
+    },
+    {
+      "candidate_id": "C028",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "评分与小费属已有选项下的常规操作描述，未表达独立目标。"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T005",
+          "quote": "the main goal is transportation to get from one place to another",
+          "role": "basis",
+          "start_char": 585,
+          "end_char": 649
+        }
+      ],
+      "candidate_ids": [
+        "C001"
+      ],
+      "final_goal_ids": [
+        "G001"
+      ],
+      "outcome": "represented",
+      "reason": "原句明确把交通位移称为主要目标。"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T007",
+          "quote": "it's usually the amount of time it will take or the price in deciding whether or not to take ride",
+          "role": "basis",
+          "start_char": 936,
+          "end_char": 1033
+        },
+        {
+          "source_id": "DOC026:T007",
+          "quote": "I'll just walk even if it's kind of far away",
+          "role": "basis",
+          "start_char": 1296,
+          "end_char": 1340
+        }
+      ],
+      "candidate_ids": [
+        "C002"
+      ],
+      "final_goal_ids": [
+        "G002"
+      ],
+      "outcome": "represented",
+      "reason": "时间与价格权衡及过久改走路在同一回答内。"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "I usually just go for The cheapest one, to be honest, unless if i'm going with more people",
+          "role": "basis",
+          "start_char": 2491,
+          "end_char": 2581
+        }
+      ],
+      "candidate_ids": [
+        "C003"
+      ],
+      "final_goal_ids": [
+        "G003"
+      ],
+      "outcome": "represented",
+      "reason": "最便宜选项与同行多人例外同句。"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "if the price was too high, then I can choose to wait",
+          "role": "basis",
+          "start_char": 2965,
+          "end_char": 3017
+        }
+      ],
+      "candidate_ids": [
+        "C004"
+      ],
+      "final_goal_ids": [
+        "G004"
+      ],
+      "outcome": "represented",
+      "reason": "高价时等待为可选做法。"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T011",
+          "quote": "a couple of different options pop up as I'm typing it, which is kind of helpful",
+          "role": "basis",
+          "start_char": 2204,
+          "end_char": 2283
+        }
+      ],
+      "candidate_ids": [
+        "C006"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "属对现有地址联想功能的正面评价，未提出要求。"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T013",
+          "quote": "sometimes when I click okay and try to book that driver, it will take a really long time to actually schedule it. And sometimes it will end up saying that can't find a driver",
+          "role": "basis",
+          "start_char": 3538,
+          "end_char": 3712
+        }
+      ],
+      "candidate_ids": [
+        "C008"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "障碍与抱怨，未表达改善要求，保留为问题而非目标。"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T013",
+          "quote": "I usually try not to cancel a ride because I think that that damages my like the drivers will see a rating of the passenger as well.",
+          "role": "basis",
+          "start_char": 3938,
+          "end_char": 4070
+        }
+      ],
+      "candidate_ids": [
+        "C009"
+      ],
+      "final_goal_ids": [
+        "G006"
+      ],
+      "outcome": "represented",
+      "reason": "避免取消及其评分原因。"
+    },
+    {
+      "check_id": "S8",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T015",
+          "quote": "I kind of wish that I don't want to just start a ride to cancel it.",
+          "role": "basis",
+          "start_char": 4448,
+          "end_char": 4515
+        }
+      ],
+      "candidate_ids": [
+        "C010"
+      ],
+      "final_goal_ids": [],
+      "outcome": "uncertain",
+      "reason": "转写含混，意图方向无法确定。"
+    },
+    {
+      "check_id": "S9",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T019",
+          "quote": "on the times where I have needed to to use a rideshare for work i usually care less about the price and more about the time in that case because my work is going to cover it",
+          "role": "basis",
+          "start_char": 5377,
+          "end_char": 5550
+        }
+      ],
+      "candidate_ids": [
+        "C012"
+      ],
+      "final_goal_ids": [
+        "G005"
+      ],
+      "outcome": "represented",
+      "reason": "工作出行由公司付费时的时间优先条件。"
+    },
+    {
+      "check_id": "S10",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T019",
+          "quote": "Most of the time when I book or when I'm traveling for work or just traveling in general, I would probably prefer to rent a car.",
+          "role": "basis",
+          "start_char": 5148,
+          "end_char": 5276
+        }
+      ],
+      "candidate_ids": [
+        "C011"
+      ],
+      "final_goal_ids": [
+        "G017"
+      ],
+      "outcome": "represented",
+      "reason": "对租车的总体偏好及依赖条件。"
+    },
+    {
+      "check_id": "S11",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T021",
+          "quote": "I don't want to take a bus in a place I'm not familiar with",
+          "role": "basis",
+          "start_char": 6262,
+          "end_char": 6321
+        }
+      ],
+      "candidate_ids": [
+        "C014"
+      ],
+      "final_goal_ids": [
+        "G015"
+      ],
+      "outcome": "represented",
+      "reason": "不熟悉区域避免公交的明确表述。"
+    },
+    {
+      "check_id": "S12",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T021",
+          "quote": "And so if it's complicated like that, I would probably prefer And Uber in that case.",
+          "role": "basis",
+          "start_char": 6588,
+          "end_char": 6672
+        }
+      ],
+      "candidate_ids": [
+        "C015"
+      ],
+      "final_goal_ids": [
+        "G016"
+      ],
+      "outcome": "represented",
+      "reason": "公交线路复杂时选 Uber 的偏好。"
+    },
+    {
+      "check_id": "S13",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T021",
+          "quote": "then it would make more sense and give me a little bit more freedom to rent a car than to do a ride share every time I want to go someplace.",
+          "role": "basis",
+          "start_char": 6854,
+          "end_char": 6994
+        }
+      ],
+      "candidate_ids": [
+        "C016"
+      ],
+      "final_goal_ids": [
+        "G017"
+      ],
+      "outcome": "represented",
+      "reason": "一周假期租车更自由的补充条件，与 C011 合并。"
+    },
+    {
+      "check_id": "S14",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T025",
+          "quote": "That is something that I have had bad experiences with, so I've stopped using it.",
+          "role": "basis",
+          "start_char": 7353,
+          "end_char": 7434
+        }
+      ],
+      "candidate_ids": [
+        "C017"
+      ],
+      "final_goal_ids": [
+        "G014"
+      ],
+      "outcome": "represented",
+      "reason": "已停止使用 Uber Eats 的明确表述。"
+    },
+    {
+      "check_id": "S15",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T031",
+          "quote": "I found it very difficult because I wanted to talk to a person",
+          "role": "basis",
+          "start_char": 8154,
+          "end_char": 8216
+        }
+      ],
+      "candidate_ids": [
+        "C019"
+      ],
+      "final_goal_ids": [
+        "G007"
+      ],
+      "outcome": "represented",
+      "reason": "解决纠纷时想找人工。"
+    },
+    {
+      "check_id": "S16",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T033",
+          "quote": "the amount of money that they charged me was the amount of money that they said that they were going to charge me",
+          "role": "basis",
+          "start_char": 9030,
+          "end_char": 9143
+        }
+      ],
+      "candidate_ids": [
+        "C020"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "收费一致的现状，无维持要求。"
+    },
+    {
+      "check_id": "S17",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T037",
+          "quote": "Most of the time, if I'm going to use Uber, I would prefer to just go to one location versus going to multiple ones.",
+          "role": "basis",
+          "start_char": 9755,
+          "end_char": 9871
+        }
+      ],
+      "candidate_ids": [
+        "C021"
+      ],
+      "final_goal_ids": [
+        "G008"
+      ],
+      "outcome": "represented",
+      "reason": "单一目的地偏好。"
+    },
+    {
+      "check_id": "S18",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T037",
+          "quote": "I always feel weird if I'm going to do that where one of the in-between stops takes too much time So I try to to do anything like that. I try to make it as quick as possible",
+          "role": "basis",
+          "start_char": 9938,
+          "end_char": 10111
+        }
+      ],
+      "candidate_ids": [
+        "C022"
+      ],
+      "final_goal_ids": [
+        "G009"
+      ],
+      "outcome": "represented",
+      "reason": "多点行程中途停靠尽快的局部意图。"
+    },
+    {
+      "check_id": "S19",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T037",
+          "quote": "I have not shared my location with somebody",
+          "role": "basis",
+          "start_char": 9667,
+          "end_char": 9710
+        }
+      ],
+      "candidate_ids": [
+        "C023"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "未使用位置共享，无意图。"
+    },
+    {
+      "check_id": "S20",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T039",
+          "quote": "Yeah, I have used that before. I actually find that very helpful.",
+          "role": "basis",
+          "start_char": 10467,
+          "end_char": 10532
+        }
+      ],
+      "candidate_ids": [
+        "C024"
+      ],
+      "final_goal_ids": [
+        "G010"
+      ],
+      "outcome": "represented",
+      "reason": "应用内联系司机被认为很有帮助。"
+    },
+    {
+      "check_id": "S21",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T041",
+          "quote": "It used to be relatively... easy if I'm remembering correctly. But now I think it's only really easy if you're not using your location from the start",
+          "role": "basis",
+          "start_char": 11505,
+          "end_char": 11654
+        }
+      ],
+      "candidate_ids": [
+        "C025"
+      ],
+      "final_goal_ids": [
+        "G012"
+      ],
+      "outcome": "represented",
+      "reason": "改点易用性落差，作为推断依据。"
+    },
+    {
+      "check_id": "S22",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T041",
+          "quote": "I think most of the time when I do want to change it, I give the driver a heads up instead of doing it on the app.",
+          "role": "basis",
+          "start_char": 12071,
+          "end_char": 12185
+        }
+      ],
+      "candidate_ids": [
+        "C026"
+      ],
+      "final_goal_ids": [
+        "G011"
+      ],
+      "outcome": "represented",
+      "reason": "改点时直接告知司机的做法。"
+    },
+    {
+      "check_id": "S23",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T045",
+          "quote": "I will go back And look at how much the ride was so that I could split split up the charge. Or if I'm doing it for work, then I can use that as a receipt to get reimbursed.",
+          "role": "basis",
+          "start_char": 12926,
+          "end_char": 13098
+        }
+      ],
+      "candidate_ids": [
+        "C027"
+      ],
+      "final_goal_ids": [
+        "G013"
+      ],
+      "outcome": "represented",
+      "reason": "行程后查看车费的两个用途。"
+    },
+    {
+      "check_id": "S24",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T045",
+          "quote": "they give you the option to rate the driver And you have the the option to tip the driver too",
+          "role": "basis",
+          "start_char": 12661,
+          "end_char": 12754
+        }
+      ],
+      "candidate_ids": [
+        "C028"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "评分与小费为现有选项下的常规操作。"
+    },
+    {
+      "check_id": "S25",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC026:T029",
+          "quote": "It was a mixture of a bad estimate poorly estimating the amount of time And then the customer service dealing with that was extraordinarily poor.",
+          "role": "basis",
+          "start_char": 7772,
+          "end_char": 7917
+        }
+      ],
+      "candidate_ids": [
+        "C018"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "对糟糕体验的归因，合并进 C017 的语境。"
+    }
+  ],
+  "limitations": [
+    "转写保留口语重复与断句，个别转写明显有误（如 T011 的 URAP、T021 的 prefer And Uber），按上下文理解为 Uber 与 prefer an Uber，细节判断存在风险。",
+    "T015 的 I kind of wish that I don't want to just start a ride to cancel it 语义含混，无法确定意图方向，未建目标。",
+    "仅一次访谈、单一受访者自述，没有产品侧行为数据或日志，无法核验其描述的实际功能表现。",
+    "未获得受访者对目标清单或模型的确认，全部目标与判断仍为待审状态。"
+  ]
+}

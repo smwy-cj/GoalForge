@@ -1,0 +1,2198 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC017-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "2cefb108699c75d22db86bb6b67a226b83b935cacd8c2cbe42ff953d877ca23c"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "5f4a97084fcf0d01db93c69e22aca34bdec4b25af1fb0f0d089a81ec02d8a8ac"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "f3cadba6b41302d31e6d7b8cba050b39fce7ea8f5ba26b78d40a8a7a7d15c0c3"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "3505a4e39af82d3d6a2a9a4fe67296abbc45b80efd0629d24291eb740e7035ef"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC017"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC017-G001",
+      "statement": "只收到与自身技能匹配的岗位（软件工程、机器学习等），不被无关岗位与陌生人打扰。",
+      "source_candidate_ids": [
+        "DOC017-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "可按关键词自定义搜索",
+        "曾经因推送不准而错过岗位"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G002",
+      "statement": "推送频率跟随求职状态：找工作时即时推送，不急时每周一次即可。",
+      "source_candidate_ids": [
+        "DOC017-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "背景：市场冷淡，每天只有一两条新岗位"
+      ],
+      "evidence_ids": [
+        "E0004",
+        "E0005"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G003",
+      "statement": "通过邮件接收岗位更新，邮件内信息精简且可直接投递。",
+      "source_candidate_ids": [
+        "DOC017-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "不排斥站内通知，但不愿把通知栏塞满"
+      ],
+      "evidence_ids": [
+        "E0006",
+        "E0007",
+        "E0008"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G004",
+      "statement": "按角色匹配度、薪资、地点、公司声誉的顺序权衡是否投递。",
+      "source_candidate_ids": [
+        "DOC017-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "自述为明确的优先级顺序"
+      ],
+      "evidence_ids": [
+        "E0009"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G005",
+      "statement": "岗位页给出现任员工评价、团队在做的具体工作与技术栈，并以列表/卡片等结构呈现。",
+      "source_candidate_ids": [
+        "DOC017-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "现状：LinkedIn 把大量文字堆在一起，需上下滚动才找到技术栈"
+      ],
+      "evidence_ids": [
+        "E0010",
+        "E0011"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G006",
+      "statement": "给出岗位要求与个人技能的匹配度百分比，作为投递依据。",
+      "source_candidate_ids": [
+        "DOC017-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "现状：借助第三方插件自行比对",
+        "LinkedIn 已有 AI 提示「你很适合」"
+      ],
+      "evidence_ids": [
+        "E0012",
+        "E0013"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G007",
+      "statement": "投递时自动带出已有资料，不必重填一遍。",
+      "source_candidate_ids": [
+        "DOC017-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "认可少量针对性的定制，但反对整体重填"
+      ],
+      "evidence_ids": [
+        "E0014",
+        "E0015"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G008",
+      "statement": "在求职平台内直接完成投递，不必跳到公司官网重填。",
+      "source_candidate_ids": [
+        "DOC017-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "现状：LinkedIn 投递仍跳转公司门户"
+      ],
+      "evidence_ids": [
+        "E0016",
+        "E0017"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G009",
+      "statement": "在门户内收藏并跟踪感兴趣的岗位，不必另开文档记录。",
+      "source_candidate_ids": [
+        "DOC017-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "现状：把 job id 记在 Notion 之类的文档里，周末统一处理"
+      ],
+      "evidence_ids": [
+        "E0018",
+        "E0019"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G010",
+      "statement": "只看到仍在招聘的岗位，不出现半年或一年前的过期信息。",
+      "source_candidate_ids": [
+        "DOC017-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "过期岗位会直接放弃投递"
+      ],
+      "evidence_ids": [
+        "E0020",
+        "E0021"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G011",
+      "statement": "能看到每次投递的当前状态，并得到可用于改进的反馈。",
+      "source_candidate_ids": [
+        "DOC017-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "按 1–10 评分时给 10 分",
+        "抱怨多数平台不提供任何反馈"
+      ],
+      "evidence_ids": [
+        "E0022",
+        "E0023",
+        "E0024"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G012",
+      "statement": "投递记录对他人不可见，也不同意向公开自己投了哪些岗位。",
+      "source_candidate_ids": [
+        "DOC017-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "理由：竞争压力下不想被同侪看到"
+      ],
+      "evidence_ids": [
+        "E0025",
+        "E0026"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC017-G013",
+      "statement": "AI 用于识别与筛选岗位，但不自动代写申请材料，需本人确认。",
+      "source_candidate_ids": [
+        "DOC017-C013"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，在校求职者，LinkedIn／Handshake 使用者）",
+      "context": [
+        "对 AI 写作持保留：不可靠，须本人核实"
+      ],
+      "evidence_ids": [
+        "E0027",
+        "E0028",
+        "E0029"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC017-G001",
+      "b": "DOC017-G002",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G002 的对象是推送频率随求职状态调整（T005）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC017-G001",
+      "b": "DOC017-G003",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC017-G001",
+      "b": "DOC017-G004",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC017-G001",
+      "b": "DOC017-G005",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC017-G001",
+      "b": "DOC017-G006",
+      "label": "related",
+      "rationale": "T033 说明匹配度百分比正是用来判断岗位是否符合技能，是 G001 的实现手段（把「匹配」量化）；但百分比只是筛选工具，不等于「只收匹配」这一结果。",
+      "evidence_ids": [
+        "E0001",
+        "E0012"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC017-G001",
+      "b": "DOC017-G007",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G007 的对象是投递复用已有资料（T073）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC017-G001",
+      "b": "DOC017-G008",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G008 的对象是站内完成投递（T061/T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC017-G001",
+      "b": "DOC017-G009",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC017-G001",
+      "b": "DOC017-G010",
+      "label": "related",
+      "rationale": "T071 把「过期岗位」与「不相关岗位」并列在同一抱怨里（not having a relevant or updated job list），二者共同构成「列表质量」；但一个是内容相关、一个是时效有效。",
+      "evidence_ids": [
+        "E0001",
+        "E0019"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC017-G001",
+      "b": "DOC017-G011",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G011 的对象是追踪投递状态与反馈（T105）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC017-G001",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC017-G001",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G001 的对象是只收匹配岗位、不受无关打扰（T003/T069），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC017-G002",
+      "b": "DOC017-G003",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC017-G002",
+      "b": "DOC017-G004",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC017-G002",
+      "b": "DOC017-G005",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC017-G002",
+      "b": "DOC017-G006",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G006 的对象是技能匹配度百分比（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC017-G002",
+      "b": "DOC017-G007",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G007 的对象是投递复用已有资料（T073）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC017-G002",
+      "b": "DOC017-G008",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G008 的对象是站内完成投递（T061/T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC017-G002",
+      "b": "DOC017-G009",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC017-G002",
+      "b": "DOC017-G010",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G010 的对象是只看到仍有效的岗位（T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC017-G002",
+      "b": "DOC017-G011",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G011 的对象是追踪投递状态与反馈（T105）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC017-G002",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC017-G002",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G002 的对象是推送频率随求职状态调整（T005），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC017-G003",
+      "b": "DOC017-G004",
+      "label": "none",
+      "rationale": "DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009），DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC017-G003",
+      "b": "DOC017-G005",
+      "label": "none",
+      "rationale": "DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009），DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC017-G003",
+      "b": "DOC017-G006",
+      "label": "none",
+      "rationale": "DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009），DOC017-G006 的对象是技能匹配度百分比（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC017-G003",
+      "b": "DOC017-G007",
+      "label": "none",
+      "rationale": "DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009），DOC017-G007 的对象是投递复用已有资料（T073）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC017-G003",
+      "b": "DOC017-G008",
+      "label": "related",
+      "rationale": "T009 与 T067 的动机一致：都不愿多次跳转。G003 把投递放进邮件，G008 把投递放进站内，是同一诉求的两个入口。",
+      "evidence_ids": [
+        "E0005",
+        "E0016"
+      ],
+      "conditions": [
+        "两者择一即可满足，不必同时具备"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC017-G003",
+      "b": "DOC017-G009",
+      "label": "none",
+      "rationale": "DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009），DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC017-G003",
+      "b": "DOC017-G010",
+      "label": "none",
+      "rationale": "DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009），DOC017-G010 的对象是只看到仍有效的岗位（T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC017-G003",
+      "b": "DOC017-G011",
+      "label": "none",
+      "rationale": "DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009），DOC017-G011 的对象是追踪投递状态与反馈（T105）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC017-G003",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC017-G003",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G003 的对象是邮件内精简呈现可一键投递（T007/T009），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC017-G004",
+      "b": "DOC017-G005",
+      "label": "related",
+      "rationale": "T019 的四项权衡因素需要 T021 的三类信息来支撑（角色匹配、公司声誉尤其依赖员工评价）；但一个是决策权重、一个是页面内容。",
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC017-G004",
+      "b": "DOC017-G006",
+      "label": "none",
+      "rationale": "DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019），DOC017-G006 的对象是技能匹配度百分比（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC017-G004",
+      "b": "DOC017-G007",
+      "label": "none",
+      "rationale": "DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019），DOC017-G007 的对象是投递复用已有资料（T073）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC017-G004",
+      "b": "DOC017-G008",
+      "label": "none",
+      "rationale": "DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019），DOC017-G008 的对象是站内完成投递（T061/T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC017-G004",
+      "b": "DOC017-G009",
+      "label": "none",
+      "rationale": "DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019），DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC017-G004",
+      "b": "DOC017-G010",
+      "label": "none",
+      "rationale": "DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019），DOC017-G010 的对象是只看到仍有效的岗位（T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC017-G004",
+      "b": "DOC017-G011",
+      "label": "none",
+      "rationale": "DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019），DOC017-G011 的对象是追踪投递状态与反馈（T105）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC017-G004",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC017-G004",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G004 的对象是按角色/薪资/地点/声誉权衡（T019），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC017-G005",
+      "b": "DOC017-G006",
+      "label": "related",
+      "rationale": "匹配度百分比属于岗位页可展示的信息之一，T023 要求这类信息结构化呈现；但百分比是算法输出，不属于 T021 列举的岗位事实。",
+      "evidence_ids": [
+        "E0009",
+        "E0012"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC017-G005",
+      "b": "DOC017-G007",
+      "label": "none",
+      "rationale": "DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023），DOC017-G007 的对象是投递复用已有资料（T073）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC017-G005",
+      "b": "DOC017-G008",
+      "label": "none",
+      "rationale": "DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023），DOC017-G008 的对象是站内完成投递（T061/T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC017-G005",
+      "b": "DOC017-G009",
+      "label": "none",
+      "rationale": "DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023），DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC017-G005",
+      "b": "DOC017-G010",
+      "label": "none",
+      "rationale": "DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023），DOC017-G010 的对象是只看到仍有效的岗位（T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC017-G005",
+      "b": "DOC017-G011",
+      "label": "none",
+      "rationale": "DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023），DOC017-G011 的对象是追踪投递状态与反馈（T105）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC017-G005",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC017-G005",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G005 的对象是岗位页含关键信息且结构化呈现（T021/T023），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC017-G006",
+      "b": "DOC017-G007",
+      "label": "none",
+      "rationale": "DOC017-G006 的对象是技能匹配度百分比（T033），DOC017-G007 的对象是投递复用已有资料（T073）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC017-G006",
+      "b": "DOC017-G008",
+      "label": "none",
+      "rationale": "DOC017-G006 的对象是技能匹配度百分比（T033），DOC017-G008 的对象是站内完成投递（T061/T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC017-G006",
+      "b": "DOC017-G009",
+      "label": "none",
+      "rationale": "DOC017-G006 的对象是技能匹配度百分比（T033），DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC017-G006",
+      "b": "DOC017-G010",
+      "label": "none",
+      "rationale": "DOC017-G006 的对象是技能匹配度百分比（T033），DOC017-G010 的对象是只看到仍有效的岗位（T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC017-G006",
+      "b": "DOC017-G011",
+      "label": "none",
+      "rationale": "DOC017-G006 的对象是技能匹配度百分比（T033），DOC017-G011 的对象是追踪投递状态与反馈（T105）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC017-G006",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G006 的对象是技能匹配度百分比（T033），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC017-G006",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G006 的对象是技能匹配度百分比（T033），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC017-G007",
+      "b": "DOC017-G008",
+      "label": "related",
+      "rationale": "T067 说明站内投递的前提是「所有资料已经从求职门户转过去」，资料复用是站内投递能成立的基础。",
+      "evidence_ids": [
+        "E0014",
+        "E0016"
+      ],
+      "conditions": [
+        "依赖平台间资料同步能力"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC017-G007",
+      "b": "DOC017-G009",
+      "label": "none",
+      "rationale": "DOC017-G007 的对象是投递复用已有资料（T073），DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC017-G007",
+      "b": "DOC017-G010",
+      "label": "none",
+      "rationale": "DOC017-G007 的对象是投递复用已有资料（T073），DOC017-G010 的对象是只看到仍有效的岗位（T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC017-G007",
+      "b": "DOC017-G011",
+      "label": "none",
+      "rationale": "DOC017-G007 的对象是投递复用已有资料（T073），DOC017-G011 的对象是追踪投递状态与反馈（T105）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC017-G007",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G007 的对象是投递复用已有资料（T073），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC017-G007",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G007 的对象是投递复用已有资料（T073），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC017-G008",
+      "b": "DOC017-G009",
+      "label": "related",
+      "rationale": "收藏与投递都发生在站内，T077 明确理由是「不想跳到另一个应用」；但收藏是投递前的候选池，投递是最终动作。",
+      "evidence_ids": [
+        "E0016",
+        "E0017"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC017-G008",
+      "b": "DOC017-G010",
+      "label": "none",
+      "rationale": "DOC017-G008 的对象是站内完成投递（T061/T067），DOC017-G010 的对象是只看到仍有效的岗位（T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC017-G008",
+      "b": "DOC017-G011",
+      "label": "none",
+      "rationale": "DOC017-G008 的对象是站内完成投递（T061/T067），DOC017-G011 的对象是追踪投递状态与反馈（T105）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P067",
+      "a": "DOC017-G008",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G008 的对象是站内完成投递（T061/T067），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P068",
+      "a": "DOC017-G008",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G008 的对象是站内完成投递（T061/T067），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P069",
+      "a": "DOC017-G009",
+      "b": "DOC017-G010",
+      "label": "none",
+      "rationale": "DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077），DOC017-G010 的对象是只看到仍有效的岗位（T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P070",
+      "a": "DOC017-G009",
+      "b": "DOC017-G011",
+      "label": "related",
+      "rationale": "二者都属于投递后的跟踪，T105 要状态与反馈、T077 要候选管理；但一个是已投递记录、一个是未投递候选。",
+      "evidence_ids": [
+        "E0017",
+        "E0021"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P071",
+      "a": "DOC017-G009",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P072",
+      "a": "DOC017-G009",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G009 的对象是站内收藏并跟踪候选（T075/T077），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P073",
+      "a": "DOC017-G010",
+      "b": "DOC017-G011",
+      "label": "none",
+      "rationale": "DOC017-G010 的对象是只看到仍有效的岗位（T071），DOC017-G011 的对象是追踪投递状态与反馈（T105）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P074",
+      "a": "DOC017-G010",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G010 的对象是只看到仍有效的岗位（T071），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P075",
+      "a": "DOC017-G010",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G010 的对象是只看到仍有效的岗位（T071），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P076",
+      "a": "DOC017-G011",
+      "b": "DOC017-G012",
+      "label": "none",
+      "rationale": "DOC017-G011 的对象是追踪投递状态与反馈（T105），DOC017-G012 的对象是投递记录保密（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P077",
+      "a": "DOC017-G011",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G011 的对象是追踪投递状态与反馈（T105），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P078",
+      "a": "DOC017-G012",
+      "b": "DOC017-G013",
+      "label": "none",
+      "rationale": "DOC017-G012 的对象是投递记录保密（T083），DOC017-G013 的对象是AI 只辅助筛选不代写（T093/T095）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P005",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC017-G001",
+      "b": "DOC017-G006"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P009",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC017-G001",
+      "b": "DOC017-G010"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P028",
+      "conditions": [
+        "两者择一即可满足，不必同时具备"
+      ],
+      "review_status": "pending",
+      "a": "DOC017-G003",
+      "b": "DOC017-G008"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P034",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC017-G004",
+      "b": "DOC017-G005"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P043",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC017-G005",
+      "b": "DOC017-G006"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P058",
+      "conditions": [
+        "依赖平台间资料同步能力"
+      ],
+      "review_status": "pending",
+      "a": "DOC017-G007",
+      "b": "DOC017-G008"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P064",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC017-G008",
+      "b": "DOC017-G009"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P070",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC017-G009",
+      "b": "DOC017-G011"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC017:S004",
+      "material_id": "M001",
+      "quote": "job roles specific to the domain such as software engineering or machine learning roles",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 407,
+      "end_char": 494,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S004",
+          "segment_start": 49,
+          "segment_end": 136,
+          "start_char": 407,
+          "end_char": 494
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 358,
+        "end_char": 601
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC017:S004",
+      "material_id": "M001",
+      "quote": "job updates based on whatever is my skill set",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 516,
+      "end_char": 561,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S004",
+          "segment_start": 158,
+          "segment_end": 203,
+          "start_char": 516,
+          "end_char": 561
+        }
+      ],
+      "original_locator": {
+        "line_start": 4,
+        "line_end": 4,
+        "start_char": 358,
+        "end_char": 601
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC017:S070",
+      "material_id": "M001",
+      "quote": "getting random job notifications. Random people reaching me out in Linkedin",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12018,
+      "end_char": 12093,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S070",
+          "segment_start": 46,
+          "segment_end": 121,
+          "start_char": 12018,
+          "end_char": 12093
+        }
+      ],
+      "original_locator": {
+        "line_start": 70,
+        "line_end": 70,
+        "start_char": 11972,
+        "end_char": 12114
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC017:S006",
+      "material_id": "M001",
+      "quote": "it would be great if I receive at the instant",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 938,
+      "end_char": 983,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S006",
+          "segment_start": 187,
+          "segment_end": 232,
+          "start_char": 938,
+          "end_char": 983
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 751,
+        "end_char": 1105
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC017:S006",
+      "material_id": "M001",
+      "quote": "if I'm not looking actively, then it's okay to receive once in a week",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1028,
+      "end_char": 1097,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S006",
+          "segment_start": 277,
+          "segment_end": 346,
+          "start_char": 1028,
+          "end_char": 1097
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 751,
+        "end_char": 1105
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC017:S008",
+      "material_id": "M001",
+      "quote": "I would generally prefer getting via emails",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1329,
+      "end_char": 1372,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S008",
+          "segment_start": 20,
+          "segment_end": 63,
+          "start_char": 1329,
+          "end_char": 1372
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 1309,
+        "end_char": 1576
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC017:S010",
+      "material_id": "M001",
+      "quote": "should be having a direct apply button in the email itself",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1929,
+      "end_char": 1987,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S010",
+          "segment_start": 155,
+          "segment_end": 213,
+          "start_char": 1929,
+          "end_char": 1987
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 1774,
+        "end_char": 2260
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC017:S010",
+      "material_id": "M001",
+      "quote": "so that I don't need to waste time then navigating to the app, and then again, going to the company's portal",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1989,
+      "end_char": 2097,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S010",
+          "segment_start": 215,
+          "segment_end": 323,
+          "start_char": 1989,
+          "end_char": 2097
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 1774,
+        "end_char": 2260
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC017:S020",
+      "material_id": "M001",
+      "quote": "one is the role like, I'll see if the role is really interesting. And I'm suitable for that role second is the payment. And then comes the location. And of course the company reputation",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4437,
+      "end_char": 4622,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S020",
+          "segment_start": 29,
+          "segment_end": 214,
+          "start_char": 4437,
+          "end_char": 4622
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 4408,
+        "end_char": 4741
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC017:S022",
+      "material_id": "M001",
+      "quote": "I would consider the reviews from the current employees. What work they are specifically working on, what text they are using",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4886,
+      "end_char": 5011,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S022",
+          "segment_start": 20,
+          "segment_end": 145,
+          "start_char": 4886,
+          "end_char": 5011
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 4866,
+        "end_char": 5190
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC017:S024",
+      "material_id": "M001",
+      "quote": "formatted in terms of list cars and tables that would be really helpful for me to navigate",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5844,
+      "end_char": 5934,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S024",
+          "segment_start": 259,
+          "segment_end": 349,
+          "start_char": 5844,
+          "end_char": 5934
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 5585,
+        "end_char": 6001
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC017:S034",
+      "material_id": "M001",
+      "quote": "it can also give some percentage out of it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7238,
+      "end_char": 7280,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S034",
+          "segment_start": 245,
+          "segment_end": 287,
+          "start_char": 7238,
+          "end_char": 7280
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 6993,
+        "end_char": 7381
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC017:S034",
+      "material_id": "M001",
+      "quote": "I kind of use some tool out Plugin. I see if I can actually match those skill sets with me",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7142,
+      "end_char": 7232,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S034",
+          "segment_start": 149,
+          "segment_end": 239,
+          "start_char": 7142,
+          "end_char": 7232
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 6993,
+        "end_char": 7381
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC017:S074",
+      "material_id": "M001",
+      "quote": "it's a hindrance for me to again fill all those details",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12860,
+      "end_char": 12915,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S074",
+          "segment_start": 42,
+          "segment_end": 97,
+          "start_char": 12860,
+          "end_char": 12915
+        }
+      ],
+      "original_locator": {
+        "line_start": 74,
+        "line_end": 74,
+        "start_char": 12818,
+        "end_char": 13266
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC017:S074",
+      "material_id": "M001",
+      "quote": "I don't want to have a lot of manual efforts in filling up just a job application",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13184,
+      "end_char": 13265,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S074",
+          "segment_start": 366,
+          "segment_end": 447,
+          "start_char": 13184,
+          "end_char": 13265
+        }
+      ],
+      "original_locator": {
+        "line_start": 74,
+        "line_end": 74,
+        "start_char": 12818,
+        "end_char": 13266
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC017:S068",
+      "material_id": "M001",
+      "quote": "that would be really great to have integrated",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11607,
+      "end_char": 11652,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S068",
+          "segment_start": 26,
+          "segment_end": 71,
+          "start_char": 11607,
+          "end_char": 11652
+        }
+      ],
+      "original_locator": {
+        "line_start": 68,
+        "line_end": 68,
+        "start_char": 11581,
+        "end_char": 11846
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC017:S062",
+      "material_id": "M001",
+      "quote": "there is no point in having Linkedin. In the 1st place, when I have to like navigate to other place",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10703,
+      "end_char": 10802,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S062",
+          "segment_start": 84,
+          "segment_end": 183,
+          "start_char": 10703,
+          "end_char": 10802
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 10619,
+        "end_char": 10809
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC017:S078",
+      "material_id": "M001",
+      "quote": "It'd be great to have such features in the job portal itself",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14196,
+      "end_char": 14256,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S078",
+          "segment_start": 20,
+          "segment_end": 80,
+          "start_char": 14196,
+          "end_char": 14256
+        }
+      ],
+      "original_locator": {
+        "line_start": 78,
+        "line_end": 78,
+        "start_char": 14176,
+        "end_char": 14349
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC017:S076",
+      "material_id": "M001",
+      "quote": "have I just note down what the job id or whatever in a separate Doc",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13740,
+      "end_char": 13807,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S076",
+          "segment_start": 136,
+          "segment_end": 203,
+          "start_char": 13740,
+          "end_char": 13807
+        }
+      ],
+      "original_locator": {
+        "line_start": 76,
+        "line_end": 76,
+        "start_char": 13604,
+        "end_char": 13922
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC017:S072",
+      "material_id": "M001",
+      "quote": "I don't want to apply for jobs which are like one year back, or even 6 months back",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12286,
+      "end_char": 12368,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S072",
+          "segment_start": 106,
+          "segment_end": 188,
+          "start_char": 12286,
+          "end_char": 12368
+        }
+      ],
+      "original_locator": {
+        "line_start": 72,
+        "line_end": 72,
+        "start_char": 12180,
+        "end_char": 12490
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC017:S072",
+      "material_id": "M001",
+      "quote": "not having a relevant or updated job list",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12236,
+      "end_char": 12277,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S072",
+          "segment_start": 56,
+          "segment_end": 97,
+          "start_char": 12236,
+          "end_char": 12277
+        }
+      ],
+      "original_locator": {
+        "line_start": 72,
+        "line_end": 72,
+        "start_char": 12180,
+        "end_char": 12490
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC017:S106",
+      "material_id": "M001",
+      "quote": "I want to know what is my status of my application",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18627,
+      "end_char": 18677,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S106",
+          "segment_start": 51,
+          "segment_end": 101,
+          "start_char": 18627,
+          "end_char": 18677
+        }
+      ],
+      "original_locator": {
+        "line_start": 106,
+        "line_end": 106,
+        "start_char": 18576,
+        "end_char": 18805
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC017:S106",
+      "material_id": "M001",
+      "quote": "if there is any feedback that would be really great for me to improve in my further applications",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18708,
+      "end_char": 18804,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S106",
+          "segment_start": 132,
+          "segment_end": 228,
+          "start_char": 18708,
+          "end_char": 18804
+        }
+      ],
+      "original_locator": {
+        "line_start": 106,
+        "line_end": 106,
+        "start_char": 18576,
+        "end_char": 18805
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC017:S108",
+      "material_id": "M001",
+      "quote": "They don't like provide proper feedbacks",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18950,
+      "end_char": 18990,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S108",
+          "segment_start": 110,
+          "segment_end": 150,
+          "start_char": 18950,
+          "end_char": 18990
+        }
+      ],
+      "original_locator": {
+        "line_start": 108,
+        "line_end": 108,
+        "start_char": 18840,
+        "end_char": 18991
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC017:S084",
+      "material_id": "M001",
+      "quote": "Expose my applications",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15333,
+      "end_char": 15355,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S084",
+          "segment_start": 104,
+          "segment_end": 126,
+          "start_char": 15333,
+          "end_char": 15355
+        }
+      ],
+      "original_locator": {
+        "line_start": 84,
+        "line_end": 84,
+        "start_char": 15229,
+        "end_char": 15565
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC017:S084",
+      "material_id": "M001",
+      "quote": "I don't want people to know for what job roles I'm applying for",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15364,
+      "end_char": 15427,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S084",
+          "segment_start": 135,
+          "segment_end": 198,
+          "start_char": 15364,
+          "end_char": 15427
+        }
+      ],
+      "original_locator": {
+        "line_start": 84,
+        "line_end": 84,
+        "start_char": 15229,
+        "end_char": 15565
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC017:S096",
+      "material_id": "M001",
+      "quote": "it shouldn't be automatic",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17332,
+      "end_char": 17357,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S096",
+          "segment_start": 95,
+          "segment_end": 120,
+          "start_char": 17332,
+          "end_char": 17357
+        }
+      ],
+      "original_locator": {
+        "line_start": 96,
+        "line_end": 96,
+        "start_char": 17237,
+        "end_char": 17358
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC017:S094",
+      "material_id": "M001",
+      "quote": "when it comes for writing applications, I think I kind of still feel that Eas are uncertain",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17088,
+      "end_char": 17179,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S094",
+          "segment_start": 78,
+          "segment_end": 169,
+          "start_char": 17088,
+          "end_char": 17179
+        }
+      ],
+      "original_locator": {
+        "line_start": 94,
+        "line_end": 94,
+        "start_char": 17010,
+        "end_char": 17210
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC017:S096",
+      "material_id": "M001",
+      "quote": "if it is like verified by us, then it's good",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17272,
+      "end_char": 17316,
+      "candidate_locations": [
+        {
+          "source_id": "DOC017:S096",
+          "segment_start": 35,
+          "segment_end": 79,
+          "start_char": 17272,
+          "end_char": 17316
+        }
+      ],
+      "original_locator": {
+        "line_start": 96,
+        "line_end": 96,
+        "start_char": 17237,
+        "end_char": 17358
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC017-C001",
+      "goal_id": "DOC017-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C002",
+      "goal_id": "DOC017-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C003",
+      "goal_id": "DOC017-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C004",
+      "goal_id": "DOC017-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C005",
+      "goal_id": "DOC017-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C006",
+      "goal_id": "DOC017-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C007",
+      "goal_id": "DOC017-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C008",
+      "goal_id": "DOC017-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C009",
+      "goal_id": "DOC017-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C010",
+      "goal_id": "DOC017-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C011",
+      "goal_id": "DOC017-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C012",
+      "goal_id": "DOC017-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC017-C013",
+      "goal_id": "DOC017-G013",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 78,
+    "evaluated_pairs": 78
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "9861e60103ce572af7f54fc5906257380d654bec8d6e91fef3dfe51035ed61f2",
+    "core_sha256": "d214cfa9f85ccf78e8c0bb2b4a97cd5c1db3c5a532f60f5483d61900ef7b66de",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "598aafc1303da4e9213008ce5af59712a1e66254461092ddb5f194e740bb6ffb"
+}

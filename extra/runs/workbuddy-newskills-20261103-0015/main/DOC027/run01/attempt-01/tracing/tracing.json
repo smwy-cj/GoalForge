@@ -1,0 +1,1464 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\extra\\runs\\workbuddy-newskills-20261103-0015\\main\\DOC027\\run01\\attempt-01\\extraction.json",
+    "sha256": "58401340a0cfc3f2f6d42500446c0272942371d23b515907df648d997c0ba88f",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "d0e45429a401cdf623c1b55622781931007cf1926a11d1bdcc7b6d4cc36c63a7",
+      "input_sha256": "58401340a0cfc3f2f6d42500446c0272942371d23b515907df648d997c0ba88f"
+    },
+    "bundle_sha256": "9f6c3d666ec1dbf2d7c35a862a0faee9390752a52e69858dc080a5946d5387bc"
+  },
+  "sources": [
+    {
+      "document_id": "DOC027",
+      "expected_hash": "a6ec69e299ada39fc221334e7715b8909e589bfdc2a73e36b5984311bfd8a7f5",
+      "actual_hash": "a6ec69e299ada39fc221334e7715b8909e589bfdc2a73e36b5984311bfd8a7f5",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "G001",
+      "target_kind": "candidate",
+      "statement": "Stay informed about news and trends around the world, including what is happening back in India, with Twitter as my go-to news app.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC027:T005",
+          "material_id": "M001",
+          "quote": "Twitter is kind of like my go to news app because there are a lot of trends that are happening around the world",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1428,
+          "end_char": 1539,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T005",
+              "segment_start": 324,
+              "segment_end": 435,
+              "start_char": 1428,
+              "end_char": 1539
+            }
+          ],
+          "original_locator": {
+            "turn": "5",
+            "start_char": 1104,
+            "end_char": 2891
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC027:T075",
+          "material_id": "M001",
+          "quote": "That's 1 of my biggest motivation to be on like different social media platforms, so that I know what's happening in the world.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18748,
+          "end_char": 18875,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T075",
+              "segment_start": 302,
+              "segment_end": 429,
+              "start_char": 18748,
+              "end_char": 18875
+            }
+          ],
+          "original_locator": {
+            "turn": "75",
+            "start_char": 18446,
+            "end_char": 19008
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC027:T009",
+          "material_id": "M001",
+          "quote": "if I wanna get to know about the news or the things that are happening back in India, then that might not be possible, because Twitter is kind of now set to my location in us",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3987,
+          "end_char": 4161,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T009",
+              "segment_start": 315,
+              "segment_end": 489,
+              "start_char": 3987,
+              "end_char": 4161
+            }
+          ],
+          "original_locator": {
+            "turn": "9",
+            "start_char": 3672,
+            "end_char": 4269
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T005",
+          "DOC027:T075",
+          "DOC027:T009"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "Twitter 作为主要新闻入口",
+          "关注全球趋势与大事",
+          "希望了解印度新闻",
+          "定位限制可见范围"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T005 明说 Twitter 是“我的首选新闻应用”，用标签浏览世界各地发生的事；T075 说明动机是不想漏掉世界大事；T009 明确想了解印度新闻、但承认美国定位会限制可见范围。主体、对象、方式（Twitter 趋势）、条件（定位）均保留在目标与 context 中。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Stay informed about news and trends around the world, including what is happening back in India, with Twitter as my go-to news app.",
+        "label": "direct",
+        "rationale": "T005 明说 Twitter 是“我的首选新闻应用”，用标签浏览世界各地发生的事；T075 说明动机是不想漏掉世界大事；T009 明确想了解印度新闻、但承认美国定位会限制可见范围。主体、对象、方式（Twitter 趋势）、条件（定位）均保留在目标与 context 中。",
+        "supported_parts": [
+          "Twitter 作为主要新闻入口",
+          "关注全球趋势与大事",
+          "希望了解印度新闻",
+          "定位限制可见范围"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G002",
+      "target_kind": "candidate",
+      "statement": "Stay connected with my friends in real time by instantly sharing photos and videos of daily moments.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC027:T005",
+          "material_id": "M001",
+          "quote": "It's very easy for me to connect to stay connected to my friends in real time.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1727,
+          "end_char": 1805,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T005",
+              "segment_start": 623,
+              "segment_end": 701,
+              "start_char": 1727,
+              "end_char": 1805
+            }
+          ],
+          "original_locator": {
+            "turn": "5",
+            "start_char": 1104,
+            "end_char": 2891
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC027:T005",
+          "material_id": "M001",
+          "quote": "my friends back in India they they still know, like what I ate yesterday for my dinner, because I just send them that picture through Snapchat.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1997,
+          "end_char": 2140,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T005",
+              "segment_start": 893,
+              "segment_end": 1036,
+              "start_char": 1997,
+              "end_char": 2140
+            }
+          ],
+          "original_locator": {
+            "turn": "5",
+            "start_char": 1104,
+            "end_char": 2891
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T005",
+          "DOC027:T005"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "与朋友实时保持联系",
+          "即时分享照片和视频"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T005 以“stay connected to my friends in real time”明确目的，并以即时发送照片/视频、印度朋友能看到他昨天吃了什么作为实现方式；目标保留即时性与分享内容，未扩大到其他平台。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Stay connected with my friends in real time by instantly sharing photos and videos of daily moments.",
+        "label": "direct",
+        "rationale": "T005 以“stay connected to my friends in real time”明确目的，并以即时发送照片/视频、印度朋友能看到他昨天吃了什么作为实现方式；目标保留即时性与分享内容，未扩大到其他平台。",
+        "supported_parts": [
+          "与朋友实时保持联系",
+          "即时分享照片和视频"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G003",
+      "target_kind": "candidate",
+      "statement": "Stay aware of what is happening in my immediate circle of friends, campus and class, beyond global news.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC027:T075",
+          "material_id": "M001",
+          "quote": "It's also about knowing what's happening in my friend Circle, or with the with my friends back in India.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18904,
+          "end_char": 19008,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T075",
+              "segment_start": 458,
+              "segment_end": 562,
+              "start_char": 18904,
+              "end_char": 19008
+            }
+          ],
+          "original_locator": {
+            "turn": "75",
+            "start_char": 18446,
+            "end_char": 19008
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC027:T077",
+          "material_id": "M001",
+          "quote": "Let's say, what's happening on campus, what's happening in class. what's happening like with my classmates stuff like that",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19113,
+          "end_char": 19235,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T077",
+              "segment_start": 60,
+              "segment_end": 182,
+              "start_char": 19113,
+              "end_char": 19235
+            }
+          ],
+          "original_locator": {
+            "turn": "77",
+            "start_char": 19053,
+            "end_char": 19322
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T075",
+          "DOC027:T077"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "朋友与印度友人的动态",
+          "校园与班级里的事"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T075 把朋友圈动态与“世界”并列，T077 进一步限定为“不那么全球”的校园、班级、同学；范围明确且与 G001 的全球新闻区分，未把两者混为一个目标。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Stay aware of what is happening in my immediate circle of friends, campus and class, beyond global news.",
+        "label": "direct",
+        "rationale": "T075 把朋友圈动态与“世界”并列，T077 进一步限定为“不那么全球”的校园、班级、同学；范围明确且与 G001 的全球新闻区分，未把两者混为一个目标。",
+        "supported_parts": [
+          "朋友与印度友人的动态",
+          "校园与班级里的事"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G004",
+      "target_kind": "candidate",
+      "statement": "Ask questions and help other people in interest-group communities such as subreddits while keeping my identity anonymous.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC027:T005",
+          "material_id": "M001",
+          "quote": "And I can join those interest groups and ask like, maybe a question, or maybe help other people. And all of this while be while maintaining my anonymity",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2623,
+          "end_char": 2775,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T005",
+              "segment_start": 1519,
+              "segment_end": 1671,
+              "start_char": 2623,
+              "end_char": 2775
+            }
+          ],
+          "original_locator": {
+            "turn": "5",
+            "start_char": 1104,
+            "end_char": 2891
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC027:T027",
+          "material_id": "M001",
+          "quote": "reddit reddit kind of comes for most because of the anonymity that it provides the next will be signal because of like high authentication and privacy and data encryption",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8155,
+          "end_char": 8325,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T027",
+              "segment_start": 57,
+              "segment_end": 227,
+              "start_char": 8155,
+              "end_char": 8325
+            }
+          ],
+          "original_locator": {
+            "turn": "27",
+            "start_char": 8098,
+            "end_char": 8368
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T005",
+          "DOC027:T027"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "加入兴趣小组提问或帮助他人",
+          "保持身份匿名"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T005 明确加入兴趣小组、提问或帮助他人，并两次强调维持匿名；T027 以匿名性作为 Reddit 排第一的理由。目标把“参与”与“匿名”作为同一动作的条件保留，未把匿名单列成抽象状态。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Ask questions and help other people in interest-group communities such as subreddits while keeping my identity anonymous.",
+        "label": "direct",
+        "rationale": "T005 明确加入兴趣小组、提问或帮助他人，并两次强调维持匿名；T027 以匿名性作为 Reddit 排第一的理由。目标把“参与”与“匿名”作为同一动作的条件保留，未把匿名单列成抽象状态。",
+        "supported_parts": [
+          "加入兴趣小组提问或帮助他人",
+          "保持身份匿名"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G005",
+      "target_kind": "candidate",
+      "statement": "Find answers to specific questions by searching discussions on Reddit.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC027:T053",
+          "material_id": "M001",
+          "quote": "whenever I wanna obtain information like out going out of my way, not not something that's already been displayed in my homepage. it's mostly when I am in a particular situation where I wanna search for something very particular",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13827,
+          "end_char": 14055,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T053",
+              "segment_start": 37,
+              "segment_end": 265,
+              "start_char": 13827,
+              "end_char": 14055
+            }
+          ],
+          "original_locator": {
+            "turn": "53",
+            "start_char": 13790,
+            "end_char": 14571
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC027:T057",
+          "material_id": "M001",
+          "quote": "I just go to Reddit to like, figure out whatever question I want to ask",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15269,
+          "end_char": 15340,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T057",
+              "segment_start": 178,
+              "segment_end": 249,
+              "start_char": 15269,
+              "end_char": 15340
+            }
+          ],
+          "original_locator": {
+            "turn": "57",
+            "start_char": 15091,
+            "end_char": 15345
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T053",
+          "DOC027:T057"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "为具体情境主动搜索",
+          "从讨论中获得回答与推荐"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T053 说明在具体情境下主动搜索并期待讨论与推荐，T057 明确“去 Reddit 弄清想问的问题”。T055 的“小众问题可能没人回答”作为适用范围条件保留，未夸大为总是能获得答案。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Find answers to specific questions by searching discussions on Reddit.",
+        "label": "direct",
+        "rationale": "T053 说明在具体情境下主动搜索并期待讨论与推荐，T057 明确“去 Reddit 弄清想问的问题”。T055 的“小众问题可能没人回答”作为适用范围条件保留，未夸大为总是能获得答案。",
+        "supported_parts": [
+          "为具体情境主动搜索",
+          "从讨论中获得回答与推荐"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G006",
+      "target_kind": "candidate",
+      "statement": "Ensure that only I can access my social-media accounts through strong authentication, such as a 2FA backup code required when signing in from a new device.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC027:T011",
+          "material_id": "M001",
+          "quote": "because I don't want anyone else accessing my accounts on any social media platforms",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4674,
+          "end_char": 4758,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T011",
+              "segment_start": 90,
+              "segment_end": 174,
+              "start_char": 4674,
+              "end_char": 4758
+            }
+          ],
+          "original_locator": {
+            "turn": "11",
+            "start_char": 4584,
+            "end_char": 4787
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC027:T023",
+          "material_id": "M001",
+          "quote": "Because that kind of makes me feel like my particular account cannot be accessed by anyone else other than me. because I have those particular code.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7289,
+          "end_char": 7437,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T023",
+              "segment_start": 244,
+              "segment_end": 392,
+              "start_char": 7289,
+              "end_char": 7437
+            }
+          ],
+          "original_locator": {
+            "turn": "23",
+            "start_char": 7045,
+            "end_char": 7437
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T011",
+          "DOC027:T023"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "认证是最重要的功能",
+          "只有本人能访问账号",
+          "新设备登录需要备份码（示例）"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T011 把认证列为最重要功能，理由是不想让任何人访问自己的账号；T023 用备份码说明“只有本人能进入”。2FA 备份码作为示例保留，原文未要求所有平台一律采用同一机制，故用“such as”限定。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Ensure that only I can access my social-media accounts through strong authentication, such as a 2FA backup code required when signing in from a new device.",
+        "label": "direct",
+        "rationale": "T011 把认证列为最重要功能，理由是不想让任何人访问自己的账号；T023 用备份码说明“只有本人能进入”。2FA 备份码作为示例保留，原文未要求所有平台一律采用同一机制，故用“such as”限定。",
+        "supported_parts": [
+          "认证是最重要的功能",
+          "只有本人能访问账号",
+          "新设备登录需要备份码（示例）"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G007",
+      "target_kind": "candidate",
+      "statement": "Keep my posts available on the platform until I delete or archive them myself.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC027:T013",
+          "material_id": "M001",
+          "quote": "they should be there until, and unless I delete them or I archive them",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4927,
+          "end_char": 4997,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T013",
+              "segment_start": 96,
+              "segment_end": 166,
+              "start_char": 4927,
+              "end_char": 4997
+            }
+          ],
+          "original_locator": {
+            "turn": "13",
+            "start_char": 4831,
+            "end_char": 5410
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T013"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "帖子在本人删除或归档前一直保留"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T013 的“they should be there until, and unless I delete them or I archive them”直接给出保留条件与删除/归档的主动方式。注意 T012 仅有“I.”、T013 以“Want my tweets”开头，否定词在轮次边界被截断；本目标只依据意义完整的后半句，未补写缺失否定词。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Keep my posts available on the platform until I delete or archive them myself.",
+        "label": "direct",
+        "rationale": "T013 的“they should be there until, and unless I delete them or I archive them”直接给出保留条件与删除/归档的主动方式。注意 T012 仅有“I.”、T013 以“Want my tweets”开头，否定词在轮次边界被截断；本目标只依据意义完整的后半句，未补写缺失否定词。",
+        "supported_parts": [
+          "帖子在本人删除或归档前一直保留"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G008",
+      "target_kind": "candidate",
+      "statement": "Experience platform outages only sporadically, not on a regular basis.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC027:T013",
+          "material_id": "M001",
+          "quote": "I don't want those outages to be that often, if they are like sporadic, I'm fine with it, but if they are too regular, then they might lose me as a customer",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5231,
+          "end_char": 5387,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T013",
+              "segment_start": 400,
+              "segment_end": 556,
+              "start_char": 5231,
+              "end_char": 5387
+            }
+          ],
+          "original_locator": {
+            "turn": "13",
+            "start_char": 4831,
+            "end_char": 5410
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T013"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "偶发宕机可接受",
+          "经常性宕机不可接受"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T013 明确区分偶发（可接受）与经常（不可接受，并可能导致流失），强度与条件都保留。同段提到的“speed”未给阈值且归结于网络，未写成速度目标。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Experience platform outages only sporadically, not on a regular basis.",
+        "label": "direct",
+        "rationale": "T013 明确区分偶发（可接受）与经常（不可接受，并可能导致流失），强度与条件都保留。同段提到的“speed”未给阈值且归结于网络，未写成速度目标。",
+        "supported_parts": [
+          "偶发宕机可接受",
+          "经常性宕机不可接受"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G009",
+      "target_kind": "candidate",
+      "statement": "Keep my conversations and data private from people I do not know, with data encryption.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC027:T039",
+          "material_id": "M001",
+          "quote": "I don't want other people to other people as in the people that I don't even know like kind of like see through my text or my conversation with my friends",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 11837,
+          "end_char": 11991,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T039",
+              "segment_start": 146,
+              "segment_end": 300,
+              "start_char": 11837,
+              "end_char": 11991
+            }
+          ],
+          "original_locator": {
+            "turn": "39",
+            "start_char": 11691,
+            "end_char": 11992
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC027:T045",
+          "material_id": "M001",
+          "quote": "So the 1st important thing is, I think, data privacy for me.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12506,
+          "end_char": 12566,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T045",
+              "segment_start": 133,
+              "segment_end": 193,
+              "start_char": 12506,
+              "end_char": 12566
+            }
+          ],
+          "original_locator": {
+            "turn": "45",
+            "start_char": 12373,
+            "end_char": 12566
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC027:T047",
+          "material_id": "M001",
+          "quote": "Like especially data encryption.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12612,
+          "end_char": 12644,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T047",
+              "segment_start": 0,
+              "segment_end": 32,
+              "start_char": 12612,
+              "end_char": 12644
+            }
+          ],
+          "original_locator": {
+            "turn": "47",
+            "start_char": 12612,
+            "end_char": 12840
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T039",
+          "DOC027:T045",
+          "DOC027:T047"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "陌生人不能看到对话内容",
+          "数据隐私是首要",
+          "采用数据加密"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T039 明确不想让不认识的人看穿自己与朋友的对话；T045 把数据隐私列为首要；T047 点明尤其要数据加密。主体（不认识的人）、对象（对话与数据）、选定方式（加密）均保留。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Keep my conversations and data private from people I do not know, with data encryption.",
+        "label": "direct",
+        "rationale": "T039 明确不想让不认识的人看穿自己与朋友的对话；T045 把数据隐私列为首要；T047 点明尤其要数据加密。主体（不认识的人）、对象（对话与数据）、选定方式（加密）均保留。",
+        "supported_parts": [
+          "陌生人不能看到对话内容",
+          "数据隐私是首要",
+          "采用数据加密"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G010",
+      "target_kind": "candidate",
+      "statement": "Stop seeing the same ads repeatedly just because I mentioned a topic once, so that ad delivery finds a balance instead of following a single mention.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC027:T045",
+          "material_id": "M001",
+          "quote": "I'm kind of like annoyed like I don't want to see the same kind of ads over and over again, just because I talked about it one time.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12373,
+          "end_char": 12505,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T045",
+              "segment_start": 0,
+              "segment_end": 132,
+              "start_char": 12373,
+              "end_char": 12505
+            }
+          ],
+          "original_locator": {
+            "turn": "45",
+            "start_char": 12373,
+            "end_char": 12566
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC027:T101",
+          "material_id": "M001",
+          "quote": "make these social media apps to use basic human judgment and not just throw random ads at me just because I said that one particular name.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 24892,
+          "end_char": 25030,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T101",
+              "segment_start": 477,
+              "segment_end": 615,
+              "start_char": 24892,
+              "end_char": 25030
+            }
+          ],
+          "original_locator": {
+            "turn": "101",
+            "start_char": 24415,
+            "end_char": 25030
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T045",
+          "DOC027:T101"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "不因一次提及反复推同类广告",
+          "广告投放要有判断与平衡",
+          "购物时偶尔有用（例外）"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T045 直接说出不想因提过一次就反复看到同类广告；T101 以“基本人类判断、不要因为提了一个名字就乱推”重述同一诉求；T043 的“偶尔有用”作为例外保留。T103 的“先推两条、跳过就停止”是假设示例，未写成固定阈值。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Stop seeing the same ads repeatedly just because I mentioned a topic once, so that ad delivery finds a balance instead of following a single mention.",
+        "label": "direct",
+        "rationale": "T045 直接说出不想因提过一次就反复看到同类广告；T101 以“基本人类判断、不要因为提了一个名字就乱推”重述同一诉求；T043 的“偶尔有用”作为例外保留。T103 的“先推两条、跳过就停止”是假设示例，未写成固定阈值。",
+        "supported_parts": [
+          "不因一次提及反复推同类广告",
+          "广告投放要有判断与平衡",
+          "购物时偶尔有用（例外）"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G011",
+      "target_kind": "candidate",
+      "statement": "Be shown a varied assortment of content rather than the same kind of content repeated.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC027:T079",
+          "material_id": "M001",
+          "quote": "whereas I want to be shown like different kind of content",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 20123,
+          "end_char": 20180,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T079",
+              "segment_start": 503,
+              "segment_end": 560,
+              "start_char": 20123,
+              "end_char": 20180
+            }
+          ],
+          "original_locator": {
+            "turn": "79",
+            "start_char": 19620,
+            "end_char": 20191
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC027:T087",
+          "material_id": "M001",
+          "quote": "for me, I want like an assortment of content, not just one particular stream of content.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 21669,
+          "end_char": 21757,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T087",
+              "segment_start": 136,
+              "segment_end": 224,
+              "start_char": 21669,
+              "end_char": 21757
+            }
+          ],
+          "original_locator": {
+            "turn": "87",
+            "start_char": 21533,
+            "end_char": 21929
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T079",
+          "DOC027:T087"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "看到不同种类的内容",
+          "不接受单一内容流反复出现"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T079 明确想看到不同内容而不是被算法重复同类内容；T081 说明是为看到世界上的不同趋势、不要反复食物内容；T087 明确要 assortment 而非单一内容流。多处同一结果，合并为一个目标。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Be shown a varied assortment of content rather than the same kind of content repeated.",
+        "label": "direct",
+        "rationale": "T079 明确想看到不同内容而不是被算法重复同类内容；T081 说明是为看到世界上的不同趋势、不要反复食物内容；T087 明确要 assortment 而非单一内容流。多处同一结果，合并为一个目标。",
+        "supported_parts": [
+          "看到不同种类的内容",
+          "不接受单一内容流反复出现"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G012",
+      "target_kind": "candidate",
+      "statement": "Keep all social-media account credentials and 2FA backup codes recorded in a digital vault on my phone so that account details are not lost.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC027:T065",
+          "material_id": "M001",
+          "quote": "I do have like a a digital vault that I keep on my phone which helps me to keep. Keep a track of all the accounts, my credentials for all the social networking platforms.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17093,
+          "end_char": 17263,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T065",
+              "segment_start": 9,
+              "segment_end": 179,
+              "start_char": 17093,
+              "end_char": 17263
+            }
+          ],
+          "original_locator": {
+            "turn": "65",
+            "start_char": 17084,
+            "end_char": 17528
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC027:T023",
+          "material_id": "M001",
+          "quote": "You have to keep it saved somewhere, maybe in like a digital vault or something.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7073,
+          "end_char": 7153,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T023",
+              "segment_start": 28,
+              "segment_end": 108,
+              "start_char": 7073,
+              "end_char": 7153
+            }
+          ],
+          "original_locator": {
+            "turn": "23",
+            "start_char": 7045,
+            "end_char": 7437
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC027:T067",
+          "material_id": "M001",
+          "quote": "It's quite reliable. And it usually like helps me to just like I can just tap in and whenever I log into any any like social media.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17575,
+          "end_char": 17706,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T067",
+              "segment_start": 0,
+              "segment_end": 131,
+              "start_char": 17575,
+              "end_char": 17706
+            }
+          ],
+          "original_locator": {
+            "turn": "67",
+            "start_char": 17575,
+            "end_char": 17833
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T065",
+          "DOC027:T023",
+          "DOC027:T067"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "凭证集中保存在手机保险库",
+          "2FA 备份码一并保存",
+          "使用 Google Password Manager"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T065 自述手机数字保险库用于跟踪所有平台账号与凭证，并说明丢失保险库会失去大部分账号信息（即需要防止这种丢失）；T023 说明 2FA 备份码也需保存在保险库；T067 说明所用工具是 Google Password Manager。现有实践与“重要”评价共同支持该维护目标。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Keep all social-media account credentials and 2FA backup codes recorded in a digital vault on my phone so that account details are not lost.",
+        "label": "direct",
+        "rationale": "T065 自述手机数字保险库用于跟踪所有平台账号与凭证，并说明丢失保险库会失去大部分账号信息（即需要防止这种丢失）；T023 说明 2FA 备份码也需保存在保险库；T067 说明所用工具是 Google Password Manager。现有实践与“重要”评价共同支持该维护目标。",
+        "supported_parts": [
+          "凭证集中保存在手机保险库",
+          "2FA 备份码一并保存",
+          "使用 Google Password Manager"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G013",
+      "target_kind": "candidate",
+      "statement": "Keep new posts loading as I scroll so that posts are not missed when the feed stalls.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC027:T049",
+          "material_id": "M001",
+          "quote": "So it's easier for me to just go at like the top and then start like a new kind of like a refresh, instead of just like going through the same kind of my session. So that's kind of annoying, because I have to like go back up.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12932,
+          "end_char": 13157,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T049",
+              "segment_start": 47,
+              "segment_end": 272,
+              "start_char": 12932,
+              "end_char": 13157
+            }
+          ],
+          "original_locator": {
+            "turn": "49",
+            "start_char": 12885,
+            "end_char": 13252
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC027:T049",
+          "material_id": "M001",
+          "quote": "maybe I just missed one particular post or one particular item because",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13181,
+          "end_char": 13251,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T049",
+              "segment_start": 296,
+              "segment_end": 366,
+              "start_char": 13181,
+              "end_char": 13251
+            }
+          ],
+          "original_locator": {
+            "turn": "49",
+            "start_char": 12885,
+            "end_char": 13252
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T049",
+          "DOC027:T049"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "加载中断导致回顶部刷新",
+          "担心漏掉帖子"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "他把“可能漏掉帖子”视为需要避免的后果",
+          "未要求特定加载或刷新机制"
+        ],
+        "reasoning_steps": [
+          "确认抱怨的对象是信息流中断而非内容质量",
+          "结合其了解动态的目标推断避免漏帖的意图",
+          "剔除原文未支持的具体机制要求"
+        ],
+        "label": "inferred",
+        "rationale": "T049 描述滚动时内容加载中断、只能回顶部刷新，并担心“可能漏掉了某个帖子”。这是抱怨加临时应对，原文没有直接说出“希望持续加载”。结合其保持了解朋友圈/校园动态的目标（G003），可正面推断出“不要漏帖、信息流继续加载”的意图；具体刷新机制未被要求。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Keep new posts loading as I scroll so that posts are not missed when the feed stalls.",
+        "label": "inferred",
+        "rationale": "T049 描述滚动时内容加载中断、只能回顶部刷新，并担心“可能漏掉了某个帖子”。这是抱怨加临时应对，原文没有直接说出“希望持续加载”。结合其保持了解朋友圈/校园动态的目标（G003），可正面推断出“不要漏帖、信息流继续加载”的意图；具体刷新机制未被要求。",
+        "supported_parts": [
+          "加载中断导致回顶部刷新",
+          "担心漏掉帖子"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "他把“可能漏掉帖子”视为需要避免的后果",
+          "未要求特定加载或刷新机制"
+        ],
+        "reasoning_steps": [
+          "确认抱怨的对象是信息流中断而非内容质量",
+          "结合其了解动态的目标推断避免漏帖的意图",
+          "剔除原文未支持的具体机制要求"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G014",
+      "target_kind": "candidate",
+      "statement": "Have one customizable platform that aggregates content from the social apps I choose, so that I can get all content without switching between apps.",
+      "document_id": "DOC027",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC027:T105",
+          "material_id": "M001",
+          "quote": "I would be really happy if there was like this common platform which. Like I can design for myself.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 25862,
+          "end_char": 25961,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T105",
+              "segment_start": 22,
+              "segment_end": 121,
+              "start_char": 25862,
+              "end_char": 25961
+            }
+          ],
+          "original_locator": {
+            "turn": "105",
+            "start_char": 25840,
+            "end_char": 26644
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC027:T107",
+          "material_id": "M001",
+          "quote": "I just want to open 1 1 app and get all the content and be done with it.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 26782,
+          "end_char": 26854,
+          "candidate_locations": [
+            {
+              "source_id": "DOC027:T107",
+              "segment_start": 91,
+              "segment_end": 163,
+              "start_char": 26782,
+              "end_char": 26854
+            }
+          ],
+          "original_locator": {
+            "turn": "107",
+            "start_char": 26691,
+            "end_char": 26854
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC027:T105",
+          "DOC027:T107"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "一个可自行配置的公共平台",
+          "聚合所选应用的内容",
+          "不用在应用间切换"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T105 明确想要一个可自行设计、把常用应用放在一处并展示各应用内容的平台；T107 说明目的是不想在应用间切换、浪费时间。目标保留“可自选应用”“聚合内容”“不切换应用”三个已明确成分，未指定具体技术实现。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Have one customizable platform that aggregates content from the social apps I choose, so that I can get all content without switching between apps.",
+        "label": "direct",
+        "rationale": "T105 明确想要一个可自行设计、把常用应用放在一处并展示各应用内容的平台；T107 说明目的是不想在应用间切换、浪费时间。目标保留“可自选应用”“聚合内容”“不切换应用”三个已明确成分，未指定具体技术实现。",
+        "supported_parts": [
+          "一个可自行配置的公共平台",
+          "聚合所选应用的内容",
+          "不用在应用间切换"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\extra\\runs\\workbuddy-newskills-20261103-0015\\main\\DOC027\\run01\\attempt-01\\judgments.json",
+    "sha256": "3b4c97fda58b49aee51cc6a4bb61e29ccc86e00525d36812bd145b020d3fbe09"
+  }
+}

@@ -1,0 +1,1632 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC024-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "6ea1b8bcbeae60b28979f59a69912d85f2fce3def5478a4d4c4116b5c39be42d"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "35e3951a9efbf8fb7ec19213fa4ced924c9e51ca4f21dcb93daeeb58eec315a5"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "3b942f9d4ca3780b71e4a00b83b7def865b966bc3dcd30db655d617ea753fbdc"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "851189888ff96381e85ea8c11aebd30a4c86e320841f6d27cbf4ed90f2de9eab"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC024"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC024-G001",
+      "statement": "课后遇到不懂的术语或逻辑，随时能得到解释，不必等到答疑时间。",
+      "source_candidate_ids": [
+        "DOC024-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "触发：课堂上听不懂且当天没有 office hour",
+        "等待成本：可能要等到明天甚至下周"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC024-G002",
+      "statement": "做项目时突破自己的思维局限，获得自己想不到的视角。",
+      "source_candidate_ids": [
+        "DOC024-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "自述「我自己的脑子是有限的」",
+        "用途：创意发想，而非执行"
+      ],
+      "evidence_ids": [
+        "E0004",
+        "E0005"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC024-G003",
+      "statement": "项目启动阶段拿到大纲与关键要点，明确怎么落地。",
+      "source_candidate_ids": [
+        "DOC024-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "阶段限定：只在项目开始时用，中途不用"
+      ],
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC024-G004",
+      "statement": "能自行核实答案是否正确（查书论文、自己算一遍）。",
+      "source_candidate_ids": [
+        "DOC024-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "方法一：术语查在线资料/书/论文",
+        "方法二：计算结果自己复算",
+        "理由：模型并非总是正确，高层问题尤其难看出错"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009",
+        "E0010"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC024-G005",
+      "statement": "提问时能让模型准确理解自己的问题与上下文。",
+      "source_candidate_ids": [
+        "DOC024-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "做法：组织语言、附图片与文档辅助说明",
+        "动机：怕被误解后得到不想要的答案"
+      ],
+      "evidence_ids": [
+        "E0011",
+        "E0012",
+        "E0013"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC024-G006",
+      "statement": "回看历史对话，复习之前学过的逻辑与术语。",
+      "source_candidate_ids": [
+        "DOC024-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "左侧历史栏可点回旧对话",
+        "自评使用频率很高"
+      ],
+      "evidence_ids": [
+        "E0014",
+        "E0015"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC024-G007",
+      "statement": "用推理更强的模型拿到更准确的逻辑答案。",
+      "source_candidate_ids": [
+        "DOC024-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "o1 会花更长时间思考，但答案更准确",
+        "旧模型在解释时会出现逻辑错误"
+      ],
+      "evidence_ids": [
+        "E0016",
+        "E0017",
+        "E0018"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC024-G008",
+      "statement": "连续追问时不被用量额度打断。",
+      "source_candidate_ids": [
+        "DOC024-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "免费额度偏低，用完要等次日甚至数日",
+        "会员可对高等级模型持续追问"
+      ],
+      "evidence_ids": [
+        "E0019",
+        "E0020"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC024-G009",
+      "statement": "需要时生成图像，把产品设计可视化。",
+      "source_candidate_ids": [
+        "DOC024-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "自评「不常用」",
+        "用法：先生成再按需求细化"
+      ],
+      "evidence_ids": [
+        "E0021",
+        "E0022"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC024-G010",
+      "statement": "生成过程稳定快速，不因卡住重试而浪费额度。",
+      "source_candidate_ids": [
+        "DOC024-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，付费订阅 ChatGPT 的学生开发者）",
+      "context": [
+        "问题：生成慢、会卡住，重试要再扣一次额度",
+        "后果：浪费时间与模型调用次数"
+      ],
+      "evidence_ids": [
+        "E0023",
+        "E0024"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC024-G001",
+      "b": "DOC024-G002",
+      "label": "none",
+      "rationale": "DOC024-G001 的对象是随时得到术语与逻辑解释（T005/T009），DOC024-G002 的对象是项目上获得新视角（T007/T009）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC024-G001",
+      "b": "DOC024-G003",
+      "label": "none",
+      "rationale": "DOC024-G001 的对象是随时得到术语与逻辑解释（T005/T009），DOC024-G003 的对象是项目启动拿到大纲要点（T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC024-G001",
+      "b": "DOC024-G004",
+      "label": "related",
+      "rationale": "T013 说明他主要用两类方式核实：查书与论文（针对术语）、自己复算（针对计算）。这正是 G001 的配套动作——要答案快，就得自己兜住准确性。但 G004 是校验手段，G001 是获取渠道。",
+      "evidence_ids": [
+        "E0001",
+        "E0008"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC024-G001",
+      "b": "DOC024-G005",
+      "label": "related",
+      "rationale": "T017 说提问前会先组织语言、附材料，理由是怕被误解后得到不想要的答案——这是 G001 能否兑现的前提。但 G005 管输入质量、G001 管输出可得。",
+      "evidence_ids": [
+        "E0011",
+        "E0001"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC024-G001",
+      "b": "DOC024-G006",
+      "label": "related",
+      "rationale": "T021 说历史功能用得最多，用来看之前问过的术语与逻辑——把一次性的答疑沉淀成可复习的材料。但 G006 是 G001 的后续利用，不是获取渠道本身。",
+      "evidence_ids": [
+        "E0015",
+        "E0001"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC024-G001",
+      "b": "DOC024-G007",
+      "label": "none",
+      "rationale": "DOC024-G001 的对象是随时得到术语与逻辑解释（T005/T009），DOC024-G007 的对象是用高推理模型求准确（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC024-G001",
+      "b": "DOC024-G008",
+      "label": "none",
+      "rationale": "DOC024-G001 的对象是随时得到术语与逻辑解释（T005/T009），DOC024-G008 的对象是追问不被额度打断（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC024-G001",
+      "b": "DOC024-G009",
+      "label": "none",
+      "rationale": "DOC024-G001 的对象是随时得到术语与逻辑解释（T005/T009），DOC024-G009 的对象是生成图像做可视化（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC024-G001",
+      "b": "DOC024-G010",
+      "label": "none",
+      "rationale": "DOC024-G001 的对象是随时得到术语与逻辑解释（T005/T009），DOC024-G010 的对象是生成稳定快速不浪费额度（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC024-G002",
+      "b": "DOC024-G003",
+      "label": "related",
+      "rationale": "T015 说项目开始时同一个会话里既能得到想法、也能得到大纲与要点，二者处于同一阶段。但想法是发散内容、大纲是结构化步骤。",
+      "evidence_ids": [
+        "E0004",
+        "E0006"
+      ],
+      "conditions": [
+        "二者都在项目启动阶段使用"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC024-G002",
+      "b": "DOC024-G004",
+      "label": "none",
+      "rationale": "DOC024-G002 的对象是项目上获得新视角（T007/T009），DOC024-G004 的对象是能自行核实答案（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC024-G002",
+      "b": "DOC024-G005",
+      "label": "none",
+      "rationale": "DOC024-G002 的对象是项目上获得新视角（T007/T009），DOC024-G005 的对象是让模型准确理解上下文（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC024-G002",
+      "b": "DOC024-G006",
+      "label": "none",
+      "rationale": "DOC024-G002 的对象是项目上获得新视角（T007/T009），DOC024-G006 的对象是回看历史对话复习（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC024-G002",
+      "b": "DOC024-G007",
+      "label": "none",
+      "rationale": "DOC024-G002 的对象是项目上获得新视角（T007/T009），DOC024-G007 的对象是用高推理模型求准确（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC024-G002",
+      "b": "DOC024-G008",
+      "label": "none",
+      "rationale": "DOC024-G002 的对象是项目上获得新视角（T007/T009），DOC024-G008 的对象是追问不被额度打断（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC024-G002",
+      "b": "DOC024-G009",
+      "label": "related",
+      "rationale": "T011 把图像生成放在「设计新产品、想看到它长什么样」的场景里，与 G002 同属项目早期的构想环节。但一个是文字视角、一个是视觉呈现。",
+      "evidence_ids": [
+        "E0004",
+        "E0021"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC024-G002",
+      "b": "DOC024-G010",
+      "label": "none",
+      "rationale": "DOC024-G002 的对象是项目上获得新视角（T007/T009），DOC024-G010 的对象是生成稳定快速不浪费额度（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC024-G003",
+      "b": "DOC024-G004",
+      "label": "none",
+      "rationale": "DOC024-G003 的对象是项目启动拿到大纲要点（T015），DOC024-G004 的对象是能自行核实答案（T013）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC024-G003",
+      "b": "DOC024-G005",
+      "label": "none",
+      "rationale": "DOC024-G003 的对象是项目启动拿到大纲要点（T015），DOC024-G005 的对象是让模型准确理解上下文（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC024-G003",
+      "b": "DOC024-G006",
+      "label": "none",
+      "rationale": "DOC024-G003 的对象是项目启动拿到大纲要点（T015），DOC024-G006 的对象是回看历史对话复习（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC024-G003",
+      "b": "DOC024-G007",
+      "label": "none",
+      "rationale": "DOC024-G003 的对象是项目启动拿到大纲要点（T015），DOC024-G007 的对象是用高推理模型求准确（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC024-G003",
+      "b": "DOC024-G008",
+      "label": "none",
+      "rationale": "DOC024-G003 的对象是项目启动拿到大纲要点（T015），DOC024-G008 的对象是追问不被额度打断（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC024-G003",
+      "b": "DOC024-G009",
+      "label": "none",
+      "rationale": "DOC024-G003 的对象是项目启动拿到大纲要点（T015），DOC024-G009 的对象是生成图像做可视化（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC024-G003",
+      "b": "DOC024-G010",
+      "label": "none",
+      "rationale": "DOC024-G003 的对象是项目启动拿到大纲要点（T015），DOC024-G010 的对象是生成稳定快速不浪费额度（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC024-G004",
+      "b": "DOC024-G005",
+      "label": "none",
+      "rationale": "DOC024-G004 的对象是能自行核实答案（T013），DOC024-G005 的对象是让模型准确理解上下文（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC024-G004",
+      "b": "DOC024-G006",
+      "label": "none",
+      "rationale": "DOC024-G004 的对象是能自行核实答案（T013），DOC024-G006 的对象是回看历史对话复习（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC024-G004",
+      "b": "DOC024-G007",
+      "label": "related",
+      "rationale": "T013 承认高层问题很难看出错误，T025 说 o1 靠更长的推理减少逻辑错误——更强的模型正是对「核实不了」这一局限的补位。但一个是人工校验、一个是模型侧改进，不能互相替代。",
+      "evidence_ids": [
+        "E0009",
+        "E0016"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC024-G004",
+      "b": "DOC024-G008",
+      "label": "none",
+      "rationale": "DOC024-G004 的对象是能自行核实答案（T013），DOC024-G008 的对象是追问不被额度打断（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC024-G004",
+      "b": "DOC024-G009",
+      "label": "none",
+      "rationale": "DOC024-G004 的对象是能自行核实答案（T013），DOC024-G009 的对象是生成图像做可视化（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC024-G004",
+      "b": "DOC024-G010",
+      "label": "none",
+      "rationale": "DOC024-G004 的对象是能自行核实答案（T013），DOC024-G010 的对象是生成稳定快速不浪费额度（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC024-G005",
+      "b": "DOC024-G006",
+      "label": "none",
+      "rationale": "DOC024-G005 的对象是让模型准确理解上下文（T017），DOC024-G006 的对象是回看历史对话复习（T021）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC024-G005",
+      "b": "DOC024-G007",
+      "label": "none",
+      "rationale": "DOC024-G005 的对象是让模型准确理解上下文（T017），DOC024-G007 的对象是用高推理模型求准确（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC024-G005",
+      "b": "DOC024-G008",
+      "label": "none",
+      "rationale": "DOC024-G005 的对象是让模型准确理解上下文（T017），DOC024-G008 的对象是追问不被额度打断（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC024-G005",
+      "b": "DOC024-G009",
+      "label": "none",
+      "rationale": "DOC024-G005 的对象是让模型准确理解上下文（T017），DOC024-G009 的对象是生成图像做可视化（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC024-G005",
+      "b": "DOC024-G010",
+      "label": "none",
+      "rationale": "DOC024-G005 的对象是让模型准确理解上下文（T017），DOC024-G010 的对象是生成稳定快速不浪费额度（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC024-G006",
+      "b": "DOC024-G007",
+      "label": "none",
+      "rationale": "DOC024-G006 的对象是回看历史对话复习（T021），DOC024-G007 的对象是用高推理模型求准确（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC024-G006",
+      "b": "DOC024-G008",
+      "label": "none",
+      "rationale": "DOC024-G006 的对象是回看历史对话复习（T021），DOC024-G008 的对象是追问不被额度打断（T029）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC024-G006",
+      "b": "DOC024-G009",
+      "label": "none",
+      "rationale": "DOC024-G006 的对象是回看历史对话复习（T021），DOC024-G009 的对象是生成图像做可视化（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC024-G006",
+      "b": "DOC024-G010",
+      "label": "none",
+      "rationale": "DOC024-G006 的对象是回看历史对话复习（T021），DOC024-G010 的对象是生成稳定快速不浪费额度（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC024-G007",
+      "b": "DOC024-G008",
+      "label": "related",
+      "rationale": "T029 说得很直接：想持续追问高等级模型，但免费额度低，所以买会员。G008 是为 G007 服务的容量条件。但额度是使用门槛，推理质量是能力上限。",
+      "evidence_ids": [
+        "E0016",
+        "E0019"
+      ],
+      "conditions": [
+        "G008 服务于 G007 的持续追问"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC024-G007",
+      "b": "DOC024-G009",
+      "label": "none",
+      "rationale": "DOC024-G007 的对象是用高推理模型求准确（T025），DOC024-G009 的对象是生成图像做可视化（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC024-G007",
+      "b": "DOC024-G010",
+      "label": "uncertain",
+      "rationale": "两者在时间上直接对冲：T025 说更准的答案来自「更长时间思考」，T031 又抱怨生成本来就慢、卡住还要重试。想要更准就得接受更慢，想要更快就可能退回较弱模型，受访者没有对这对权衡表态，也没说清哪些场景愿意等。",
+      "evidence_ids": [
+        "E0017",
+        "E0023"
+      ],
+      "conditions": [
+        "需人工确认：是否接受「关键问题用慢模型、日常问题用快模型」的分层；若确认，可改为 related 并写入条件。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed",
+      "interpretation": "解释一：延迟可接受，只要答案更准；解释二：速度优先，宁愿自己多核实。原文两处抱怨并存。"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC024-G008",
+      "b": "DOC024-G009",
+      "label": "none",
+      "rationale": "DOC024-G008 的对象是追问不被额度打断（T029），DOC024-G009 的对象是生成图像做可视化（T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC024-G008",
+      "b": "DOC024-G010",
+      "label": "related",
+      "rationale": "T031 说重试会再扣一次额度——G010 的卡顿问题会直接消耗 G008 想保住的额度，两者共用同一份配额。但一个是配额多少、一个是消耗速度。",
+      "evidence_ids": [
+        "E0019",
+        "E0024"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC024-G009",
+      "b": "DOC024-G010",
+      "label": "none",
+      "rationale": "DOC024-G009 的对象是生成图像做可视化（T011），DOC024-G010 的对象是生成稳定快速不浪费额度（T031）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P003",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC024-G001",
+      "b": "DOC024-G004"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P004",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC024-G001",
+      "b": "DOC024-G005"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P005",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC024-G001",
+      "b": "DOC024-G006"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P010",
+      "conditions": [
+        "二者都在项目启动阶段使用"
+      ],
+      "review_status": "pending",
+      "a": "DOC024-G002",
+      "b": "DOC024-G003"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P016",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC024-G002",
+      "b": "DOC024-G009"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P027",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC024-G004",
+      "b": "DOC024-G007"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P040",
+      "conditions": [
+        "G008 服务于 G007 的持续追问"
+      ],
+      "review_status": "pending",
+      "a": "DOC024-G007",
+      "b": "DOC024-G008"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P044",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC024-G008",
+      "b": "DOC024-G010"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC024:S006",
+      "material_id": "M001",
+      "quote": "I don't understand, or some questions after class, and there is no office hours",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 665,
+      "end_char": 744,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S006",
+          "segment_start": 121,
+          "segment_end": 200,
+          "start_char": 665,
+          "end_char": 744
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 544,
+        "end_char": 846
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC024:S010",
+      "material_id": "M001",
+      "quote": "you have to wait till tomorrow, or even next week to answer those questions",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1858,
+      "end_char": 1933,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S010",
+          "segment_start": 214,
+          "segment_end": 289,
+          "start_char": 1858,
+          "end_char": 1933
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 1644,
+        "end_char": 2393
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC024:S010",
+      "material_id": "M001",
+      "quote": "you can ask it like at any time",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2025,
+      "end_char": 2056,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S010",
+          "segment_start": 381,
+          "segment_end": 412,
+          "start_char": 2025,
+          "end_char": 2056
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 1644,
+        "end_char": 2393
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC024:S008",
+      "material_id": "M001",
+      "quote": "generate some ideas for my project",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1041,
+      "end_char": 1075,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S008",
+          "segment_start": 93,
+          "segment_end": 127,
+          "start_char": 1041,
+          "end_char": 1075
+        }
+      ],
+      "original_locator": {
+        "line_start": 8,
+        "line_end": 8,
+        "start_char": 948,
+        "end_char": 1475
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC024:S010",
+      "material_id": "M001",
+      "quote": "using chat, Gpt is giving me more perspective perspectives",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2204,
+      "end_char": 2262,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S010",
+          "segment_start": 560,
+          "segment_end": 618,
+          "start_char": 2204,
+          "end_char": 2262
+        }
+      ],
+      "original_locator": {
+        "line_start": 10,
+        "line_end": 10,
+        "start_char": 1644,
+        "end_char": 2393
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC024:S016",
+      "material_id": "M001",
+      "quote": "it can give me an outline about what you should do",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4427,
+      "end_char": 4477,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S016",
+          "segment_start": 376,
+          "segment_end": 426,
+          "start_char": 4427,
+          "end_char": 4477
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 4051,
+        "end_char": 5258
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC024:S016",
+      "material_id": "M001",
+      "quote": "what are the points that are important",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4483,
+      "end_char": 4521,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S016",
+          "segment_start": 432,
+          "segment_end": 470,
+          "start_char": 4483,
+          "end_char": 4521
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 4051,
+        "end_char": 5258
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC024:S014",
+      "material_id": "M001",
+      "quote": "there are a lot of materials online you can find",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3111,
+      "end_char": 3159,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S014",
+          "segment_start": 60,
+          "segment_end": 108,
+          "start_char": 3111,
+          "end_char": 3159
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 3051,
+        "end_char": 3819
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC024:S014",
+      "material_id": "M001",
+      "quote": "you should calculate those by yourself and then check if the result it provides you is correct",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3429,
+      "end_char": 3523,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S014",
+          "segment_start": 378,
+          "segment_end": 472,
+          "start_char": 3429,
+          "end_char": 3523
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 3051,
+        "end_char": 3819
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC024:S014",
+      "material_id": "M001",
+      "quote": "chatgpt is not always correct",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3559,
+      "end_char": 3588,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S014",
+          "segment_start": 508,
+          "segment_end": 537,
+          "start_char": 3559,
+          "end_char": 3588
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 3051,
+        "end_char": 3819
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC024:S018",
+      "material_id": "M001",
+      "quote": "I will try to organize my language to make chat, gpt, understand what I'm saying",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5621,
+      "end_char": 5701,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S018",
+          "segment_start": 230,
+          "segment_end": 310,
+          "start_char": 5621,
+          "end_char": 5701
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 5391,
+        "end_char": 6348
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC024:S018",
+      "material_id": "M001",
+      "quote": "sometimes I will also attach some images and also some documents to chat",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6038,
+      "end_char": 6110,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S018",
+          "segment_start": 647,
+          "segment_end": 719,
+          "start_char": 6038,
+          "end_char": 6110
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 5391,
+        "end_char": 6348
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC024:S018",
+      "material_id": "M001",
+      "quote": "it's better illustration of my questions",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6131,
+      "end_char": 6171,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S018",
+          "segment_start": 740,
+          "segment_end": 780,
+          "start_char": 6131,
+          "end_char": 6171
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 5391,
+        "end_char": 6348
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC024:S022",
+      "material_id": "M001",
+      "quote": "you can just click the history and see like what Chat Gpt told you before",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7449,
+      "end_char": 7522,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S022",
+          "segment_start": 212,
+          "segment_end": 285,
+          "start_char": 7449,
+          "end_char": 7522
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 7237,
+        "end_char": 7747
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC024:S022",
+      "material_id": "M001",
+      "quote": "It's really nice for you to go back and review the chat",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7635,
+      "end_char": 7690,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S022",
+          "segment_start": 398,
+          "segment_end": 453,
+          "start_char": 7635,
+          "end_char": 7690
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 7237,
+        "end_char": 7747
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC024:S026",
+      "material_id": "M001",
+      "quote": "the o, 1 model is better at logic and reasoning",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8239,
+      "end_char": 8286,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S026",
+          "segment_start": 86,
+          "segment_end": 133,
+          "start_char": 8239,
+          "end_char": 8286
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 8153,
+        "end_char": 8529
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC024:S026",
+      "material_id": "M001",
+      "quote": "it will take more time to think and analyze the logic, but the answer will be more accurate",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8398,
+      "end_char": 8489,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S026",
+          "segment_start": 245,
+          "segment_end": 336,
+          "start_char": 8398,
+          "end_char": 8489
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 8153,
+        "end_char": 8529
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC024:S026",
+      "material_id": "M001",
+      "quote": "before Chat Gpt will have some logic mistakes when explaining something",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8302,
+      "end_char": 8373,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S026",
+          "segment_start": 149,
+          "segment_end": 220,
+          "start_char": 8302,
+          "end_char": 8373
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 8153,
+        "end_char": 8529
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC024:S030",
+      "material_id": "M001",
+      "quote": "you have unlimited access to the highest level model",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8924,
+      "end_char": 8976,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S030",
+          "segment_start": 55,
+          "segment_end": 107,
+          "start_char": 8924,
+          "end_char": 8976
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 8869,
+        "end_char": 9846
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC024:S030",
+      "material_id": "M001",
+      "quote": "the limit for the normal user is like a little bit low",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9051,
+      "end_char": 9105,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S030",
+          "segment_start": 182,
+          "segment_end": 236,
+          "start_char": 9051,
+          "end_char": 9105
+        }
+      ],
+      "original_locator": {
+        "line_start": 30,
+        "line_end": 30,
+        "start_char": 8869,
+        "end_char": 9846
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC024:S012",
+      "material_id": "M001",
+      "quote": "when I have to design a new product. and I want to visualize it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2746,
+      "end_char": 2809,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S012",
+          "segment_start": 166,
+          "segment_end": 229,
+          "start_char": 2746,
+          "end_char": 2809
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 2580,
+        "end_char": 2930
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC024:S012",
+      "material_id": "M001",
+      "quote": "I will use chat gpt, to generate the image for me",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2811,
+      "end_char": 2860,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S012",
+          "segment_start": 231,
+          "segment_end": 280,
+          "start_char": 2811,
+          "end_char": 2860
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 2580,
+        "end_char": 2930
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC024:S032",
+      "material_id": "M001",
+      "quote": "it can take really long time for it to generate the answer",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10048,
+      "end_char": 10106,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S032",
+          "segment_start": 71,
+          "segment_end": 129,
+          "start_char": 10048,
+          "end_char": 10106
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 9977,
+        "end_char": 10756
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC024:S032",
+      "material_id": "M001",
+      "quote": "if you regenerate it, it will use the limit of your",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10194,
+      "end_char": 10245,
+      "candidate_locations": [
+        {
+          "source_id": "DOC024:S032",
+          "segment_start": 217,
+          "segment_end": 268,
+          "start_char": 10194,
+          "end_char": 10245
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 9977,
+        "end_char": 10756
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC024-C001",
+      "goal_id": "DOC024-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC024-C002",
+      "goal_id": "DOC024-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC024-C003",
+      "goal_id": "DOC024-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC024-C004",
+      "goal_id": "DOC024-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC024-C005",
+      "goal_id": "DOC024-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC024-C006",
+      "goal_id": "DOC024-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC024-C007",
+      "goal_id": "DOC024-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC024-C008",
+      "goal_id": "DOC024-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC024-C009",
+      "goal_id": "DOC024-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC024-C010",
+      "goal_id": "DOC024-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 45,
+    "evaluated_pairs": 45
+  },
+  "issues": [
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC024-G007",
+        "DOC024-G010"
+      ],
+      "reason": "两者在时间上直接对冲：T025 说更准的答案来自「更长时间思考」，T031 又抱怨生成本来就慢、卡住还要重试。想要更准就得接受更慢，想要更快就可能退回较弱模型，受访者没有对这对权衡表态，也没说清哪些场景愿意等。"
+    }
+  ],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "assemble",
+    "readiness": "unchecked",
+    "limitations": [
+      "模型尚未经过 model-review；导出完整性检查不能替代模型质量审核。",
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。"
+    ],
+    "files": []
+  }
+}

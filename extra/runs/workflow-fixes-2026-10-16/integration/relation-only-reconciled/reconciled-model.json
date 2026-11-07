@@ -1,0 +1,613 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "FIX-goal-model",
+  "version": "v0.1.h1.a1",
+  "parent_version": "v0.1.h1",
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "142385d759deb27b78a5f602258e2ab0042f93f8ecec66a2fbe3c32e51cc738c"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "58f0f32f10b1d4a884df041998433cb9e9e779f4226ae0fa49ce88a27ea3efba"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "92c5c79dbb2f1dfb2a731a51c4070a69b36a8af2051685631115ff34d3ed5498"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "d80c8f962e0199bfd6dc43db7bd7e2598901925c268775eee420813ba7cd081b"
+    },
+    {
+      "path": "attachments/reassessment-relations-790f06ed231cf3d9.json",
+      "sha256": "790f06ed231cf3d9ab9ced37051beb3ea3c557ec01fdb18cb6901ad0cba3f599"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "FIX"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "FIX-G001",
+      "statement": "根据天气合理安排活动",
+      "source_candidate_ids": [
+        "FIX-C001"
+      ],
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_ids": [
+        "E0001"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "FIX-G002",
+      "statement": "根据降雨安排户外活动",
+      "source_candidate_ids": [
+        "FIX-C002"
+      ],
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_ids": [
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "FIX-G003",
+      "statement": "减少查找信息的费用",
+      "source_candidate_ids": [
+        "FIX-C003"
+      ],
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_ids": [
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P12",
+      "a": "FIX-G001",
+      "b": "FIX-G002",
+      "label": "refinement",
+      "interpretation": "scope_specialization",
+      "rationale": "重新核对新目标与原句后，保留降雨和户外活动的范围具体化（合成夹具）。",
+      "evidence_ids": [
+        "REL-ONLY"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "previous_decision": {
+        "pair_id": "P12",
+        "a": "FIX-G001",
+        "b": "FIX-G002",
+        "label": "uncertain",
+        "interpretation": "scope_specialization",
+        "rationale": "目标或证据已变化，该关系退回待评估；原判断保留在previous_decision。",
+        "evidence_ids": [
+          "REL-ONLY"
+        ],
+        "conditions": [],
+        "review_status": "pending",
+        "previous_decision": {
+          "pair_id": "P12",
+          "a": "FIX-G001",
+          "b": "FIX-G002",
+          "label": "refinement",
+          "parent_id": "FIX-G001",
+          "child_id": "FIX-G002",
+          "interpretation": "scope_specialization",
+          "rationale": "合成范围具体化。",
+          "evidence_ids": [
+            "REL-ONLY"
+          ],
+          "conditions": [],
+          "review_status": "pending"
+        },
+        "assessment_status": "not_run",
+        "trace_status": "needs_retrace"
+      },
+      "assessment_status": "assessed",
+      "trace_status": "reviewed",
+      "parent_id": "FIX-G001",
+      "child_id": "FIX-G002"
+    },
+    {
+      "pair_id": "P13",
+      "a": "FIX-G001",
+      "b": "FIX-G003",
+      "label": "none",
+      "rationale": "未建立联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P23",
+      "a": "FIX-G002",
+      "b": "FIX-G003",
+      "label": "none",
+      "rationale": "未建立联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "RA0001",
+      "type": "refinement",
+      "decision_id": "P12",
+      "conditions": [],
+      "review_status": "pending",
+      "parent_id": "FIX-G001",
+      "child_id": "FIX-G002",
+      "interpretation": "scope_specialization"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "FIX:S001",
+      "material_id": "M001",
+      "quote": "使用者：我希望根据天气合理安排活动。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 0,
+      "end_char": 18,
+      "candidate_locations": [
+        {
+          "source_id": "FIX:S001",
+          "segment_start": 0,
+          "segment_end": 18,
+          "start_char": 0,
+          "end_char": 18
+        }
+      ],
+      "original_locator": {
+        "line_start": 1,
+        "line_end": 1,
+        "start_char": 0,
+        "end_char": 18
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "FIX:S002",
+      "material_id": "M001",
+      "quote": "使用者：我希望根据降雨安排户外活动。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19,
+      "end_char": 37,
+      "candidate_locations": [
+        {
+          "source_id": "FIX:S002",
+          "segment_start": 0,
+          "segment_end": 18,
+          "start_char": 19,
+          "end_char": 37
+        }
+      ],
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 19,
+        "end_char": 37
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "FIX:S003",
+      "material_id": "M001",
+      "quote": "使用者：我希望减少查找信息的费用。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 38,
+      "end_char": 55,
+      "candidate_locations": [
+        {
+          "source_id": "FIX:S003",
+          "segment_start": 0,
+          "segment_end": 17,
+          "start_char": 38,
+          "end_char": 55
+        }
+      ],
+      "original_locator": {
+        "line_start": 3,
+        "line_end": 3,
+        "start_char": 38,
+        "end_char": 55
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "REL-ONLY",
+      "source_id": "FIX:S001",
+      "material_id": "M001",
+      "quote": "使用者：我希望根据天气合理安排活动。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 0,
+      "end_char": 18,
+      "candidate_locations": [
+        {
+          "source_id": "FIX:S001",
+          "segment_start": 0,
+          "segment_end": 18,
+          "start_char": 0,
+          "end_char": 18
+        }
+      ],
+      "original_locator": {
+        "line_start": 1,
+        "line_end": 1,
+        "start_char": 0,
+        "end_char": 18
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "FIX-C001",
+      "goal_id": "FIX-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "FIX-C002",
+      "goal_id": "FIX-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "FIX-C003",
+      "goal_id": "FIX-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 3,
+    "evaluated_pairs": 3,
+    "unassessed_pair_ids": []
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": [
+      {
+        "feedback_id": "FIX-REL",
+        "feedback_sha256": "19ce1976b3228e707e1377fbbf7ed7f4cb9386da4ae1ce2a7c88a1cc80c81c90",
+        "feedback_path": "attachments/human-feedback-19ce1976b3228e70.json",
+        "base_model": {
+          "model_id": "FIX-goal-model",
+          "version": "v0.1",
+          "content_sha256": "445044fd77a1f205a09b18e4703e23142379ba01fa34f97c494fb23fde826c75",
+          "core_sha256": "f09c109089f7ed766c006986e5e14859bd20bebdb0ade48037026dc642f85bfb",
+          "review_target_sha256": "056204e4eca27c77c2d60e59bf80e51c4d0f61bbbd13e1dcd8a58e73a5ce7f04"
+        },
+        "reviewer": {
+          "name": "工程测试夹具，不是真实人工验收"
+        },
+        "entries": [
+          {
+            "entry_id": "FIX-REL-E1",
+            "target_type": "evidence",
+            "target_id": "REL-ONLY",
+            "decision": "incorrect",
+            "proposed": {},
+            "reason": "受控修复验证。",
+            "reviewed_at": "2026-10-16T00:00:00+08:00"
+          }
+        ],
+        "overall": {
+          "decision": "request_changes",
+          "full_scope_ack": false,
+          "acknowledge_limits": false,
+          "comment": "合成工程演练"
+        },
+        "imported_at": "2026-10-16T09:42:01.063738+00:00",
+        "applied_to_version": "v0.1.h1"
+      }
+    ],
+    "feedback_artifacts": [
+      {
+        "path": "attachments/human-feedback-19ce1976b3228e70.json",
+        "sha256": "f479446e63676ba03dc69ff644e693819567dc6d9f83df2be40a04afd9901e04"
+      }
+    ]
+  },
+  "changes": [
+    {
+      "kind": "human_feedback_revision",
+      "feedback_id": "FIX-REL",
+      "feedback_sha256": "19ce1976b3228e707e1377fbbf7ed7f4cb9386da4ae1ce2a7c88a1cc80c81c90",
+      "parent_core_sha256": "f09c109089f7ed766c006986e5e14859bd20bebdb0ade48037026dc642f85bfb",
+      "before_goals": [
+        {
+          "goal_id": "FIX-G001",
+          "statement": "根据天气合理安排活动",
+          "source_candidate_ids": [
+            "FIX-C001"
+          ],
+          "origin": "explicit",
+          "actor": "使用者",
+          "context": [],
+          "evidence_ids": [
+            "E0001"
+          ],
+          "trace_status": "direct",
+          "review_status": "pending"
+        },
+        {
+          "goal_id": "FIX-G002",
+          "statement": "根据降雨安排户外活动",
+          "source_candidate_ids": [
+            "FIX-C002"
+          ],
+          "origin": "explicit",
+          "actor": "使用者",
+          "context": [],
+          "evidence_ids": [
+            "E0002"
+          ],
+          "trace_status": "direct",
+          "review_status": "pending"
+        },
+        {
+          "goal_id": "FIX-G003",
+          "statement": "减少查找信息的费用",
+          "source_candidate_ids": [
+            "FIX-C003"
+          ],
+          "origin": "explicit",
+          "actor": "使用者",
+          "context": [],
+          "evidence_ids": [
+            "E0003"
+          ],
+          "trace_status": "direct",
+          "review_status": "pending"
+        }
+      ],
+      "before_pairs": [
+        {
+          "pair_id": "P12",
+          "a": "FIX-G001",
+          "b": "FIX-G002",
+          "label": "refinement",
+          "parent_id": "FIX-G001",
+          "child_id": "FIX-G002",
+          "interpretation": "scope_specialization",
+          "rationale": "合成范围具体化。",
+          "evidence_ids": [
+            "REL-ONLY"
+          ],
+          "conditions": [],
+          "review_status": "pending"
+        },
+        {
+          "pair_id": "P13",
+          "a": "FIX-G001",
+          "b": "FIX-G003",
+          "label": "none",
+          "rationale": "未建立联系。",
+          "evidence_ids": [],
+          "conditions": [],
+          "review_status": "pending"
+        },
+        {
+          "pair_id": "P23",
+          "a": "FIX-G002",
+          "b": "FIX-G003",
+          "label": "none",
+          "rationale": "未建立联系。",
+          "evidence_ids": [],
+          "conditions": [],
+          "review_status": "pending"
+        }
+      ],
+      "before_edges": [
+        {
+          "edge_id": "R001",
+          "type": "refinement",
+          "decision_id": "P12",
+          "conditions": [],
+          "review_status": "pending",
+          "parent_id": "FIX-G001",
+          "child_id": "FIX-G002",
+          "interpretation": "scope_specialization"
+        }
+      ],
+      "entries": [
+        {
+          "entry_id": "FIX-REL-E1",
+          "target_type": "evidence",
+          "target_id": "REL-ONLY",
+          "decision": "incorrect",
+          "proposed": {},
+          "reason": "受控修复验证。",
+          "reviewed_at": "2026-10-16T00:00:00+08:00"
+        }
+      ],
+      "routes": [
+        {
+          "entry_id": "FIX-REL-E1",
+          "decision": "incorrect",
+          "target_id": "REL-ONLY",
+          "status": "needs_retrace",
+          "next_skill": "goal-tracing",
+          "affected_goal_ids": [],
+          "affected_pair_ids": [
+            "P12"
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "reassessment_merge",
+      "parent_core_sha256": "b69b4adf0a336e008ceed6457d308231cf601fbd2d191253c1a2c6d469ff3fe5",
+      "artifacts": [
+        {
+          "role": "relations",
+          "path": "attachments/reassessment-relations-790f06ed231cf3d9.json",
+          "sha256": "790f06ed231cf3d9ab9ced37051beb3ea3c557ec01fdb18cb6901ad0cba3f599"
+        }
+      ],
+      "evidence_id_mapping": {},
+      "updated_goal_ids": [],
+      "updated_pair_ids": [
+        "P12"
+      ],
+      "before_goals": [
+        {
+          "goal_id": "FIX-G001",
+          "statement": "根据天气合理安排活动",
+          "source_candidate_ids": [
+            "FIX-C001"
+          ],
+          "origin": "explicit",
+          "actor": "使用者",
+          "context": [],
+          "evidence_ids": [
+            "E0001"
+          ],
+          "trace_status": "direct",
+          "review_status": "pending"
+        },
+        {
+          "goal_id": "FIX-G002",
+          "statement": "根据降雨安排户外活动",
+          "source_candidate_ids": [
+            "FIX-C002"
+          ],
+          "origin": "explicit",
+          "actor": "使用者",
+          "context": [],
+          "evidence_ids": [
+            "E0002"
+          ],
+          "trace_status": "direct",
+          "review_status": "pending"
+        },
+        {
+          "goal_id": "FIX-G003",
+          "statement": "减少查找信息的费用",
+          "source_candidate_ids": [
+            "FIX-C003"
+          ],
+          "origin": "explicit",
+          "actor": "使用者",
+          "context": [],
+          "evidence_ids": [
+            "E0003"
+          ],
+          "trace_status": "direct",
+          "review_status": "pending"
+        }
+      ],
+      "before_pairs": [
+        {
+          "pair_id": "P12",
+          "a": "FIX-G001",
+          "b": "FIX-G002",
+          "label": "uncertain",
+          "interpretation": "scope_specialization",
+          "rationale": "目标或证据已变化，该关系退回待评估；原判断保留在previous_decision。",
+          "evidence_ids": [
+            "REL-ONLY"
+          ],
+          "conditions": [],
+          "review_status": "pending",
+          "previous_decision": {
+            "pair_id": "P12",
+            "a": "FIX-G001",
+            "b": "FIX-G002",
+            "label": "refinement",
+            "parent_id": "FIX-G001",
+            "child_id": "FIX-G002",
+            "interpretation": "scope_specialization",
+            "rationale": "合成范围具体化。",
+            "evidence_ids": [
+              "REL-ONLY"
+            ],
+            "conditions": [],
+            "review_status": "pending"
+          },
+          "assessment_status": "not_run",
+          "trace_status": "needs_retrace"
+        },
+        {
+          "pair_id": "P13",
+          "a": "FIX-G001",
+          "b": "FIX-G003",
+          "label": "none",
+          "rationale": "未建立联系。",
+          "evidence_ids": [],
+          "conditions": [],
+          "review_status": "pending"
+        },
+        {
+          "pair_id": "P23",
+          "a": "FIX-G002",
+          "b": "FIX-G003",
+          "label": "none",
+          "rationale": "未建立联系。",
+          "evidence_ids": [],
+          "conditions": [],
+          "review_status": "pending"
+        }
+      ],
+      "before_edges": []
+    }
+  ],
+  "delivery": {
+    "mode": "reassessment",
+    "readiness": "unchecked",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": []
+  }
+}

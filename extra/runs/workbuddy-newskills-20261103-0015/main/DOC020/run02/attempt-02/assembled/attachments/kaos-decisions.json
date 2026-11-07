@@ -1,0 +1,172 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "3a925d61ebce9d0c97dcaa8190d840e9cb56c147a0bdcee9403b49d1e04408d7",
+    "judgments_sha256": "bf39433caeb06e4dcd10840a13b9250b6370568ede4cdda6a5d6eb1c31ac126f"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G017",
+      "child_ids": [
+        "G009",
+        "G010",
+        "G011"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "撰写（G009）、取要点（G010）、关键词高亮（G011）对应受访者点名的读写辅助形态，可视为 G017 的主要展开；但写侧还有他正面评价的发送前附件提醒（G019），阅读侧他自己指出 AI 可能漏掉重要消息（T059），故不能声称这组共同充分。",
+      "assumptions": [
+        "AI 协助读写的展开以其点名能力为主要构成",
+        "组成立的判断需覆盖受访者点名的全部形态"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T091",
+          "quote": "as I mentioned we could embed, embed some AI assistant to help us read and write emails.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "收到一封较长的招聘邮件并需要回复：AI 先取主要点、高亮关键词，再按两行要点起草回复，发送者微调后发出。",
+          "outcome": "supports",
+          "rationale": "该场景下三项子目标各覆盖读、写一段，父目标的可观察结果（读得快、写得省力）能出现。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "撰写时正文提到简历但忘记附加文件，或阅读时关键信息藏在 AI 未标为关键词的一行小字里。",
+          "outcome": "counterexample",
+          "rationale": "写侧附件缺失提醒由 G019 单独承接、不在组内；阅读侧受访者本人指出 AI 可能漏掉重要消息（T059），说明三项子目标不能保证父目标在异常情况下仍被满足。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G012",
+      "message": "“unless it's really reliable”未给可靠性的判定方式或阈值，何时允许依赖自动识别重要邮件仍需确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G018",
+      "message": "未送达问题的范围（哪些邮件类型、是否包含验证码）与可接受的处理方式（重发、告警、回执）原文未说明。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G020",
+      "message": "读信耗时没有量化指标，无法设定验收阈值；是否以“摘要替代通读”为验收方式也未说明。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "本组缺写侧附件提醒（G019）与格式调整，且阅读侧存在 AI 漏判的反例；是补入子目标还是保持不成立，需人工确认。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R4",
+      "message": "摘要是否真能减少读信时间属于分析判断，原文只给“会很有帮助”的期望；若需更强依据请补充。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC020-goal-model",
+      "message": "采访者提出的周期摘要（T054：3 封摘要代替 30 封）仅获“could be one solution”弱认可，现未建为目标，请确认是否需要补入。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G009",
+      "target_id": "G017",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "AI 撰写是“内置 AI 协助读写”在写侧的具体形态"
+      ],
+      "rationale": "G009 是 G017（内置 AI 协助读写邮件）在撰写方向的具体情境形态，范围更窄，不覆盖读侧，也不覆盖其他协助方式，符合具体化方向。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T037",
+          "quote": "the ideal scenario would be if I just type. Dear Professor, what does the requirement for homework? One. Do we have to do? A or B, and it will just like compose and more like, well organized email for me.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G010",
+      "target_id": "G017",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "AI 提取要点是“内置 AI 协助读写”在读侧的具体形态"
+      ],
+      "rationale": "G010 是 G017 在读侧的具体形态（取收件主要点），范围窄于“AI 协助读写”，方向为具体→一般。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T091",
+          "quote": "as I mentioned we could embed, embed some AI assistant to help us read and write emails.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G011",
+      "target_id": "G017",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "关键词高亮属于“AI 协助阅读”的具体能力"
+      ],
+      "rationale": "G011 在 T045 紧接 AI 读取功能的语境中提出，是 G017 读侧的另一具体能力；仅管关键词，不覆盖整体阅读协助。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T045",
+          "quote": "And this highlights the keywords something like the.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G010",
+      "target_id": "G020",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "以 AI 助手承担阅读工作"
+      ],
+      "assumptions": [
+        "摘要主要点可减少逐封通读的耗时"
+      ],
+      "rationale": "T053 把“读所有邮件耗时”列为待简化任务，并把 AI 助手作为手段；G010（AI 取主要点）是该手段的具体实现方式，服务于 G020。仅属帮助关系，不声称足以消除全部读信时间。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T053",
+          "quote": "if we have, I assistant for that, that would be very helpful, because I spend a lot of time just reading every email.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

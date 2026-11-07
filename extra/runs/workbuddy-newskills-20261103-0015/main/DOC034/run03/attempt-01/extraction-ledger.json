@@ -1,0 +1,573 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC034",
+  "input_binding": {
+    "source_input_sha256": "ad62f679efd8b41d1dd9a1c54548eea08c8464760f7a9149e11e52c34290a043",
+    "source_sha256": "2ff16797fffb4e1a64fe36770ddb9ee60e9c6649e58e2efb9d233f1a8e69fbf9",
+    "windows_sha256": "7c781047c2a13faa77be4eecf379f4f5e96e2d2fd9c05db35e4c3b8fd30d77de",
+    "candidates_sha256": "c9354f0ccb2bf72e703fa823865c3cbdbf4926c3474657584a74b188f2bc0e81",
+    "extraction_sha256": "9e03a1c4bd366e060912c38f18c4d3366b6a5a1aa7fdefbb5e66c7864995af94"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "unknown",
+    "temperature": "unknown",
+    "budget": "1 initial pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 2,
+    "stop_reason": "完成一次全窗口初始提取与一次全篇校正；剩余未决项（广告干扰、建议强度、GR1 充分性）缺少新证据，按预算停止。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC034:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0009",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0010",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0011",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0012",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0013",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "pass_id": "P2",
+        "kind": "full_context",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC034:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0009",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0010",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0011",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0012",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0013",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "27 轮全文通读两遍：逐窗捕获后回查指代（it/that 指向帖子、工具、资料页）、问答范围（T004 职业发展、T006 功能、T016 障碍、T020 改进）、条件继承（带宽、已知联系人、公司/个人主页）与例外（Laravel 招聘渠道），并核对 T005 对职业发展的相反证据。",
+    "source_ids": [
+      "DOC034:T000",
+      "DOC034:T001",
+      "DOC034:T002",
+      "DOC034:T003",
+      "DOC034:T004",
+      "DOC034:T005",
+      "DOC034:T006",
+      "DOC034:T007",
+      "DOC034:T008",
+      "DOC034:T009",
+      "DOC034:T010",
+      "DOC034:T011",
+      "DOC034:T012",
+      "DOC034:T013",
+      "DOC034:T014",
+      "DOC034:T015",
+      "DOC034:T016",
+      "DOC034:T017",
+      "DOC034:T018",
+      "DOC034:T019",
+      "DOC034:T020",
+      "DOC034:T021",
+      "DOC034:T022",
+      "DOC034:T023",
+      "DOC034:T024",
+      "DOC034:T025",
+      "DOC034:T026"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "同义保留：连接同事/同学并查看近况，动作与目的一致。"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "同义保留：以 LinkedIn 做营销并认定曝光优于其他渠道。"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "同义保留：大量招聘、来源广、成本较低。"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "同义保留：为自己看工作与薪资范围，保留弱强度。"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "同义保留：以带宽为条件查看社区活动。"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "同义保留：向客户示意存在与资历。"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "与 C006 为同一维持意图的另一表述（供人核验非诈骗），合并入 G006 并保留照片一致细节。"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "受访者明确否认 LinkedIn 对职业发展起作用，属相反证据，不建目标。"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "仅是对营销资源与定价的评价；价格只是选型考虑，未表达要达成或维持的成本状态，原文仍继续大量营销。"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "整理为方式目标：以易用、可定向的发帖工具投放广泛营销。"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "‘you can pay / you can keep track’是第二人称的工具能力描述，未表明本人付费推广或跟踪指标，不建目标。"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "同义保留：偏好 e-learning 做快速深入，质量优于 YouTube。"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "同义保留：会议现场发布营销/曝光帖。"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "同义保留：改到次日上午 9 点定时以增加曝光。"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G011"
+      ],
+      "reason": "同义保留：获得互动并希望带来业务；保留希望强度。"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G012"
+      ],
+      "reason": "同义保留：先查资料找共同点再加人，不做 cold add；条件与否定均保留。"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "使用频率陈述（4/5 天）是事实，不是要达到或维持的目标。"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "招聘渠道对比；作为 G003 的例外条件并入（小众社区另有更优渠道），不另建目标。"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "广告与界面杂乱是障碍/抱怨，原文未提出明确改动要求；保留为 G009 的待确认问题，不升级为目标。"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "平台演进观察，不构成要求。"
+    },
+    {
+      "candidate_id": "C021",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G013"
+      ],
+      "reason": "对 AI 内容工具的兴趣与 G013 同向，作为背景并入，不单独建目标。"
+    },
+    {
+      "candidate_id": "C022",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G013"
+      ],
+      "reason": "同义保留：内容开发自动化支持，减少营销团队规模。"
+    },
+    {
+      "candidate_id": "C023",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G014"
+      ],
+      "reason": "同义保留：免六轮评审与营销漏斗发布专业内容。"
+    },
+    {
+      "candidate_id": "C024",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "采访者的赞同与评价，非受访者目标；采纳未知，不作为要求。"
+    },
+    {
+      "candidate_id": "C025",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对平台的总体定义，属背景，不含个人意图。"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T003",
+          "quote": "We do a lot of marketing especially in my field. We work with a lot of other professionals. In some areas, you know, marketing the exposure, there is far better than we might get, you know, through Google ads or Facebook out of other channels. So we focus a lot on marketing.",
+          "role": "basis",
+          "start_char": 1213,
+          "end_char": 1488
+        }
+      ],
+      "candidate_ids": [
+        "C002"
+      ],
+      "final_goal_ids": [
+        "G002"
+      ],
+      "outcome": "represented",
+      "reason": "回查营销句：主体、渠道比较与‘focus a lot on marketing’一致，已入 G002。"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T005",
+          "quote": "So for my own professional development. I can't say it's actually played that much of a role.",
+          "role": "basis",
+          "start_char": 2725,
+          "end_char": 2818
+        }
+      ],
+      "candidate_ids": [
+        "C008"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "回查职业发展问答：受访者明确否认 LinkedIn 的作用，无目标可建。"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T007",
+          "quote": "I mean, they do charge you an arm and a leg. So I think cost is definitely a consideration there.",
+          "role": "basis",
+          "start_char": 3984,
+          "end_char": 4081
+        }
+      ],
+      "candidate_ids": [
+        "C009"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "回查定价评论：只是成本考量，未条件化或改变营销行为。"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T007",
+          "quote": "They have like recommendations. You can pay to have it be recommended a little bit more. And that process is just really simple. They just tell you here's how much it's gonna cost. And you know, here's how much it's gonna get boosted. So you can kind of keep track of all your impressions and all of your different marketing metrics.",
+          "role": "basis",
+          "start_char": 4388,
+          "end_char": 4721
+        }
+      ],
+      "candidate_ids": [
+        "C011"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "回查付费推荐与指标句：为第二人称能力描述，无本人采纳依据。"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T015",
+          "quote": "for example, recruiting like the Laravel community is pretty small. And you know, Lara jobs. If you post something there, you actually get better candidates than you might get from yeah posting something on Linkedin.",
+          "role": "basis",
+          "start_char": 8798,
+          "end_char": 9014
+        }
+      ],
+      "candidate_ids": [
+        "C018"
+      ],
+      "final_goal_ids": [
+        "G003"
+      ],
+      "outcome": "represented",
+      "reason": "回查 Laravel 招聘渠道：作为 G003 的例外条件保留，未改变一般招聘目标。"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T017",
+          "quote": "sometimes the amount of ads and the amount of you know targeted stuff feels a little much. It just kind of clouds your feed, and there's a lot of irrelevant stuff there.",
+          "role": "basis",
+          "start_char": 9482,
+          "end_char": 9651
+        },
+        {
+          "source_id": "DOC034:T017",
+          "quote": "And then certain parts of the interface. our just too cluttered. I think they throw a lot of information just to make it very busy. They want you click it everywhere. But in certain cases, yeah, I'm there for a reason. I have a mission. I gotta post something. I want to turn that into, you know impressions, and having that, all of this other stuff is kind of just added noise. And I yeah, don't necessarily care for it.",
+          "role": "basis",
+          "start_char": 9711,
+          "end_char": 10132
+        }
+      ],
+      "candidate_ids": [
+        "C019"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "回查障碍段：抱怨成立但无改动请求，转为 G009 的待确认问题。"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T005",
+          "quote": "It's more of just a you know, another resource for people to check in and just make sure. Okay, I'm not like a Scammer. I'm not a, you know. If they get an email from me I am who I say I am, and the picture there matches the picture that they see on, you know, Zoom, or or you know, when I meet in person.",
+          "role": "basis",
+          "start_char": 3389,
+          "end_char": 3694
+        }
+      ],
+      "candidate_ids": [
+        "C007"
+      ],
+      "final_goal_ids": [
+        "G006"
+      ],
+      "outcome": "represented",
+      "reason": "回查身份核验句：与 C006 合并入 G006。"
+    },
+    {
+      "check_id": "S8",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T024",
+          "quote": "Yes, yes, that would be a really good feature to add right? It really cut cuts down the time.",
+          "role": "basis",
+          "start_char": 11962,
+          "end_char": 12055
+        }
+      ],
+      "candidate_ids": [
+        "C024"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "回查结尾：采访者评价，非受访者目标。"
+    },
+    {
+      "check_id": "S9",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "it doesn't really make sense, you know, in the evening, to post it. It's just not going to get as many impressions. So I'm going to be posted at, you know. 9 Am. Tomorrow, when people 1st show up at the office, and I'll get a nice kind of boost in some of the impressions.",
+          "role": "basis",
+          "start_char": 6791,
+          "end_char": 7063
+        }
+      ],
+      "candidate_ids": [
+        "C014"
+      ],
+      "final_goal_ids": [
+        "G010"
+      ],
+      "outcome": "represented",
+      "reason": "回查定时句：时间、晚间对比与曝光结果一致。"
+    }
+  ],
+  "limitations": [
+    "原文为英文访谈转写，含口语重复与转写噪声（如‘I I.’‘our just too cluttered’）；引文按原文逐字符保留，未做清理。",
+    "未获得受访者对目标清单的采纳、优先级或验收指标，全部目标保持待审。",
+    "广告与界面杂乱是受访者所述最大困扰，但原文未提出明确改动要求，仅作为待确认问题保留。"
+  ]
+}

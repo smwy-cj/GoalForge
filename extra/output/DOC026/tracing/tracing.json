@@ -1,0 +1,1653 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC026\\extraction.json",
+    "sha256": "7e0591f4b7de119925e8f2d821ac0334b9ca01fb351fc4dd80b0447a975070fb",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "2fe223bd8d145aced1b5af98d7c05ecd3896777095621ce0acd3b93cfe34c941",
+      "input_sha256": "7e0591f4b7de119925e8f2d821ac0334b9ca01fb351fc4dd80b0447a975070fb"
+    },
+    "bundle_sha256": "65bc5cdd2563ba52ca5bb0f329c51d77f1b6971d339d874c932f5f2796d8ad84"
+  },
+  "sources": [
+    {
+      "document_id": "DOC026",
+      "expected_hash": "8d3e25ef9f7d7731190f22bf04d904cac903dc80b248658f575d362e34bedfaa",
+      "actual_hash": "8d3e25ef9f7d7731190f22bf04d904cac903dc80b248658f575d362e34bedfaa",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC026-C001",
+      "target_kind": "candidate",
+      "statement": "在步行不现实的距离上，实现从一处到另一处的位移。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC026:S006",
+          "material_id": "M001",
+          "quote": "the main goal is transportation to get from one place to another",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 585,
+          "end_char": 649,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S006",
+              "segment_start": 28,
+              "segment_end": 92,
+              "start_char": 585,
+              "end_char": 649
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 557,
+            "end_char": 689
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC026:S008",
+          "material_id": "M001",
+          "quote": "if it's going to take like an hour and a half to get someplace. So I'll just walk even if it's kind of far away",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1229,
+          "end_char": 1340,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S008",
+              "segment_start": 362,
+              "segment_end": 473,
+              "start_char": 1229,
+              "end_char": 1340
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 867,
+            "end_char": 1341
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S006",
+          "DOC026:S008"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "目标：T006「transportation to get from one place to another」",
+          "对照：T008「I'll just walk even if it's kind of far away」"
+        ],
+        "unsupported_parts": [
+          "未说明出行频率",
+          "未说明距离阈值"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取目标句",
+          "2. 用步行对照佐证",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T005 直接说主要目标是从一处到另一处的交通。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在步行不现实的距离上，实现从一处到另一处的位移。",
+        "label": "direct",
+        "rationale": "T005 直接说主要目标是从一处到另一处的交通。",
+        "supported_parts": [
+          "目标：T006「transportation to get from one place to another」",
+          "对照：T008「I'll just walk even if it's kind of far away」"
+        ],
+        "unsupported_parts": [
+          "未说明出行频率",
+          "未说明距离阈值"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取目标句",
+          "2. 用步行对照佐证",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C002",
+      "target_kind": "candidate",
+      "statement": "按耗时与价格权衡是否打车、以及是否改用其他交通方式。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC026:S008",
+          "material_id": "M001",
+          "quote": "it's usually the amount of time it will take or the price in deciding whether or not to take ride",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 936,
+          "end_char": 1033,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S008",
+              "segment_start": 69,
+              "segment_end": 166,
+              "start_char": 936,
+              "end_char": 1033
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 867,
+            "end_char": 1341
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC026:S008",
+          "material_id": "M001",
+          "quote": "whether or not I'm able to drive there or I want to drive there or if there are other better means of transportation",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1053,
+          "end_char": 1169,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S008",
+              "segment_start": 186,
+              "segment_end": 302,
+              "start_char": 1053,
+              "end_char": 1169
+            }
+          ],
+          "original_locator": {
+            "line_start": 8,
+            "line_end": 8,
+            "start_char": 867,
+            "end_char": 1341
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S008",
+          "DOC026:S008"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "判据：T008「the amount of time it will take or the price」",
+          "比较：T008「other better means of transportation」"
+        ],
+        "unsupported_parts": [
+          "未说明时间与价格如何折算成同一尺度",
+          "未给出可接受的价格上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取判据",
+          "2. 取比较对象",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T007 明确说决策依据是耗时与价格，并会与开车/公交比较。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "按耗时与价格权衡是否打车、以及是否改用其他交通方式。",
+        "label": "direct",
+        "rationale": "T007 明确说决策依据是耗时与价格，并会与开车/公交比较。",
+        "supported_parts": [
+          "判据：T008「the amount of time it will take or the price」",
+          "比较：T008「other better means of transportation」"
+        ],
+        "unsupported_parts": [
+          "未说明时间与价格如何折算成同一尺度",
+          "未给出可接受的价格上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取判据",
+          "2. 取比较对象",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C003",
+      "target_kind": "candidate",
+      "statement": "在多个车型中选最便宜的一档，人多时改选大车。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC026:S012",
+          "material_id": "M001",
+          "quote": "I usually just go for The cheapest one, to be honest",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2491,
+          "end_char": 2543,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S012",
+              "segment_start": 791,
+              "segment_end": 843,
+              "start_char": 2491,
+              "end_char": 2543
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 1700,
+            "end_char": 3018
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC026:S012",
+          "material_id": "M001",
+          "quote": "unless if i'm going with more people",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2545,
+          "end_char": 2581,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S012",
+              "segment_start": 845,
+              "segment_end": 881,
+              "start_char": 2545,
+              "end_char": 2581
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 1700,
+            "end_char": 3018
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC026:S012",
+          "material_id": "M001",
+          "quote": "there's a comfort that can sit four people",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2598,
+          "end_char": 2640,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S012",
+              "segment_start": 898,
+              "segment_end": 940,
+              "start_char": 2598,
+              "end_char": 2640
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 1700,
+            "end_char": 3018
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S012",
+          "DOC026:S012",
+          "DOC026:S012"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "默认：T012「I usually just go for The cheapest one」",
+          "例外：T012「unless if i'm going with more people」",
+          "实例：T012「a comfort that can sit four people」"
+        ],
+        "unsupported_parts": [
+          "未说明等待时间更长时是否仍选最便宜",
+          "未说明对车型档次的偏好"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取默认策略",
+          "2. 取例外条件",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T011 说默认选最便宜，人多时改看座位数并举例 comfort 车型。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在多个车型中选最便宜的一档，人多时改选大车。",
+        "label": "direct",
+        "rationale": "T011 说默认选最便宜，人多时改看座位数并举例 comfort 车型。",
+        "supported_parts": [
+          "默认：T012「I usually just go for The cheapest one」",
+          "例外：T012「unless if i'm going with more people」",
+          "实例：T012「a comfort that can sit four people」"
+        ],
+        "unsupported_parts": [
+          "未说明等待时间更长时是否仍选最便宜",
+          "未说明对车型档次的偏好"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取默认策略",
+          "2. 取例外条件",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C004",
+      "target_kind": "candidate",
+      "statement": "下单前能看到附近车辆与预估到达时间、价格，据此决定是否等待或改期。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC026:S012",
+          "material_id": "M001",
+          "quote": "I can also see a map with a couple different Ubers around",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2767,
+          "end_char": 2824,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S012",
+              "segment_start": 1067,
+              "segment_end": 1124,
+              "start_char": 2767,
+              "end_char": 2824
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 1700,
+            "end_char": 3018
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC026:S012",
+          "material_id": "M001",
+          "quote": "if the price was too high, then I can choose to wait",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2965,
+          "end_char": 3017,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S012",
+              "segment_start": 1265,
+              "segment_end": 1317,
+              "start_char": 2965,
+              "end_char": 3017
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 1700,
+            "end_char": 3018
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S012",
+          "DOC026:S012"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "信息：T012「a map with a couple different Ubers around」",
+          "决策：T012「if the price was too high, then I can choose to wait」"
+        ],
+        "unsupported_parts": [
+          "未说明该信息的可信度（T013 反而质疑其准确性）",
+          "未说明等待的容忍上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取信息",
+          "2. 取决策",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T011 说地图上能看到附近车辆与到达时间，价格太高就选择等。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "下单前能看到附近车辆与预估到达时间、价格，据此决定是否等待或改期。",
+        "label": "direct",
+        "rationale": "T011 说地图上能看到附近车辆与到达时间，价格太高就选择等。",
+        "supported_parts": [
+          "信息：T012「a map with a couple different Ubers around」",
+          "决策：T012「if the price was too high, then I can choose to wait」"
+        ],
+        "unsupported_parts": [
+          "未说明该信息的可信度（T013 反而质疑其准确性）",
+          "未说明等待的容忍上限"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取信息",
+          "2. 取决策",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C005",
+      "target_kind": "candidate",
+      "statement": "输入地址时实时给出候选，不必打完就能选。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC026:S012",
+          "material_id": "M001",
+          "quote": "a couple of different options pop up as I'm typing it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2204,
+          "end_char": 2257,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S012",
+              "segment_start": 504,
+              "segment_end": 557,
+              "start_char": 2204,
+              "end_char": 2257
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 1700,
+            "end_char": 3018
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC026:S012",
+          "material_id": "M001",
+          "quote": "I can just click on whatever comes up before I necessarily finish typing it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2288,
+          "end_char": 2363,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S012",
+              "segment_start": 588,
+              "segment_end": 663,
+              "start_char": 2288,
+              "end_char": 2363
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 1700,
+            "end_char": 3018
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S012",
+          "DOC026:S012"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "机制：T012「options pop up as I'm typing it」",
+          "收益：T012「click on whatever comes up before I necessarily finish typing」"
+        ],
+        "unsupported_parts": [
+          "未说明是否有选错地址的经历",
+          "未说明是否使用常用地址收藏"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取机制",
+          "2. 取收益",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T011 说输入时实时弹出候选，未打完就能点选。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "输入地址时实时给出候选，不必打完就能选。",
+        "label": "direct",
+        "rationale": "T011 说输入时实时弹出候选，未打完就能点选。",
+        "supported_parts": [
+          "机制：T012「options pop up as I'm typing it」",
+          "收益：T012「click on whatever comes up before I necessarily finish typing」"
+        ],
+        "unsupported_parts": [
+          "未说明是否有选错地址的经历",
+          "未说明是否使用常用地址收藏"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取机制",
+          "2. 取收益",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C006",
+      "target_kind": "candidate",
+      "statement": "下单后能真正派到车，不出现长时间等待后「找不到司机」。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC026:S014",
+          "material_id": "M001",
+          "quote": "it will take a really long time to actually schedule it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3595,
+          "end_char": 3650,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S014",
+              "segment_start": 374,
+              "segment_end": 429,
+              "start_char": 3595,
+              "end_char": 3650
+            }
+          ],
+          "original_locator": {
+            "line_start": 14,
+            "line_end": 14,
+            "start_char": 3221,
+            "end_char": 4284
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC026:S014",
+          "material_id": "M001",
+          "quote": "it will end up saying that can't find a driver",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3666,
+          "end_char": 3712,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S014",
+              "segment_start": 445,
+              "segment_end": 491,
+              "start_char": 3666,
+              "end_char": 3712
+            }
+          ],
+          "original_locator": {
+            "line_start": 14,
+            "line_end": 14,
+            "start_char": 3221,
+            "end_char": 4284
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S014",
+          "DOC026:S014"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "症状：T014「take a really long time to actually schedule it」",
+          "结果：T014「it will end up saying that can't find a driver」"
+        ],
+        "unsupported_parts": [
+          "成因未定（应用夸大或司机拒单），他本人也只是猜测",
+          "未说明发生频率"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取症状",
+          "2. 取结果",
+          "3. 记录成因未定",
+          "4. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T013 描述显示有车但排程很久、最后提示找不到司机。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "下单后能真正派到车，不出现长时间等待后「找不到司机」。",
+        "label": "direct",
+        "rationale": "T013 描述显示有车但排程很久、最后提示找不到司机。",
+        "supported_parts": [
+          "症状：T014「take a really long time to actually schedule it」",
+          "结果：T014「it will end up saying that can't find a driver」"
+        ],
+        "unsupported_parts": [
+          "成因未定（应用夸大或司机拒单），他本人也只是猜测",
+          "未说明发生频率"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取症状",
+          "2. 取结果",
+          "3. 记录成因未定",
+          "4. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C007",
+      "target_kind": "candidate",
+      "statement": "不因取消订单而拉低自己作为乘客的评分。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC026:S014",
+          "material_id": "M001",
+          "quote": "I usually try not to cancel a ride",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3938,
+          "end_char": 3972,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S014",
+              "segment_start": 717,
+              "segment_end": 751,
+              "start_char": 3938,
+              "end_char": 3972
+            }
+          ],
+          "original_locator": {
+            "line_start": 14,
+            "line_end": 14,
+            "start_char": 3221,
+            "end_char": 4284
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC026:S014",
+          "material_id": "M001",
+          "quote": "the drivers will see a rating of the passenger as well. And I think that that damages my rating",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4015,
+          "end_char": 4110,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S014",
+              "segment_start": 794,
+              "segment_end": 889,
+              "start_char": 4015,
+              "end_char": 4110
+            }
+          ],
+          "original_locator": {
+            "line_start": 14,
+            "line_end": 14,
+            "start_char": 3221,
+            "end_char": 4284
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S014",
+          "DOC026:S014"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "行为：T014「I usually try not to cancel a ride」",
+          "理由：T014「that damages my rating」"
+        ],
+        "unsupported_parts": [
+          "未确认取消是否真的扣分（他自述不确定收费规则）",
+          "未说明评分低的实际后果"
+        ],
+        "assumptions": [
+          "他把「司机可见评分」理解为取消会扣分"
+        ],
+        "reasoning_steps": [
+          "1. 取行为",
+          "2. 取理由",
+          "3. 记录推断成分",
+          "4. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T013 说他尽量不取消，因为司机能看到乘客评分、取消会拉低评分。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "不因取消订单而拉低自己作为乘客的评分。",
+        "label": "direct",
+        "rationale": "T013 说他尽量不取消，因为司机能看到乘客评分、取消会拉低评分。",
+        "supported_parts": [
+          "行为：T014「I usually try not to cancel a ride」",
+          "理由：T014「that damages my rating」"
+        ],
+        "unsupported_parts": [
+          "未确认取消是否真的扣分（他自述不确定收费规则）",
+          "未说明评分低的实际后果"
+        ],
+        "assumptions": [
+          "他把「司机可见评分」理解为取消会扣分"
+        ],
+        "reasoning_steps": [
+          "1. 取行为",
+          "2. 取理由",
+          "3. 记录推断成分",
+          "4. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C008",
+      "target_kind": "candidate",
+      "statement": "工作出行时以时间优先于价格（费用由公司承担）。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC026:S020",
+          "material_id": "M001",
+          "quote": "i usually care less about the price and more about the time in that case",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5441,
+          "end_char": 5513,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S020",
+              "segment_start": 329,
+              "segment_end": 401,
+              "start_char": 5441,
+              "end_char": 5513
+            }
+          ],
+          "original_locator": {
+            "line_start": 20,
+            "line_end": 20,
+            "start_char": 5112,
+            "end_char": 5685
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC026:S020",
+          "material_id": "M001",
+          "quote": "my work is going to cover it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5522,
+          "end_char": 5550,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S020",
+              "segment_start": 410,
+              "segment_end": 438,
+              "start_char": 5522,
+              "end_char": 5550
+            }
+          ],
+          "original_locator": {
+            "line_start": 20,
+            "line_end": 20,
+            "start_char": 5112,
+            "end_char": 5685
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S020",
+          "DOC026:S020"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "取舍：T020「care less about the price and more about the time」",
+          "前提：T020「my work is going to cover it」"
+        ],
+        "unsupported_parts": [
+          "未说明公司报销是否有上限",
+          "未说明是否需保留凭证（T045 提到用作报销）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取取舍",
+          "2. 取前提",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T019 明确对比工作与私人场景：工作报销时更在意时间。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "工作出行时以时间优先于价格（费用由公司承担）。",
+        "label": "direct",
+        "rationale": "T019 明确对比工作与私人场景：工作报销时更在意时间。",
+        "supported_parts": [
+          "取舍：T020「care less about the price and more about the time」",
+          "前提：T020「my work is going to cover it」"
+        ],
+        "unsupported_parts": [
+          "未说明公司报销是否有上限",
+          "未说明是否需保留凭证（T045 提到用作报销）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取取舍",
+          "2. 取前提",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C009",
+      "target_kind": "candidate",
+      "statement": "按对地区的熟悉度、路线复杂度与停留时长，在公交、租车与网约车之间选择。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC026:S022",
+          "material_id": "M001",
+          "quote": "it usually depends on both how familiar I am with the area",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6191,
+          "end_char": 6249,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S022",
+              "segment_start": 225,
+              "segment_end": 283,
+              "start_char": 6191,
+              "end_char": 6249
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 5966,
+            "end_char": 6994
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC026:S022",
+          "material_id": "M001",
+          "quote": "if it's complicated like that, I would probably prefer And Uber in that case",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6595,
+          "end_char": 6671,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S022",
+              "segment_start": 629,
+              "segment_end": 705,
+              "start_char": 6595,
+              "end_char": 6671
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 5966,
+            "end_char": 6994
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC026:S022",
+          "material_id": "M001",
+          "quote": "give me a little bit more freedom to rent a car than to do a ride share every time",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6888,
+          "end_char": 6970,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S022",
+              "segment_start": 922,
+              "segment_end": 1004,
+              "start_char": 6888,
+              "end_char": 6970
+            }
+          ],
+          "original_locator": {
+            "line_start": 22,
+            "line_end": 22,
+            "start_char": 5966,
+            "end_char": 6994
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S022",
+          "DOC026:S022",
+          "DOC026:S022"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "公交：T022「how familiar I am with the area」",
+          "网约车：T022「if it's complicated like that, I would probably prefer And Uber」",
+          "租车：T022「more freedom to rent a car」"
+        ],
+        "unsupported_parts": [
+          "未给出时长阈值",
+          "未说明公共交通可达性差的城市如何选择"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取三条依据",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T021 给出三种方式的取舍依据：熟悉度、路线复杂度、行程时长。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "按对地区的熟悉度、路线复杂度与停留时长，在公交、租车与网约车之间选择。",
+        "label": "direct",
+        "rationale": "T021 给出三种方式的取舍依据：熟悉度、路线复杂度、行程时长。",
+        "supported_parts": [
+          "公交：T022「how familiar I am with the area」",
+          "网约车：T022「if it's complicated like that, I would probably prefer And Uber」",
+          "租车：T022「more freedom to rent a car」"
+        ],
+        "unsupported_parts": [
+          "未给出时长阈值",
+          "未说明公共交通可达性差的城市如何选择"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取三条依据",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C010",
+      "target_kind": "candidate",
+      "statement": "出问题时能联系到真人客服，而不是只能和机器人对话。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC026:S032",
+          "material_id": "M001",
+          "quote": "I wanted to talk to a person",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8188,
+          "end_char": 8216,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S032",
+              "segment_start": 73,
+              "segment_end": 101,
+              "start_char": 8188,
+              "end_char": 8216
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 8115,
+            "end_char": 8611
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC026:S032",
+          "material_id": "M001",
+          "quote": "I think I was probably talking to a chat bot",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8519,
+          "end_char": 8563,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S032",
+              "segment_start": 404,
+              "segment_end": 448,
+              "start_char": 8519,
+              "end_char": 8563
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 8115,
+            "end_char": 8611
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S032",
+          "DOC026:S032"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "诉求：T032「I wanted to talk to a person」",
+          "怀疑：T032「I think I was probably talking to a chat bot」"
+        ],
+        "unsupported_parts": [
+          "未确认对方是否真为机器人",
+          "未说明希望的人工渠道（电话/在线）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求",
+          "2. 取怀疑",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T031 明确说想找真人，怀疑对方是机器人，这是他判定客服极差的原因。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "出问题时能联系到真人客服，而不是只能和机器人对话。",
+        "label": "direct",
+        "rationale": "T031 明确说想找真人，怀疑对方是机器人，这是他判定客服极差的原因。",
+        "supported_parts": [
+          "诉求：T032「I wanted to talk to a person」",
+          "怀疑：T032「I think I was probably talking to a chat bot」"
+        ],
+        "unsupported_parts": [
+          "未确认对方是否真为机器人",
+          "未说明希望的人工渠道（电话/在线）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取诉求",
+          "2. 取怀疑",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C011",
+      "target_kind": "candidate",
+      "statement": "用应用内通话或消息与司机沟通，解决上车点不清、位置难找、自己会迟到等问题。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC026:S040",
+          "material_id": "M001",
+          "quote": "I actually find that very helpful",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10498,
+          "end_char": 10531,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S040",
+              "segment_start": 51,
+              "segment_end": 84,
+              "start_char": 10498,
+              "end_char": 10531
+            }
+          ],
+          "original_locator": {
+            "line_start": 40,
+            "line_end": 40,
+            "start_char": 10447,
+            "end_char": 11204
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC026:S040",
+          "material_id": "M001",
+          "quote": "calling on their way to pick me up is usually really helpful",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10887,
+          "end_char": 10947,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S040",
+              "segment_start": 440,
+              "segment_end": 500,
+              "start_char": 10887,
+              "end_char": 10947
+            }
+          ],
+          "original_locator": {
+            "line_start": 40,
+            "line_end": 40,
+            "start_char": 10447,
+            "end_char": 11204
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC026:S040",
+          "material_id": "M001",
+          "quote": "maybe the house numbers are hard to see",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10599,
+          "end_char": 10638,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S040",
+              "segment_start": 152,
+              "segment_end": 191,
+              "start_char": 10599,
+              "end_char": 10638
+            }
+          ],
+          "original_locator": {
+            "line_start": 40,
+            "line_end": 40,
+            "start_char": 10447,
+            "end_char": 11204
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S040",
+          "DOC026:S040",
+          "DOC026:S040"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "评价：T040「I actually find that very helpful」",
+          "用途：T040「calling on their way to pick me up」",
+          "场景：T040「the house numbers are hard to see」"
+        ],
+        "unsupported_parts": [
+          "未说明是否用过文字消息",
+          "未说明司机接听率"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取评价",
+          "2. 取用途与场景",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T039 说应用内通话很有帮助，尤其在门牌难找、位置热闹时。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "用应用内通话或消息与司机沟通，解决上车点不清、位置难找、自己会迟到等问题。",
+        "label": "direct",
+        "rationale": "T039 说应用内通话很有帮助，尤其在门牌难找、位置热闹时。",
+        "supported_parts": [
+          "评价：T040「I actually find that very helpful」",
+          "用途：T040「calling on their way to pick me up」",
+          "场景：T040「the house numbers are hard to see」"
+        ],
+        "unsupported_parts": [
+          "未说明是否用过文字消息",
+          "未说明司机接听率"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取评价",
+          "2. 取用途与场景",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C012",
+      "target_kind": "candidate",
+      "statement": "需要时能方便地修改上车点。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC026:S042",
+          "material_id": "M001",
+          "quote": "I think that it's not as simple to change it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12025,
+          "end_char": 12069,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S042",
+              "segment_start": 587,
+              "segment_end": 631,
+              "start_char": 12025,
+              "end_char": 12069
+            }
+          ],
+          "original_locator": {
+            "line_start": 42,
+            "line_end": 42,
+            "start_char": 11438,
+            "end_char": 12185
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC026:S042",
+          "material_id": "M001",
+          "quote": "I give the driver a heads up instead of doing it on the app",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12125,
+          "end_char": 12184,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S042",
+              "segment_start": 687,
+              "segment_end": 746,
+              "start_char": 12125,
+              "end_char": 12184
+            }
+          ],
+          "original_locator": {
+            "line_start": 42,
+            "line_end": 42,
+            "start_char": 11438,
+            "end_char": 12185
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S042",
+          "DOC026:S042"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "现状：T042「it's not as simple to change it」",
+          "替代：T042「I give the driver a heads up instead of doing it on the app」"
+        ],
+        "unsupported_parts": [
+          "他说法带保留（I'm not going to do that），未实测",
+          "未说明期望的改点方式"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取现状",
+          "2. 取替代做法",
+          "3. 记录保留态度",
+          "4. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T041 说改版后改上车点变麻烦，于是改用电话告知司机。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "需要时能方便地修改上车点。",
+        "label": "direct",
+        "rationale": "T041 说改版后改上车点变麻烦，于是改用电话告知司机。",
+        "supported_parts": [
+          "现状：T042「it's not as simple to change it」",
+          "替代：T042「I give the driver a heads up instead of doing it on the app」"
+        ],
+        "unsupported_parts": [
+          "他说法带保留（I'm not going to do that），未实测",
+          "未说明期望的改点方式"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取现状",
+          "2. 取替代做法",
+          "3. 记录保留态度",
+          "4. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC026-C013",
+      "target_kind": "candidate",
+      "statement": "行程结束后能评分、给小费，并查看金额用于分摊或报销。",
+      "document_id": "DOC026",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC026:S046",
+          "material_id": "M001",
+          "quote": "they give you the option to rate the driver",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12661,
+          "end_char": 12704,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S046",
+              "segment_start": 92,
+              "segment_end": 135,
+              "start_char": 12661,
+              "end_char": 12704
+            }
+          ],
+          "original_locator": {
+            "line_start": 46,
+            "line_end": 46,
+            "start_char": 12569,
+            "end_char": 13178
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC026:S046",
+          "material_id": "M001",
+          "quote": "look at how much the ride was so that I could split split up the charge",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12945,
+          "end_char": 13016,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S046",
+              "segment_start": 376,
+              "segment_end": 447,
+              "start_char": 12945,
+              "end_char": 13016
+            }
+          ],
+          "original_locator": {
+            "line_start": 46,
+            "line_end": 46,
+            "start_char": 12569,
+            "end_char": 13178
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0030",
+          "source_id": "DOC026:S046",
+          "material_id": "M001",
+          "quote": "I can use that as a receipt to get reimbursed",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13052,
+          "end_char": 13097,
+          "candidate_locations": [
+            {
+              "source_id": "DOC026:S046",
+              "segment_start": 483,
+              "segment_end": 528,
+              "start_char": 13052,
+              "end_char": 13097
+            }
+          ],
+          "original_locator": {
+            "line_start": 46,
+            "line_end": 46,
+            "start_char": 12569,
+            "end_char": 13178
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC026:S046",
+          "DOC026:S046",
+          "DOC026:S046"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "评分：T046「they give you the option to rate the driver」",
+          "分摊：T046「split split up the charge」",
+          "报销：T046「use that as a receipt to get reimbursed」"
+        ],
+        "unsupported_parts": [
+          "未说明是否每次都评分",
+          "未说明小费习惯"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取三项用途",
+          "2. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T045 说行程后主要回看评分/小费入口与金额，金额用于分摊或报销。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "行程结束后能评分、给小费，并查看金额用于分摊或报销。",
+        "label": "direct",
+        "rationale": "T045 说行程后主要回看评分/小费入口与金额，金额用于分摊或报销。",
+        "supported_parts": [
+          "评分：T046「they give you the option to rate the driver」",
+          "分摊：T046「split split up the charge」",
+          "报销：T046「use that as a receipt to get reimbursed」"
+        ],
+        "unsupported_parts": [
+          "未说明是否每次都评分",
+          "未说明小费习惯"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取三项用途",
+          "2. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC026\\tracing\\semantic-judgments.json",
+    "sha256": "5ac25812ac43f2c0122461442d9cc2a66e1e21a16d4fe5cd0cfa6a3c6bc33f74"
+  }
+}

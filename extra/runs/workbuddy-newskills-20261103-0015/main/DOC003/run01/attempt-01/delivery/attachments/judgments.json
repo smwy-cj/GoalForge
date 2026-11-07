@@ -1,0 +1,205 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "ae15562250e183aec8b57f2996233e31b89db2b28a2540abacd12796522d6ea7",
+    "input_sha256": "f844659c742e22b4d50763c4bb98899547919acb0c61039d25eea2e9681710bb"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Find a flight itinerary whose timing fits my travel plans - matching onward transport and the schedules of people I am meeting, and ideally letting me sleep at night.",
+      "label": "direct",
+      "rationale": "受访者把“好行程”明确限定为时间合适、与其处境（衔接其他交通、与要见的人日程一致）匹配，并表示宁可要夜间睡眠而不坐红眼；陈奈-加尔各答例子给出错过末班车的具体条件。",
+      "supported_parts": [
+        "行程时间需匹配其他交通/会面日程",
+        "夜间睡眠为偏好强度",
+        "紧急且无替代时接受不匹配的行程"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G002": {
+      "target_statement": "Find a good deal on the flight - primarily a low price, with seating and other benefits taken into account.",
+      "label": "direct",
+      "rationale": "多处明确把“拿到好价格/好交易”列为主要目标，并称会反复查看以确保最优；早期也提到按价格、座位与其他权益比较备选。",
+      "supported_parts": [
+        "好价格为主",
+        "座位与其他权益为次要比较项"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G003": {
+      "target_statement": "Compare different booking websites for the chosen itinerary to find the provider that offers the best price and overall deal.",
+      "label": "direct",
+      "rationale": "受访者把“比较不同预订网站、选出最优组合”列为使用该应用的三项主要目标之一，并描述会逐个打开提供方页面比较价格、评分与折扣。",
+      "supported_parts": [
+        "比较多个预订提供方",
+        "以价格与整体交易为比较标准"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G004": {
+      "target_statement": "Search across many airport, city and country pairs and date ranges in a single search rather than one pair at a time (for example, about 11,760 combinations of airports, dates and cabin classes).",
+      "label": "direct",
+      "rationale": "明确说更愿意一次搜索一系列机场、用国家或地区让多个机场同时被查询，并给出 20×6×49×2≈11,760 的组合规模作为期望的检索范围。",
+      "supported_parts": [
+        "多机场/多城市/多国家组合一次检索",
+        "日期范围与舱位维度",
+        "示例规模11,760"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G005": {
+      "target_statement": "Complete flight research much faster, with substantially less time and mental effort per search.",
+      "label": "direct",
+      "rationale": "明确说若能以快得多的速度、同时看更多组合且更准确地研究、花更少时间，就会投入换平台；并把研究耗时列为最大障碍。",
+      "supported_parts": [
+        "更快完成研究",
+        "减少时间与心力",
+        "长期使用即使每次只省几分钟也值得"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G006": {
+      "target_statement": "Get all the information needed for a booking in one place instead of visiting 10 to 12 different sites.",
+      "label": "inferred",
+      "rationale": "原文只有抱怨（信息分散、需访问10–12个站点），没有直接提出“集中在一处”的要求；结合其把该点列为障碍，推断出信息集中目标。",
+      "supported_parts": [
+        "信息分散导致跨站访问"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "抱怨被解读为希望信息集中，而非仅描述现状"
+      ],
+      "reasoning_steps": [
+        "识别障碍句",
+        "将障碍的目标状态表述为信息集中"
+      ]
+    },
+    "G007": {
+      "target_statement": "Stay anonymous while searching flights - not logging in and blocking cookies - so that I am not tracked or quoted higher prices.",
+      "label": "direct",
+      "rationale": "明确说自己注重隐私、避免登录并尽量匿名，理由是可能被跟踪或因频繁搜索而被提价；并描述使用无痕窗口和屏蔽 cookie。",
+      "supported_parts": [
+        "不登录/匿名搜索",
+        "屏蔽cookie",
+        "避免被跟踪与差别定价"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G008": {
+      "target_statement": "Receive price-drop alerts for several candidate routes so I can book as soon as one of them falls within reach.",
+      "label": "direct",
+      "rationale": "明确说“可以有更好的提醒选项”并在一次必须成行的行程中为多条路线设置降价提醒；同时保留其对规则可行性的怀疑作为限定，强度为弱建议。",
+      "supported_parts": [
+        "多路线降价提醒",
+        "降价即订的触发意图"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G009": {
+      "target_statement": "Show whether a fare is above or below the typical price for that market, especially where I am unfamiliar with local prices.",
+      "label": "direct",
+      "rationale": "明确说在陌生市场会用 Google Flights 的中位数比较判断价格高低，并回答在 Skyscanner 上显示该比较“会有帮助”“是锦上添花”；强度弱且随熟悉度消失。",
+      "supported_parts": [
+        "显示相对市场中位数的价格位置",
+        "仅在不熟悉市场时需要"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G010": {
+      "target_statement": "Keep at least 1.5 times (preferably 2 times) the minimum connection time at any stopover.",
+      "label": "direct",
+      "rationale": "明确说不介意经停数量，只要换乘时间至少为 IATA 最低衔接时间（MCT）的1.5倍，通常按1.5–2倍安排；签证问题为例外。",
+      "supported_parts": [
+        "最低1.5倍MCT",
+        "通常取2倍",
+        "签证为例外"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G011": {
+      "target_statement": "Avoid itineraries with long idle waits or excessive total travel time.",
+      "label": "direct",
+      "rationale": "明确说规划行程要避免在城市里空等约20小时，并说国际搜索时会避开40–60小时的超长廉价行程；其“喜欢绕行观光”的偏好属另一情境，已在条件中区分。",
+      "supported_parts": [
+        "避免长时间空等",
+        "避免过长总旅行时间"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G012": {
+      "target_statement": "Book flights on behalf of family and friends as well as myself, using leftover points or gift vouchers where possible.",
+      "label": "direct",
+      "rationale": "明确报告长期为父母、姐妹、伴侣和朋友订票，并会用剩余积分或礼券帮朋友；约80/20的自我/他人比例。属现状实践，不是变更请求，故在理由中标注。",
+      "supported_parts": [
+        "为亲友订票",
+        "使用剩余积分/礼券"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G013": {
+      "target_statement": "Continue from the aggregator to the chosen provider's checkout with the itinerary and my details already filled in, leaving only confirmation and payment.",
+      "label": "inferred",
+      "rationale": "原文是对现有跳转流程的描述和价值判断（“就像确认信息和付款”），没有直接提出要求；由描述推断出对无缝交接的目标。",
+      "supported_parts": [
+        "跳转到提供方结账页",
+        "行程与信息已预填"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "描述性认可被视为维持意图"
+      ],
+      "reasoning_steps": [
+        "识别流程描述",
+        "将价值评价转写为预期结果"
+      ]
+    },
+    "G014": {
+      "target_statement": "See detailed connection and timing information - layovers, local times, arrival day and total duration - so I can judge whether an itinerary works.",
+      "label": "direct",
+      "rationale": "明确说会大量使用行程详情，逐项确认衔接与时间是否适合自己；并描述需要中转等待时长、当地时间和到达日等信息。",
+      "supported_parts": [
+        "中转等待与当地时间",
+        "到达日与总时长",
+        "用于判断行程是否可行"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G015": {
+      "target_statement": "See the lounge access my cards and passes give me at the connecting airport inside the flight search, if it can be kept accurate.",
+      "label": "direct",
+      "rationale": "对“在搜索中显示休息室信息”回答“Sure”，并称若能持续更新并整合会“非常棒”；但同一轮明确说第三方更新不可靠、宁愿以发卡行源头为准，故目标带准确性条件、强度弱。",
+      "supported_parts": [
+        "在航班搜索中看到可用休息室",
+        "以持续准确更新为条件",
+        "否则以发卡行为准"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    }
+  }
+}

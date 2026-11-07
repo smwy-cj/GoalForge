@@ -1,0 +1,106 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "5b094ef871209abc96653505d1a82d362ca0a5a258b9e03d7a91ad5a73b66066",
+    "input_sha256": "27bd6b64effae82c5c382abb6b7f665fe13edb51680b522393aea3ddf04c47d0"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Complete routine online grocery orders efficiently, without spending time exploring or browsing items.",
+      "label": "direct",
+      "rationale": "受访者明确说明上线的目的就是效率、不是为了逛，并给出繁忙周与常规补货两种情境；结尾又确认访谈摘要准确。否定只针对“随机浏览”，原文并未要求移除探索功能，因此目标写成效率结果而非“取消探索”。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G002": {
+      "target_statement": "Generate a grocery list automatically from the user's past orders.",
+      "label": "direct",
+      "rationale": "原文直接表达“如果能看我过去的订单并帮我生成购物清单就好了”，动作与结果都明确；强度是“it would be cool”，属于期望而非硬性要求，已按原强度记录。同轮发现已有 Buy again 功能，但那是逐项手动加购，不等于自动生成清单。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G003": {
+      "target_statement": "Provide reusable grocery-list templates that the user can customize for different occasions such as a weekly list and a party-planning list.",
+      "label": "direct",
+      "rationale": "原文明示希望有可重复使用、可按场合定制的模板清单，并在 T068 明确说这是“在重复自己”，属于同一愿望的再次强调；结尾摘要也把 custom lists 列为会提升体验的功能，并被受访者确认。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G004": {
+      "target_statement": "Reduce the typing and clicking needed for each order by letting the user open one saved list and read through it instead of rebuilding the list.",
+      "label": "direct",
+      "rationale": "原文把“打开一份清单浏览”与“减少打字和点击”作为同一改造的预期结果直接说出，动作与质量结果都在句内。该目标与模板目标共享情境，但验收维度是交互代价，不是模板是否存在，故单独保留。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G005": {
+      "target_statement": "Keep the recurring grocery list comprehensive so that forgotten items do not force an extra trip to the store.",
+      "label": "direct",
+      "rationale": "原文把“更全面、不容易漏项、否则要再跑一趟实体店”作为复用清单的另一个结果直接表述，属于独立于交互代价的质量意图。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G006": {
+      "target_statement": "Every two weeks, show the user the grocery list for sign-off and then place the order for pickup.",
+      "label": "direct",
+      "rationale": "原文具体描述了双周展示清单、用户确认后自动下单、再到店取货的流程，周期、确认环节和履约方式都保留。受访者随后怀疑该功能可能已存在但被埋没（原句“They actually might...so buried”），这只影响可发现性，不否定该流程是期望结果。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G007": {
+      "target_statement": "Suggest features that are likely useful to the user based on how the user is using the platform.",
+      "label": "direct",
+      "rationale": "原文明示“should”级别的诉求：按使用情况主动推荐可能有用的功能。前文把功能被埋没、界面不直观作为问题，本目标是受访者自己给出的补救方式，不是分析者补造。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G008": {
+      "target_statement": "Make store-specific availability clearly visible while searching so that items unavailable at the selected store are not added to the cart.",
+      "label": "inferred",
+      "rationale": "原文只有抱怨与后果（图标不显眼、漏选店铺后把不可用商品加入购物车、又要回头重搜），没有一句直接提出改进要求。由“漏选导致返工”推断期望是让店铺可用性在加购前清楚可见，推断依赖用户希望减少返工这一假设。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [
+        "受访者希望减少因漏选店铺造成的返工",
+        "更清楚的可用性标识不会被当作干扰"
+      ],
+      "reasoning_steps": [
+        "T026 描述忘选店铺后加入不可用商品并需重新筛选",
+        "T032 说明 Whole Foods 图标存在但不显眼、容易漏看",
+        "据此推断期望在搜索阶段清楚显示店铺可用性"
+      ]
+    },
+    "G009": {
+      "target_statement": "Recommend products in a feed when the user is scrolling through a category such as snacks.",
+      "label": "direct",
+      "rationale": "原文明确设想在按类目滚动浏览时出现类似信息流的推荐；语气是“kind of be interesting”，且紧接“或后端可能已经这样做”，强度弱、不确定是否已有实现，均按原样保留。该目标只在探索情境成立，与例行采购的效率目标不矛盾。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G010": {
+      "target_statement": "Find out how purchase data shared between the in-store and online grocery channels is used.",
+      "label": "direct",
+      "rationale": "原文直接说对线上线下共享的购买数据如何使用“一直好奇”，并提到隐私顾虑；这是想知道的诉求，不是要求新增功能，强度按“curious / wondered”保留，未升级为强制透明度要求。",
+      "supported_parts": [],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    }
+  }
+}

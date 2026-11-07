@@ -1,0 +1,39 @@
+{
+  "schema_version": "goalforge-feedback-processing-1",
+  "feedback_id": "FIX-EDIT",
+  "base_model": {
+    "model_id": "FIX-goal-model",
+    "version": "v0.1",
+    "content_sha256": "0155bf5631e3d69a8f1e9670e42fdf2ba4c1498a6a3a74048a77de093e7ade98",
+    "core_sha256": "eb41db2f0ee001e5183cec0fef05f223db8a37a8cd342b1c9455a0fa7894669a",
+    "review_target_sha256": "94004fa5bbd8dbceac379713c781417c918335d28f3b014eb04264013e22d11e"
+  },
+  "mode": "apply",
+  "routes": [
+    {
+      "entry_id": "FIX-EDIT-E1",
+      "decision": "modify",
+      "target_id": "FIX-G001",
+      "status": "applied_needs_retrace",
+      "next_skill": "goal-tracing"
+    }
+  ],
+  "overall_decision": "request_changes",
+  "model_modified": true,
+  "limitations": [
+    "审核人名称为自填，不是身份验证。",
+    "人工认可不替代语义正确性证明。"
+  ],
+  "output_version": "v0.1.h1",
+  "human_review": "pending",
+  "feedback_artifact": "attachments/human-feedback-2dfc1f7934121148.json",
+  "semantic_status": "not_run",
+  "check_summary": {
+    "structure_status": "failed",
+    "semantic_status": "not_run",
+    "goal_count": 3,
+    "pair_count": 3,
+    "blocking_count": 5,
+    "needs_review_count": 2
+  }
+}

@@ -1,0 +1,1683 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC028\\extraction.json",
+    "sha256": "5dcf09b4221afb39b594c52fb1a76a2a597e2fea8d797e8d930810a58a4cba44",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "786886092d9a48c14277f02e2cf1e00ea12efc2661c4d4f862ed3dc429d73e10",
+      "input_sha256": "5dcf09b4221afb39b594c52fb1a76a2a597e2fea8d797e8d930810a58a4cba44"
+    },
+    "bundle_sha256": "f12b95a01a18038b29bc5901fba253e28c742a9e2a530b2d3a628ae15d188387"
+  },
+  "sources": [
+    {
+      "document_id": "DOC028",
+      "expected_hash": "8336403cbac134a1f72ea0a195465db926b317b0ce9b2cb5a27893a990a79200",
+      "actual_hash": "8336403cbac134a1f72ea0a195465db926b317b0ce9b2cb5a27893a990a79200",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC028-C001",
+      "target_kind": "candidate",
+      "statement": "用真实用户的亲历经验回答具体问题，比泛化搜索更贴合处境。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC028:S006",
+          "material_id": "M001",
+          "quote": "I get personal experiences over facts",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1985,
+          "end_char": 2022,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S006",
+              "segment_start": 524,
+              "segment_end": 561,
+              "start_char": 1985,
+              "end_char": 2022
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 1461,
+            "end_char": 2304
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC028:S006",
+          "material_id": "M001",
+          "quote": "these personal experiences are mostly legitimate",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2028,
+          "end_char": 2076,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S006",
+              "segment_start": 567,
+              "segment_end": 615,
+              "start_char": 2028,
+              "end_char": 2076
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 1461,
+            "end_char": 2304
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC028:S006",
+          "material_id": "M001",
+          "quote": "to get more targeted results to the problem that I'm facing",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2244,
+          "end_char": 2303,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S006",
+              "segment_start": 783,
+              "segment_end": 842,
+              "start_char": 2244,
+              "end_char": 2303
+            }
+          ],
+          "original_locator": {
+            "line_start": 6,
+            "line_end": 6,
+            "start_char": 1461,
+            "end_char": 2304
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S006",
+          "DOC028:S006",
+          "DOC028:S006"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "对比：T006「personal experiences over facts」",
+          "可信度判断：T006「mostly legitimate」",
+          "目的：T006「more targeted results to the problem」"
+        ],
+        "unsupported_parts": [
+          "「legitimate」如何判断未说明",
+          "未说明与专业资料的取舍"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取对比",
+          "2. 取目的",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T005 明确对比 Reddit 与 Google：前者给亲历经验、更贴合具体处境。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "用真实用户的亲历经验回答具体问题，比泛化搜索更贴合处境。",
+        "label": "direct",
+        "rationale": "T005 明确对比 Reddit 与 Google：前者给亲历经验、更贴合具体处境。",
+        "supported_parts": [
+          "对比：T006「personal experiences over facts」",
+          "可信度判断：T006「mostly legitimate」",
+          "目的：T006「more targeted results to the problem」"
+        ],
+        "unsupported_parts": [
+          "「legitimate」如何判断未说明",
+          "未说明与专业资料的取舍"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取对比",
+          "2. 取目的",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C002",
+      "target_kind": "candidate",
+      "statement": "卡在技术问题上时，用社区问答替代 Stack Overflow 求解。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC028:S004",
+          "material_id": "M001",
+          "quote": "I also use Reddit as an alternative for stack overflow",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1007,
+          "end_char": 1061,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S004",
+              "segment_start": 758,
+              "segment_end": 812,
+              "start_char": 1007,
+              "end_char": 1061
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 249,
+            "end_char": 1323
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC028:S004",
+          "material_id": "M001",
+          "quote": "I use those when I'm stuck on a problem",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1155,
+          "end_char": 1194,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S004",
+              "segment_start": 906,
+              "segment_end": 945,
+              "start_char": 1155,
+              "end_char": 1194
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 249,
+            "end_char": 1323
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S004",
+          "DOC028:S004"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "定位：T004「an alternative for stack overflow」",
+          "场景：T004「when I'm stuck on a problem」"
+        ],
+        "unsupported_parts": [
+          "未说明为何要替代（SO 的什么问题）",
+          "未说明技术版块的具体名称"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取定位",
+          "2. 取场景",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T003 明确说把 Reddit 当 Stack Overflow 的替代，用于卡住时求助。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "卡在技术问题上时，用社区问答替代 Stack Overflow 求解。",
+        "label": "direct",
+        "rationale": "T003 明确说把 Reddit 当 Stack Overflow 的替代，用于卡住时求助。",
+        "supported_parts": [
+          "定位：T004「an alternative for stack overflow」",
+          "场景：T004「when I'm stuck on a problem」"
+        ],
+        "unsupported_parts": [
+          "未说明为何要替代（SO 的什么问题）",
+          "未说明技术版块的具体名称"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取定位",
+          "2. 取场景",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C003",
+      "target_kind": "candidate",
+      "statement": "在碎片时间里无目的地刷，满足好奇心、打发时间。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC028:S004",
+          "material_id": "M001",
+          "quote": "I log in just to kill some time",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 807,
+          "end_char": 838,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S004",
+              "segment_start": 558,
+              "segment_end": 589,
+              "start_char": 807,
+              "end_char": 838
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 249,
+            "end_char": 1323
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC028:S026",
+          "material_id": "M001",
+          "quote": "it's usually when I have like some downtime",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12935,
+          "end_char": 12978,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S026",
+              "segment_start": 227,
+              "segment_end": 270,
+              "start_char": 12935,
+              "end_char": 12978
+            }
+          ],
+          "original_locator": {
+            "line_start": 26,
+            "line_end": 26,
+            "start_char": 12708,
+            "end_char": 13558
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S004",
+          "DOC028:S026"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "动机：T004「just to kill some time」",
+          "时段：T026「when I have like some downtime」"
+        ],
+        "unsupported_parts": [
+          "自述此时「没有特定目标」，与目标式使用相对",
+          "未说明每日时长（只说可能耗掉两小时）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取动机",
+          "2. 取时段",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T003 说会仅仅为了杀时间而登录，T025 说空闲时才刷。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在碎片时间里无目的地刷，满足好奇心、打发时间。",
+        "label": "direct",
+        "rationale": "T003 说会仅仅为了杀时间而登录，T025 说空闲时才刷。",
+        "supported_parts": [
+          "动机：T004「just to kill some time」",
+          "时段：T026「when I have like some downtime」"
+        ],
+        "unsupported_parts": [
+          "自述此时「没有特定目标」，与目标式使用相对",
+          "未说明每日时长（只说可能耗掉两小时）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取动机",
+          "2. 取时段",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C004",
+      "target_kind": "candidate",
+      "statement": "查本地或具体事件的信息（如所在城市万圣节怎么过）。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC028:S004",
+          "material_id": "M001",
+          "quote": "I browse my city's subreddit with keyword",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 616,
+          "end_char": 657,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S004",
+              "segment_start": 367,
+              "segment_end": 408,
+              "start_char": 616,
+              "end_char": 657
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 249,
+            "end_char": 1323
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC028:S004",
+          "material_id": "M001",
+          "quote": "I wanted to know what happens during Halloween",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 565,
+          "end_char": 611,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S004",
+              "segment_start": 316,
+              "segment_end": 362,
+              "start_char": 565,
+              "end_char": 611
+            }
+          ],
+          "original_locator": {
+            "line_start": 4,
+            "line_end": 4,
+            "start_char": 249,
+            "end_char": 1323
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S004",
+          "DOC028:S004"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "做法：T004「browse my city's subreddit with keyword」",
+          "需求：T004「know what happens during Halloween」"
+        ],
+        "unsupported_parts": [
+          "未说明本地信息的时效如何保证",
+          "未说明是否依赖置顶帖"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取做法",
+          "2. 取需求",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T003 以万圣节为例，说会在城市版块按关键词搜本地信息。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "查本地或具体事件的信息（如所在城市万圣节怎么过）。",
+        "label": "direct",
+        "rationale": "T003 以万圣节为例，说会在城市版块按关键词搜本地信息。",
+        "supported_parts": [
+          "做法：T004「browse my city's subreddit with keyword」",
+          "需求：T004「know what happens during Halloween」"
+        ],
+        "unsupported_parts": [
+          "未说明本地信息的时效如何保证",
+          "未说明是否依赖置顶帖"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取做法",
+          "2. 取需求",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C005",
+      "target_kind": "candidate",
+      "statement": "保持匿名，发帖内容无法轻易追到本人。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC028:S012",
+          "material_id": "M001",
+          "quote": "the USP. Of Reddit is anonymity",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5548,
+          "end_char": 5579,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S012",
+              "segment_start": 344,
+              "segment_end": 375,
+              "start_char": 5548,
+              "end_char": 5579
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 5204,
+            "end_char": 6527
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC028:S012",
+          "material_id": "M001",
+          "quote": "it's really hard to trace a post back to the person",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5584,
+          "end_char": 5635,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S012",
+              "segment_start": 380,
+              "segment_end": 431,
+              "start_char": 5584,
+              "end_char": 5635
+            }
+          ],
+          "original_locator": {
+            "line_start": 12,
+            "line_end": 12,
+            "start_char": 5204,
+            "end_char": 6527
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S012",
+          "DOC028:S012"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "判断：T012「the USP. Of Reddit is anonymity」",
+          "机制：T012「hard to trace a post back to the person」"
+        ],
+        "unsupported_parts": [
+          "他同时承认通过发帖史仍可能被识别（T055）",
+          "未说明是否会为此调整发言"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取判断",
+          "2. 取机制",
+          "3. 记录自述的反例",
+          "4. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T011 说匿名是 Reddit 的核心价值，帖子难以追溯到人。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "保持匿名，发帖内容无法轻易追到本人。",
+        "label": "direct",
+        "rationale": "T011 说匿名是 Reddit 的核心价值，帖子难以追溯到人。",
+        "supported_parts": [
+          "判断：T012「the USP. Of Reddit is anonymity」",
+          "机制：T012「hard to trace a post back to the person」"
+        ],
+        "unsupported_parts": [
+          "他同时承认通过发帖史仍可能被识别（T055）",
+          "未说明是否会为此调整发言"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取判断",
+          "2. 取机制",
+          "3. 记录自述的反例",
+          "4. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C006",
+      "target_kind": "candidate",
+      "statement": "找到最对口的具体 subreddit 提问，以拿到更专业的回答。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC028:S052",
+          "material_id": "M001",
+          "quote": "the ability to find a subreddit is quite complicated",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 26322,
+          "end_char": 26374,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S052",
+              "segment_start": 446,
+              "segment_end": 498,
+              "start_char": 26322,
+              "end_char": 26374
+            }
+          ],
+          "original_locator": {
+            "line_start": 52,
+            "line_end": 52,
+            "start_char": 25876,
+            "end_char": 26838
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC028:S060",
+          "material_id": "M001",
+          "quote": "there's much more value in posting in a specific subreddit",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 29909,
+          "end_char": 29967,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S060",
+              "segment_start": 547,
+              "segment_end": 605,
+              "start_char": 29909,
+              "end_char": 29967
+            }
+          ],
+          "original_locator": {
+            "line_start": 60,
+            "line_end": 60,
+            "start_char": 29362,
+            "end_char": 30088
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC028:S060",
+          "material_id": "M001",
+          "quote": "a geni tool to find a particular subreddit",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 30045,
+          "end_char": 30087,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S060",
+              "segment_start": 683,
+              "segment_end": 725,
+              "start_char": 30045,
+              "end_char": 30087
+            }
+          ],
+          "original_locator": {
+            "line_start": 60,
+            "line_end": 60,
+            "start_char": 29362,
+            "end_char": 30088
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S052",
+          "DOC028:S060",
+          "DOC028:S060"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "问题：T052「the ability to find a subreddit is quite complicated」",
+          "价值：T060「much more value in posting in a specific subreddit」",
+          "方案：T060「a geni tool to find a particular subreddit」"
+        ],
+        "unsupported_parts": [
+          "未说明「对口」的判定标准",
+          "未说明细分版块人少导致无人回答的问题"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题",
+          "2. 取价值与方案",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T051 说找 subreddit 很麻烦，T059 提出用 AI 定位并说明价值。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "找到最对口的具体 subreddit 提问，以拿到更专业的回答。",
+        "label": "direct",
+        "rationale": "T051 说找 subreddit 很麻烦，T059 提出用 AI 定位并说明价值。",
+        "supported_parts": [
+          "问题：T052「the ability to find a subreddit is quite complicated」",
+          "价值：T060「much more value in posting in a specific subreddit」",
+          "方案：T060「a geni tool to find a particular subreddit」"
+        ],
+        "unsupported_parts": [
+          "未说明「对口」的判定标准",
+          "未说明细分版块人少导致无人回答的问题"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取问题",
+          "2. 取价值与方案",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C007",
+      "target_kind": "candidate",
+      "statement": "买产品前看到多方背景的平衡评价，而非清一色好评。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC028:S034",
+          "material_id": "M001",
+          "quote": "Reddit is more of a balanced perspective",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17851,
+          "end_char": 17891,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S034",
+              "segment_start": 293,
+              "segment_end": 333,
+              "start_char": 17851,
+              "end_char": 17891
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 17558,
+            "end_char": 18356
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC028:S034",
+          "material_id": "M001",
+          "quote": "I've made a lot of purchase decisions because of reviews I've seen on Reddit",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18279,
+          "end_char": 18355,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S034",
+              "segment_start": 721,
+              "segment_end": 797,
+              "start_char": 18279,
+              "end_char": 18355
+            }
+          ],
+          "original_locator": {
+            "line_start": 34,
+            "line_end": 34,
+            "start_char": 17558,
+            "end_char": 18356
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S034",
+          "DOC028:S034"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "判断：T034「more of a balanced perspective」",
+          "效果：T034「made a lot of purchase decisions」"
+        ],
+        "unsupported_parts": [
+          "未说明如何识别软文/刷评",
+          "未说明与专业评测的权重"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取判断",
+          "2. 取效果",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T033 说 Reddit 评价更平衡、有不同背景的人，据此做过多次购买决策。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "买产品前看到多方背景的平衡评价，而非清一色好评。",
+        "label": "direct",
+        "rationale": "T033 说 Reddit 评价更平衡、有不同背景的人，据此做过多次购买决策。",
+        "supported_parts": [
+          "判断：T034「more of a balanced perspective」",
+          "效果：T034「made a lot of purchase decisions」"
+        ],
+        "unsupported_parts": [
+          "未说明如何识别软文/刷评",
+          "未说明与专业评测的权重"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取判断",
+          "2. 取效果",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C008",
+      "target_kind": "candidate",
+      "statement": "健康类问题只取常识性建议，不用于具体诊疗。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC028:S036",
+          "material_id": "M001",
+          "quote": "it's good for general health, related questions",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19319,
+          "end_char": 19366,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S036",
+              "segment_start": 774,
+              "segment_end": 821,
+              "start_char": 19319,
+              "end_char": 19366
+            }
+          ],
+          "original_locator": {
+            "line_start": 36,
+            "line_end": 36,
+            "start_char": 18545,
+            "end_char": 19616
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC028:S036",
+          "material_id": "M001",
+          "quote": "I would not trust for health, related things specific",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19536,
+          "end_char": 19589,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S036",
+              "segment_start": 991,
+              "segment_end": 1044,
+              "start_char": 19536,
+              "end_char": 19589
+            }
+          ],
+          "original_locator": {
+            "line_start": 36,
+            "line_end": 36,
+            "start_char": 18545,
+            "end_char": 19616
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S036",
+          "DOC028:S036"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "可用：T036「good for general health, related questions」",
+          "边界：T036「would not trust for health, related things specific」"
+        ],
+        "unsupported_parts": [
+          "未说明「一般」与「具体」的分界依据",
+          "未说明是否核实回答者资质"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取可用范围",
+          "2. 取边界",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T035 明确划界：一般健康问题可用，具体病症不信也不推荐。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "健康类问题只取常识性建议，不用于具体诊疗。",
+        "label": "direct",
+        "rationale": "T035 明确划界：一般健康问题可用，具体病症不信也不推荐。",
+        "supported_parts": [
+          "可用：T036「good for general health, related questions」",
+          "边界：T036「would not trust for health, related things specific」"
+        ],
+        "unsupported_parts": [
+          "未说明「一般」与「具体」的分界依据",
+          "未说明是否核实回答者资质"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取可用范围",
+          "2. 取边界",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C009",
+      "target_kind": "candidate",
+      "statement": "移动端要顺畅好用：能存草稿、能看清评论层级，别比第三方客户端差。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC028:S028",
+          "material_id": "M001",
+          "quote": "The mobile platform is quite slow and clunky",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13937,
+          "end_char": 13981,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S028",
+              "segment_start": 145,
+              "segment_end": 189,
+              "start_char": 13937,
+              "end_char": 13981
+            }
+          ],
+          "original_locator": {
+            "line_start": 28,
+            "line_end": 28,
+            "start_char": 13792,
+            "end_char": 14741
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC028:S028",
+          "material_id": "M001",
+          "quote": "you can't save it as a draft which you can do on desktop",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 14275,
+          "end_char": 14331,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S028",
+              "segment_start": 483,
+              "segment_end": 539,
+              "start_char": 14275,
+              "end_char": 14331
+            }
+          ],
+          "original_locator": {
+            "line_start": 28,
+            "line_end": 28,
+            "start_char": 13792,
+            "end_char": 14741
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC028:S064",
+          "material_id": "M001",
+          "quote": "the mobile app ui again should be much better",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 30737,
+          "end_char": 30782,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S064",
+              "segment_start": 41,
+              "segment_end": 86,
+              "start_char": 30737,
+              "end_char": 30782
+            }
+          ],
+          "original_locator": {
+            "line_start": 64,
+            "line_end": 64,
+            "start_char": 30696,
+            "end_char": 31273
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S028",
+          "DOC028:S028",
+          "DOC028:S064"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "问题：T028「slow and clunky」",
+          "问题：T028「can't save it as a draft」",
+          "诉求：T064「the mobile app ui again should be much better」"
+        ],
+        "unsupported_parts": [
+          "他自己改用桌面端规避，未说明是否还会回移动端",
+          "未说明第三方客户端的具体优势"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取三项问题",
+          "2. 取诉求",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T027 列举移动端三项问题，T063 再次强调官方 App 应做到最好。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "移动端要顺畅好用：能存草稿、能看清评论层级，别比第三方客户端差。",
+        "label": "direct",
+        "rationale": "T027 列举移动端三项问题，T063 再次强调官方 App 应做到最好。",
+        "supported_parts": [
+          "问题：T028「slow and clunky」",
+          "问题：T028「can't save it as a draft」",
+          "诉求：T064「the mobile app ui again should be much better」"
+        ],
+        "unsupported_parts": [
+          "他自己改用桌面端规避，未说明是否还会回移动端",
+          "未说明第三方客户端的具体优势"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取三项问题",
+          "2. 取诉求",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C010",
+      "target_kind": "candidate",
+      "statement": "看到的内容可信，靠版主与自动审核兜住质量。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC028:S030",
+          "material_id": "M001",
+          "quote": "if a community has a strong, a strong set of moderators, then the posts themselves are reliable",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15381,
+          "end_char": 15476,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S030",
+              "segment_start": 500,
+              "segment_end": 595,
+              "start_char": 15381,
+              "end_char": 15476
+            }
+          ],
+          "original_locator": {
+            "line_start": 30,
+            "line_end": 30,
+            "start_char": 14881,
+            "end_char": 15693
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC028:S030",
+          "material_id": "M001",
+          "quote": "since there is a human element involved in moderating a community",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15561,
+          "end_char": 15626,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S030",
+              "segment_start": 680,
+              "segment_end": 745,
+              "start_char": 15561,
+              "end_char": 15626
+            }
+          ],
+          "original_locator": {
+            "line_start": 30,
+            "line_end": 30,
+            "start_char": 14881,
+            "end_char": 15693
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S030",
+          "DOC028:S030"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "机制：T030「a strong set of moderators, then the posts themselves are reliable」",
+          "理由：T030「a human element involved in moderating」"
+        ],
+        "unsupported_parts": [
+          "他承认网络内容不可能 100% 可信",
+          "未说明如何判断版主质量"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取机制",
+          "2. 取理由",
+          "3. 记录保留",
+          "4. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T029 说社区有强版主时帖子可信，人工审核比纯算法可靠。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "看到的内容可信，靠版主与自动审核兜住质量。",
+        "label": "direct",
+        "rationale": "T029 说社区有强版主时帖子可信，人工审核比纯算法可靠。",
+        "supported_parts": [
+          "机制：T030「a strong set of moderators, then the posts themselves are reliable」",
+          "理由：T030「a human element involved in moderating」"
+        ],
+        "unsupported_parts": [
+          "他承认网络内容不可能 100% 可信",
+          "未说明如何判断版主质量"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取机制",
+          "2. 取理由",
+          "3. 记录保留",
+          "4. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C011",
+      "target_kind": "candidate",
+      "statement": "按场景切换浏览形态：闲逛用卡片、检索用紧凑，并能按时间或热度排序。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC028:S042",
+          "material_id": "M001",
+          "quote": "you can sort posts by new by top by trending, rising",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 21710,
+          "end_char": 21762,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S042",
+              "segment_start": 243,
+              "segment_end": 295,
+              "start_char": 21710,
+              "end_char": 21762
+            }
+          ],
+          "original_locator": {
+            "line_start": 42,
+            "line_end": 42,
+            "start_char": 21467,
+            "end_char": 21900
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC028:S044",
+          "material_id": "M001",
+          "quote": "you can have like card view or compact view",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 22101,
+          "end_char": 22144,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S044",
+              "segment_start": 83,
+              "segment_end": 126,
+              "start_char": 22101,
+              "end_char": 22144
+            }
+          ],
+          "original_locator": {
+            "line_start": 44,
+            "line_end": 44,
+            "start_char": 22018,
+            "end_char": 22872
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC028:S044",
+          "material_id": "M001",
+          "quote": "when I said that, I'm just using it as a passive activity, I prefer, like card mode",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 22594,
+          "end_char": 22677,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S044",
+              "segment_start": 576,
+              "segment_end": 659,
+              "start_char": 22594,
+              "end_char": 22677
+            }
+          ],
+          "original_locator": {
+            "line_start": 44,
+            "line_end": 44,
+            "start_char": 22018,
+            "end_char": 22872
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S042",
+          "DOC028:S044",
+          "DOC028:S044"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "排序：T042「sort posts by new by top by trending, rising」",
+          "视图：T044「card view or compact view」",
+          "场景匹配：T044「passive activity, I prefer, like card mode」"
+        ],
+        "unsupported_parts": [
+          "未说明默认视图",
+          "未说明是否保存过视图偏好"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取排序",
+          "2. 取视图与场景",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T041–T043 说可排序、可切卡片/紧凑视图，并按使用模式选择。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "按场景切换浏览形态：闲逛用卡片、检索用紧凑，并能按时间或热度排序。",
+        "label": "direct",
+        "rationale": "T041–T043 说可排序、可切卡片/紧凑视图，并按使用模式选择。",
+        "supported_parts": [
+          "排序：T042「sort posts by new by top by trending, rising」",
+          "视图：T044「card view or compact view」",
+          "场景匹配：T044「passive activity, I prefer, like card mode」"
+        ],
+        "unsupported_parts": [
+          "未说明默认视图",
+          "未说明是否保存过视图偏好"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取排序",
+          "2. 取视图与场景",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C012",
+      "target_kind": "candidate",
+      "statement": "广告存在但不打断阅读，最好能完全去掉。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC028:S046",
+          "material_id": "M001",
+          "quote": "The ads are quite subtle",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 23510,
+          "end_char": 23534,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S046",
+              "segment_start": 476,
+              "segment_end": 500,
+              "start_char": 23510,
+              "end_char": 23534
+            }
+          ],
+          "original_locator": {
+            "line_start": 46,
+            "line_end": 46,
+            "start_char": 23034,
+            "end_char": 24080
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC028:S046",
+          "material_id": "M001",
+          "quote": "There's only one at any given time",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 23851,
+          "end_char": 23885,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S046",
+              "segment_start": 817,
+              "segment_end": 851,
+              "start_char": 23851,
+              "end_char": 23885
+            }
+          ],
+          "original_locator": {
+            "line_start": 46,
+            "line_end": 46,
+            "start_char": 23034,
+            "end_char": 24080
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC028:S046",
+          "material_id": "M001",
+          "quote": "it is better to have an ad free experience",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 23967,
+          "end_char": 24009,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S046",
+              "segment_start": 933,
+              "segment_end": 975,
+              "start_char": 23967,
+              "end_char": 24009
+            }
+          ],
+          "original_locator": {
+            "line_start": 46,
+            "line_end": 46,
+            "start_char": 23034,
+            "end_char": 24080
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S046",
+          "DOC028:S046",
+          "DOC028:S046"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "评价：T046「The ads are quite subtle」",
+          "密度：T046「only one at any given time」",
+          "偏好：T046「better to have an ad free experience」"
+        ],
+        "unsupported_parts": [
+          "他装了广告拦截，实际体验可能未包含广告",
+          "未说明愿为此付费（T047 说暂时不买）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取评价",
+          "2. 取偏好",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T045 评价广告克制、位置固定，同时说最好无广告。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "广告存在但不打断阅读，最好能完全去掉。",
+        "label": "direct",
+        "rationale": "T045 评价广告克制、位置固定，同时说最好无广告。",
+        "supported_parts": [
+          "评价：T046「The ads are quite subtle」",
+          "密度：T046「only one at any given time」",
+          "偏好：T046「better to have an ad free experience」"
+        ],
+        "unsupported_parts": [
+          "他装了广告拦截，实际体验可能未包含广告",
+          "未说明愿为此付费（T047 说暂时不买）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取评价",
+          "2. 取偏好",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC028-C013",
+      "target_kind": "candidate",
+      "statement": "断网时仍能读已加载的帖子。",
+      "document_id": "DOC028",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0030",
+          "source_id": "DOC028:S040",
+          "material_id": "M001",
+          "quote": "If you lose Internet connection it does save your feed",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 20435,
+          "end_char": 20489,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S040",
+              "segment_start": 109,
+              "segment_end": 163,
+              "start_char": 20435,
+              "end_char": 20489
+            }
+          ],
+          "original_locator": {
+            "line_start": 40,
+            "line_end": 40,
+            "start_char": 20326,
+            "end_char": 21208
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0031",
+          "source_id": "DOC028:S040",
+          "material_id": "M001",
+          "quote": "it won't allow you to make new posts, nor will it refresh the feed",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 20861,
+          "end_char": 20927,
+          "candidate_locations": [
+            {
+              "source_id": "DOC028:S040",
+              "segment_start": 535,
+              "segment_end": 601,
+              "start_char": 20861,
+              "end_char": 20927
+            }
+          ],
+          "original_locator": {
+            "line_start": 40,
+            "line_end": 40,
+            "start_char": 20326,
+            "end_char": 21208
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC028:S040",
+          "DOC028:S040"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "能力：T040「If you lose Internet connection it does save your feed」",
+          "限制：T040「won't allow you to make new posts, nor will it refresh」"
+        ],
+        "unsupported_parts": [
+          "自评「not very comprehensive」",
+          "未说明缓存保留时长"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取限制",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T039 说断网后仍可读已缓存内容，但不能刷新或发帖。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "断网时仍能读已加载的帖子。",
+        "label": "direct",
+        "rationale": "T039 说断网后仍可读已缓存内容，但不能刷新或发帖。",
+        "supported_parts": [
+          "能力：T040「If you lose Internet connection it does save your feed」",
+          "限制：T040「won't allow you to make new posts, nor will it refresh」"
+        ],
+        "unsupported_parts": [
+          "自评「not very comprehensive」",
+          "未说明缓存保留时长"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取能力",
+          "2. 取限制",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\test_skill\\output\\DOC028\\tracing\\semantic-judgments.json",
+    "sha256": "e0f8eefb37f309ac13663624da1de972c96b85d21ca6fc8c5dd32d7da1d4ce3c"
+  }
+}

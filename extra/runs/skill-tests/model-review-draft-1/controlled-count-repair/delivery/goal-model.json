@@ -1,0 +1,1484 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC023-goal-model",
+  "version": "v0.1.r1",
+  "parent_version": "v0.1",
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "8a0ebeb1c0bc61026b1d4003158adcbe1a563f5619fa0caf08a929177ab83217"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "47f7aa7203fc8c7c1a15f290a23caef2f41dd2d80515cc3af7906ee247cff763"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "c22eee6e135c58a9b327bf28ac89c546530f21c4e7346bfa2671f02bc7fe222b"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "2966cdb21f4ac14cb0797faf9c1297e343e83f8b4dd509cd3d473d3048d7bffb"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC023"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC023-G001",
+      "statement": "增加职业社交平台上的联系人数量",
+      "source_candidate_ids": [
+        "DOC023-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "evidence_ids": [
+        "E0001"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC023-G002",
+      "statement": "向其他人展示自己在职业社交平台上保持活跃",
+      "source_candidate_ids": [
+        "DOC023-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "evidence_ids": [
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC023-G003",
+      "statement": "获得目标公司在职员工的职位内推",
+      "source_candidate_ids": [
+        "DOC023-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "实习或全职职位申请"
+      ],
+      "evidence_ids": [
+        "E0003",
+        "E0004"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC023-G004",
+      "statement": "使简历被招聘人员看到",
+      "source_candidate_ids": [
+        "DOC023-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "职位申请"
+      ],
+      "evidence_ids": [
+        "E0005"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC023-G008",
+      "statement": "找到当前在目标公司任职且具有同校背景的潜在内推联系人",
+      "source_candidate_ids": [
+        "DOC023-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "通过职业社交平台寻找内推"
+      ],
+      "evidence_ids": [
+        "E0006"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC023-G009",
+      "statement": "提高潜在联系人愿意提供职位内推的可能性",
+      "source_candidate_ids": [
+        "DOC023-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "通过共同学校背景建立联系"
+      ],
+      "evidence_ids": [
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC023-G012",
+      "statement": "访问尽可能多的潜在联系人",
+      "source_candidate_ids": [
+        "DOC023-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "寻找内推联系人",
+        "访问范围受会员条件影响"
+      ],
+      "evidence_ids": [
+        "E0008"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC023-G014",
+      "statement": "降低寻找潜在内推联系人的费用负担",
+      "source_candidate_ids": [
+        "DOC023-C014"
+      ],
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [
+        "高级会员付费搜索"
+      ],
+      "evidence_ids": [
+        "E0009",
+        "E0010"
+      ],
+      "trace_status": "inferred",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC023-G017",
+      "statement": "在连接邀请附言中充分表达想向对方传达的信息",
+      "source_candidate_ids": [
+        "DOC023-C017"
+      ],
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [
+        "对方尚未接受连接邀请",
+        "附言长度受限"
+      ],
+      "evidence_ids": [
+        "E0011"
+      ],
+      "trace_status": "inferred",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC023-G001",
+      "b": "DOC023-G002",
+      "label": "related",
+      "rationale": "T003明确把增加联系人数量与展示活跃联系起来；此处是行为结果关联，不判成精化。",
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC023-G001",
+      "b": "DOC023-G003",
+      "label": "uncertain",
+      "rationale": "联系人数量增加可能影响内推，但访谈没有确认数量本身与内推的关系。",
+      "evidence_ids": [
+        "E0001",
+        "E0003",
+        "E0004"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC023-G001",
+      "b": "DOC023-G004",
+      "label": "none",
+      "rationale": "当前材料没有建立联系人数量与简历曝光之间可直接采用的关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC023-G001",
+      "b": "DOC023-G008",
+      "label": "uncertain",
+      "rationale": "泛化的联系人数量与合资格内推联系人可能重叠，但适用目的未被充分区分。",
+      "evidence_ids": [
+        "E0001",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC023-G001",
+      "b": "DOC023-G009",
+      "label": "none",
+      "rationale": "未直接说明联系人数量如何影响单个联系人内推意愿。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC023-G001",
+      "b": "DOC023-G012",
+      "label": "none",
+      "rationale": "增加已建立联系人数量与扩大可访问搜索范围不是同一结果，材料没有明确关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC023-G001",
+      "b": "DOC023-G014",
+      "label": "none",
+      "rationale": "未建立联系人数量与费用改善之间的可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC023-G001",
+      "b": "DOC023-G017",
+      "label": "none",
+      "rationale": "未建立联系人数量与附言表达充分性之间的明确关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC023-G002",
+      "b": "DOC023-G003",
+      "label": "none",
+      "rationale": "没有说明展示活跃能带来内推，不能用一般社交常识补充。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC023-G002",
+      "b": "DOC023-G004",
+      "label": "none",
+      "rationale": "没有建立活跃展示与招聘人员看到简历的直接联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC023-G002",
+      "b": "DOC023-G008",
+      "label": "none",
+      "rationale": "活跃展示与筛选合资格联系人未在访谈中建立关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC023-G002",
+      "b": "DOC023-G009",
+      "label": "none",
+      "rationale": "未说明活跃展示影响内推意愿。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC023-G002",
+      "b": "DOC023-G012",
+      "label": "none",
+      "rationale": "活跃展示与搜索访问范围没有可采用联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC023-G002",
+      "b": "DOC023-G014",
+      "label": "none",
+      "rationale": "未说明活跃展示与降低费用的关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC023-G002",
+      "b": "DOC023-G017",
+      "label": "none",
+      "rationale": "活跃展示与邀请附言表达未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC023-G003",
+      "b": "DOC023-G004",
+      "label": "related",
+      "rationale": "T003明确说明内推有助于简历被招聘人员看到；这是结果关联，非范围具体化。",
+      "evidence_ids": [
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC023-G003",
+      "b": "DOC023-G008",
+      "label": "related",
+      "rationale": "T011说明只有目标公司员工能提供内推，T009描述联系人资格，构成有依据的关联而非精化。",
+      "evidence_ids": [
+        "E0003",
+        "E0004",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC023-G003",
+      "b": "DOC023-G009",
+      "label": "related",
+      "rationale": "T009把提高对方愿意内推的可能性作为联系同校员工的目的，关联内推结果但不是子目标分解。",
+      "evidence_ids": [
+        "E0003",
+        "E0004",
+        "E0007"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC023-G003",
+      "b": "DOC023-G012",
+      "label": "uncertain",
+      "rationale": "更多可访问联系人是否改善内推结果未被直接确认，保留待审。",
+      "evidence_ids": [
+        "E0003",
+        "E0004",
+        "E0008"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC023-G003",
+      "b": "DOC023-G014",
+      "label": "none",
+      "rationale": "费用负担与成功获得内推之间没有明确建立的关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC023-G003",
+      "b": "DOC023-G017",
+      "label": "related",
+      "rationale": "T017在寻求内推的连接邀请中描述附言表达困难，因此两者在该情境中相关，不判精化。",
+      "evidence_ids": [
+        "E0003",
+        "E0004",
+        "E0011"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC023-G004",
+      "b": "DOC023-G008",
+      "label": "none",
+      "rationale": "合资格联系人的选择到简历曝光存在中间步骤，未将其自动串成关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC023-G004",
+      "b": "DOC023-G009",
+      "label": "uncertain",
+      "rationale": "内推意愿与简历曝光存在可能的间接路径，但未直接说明，保留不确定。",
+      "evidence_ids": [
+        "E0005",
+        "E0007"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC023-G004",
+      "b": "DOC023-G012",
+      "label": "none",
+      "rationale": "搜索访问范围与简历曝光未建立直接关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC023-G004",
+      "b": "DOC023-G014",
+      "label": "none",
+      "rationale": "费用改善与简历曝光未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC023-G004",
+      "b": "DOC023-G017",
+      "label": "none",
+      "rationale": "邀请附言表达与简历曝光未建立直接关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC023-G008",
+      "b": "DOC023-G009",
+      "label": "related",
+      "rationale": "T009及T011直接以同校背景解释提高帮助与内推意愿的可能性。",
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC023-G008",
+      "b": "DOC023-G012",
+      "label": "uncertain",
+      "rationale": "访问更多候选与找到合资格联系人可能有关，但不是所有更多结果都符合资格。",
+      "evidence_ids": [
+        "E0006",
+        "E0008"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC023-G008",
+      "b": "DOC023-G014",
+      "label": "none",
+      "rationale": "材料未建立资格匹配与降低费用之间的确定联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC023-G008",
+      "b": "DOC023-G017",
+      "label": "none",
+      "rationale": "资格匹配与表达充分性是不同困难，未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC023-G009",
+      "b": "DOC023-G012",
+      "label": "none",
+      "rationale": "更多可访问联系人不等于个体内推意愿提高，材料未建立联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC023-G009",
+      "b": "DOC023-G014",
+      "label": "none",
+      "rationale": "材料未说明减轻费用如何影响对方内推意愿。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC023-G009",
+      "b": "DOC023-G017",
+      "label": "uncertain",
+      "rationale": "更充分表达可能影响内推意愿，但访谈未明确该作用。",
+      "evidence_ids": [
+        "E0007",
+        "E0011"
+      ],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC023-G012",
+      "b": "DOC023-G014",
+      "label": "related",
+      "rationale": "T015把购买会员扩大访问范围与费用高联系起来，存在成本权衡，条件为付费搜索。",
+      "evidence_ids": [
+        "E0008",
+        "E0009",
+        "E0010"
+      ],
+      "conditions": [
+        "购买会员扩大搜索访问范围"
+      ],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC023-G012",
+      "b": "DOC023-G017",
+      "label": "none",
+      "rationale": "搜索访问范围与附言表达未建立直接关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC023-G014",
+      "b": "DOC023-G017",
+      "label": "none",
+      "rationale": "费用与附言限制均涉及会员情境，但共同背景不足以建立目标间关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC023-G001",
+      "b": "DOC023-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P016",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC023-G003",
+      "b": "DOC023-G004"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P017",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC023-G003",
+      "b": "DOC023-G008"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P018",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC023-G003",
+      "b": "DOC023-G009"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P021",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC023-G003",
+      "b": "DOC023-G017"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P027",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC023-G008",
+      "b": "DOC023-G009"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P034",
+      "conditions": [
+        "购买会员扩大搜索访问范围"
+      ],
+      "review_status": "pending",
+      "a": "DOC023-G012",
+      "b": "DOC023-G014"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "the 1st one is to enlarge my the number of my connections on my profile.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 497,
+      "end_char": 569,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 84,
+          "segment_end": 156,
+          "start_char": 497,
+          "end_char": 569
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "to show people that I'm active on Linkedin.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 860,
+      "end_char": 903,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 447,
+          "segment_end": 490,
+          "start_char": 860,
+          "end_char": 903
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "my sec second goal is to to get referrals from current employees",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1018,
+      "end_char": 1082,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 605,
+          "segment_end": 669,
+          "start_char": 1018,
+          "end_char": 1082
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC023:T011",
+      "material_id": "M001",
+      "quote": "only company employee is able to refer me.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4542,
+      "end_char": 4584,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T011",
+          "segment_start": 179,
+          "segment_end": 221,
+          "start_char": 4542,
+          "end_char": 4584
+        }
+      ],
+      "original_locator": {
+        "turn": "11",
+        "start_char": 4363,
+        "end_char": 5033
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "a referral really helps to get my resume being seen by recruiters.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1235,
+      "end_char": 1301,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 822,
+          "segment_end": 888,
+          "start_char": 1235,
+          "end_char": 1301
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC023:T009",
+      "material_id": "M001",
+      "quote": "I will only choose people who is currently a company employee and who was my university's student.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3998,
+      "end_char": 4096,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T009",
+          "segment_start": 713,
+          "segment_end": 811,
+          "start_char": 3998,
+          "end_char": 4096
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3285,
+        "end_char": 4277
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC023:T009",
+      "material_id": "M001",
+      "quote": "to increase the possibility that they want to refer me for the position.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4205,
+      "end_char": 4277,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T009",
+          "segment_start": 920,
+          "segment_end": 992,
+          "start_char": 4205,
+          "end_char": 4277
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3285,
+        "end_char": 4277
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC023:T015",
+      "material_id": "M001",
+      "quote": "allow me to access like as much as possible potential connections as I want to.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6267,
+      "end_char": 6346,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T015",
+          "segment_start": 134,
+          "segment_end": 213,
+          "start_char": 6267,
+          "end_char": 6346
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 6133,
+        "end_char": 6717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC023:T015",
+      "material_id": "M001",
+      "quote": "this costs a lot.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6371,
+      "end_char": 6388,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T015",
+          "segment_start": 238,
+          "segment_end": 255,
+          "start_char": 6371,
+          "end_char": 6388
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 6133,
+        "end_char": 6717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC023:T015",
+      "material_id": "M001",
+      "quote": "sometimes I may turn to the other. Option is that to modify the keywords",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6396,
+      "end_char": 6468,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T015",
+          "segment_start": 263,
+          "segment_end": 335,
+          "start_char": 6396,
+          "end_char": 6468
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 6133,
+        "end_char": 6717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC023:T017",
+      "material_id": "M001",
+      "quote": "only a limited like number of words to really convey what I want to talk to them.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7361,
+      "end_char": 7442,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T017",
+          "segment_start": 462,
+          "segment_end": 543,
+          "start_char": 7361,
+          "end_char": 7442
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 6899,
+        "end_char": 7584
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC023-C001",
+      "goal_id": "DOC023-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC023-C002",
+      "goal_id": "DOC023-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC023-C003",
+      "goal_id": "DOC023-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC023-C004",
+      "goal_id": "DOC023-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC023-C008",
+      "goal_id": "DOC023-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC023-C009",
+      "goal_id": "DOC023-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC023-C012",
+      "goal_id": "DOC023-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC023-C014",
+      "goal_id": "DOC023-G014",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC023-C017",
+      "goal_id": "DOC023-G017",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC023-C005",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC023-C006",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC023-C007",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC023-C010",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC023-C011",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC023-C013",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC023-C015",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC023-C016",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    },
+    {
+      "candidate_id": "DOC023-C018",
+      "goal_id": null,
+      "action": "diagnostic",
+      "reason": "未进入当前目标集合，保留原记录。"
+    }
+  ],
+  "diagnostics": [
+    {
+      "candidate_id": "DOC023-C005",
+      "category": "action",
+      "subtype": "interaction",
+      "statement": "用公司名和学校名搜索潜在联系人并查看其经历",
+      "origin": null,
+      "actor": "受访者",
+      "context": [
+        "寻找内推联系人"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "to search on in the search bar. This company name, and also the school name",
+          "role": "basis",
+          "start_char": 1892,
+          "end_char": 1967
+        },
+        {
+          "source_id": "DOC023:T007",
+          "quote": "click into their profile and to see about their experience.",
+          "role": "basis",
+          "start_char": 2355,
+          "end_char": 2414
+        }
+      ],
+      "classification_reason": "描述实际搜索与查看步骤，不将具体输入操作自动提升为目标。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC023-C006",
+      "category": "action",
+      "subtype": "interaction",
+      "statement": "发送连接邀请和自我介绍，获接受后沟通内推细节",
+      "origin": null,
+      "actor": "受访者",
+      "context": [
+        "对方接受连接邀请后才能进一步聊天"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "hit the connect button",
+          "role": "basis",
+          "start_char": 2491,
+          "end_char": 2513
+        },
+        {
+          "source_id": "DOC023:T007",
+          "quote": "add a message to introduce myself",
+          "role": "basis",
+          "start_char": 2645,
+          "end_char": 2678
+        },
+        {
+          "source_id": "DOC023:T007",
+          "quote": "if they do, I can then start to chat with them for the further details.",
+          "role": "basis",
+          "start_char": 2876,
+          "end_char": 2947
+        }
+      ],
+      "classification_reason": "保留操作流程与接受邀请的前置条件，暂不将每个步骤建为目标。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC023-C007",
+      "category": "obstacle",
+      "subtype": "difficulty",
+      "statement": "搜索结果包含不满足目标公司任职或同校背景条件的人",
+      "origin": null,
+      "actor": "受访者",
+      "context": [
+        "目标公司的前员工不能提供当前职位内推"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T009",
+          "quote": "Some people they were previous company employee. They are not current employees",
+          "role": "basis",
+          "start_char": 3510,
+          "end_char": 3589
+        },
+        {
+          "source_id": "DOC023:T009",
+          "quote": "They only satisfy, like one of the one, or like none of the that the requirements I want.",
+          "role": "basis",
+          "start_char": 3791,
+          "end_char": 3880
+        }
+      ],
+      "classification_reason": "描述现有结果与联系人筛选要求不匹配的障碍。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC023-C010",
+      "category": "obstacle",
+      "subtype": "limitation",
+      "statement": "非付费会员能访问的联系人搜索结果数量受限",
+      "origin": null,
+      "actor": "受访者",
+      "context": [
+        "未购买高级会员"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T013",
+          "quote": "if you are not, you're probably gonna able to access like a limited list of people.",
+          "role": "basis",
+          "start_char": 5760,
+          "end_char": 5843
+        }
+      ],
+      "classification_reason": "保留非会员条件与原文不确定语气，不将其当作平台现行规则的外部事实。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC023-C011",
+      "category": "action",
+      "subtype": "workaround",
+      "statement": "购买高级会员以访问更多潜在联系人",
+      "origin": null,
+      "actor": "受访者",
+      "context": [
+        "应对搜索访问限制"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T015",
+          "quote": "just to purchase the linking premium",
+          "role": "basis",
+          "start_char": 6209,
+          "end_char": 6245
+        }
+      ],
+      "classification_reason": "现有付费应对方式，不自动建议用户购买。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC023-C013",
+      "category": "obstacle",
+      "subtype": "difficulty",
+      "statement": "高级会员费用较高",
+      "origin": null,
+      "actor": "受访者",
+      "context": [
+        "购买会员以扩大搜索访问范围"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T015",
+          "quote": "this costs a lot.",
+          "role": "basis",
+          "start_char": 6371,
+          "end_char": 6388
+        }
+      ],
+      "classification_reason": "保留受访者的成本抱怨，不添加具体金额。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC023-C015",
+      "category": "action",
+      "subtype": "workaround",
+      "statement": "删改搜索关键词以获得更符合所需背景的结果",
+      "origin": null,
+      "actor": "受访者",
+      "context": [
+        "有时替代购买高级会员"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T015",
+          "quote": "to modify the keywords",
+          "role": "basis",
+          "start_char": 6446,
+          "end_char": 6468
+        },
+        {
+          "source_id": "DOC023:T015",
+          "quote": "more precise people with like a more precise background that I'm looking for.",
+          "role": "basis",
+          "start_char": 6640,
+          "end_char": 6717
+        }
+      ],
+      "classification_reason": "描述应对搜索与费用问题的操作，不强制设计新的搜索功能。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC023-C016",
+      "category": "obstacle",
+      "subtype": "limitation",
+      "statement": "连接邀请附言的字数限制妨碍表达想传达的信息",
+      "origin": null,
+      "actor": "受访者",
+      "context": [
+        "对方尚未接受连接邀请",
+        "受访者称非会员通常限制为200字符"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T017",
+          "quote": "for a non-member is 200 characters.",
+          "role": "basis",
+          "start_char": 7300,
+          "end_char": 7335
+        },
+        {
+          "source_id": "DOC023:T017",
+          "quote": "only a limited like number of words to really convey what I want to talk to them.",
+          "role": "basis",
+          "start_char": 7361,
+          "end_char": 7442
+        }
+      ],
+      "classification_reason": "记录受访者报告的限制与信息表达困难，不声称验证了当前平台政策。",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "DOC023-C018",
+      "category": "action",
+      "subtype": "workaround",
+      "statement": "花时间缩短邀请附言以满足字数限制",
+      "origin": null,
+      "actor": "受访者",
+      "context": [
+        "连接邀请附言"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "DOC023:T017",
+          "quote": "it really takes some time for me to like, shrink them words in my message.",
+          "role": "basis",
+          "start_char": 7484,
+          "end_char": 7558
+        }
+      ],
+      "classification_reason": "保留当前压缩文字的动作；没有仅凭耗时就新增提高效率的目标。",
+      "inference": null,
+      "review_status": "pending"
+    }
+  ],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 36,
+    "evaluated_pairs": 36
+  },
+  "issues": [
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G001",
+        "DOC023-G003"
+      ],
+      "reason": "联系人数量增加可能影响内推，但访谈没有确认数量本身与内推的关系。"
+    },
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G001",
+        "DOC023-G008"
+      ],
+      "reason": "泛化的联系人数量与合资格内推联系人可能重叠，但适用目的未被充分区分。"
+    },
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G003",
+        "DOC023-G012"
+      ],
+      "reason": "更多可访问联系人是否改善内推结果未被直接确认，保留待审。"
+    },
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G004",
+        "DOC023-G009"
+      ],
+      "reason": "内推意愿与简历曝光存在可能的间接路径，但未直接说明，保留不确定。"
+    },
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G008",
+        "DOC023-G012"
+      ],
+      "reason": "访问更多候选与找到合资格联系人可能有关，但不是所有更多结果都符合资格。"
+    },
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC023-G009",
+        "DOC023-G017"
+      ],
+      "reason": "更充分表达可能影响内推意愿，但访谈未明确该作用。"
+    }
+  ],
+  "assumptions": [
+    {
+      "candidate_id": "DOC023-C014",
+      "basis_candidate_ids": [
+        "DOC023-C013"
+      ],
+      "reason": "受访者将会员费用作为转向其他搜索方式的原因。",
+      "assumptions": [
+        "受访者希望减轻费用，而不只是陈述价格感受。"
+      ]
+    },
+    {
+      "candidate_id": "DOC023-C017",
+      "basis_candidate_ids": [
+        "DOC023-C016"
+      ],
+      "reason": "原文将长度限制与无法充分传达信息联系起来。",
+      "assumptions": [
+        "受访者期望改善附言表达充分性，而不只是描述现状。"
+      ]
+    }
+  ],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "024ce888419090851dfeacfb05fdfe9a1e60476fcaef88e1758897dff88c1c80",
+    "core_sha256": "47188fd80d189ed550e4ba2f9bd6b511dbc841f3b4f6c194e7f92592d33d229b",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [
+    {
+      "kind": "local_repair",
+      "parent_core_sha256": "4ce77a0e382a583285896572b521152ab8ccba7b755e6c5bd5482f50eaa9d9d0",
+      "patches": [
+        {
+          "patch_id": "PATCH-coverage",
+          "issue_ids": [
+            "I-6813c5d5afac"
+          ],
+          "base_version": "v0.1",
+          "base_core_sha256": "4ce77a0e382a583285896572b521152ab8ccba7b755e6c5bd5482f50eaa9d9d0",
+          "rationale": "现有唯一目标对完整，只纠正统计数，不补造关系。",
+          "expected_checks": [
+            "integrity"
+          ],
+          "application_status": "proposed",
+          "operations": [
+            {
+              "action": "replace",
+              "entity": "model",
+              "id": null,
+              "field": "relation_coverage",
+              "before": {
+                "strategy": "all_pairs",
+                "expected_pairs": 36,
+                "evaluated_pairs": 999
+              },
+              "after": {
+                "strategy": "all_pairs",
+                "expected_pairs": 36,
+                "evaluated_pairs": 36
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行，人工审核待完成。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "492f43045f8d7913df188bffae2cfc1557c4fb1f29a914583d711d4c99946a8a"
+}

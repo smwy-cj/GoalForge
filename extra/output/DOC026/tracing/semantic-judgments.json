@@ -1,0 +1,263 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "2fe223bd8d145aced1b5af98d7c05ecd3896777095621ce0acd3b93cfe34c941",
+    "input_sha256": "7e0591f4b7de119925e8f2d821ac0334b9ca01fb351fc4dd80b0447a975070fb"
+  },
+  "judgments": {
+    "DOC026-C001": {
+      "target_statement": "在步行不现实的距离上，实现从一处到另一处的位移。",
+      "label": "direct",
+      "rationale": "T005 直接说主要目标是从一处到另一处的交通。",
+      "supported_parts": [
+        "目标：T006「transportation to get from one place to another」",
+        "对照：T008「I'll just walk even if it's kind of far away」"
+      ],
+      "unsupported_parts": [
+        "未说明出行频率",
+        "未说明距离阈值"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目标句",
+        "2. 用步行对照佐证",
+        "3. → direct"
+      ]
+    },
+    "DOC026-C002": {
+      "target_statement": "按耗时与价格权衡是否打车、以及是否改用其他交通方式。",
+      "label": "direct",
+      "rationale": "T007 明确说决策依据是耗时与价格，并会与开车/公交比较。",
+      "supported_parts": [
+        "判据：T008「the amount of time it will take or the price」",
+        "比较：T008「other better means of transportation」"
+      ],
+      "unsupported_parts": [
+        "未说明时间与价格如何折算成同一尺度",
+        "未给出可接受的价格上限"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取判据",
+        "2. 取比较对象",
+        "3. → direct"
+      ]
+    },
+    "DOC026-C003": {
+      "target_statement": "在多个车型中选最便宜的一档，人多时改选大车。",
+      "label": "direct",
+      "rationale": "T011 说默认选最便宜，人多时改看座位数并举例 comfort 车型。",
+      "supported_parts": [
+        "默认：T012「I usually just go for The cheapest one」",
+        "例外：T012「unless if i'm going with more people」",
+        "实例：T012「a comfort that can sit four people」"
+      ],
+      "unsupported_parts": [
+        "未说明等待时间更长时是否仍选最便宜",
+        "未说明对车型档次的偏好"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取默认策略",
+        "2. 取例外条件",
+        "3. → direct"
+      ]
+    },
+    "DOC026-C004": {
+      "target_statement": "下单前能看到附近车辆与预估到达时间、价格，据此决定是否等待或改期。",
+      "label": "direct",
+      "rationale": "T011 说地图上能看到附近车辆与到达时间，价格太高就选择等。",
+      "supported_parts": [
+        "信息：T012「a map with a couple different Ubers around」",
+        "决策：T012「if the price was too high, then I can choose to wait」"
+      ],
+      "unsupported_parts": [
+        "未说明该信息的可信度（T013 反而质疑其准确性）",
+        "未说明等待的容忍上限"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取信息",
+        "2. 取决策",
+        "3. → direct"
+      ]
+    },
+    "DOC026-C005": {
+      "target_statement": "输入地址时实时给出候选，不必打完就能选。",
+      "label": "direct",
+      "rationale": "T011 说输入时实时弹出候选，未打完就能点选。",
+      "supported_parts": [
+        "机制：T012「options pop up as I'm typing it」",
+        "收益：T012「click on whatever comes up before I necessarily finish typing」"
+      ],
+      "unsupported_parts": [
+        "未说明是否有选错地址的经历",
+        "未说明是否使用常用地址收藏"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取机制",
+        "2. 取收益",
+        "3. → direct"
+      ]
+    },
+    "DOC026-C006": {
+      "target_statement": "下单后能真正派到车，不出现长时间等待后「找不到司机」。",
+      "label": "direct",
+      "rationale": "T013 描述显示有车但排程很久、最后提示找不到司机。",
+      "supported_parts": [
+        "症状：T014「take a really long time to actually schedule it」",
+        "结果：T014「it will end up saying that can't find a driver」"
+      ],
+      "unsupported_parts": [
+        "成因未定（应用夸大或司机拒单），他本人也只是猜测",
+        "未说明发生频率"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取症状",
+        "2. 取结果",
+        "3. 记录成因未定",
+        "4. → direct"
+      ]
+    },
+    "DOC026-C007": {
+      "target_statement": "不因取消订单而拉低自己作为乘客的评分。",
+      "label": "direct",
+      "rationale": "T013 说他尽量不取消，因为司机能看到乘客评分、取消会拉低评分。",
+      "supported_parts": [
+        "行为：T014「I usually try not to cancel a ride」",
+        "理由：T014「that damages my rating」"
+      ],
+      "unsupported_parts": [
+        "未确认取消是否真的扣分（他自述不确定收费规则）",
+        "未说明评分低的实际后果"
+      ],
+      "assumptions": [
+        "他把「司机可见评分」理解为取消会扣分"
+      ],
+      "reasoning_steps": [
+        "1. 取行为",
+        "2. 取理由",
+        "3. 记录推断成分",
+        "4. → direct"
+      ]
+    },
+    "DOC026-C008": {
+      "target_statement": "工作出行时以时间优先于价格（费用由公司承担）。",
+      "label": "direct",
+      "rationale": "T019 明确对比工作与私人场景：工作报销时更在意时间。",
+      "supported_parts": [
+        "取舍：T020「care less about the price and more about the time」",
+        "前提：T020「my work is going to cover it」"
+      ],
+      "unsupported_parts": [
+        "未说明公司报销是否有上限",
+        "未说明是否需保留凭证（T045 提到用作报销）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取取舍",
+        "2. 取前提",
+        "3. → direct"
+      ]
+    },
+    "DOC026-C009": {
+      "target_statement": "按对地区的熟悉度、路线复杂度与停留时长，在公交、租车与网约车之间选择。",
+      "label": "direct",
+      "rationale": "T021 给出三种方式的取舍依据：熟悉度、路线复杂度、行程时长。",
+      "supported_parts": [
+        "公交：T022「how familiar I am with the area」",
+        "网约车：T022「if it's complicated like that, I would probably prefer And Uber」",
+        "租车：T022「more freedom to rent a car」"
+      ],
+      "unsupported_parts": [
+        "未给出时长阈值",
+        "未说明公共交通可达性差的城市如何选择"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取三条依据",
+        "2. → direct"
+      ]
+    },
+    "DOC026-C010": {
+      "target_statement": "出问题时能联系到真人客服，而不是只能和机器人对话。",
+      "label": "direct",
+      "rationale": "T031 明确说想找真人，怀疑对方是机器人，这是他判定客服极差的原因。",
+      "supported_parts": [
+        "诉求：T032「I wanted to talk to a person」",
+        "怀疑：T032「I think I was probably talking to a chat bot」"
+      ],
+      "unsupported_parts": [
+        "未确认对方是否真为机器人",
+        "未说明希望的人工渠道（电话/在线）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求",
+        "2. 取怀疑",
+        "3. → direct"
+      ]
+    },
+    "DOC026-C011": {
+      "target_statement": "用应用内通话或消息与司机沟通，解决上车点不清、位置难找、自己会迟到等问题。",
+      "label": "direct",
+      "rationale": "T039 说应用内通话很有帮助，尤其在门牌难找、位置热闹时。",
+      "supported_parts": [
+        "评价：T040「I actually find that very helpful」",
+        "用途：T040「calling on their way to pick me up」",
+        "场景：T040「the house numbers are hard to see」"
+      ],
+      "unsupported_parts": [
+        "未说明是否用过文字消息",
+        "未说明司机接听率"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取评价",
+        "2. 取用途与场景",
+        "3. → direct"
+      ]
+    },
+    "DOC026-C012": {
+      "target_statement": "需要时能方便地修改上车点。",
+      "label": "direct",
+      "rationale": "T041 说改版后改上车点变麻烦，于是改用电话告知司机。",
+      "supported_parts": [
+        "现状：T042「it's not as simple to change it」",
+        "替代：T042「I give the driver a heads up instead of doing it on the app」"
+      ],
+      "unsupported_parts": [
+        "他说法带保留（I'm not going to do that），未实测",
+        "未说明期望的改点方式"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取现状",
+        "2. 取替代做法",
+        "3. 记录保留态度",
+        "4. → direct"
+      ]
+    },
+    "DOC026-C013": {
+      "target_statement": "行程结束后能评分、给小费，并查看金额用于分摊或报销。",
+      "label": "direct",
+      "rationale": "T045 说行程后主要回看评分/小费入口与金额，金额用于分摊或报销。",
+      "supported_parts": [
+        "评分：T046「they give you the option to rate the driver」",
+        "分摊：T046「split split up the charge」",
+        "报销：T046「use that as a receipt to get reimbursed」"
+      ],
+      "unsupported_parts": [
+        "未说明是否每次都评分",
+        "未说明小费习惯"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取三项用途",
+        "2. → direct"
+      ]
+    }
+  }
+}

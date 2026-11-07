@@ -1,0 +1,539 @@
+{
+  "document_id": "DOC011",
+  "status": "completed",
+  "limitations": [
+    "仅处理指定已转写访谈全文；未核听录音，未验证受访者关于产品、价格、组织或技术的事实陈述。",
+    "提供材料范围内完成，不代表业务需求穷尽；源索引 native_text 仅表示所提供文本格式，不构成人工核听证明。",
+    "语义提取、核验和模型自检由同一生成助手完成；独立语义审查与形式证明未执行，人工决定 pending。",
+    "精确模型ID、采样参数和预算未知；继承当前模型配置。现有契约无独立障碍/偏好关系层，相关限制保留在条件、依据和问题中。"
+  ],
+  "goals": [
+    {
+      "candidate_id": "DOC011-G01",
+      "statement": "与课程队友异步协作修改代码，完成团队课程开发",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "学生团队情境；独立开发者无需固定使用PR。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T023",
+          "quote": "we are asynchronous collab, asynchronously collaborating on this code. We're making changes and such to get a get through of our course work."
+        },
+        {
+          "source_id": "DOC011:T101",
+          "quote": "We had a very difficult time finding work session like creating work sessions to collaborate with each other in person.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "本人直接说明学生角色主要目的，真实项目不能同场工作进一步支持异步方式。",
+        "supported_parts": [
+          "与课程队友异步协作修改代码，完成团队课程开发"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "本人直接说明学生角色主要目的，真实项目不能同场工作进一步支持异步方式。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G02",
+      "statement": "通过他人审查后再合并，保护主仓库免受未经审查的未知代码变更",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "协作项目，审查按团队或审阅者标准可批准或拒绝。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T083",
+          "quote": "it's a great way to make sure that the main repository stays safe from unknown code changes before they are reviewed by others."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确保护结果与审查方式，已实现也含继续使用动机；不承诺审查后绝无缺陷。",
+        "supported_parts": [
+          "通过他人审查后再合并，保护主仓库免受未经审查的未知代码变更"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确保护结果与审查方式，已实现也含继续使用动机；不承诺审查后绝无缺陷。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G03",
+      "statement": "合作时互相审查提交，使进入主分支的代码达到团队质量标准",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "提交可因未达标准被拒；个人项目通常不使用PR。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T107",
+          "quote": "I want to ensure that I review their code. If I am collaborating someone else's code. They review my code."
+        },
+        {
+          "source_id": "DOC011:T031",
+          "quote": "the code, is up to standard of the team or their personal standard",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确互审意图，G02强调避免未审，G03强调质量和互相角色，不混淆保证。",
+        "supported_parts": [
+          "合作时互相审查提交，使进入主分支的代码达到团队质量标准"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确互审意图，G02强调避免未审，G03强调质量和互相角色，不混淆保证。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G04",
+      "statement": "在PR标题与描述中说明代码变更的上下文，供队友审查",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T025",
+          "quote": "this allows me to provide context for my code changes for my collaborators, like my teammates, to review."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "动作含明确审阅目的，保留PR标题描述的方式。",
+        "supported_parts": [
+          "在PR标题与描述中说明代码变更的上下文，供队友审查"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "动作含明确审阅目的，保留PR标题描述的方式。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G05",
+      "statement": "团队协作时偏好增量提交，降低每次审查内容量并保持流程顺畅",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "团队协作个人偏好；独立开发通常不用PR，假如用也可更大。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T045",
+          "quote": "It provides less content for my collaborators to have to review. and it keeps a more flowing process."
+        },
+        {
+          "source_id": "DOC011:T043",
+          "quote": "I personally prefer to do it incrementally",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC011:T045",
+          "quote": "I wouldn't even use pull requests, in the 1st place, because I don't have any collaborators except for myself.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确个人偏好，不将小PR变全体要求；独立项目反例保留。",
+        "supported_parts": [
+          "团队协作时偏好增量提交，降低每次审查内容量并保持流程顺畅"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确个人偏好，不将小PR变全体要求；独立项目反例保留。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G06",
+      "statement": "通过项目看板规划开发、记录待办并讨论分派团队任务与审阅工作",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "看板可记录要求、变更大小频率及谁审哪个PR；不是软件自动替团队分派责任。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T059",
+          "quote": "we would meet together as a team. discuss who should be assigned, what?"
+        },
+        {
+          "source_id": "DOC011:T053",
+          "quote": "you can facilitate team management that way. You can decide requirements. How big of changes to be made. how frequent",
+          "role": "context"
+        },
+        {
+          "source_id": "DOC011:T055",
+          "quote": "We have our backlog, and we would just simply make an issue in that backlog.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "既有工作方式含团队分配目的，保留backlog初始未分配和会议协商。",
+        "supported_parts": [
+          "通过项目看板规划开发、记录待办并讨论分派团队任务与审阅工作"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "既有工作方式含团队分配目的，保留backlog初始未分配和会议协商。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G07",
+      "statement": "将PR关联看板问题，合并时让看板自动反映完成情况",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "项目看板须已关联相应仓库；resolves加问题编号是本人示例。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T069",
+          "quote": "when that port request is merged, the Kanban board would automatically reflect that."
+        },
+        {
+          "source_id": "DOC011:T067",
+          "quote": "You just have to make sure that the canva board the project is actually linked to the repository",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确便利用途与关联方式；保留仓库和project关联的前置条件。",
+        "supported_parts": [
+          "将PR关联看板问题，合并时让看板自动反映完成情况"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确便利用途与关联方式；保留仓库和project关联的前置条件。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G08",
+      "statement": "方便且安全地在云端保存代码，在本机损坏或遗失后可取回到另一机器继续工作",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "同步需手工pull/push；未上传的本地变化不在已云存代码范围。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T075",
+          "quote": "Were my machine to go corrupt, were it to be lost, I would still have my work in a cloud environment that I could simply I'm gonna use the keyword pull onto a different machine and continue working on my code base."
+        },
+        {
+          "source_id": "DOC011:T015",
+          "quote": "It's not automatically synced.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确避免丢失和恢复结果，保留云端/pull方式；未扩为自动备份或实时同步。",
+        "supported_parts": [
+          "方便且安全地在云端保存代码，在本机损坏或遗失后可取回到另一机器继续工作"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确避免丢失和恢复结果，保留云端/pull方式；未扩为自动备份或实时同步。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G09",
+      "statement": "能回看保留的PR及其变更，追踪仓库和协作者的历史",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "不是所有历史关系已被当前线性视图清楚表达，G12另含可视化建议。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T083",
+          "quote": "It's also a very convenient way to track history."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "已有能力的历史用途明确，不因现状而删除维持意图。",
+        "supported_parts": [
+          "能回看保留的PR及其变更，追踪仓库和协作者的历史"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "已有能力的历史用途明确，不因现状而删除维持意图。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G10",
+      "statement": "作为助教查看学生项目代码并了解他们的进展",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T017",
+          "quote": "so I can monitor my students code and actually look through and see how they're doing on their in their projects."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确角色目的，未附自动评分或监控指标。",
+        "supported_parts": [
+          "作为助教查看学生项目代码并了解他们的进展"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确角色目的，未附自动评分或监控指标。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G11",
+      "statement": "更容易找到指导构建Actions工作流的资料，可考虑论坛或博客讨论入口",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "论坛/博客为可考虑方式，未指定唯一实现。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T085",
+          "quote": "So if they. Could have a forum or such, or like a a blog, tab forward discussions or information on building these action workflows. It'd be great."
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "明确建议，文档难找为背景；未认证产品无论坛或文档缺陷客观事实。",
+        "supported_parts": [
+          "更容易找到指导构建Actions工作流的资料，可考虑论坛或博客讨论入口"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确建议，文档难找为背景；未认证产品无论坛或文档缺陷客观事实。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G12",
+      "statement": "可取但非必需地将分支创建、合并和相关问题按时间可视化，以理解仓库上下文",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "非必要功能，仅便利；既有带时间戳线性提交历史仍可查看。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T087",
+          "quote": "For this to visually see there was new branches made where they were merged in and within those branches like see issues with like their corresponding timeline."
+        },
+        {
+          "source_id": "DOC011:T087",
+          "quote": "It's it's not an essential feature, it's more so. Just like convenience.",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "显式nice to have，保留可视化方式和历史关系，不强化为必需。",
+        "supported_parts": [
+          "可取但非必需地将分支创建、合并和相关问题按时间可视化，以理解仓库上下文"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "显式nice to have，保留可视化方式和历史关系，不强化为必需。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G13",
+      "statement": "可以考虑集成AI咨询助手，帮助利用GitHub已有资源并指导创建PR或Actions文件",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "建议采纳和产品当前有无同类能力未知。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T093",
+          "quote": "an assistant to allow users to consult with it to have better to use all the resources available on Github."
+        },
+        {
+          "source_id": "DOC011:T097",
+          "quote": "an assistant to guide me through. maybe making a pull request",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "直接提出集成建议；后续给出指导PR与action文件实例。",
+        "supported_parts": [
+          "可以考虑集成AI咨询助手，帮助利用GitHub已有资源并指导创建PR或Actions文件"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "直接提出集成建议；后续给出指导PR与action文件实例。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G14",
+      "statement": "独立开发时希望AI辅助代码审查并提供可参考的额外反馈",
+      "origin": "explicit",
+      "actor": "受访者",
+      "context": [
+        "个人自审视角有限；AI是额外来源。"
+      ],
+      "inference": null,
+      "evidence": [
+        {
+          "source_id": "DOC011:T097",
+          "quote": "an AI assistant or something that would review help me with code reviews, provide suggestions. I have another source of feedback that I can incorporate"
+        }
+      ],
+      "support": {
+        "label": "direct",
+        "rationale": "直接期望额外反馈，未替代所有人类审查或保证代码正确。",
+        "supported_parts": [
+          "独立开发时希望AI辅助代码审查并提供可参考的额外反馈"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "直接期望额外反馈，未替代所有人类审查或保证代码正确。"
+        ]
+      }
+    },
+    {
+      "candidate_id": "DOC011-G15",
+      "statement": "按需要将远端最新代码拉到本地并上传自己的更新",
+      "origin": "inferred",
+      "actor": "受访者",
+      "context": [],
+      "inference": {
+        "basis_candidate_ids": [],
+        "reason": "课程和个人代码工作都以推拉代码为主要用途，正面支持维持手动同步能力；未把技术解释等同明确新增要求。",
+        "assumptions": [
+          "主要使用用途体现继续使用此能力的意图。"
+        ]
+      },
+      "evidence": [
+        {
+          "source_id": "DOC011:T015",
+          "quote": "you would have to manually synchronize it by running commands, such as get pull"
+        },
+        {
+          "source_id": "DOC011:T017",
+          "quote": "I'm only really using it to pull code and push code",
+          "role": "context"
+        }
+      ],
+      "support": {
+        "label": "inferred",
+        "rationale": "同步方式属现状；结合学生/独立开发主要拉推用途推断继续可同步的目标，而不要求自动。",
+        "supported_parts": [
+          "按需要将远端最新代码拉到本地并上传自己的更新"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "主要使用用途体现继续使用此能力的意图。"
+        ],
+        "reasoning_steps": [
+          "课程和个人代码工作都以推拉代码为主要用途，正面支持维持手动同步能力；未把技术解释等同明确新增要求。"
+        ]
+      }
+    }
+  ],
+  "groups": [
+    {
+      "group_id": "DOC011-F01",
+      "parent_id": "DOC011-G01",
+      "child_ids": [
+        "DOC011-G03",
+        "DOC011-G04",
+        "DOC011-G06",
+        "DOC011-G07"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "真实项目说明看板、PR、互审帮助异步工作，但未证明这些子目标共同足以完成课程开发；还需实际实现代码、访问与课程条件。保留部分候选。",
+      "assumptions": [],
+      "evidence": [
+        {
+          "source_id": "DOC011:T101",
+          "quote": "We set up our project boards to make issues to plan out the development process."
+        }
+      ]
+    }
+  ],
+  "review_questions": [
+    {
+      "candidate_ids": [
+        "DOC011-G02",
+        "DOC011-G03",
+        "DOC011-G14"
+      ],
+      "question": "团队对必须审阅、质量标准及AI反馈的接受界限是什么？",
+      "reason": "本人描述标准但未给完整验收准则，AI不能自动等同队友审批。"
+    },
+    {
+      "candidate_ids": [
+        "DOC011-G08",
+        "DOC011-G15"
+      ],
+      "question": "哪些代码需要云端保留，何时推送及如何确认已保存？",
+      "reason": "手动同步意味着尚未推送的变化可能无法恢复。"
+    }
+  ],
+  "model_questions": [
+    {
+      "target_type": "group",
+      "target_id": "DOC011-F01",
+      "message": "实际案例证明贡献而未证明整组足以完成课程开发；候选保持partial。"
+    }
+  ],
+  "author_review": "# DOC011 生成方语义自检\n\n完整读取 T000—T110（111轮），分0—59和60—110，包含术语澄清、界面过程、真实iOS团队场景及个人例外。未核听或核验GitHub现状。本记录为同一作者自检。\n\nG01异步协作完成课程直接；G02他审后合并保护免未知变更直接，非无缺陷保证；G03互审与团队标准直接；G04 PR上下文直接且保留标题描述方式；G05增量偏好只用于协作，独立时大PR或不用PR的反例在条件；G06看板待办与协商分派直接，不赋软件决策责任；G07关联issue后合并自动更新有前置项目关联；G08云存/换机器恢复直接，未造自动同步；G09历史回看为明确既有用途；G10助教了解学生进展直接；G11论坛/博客资料入口为建议，文档难找不转成唯一设计；G12视觉历史是非必要便利；G13集成咨询与流程指导是建议；G14 AI额外审查反馈是建议，不作人审替代；G15同步原文主要现状，依反复工作用途推断维持，支持inferred独立选择。\n\nF01 proposed/partial：真实项目报告这些机制帮助异步协作，但不能推出共同充分完成全部课程开发。也考虑过G02/G03/G04：上下文和互审有助质量，标准未知且不存在零缺陷保证，不建立充分组。PR保留历史并非可视化时间线的完整替代，两者不画OR。未把菜单/检索各类实体、branch解释、actions已有测试能力自动全部提为需求；公共代码查询只有功能介绍而未明确使用目的，保留证据背景而无新增维持断言。\n\n正常场景（分析假设）：队员错开工作，issue分派、各自PR、互审合并，看板更新；验证G01各机制方向，未证明课程成果质量全满足。异常场景（分析假设）：个人代码尚未push即机器损坏，G08只覆盖已云存代码，需同步问题澄清。异常场景（分析假设）：AI建议漏掉严重缺陷，G14满足仍不保证G03质量。边界场景（分析假设）：独立开发直接大批提交，无同伴互审；不把团队增量偏好强加此情境。\n\n未将本人认为GitHub涵盖竞争产品全部能力的信念当事实；替代平台只是失去服务的策略，不作完整OR。问题保留，人审pending；未进行独立语义审查/形式证明。工程结果以冻结工具实际inspect为准。\n\n修订记录：v1组装前引文绑定失败（T101句首we应为原文We，大小写不匹配）。保留原作者输入；v2仅按全文重核纠正为真实连续子串，G01含义和支持范围重核不变，全部组再次检查。没有伪造人工反馈。\n"
+}

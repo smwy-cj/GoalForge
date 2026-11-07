@@ -1,0 +1,292 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "f0fab54d0d421d768c0184e480ff8de43c5edee0417cddc9b6c8226de42167fd",
+    "judgments_sha256": "3fe1e52376a1ac2ad5f834a267ead35c7f602323488959097af5cb8c1dc8b3b2"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G027",
+      "child_ids": [
+        "G013",
+        "G014"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "G013（下一步时间线）与 G014（最小信息联系）分别对应原文对“流程不清”和“表单过重”的抱怨，两者共同解释了为何愿意把沟通留在站内；但房东是否在平台回复不受这两项控制，故只作为待确认的部分精化。",
+      "assumptions": [
+        "房东愿意在平台内回复",
+        "时间线信息与实际处理流程一致",
+        "两项同时具备时用户才不再转站外"
+      ],
+      "evidence_ids": [],
+      "relation_ids": [
+        "R6",
+        "R7"
+      ],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T071",
+          "quote": "It will be great to have all the housing communication in a single place.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC021:T073",
+          "quote": "This will make him like, trust the feature more, and never try something else, and just keep the communication in in the website.",
+          "role": "basis"
+        }
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "用户提交站内请求时能看到下一步时间线与预计回复，且只需少量信息即可发起；房东在平台内正常回复。",
+          "outcome": "supports",
+          "rationale": "该场景同时消除原文抱怨的信息不透明与表单过重，用户没有明显理由再转到站外渠道。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "房东并不活跃于平台、不回复站内消息（原文 T017 称有人只发布信息、不持续使用网站）。",
+          "outcome": "counterexample",
+          "rationale": "即使界面透明、表单轻量，房东不回复时沟通仍会转到站外，说明该组不足以单独满足父目标 G027，故保留 proposed/partial。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC021-goal-model",
+      "message": "精化组判断（已执行）：G004、G005、G006 被原文描述为选街区的多种方式（“there are many ways”），属 OR 替代而非共同满足，因此未建 AND 组；是否需要以多个 OR 方案表达，请确认。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC021-goal-model",
+      "message": "精化组判断（已执行）：曾评估以 G002（选址）、G007（按面积/预算搜索）、G008（次要条件筛选）共同满足 G001，但组内缺少联系房东与核验真实性，无法声称共同充分，故未建组。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC021-goal-model",
+      "message": "GR1 的异常场景（房东不活跃、不在平台回复）未解决：该组至多改善站内沟通体验，不能保证沟通留在平台；请确认是否接受 partial 结论。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC021-goal-model",
+      "message": "G011（现状：站外沟通）与 G027（条件性：站内单平台沟通）适用条件不同，未判为冲突；若流程变清晰后是否放弃站外渠道，原文未说明。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G006",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "原文把“靠近工作或学校”作为选街区的一种具体情境"
+      ],
+      "assumptions": [
+        "受访者的工作/学校位置在搜索时已知"
+      ],
+      "rationale": "G006 是 G002 在“已有明确工作或就读地点”情境下的具体化，方向为具体→一般。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T007",
+          "quote": "if I have a specific job, or if I'm studying at specific college, I will usually pick a neighborhood that's close to that area",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G004",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "“按预算与要求聚集”的街区是选街区的一种具体判据"
+      ],
+      "assumptions": [
+        "房源列表能反映街区层面的分布"
+      ],
+      "rationale": "G004 给出选择街区的一种具体判据（预算与要求相符的房源聚集），属于 G002 的具体情境。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T007",
+          "quote": "Sometimes there are options that fits my budget and fits my requirements more clustered in specific neighborhoods",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G005",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "询问当地人是选街区的具体做法，适用于跨国搬家"
+      ],
+      "assumptions": [
+        "可获得当地居住者的推荐"
+      ],
+      "rationale": "G005 是 G002 在“目标国家有熟人/当地人可问”情境下的具体化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T007",
+          "quote": "asking people who lives, for example in that country, if they have any recommendation for the places",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G009",
+      "target_id": "G010",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "站内联系后未获回复才转站外"
+      ],
+      "assumptions": [
+        "站内消息渠道确实无回应"
+      ],
+      "rationale": "先发生的是站内联系（G009），无回应之后才改用邮件/电话（G010），顺序由问答直接给出；顺序不等于因果。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T012",
+          "quote": "What do you typically do if you reach out to someone? But they don't respond to you.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC021:T013",
+          "quote": "I'll try to communicate with them using other methods like email or phone.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G019",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "画圈选区用于在地图上界定要搜索的区域"
+      ],
+      "assumptions": [
+        "地图数据能支持区域内检索"
+      ],
+      "rationale": "G019 是确定搜索区域的一种实现方式，服务于 G002 的选区目的；原文说明它比按街区名更灵活。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T033",
+          "quote": "by drawing. You can like, have more flexibility on selecting the area.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G013",
+      "target_id": "G027",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "用户先看到下一步与预计回复，才愿意留在站内沟通"
+      ],
+      "assumptions": [
+        "时间线信息与实际流程一致"
+      ],
+      "rationale": "G013 提供沟通流程的可见性，直接支持留在站内完成沟通（G027）；原文称这会让用户更信任该功能、不再另找渠道。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T073",
+          "quote": "This will make him like, trust the feature more, and never try something else, and just keep the communication in in the website.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC021:T073",
+          "quote": "changing something in in the ui to make the user have some insight about, how would the communication process be?",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G014",
+      "target_id": "G027",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "表单过重与流程不明会把人推向站外"
+      ],
+      "assumptions": [
+        "平台确实能承载轻量沟通"
+      ],
+      "rationale": "G014 降低联系门槛，削弱“流程不清→转站外”的动因，因而有助于 G027；方向为帮助项→受助项。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T071",
+          "quote": "the process is not clear. You just have a vague button called. Send a message where you will fill a form and never know what will happen next.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G024",
+      "target_id": "G023",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "按属性筛选会漏掉未标注的房源"
+      ],
+      "assumptions": [
+        "未标注不等于不具备该属性"
+      ],
+      "rationale": "G024 让筛选结果不因信息缺失而漏项，提升筛选（G023）的可用性；属帮助关系，不构成充分实现。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T051",
+          "quote": "What if I filter by some criteria, and then I lost all the options where the owners didn't specify.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G023",
+      "target_id": "G025",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "筛选与聚合共同给出价格区间与选项概览"
+      ],
+      "assumptions": [
+        "房源数量足以形成区间感知"
+      ],
+      "rationale": "筛选条件帮助把大量房源收敛成可比较的价格区间与选项概览（G025）；原文把 filters 与网站聚合并列为概览来源。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T057",
+          "quote": "will give me an overview about the price ranges about the available options",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

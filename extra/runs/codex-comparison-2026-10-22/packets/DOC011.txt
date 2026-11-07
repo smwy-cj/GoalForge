@@ -1,0 +1,111 @@
+# DOC011
+## LOCAL
+G001 与队友异步协作修改同一份代码，完成课程与项目作业。 | context: 主要身份为学生与助教; 队友同时有仓库写权限，无法约到共同工作时间时靠异步协作
+  E0001 DOC011:S024 from my student perspective is like team collaboration
+  E0002 DOC011:S024 we are asynchronous collab, asynchronously collaborating on this code
+  E0003 DOC011:S104 It really did help facilitate our asynchronous workflows.
+G002 代码合并进主分支前必须经他人审查，防止未审改动进入主干。 | context: 审查由同一仓库的其他协作者执行; 不达标可拒绝合并
+  E0004 DOC011:S084 the port request feature simply because it's a great way to make sure that the main repository stays safe from unknown code changes before they are reviewed by others
+  E0005 DOC011:S032 the code, is up to standard of the team or their personal standard
+  E0006 DOC011:S034 Either approved, or they can also be denied if they don't meet the standards.
+G003 改动按小步增量提交，减少协作者每次要审查的内容量。 | context: 自述为个人偏好，非团队强制; 独自开发时反而倾向大 PR，因为没人要审
+  E0007 DOC011:S044 I personally prefer to do it incrementally
+  E0008 DOC011:S046 It provides less content for my collaborators to have to review
+G004 能回看仓库的变更历史，包括每次提交改了什么、由谁改。 | context: PR 不会被删除，保留在列表中可追溯
+  E0009 DOC011:S084 It's also a very convenient way to track history.
+  E0010 DOC011:S084 in that backlog I mean to see, like what changes were made with this pull request
+  E0011 DOC011:S084 plus other like changes that were made by my collaborators.
+G005 代码安全保存在云端，本机损坏或丢失时可换机拉取继续。 | context: 也支持协作者各自分支存放工作，不影响主仓库
+  E0012 DOC011:S076 having a convenient place to store my code in a in a in a safe manner
+  E0013 DOC011:S076 I would still have my work in a cloud environment that I could simply I'm gonna use the keyword pull onto a different machine
+  E0014 DOC011:S078 They can store their work on that branch
+G006 检索并阅读他人公开仓库的代码。 | context: 可按关键词、文件名、变量名、语言筛选; 范围含仓库、PR、issue、讨论区与用户名
+  E0015 DOC011:S082 public repositories are visible to anybody
+  E0016 DOC011:S082 it can then search the entire Github database for public repositories that I can look at
+  E0017 DOC011:S082 I can also filter based on language.
+G007 用看板跟踪任务状态与分工（backlog → 待办 → 进行中）。 | context: 任务以 issue 形式建立，含标题、描述与被指派人; 团队开会决定指派后再移入待办列
+  E0018 DOC011:S052 a project is essentially just a tracking board
+  E0019 DOC011:S054 Kanban board where you're actually assigning tasks, and you can facilitate team management that way
+  E0020 DOC011:S060 we would add that to the backlog, we would meet together as a team. discuss who should be assigned
+G008 PR 与看板 issue 关联，合并后看板状态自动更新。 | context: 依赖项目已链接到对应仓库; 通过 resolves / #issue 关键词关联
+  E0021 DOC011:S070 when that port request is merged, the Kanban board would automatically reflect that
+  E0022 DOC011:S068 you can actually attach it to an issue in the Kanban board
+G009 GitHub Actions 的官方文档更易查，并提供讨论区或博客。 | context: 现状：官方文档「broad」且难找，多数信息来自 Stack Overflow 等外部来源
+  E0023 DOC011:S086 their documentation overall is a little broad. or it's it's very. It's very difficult to find.
+  E0024 DOC011:S086 So if they. Could have a forum or such, or like a a blog, tab forward discussions or information on building these action workflows. It'd be great.
+  E0025 DOC011:S086 most of the documentation, I find is from other external sources. Stack, overflow, for example.
+G010 以可视化方式呈现分支创建与合并的历史，而不只是线性提交栈。 | context: 自评为 nice-to-have，非必需; 期望同时看到分支内的 issue 与时间线
+  E0026 DOC011:S088 It would be to see a visual mapping of the repository history.
+  E0027 DOC011:S088 visually see there was new branches made where they were merged in
+  E0028 DOC011:S088 it's not an essential feature, it's more so. Just like convenience. Nice to have feature.
+G011 内置 AI 助手，辅助代码审查与操作引导，并帮用户用上平台已有的资源。 | context: 动机：独立开发者只能自己审自己，缺少第二意见; 期望覆盖：审查建议、PR 与 actions 文件的操作引导
+  E0029 DOC011:S094 if a Github was to integrate such an assistant to allow users to consult with it to have better to use all the resources available on Github
+  E0030 DOC011:S098 if I was to have maybe an AI assistant or something that would review help me with code reviews, provide suggestions
+  E0031 DOC011:S098 I have another source of feedback that I can incorporate
+## PAPER summarized goals
+g0 Support educational activities and track student progress.
+g1 Create, link, and manage projects with tracking boards.
+g2 Assign and organize tasks using layouts or Kanban boards.
+g3 Facilitate team management and task assignment.
+g4 Support creation and management of backlog issues for task organization.
+g5 Indicate readiness of entities for development.
+g6 Provide a platform for discussions and information exchange on workflows.
+g7 Support issue tracking and development process planning.
+g8 Allow users to synchronize code between the local machine and the online repository.
+g9 Provide commands to pull the latest code from the repository.
+g10 Provide commands to push the latest code to the online repository.
+g11 Allow changes to be made in the main branch of the repository.
+g12 Ensure the project board is linked to the repository.
+g13 Enable users to create branches for collaborative work.
+g14 Synchronize code changes manually.
+g15 Provide a button to merge code changes into the main branch.
+g16 Enable code pulling for work on different machines.
+g17 Enable merging of code changes through pull requests.
+g18 Use the technology consistently on a daily basis.
+g19 Facilitate collaboration among team members on code projects.
+g20 Enable asynchronous collaboration on code projects.
+g21 Ensure code meets standards before integration into the main branch.
+g22 Provide context for code changes to collaborators.
+g23 Ensure that code is reviewed by collaborators before proceeding.
+g24 Manage changes incrementally to provide less content for review.
+g25 Facilitate collaboration through pull requests.
+g26 Allow users to create a pull request with a title and description.
+g27 Use pull requests for reviewing changes individually.
+g28 Track who is reviewing each pull request.
+g29 Enable the use of keywords for automating pull request descriptions.
+g30 Allow users to search for public pull requests.
+g31 Save pull requests in a backlog for historical reference.
+g32 Allow users to see changes made through pull requests by collaborators.
+g33 Guide users through making pull requests.
+g34 Enable users to compare branches before merging changes.
+g35 Allow storage of work on separate branches to isolate changes.
+g36 Display branch creation and merge activities.
+g37 Show issues within branches with their corresponding timeline.
+g38 Approve or deny changes based on standards compliance.
+g39 Decide and document the requirements for the size and frequency of changes.
+g40 Ensure all changes are explicitly mentioned.
+g41 Display a green box indicating 'review required' after a review by a collaborator.
+g42 Indicate that merging is not allowed with a visual cue and a message stating merging is blocked.
+g43 Provide a text input area for adding comments.
+g44 Improve documentation clarity and accessibility.
+g45 Provide code review assistance.
+g46 Offer suggestions for code improvement.
+g47 Manage changes incrementally to maintain a seamless process.
+g48 Assign items in the backlog to team members.
+g49 Attach a title and description to items in the backlog.
+g50 Move items from the backlog to another part of the board.
+g51 Link a pull request to an issue in the Kanban board.
+g52 Automatically update the Kanban board when a pull request is merged.
+g53 Allow users to make requests using keywords.
+g54 Allow users to view code from different projects.
+g55 Allow users to search for projects using keywords.
+g56 Allow users to filter search results by file name, variable name, or programming language.
+g57 Allow users to access public discussion forums.
+g58 Allow users to search for other users by keywords in their username.
+g59 Store code safely to protect against machine corruption or loss.
+g60 Ensure the main repository is protected from unreviewed code changes.
+g61 Enable collaborative work in a cloud environment.
+g62 Facilitate transferring work from a cloud environment to another device.
+g63 Provide a convenient way to track the history of changes.
+g64 Include a visual mapping of the history to better understand branch creation, merging, and related timelines.
+g65 Facilitate the sending of action files.

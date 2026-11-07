@@ -1,0 +1,41 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "4d25dc3b6f1201a093e422b37ad72d145425f901a3719803e0b6e2af8ba80d6f",
+    "judgments_sha256": "5d168ee32c7620ee049bc8cacc7bbe0484d861af26aa106fb2c48e27b0c37dc2"
+  },
+  "groups": [
+    {
+      "group_id": "F004-1",
+      "parent_id": "DOC004-G05",
+      "child_ids": [
+        "DOC004-G06",
+        "DOC004-G07"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "双因素验证、支出通知与争议能力有助于安全感，但不证明覆盖安全的全部威胁；受访者也不知后台实现。",
+      "assumptions": [
+        "仅作为客户侧安全候选贡献组合"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC004:T019",
+          "quote": "might not have like a very good idea of how well, they've implemented like the security infrastructure",
+          "role": "basis",
+          "start_char": 6149,
+          "end_char": 6251
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F004-1",
+      "message": "安全组合仅为部分候选；需明确威胁范围与其他保障，不能作为成立精化。"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "aba144c589d47e1e29427fca0bd76a3edeb17e41297d3fe0bdf0ef4dc06cf1fc",
+    "judgments_sha256": "bae9215fc001813b55f18d4db40fb6fa1427f05e5d47005e6c07a91b58655d94"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G023",
+      "child_ids": [
+        "G015",
+        "G026",
+        "G009"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Conservative spam handling, reliable alerts and separated accounts can help; the speaker expressly declines reliance when AI can miss importance.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T059",
+          "quote": "Yeah, I think it would be good to receive notification for some important messages. But I think the point is that for current application. There is no a very good way to identify important messages from the others. Yeah, so I don't. I would probably not want to rely on that. Unless it's really reliable. So, for example, if we have this function of AI not find me the important message. But sometimes AI would miss some important message, and for me it would probably be better to not fully rely on it. Yeah.",
+          "role": "basis",
+          "start_char": 16012,
+          "end_char": 16521
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G024",
+      "child_ids": [
+        "G021",
+        "G022",
+        "G025"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "Summaries, highlighting and a tentative batch digest may reduce reading effort but accuracy and completeness are unproven.",
+      "assumptions": [
+        "Candidate sufficiency assessment only; no complete domain model or formal guarantee is available."
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC020:T053",
+          "quote": "Yeah, I would say, the routing test, I think, could be simplified is by reading all the emails. So just as I said, if we have, I assistant for that, that would be very helpful, because I spend a lot of time just reading every email.",
+          "role": "basis",
+          "start_char": 14742,
+          "end_char": 14974
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "Joint sufficiency is unconfirmed: Conservative spam handling, reliable alerts and separated accounts can help; the speaker expressly declines reliance when AI can miss importance."
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "Joint sufficiency is unconfirmed: Summaries, highlighting and a tentative batch digest may reduce reading effort but accuracy and completeness are unproven."
+    }
+  ]
+}

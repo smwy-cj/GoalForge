@@ -1,0 +1,2025 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\extra\\runs\\workbuddy-newskills-20261103-0015\\main\\DOC014\\run03\\attempt-01\\extraction.json",
+    "sha256": "3bb14fc48d3749b0eca67275623cf3981c804fa5a543af6e8a799fe5ab3c2336",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "50fd2c4bfa24ff750c07fa8c86e0a9506e01288980fcc761267d742eeb465f11",
+      "input_sha256": "3bb14fc48d3749b0eca67275623cf3981c804fa5a543af6e8a799fe5ab3c2336"
+    },
+    "bundle_sha256": "5b5ab95dcc27323d7f32474e8488d8b4acfa4fbeabe6810065da72fcf54114f5"
+  },
+  "sources": [
+    {
+      "document_id": "DOC014",
+      "expected_hash": "eebba55d517e727bfe5b96a5d2838730286410fb9528aff8ad92f7eaa773e1ce",
+      "actual_hash": "eebba55d517e727bfe5b96a5d2838730286410fb9528aff8ad92f7eaa773e1ce",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "G001",
+      "target_kind": "candidate",
+      "statement": "Check the outside temperature for the next day, usually the day before, including the morning (before-class / when-going-out) hourly values.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC014:T001",
+          "material_id": "M001",
+          "quote": "So I use it usually to check the temperature outside, especially like the day before.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 277,
+          "end_char": 362,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T001",
+              "segment_start": 6,
+              "segment_end": 91,
+              "start_char": 277,
+              "end_char": 362
+            }
+          ],
+          "original_locator": {
+            "turn": "1",
+            "start_char": 271,
+            "end_char": 747
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC014:T005",
+          "material_id": "M001",
+          "quote": "So I check usually like, if if in in the morning time, you know, like before our classes, what what the temperature is around that time. So when I'm actually going out.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1342,
+          "end_char": 1510,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T005",
+              "segment_start": 227,
+              "segment_end": 395,
+              "start_char": 1342,
+              "end_char": 1510
+            }
+          ],
+          "original_locator": {
+            "turn": "5",
+            "start_char": 1115,
+            "end_char": 1695
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T001",
+          "DOC014:T005"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T001 明确说 usually check the temperature outside，especially the day before；T003 与 T005 补充打开时首先看温度、次日按小时以及出门前/上课前早晨时段温度，主体、对象、时间、强度（usually）与选定方式（按小时）均受支持。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Check the outside temperature for the next day, usually the day before, including the morning (before-class / when-going-out) hourly values.",
+        "label": "direct",
+        "rationale": "T001 明确说 usually check the temperature outside，especially the day before；T003 与 T005 补充打开时首先看温度、次日按小时以及出门前/上课前早晨时段温度，主体、对象、时间、强度（usually）与选定方式（按小时）均受支持。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G002",
+      "target_kind": "candidate",
+      "statement": "Check the rain / precipitation chances for tomorrow (the next day), including the hourly percentage where 25+ means a good chance of rain.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC014:T005",
+          "material_id": "M001",
+          "quote": "And what's the what's the precipitation chances? So that's like between one and 100 usually 25 plus is like a good chance of rain happening.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 1511,
+          "end_char": 1651,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T005",
+              "segment_start": 396,
+              "segment_end": 536,
+              "start_char": 1511,
+              "end_char": 1651
+            }
+          ],
+          "original_locator": {
+            "turn": "5",
+            "start_char": 1115,
+            "end_char": 1695
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC014:T003",
+          "material_id": "M001",
+          "quote": "1st is usually temperature, and like the rain meter, like the chance of happening like a rain happening tomorrow. So yeah, those 2 things.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 835,
+          "end_char": 973,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T003",
+              "segment_start": 0,
+              "segment_end": 138,
+              "start_char": 835,
+              "end_char": 973
+            }
+          ],
+          "original_locator": {
+            "turn": "3",
+            "start_char": 835,
+            "end_char": 973
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T005",
+          "DOC014:T003"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T001 的 I also check for rains、T003 的 rain meter / chance of rain tomorrow、T005 的 precipitation chances 与 25+ 刻度共同明确支持查看降雨/降水概率及其数值口径，主体与 usually 强度一致。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Check the rain / precipitation chances for tomorrow (the next day), including the hourly percentage where 25+ means a good chance of rain.",
+        "label": "direct",
+        "rationale": "T001 的 I also check for rains、T003 的 rain meter / chance of rain tomorrow、T005 的 precipitation chances 与 25+ 刻度共同明确支持查看降雨/降水概率及其数值口径，主体与 usually 强度一致。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G003",
+      "target_kind": "candidate",
+      "statement": "Plan whether to wear the thick coat or the light coat based on the checked temperature.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC014:T001",
+          "material_id": "M001",
+          "quote": "So like, I can plan whether I should wear my thick coat or my light coat.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 363,
+          "end_char": 436,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T001",
+              "segment_start": 92,
+              "segment_end": 165,
+              "start_char": 363,
+              "end_char": 436
+            }
+          ],
+          "original_locator": {
+            "turn": "1",
+            "start_char": 271,
+            "end_char": 747
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T001"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T001 明确说因此 can plan whether I should wear my thick coat or my light coat，是查温度后的独立决策结果；该决策未附加其他条件或强度。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Plan whether to wear the thick coat or the light coat based on the checked temperature.",
+        "label": "direct",
+        "rationale": "T001 明确说因此 can plan whether I should wear my thick coat or my light coat，是查温度后的独立决策结果；该决策未附加其他条件或强度。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G004",
+      "target_kind": "candidate",
+      "statement": "When it is super cold, skip cycling and take the bus instead (to avoid cycling down in the cold).",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC014:T001",
+          "material_id": "M001",
+          "quote": "if it's like super cold, I might skip going through bicycle and just go through the bus, because it's like very cool to like cycle down.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 450,
+          "end_char": 586,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T001",
+              "segment_start": 179,
+              "segment_end": 315,
+              "start_char": 450,
+              "end_char": 586
+            }
+          ],
+          "original_locator": {
+            "turn": "1",
+            "start_char": 271,
+            "end_char": 747
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T001"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T001 明确给出条件（if super cold）与行动（skip bicycle / go through the bus）及原因（cycle down 很冷），并保留 might 的不确定语气；条件与强度均写入目标，未升级为强制。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "When it is super cold, skip cycling and take the bus instead (to avoid cycling down in the cold).",
+        "label": "direct",
+        "rationale": "T001 明确给出条件（if super cold）与行动（skip bicycle / go through the bus）及原因（cycle down 很冷），并保留 might 的不确定语气；条件与强度均写入目标，未升级为强制。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G005",
+      "target_kind": "candidate",
+      "statement": "Make sure to have an umbrella when rain is forecast.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC014:T001",
+          "material_id": "M001",
+          "quote": "So if it's if there is a weather forecast for rain. I I make sure I have my umbrella.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 615,
+          "end_char": 700,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T001",
+              "segment_start": 344,
+              "segment_end": 429,
+              "start_char": 615,
+              "end_char": 700
+            }
+          ],
+          "original_locator": {
+            "turn": "1",
+            "start_char": 271,
+            "end_char": 747
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T001"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T001 明确以 if 条件句说出 make sure I have my umbrella，条件（有雨预报）与动作均受支持，强度为 make sure。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Make sure to have an umbrella when rain is forecast.",
+        "label": "direct",
+        "rationale": "T001 明确以 if 条件句说出 make sure I have my umbrella，条件（有雨预报）与动作均受支持，强度为 make sure。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G006",
+      "target_kind": "candidate",
+      "statement": "Learn about an important/severe weather event first from weather.com when it has not already been seen in the news, including warnings and definite notice when it happens for my city.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC014:T011",
+          "material_id": "M001",
+          "quote": "Yeah, weather.com would be a good spot that I'll 1st see it, because it usually gives some sort of detail about, like, you know, like an important weather event that's happening.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2785,
+          "end_char": 2963,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T011",
+              "segment_start": 106,
+              "segment_end": 284,
+              "start_char": 2785,
+              "end_char": 2963
+            }
+          ],
+          "original_locator": {
+            "turn": "11",
+            "start_char": 2679,
+            "end_char": 3662
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC014:T011",
+          "material_id": "M001",
+          "quote": "so if if it's happening for my city, I'll definitely notice it.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3171,
+          "end_char": 3234,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T011",
+              "segment_start": 492,
+              "segment_end": 555,
+              "start_char": 3171,
+              "end_char": 3234
+            }
+          ],
+          "original_locator": {
+            "turn": "11",
+            "start_char": 2679,
+            "end_char": 3662
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T011",
+          "DOC014:T011"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T011 明确说在未见新闻时 weather.com 会是 first place 得知重要天气事件、会 warn me，且若发生在本城市 will definitely notice it；前提、first 顺序、definitely 强度与 warns 均受支持。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Learn about an important/severe weather event first from weather.com when it has not already been seen in the news, including warnings and definite notice when it happens for my city.",
+        "label": "direct",
+        "rationale": "T011 明确说在未见新闻时 weather.com 会是 first place 得知重要天气事件、会 warn me，且若发生在本城市 will definitely notice it；前提、first 顺序、definitely 强度与 warns 均受支持。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G007",
+      "target_kind": "candidate",
+      "statement": "Have/consult a safety guide or resources from weather.com during an extreme weather event (so as to stay safe).",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC014:T011",
+          "material_id": "M001",
+          "quote": "So but I'm I'm pretty sure that they have some sort of guide to like, you know. Make sure you're safe, or something, or like some resources that you can read up to.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3369,
+          "end_char": 3533,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T011",
+              "segment_start": 690,
+              "segment_end": 854,
+              "start_char": 3369,
+              "end_char": 3533
+            }
+          ],
+          "original_locator": {
+            "turn": "11",
+            "start_char": 2679,
+            "end_char": 3662
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC014:T013",
+          "material_id": "M001",
+          "quote": "No, not really. That's my assumption, because I I've never really, you know, as I said, I've never been in a city at the time of like an extreme weather event. So that's that's probably my guess. Yeah.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 3805,
+          "end_char": 4006,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T013",
+              "segment_start": 0,
+              "segment_end": 201,
+              "start_char": 3805,
+              "end_char": 4006
+            }
+          ],
+          "original_locator": {
+            "turn": "13",
+            "start_char": 3805,
+            "end_char": 4006
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T011",
+          "DOC014:T013"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [
+          "指南/资源是否真实存在",
+          "受访者是否将其作为需求而非猜测",
+          "适用条件与采纳状态"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "insufficient",
+        "rationale": "T011 中安全指南只是受访者 'I'm pretty sure' 的猜测，T013 明确否认见过并自述 'That's my assumption... probably my guess'；原文无正面依据证明该能力存在或该要求被提出，属信念/猜测，按规定不当作已验证事实或明确要求，保留 insufficient 不升级。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Have/consult a safety guide or resources from weather.com during an extreme weather event (so as to stay safe).",
+        "label": "insufficient",
+        "rationale": "T011 中安全指南只是受访者 'I'm pretty sure' 的猜测，T013 明确否认见过并自述 'That's my assumption... probably my guess'；原文无正面依据证明该能力存在或该要求被提出，属信念/猜测，按规定不当作已验证事实或明确要求，保留 insufficient 不升级。",
+        "supported_parts": [],
+        "unsupported_parts": [
+          "指南/资源是否真实存在",
+          "受访者是否将其作为需求而非猜测",
+          "适用条件与采纳状态"
+        ],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G008",
+      "target_kind": "candidate",
+      "statement": "On a typhoon alert, open the notification to check the severity and all details about the typhoon.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC014:T015",
+          "material_id": "M001",
+          "quote": "Well, I'll probably open the notification check. You know the severity and all the details that they have about the typhoon",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4230,
+          "end_char": 4353,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T015",
+              "segment_start": 0,
+              "segment_end": 123,
+              "start_char": 4230,
+              "end_char": 4353
+            }
+          ],
+          "original_locator": {
+            "turn": "15",
+            "start_char": 4230,
+            "end_char": 4811
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T015"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T015 在假设收到台风警报下明确说 I'll probably open the notification check... severity and all the details，动作、对象与条件（警报场景）均受支持，保留 probably 强度。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "On a typhoon alert, open the notification to check the severity and all details about the typhoon.",
+        "label": "direct",
+        "rationale": "T015 在假设收到台风警报下明确说 I'll probably open the notification check... severity and all the details，动作、对象与条件（警报场景）均受支持，保留 probably 强度。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G009",
+      "target_kind": "candidate",
+      "statement": "Read what the authorities recommend (whether to evacuate the city, seek shelter / not go outside, or just carry an umbrella and a raincoat).",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC014:T015",
+          "material_id": "M001",
+          "quote": "So you know, I'll read for what they recommend like, should I? Should I evacuate the city? Should I just seek shelter, not go outside or like, just carry a umbrella and a raincoat?",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4502,
+          "end_char": 4682,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T015",
+              "segment_start": 272,
+              "segment_end": 452,
+              "start_char": 4502,
+              "end_char": 4682
+            }
+          ],
+          "original_locator": {
+            "turn": "15",
+            "start_char": 4230,
+            "end_char": 4811
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T015"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T015 明确说 I'll read for what they recommend 并列出撤离/躲避不外出/带伞雨衣三种可能建议，动作、来源与候选内容均受支持；未把三种建议固化为必须同时执行。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Read what the authorities recommend (whether to evacuate the city, seek shelter / not go outside, or just carry an umbrella and a raincoat).",
+        "label": "direct",
+        "rationale": "T015 明确说 I'll read for what they recommend 并列出撤离/躲避不外出/带伞雨衣三种可能建议，动作、来源与候选内容均受支持；未把三种建议固化为必须同时执行。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G010",
+      "target_kind": "candidate",
+      "statement": "Adjust my day based on the severity and the information given.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC014:T015",
+          "material_id": "M001",
+          "quote": "So yeah, it depends on the severity. And like what information they've given. And like, yeah, based on that, I'll adjust my day.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4683,
+          "end_char": 4811,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T015",
+              "segment_start": 453,
+              "segment_end": 581,
+              "start_char": 4683,
+              "end_char": 4811
+            }
+          ],
+          "original_locator": {
+            "turn": "15",
+            "start_char": 4230,
+            "end_char": 4811
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T015"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T015 明确说 it depends on the severity... based on that, I'll adjust my day，动作与两个条件均受支持；'that' 回指前两句的详情与建议，按全篇校正保留其指代。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Adjust my day based on the severity and the information given.",
+        "label": "direct",
+        "rationale": "T015 明确说 it depends on the severity... based on that, I'll adjust my day，动作与两个条件均受支持；'that' 回指前两句的详情与建议，按全篇校正保留其指代。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G011",
+      "target_kind": "candidate",
+      "statement": "Read important weather events happening across the world (not necessarily in my city) via the main-page sections / news tab, including the event details.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC014:T051",
+          "material_id": "M001",
+          "quote": "Yeah. So if I go to the main page it does have sections for like weather events, not necessarily in my city. But you know, like important weather events. Ha! Happening across the world. So it does show me that. And if I click on it, it opens like a news tab in weather.com.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 16308,
+          "end_char": 16581,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T051",
+              "segment_start": 0,
+              "segment_end": 273,
+              "start_char": 16308,
+              "end_char": 16581
+            }
+          ],
+          "original_locator": {
+            "turn": "51",
+            "start_char": 16308,
+            "end_char": 16581
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC014:T053",
+          "material_id": "M001",
+          "quote": "Yeah. And it gives the details about like whatever, whether it, whether event is happening.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 16628,
+          "end_char": 16719,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T053",
+              "segment_start": 0,
+              "segment_end": 91,
+              "start_char": 16628,
+              "end_char": 16719
+            }
+          ],
+          "original_locator": {
+            "turn": "53",
+            "start_char": 16628,
+            "end_char": 16719
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T051",
+          "DOC014:T053"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T051 说明主页有全球重要天气事件板块、点击打开 news tab，T053 补充给出事件详情；受访者确认其使用方式（if I click on it），范围（not necessarily in my city）与方式（news tab）均受支持。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Read important weather events happening across the world (not necessarily in my city) via the main-page sections / news tab, including the event details.",
+        "label": "direct",
+        "rationale": "T051 说明主页有全球重要天气事件板块、点击打开 news tab，T053 补充给出事件详情；受访者确认其使用方式（if I click on it），范围（not necessarily in my city）与方式（news tab）均受支持。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G012",
+      "target_kind": "candidate",
+      "statement": "When a trip is known (a couple of weeks ahead), check historical weather data if available, or the future/monthly forecast, to get an estimate of what the weather will be like.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC014:T017",
+          "material_id": "M001",
+          "quote": "Once I find that I'll be going. I either check for historical data if it's available somewhere, or I check for future weather focus because it gives you focus. That's you know, I had like monthly forecast as well. So you at least have a good estimate of what the what the weather will be like.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5567,
+          "end_char": 5860,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T017",
+              "segment_start": 221,
+              "segment_end": 514,
+              "start_char": 5567,
+              "end_char": 5860
+            }
+          ],
+          "original_locator": {
+            "turn": "17",
+            "start_char": 5346,
+            "end_char": 6827
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T017"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T017 明确说一旦确定出行就 either check historical data（带 if available 条件）or future/monthly forecast 以获得天气估计，替代方式（either/or）与条件均保留，未改成必须同时采用。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "When a trip is known (a couple of weeks ahead), check historical weather data if available, or the future/monthly forecast, to get an estimate of what the weather will be like.",
+        "label": "direct",
+        "rationale": "T017 明确说一旦确定出行就 either check historical data（带 if available 条件）or future/monthly forecast 以获得天气估计，替代方式（either/or）与条件均保留，未改成必须同时采用。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G013",
+      "target_kind": "candidate",
+      "statement": "Check cloud coverage (in addition to temperature and precipitation) when planning a trip, which may lead to reconsidering or cancelling a beach vacation or astronomical-event trip.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC014:T017",
+          "material_id": "M001",
+          "quote": "and and not just like the temperature and precipitation. As I mentioned earlier, but also like the cloud coverage, like, if you're going for a beach vacation, let's say, and it's going to be super cloudy. Then, you know, you might need to reconsider, because usually people go there to enjoy sun. Right?",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5861,
+          "end_char": 6164,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T017",
+              "segment_start": 515,
+              "segment_end": 818,
+              "start_char": 5861,
+              "end_char": 6164
+            }
+          ],
+          "original_locator": {
+            "turn": "17",
+            "start_char": 5346,
+            "end_char": 6827
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC014:T017",
+          "material_id": "M001",
+          "quote": "if you're going for some astronomical event trip right like, if you're going in a hillside to like absorb some astronomical event. but it's like overshadow or like the there is an overcast like, there are a lot of clouds, basically. So it might have to cancel the trip.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6249,
+          "end_char": 6518,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T017",
+              "segment_start": 903,
+              "segment_end": 1172,
+              "start_char": 6249,
+              "end_char": 6518
+            }
+          ],
+          "original_locator": {
+            "turn": "17",
+            "start_char": 5346,
+            "end_char": 6827
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T017",
+          "DOC014:T017"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T017 明确说旅行时除温度降水外 also cloud coverage，并以海滩/天文观测举例说明多云时可能需要重新考虑或取消；举例仅作情境例保留，未固化成固定业务目标，might 强度保留。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Check cloud coverage (in addition to temperature and precipitation) when planning a trip, which may lead to reconsidering or cancelling a beach vacation or astronomical-event trip.",
+        "label": "direct",
+        "rationale": "T017 明确说旅行时除温度降水外 also cloud coverage，并以海滩/天文观测举例说明多云时可能需要重新考虑或取消；举例仅作情境例保留，未固化成固定业务目标，might 强度保留。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G014",
+      "target_kind": "candidate",
+      "statement": "Wait till a couple of days (2-3 days) before the trip and decide based on the final, more accurate forecast, since a few-weeks-out prediction is hard and can be the difference between going and not going.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC014:T019",
+          "material_id": "M001",
+          "quote": "So yeah, you should probably wait till the end and then then decide, based on what the final temperature is like. Couple of days before.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7295,
+          "end_char": 7431,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T019",
+              "segment_start": 367,
+              "segment_end": 503,
+              "start_char": 7295,
+              "end_char": 7431
+            }
+          ],
+          "original_locator": {
+            "turn": "19",
+            "start_char": 6928,
+            "end_char": 7431
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC014:T017",
+          "material_id": "M001",
+          "quote": "and then, as you approach the date, the weather, like the weather forecast, becomes usually more accurate. So like a few days before you can get like a final you know, see on what the situation would be like.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6589,
+          "end_char": 6797,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T017",
+              "segment_start": 1243,
+              "segment_end": 1451,
+              "start_char": 6589,
+              "end_char": 6797
+            }
+          ],
+          "original_locator": {
+            "turn": "17",
+            "start_char": 5346,
+            "end_char": 6827
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC014:T019",
+          "material_id": "M001",
+          "quote": "But like it could be, it could be the difference between not going and going to a trip.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7207,
+          "end_char": 7294,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T019",
+              "segment_start": 279,
+              "segment_end": 366,
+              "start_char": 7207,
+              "end_char": 7294
+            }
+          ],
+          "original_locator": {
+            "turn": "19",
+            "start_char": 6928,
+            "end_char": 7431
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T019",
+          "DOC014:T017",
+          "DOC014:T019"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T019 明确建议 should probably wait till the end and then decide based on the final temperature a couple of days before，并说明几周前难准、可能是去不成的差别；T017 补充临近预报更准、前几天可看最终情况。条件、2-3 天时间、should probably 强度均保留。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Wait till a couple of days (2-3 days) before the trip and decide based on the final, more accurate forecast, since a few-weeks-out prediction is hard and can be the difference between going and not going.",
+        "label": "direct",
+        "rationale": "T019 明确建议 should probably wait till the end and then decide based on the final temperature a couple of days before，并说明几周前难准、可能是去不成的差别；T017 补充临近预报更准、前几天可看最终情况。条件、2-3 天时间、should probably 强度均保留。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G015",
+      "target_kind": "candidate",
+      "statement": "View more precise hourly weather data (including wind speed, humidity, UV index and what it actually feels like) via the hourly tab when wanting more detail.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC014:T033",
+          "material_id": "M001",
+          "quote": "So if you want like a more precise hourly coverage, you can go to the hourly tab, and then it shows the same data but in our format. But then it also shows a little more data like it also shows the wind speeds, and if you click on like a particular hour, it also will show you the humidity or the UV index, or what it actually feels like",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 11670,
+          "end_char": 12007,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T033",
+              "segment_start": 367,
+              "segment_end": 704,
+              "start_char": 11670,
+              "end_char": 12007
+            }
+          ],
+          "original_locator": {
+            "turn": "33",
+            "start_char": 11303,
+            "end_char": 12383
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T033"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T033 明确说想要更精确每小时覆盖可去 hourly tab，并显示风速、湿度、UV 指数与体感温度；条件（if you want）、方式（hourly tab/点击某小时）与附加数据维度均受支持。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "View more precise hourly weather data (including wind speed, humidity, UV index and what it actually feels like) via the hourly tab when wanting more detail.",
+        "label": "direct",
+        "rationale": "T033 明确说想要更精确每小时覆盖可去 hourly tab，并显示风速、湿度、UV 指数与体感温度；条件（if you want）、方式（hourly tab/点击某小时）与附加数据维度均受支持。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G016",
+      "target_kind": "candidate",
+      "statement": "Screenshot and share on social media a weather reading showing the temperature below 0 (planned, not yet done).",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC014:T027",
+          "material_id": "M001",
+          "quote": "I've not done it yet, but I'm planning to do it very soon.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9495,
+          "end_char": 9553,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T027",
+              "segment_start": 77,
+              "segment_end": 135,
+              "start_char": 9495,
+              "end_char": 9553
+            }
+          ],
+          "original_locator": {
+            "turn": "27",
+            "start_char": 9418,
+            "end_char": 9861
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC014:T027",
+          "material_id": "M001",
+          "quote": "So you know, if it if if I do see like a weather where the temperature is showing below 0, I'll probably like screenshot it and share it on my social medias. But yeah, I haven't done it yet.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9671,
+          "end_char": 9861,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T027",
+              "segment_start": 253,
+              "segment_end": 443,
+              "start_char": 9671,
+              "end_char": 9861
+            }
+          ],
+          "original_locator": {
+            "turn": "27",
+            "start_char": 9418,
+            "end_char": 9861
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T027",
+          "DOC014:T027"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T027 明确说 planning to do it very soon、若看到低于 0 会 screenshot it and share on my social medias，并两次强调 haven't done it yet；动作、条件、方式与计划/未实现语气均保留，未升级为已完成或强制。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Screenshot and share on social media a weather reading showing the temperature below 0 (planned, not yet done).",
+        "label": "direct",
+        "rationale": "T027 明确说 planning to do it very soon、若看到低于 0 会 screenshot it and share on my social medias，并两次强调 haven't done it yet；动作、条件、方式与计划/未实现语气均保留，未升级为已完成或强制。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G017",
+      "target_kind": "candidate",
+      "statement": "Have a plain black or plain white background instead of the dull blue color scheme (preferred).",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC014:T035",
+          "material_id": "M001",
+          "quote": "because, like the background, is like a dull blue, which I don't really like, you know, they could just make it plain black or plain white. And I would prefer that.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12552,
+          "end_char": 12716,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T035",
+              "segment_start": 59,
+              "segment_end": 223,
+              "start_char": 12552,
+              "end_char": 12716
+            }
+          ],
+          "original_locator": {
+            "turn": "35",
+            "start_char": 12493,
+            "end_char": 12743
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T035"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T035 明确说 dull blue 背景不喜欢、they could just make it plain black or plain white 且 I would prefer that；偏好对象、方向（纯黑或纯白）与 prefer 强度均保留，未升级为必须。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Have a plain black or plain white background instead of the dull blue color scheme (preferred).",
+        "label": "direct",
+        "rationale": "T035 明确说 dull blue 背景不喜欢、they could just make it plain black or plain white 且 I would prefer that；偏好对象、方向（纯黑或纯白）与 prefer 强度均保留，未升级为必须。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G018",
+      "target_kind": "candidate",
+      "statement": "Reduce the number of ads (4-5 ads plus video pop-up ads are too much; 1-2 ads would be acceptable) so they do not distract from quickly checking the weather.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC014:T037",
+          "material_id": "M001",
+          "quote": "But like, if you have 4 or 5 ads and then couple of video ads. it's just too much like it takes it like distracts you, and it takes away from the enjoyment of just, you know, like quickly checking everything and coming out so.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13142,
+          "end_char": 13368,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T037",
+              "segment_start": 246,
+              "segment_end": 472,
+              "start_char": 13142,
+              "end_char": 13368
+            }
+          ],
+          "original_locator": {
+            "turn": "37",
+            "start_char": 12896,
+            "end_char": 13368
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC014:T069",
+          "material_id": "M001",
+          "quote": "Yeah. So I think. I think ads would be an issue, like, everything is separated by ads, like, when I click on from one tap to the next, like there is a big ad chunk between.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 21968,
+          "end_char": 22140,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T069",
+              "segment_start": 0,
+              "segment_end": 172,
+              "start_char": 21968,
+              "end_char": 22140
+            }
+          ],
+          "original_locator": {
+            "turn": "69",
+            "start_char": 21968,
+            "end_char": 22465
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T037",
+          "DOC014:T069"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [
+          "把'太多/烦人'的评价理解为减少广告数量的改善愿望"
+        ],
+        "reasoning_steps": [
+          "T037 评价 4-5 广告+视频广告 too much 且能接受 1-2 个",
+          "T069 复述广告是问题、内容被广告分隔",
+          "推断目标为把广告数量降到可接受范围以不干扰快速查看"
+        ],
+        "label": "inferred",
+        "rationale": "T037 明确说 4-5 个广告加视频广告 too much、distracts you、can understand one or 2 ads，T069 说 ads would be an issue、内容被广告分隔；由此正面推断出减少广告数量的改善诉求，保留 1-2 个可接受的边界与抱怨语气，不升级为必须移除全部广告。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Reduce the number of ads (4-5 ads plus video pop-up ads are too much; 1-2 ads would be acceptable) so they do not distract from quickly checking the weather.",
+        "label": "inferred",
+        "rationale": "T037 明确说 4-5 个广告加视频广告 too much、distracts you、can understand one or 2 ads，T069 说 ads would be an issue、内容被广告分隔；由此正面推断出减少广告数量的改善诉求，保留 1-2 个可接受的边界与抱怨语气，不升级为必须移除全部广告。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [
+          "把'太多/烦人'的评价理解为减少广告数量的改善愿望"
+        ],
+        "reasoning_steps": [
+          "T037 评价 4-5 广告+视频广告 too much 且能接受 1-2 个",
+          "T069 复述广告是问题、内容被广告分隔",
+          "推断目标为把广告数量降到可接受范围以不干扰快速查看"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G019",
+      "target_kind": "candidate",
+      "statement": "Make the UI more compact (squish it / bring elements closer together) so it is easier to read, instead of having content separated by big ad chunks that require scrolling up and down.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC014:T069",
+          "material_id": "M001",
+          "quote": "Maybe they can like just like squish the ui a little bit, you know, make it more like close to each other. So it makes it. It just it just like easier to read. Yeah, I think that would be definitely on top on the list.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 22241,
+          "end_char": 22459,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T069",
+              "segment_start": 273,
+              "segment_end": 491,
+              "start_char": 22241,
+              "end_char": 22459
+            }
+          ],
+          "original_locator": {
+            "turn": "69",
+            "start_char": 21968,
+            "end_char": 22465
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T069"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T069 明确建议 squish the ui a little bit、make it more close to each other 以便 easier to read，并说 that would be definitely on top on the list；动作、预期结果、广告分隔导致的滚动问题与优先级语气均受支持。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Make the UI more compact (squish it / bring elements closer together) so it is easier to read, instead of having content separated by big ad chunks that require scrolling up and down.",
+        "label": "direct",
+        "rationale": "T069 明确建议 squish the ui a little bit、make it more close to each other 以便 easier to read，并说 that would be definitely on top on the list；动作、预期结果、广告分隔导致的滚动问题与优先级语气均受支持。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G020",
+      "target_kind": "candidate",
+      "statement": "Improve the radar section to be more detailed and intuitive, with multiple parameters (e.g. snow coverage, precipitation), like the windy.com radar.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0030",
+          "source_id": "DOC014:T043",
+          "material_id": "M001",
+          "quote": "yeah, I think probably the radar could be better. Because there is. There is a startup, I know, which is not weather.com. which has like much detailed and like intuitive like radar map. And it it's not just the cloud coverage. There are like multiple parameters that you you can see, you know, you know, like the snow coverage precipitation.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 14270,
+          "end_char": 14611,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T043",
+              "segment_start": 0,
+              "segment_end": 341,
+              "start_char": 14270,
+              "end_char": 14611
+            }
+          ],
+          "original_locator": {
+            "turn": "43",
+            "start_char": 14270,
+            "end_char": 14832
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0031",
+          "source_id": "DOC014:T067",
+          "material_id": "M001",
+          "quote": "So viney.com has a very good radar section. I mean, the entire app is just a radar, and it it gives a lot of details. And I really love seeing the animations.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 20596,
+          "end_char": 20754,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T067",
+              "segment_start": 207,
+              "segment_end": 365,
+              "start_char": 20596,
+              "end_char": 20754
+            }
+          ],
+          "original_locator": {
+            "turn": "67",
+            "start_char": 20389,
+            "end_char": 21459
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T043",
+          "DOC014:T067"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T043 明确说 radar could be better、参照更 detailed/intuitive 且含 snow coverage/precipitation 等多参数的雷达；T067 补充 windy.com 雷达细节多、喜欢动画。改善对象、维度与参照来源均受支持；'might consider buying' 为条件性购买意向，未升级为购买目标。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Improve the radar section to be more detailed and intuitive, with multiple parameters (e.g. snow coverage, precipitation), like the windy.com radar.",
+        "label": "direct",
+        "rationale": "T043 明确说 radar could be better、参照更 detailed/intuitive 且含 snow coverage/precipitation 等多参数的雷达；T067 补充 windy.com 雷达细节多、喜欢动画。改善对象、维度与参照来源均受支持；'might consider buying' 为条件性购买意向，未升级为购买目标。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G021",
+      "target_kind": "candidate",
+      "statement": "Provide very local weather data for non-city locations (e.g. a hotel in the middle of nowhere, hiking trails, mountain-climbing expeditions) where city-level weather does not help.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0032",
+          "source_id": "DOC014:T067",
+          "material_id": "M001",
+          "quote": "I think that would also be a good feature. Because, you know, sometimes it's not necessarily like a city that you're going to, or a state that you're going to you. You just want to like, see whether at this particular hotel that's in like middle of nowhere.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 20867,
+          "end_char": 21124,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T067",
+              "segment_start": 478,
+              "segment_end": 735,
+              "start_char": 20867,
+              "end_char": 21124
+            }
+          ],
+          "original_locator": {
+            "turn": "67",
+            "start_char": 20389,
+            "end_char": 21459
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0033",
+          "source_id": "DOC014:T067",
+          "material_id": "M001",
+          "quote": "So yeah, having having that very local data would be definitely helpful.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 21387,
+          "end_char": 21459,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T067",
+              "segment_start": 998,
+              "segment_end": 1070,
+              "start_char": 21387,
+              "end_char": 21459
+            }
+          ],
+          "original_locator": {
+            "turn": "67",
+            "start_char": 20389,
+            "end_char": 21459
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T067",
+          "DOC014:T067"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [
+          "受访者是否主动要求该功能（提议来自采访者）",
+          "功能的采纳/强制程度与优先级",
+          "与 T065 '想不出任何要加功能' 的张力如何解决"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "insufficient",
+        "rationale": "G021 是受访者对采访者主动给出的场景（T066/T067）表示 'that would also be a good feature / definitely helpful'，属对提议的认可而非主动提出的需求；且 T065 明确说 'No, no features that I can think of... pretty comprehensive'，构成需回查的相反证据。二者情境不同（自发想不出 vs 被给出具体场景后认可），但采纳程度、强制性与优先级均未知，资料不足以支持把'系统应提供本地化地点天气'当作既定目标，保留 insufficient 不升级，并在 review_questions/questions 记录该张力。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Provide very local weather data for non-city locations (e.g. a hotel in the middle of nowhere, hiking trails, mountain-climbing expeditions) where city-level weather does not help.",
+        "label": "insufficient",
+        "rationale": "G021 是受访者对采访者主动给出的场景（T066/T067）表示 'that would also be a good feature / definitely helpful'，属对提议的认可而非主动提出的需求；且 T065 明确说 'No, no features that I can think of... pretty comprehensive'，构成需回查的相反证据。二者情境不同（自发想不出 vs 被给出具体场景后认可），但采纳程度、强制性与优先级均未知，资料不足以支持把'系统应提供本地化地点天气'当作既定目标，保留 insufficient 不升级，并在 review_questions/questions 记录该张力。",
+        "supported_parts": [],
+        "unsupported_parts": [
+          "受访者是否主动要求该功能（提议来自采访者）",
+          "功能的采纳/强制程度与优先级",
+          "与 T065 '想不出任何要加功能' 的张力如何解决"
+        ],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G022",
+      "target_kind": "candidate",
+      "statement": "Keep notifications from weather.com turned off (prefer no notifications; if turned on it is only a next-day weather highlight).",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0034",
+          "source_id": "DOC014:T055",
+          "material_id": "M001",
+          "quote": "I usually prefer no notifications, like, when I'm on my Mac, like on my PC, basically, so yeah, usually the notifications are off.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17136,
+          "end_char": 17266,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T055",
+              "segment_start": 106,
+              "segment_end": 236,
+              "start_char": 17136,
+              "end_char": 17266
+            }
+          ],
+          "original_locator": {
+            "turn": "55",
+            "start_char": 17030,
+            "end_char": 17367
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0035",
+          "source_id": "DOC014:T057",
+          "material_id": "M001",
+          "quote": "Yeah, I just prefer it off. So I've kept it off.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17448,
+          "end_char": 17496,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T057",
+              "segment_start": 0,
+              "segment_end": 48,
+              "start_char": 17448,
+              "end_char": 17496
+            }
+          ],
+          "original_locator": {
+            "turn": "57",
+            "start_char": 17448,
+            "end_char": 17496
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T055",
+          "DOC014:T057"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T055/T057 明确说 usually prefer no notifications、notifications are off、I just prefer it off. So I've kept it off，属明确的维持/避免型状态目标；prefer 强度、Mac/PC 情境与'若开启仅次日要点'的例外均保留。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Keep notifications from weather.com turned off (prefer no notifications; if turned on it is only a next-day weather highlight).",
+        "label": "direct",
+        "rationale": "T055/T057 明确说 usually prefer no notifications、notifications are off、I just prefer it off. So I've kept it off，属明确的维持/避免型状态目标；prefer 强度、Mac/PC 情境与'若开启仅次日要点'的例外均保留。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G023",
+      "target_kind": "candidate",
+      "statement": "View temperatures in Celsius (preferred) instead of the default Fahrenheit, using the C/F drop down at the top.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0036",
+          "source_id": "DOC014:T047",
+          "material_id": "M001",
+          "quote": "Yeah, so I do prefer Celsius. And and yes, it is Fahrenheit. There is a option to change it at the top, like when you open weather.com at the very top there is like a drop down which says, degree C, or degree F. If you click on it, it will, it will allow you to like switch between Fahrenheit and Celsius.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15528,
+          "end_char": 15833,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T047",
+              "segment_start": 0,
+              "segment_end": 305,
+              "start_char": 15528,
+              "end_char": 15833
+            }
+          ],
+          "original_locator": {
+            "turn": "47",
+            "start_char": 15528,
+            "end_char": 15833
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T047"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T047 明确说 I do prefer Celsius、默认是 Fahrenheit、顶部有 degree C/F 下拉可切换；偏好方向、默认值与明确选定的切换方式均受支持，prefer 未升级为强制。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "View temperatures in Celsius (preferred) instead of the default Fahrenheit, using the C/F drop down at the top.",
+        "label": "direct",
+        "rationale": "T047 明确说 I do prefer Celsius、默认是 Fahrenheit、顶部有 degree C/F 下拉可切换；偏好方向、默认值与明确选定的切换方式均受支持，prefer 未升级为强制。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G024",
+      "target_kind": "candidate",
+      "statement": "Keep/view weather for the two saved cities (the home city and the city coming from in India).",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0037",
+          "source_id": "DOC014:T045",
+          "material_id": "M001",
+          "quote": "No, nothing personal, I would say like, I don't really use it that much, but I do have my cities set. So it's usually my home city. And then the the city that I was coming from like in India. So yeah, those 2 cities. I have it open.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15055,
+          "end_char": 15287,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T045",
+              "segment_start": 0,
+              "segment_end": 232,
+              "start_char": 15055,
+              "end_char": 15287
+            }
+          ],
+          "original_locator": {
+            "turn": "45",
+            "start_char": 15055,
+            "end_char": 15287
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T045"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T045 明确说设置了两个城市（家乡城市与印度来的城市）并 I have it open，T049 确认除度数与城市外无其他设置；属明确陈述并维持的使用状态，按状态/维持目标保留，未新增为对系统的新功能要求。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Keep/view weather for the two saved cities (the home city and the city coming from in India).",
+        "label": "direct",
+        "rationale": "T045 明确说设置了两个城市（家乡城市与印度来的城市）并 I have it open，T049 确认除度数与城市外无其他设置；属明确陈述并维持的使用状态，按状态/维持目标保留，未新增为对系统的新功能要求。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G025",
+      "target_kind": "candidate",
+      "statement": "Avoid location/city data (and email-linked cities) being exposed in a leak when logged in.",
+      "document_id": "DOC014",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0038",
+          "source_id": "DOC014:T061",
+          "material_id": "M001",
+          "quote": "If I am logged in, though, I might be a little worried, because if there is a leak, then someone can identify which city I'm from or like, at least you know, guess which city I may may have been from just based on my email and the cities that I've said. So yeah, a leak could be a little scary. But other than that, I'm not. I'm not too worried about the privacy aspect.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 18855,
+          "end_char": 19225,
+          "candidate_locations": [
+            {
+              "source_id": "DOC014:T061",
+              "segment_start": 430,
+              "segment_end": 800,
+              "start_char": 18855,
+              "end_char": 19225
+            }
+          ],
+          "original_locator": {
+            "turn": "61",
+            "start_char": 18425,
+            "end_char": 19225
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC014:T061"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [
+          "是否把轻微担忧升级为明确需求",
+          "数据存储位置的真实性（仅为猜测）",
+          "除假设情景外受访者明确表示不太担心"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "insufficient",
+        "rationale": "T061 仅在'若登录且泄露'的假设下表达 I might be a little worried / a leak could be a little scary，并明确说 other than that I'm not too worried about the privacy aspect；关于数据仅存本地缓存、不被存储均为其 guess 且 not 100% sure。属条件性顾虑与信念，无明确要求或正面依据支持'避免泄露'为既定目标，保留 insufficient 不升级。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Avoid location/city data (and email-linked cities) being exposed in a leak when logged in.",
+        "label": "insufficient",
+        "rationale": "T061 仅在'若登录且泄露'的假设下表达 I might be a little worried / a leak could be a little scary，并明确说 other than that I'm not too worried about the privacy aspect；关于数据仅存本地缓存、不被存储均为其 guess 且 not 100% sure。属条件性顾虑与信念，无明确要求或正面依据支持'避免泄露'为既定目标，保留 insufficient 不升级。",
+        "supported_parts": [],
+        "unsupported_parts": [
+          "是否把轻微担忧升级为明确需求",
+          "数据存储位置的真实性（仅为猜测）",
+          "除假设情景外受访者明确表示不太担心"
+        ],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\extra\\runs\\workbuddy-newskills-20261103-0015\\main\\DOC014\\run03\\attempt-01\\judgments.json",
+    "sha256": "8ead240b0f75db0bbd351eb762156ed1ec46aafe3688ef3a911afffcc67a1816"
+  }
+}

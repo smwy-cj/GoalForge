@@ -1,0 +1,891 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\extra\\runs\\workbuddy-newskills-20261103-0015\\main\\DOC018\\run03\\attempt-01\\extraction.json",
+    "sha256": "b6534cafd931b70f4f651ea35777bb233bc60753e401b9561d44db7029c0b854",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "30b738606a07d489b0bdab3b8bf64d52b7f6eb401a50436cdcb7eea1d4e23648",
+      "input_sha256": "b6534cafd931b70f4f651ea35777bb233bc60753e401b9561d44db7029c0b854"
+    },
+    "bundle_sha256": "7d3f6ff45c78abdfa980a7bd967f7d3bc320578b09553c74a1dc49ef29e198b8"
+  },
+  "sources": [
+    {
+      "document_id": "DOC018",
+      "expected_hash": "88b8be058423b2004150021d108b311aac55b139aca7a431a1b07e89550056a2",
+      "actual_hash": "88b8be058423b2004150021d108b311aac55b139aca7a431a1b07e89550056a2",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "G001",
+      "target_kind": "candidate",
+      "statement": "Export course material directly from the school portal to a chosen cloud destination such as Google Drive, so it reaches the iPad with fewer steps and without being downloaded to the computer first.",
+      "document_id": "DOC018",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC018:T037",
+          "material_id": "M001",
+          "quote": "I think that I I can use less steps to actually import this content to my ipad.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6722,
+          "end_char": 6801,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T037",
+              "segment_start": 118,
+              "segment_end": 197,
+              "start_char": 6722,
+              "end_char": 6801
+            }
+          ],
+          "original_locator": {
+            "turn": "37",
+            "start_char": 6604,
+            "end_char": 7357
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC018:T037",
+          "material_id": "M001",
+          "quote": "I can actually export it to to drive like very easily and not to download it to my computer.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6900,
+          "end_char": 6992,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T037",
+              "segment_start": 296,
+              "segment_end": 388,
+              "start_char": 6900,
+              "end_char": 6992
+            }
+          ],
+          "original_locator": {
+            "turn": "37",
+            "start_char": 6604,
+            "end_char": 7357
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC018:T047",
+          "material_id": "M001",
+          "quote": "I am thinking right now as export feature, like export to yeah export to Google drive or export to.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8180,
+          "end_char": 8279,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T047",
+              "segment_start": 0,
+              "segment_end": 99,
+              "start_char": 8180,
+              "end_char": 8279
+            }
+          ],
+          "original_locator": {
+            "turn": "47",
+            "start_char": 8180,
+            "end_char": 8362
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC018:T037",
+          "DOC018:T037",
+          "DOC018:T047"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "主体为在读学生本人",
+          "从学校门户直接导出到云位置",
+          "省去先下载到电脑的步骤",
+          "较少步骤到达 iPad"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T037 明确说'能用更少步骤把内容导入 iPad'并给出具体方式：从课程/作业直接导出到 Drive，不必先下载到电脑，并说'这是可以改进的'；T047 再次把门户的理想功能说成 export feature，目的地为 Google Drive 或 Kindle 账户。'较少步骤''不经电脑下载'均为原话，目的地以 such as 保留其未定（'I don't know'），未额外加严。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Export course material directly from the school portal to a chosen cloud destination such as Google Drive, so it reaches the iPad with fewer steps and without being downloaded to the computer first.",
+        "label": "direct",
+        "rationale": "T037 明确说'能用更少步骤把内容导入 iPad'并给出具体方式：从课程/作业直接导出到 Drive，不必先下载到电脑，并说'这是可以改进的'；T047 再次把门户的理想功能说成 export feature，目的地为 Google Drive 或 Kindle 账户。'较少步骤''不经电脑下载'均为原话，目的地以 such as 保留其未定（'I don't know'），未额外加严。",
+        "supported_parts": [
+          "主体为在读学生本人",
+          "从学校门户直接导出到云位置",
+          "省去先下载到电脑的步骤",
+          "较少步骤到达 iPad"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G002",
+      "target_kind": "candidate",
+      "statement": "Open both PDFs and ebooks for school reading in one single application instead of across scattered places.",
+      "document_id": "DOC018",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC018:T039",
+          "material_id": "M001",
+          "quote": "It would be very, very good if the if the same and application can handle both Pdfs and Ebook format. so I can open them in just one single place.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7435,
+          "end_char": 7581,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T039",
+              "segment_start": 25,
+              "segment_end": 171,
+              "start_char": 7435,
+              "end_char": 7581
+            }
+          ],
+          "original_locator": {
+            "turn": "39",
+            "start_char": 7410,
+            "end_char": 7581
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC018:T037",
+          "material_id": "M001",
+          "quote": "My reading is is scattered among many places.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7312,
+          "end_char": 7357,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T037",
+              "segment_start": 708,
+              "segment_end": 753,
+              "start_char": 7312,
+              "end_char": 7357
+            }
+          ],
+          "original_locator": {
+            "turn": "37",
+            "start_char": 6604,
+            "end_char": 7357
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC018:T041",
+          "material_id": "M001",
+          "quote": "Yeah, yeah.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7714,
+          "end_char": 7725,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T041",
+              "segment_start": 0,
+              "segment_end": 11,
+              "start_char": 7714,
+              "end_char": 7725
+            }
+          ],
+          "original_locator": {
+            "turn": "41",
+            "start_char": 7714,
+            "end_char": 7725
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC018:T039",
+          "DOC018:T037",
+          "DOC018:T041"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "同一应用同时处理 PDF 与电子书格式",
+          "在一个地方打开",
+          "限定至少针对学校材料"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T037 说阅读'散落在很多地方'并提出可以有一个同时放 ebooks 和 PDFs 的新应用；T039 进一步限定'至少对学校而言'，希望同一个应用同时处理 PDF 和电子书格式，以便'在一个地方打开'；T040 访谈者复述'你想把一切放在一个地方'，T041 受访者确认。范围限定'至少学校'保留在 context，格式合并与单一位置未被扩大为所有阅读场景。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Open both PDFs and ebooks for school reading in one single application instead of across scattered places.",
+        "label": "direct",
+        "rationale": "T037 说阅读'散落在很多地方'并提出可以有一个同时放 ebooks 和 PDFs 的新应用；T039 进一步限定'至少对学校而言'，希望同一个应用同时处理 PDF 和电子书格式，以便'在一个地方打开'；T040 访谈者复述'你想把一切放在一个地方'，T041 受访者确认。范围限定'至少学校'保留在 context，格式合并与单一位置未被扩大为所有阅读场景。",
+        "supported_parts": [
+          "同一应用同时处理 PDF 与电子书格式",
+          "在一个地方打开",
+          "限定至少针对学校材料"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G003",
+      "target_kind": "candidate",
+      "statement": "Save valuable course PDFs into a personal student library so they stay accessible after the course material is no longer available.",
+      "document_id": "DOC018",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC018:T051",
+          "material_id": "M001",
+          "quote": "So I think it will be relevant for at least have, like a some sort of a inside library, like a student library, where you can actually store like relevant content, you know.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9932,
+          "end_char": 10105,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T051",
+              "segment_start": 252,
+              "segment_end": 425,
+              "start_char": 9932,
+              "end_char": 10105
+            }
+          ],
+          "original_locator": {
+            "turn": "51",
+            "start_char": 9680,
+            "end_char": 10562
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC018:T051",
+          "material_id": "M001",
+          "quote": "so I think it will be very valuable if we can, as students save them into a personal library.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10469,
+          "end_char": 10562,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T051",
+              "segment_start": 789,
+              "segment_end": 882,
+              "start_char": 10469,
+              "end_char": 10562
+            }
+          ],
+          "original_locator": {
+            "turn": "51",
+            "start_char": 9680,
+            "end_char": 10562
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC018:T055",
+          "material_id": "M001",
+          "quote": "to save these valuable resources somewhere to for me to be able to check them later",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 11921,
+          "end_char": 12004,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T055",
+              "segment_start": 387,
+              "segment_end": 470,
+              "start_char": 11921,
+              "end_char": 12004
+            }
+          ],
+          "original_locator": {
+            "turn": "55",
+            "start_char": 11534,
+            "end_char": 13030
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC018:T051",
+          "DOC018:T051",
+          "DOC018:T055"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "学生把有价值的课程 PDF 存入个人/学生图书馆",
+          "目的是课程结束后仍可访问"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T051 先描述学期结束后课程材料不可访问、有价值的 PDF 需要重新申请权限的情境，再明确说要有一个 student library 存放相关内容、'学生能保存到个人图书馆会非常有价值'；T055 把它列为第二优先并说明目的是'以后还能查看'。保存对象为课程中有价值的 PDF，未扩写为通用网盘。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Save valuable course PDFs into a personal student library so they stay accessible after the course material is no longer available.",
+        "label": "direct",
+        "rationale": "T051 先描述学期结束后课程材料不可访问、有价值的 PDF 需要重新申请权限的情境，再明确说要有一个 student library 存放相关内容、'学生能保存到个人图书馆会非常有价值'；T055 把它列为第二优先并说明目的是'以后还能查看'。保存对象为课程中有价值的 PDF，未扩写为通用网盘。",
+        "supported_parts": [
+          "学生把有价值的课程 PDF 存入个人/学生图书馆",
+          "目的是课程结束后仍可访问"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G004",
+      "target_kind": "candidate",
+      "statement": "Filter and search previously read material by when it was read, by month or year.",
+      "document_id": "DOC018",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC018:T055",
+          "material_id": "M001",
+          "quote": "I would love to actually have like a way to yeah, to categorize in time",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12295,
+          "end_char": 12366,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T055",
+              "segment_start": 761,
+              "segment_end": 832,
+              "start_char": 12295,
+              "end_char": 12366
+            }
+          ],
+          "original_locator": {
+            "turn": "55",
+            "start_char": 11534,
+            "end_char": 13030
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC018:T055",
+          "material_id": "M001",
+          "quote": "either by the the month or the year",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12483,
+          "end_char": 12518,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T055",
+              "segment_start": 949,
+              "segment_end": 984,
+              "start_char": 12483,
+              "end_char": 12518
+            }
+          ],
+          "original_locator": {
+            "turn": "55",
+            "start_char": 11534,
+            "end_char": 13030
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC018:T055",
+          "DOC018:T055"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "按阅读时间归类",
+          "按月份或年份筛选与搜索"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T055 第三项明确要求'按时间归类'的能力，并说明使用情境：想按月份或年份筛选/搜索，因为他记起读过的材料时首先想到的是学期与年份，而不是书名或 ISBN。月份/年份两种粒度均为原话，未添加其他筛选项。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Filter and search previously read material by when it was read, by month or year.",
+        "label": "direct",
+        "rationale": "T055 第三项明确要求'按时间归类'的能力，并说明使用情境：想按月份或年份筛选/搜索，因为他记起读过的材料时首先想到的是学期与年份，而不是书名或 ISBN。月份/年份两种粒度均为原话，未添加其他筛选项。",
+        "supported_parts": [
+          "按阅读时间归类",
+          "按月份或年份筛选与搜索"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G005",
+      "target_kind": "candidate",
+      "statement": "Show reading progress for the current chapter as a percentage.",
+      "document_id": "DOC018",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC018:T049",
+          "material_id": "M001",
+          "quote": "So I would love to have like by chapter, you know, by chapter. This way I get less anxious.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 9057,
+          "end_char": 9148,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T049",
+              "segment_start": 530,
+              "segment_end": 621,
+              "start_char": 9057,
+              "end_char": 9148
+            }
+          ],
+          "original_locator": {
+            "turn": "49",
+            "start_char": 8527,
+            "end_char": 9148
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC018:T055",
+          "material_id": "M001",
+          "quote": "I would love to see the percentage of the chapter, but this is more for application",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12902,
+          "end_char": 12985,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T055",
+              "segment_start": 1368,
+              "segment_end": 1451,
+              "start_char": 12902,
+              "end_char": 12985
+            }
+          ],
+          "original_locator": {
+            "turn": "55",
+            "start_char": 11534,
+            "end_char": 13030
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC018:T049",
+          "DOC018:T055"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "按章节显示阅读百分比",
+          "目的为缓解长章节带来的焦虑"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T049 说 Kindle 现在只按整本书给出百分比，有时觉得'要做完还很久'，因此希望'按章节'显示当前进度百分比，并说明目的'这样我没那么焦虑'；T055 把它列为第四优先并指出属于应用侧功能。指标是章节百分比，未编造具体阈值或更新频率。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Show reading progress for the current chapter as a percentage.",
+        "label": "direct",
+        "rationale": "T049 说 Kindle 现在只按整本书给出百分比，有时觉得'要做完还很久'，因此希望'按章节'显示当前进度百分比，并说明目的'这样我没那么焦虑'；T055 把它列为第四优先并指出属于应用侧功能。指标是章节百分比，未编造具体阈值或更新频率。",
+        "supported_parts": [
+          "按章节显示阅读百分比",
+          "目的为缓解长章节带来的焦虑"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G006",
+      "target_kind": "candidate",
+      "statement": "Have the existing Kindle app manage PDFs as well.",
+      "document_id": "DOC018",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC018:T043",
+          "material_id": "M001",
+          "quote": "I would say, it will be easier if my existing kindle app can manages Pdfs.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 7886,
+          "end_char": 7960,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T043",
+              "segment_start": 0,
+              "segment_end": 74,
+              "start_char": 7886,
+              "end_char": 7960
+            }
+          ],
+          "original_locator": {
+            "turn": "43",
+            "start_char": 7886,
+            "end_char": 7960
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC018:T023",
+          "material_id": "M001",
+          "quote": "No, not really or at least not that I know you can.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4612,
+          "end_char": 4663,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T023",
+              "segment_start": 0,
+              "segment_end": 51,
+              "start_char": 4612,
+              "end_char": 4663
+            }
+          ],
+          "original_locator": {
+            "turn": "23",
+            "start_char": 4612,
+            "end_char": 4663
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC018:T043",
+          "DOC018:T023"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "由现有 Kindle 应用管理 PDF",
+          "以'更省事'表述的偏好强度"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T042 问合并应用是独立应用还是并入现有 web 应用，T043 受访者回答'如果现有 Kindle 应用能管理 PDF 会更省事'，属于明确表达的方式偏好；T023 说明目前 PDF 无法转到 Kindle。T044-T045 显示访谈者指的是门户、受访者才意识到问句对象不同，因此该偏好的指向存在歧义，但'Kindle 管理 PDF 更省事'本身仍有直接原话支持，故保留方式选择并把歧义写入问题。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Have the existing Kindle app manage PDFs as well.",
+        "label": "direct",
+        "rationale": "T042 问合并应用是独立应用还是并入现有 web 应用，T043 受访者回答'如果现有 Kindle 应用能管理 PDF 会更省事'，属于明确表达的方式偏好；T023 说明目前 PDF 无法转到 Kindle。T044-T045 显示访谈者指的是门户、受访者才意识到问句对象不同，因此该偏好的指向存在歧义，但'Kindle 管理 PDF 更省事'本身仍有直接原话支持，故保留方式选择并把歧义写入问题。",
+        "supported_parts": [
+          "由现有 Kindle 应用管理 PDF",
+          "以'更省事'表述的偏好强度"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G007",
+      "target_kind": "candidate",
+      "statement": "Have the school provide its own online reading application so that articles sent by professors are available directly on the iPad.",
+      "document_id": "DOC018",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC018:T057",
+          "material_id": "M001",
+          "quote": "In this case the school should have its own application for for online reading right?",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13476,
+          "end_char": 13561,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T057",
+              "segment_start": 156,
+              "segment_end": 241,
+              "start_char": 13476,
+              "end_char": 13561
+            }
+          ],
+          "original_locator": {
+            "turn": "57",
+            "start_char": 13320,
+            "end_char": 13883
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC018:T057",
+          "material_id": "M001",
+          "quote": "So so the professors just send out to you the articles right, and you have it right there in your in your ipad to read it.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 13588,
+          "end_char": 13710,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T057",
+              "segment_start": 268,
+              "segment_end": 390,
+              "start_char": 13588,
+              "end_char": 13710
+            }
+          ],
+          "original_locator": {
+            "turn": "57",
+            "start_char": 13320,
+            "end_char": 13883
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC018:T057",
+          "DOC018:T057"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "由学校提供在线阅读应用",
+          "教授发的文章直接在 iPad 上可读",
+          "免去下载上传"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T057 用 'should' 明确说学校应当有自己的在线阅读应用，并给出期望结果：教授把文章发出来，学生直接在 iPad 上就能读，不必再下载、上传。'学校提供'这一主体和'iPad 直接可读'的结果均来自原话，未扩大到其他机构或平台。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Have the school provide its own online reading application so that articles sent by professors are available directly on the iPad.",
+        "label": "direct",
+        "rationale": "T057 用 'should' 明确说学校应当有自己的在线阅读应用，并给出期望结果：教授把文章发出来，学生直接在 iPad 上就能读，不必再下载、上传。'学校提供'这一主体和'iPad 直接可读'的结果均来自原话，未扩大到其他机构或平台。",
+        "supported_parts": [
+          "由学校提供在线阅读应用",
+          "教授发的文章直接在 iPad 上可读",
+          "免去下载上传"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G008",
+      "target_kind": "candidate",
+      "statement": "Have the reading application included without a separate payment by students.",
+      "document_id": "DOC018",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC018:T059",
+          "material_id": "M001",
+          "quote": "They should be included, you know.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 14011,
+          "end_char": 14045,
+          "candidate_locations": [
+            {
+              "source_id": "DOC018:T059",
+              "segment_start": 51,
+              "segment_end": 85,
+              "start_char": 14011,
+              "end_char": 14045
+            }
+          ],
+          "original_locator": {
+            "turn": "59",
+            "start_char": 13960,
+            "end_char": 14266
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC018:T059"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "不额外付费",
+          "以 should 表述的要求强度"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "'included' 指由学校/既有费用覆盖，而非学生另行购买"
+        ],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T058 问'你会为这个应用付费吗'，T059 回答'已经花了很多钱，它们应该被 included'，即学生不应再单独付费。'should' 的强度与'不另付费'的方向均直接来自该轮；'included' 的承载对象（学费/学校提供）原文未说明，已写入问题，不在目标里补造。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Have the reading application included without a separate payment by students.",
+        "label": "direct",
+        "rationale": "T058 问'你会为这个应用付费吗'，T059 回答'已经花了很多钱，它们应该被 included'，即学生不应再单独付费。'should' 的强度与'不另付费'的方向均直接来自该轮；'included' 的承载对象（学费/学校提供）原文未说明，已写入问题，不在目标里补造。",
+        "supported_parts": [
+          "不额外付费",
+          "以 should 表述的要求强度"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "'included' 指由学校/既有费用覆盖，而非学生另行购买"
+        ],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\extra\\runs\\workbuddy-newskills-20261103-0015\\main\\DOC018\\run03\\attempt-01\\judgments.json",
+    "sha256": "ab061d6d97e2f6cb6a418ac43cfced41a40e6fdcd4dfc1268156eff3e6113427"
+  }
+}

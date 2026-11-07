@@ -1,0 +1,641 @@
+{
+  "document_id": "DOC020",
+  "artifact_type": "isolated_model_reviewer_source_intent_inventory",
+  "human_gold": false,
+  "source_only": true,
+  "domain": "邮件收发、组织与AI辅助",
+  "scope": "受访者以求职学生身份讨论 Gmail 使用及未来邮件客户端；保留可靠性和AI信任限制。",
+  "methodology": "逐段完整阅读原文后人工式语义判断；条目由评审模型编写，程序仅校验引用和序列化，不以关键词抽取代替理解。未读取技能、论文目标、tests、生成结果或既有评估。条目不是最终目标模型，不规定唯一层次或粒度。",
+  "intents": [
+    {
+      "intent_id": "DOC020:I01",
+      "intent": "不漏掉招聘邮件和学校通知",
+      "subject": "求职学生",
+      "conditions": "日常检查邮件时",
+      "modality": "明确主要目的",
+      "exceptions": "学校与招聘邮件重要；非仅限这两类用途",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T009",
+          "quote": "to get the email from recruiters",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1516,
+          "quote_end_char": 1548,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T009",
+          "quote": "make sure that I I didn't lose any new information",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1616,
+          "quote_end_char": 1666,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T009",
+          "quote": "check about the news that broadcasted by school.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1722,
+          "quote_end_char": 1770,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I02",
+      "intent": "通过邮件预约个人服务、接收商家优惠及偶尔联络朋友",
+      "subject": "受访者",
+      "conditions": "个人事务时",
+      "modality": "明确次要用途",
+      "exceptions": "朋友邮件较少；不是要求专门医疗预约系统",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T011",
+          "quote": "dentist or clinic or booking the appointment.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2377,
+          "quote_end_char": 2422,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T011",
+          "quote": "get the information from merchandise, like, if they have sales or discounts",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2448,
+          "quote_end_char": 2523,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T011",
+          "quote": "rare. But I also use email to contact with my friends.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2566,
+          "quote_end_char": 2620,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I03",
+      "intent": "快速筛读未读邮件并标记重要内容",
+      "subject": "受访者",
+      "conditions": "打开邮箱日常检查时",
+      "modality": "明确工作流",
+      "exceptions": "随后才细读重要邮件，非所有邮件直接自动处理",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T015",
+          "quote": "I look at those mails that I haven't read",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3710,
+          "quote_end_char": 3751,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T015",
+          "quote": "if that's something I think is important. I will 1st market.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3798,
+          "quote_end_char": 3858,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I04",
+      "intent": "删除垃圾、无关及已结束对话以保持收件箱清晰",
+      "subject": "受访者",
+      "conditions": "日常整理时",
+      "modality": "明确策略",
+      "exceptions": "连重要但已经结束的会话也可能删除",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T015",
+          "quote": "if those are like trash or spam, I will just delete it.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3869,
+          "quote_end_char": 3924,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T017",
+          "quote": "even for the the important males. But if the conversation has reached to the end. I also did it.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5000,
+          "quote_end_char": 5096,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I05",
+      "intent": "标记暂时不能处理的邮件任务，空闲后回来完成",
+      "subject": "受访者",
+      "conditions": "需回复或操作而当前无暇时",
+      "modality": "明确条件性策略",
+      "exceptions": "不等同已提出自动截止提醒或任务调度要求",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T015",
+          "quote": "I would just like tag it and then leave it there. and when I'm available I will check in and finish the task.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4085,
+          "quote_end_char": 4194,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I06",
+      "intent": "使用不同邮箱区分重要通知与优惠信息",
+      "subject": "受访者",
+      "conditions": "组织不同用途邮件时",
+      "modality": "明确现行策略",
+      "exceptions": "原文 separate emails 可能指邮箱账户；不应默认只是文件夹",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T017",
+          "quote": "I, I do this by have separate emails.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5117,
+          "quote_end_char": 5154,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T017",
+          "quote": "I use it for recruiting.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5203,
+          "quote_end_char": 5227,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I07",
+      "intent": "由少量要点生成组织良好的邮件，再自行修改",
+      "subject": "受访者",
+      "conditions": "撰写新邮件或回复时",
+      "modality": "明确需求，尤其希望内置AI",
+      "exceptions": "当前可用外部AI；用户保留修改，不是自动发送",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T019",
+          "quote": "I would 1st list my main point.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6250,
+          "quote_end_char": 6281,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T019",
+          "quote": "I would adjust it a little bit",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6445,
+          "quote_end_char": 6475,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T037",
+          "quote": "the AI assistance that is in bills in the email.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 11408,
+          "quote_end_char": 11456,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I08",
+      "intent": "调整字体大小并加粗重要句子",
+      "subject": "受访者",
+      "conditions": "编辑邮件草稿时",
+      "modality": "明确现行操作目的",
+      "exceptions": "没有提出复杂版式或富媒体编辑器",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T021",
+          "quote": "adjust the font size",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6533,
+          "quote_end_char": 6553,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T021",
+          "quote": "mark the important sentence as bold",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6588,
+          "quote_end_char": 6623,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I09",
+      "intent": "需要分享多媒体时通过云链接便于跨设备查看",
+      "subject": "受访者和收件人",
+      "conditions": "偶尔发送图片、视频等媒体时",
+      "modality": "明确偏好",
+      "exceptions": "附件并不经常使用，不能据此取消普通附件能力",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T023",
+          "quote": "upload it to the cloud and then send the link",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7325,
+          "quote_end_char": 7370,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T023",
+          "quote": "easier for the client to view it in any platform, including like Mobile or laptop.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7393,
+          "quote_end_char": 7475,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I10",
+      "intent": "避免自动分类把重要邮件误投垃圾箱",
+      "subject": "受访者",
+      "conditions": "收件自动分类时",
+      "modality": "强烈可靠性偏好",
+      "exceptions": "宁可收到部分垃圾邮件，也不希望遗漏重要信息",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T025",
+          "quote": "some important emails that will like end up in the spans folder.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8209,
+          "quote_end_char": 8273,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T027",
+          "quote": "I would rather receive some spans instead of ignoring some important messages.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8365,
+          "quote_end_char": 8443,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I11",
+      "intent": "发送后可修订邮件，让收件人看到新版本并可查编辑历史",
+      "subject": "发件人及收件人",
+      "conditions": "发现已发送内容需修改时",
+      "modality": "明确希望的功能",
+      "exceptions": "不是仅延长撤回窗口，也不是发送另一封补充邮件",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T029",
+          "quote": "editing the email instead of sending a new one.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8796,
+          "quote_end_char": 8843,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T029",
+          "quote": "if they want, they could see the editing history.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8942,
+          "quote_end_char": 8991,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I12",
+      "intent": "可靠收到应到邮件，特别是网站注册验证邮件",
+      "subject": "受访者",
+      "conditions": "外部网站声称发信却未到达时",
+      "modality": "明确障碍对应需求",
+      "exceptions": "未确证丢信发生在传输、发送方还是垃圾箱；不应编造根因",
+      "epistemic_status": "推断",
+      "evidence": [
+        {
+          "source_id": "DOC020:T033",
+          "quote": "when you register some website and then send email to your inbox, and for some reason they're just not there.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10230,
+          "quote_end_char": 10339,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I13",
+      "intent": "在正文提到附件却未附文件时发送前警告",
+      "subject": "发件人",
+      "conditions": "内容如提到附简历但实际没附件时",
+      "modality": "明确赞赏的既有功能",
+      "exceptions": "不是全自动从云盘附加简历",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T037",
+          "quote": "I didn't attach the resume. It will warn me before I send it. I think that is really good.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 11786,
+          "quote_end_char": 11876,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I14",
+      "intent": "用AI提炼来信要点并突出容易漏看的关键词或限制",
+      "subject": "收件人",
+      "conditions": "阅读邮件时",
+      "modality": "明确改进要求",
+      "exceptions": "不能仅概括掉小字关键限制；需帮助快速理解并避免遗漏",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T041",
+          "quote": "Get the main point of that email.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12544,
+          "quote_end_char": 12577,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T045",
+          "quote": "highlights the keywords",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12800,
+          "quote_end_char": 12823,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T047",
+          "quote": "I won't miss missed out some keywords.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12954,
+          "quote_end_char": 12992,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I15",
+      "intent": "减少逐封阅读大量邮件的时间",
+      "subject": "受访者",
+      "conditions": "频繁查信时",
+      "modality": "明确效率目的",
+      "exceptions": "定期汇总是采访者提案，受访者仅认为一个可能方案",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T053",
+          "quote": "I spend a lot of time just reading every email.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 14927,
+          "quote_end_char": 14974,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T055",
+          "quote": "that could be one solution.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 15500,
+          "quote_end_char": 15527,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I16",
+      "intent": "重要邮件可即时提醒，但重要性判定必须值得信任",
+      "subject": "受访者",
+      "conditions": "系统识别重要来信时",
+      "modality": "有条件偏好",
+      "exceptions": "不可靠时不愿完全依赖，包括AI；不支持只看AI筛选而忽略其余邮件",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T059",
+          "quote": "good to receive notification for some important messages.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 16038,
+          "quote_end_char": 16095,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T059",
+          "quote": "I would probably not want to rely on that. Unless it's really reliable.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 16245,
+          "quote_end_char": 16316,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I17",
+      "intent": "期限紧迫时转发及群发给团队以快速协调",
+      "subject": "受访者/团队",
+      "conditions": "紧截止情境",
+      "modality": "明确现有关键能力",
+      "exceptions": "BCC追问确认是批量触达；不推导群组权限或协同文档",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T071",
+          "quote": "forwarding the email. And BBC, like, sent to all the people in my group.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 17875,
+          "quote_end_char": 17947,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T073",
+          "quote": "very important when it comes to working on deadlines.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 18019,
+          "quote_end_char": 18072,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I18",
+      "intent": "检索邮件并按标签过滤，亦可安排发送时间",
+      "subject": "受访者",
+      "conditions": "寻找邮件或管理发送时机时",
+      "modality": "明确优先级判断",
+      "exceptions": "搜索最重要；过滤可用搜索完成，所以把调度列第二，不能强行给过滤独立第二名",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T087",
+          "quote": "the most important would definitely be searching.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 20021,
+          "quote_end_char": 20070,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T087",
+          "quote": "the second one will probably be scheduling.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 20210,
+          "quote_end_char": 20253,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I19",
+      "intent": "探索收发双方共享的自定义类别或标识以便分类沟通",
+      "subject": "受访者及对应朋友/招聘方",
+      "conditions": "未来设想双方使用相同类别编号时",
+      "modality": "试探性未来愿望",
+      "exceptions": "明确自称可能不实用；不应升级为已确定互操作标准",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T091",
+          "quote": "it's probably not that practical",
+          "speaker": "Stakeholder",
+          "quote_start_char": 21085,
+          "quote_end_char": 21117,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T093",
+          "quote": "if my friend also set up this like 8,000 in his app, then we could communicate",
+          "speaker": "Stakeholder",
+          "quote_start_char": 21350,
+          "quote_end_char": 21428,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC020:I20",
+      "intent": "未来维持工作中的专业联系和沟通",
+      "subject": "未来职场用户",
+      "conditions": "从学生用途发展到工作时",
+      "modality": "明确未来用途",
+      "exceptions": "不限同公司人员",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T095",
+          "quote": "mostly at work.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 22184,
+          "quote_end_char": 22199,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T099",
+          "quote": "not necessarily people in my company, but just like, professionally",
+          "speaker": "Stakeholder",
+          "quote_start_char": 22371,
+          "quote_end_char": 22438,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    }
+  ],
+  "background_candidates": [
+    {
+      "item": "安全隐私和崩溃问题并非本人当前主要障碍",
+      "reason": "本人不发送机密信息且很少遇崩溃；不能从采访者的问题添加强安全新需求或声称客户端不可靠。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T033",
+          "quote": "I don't send confidential messages through email.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10026,
+          "quote_end_char": 10075,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T061",
+          "quote": "Very, very few. I don't really remember a time.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 16836,
+          "quote_end_char": 16883,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    },
+    {
+      "item": "邮件检查频次和 TikTok 测评经历",
+      "reason": "频次说明防漏信动机；测评故事说明小字限制遗漏，非要求集成特定招聘测评服务。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC020:T049",
+          "quote": "I used at least 5 times a day.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 14345,
+          "quote_end_char": 14375,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC020:T047",
+          "quote": "I just missed that night",
+          "speaker": "Stakeholder",
+          "quote_start_char": 13460,
+          "quote_end_char": 13484,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "受访者说三秒撤回窗口是个人描述，非经验证产品事实。",
+    "“BBC”在追问中确认为多人批量发送，但不能额外推导隐私收件人策略。",
+    "共享类别/协议设想自称可能不实用，协议细节未定义。",
+    "定时摘要最初来自采访者，受访者只同意为一个可行方案。"
+  ],
+  "source_document_hash_declared": "90b485f2662fedd6a4f4c4f0c9e409f6d5a47400d26e11d933e7e2964bc98628",
+  "read_range": {
+    "first_source_id": "DOC020:T000",
+    "last_source_id": "DOC020:T103",
+    "turn_count": 104,
+    "read_completely": true,
+    "reading_note": "全文语义阅读；DOC003首次长输出中段被截断后，已单独补读T066–T096。DOC028、DOC036分别按turn分段读完。其他文档完整读取。"
+  }
+}

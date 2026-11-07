@@ -1,0 +1,53 @@
+# DOC026
+## NEW
+G01 使用叫车服务从一处到达另一处 | conditions:  | origin: explicit | support: direct
+G02 比较费用和所需时间后，选择比步行、驾车或公交更合适的出行方式 | conditions: 熟悉、便捷且有免费通票时可选公交；长假多次出行可能更偏好租车 | origin: explicit | support: direct
+G03 个人叫车通常选择最便宜的车型，同时能容纳同行人数 | conditions: 个人行程；工作报销时另有时间优先例外 | origin: explicit | support: direct
+G04 选择行程时查看接驾时间、到达估计、价格和附近司机，以决定现在出发或等候 | conditions:  | origin: explicit | support: direct
+G05 输入目的地时可从地址建议中选择，减少完整输入 | conditions:  | origin: inferred | support: inferred
+G06 减少预订时长时间等待后仍无法找到司机的情况，并使可用性预期可靠 | conditions: 通常司机很多时问题较少；屏幕显示司机不保证司机已接受 | origin: inferred | support: inferred
+G07 尽量避免取消行程，以免可能影响乘客评分 | conditions: 不记得取消费用与具体问题；未实测取消流程 | origin: explicit | support: direct
+G08 工作报销的行程优先节省等待和出行时间，即使车型贵一些也可接受 | conditions:  | origin: explicit | support: direct
+G09 在不熟悉或公交路线复杂的地方，优先采用较直接方便的出行方式 | conditions:  | origin: explicit | support: direct
+G10 配送服务提供较可靠的到达时间估计 | conditions: 来自一次配送经历；受访者已停止使用该配送服务 | origin: inferred | support: inferred
+G11 遇到无法通过固定问答解决的问题时，能联系真人客服并得到有效处理 | conditions: 普通明确问题的现有客服可能有用；需要互动解决的复杂问题才体现缺口 | origin: explicit | support: direct
+G12 维持收费金额与预先告知金额相符 | conditions:  | origin: inferred | support: inferred
+G13 偶尔需要多站行程时能安排中途停靠，并尽量缩短停留时间 | conditions: 大多数时候更偏好单一目的地 | origin: explicit | support: direct
+G14 通过应用内通话或消息与司机确认接驾位置和本人身份 | conditions: 位置不清或繁忙接驾场景；多站提前告知较久停留是受访者假设用途，非已用事实 | origin: explicit | support: direct
+G15 需要变更接驾地点时，能方便地让司机知道新位置 | conditions: 当前更常直接联系司机；位置设置方式影响易用性 | origin: inferred | support: inferred
+G16 行程结束后评价司机，并在可用时给小费 | conditions: 当前Uber是否有小费选项受访者不完全确定 | origin: explicit | support: direct
+G17 与朋友同乘后查看实际费用，以分摊车费 | conditions:  | origin: explicit | support: direct
+G18 工作行程后取得费用记录作为报销凭证 | conditions:  | origin: explicit | support: direct
+## PAPER
+g0 Enable efficient and cost-effective transportation to a destination.
+g1 Provide suggestions for destinations based on travel history.
+g2 Offer convenient transportation options for unfamiliar areas.
+g3 Deliver transportation solutions that minimize wait times.
+g4 Facilitate transportation decisions based on area familiarity.
+g5 Provide flexibility and freedom for extended travel.
+g6 Simplify complex transportation routes.
+g7 Consider time and cost efficiency in deciding transportation options.
+g8 Provide alternative transportation options with comparisons of estimated fares, travel time, and capacity.
+g9 Display an estimated arrival time for each transportation option.
+g10 Optimize the process of booking a ride for immediate or scheduled travel.
+g11 Ensure a seamless and efficient experience for booking and managing multi-stop rides.
+g12 Enable users to easily update their pickup location during the booking process.
+g13 Provide autocomplete suggestions for inputted addresses.
+g14 Allow users to reach and interact with human customer support representatives.
+g15 Inform users when they are interacting with a chat bot versus a human.
+g16 Automatically apply promotional deals to bookings.
+g17 Show real-time location of available vehicles and drivers on a map.
+g18 Display accurate driver availability status.
+g19 Enable direct communication between users and drivers for pickup details or location changes.
+g20 Allow users to delay travel if the current price is deemed too high.
+g21 Notify the user if no drivers are available after a booking attempt.
+g22 Inform the user about the impact of cancellations on their rating.
+g23 Prevent passenger rating from being negatively impacted by ride cancellations.
+g24 Facilitate users in notifying drivers about delays during multi-stop trips.
+g25 Simplify the process for service cancellation.
+g26 Accurately estimate the time needed to complete services.
+g27 Provide effective customer service for resolving issues.
+g28 Allow users to rate the driver after a ride.
+g29 Allow users to tip the driver after a ride.
+g30 Provide users with a breakdown of ride costs for expense splitting.
+g31 Enable users to access ride details for reimbursement purposes.

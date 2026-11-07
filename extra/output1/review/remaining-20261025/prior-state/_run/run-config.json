@@ -1,0 +1,164 @@
+{
+  "created_at_utc": "2026-10-23T15:58:56.372566+00:00",
+  "user_date": "2026-10-23",
+  "source_root": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source",
+  "output_root": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\output1",
+  "pilot_documents": [
+    "DOC010",
+    "DOC023",
+    "DOC031"
+  ],
+  "all_documents": [
+    "DOC003",
+    "DOC004",
+    "DOC005",
+    "DOC006",
+    "DOC007",
+    "DOC008",
+    "DOC009",
+    "DOC010",
+    "DOC011",
+    "DOC012",
+    "DOC013",
+    "DOC014",
+    "DOC015",
+    "DOC016",
+    "DOC017",
+    "DOC018",
+    "DOC019",
+    "DOC020",
+    "DOC021",
+    "DOC022",
+    "DOC023",
+    "DOC024",
+    "DOC025",
+    "DOC026",
+    "DOC027",
+    "DOC028",
+    "DOC029",
+    "DOC030",
+    "DOC031",
+    "DOC032",
+    "DOC033",
+    "DOC034",
+    "DOC035",
+    "DOC036"
+  ],
+  "arms": {
+    "baseline": "frozen pre-change four-skill workflow",
+    "revised": "frozen current three-skill workflow"
+  },
+  "schema": "goalforge-kaos-1",
+  "model": "inherited current session; exact identifier unknown",
+  "sampling_parameters": "unknown",
+  "generation_budget": "not fixed / unknown",
+  "python": "3.9.13",
+  "generation_evidence_scope": "frozen source only; no historical outputs, development_reference, upstream_reference, comparison reports or reference answers",
+  "execution_status": "complete_with_one_local_unresolved_candidate",
+  "isolation_status": "user explicitly authorized fresh-context subagents for separate generation and review",
+  "quality_gate": [
+    "actual source and quoted offsets verified",
+    "no unresolved serious strengthening or belief-to-fact errors in pilot",
+    "all proposed refinement groups reviewed; unsupported groups stay proposed",
+    "correct boundary cases retained",
+    "independent review scope and limitations explicitly recorded"
+  ],
+  "comparison_note": "same sources and schema; nonrandom known development cases; no causal accuracy claim without sufficient controlled evidence",
+  "execution_local_date": "2026-10-24",
+  "pilot_agents": {
+    "baseline": "/root/pilot_baseline",
+    "revised": "/root/pilot_revised",
+    "review": "/root/pilot_review"
+  },
+  "expanded_scope": "revised only for remaining 31 documents after pilot gate; controlled comparison limited to 3 pilot documents",
+  "review_design": "fresh-context source-first model review; reviewer sees arm labels; not blinded, not human, not formal proof",
+  "comparison_causal_limit": "single generation per arm/document with unknown sampling controls and unequal prompt content; outcomes descriptive only",
+  "interruptions": [
+    {
+      "recorded_at_utc": "2026-10-24T02:37:30.248388+00:00",
+      "phase": "pilot_independent_context_review",
+      "reason": "review agent usage limit; no second-stage report written",
+      "action": "resumed on explicit user request; preserve frozen generation outputs"
+    },
+    {
+      "recorded_at_utc": "2026-10-24T07:46:24.206484+00:00",
+      "phase": "expanded_generation",
+      "reason": "all three generation agents exited at usage limit",
+      "completed_revised_documents": 30,
+      "action": "preserve outputs; fresh contexts assigned to four remaining documents and planned reviews on explicit user continuation"
+    }
+  ],
+  "model_control_note": "Pilot generation branches inherited the same parent configuration at dispatch. A usage interruption and subsequent session model switch occurred before resuming review/expansion; exact model IDs and sampling parameters are unavailable. Expanded results are not assumed to share the pilot generation model.",
+  "pilot_gate": "pass_after_DOC010_outer_v2_followup",
+  "pilot_gate_report": "review/pilot-gate.md",
+  "pilot_comparison_report": "review/pilot-comparison.md",
+  "pilot_followup_report": "review/pilot-v2-followup.md",
+  "expanded_agents": {
+    "batch1": "/root/expanded_batch1",
+    "batch2": "/root/expanded_batch2",
+    "batch3": "/root/expanded_batch3"
+  },
+  "remaining_generation_documents": [],
+  "resumed_agents": {
+    "generation": "/root/finish_remaining",
+    "review_batch2": "/root/review_expanded_batch2",
+    "review_batch3": "/root/review_expanded_batch3"
+  },
+  "completed_revised_documents": 34,
+  "pending_independent_review_batches": [],
+  "review_followup_substitution": {
+    "original": "/root/review_expanded_batch2",
+    "reason": "selected model at capacity on followup",
+    "completed_by": "/root/review_expanded_batch3",
+    "report": "review/expanded-batch2/followup-by-batch3.md"
+  },
+  "completed_at_utc": "2026-10-24T08:21:39.409407+00:00",
+  "final_counts": {
+    "revised_documents": 34,
+    "revised_goals": 559,
+    "revised_groups": 44,
+    "supported_complete_groups": 3,
+    "proposed_partial_groups": 41,
+    "author_support_labels": {
+      "direct": 461,
+      "inferred": 97,
+      "insufficient": 1
+    },
+    "engineering_readiness": {
+      "reviewable": 33,
+      "blocked": 1
+    },
+    "expanded_documents": 31,
+    "expanded_independently_reviewed_goals": 279,
+    "expanded_independently_reviewed_groups": 35,
+    "expanded_full_goal_documents": 11,
+    "expanded_full_goal_count": 201,
+    "revised_independently_reviewed_goals": 316,
+    "revised_independently_reviewed_groups": 44,
+    "revised_full_goal_documents": 14,
+    "revised_full_goal_count": 238,
+    "revised_goals_not_independently_reviewed": 243,
+    "confirmed_material_findings_in_expansion": 1,
+    "open_confirmed_material_findings": 0
+  },
+  "final_summary": "处理总结.md",
+  "final_review": "review/expanded-review.md",
+  "final_verification": "_run/final-verification.json",
+  "unresolved_candidate": [
+    {
+      "document_id": "DOC036",
+      "goal_id": "DOC036-G17",
+      "scope": "anonymous-posting intention only; no dependent established group",
+      "resolution": "genuine stakeholder clarification; no fabricated answer"
+    }
+  ],
+  "completion_scope": "All requested source processing and declared model reviews complete; human adoption pending. DOC036-G17 requires genuine clarification, not more processing of the same transcript.",
+  "execution_history": [
+    {
+      "time_utc": "2026-10-24T08:20:04.137103+00:00",
+      "previous_status": "all_generation_complete_final_independent_review_and_summary",
+      "new_status": "complete_with_one_local_unresolved_candidate",
+      "note": "Completed batch1 and final independent revision rechecks; local unknown retained"
+    }
+  ]
+}

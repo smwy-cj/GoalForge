@@ -1,0 +1,165 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "4cbb2877e4c2cc53bfc91f803a02bf6a5496ee5f71c7e229729b0f6920dc1418",
+    "input_sha256": "929cd7cbcab7e3a812f23c662eb61c6f280a02faba1ad5353ed79ba3bfe95c67"
+  },
+  "judgments": {
+    "DOC032-C001": {
+      "target_statement": "与朋友和家人保持沟通（私聊与群聊）。",
+      "label": "direct",
+      "rationale": "T013 直接说主要目标是与朋友家人沟通，T015 说明可选私聊或群聊。",
+      "supported_parts": [
+        "目标：T014「communicating with my friends and family」",
+        "形式：T016「open a private chat or group chat」"
+      ],
+      "unsupported_parts": [
+        "未说明沟通频率或对象数量",
+        "未说明工作场景是否也用"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目标",
+        "2. 取形式",
+        "3. → direct"
+      ]
+    },
+    "DOC032-C002": {
+      "target_statement": "把最在意的人与群置顶，一打开就能看到。",
+      "label": "direct",
+      "rationale": "T021 说可以把特定会话置顶，T023 说明理由是最在意这些人。",
+      "supported_parts": [
+        "功能：T022「a feature called Ping」",
+        "效果：T022「the 1st chat box I could see is my girlfriend」",
+        "理由：T024「friends or families that I cares most about」"
+      ],
+      "unsupported_parts": [
+        "未说明置顶数量上限",
+        "未说明是否会取消置顶"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取功能",
+        "2. 取效果与理由",
+        "3. → direct"
+      ]
+    },
+    "DOC032-C003": {
+      "target_statement": "按关键词全局搜索消息，不限对象与场景。",
+      "label": "direct",
+      "rationale": "T025 说全局搜索会返回所有相关消息，不分对象。",
+      "supported_parts": [
+        "范围：T026「all the relevant messages, no matter with whom」",
+        "方式：T026「type the messages at the top of the screen」"
+      ],
+      "unsupported_parts": [
+        "未说明是否支持筛选（时间/类型）",
+        "未说明结果排序方式"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取范围",
+        "2. 取方式",
+        "3. → direct"
+      ]
+    },
+    "DOC032-C004": {
+      "target_statement": "在单个会话内检索消息，缩小范围。",
+      "label": "direct",
+      "rationale": "T025–T027 说明可从会话内三点菜单进入，只搜该对话的消息。",
+      "supported_parts": [
+        "入口：T026「touch a additional settings button」",
+        "方式：T028「a search message and I simply type」",
+        "结果：T028「all the messages relevant with apple will pop up」"
+      ],
+      "unsupported_parts": [
+        "他把入口称「additional settings」，命名易误解",
+        "未说明是否支持日期筛选"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取入口",
+        "2. 取方式与结果",
+        "3. → direct"
+      ]
+    },
+    "DOC032-C005": {
+      "target_statement": "只用文字就能搜到图片（如按「信用卡」找出那张照片）。",
+      "label": "direct",
+      "rationale": "T045–T047 说明可用文字搜到图片，并举信用卡照片为例。",
+      "supported_parts": [
+        "能力：T046「search for some certain image through... typing」",
+        "实例：T048「type credit card, and it will show up the messages」"
+      ],
+      "unsupported_parts": [
+        "未说明识别准确率",
+        "未说明是否支持手写或拍照内容"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取能力",
+        "2. 取实例",
+        "3. → direct"
+      ]
+    },
+    "DOC032-C006": {
+      "target_statement": "用微信完成付款与转账，出门不带现金和卡。",
+      "label": "direct",
+      "rationale": "T033 明确说支付是最有用的功能，并描述出门只带手机的便利。",
+      "supported_parts": [
+        "评价：T034「the most useful feature in wechat」",
+        "场景：T034「we could just pay by wechat」"
+      ],
+      "unsupported_parts": [
+        "未说明是否用理财/红包等其他金融功能",
+        "未说明对资金安全的顾虑"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取评价",
+        "2. 取场景",
+        "3. → direct"
+      ]
+    },
+    "DOC032-C007": {
+      "target_statement": "能直接发送超过 25MB 的文件，不必绕到网盘再发链接。",
+      "label": "direct",
+      "rationale": "T055 说文件大小受限，超限只能走云盘发链接。",
+      "supported_parts": [
+        "限制：T056「wechat will limits the size of the file」",
+        "替代：T056「save my file on some cloud drive and send a link」"
+      ],
+      "unsupported_parts": [
+        "限制值他记得不精确（约 25MB）",
+        "未说明需要传输的文件类型与频率"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取限制",
+        "2. 取替代",
+        "3. → direct"
+      ]
+    },
+    "DOC032-C008": {
+      "target_statement": "消息在云端随时可取，换机不必手动迁移、丢了也能找回。",
+      "label": "direct",
+      "rationale": "T059 说消息只存本机、换机要手动迁移，T071 把云端存储列为最想改的一项。",
+      "supported_parts": [
+        "现状：T060「all the messages are on your phone」",
+        "代价：T060「transfer all the messages to a new phone」",
+        "诉求：T072「keep all my messages available all the time」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的云端存储成本",
+        "未讨论加密与隐私如何兼顾"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取现状",
+        "2. 取代价",
+        "3. 取诉求",
+        "4. → direct"
+      ]
+    }
+  }
+}

@@ -1,0 +1,2535 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC012-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "0813ce5d6c73761dcb713fa5048a03422ff5131d17bcd56e9e91da8ad662981f"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "23251899e5641e53921c33be72d81af2a61efffa7bbb5d2b48d79e8e9c3bb382"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "5ebec5344da8e62783bdaf67fd697be2234b995212c98dc6d04efcafaf901dc7"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "628abaf516de4af0288fbc2888d512363cfdb9360b95079310af85290237def3"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC012"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC012-G001",
+      "statement": "在截止时间前把作业提交到课程平台。",
+      "source_candidate_ids": [
+        "DOC012-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Stakeholder，大学生，Canvas/Gradescope 使用者）",
+      "context": [
+        "使用 Canvas 与 Gradescope 两个平台",
+        "频率：每门课每周 1–2 次，五门课合计约每周 10 次"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G002",
+      "statement": "提交后立即拿到自动评分，尽快知道结果。",
+      "source_candidate_ids": [
+        "DOC012-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Stakeholder，大学生，Canvas/Gradescope 使用者）",
+      "context": [
+        "仅适用于代码类作业（Gradescope 自动评测）",
+        "自评该分数不是最终成绩"
+      ],
+      "evidence_ids": [
+        "E0003",
+        "E0004"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G003",
+      "statement": "拿到能指明改进方向的具体评语，而不只是一个分数。",
+      "source_candidate_ids": [
+        "DOC012-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Stakeholder，大学生，Canvas/Gradescope 使用者）",
+      "context": [
+        "反馈以带批注的文档形式给出，由教授或助教撰写"
+      ],
+      "evidence_ids": [
+        "E0005",
+        "E0006"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G004",
+      "statement": "看清成绩是怎么构成的：rubric 各分项得分与课程实时预估总评。",
+      "source_candidate_ids": [
+        "DOC012-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Stakeholder，大学生，Canvas/Gradescope 使用者）",
+      "context": [
+        "rubric 仅 Canvas 有，Gradescope 没有",
+        "预估总评用于决定投入多少时间、是否刷额外学分"
+      ],
+      "evidence_ids": [
+        "E0007",
+        "E0008",
+        "E0009",
+        "E0010"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G005",
+      "statement": "批注锚定在作业的对应位置，便于逐处对照修改。",
+      "source_candidate_ids": [
+        "DOC012-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Stakeholder，大学生，Canvas/Gradescope 使用者）",
+      "context": [
+        "问题成因：教师不熟悉应用，把批注放在全局位置而非具体位置"
+      ],
+      "evidence_ids": [
+        "E0011",
+        "E0012"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G006",
+      "statement": "对认为不合理的扣分就地发起复议，而不必改用邮件。",
+      "source_candidate_ids": [
+        "DOC012-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Stakeholder，大学生，Canvas/Gradescope 使用者）",
+      "context": [
+        "Gradescope 有复议入口，Canvas 没有",
+        "现实中多数情况他放弃申诉，因为邮件沟通不方便"
+      ],
+      "evidence_ids": [
+        "E0013",
+        "E0014",
+        "E0015"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G007",
+      "statement": "需要联系教师时，能用 Slack 这类即时渠道而不是邮件。",
+      "source_candidate_ids": [
+        "DOC012-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Stakeholder，大学生，Canvas/Gradescope 使用者）",
+      "context": [
+        "现状取决于任课教师是否自建 Slack 频道",
+        "没有时只能用邮件"
+      ],
+      "evidence_ids": [
+        "E0016",
+        "E0017"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G008",
+      "statement": "在做单调的事（健身、通勤、做饭）时用视频或音乐填充时间。",
+      "source_candidate_ids": [
+        "DOC012-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Interviewer，YouTube 视频/音乐流媒体用户）",
+      "context": [
+        "主要在健身房的器械上、做饭时、长途驾驶时观看",
+        "音乐多于视频，常作为背景"
+      ],
+      "evidence_ids": [
+        "E0018",
+        "E0019",
+        "E0020"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G009",
+      "statement": "消费可以不按顺序看、能随时跳过、时长较短的视频。",
+      "source_candidate_ids": [
+        "DOC012-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Interviewer，YouTube 视频/音乐流媒体用户）",
+      "context": [
+        "不喜欢连续剧式内容：依赖前集、需要持续专注",
+        "自评注意力跨度有限"
+      ],
+      "evidence_ids": [
+        "E0021",
+        "E0022"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G010",
+      "statement": "靠推荐流持续发现想看的新内容，不必自己找。",
+      "source_candidate_ids": [
+        "DOC012-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Interviewer，YouTube 视频/音乐流媒体用户）",
+      "context": [
+        "自评这是不换平台的主要原因",
+        "依赖十余年的观看历史刻画偏好"
+      ],
+      "evidence_ids": [
+        "E0023",
+        "E0024",
+        "E0025"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G011",
+      "statement": "按剩余可用时间挑选长度相称的视频。",
+      "source_candidate_ids": [
+        "DOC012-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Interviewer，YouTube 视频/音乐流媒体用户）",
+      "context": [
+        "10–30 分钟是安全选择",
+        "40 分钟以上需要提前安排更多时间"
+      ],
+      "evidence_ids": [
+        "E0026",
+        "E0027"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G012",
+      "statement": "出行前批量下载视频，供路上离线观看。",
+      "source_candidate_ids": [
+        "DOC012-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Interviewer，YouTube 视频/音乐流媒体用户）",
+      "context": [
+        "依赖付费会员的下载能力"
+      ],
+      "evidence_ids": [
+        "E0028",
+        "E0029"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G013",
+      "statement": "按自己的兴趣划分方式组织内容分类，而不是平台给的类目。",
+      "source_candidate_ids": [
+        "DOC012-C013"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Interviewer，YouTube 视频/音乐流媒体用户）",
+      "context": [
+        "期望划分示例：几个音乐类型、剧集、桌游、数学、游戏",
+        "现状类目与其划分方式不一致"
+      ],
+      "evidence_ids": [
+        "E0030",
+        "E0031"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC012-G014",
+      "statement": "提升评论区质量（例如发言前设基本门槛）。",
+      "source_candidate_ids": [
+        "DOC012-C014"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（原 Interviewer，YouTube 视频/音乐流媒体用户）",
+      "context": [
+        "自评很少发评论，改的是他人的发言门槛",
+        "以玩笑口吻提出，但同时称其为「最大的愿望」"
+      ],
+      "evidence_ids": [
+        "E0032",
+        "E0033"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC012-G001",
+      "b": "DOC012-G002",
+      "label": "related",
+      "rationale": "T031 描述的是提交动作之后的即时结果（自动评测并给分），二者是同一提交流程的前后两段；但一个是完成提交、一个是获取结果，非精化。",
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "conditions": [
+        "仅代码类作业有自动评分"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC012-G001",
+      "b": "DOC012-G003",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G003 的对象是拿到可指导改进的评语（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC012-G001",
+      "b": "DOC012-G004",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC012-G001",
+      "b": "DOC012-G005",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G005 的对象是批注锚定在文档对应位置（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC012-G001",
+      "b": "DOC012-G006",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G006 的对象是就地发起评分复议（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC012-G001",
+      "b": "DOC012-G007",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC012-G001",
+      "b": "DOC012-G008",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G008 的对象是用内容填充单调时段（T082）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC012-G001",
+      "b": "DOC012-G009",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC012-G001",
+      "b": "DOC012-G010",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G010 的对象是靠推荐流持续发现内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC012-G001",
+      "b": "DOC012-G011",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G011 的对象是按剩余时长挑片（T098）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC012-G001",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC012-G001",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC012-G001",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G001 的对象是截止前提交作业（T027），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC012-G002",
+      "b": "DOC012-G003",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G003 的对象是拿到可指导改进的评语（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC012-G002",
+      "b": "DOC012-G004",
+      "label": "related",
+      "rationale": "自动评分与 rubric/预估总评都是成绩可见性的一部分：前者即时但是单次，后者用于判断课程整体位置（T059 称之为 indirect feedback）。",
+      "evidence_ids": [
+        "E0002",
+        "E0004"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC012-G002",
+      "b": "DOC012-G005",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G005 的对象是批注锚定在文档对应位置（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC012-G002",
+      "b": "DOC012-G006",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G006 的对象是就地发起评分复议（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC012-G002",
+      "b": "DOC012-G007",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC012-G002",
+      "b": "DOC012-G008",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G008 的对象是用内容填充单调时段（T082）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC012-G002",
+      "b": "DOC012-G009",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC012-G002",
+      "b": "DOC012-G010",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G010 的对象是靠推荐流持续发现内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC012-G002",
+      "b": "DOC012-G011",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G011 的对象是按剩余时长挑片（T098）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC012-G002",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC012-G002",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC012-G002",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G002 的对象是提交后即时自动评分（T031），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC012-G003",
+      "b": "DOC012-G004",
+      "label": "related",
+      "rationale": "T059 把 rubric 分项与评语都归为「indirect feedback」，二者共同构成批改结果的两个层面：一个说扣在哪、一个说为什么扣。",
+      "evidence_ids": [
+        "E0003",
+        "E0004"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC012-G003",
+      "b": "DOC012-G005",
+      "label": "related",
+      "rationale": "T061 的痛点正是评语与作业脱钩导致「I need to find really hard, like what the comment... is related to which part」——定位能力决定评语是否可用。",
+      "evidence_ids": [
+        "E0003",
+        "E0005"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC012-G003",
+      "b": "DOC012-G006",
+      "label": "none",
+      "rationale": "DOC012-G003 的对象是拿到可指导改进的评语（T033），DOC012-G006 的对象是就地发起评分复议（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC012-G003",
+      "b": "DOC012-G007",
+      "label": "none",
+      "rationale": "DOC012-G003 的对象是拿到可指导改进的评语（T033），DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC012-G003",
+      "b": "DOC012-G008",
+      "label": "none",
+      "rationale": "DOC012-G003 的对象是拿到可指导改进的评语（T033），DOC012-G008 的对象是用内容填充单调时段（T082）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC012-G003",
+      "b": "DOC012-G009",
+      "label": "none",
+      "rationale": "DOC012-G003 的对象是拿到可指导改进的评语（T033），DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC012-G003",
+      "b": "DOC012-G010",
+      "label": "none",
+      "rationale": "DOC012-G003 的对象是拿到可指导改进的评语（T033），DOC012-G010 的对象是靠推荐流持续发现内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC012-G003",
+      "b": "DOC012-G011",
+      "label": "none",
+      "rationale": "DOC012-G003 的对象是拿到可指导改进的评语（T033），DOC012-G011 的对象是按剩余时长挑片（T098）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC012-G003",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G003 的对象是拿到可指导改进的评语（T033），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC012-G003",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G003 的对象是拿到可指导改进的评语（T033），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC012-G003",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G003 的对象是拿到可指导改进的评语（T033），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC012-G004",
+      "b": "DOC012-G005",
+      "label": "none",
+      "rationale": "DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059），DOC012-G005 的对象是批注锚定在文档对应位置（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC012-G004",
+      "b": "DOC012-G006",
+      "label": "related",
+      "rationale": "复议针对的正是评分本身（T061「that comment is wrong or not applicable... I should not be have a minus point here」），二者同属成绩的可申诉性。",
+      "evidence_ids": [
+        "E0004",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC012-G004",
+      "b": "DOC012-G007",
+      "label": "none",
+      "rationale": "DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059），DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC012-G004",
+      "b": "DOC012-G008",
+      "label": "none",
+      "rationale": "DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059），DOC012-G008 的对象是用内容填充单调时段（T082）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC012-G004",
+      "b": "DOC012-G009",
+      "label": "none",
+      "rationale": "DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059），DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC012-G004",
+      "b": "DOC012-G010",
+      "label": "none",
+      "rationale": "DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059），DOC012-G010 的对象是靠推荐流持续发现内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC012-G004",
+      "b": "DOC012-G011",
+      "label": "none",
+      "rationale": "DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059），DOC012-G011 的对象是按剩余时长挑片（T098）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC012-G004",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC012-G004",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC012-G004",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G004 的对象是看清成绩构成（rubric + 预估总评）（T059），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC012-G005",
+      "b": "DOC012-G006",
+      "label": "related",
+      "rationale": "复议的触发点常是某条错位的批注（T061 把「feedback detached」与「regrade」放在同一段抱怨里）；定位不清会同时降低反馈可用性与申诉准确性。",
+      "evidence_ids": [
+        "E0005",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC012-G005",
+      "b": "DOC012-G007",
+      "label": "none",
+      "rationale": "DOC012-G005 的对象是批注锚定在文档对应位置（T061），DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC012-G005",
+      "b": "DOC012-G008",
+      "label": "none",
+      "rationale": "DOC012-G005 的对象是批注锚定在文档对应位置（T061），DOC012-G008 的对象是用内容填充单调时段（T082）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC012-G005",
+      "b": "DOC012-G009",
+      "label": "none",
+      "rationale": "DOC012-G005 的对象是批注锚定在文档对应位置（T061），DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC012-G005",
+      "b": "DOC012-G010",
+      "label": "none",
+      "rationale": "DOC012-G005 的对象是批注锚定在文档对应位置（T061），DOC012-G010 的对象是靠推荐流持续发现内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC012-G005",
+      "b": "DOC012-G011",
+      "label": "none",
+      "rationale": "DOC012-G005 的对象是批注锚定在文档对应位置（T061），DOC012-G011 的对象是按剩余时长挑片（T098）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC012-G005",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G005 的对象是批注锚定在文档对应位置（T061），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC012-G005",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G005 的对象是批注锚定在文档对应位置（T061），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC012-G005",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G005 的对象是批注锚定在文档对应位置（T061），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC012-G006",
+      "b": "DOC012-G007",
+      "label": "related",
+      "rationale": "T061 说明 Canvas 无复议入口时只能改用邮件，而 T063 说 Slack 这类渠道「very convenient」；二者是同一诉求（低摩擦沟通）的两条路径。",
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ],
+      "conditions": [
+        "仅当平台不支持就地复议时，渠道问题才凸显"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC012-G006",
+      "b": "DOC012-G008",
+      "label": "none",
+      "rationale": "DOC012-G006 的对象是就地发起评分复议（T061），DOC012-G008 的对象是用内容填充单调时段（T082）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC012-G006",
+      "b": "DOC012-G009",
+      "label": "none",
+      "rationale": "DOC012-G006 的对象是就地发起评分复议（T061），DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC012-G006",
+      "b": "DOC012-G010",
+      "label": "none",
+      "rationale": "DOC012-G006 的对象是就地发起评分复议（T061），DOC012-G010 的对象是靠推荐流持续发现内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC012-G006",
+      "b": "DOC012-G011",
+      "label": "none",
+      "rationale": "DOC012-G006 的对象是就地发起评分复议（T061），DOC012-G011 的对象是按剩余时长挑片（T098）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC012-G006",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G006 的对象是就地发起评分复议（T061），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC012-G006",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G006 的对象是就地发起评分复议（T061），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC012-G006",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G006 的对象是就地发起评分复议（T061），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC012-G007",
+      "b": "DOC012-G008",
+      "label": "none",
+      "rationale": "DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063），DOC012-G008 的对象是用内容填充单调时段（T082）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC012-G007",
+      "b": "DOC012-G009",
+      "label": "none",
+      "rationale": "DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063），DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC012-G007",
+      "b": "DOC012-G010",
+      "label": "none",
+      "rationale": "DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063），DOC012-G010 的对象是靠推荐流持续发现内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P067",
+      "a": "DOC012-G007",
+      "b": "DOC012-G011",
+      "label": "none",
+      "rationale": "DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063），DOC012-G011 的对象是按剩余时长挑片（T098）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P068",
+      "a": "DOC012-G007",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P069",
+      "a": "DOC012-G007",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P070",
+      "a": "DOC012-G007",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G007 的对象是用 Slack 等即时渠道联系教师（T063），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P071",
+      "a": "DOC012-G008",
+      "b": "DOC012-G009",
+      "label": "related",
+      "rationale": "T114 解释为何需要可跳看、短小的内容，理由与场景相关（注意力跨度、填充碎片时间）；前者是场景需求，后者是内容形态偏好。",
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P072",
+      "a": "DOC012-G008",
+      "b": "DOC012-G010",
+      "label": "none",
+      "rationale": "DOC012-G008 的对象是用内容填充单调时段（T082），DOC012-G010 的对象是靠推荐流持续发现内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P073",
+      "a": "DOC012-G008",
+      "b": "DOC012-G011",
+      "label": "none",
+      "rationale": "DOC012-G008 的对象是用内容填充单调时段（T082），DOC012-G011 的对象是按剩余时长挑片（T098）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P074",
+      "a": "DOC012-G008",
+      "b": "DOC012-G012",
+      "label": "related",
+      "rationale": "T118 把下载与长途驾驶场景直接绑定（「as I drive」），下载是 G008 在无网络场景下的实现方式；但下载是手段，非场景需求本身。",
+      "evidence_ids": [
+        "E0008",
+        "E0012"
+      ],
+      "conditions": [
+        "仅在长途/无稳定网络时必要"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P075",
+      "a": "DOC012-G008",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G008 的对象是用内容填充单调时段（T082），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P076",
+      "a": "DOC012-G008",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G008 的对象是用内容填充单调时段（T082），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P077",
+      "a": "DOC012-G009",
+      "b": "DOC012-G010",
+      "label": "none",
+      "rationale": "DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114），DOC012-G010 的对象是靠推荐流持续发现内容（T114）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P078",
+      "a": "DOC012-G009",
+      "b": "DOC012-G011",
+      "label": "related",
+      "rationale": "T098 的选片规则（按剩余时间填充）与 T114 的短内容偏好同源于「碎片时间 + 注意力跨度」，但一个是时长匹配策略、一个是内容形态偏好，非精化。",
+      "evidence_ids": [
+        "E0009",
+        "E0011"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P079",
+      "a": "DOC012-G009",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P080",
+      "a": "DOC012-G009",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P081",
+      "a": "DOC012-G009",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G009 的对象是消费可跳看、非连续、短小的内容（T114），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P082",
+      "a": "DOC012-G010",
+      "b": "DOC012-G011",
+      "label": "none",
+      "rationale": "DOC012-G010 的对象是靠推荐流持续发现内容（T114），DOC012-G011 的对象是按剩余时长挑片（T098）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P083",
+      "a": "DOC012-G010",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G010 的对象是靠推荐流持续发现内容（T114），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P084",
+      "a": "DOC012-G010",
+      "b": "DOC012-G013",
+      "label": "related",
+      "rationale": "T126 在肯定推荐的同时指出平台类目与其兴趣划分不符，二者共同构成内容组织问题：推荐负责「找得到」，分类负责「归类顺手」。",
+      "evidence_ids": [
+        "E0010",
+        "E0013"
+      ],
+      "conditions": [
+        "分类诉求不影响推荐作为主要发现方式"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P085",
+      "a": "DOC012-G010",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G010 的对象是靠推荐流持续发现内容（T114），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P086",
+      "a": "DOC012-G011",
+      "b": "DOC012-G012",
+      "label": "none",
+      "rationale": "DOC012-G011 的对象是按剩余时长挑片（T098），DOC012-G012 的对象是出行前批量下载离线看（T118）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P087",
+      "a": "DOC012-G011",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G011 的对象是按剩余时长挑片（T098），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P088",
+      "a": "DOC012-G011",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G011 的对象是按剩余时长挑片（T098），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P089",
+      "a": "DOC012-G012",
+      "b": "DOC012-G013",
+      "label": "none",
+      "rationale": "DOC012-G012 的对象是出行前批量下载离线看（T118），DOC012-G013 的对象是按自己的方式分类组织内容（T126）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P090",
+      "a": "DOC012-G012",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G012 的对象是出行前批量下载离线看（T118），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P091",
+      "a": "DOC012-G013",
+      "b": "DOC012-G014",
+      "label": "none",
+      "rationale": "DOC012-G013 的对象是按自己的方式分类组织内容（T126），DOC012-G014 的对象是提升评论区发言门槛（T110）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [
+        "仅代码类作业有自动评分"
+      ],
+      "review_status": "pending",
+      "a": "DOC012-G001",
+      "b": "DOC012-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P015",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC012-G002",
+      "b": "DOC012-G004"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P026",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC012-G003",
+      "b": "DOC012-G004"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P027",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC012-G003",
+      "b": "DOC012-G005"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P038",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC012-G004",
+      "b": "DOC012-G006"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P047",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC012-G005",
+      "b": "DOC012-G006"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P056",
+      "conditions": [
+        "仅当平台不支持就地复议时，渠道问题才凸显"
+      ],
+      "review_status": "pending",
+      "a": "DOC012-G006",
+      "b": "DOC012-G007"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P071",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC012-G008",
+      "b": "DOC012-G009"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P074",
+      "conditions": [
+        "仅在长途/无稳定网络时必要"
+      ],
+      "review_status": "pending",
+      "a": "DOC012-G008",
+      "b": "DOC012-G012"
+    },
+    {
+      "edge_id": "R010",
+      "type": "related",
+      "decision_id": "P078",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC012-G009",
+      "b": "DOC012-G011"
+    },
+    {
+      "edge_id": "R011",
+      "type": "related",
+      "decision_id": "P084",
+      "conditions": [
+        "分类诉求不影响推荐作为主要发现方式"
+      ],
+      "review_status": "pending",
+      "a": "DOC012-G010",
+      "b": "DOC012-G013"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC012:S028",
+      "material_id": "M001",
+      "quote": "I submitted. Like before the due date.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3119,
+      "end_char": 3157,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S028",
+          "segment_start": 26,
+          "segment_end": 64,
+          "start_char": 3119,
+          "end_char": 3157
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 3093,
+        "end_char": 3298
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC012:S028",
+      "material_id": "M001",
+      "quote": "Once or twice every week for a class, and you will sum up to like 10 times if I'm going to take like 5 classes.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3187,
+      "end_char": 3298,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S028",
+          "segment_start": 94,
+          "segment_end": 205,
+          "start_char": 3187,
+          "end_char": 3298
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 3093,
+        "end_char": 3298
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC012:S032",
+      "material_id": "M001",
+      "quote": "it will evaluate it like you will try to build a project and give me an auto auto auto grading, so I will know my grade immediately",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4492,
+      "end_char": 4623,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S032",
+          "segment_start": 724,
+          "segment_end": 855,
+          "start_char": 4492,
+          "end_char": 4623
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 3768,
+        "end_char": 4723
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC012:S032",
+      "material_id": "M001",
+      "quote": "But that is not a final grade.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4625,
+      "end_char": 4655,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S032",
+          "segment_start": 857,
+          "segment_end": 887,
+          "start_char": 4625,
+          "end_char": 4655
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 3768,
+        "end_char": 4723
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC012:S034",
+      "material_id": "M001",
+      "quote": "I will generally get feedback, that's in the like that is in the form of a document with some comments after the assignment is created. So I can get some more detail like information, for where I can improve.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5262,
+      "end_char": 5470,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S034",
+          "segment_start": 324,
+          "segment_end": 532,
+          "start_char": 5262,
+          "end_char": 5470
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 4938,
+        "end_char": 5470
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC012:S036",
+      "material_id": "M001",
+      "quote": "It's the Professor, or Tas.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5557,
+      "end_char": 5584,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S036",
+          "segment_start": 20,
+          "segment_end": 47,
+          "start_char": 5557,
+          "end_char": 5584
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 5537,
+        "end_char": 5584
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC012:S060",
+      "material_id": "M001",
+      "quote": "there will be a rubric for each assignment",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11488,
+      "end_char": 11530,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S060",
+          "segment_start": 50,
+          "segment_end": 92,
+          "start_char": 11488,
+          "end_char": 11530
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 11438,
+        "end_char": 12408
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC012:S060",
+      "material_id": "M001",
+      "quote": "what part of your assignment received better grade like a subgrade",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11760,
+      "end_char": 11826,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S060",
+          "segment_start": 322,
+          "segment_end": 388,
+          "start_char": 11760,
+          "end_char": 11826
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 11438,
+        "end_char": 12408
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC012:S060",
+      "material_id": "M001",
+      "quote": "you can see a real time estimated grade for your previously submitted and graded assignments",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12073,
+      "end_char": 12165,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S060",
+          "segment_start": 635,
+          "segment_end": 727,
+          "start_char": 12073,
+          "end_char": 12165
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 11438,
+        "end_char": 12408
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC012:S060",
+      "material_id": "M001",
+      "quote": "helpful to decide like how much time you are going to spend on the course, and whether or not you are going to try an extra extra credit",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12222,
+      "end_char": 12358,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S060",
+          "segment_start": 784,
+          "segment_end": 920,
+          "start_char": 12222,
+          "end_char": 12358
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 11438,
+        "end_char": 12408
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC012:S062",
+      "material_id": "M001",
+      "quote": "the feedback we'll be detached from the assignments. So I need to find really hard, like what the comment or feedback is related to which part of my assignment",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12728,
+      "end_char": 12887,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S062",
+          "segment_start": 50,
+          "segment_end": 209,
+          "start_char": 12728,
+          "end_char": 12887
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 12678,
+        "end_char": 13716
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC012:S062",
+      "material_id": "M001",
+      "quote": "they basically just insert the comment in a globe global part rather than specify a place for inserting the comment",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13000,
+      "end_char": 13115,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S062",
+          "segment_start": 322,
+          "segment_end": 437,
+          "start_char": 13000,
+          "end_char": 13115
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 12678,
+        "end_char": 13716
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC012:S062",
+      "material_id": "M001",
+      "quote": "I can submit a recreate request whenever I think. Oh, maybe that comment is wrong or not applicable to my assignment",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13199,
+      "end_char": 13315,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S062",
+          "segment_start": 521,
+          "segment_end": 637,
+          "start_char": 13199,
+          "end_char": 13315
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 12678,
+        "end_char": 13716
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC012:S062",
+      "material_id": "M001",
+      "quote": "But there's no such feature in canvas",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13361,
+      "end_char": 13398,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S062",
+          "segment_start": 683,
+          "segment_end": 720,
+          "start_char": 13361,
+          "end_char": 13398
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 12678,
+        "end_char": 13716
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC012:S062",
+      "material_id": "M001",
+      "quote": "I let it go or try try to communicate using other forms of communication tools. But I didn't have. I didn't do that, because it's just not convenient.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13566,
+      "end_char": 13716,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S062",
+          "segment_start": 888,
+          "segment_end": 1038,
+          "start_char": 13566,
+          "end_char": 13716
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 12678,
+        "end_char": 13716
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC012:S064",
+      "material_id": "M001",
+      "quote": "Some some of them have a set up a slack channel. and that will be very convenient",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13904,
+      "end_char": 13985,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S064",
+          "segment_start": 62,
+          "segment_end": 143,
+          "start_char": 13904,
+          "end_char": 13985
+        }
+      ],
+      "original_locator": {
+        "line_start": 64,
+        "line_end": 64,
+        "start_char": 13842,
+        "end_char": 14198
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC012:S062",
+      "material_id": "M001",
+      "quote": "I still have to try to use email or other form of communication to contact my professor",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13403,
+      "end_char": 13490,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S062",
+          "segment_start": 725,
+          "segment_end": 812,
+          "start_char": 13403,
+          "end_char": 13490
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 12678,
+        "end_char": 13716
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC012:S083",
+      "material_id": "M001",
+      "quote": "I go to the gym, and I I want to be able to be entertained as I run",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16007,
+      "end_char": 16074,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S083",
+          "segment_start": 26,
+          "segment_end": 93,
+          "start_char": 16007,
+          "end_char": 16074
+        }
+      ],
+      "original_locator": {
+        "line_start": 83,
+        "line_end": 83,
+        "start_char": 15981,
+        "end_char": 16369
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC012:S083",
+      "material_id": "M001",
+      "quote": "do exercise on the bike, which can be monotonous",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16100,
+      "end_char": 16148,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S083",
+          "segment_start": 119,
+          "segment_end": 167,
+          "start_char": 16100,
+          "end_char": 16148
+        }
+      ],
+      "original_locator": {
+        "line_start": 83,
+        "line_end": 83,
+        "start_char": 15981,
+        "end_char": 16369
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC012:S085",
+      "material_id": "M001",
+      "quote": "I probably stream more music because I just put it on when other stuff is on.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16572,
+      "end_char": 16649,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S085",
+          "segment_start": 20,
+          "segment_end": 97,
+          "start_char": 16572,
+          "end_char": 16649
+        }
+      ],
+      "original_locator": {
+        "line_start": 85,
+        "line_end": 85,
+        "start_char": 16552,
+        "end_char": 16794
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC012:S115",
+      "material_id": "M001",
+      "quote": "I'd rather have a bunch of stuff that I can just watch out of order, or watch in whatever order I want, or skip, or whatever that's better for my attention. Span and shorter things.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 25066,
+      "end_char": 25247,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S115",
+          "segment_start": 298,
+          "segment_end": 479,
+          "start_char": 25066,
+          "end_char": 25247
+        }
+      ],
+      "original_locator": {
+        "line_start": 115,
+        "line_end": 115,
+        "start_char": 24768,
+        "end_char": 26521
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC012:S115",
+      "material_id": "M001",
+      "quote": "I don't really like stories. Because stories. They're kind of dependent on you watching the previous episode",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 24809,
+      "end_char": 24917,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S115",
+          "segment_start": 41,
+          "segment_end": 149,
+          "start_char": 24809,
+          "end_char": 24917
+        }
+      ],
+      "original_locator": {
+        "line_start": 115,
+        "line_end": 115,
+        "start_char": 24768,
+        "end_char": 26521
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC012:S115",
+      "material_id": "M001",
+      "quote": "basically an endless stream of like, really like. heavily, algorithmically curated curated videos",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 25550,
+      "end_char": 25647,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S115",
+          "segment_start": 782,
+          "segment_end": 879,
+          "start_char": 25550,
+          "end_char": 25647
+        }
+      ],
+      "original_locator": {
+        "line_start": 115,
+        "line_end": 115,
+        "start_char": 24768,
+        "end_char": 26521
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC012:S115",
+      "material_id": "M001",
+      "quote": "it's like it's easy for me to find a new thing that I want to watch",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 25948,
+      "end_char": 26015,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S115",
+          "segment_start": 1180,
+          "segment_end": 1247,
+          "start_char": 25948,
+          "end_char": 26015
+        }
+      ],
+      "original_locator": {
+        "line_start": 115,
+        "line_end": 115,
+        "start_char": 24768,
+        "end_char": 26521
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC012:S117",
+      "material_id": "M001",
+      "quote": "That's a big part of it.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 26690,
+      "end_char": 26714,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S117",
+          "segment_start": 20,
+          "segment_end": 44,
+          "start_char": 26690,
+          "end_char": 26714
+        }
+      ],
+      "original_locator": {
+        "line_start": 117,
+        "line_end": 117,
+        "start_char": 26670,
+        "end_char": 26720
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC012:S099",
+      "material_id": "M001",
+      "quote": "If I'm I have a certain amount of time left on the bike. Then I would aim for like filling exactly that time",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21692,
+      "end_char": 21800,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S099",
+          "segment_start": 1722,
+          "segment_end": 1830,
+          "start_char": 21692,
+          "end_char": 21800
+        }
+      ],
+      "original_locator": {
+        "line_start": 99,
+        "line_end": 99,
+        "start_char": 19970,
+        "end_char": 22069
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC012:S099",
+      "material_id": "M001",
+      "quote": "a 10 to 30. Minute video is like a safe bet for me",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21814,
+      "end_char": 21864,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S099",
+          "segment_start": 1844,
+          "segment_end": 1894,
+          "start_char": 21814,
+          "end_char": 21864
+        }
+      ],
+      "original_locator": {
+        "line_start": 99,
+        "line_end": 99,
+        "start_char": 19970,
+        "end_char": 22069
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC012:S121",
+      "material_id": "M001",
+      "quote": "that's another thing that Youtube makes really easy is downloading videos",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 27466,
+      "end_char": 27539,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S121",
+          "segment_start": 32,
+          "segment_end": 105,
+          "start_char": 27466,
+          "end_char": 27539
+        }
+      ],
+      "original_locator": {
+        "line_start": 121,
+        "line_end": 121,
+        "start_char": 27434,
+        "end_char": 27591
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC012:S119",
+      "material_id": "M001",
+      "quote": "I'll just listen to it as I drive",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 27205,
+      "end_char": 27238,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S119",
+          "segment_start": 370,
+          "segment_end": 403,
+          "start_char": 27205,
+          "end_char": 27238
+        }
+      ],
+      "original_locator": {
+        "line_start": 119,
+        "line_end": 119,
+        "start_char": 26835,
+        "end_char": 27406
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC012:S127",
+      "material_id": "M001",
+      "quote": "they don't exactly square up with what, how I would subdivide my interests",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 28157,
+      "end_char": 28231,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S127",
+          "segment_start": 254,
+          "segment_end": 328,
+          "start_char": 28157,
+          "end_char": 28231
+        }
+      ],
+      "original_locator": {
+        "line_start": 127,
+        "line_end": 127,
+        "start_char": 27903,
+        "end_char": 28873
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC012:S127",
+      "material_id": "M001",
+      "quote": "I would divide the content like differently",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 28602,
+      "end_char": 28645,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S127",
+          "segment_start": 699,
+          "segment_end": 742,
+          "start_char": 28602,
+          "end_char": 28645
+        }
+      ],
+      "original_locator": {
+        "line_start": 127,
+        "line_end": 127,
+        "start_char": 27903,
+        "end_char": 28873
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0032",
+      "source_id": "DOC012:S111",
+      "material_id": "M001",
+      "quote": "my biggest wish for Youtube is that they had, like smarter users in the comments",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 23818,
+      "end_char": 23898,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S111",
+          "segment_start": 29,
+          "segment_end": 109,
+          "start_char": 23818,
+          "end_char": 23898
+        }
+      ],
+      "original_locator": {
+        "line_start": 111,
+        "line_end": 111,
+        "start_char": 23789,
+        "end_char": 24318
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0033",
+      "source_id": "DOC012:S111",
+      "material_id": "M001",
+      "quote": "maybe if they had like, an IQ test, or even just like like, just sort of basic any sort of basic test before people were allowed to comment",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 23974,
+      "end_char": 24113,
+      "candidate_locations": [
+        {
+          "source_id": "DOC012:S111",
+          "segment_start": 185,
+          "segment_end": 324,
+          "start_char": 23974,
+          "end_char": 24113
+        }
+      ],
+      "original_locator": {
+        "line_start": 111,
+        "line_end": 111,
+        "start_char": 23789,
+        "end_char": 24318
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC012-C001",
+      "goal_id": "DOC012-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C002",
+      "goal_id": "DOC012-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C003",
+      "goal_id": "DOC012-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C004",
+      "goal_id": "DOC012-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C005",
+      "goal_id": "DOC012-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C006",
+      "goal_id": "DOC012-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C007",
+      "goal_id": "DOC012-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C008",
+      "goal_id": "DOC012-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C009",
+      "goal_id": "DOC012-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C010",
+      "goal_id": "DOC012-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C011",
+      "goal_id": "DOC012-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C012",
+      "goal_id": "DOC012-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C013",
+      "goal_id": "DOC012-G013",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC012-C014",
+      "goal_id": "DOC012-G014",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 91,
+    "evaluated_pairs": 91
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "passed",
+    "semantic_status": "not_run",
+    "report_path": "attachments/review-report.json",
+    "report_sha256": "d80ff1609596b5de877abd8b75cf83030d71847537e72f1d50e9ceed371b1d37",
+    "core_sha256": "2d5b40b800e4ca0004d540d4ea024715431ca7e2d282d5f75748c93f83bfa101",
+    "hash_rule_version": "goalforge-core-v1"
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "finalize",
+    "readiness": "reviewable",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": [
+      "goal-model.json",
+      "goal-model.md",
+      "goal-model.html",
+      "goal-model.svg",
+      "delivery-manifest.json"
+    ]
+  },
+  "content_sha256": "11a9ba428de163336dfbe6b58c8aeeb86f7fd81b1a71d867d674c66ee92bf4a8"
+}

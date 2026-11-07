@@ -1,0 +1,287 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "5e6b8a0d7d10c5cce88cc4354a73e7d126b57fbddaa05b379b3dcb548365cb57",
+    "input_sha256": "e371092f56b95568305e07ab2f3bd243bbeaa7c2a00665252d68aefd2d56c615"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Use Uber to get from one place to another, typically for destinations that are within walking distance.",
+      "label": "direct",
+      "rationale": "原句明确把“从一处到另一处”的交通称为使用Uber的主要目标，并给出“通常是步行可达的地点”这一限定，主体与范围一致。",
+      "supported_parts": [
+        "主要目的是交通接送",
+        "通常前往步行可达范围内的地点"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G002": {
+      "target_statement": "Choose whether to take a ride mainly by weighing trip duration and price against walking, driving or other transport, and walk instead when a ride would take about an hour and a half.",
+      "label": "direct",
+      "rationale": "受访者明确说是否叫车主要看耗时与价格，并与其他方式比较；“约一个半小时就宁可走路，即使很远”是该规则的具体阈值例，未改变含义。",
+      "supported_parts": [
+        "耗时与价格是决定是否叫车的因素",
+        "约一个半小时的行程选择步行，即使距离远"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G003": {
+      "target_statement": "Choose the cheapest ride option, except when traveling with more people and a larger vehicle is needed.",
+      "label": "direct",
+      "rationale": "明确说通常选最便宜的一档，“除非和别人一起”为例外，例外与主体均保留。",
+      "supported_parts": [
+        "通常选最便宜选项",
+        "与他人同行时例外"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G004": {
+      "target_statement": "Wait before booking when the quoted price is too high and the departure does not have to be immediate.",
+      "label": "direct",
+      "rationale": "“价格太高时可以选择等”是明确的等待决定，前提是“不一定要现在出发”，两个条件都在原句中。",
+      "supported_parts": [
+        "价格过高时选择等待",
+        "前提是非即时出发"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G005": {
+      "target_statement": "Book a ride successfully when the app shows available drivers, without long scheduling delays or ending in a failure to find a driver.",
+      "label": "inferred",
+      "rationale": "受访者报告在应用显示附近有司机时，点击叫车会长时间无响应，甚至最终提示找不到司机；这是对订车可靠性的负面报告，据此推断其希望订车能顺利完成。原句未直接提出要求。",
+      "supported_parts": [
+        "报告点击叫车后长时间才排上",
+        "报告最终提示找不到司机"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "把对失败过程的抱怨理解为希望订车成功"
+      ],
+      "reasoning_steps": [
+        "定位抱怨的具体环节：点击叫车—长时间调度—找不到司机",
+        "推断期望结果为订车成功且不长时间等待"
+      ]
+    },
+    "G006": {
+      "target_statement": "Avoid canceling a ride so that the passenger rating seen by drivers is not damaged.",
+      "label": "direct",
+      "rationale": "明确说尽量不取消，理由是司机能看到乘客评分并可能受损；该理由是信念，保留在目标的条件里而不当作事实。",
+      "supported_parts": [
+        "尽量避免取消行程",
+        "理由是乘客评分可能受损（信念）"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G007": {
+      "target_statement": "Cancel a ride without having to start the ride first.",
+      "label": "direct",
+      "rationale": "原句是口语重复的愿望表达（“I kind of wish that I don't want to just start a ride to cancel it”），否定指向清楚：不愿为了取消而先开始行程；随后说明应用内有取消按钮。语气为犹豫的愿望，未被强化为硬性要求。",
+      "supported_parts": [
+        "不愿为取消而先开始行程"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "转写重复不影响“不想为取消而先开始行程”的否定指向"
+      ],
+      "reasoning_steps": []
+    },
+    "G008": {
+      "target_statement": "Take the bus for planned routes such as the work commute.",
+      "label": "direct",
+      "rationale": "明确说计划好的路线通常坐公交，工作场景有免费公交卡；成本条件与“计划路线”的范围均保留。",
+      "supported_parts": [
+        "计划路线通常坐公交",
+        "工作通勤有免费公交卡"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G009": {
+      "target_statement": "Avoid taking the bus in areas I am not familiar with.",
+      "label": "direct",
+      "rationale": "明确说不想在不熟悉的地区坐公交，属避免型目标，情境条件保留。",
+      "supported_parts": [
+        "在不熟悉的地区避免坐公交"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G010": {
+      "target_statement": "Prefer Uber over the bus when the bus trip would take a long time or require walking or multiple buses.",
+      "label": "direct",
+      "rationale": "紧接在“公交耗时长、要步行、要换乘”的描述之后说“如果这么麻烦，我大概更愿意用Uber”，条件与偏好方向一致。",
+      "supported_parts": [
+        "公交线路复杂时更愿意用Uber"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G011": {
+      "target_statement": "Prefer renting a car for trips that require a lot of driving or last several days.",
+      "label": "direct",
+      "rationale": "两处都明确说旅行时更愿意租车：取决于地区可步行性与需要开多少车；一周假期且出行较多时更自由。合并为同一租车偏好，两类情境与条件都保留。",
+      "supported_parts": [
+        "旅行时更愿意租车",
+        "条件是可步行性、驾驶需求与行程时长"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G012": {
+      "target_statement": "When taking a rideshare for work and the cost is covered, prioritize travel time over price.",
+      "label": "direct",
+      "rationale": "明确说工作出行、费用由公司承担时“不太在意价格，更在意时间”，并用多付约20美元避免多等20分钟为例；情境条件保留。",
+      "supported_parts": [
+        "工作出行费用可报销时以时间为先",
+        "接受多付约20美元以避免多等20分钟"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G013": {
+      "target_statement": "Reach a human customer support agent who can actually resolve the issue.",
+      "label": "direct",
+      "rationale": "明确说当时“很想和真人说话”，并说真正解决问题需要的不止自动问答；核心诉求是得到能解决问题的真人客服，问题背景（客服差）一并保留。",
+      "supported_parts": [
+        "想与真人客服沟通",
+        "目标是真正解决问题"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G014": {
+      "target_statement": "Get accurate delivery-time estimates for Uber Eats orders.",
+      "label": "inferred",
+      "rationale": "受访者把“预估时间估得很差”列为糟糕体验的组成部分；据此推断其希望配送时间预估准确。原句是抱怨，不是明确要求，因此不声称是明确提出的标准。",
+      "supported_parts": [
+        "把配送时间预估不准列为差体验"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "抱怨预估不准意味着希望预估准确"
+      ],
+      "reasoning_steps": [
+        "识别抱怨对象为时间预估",
+        "推断期望结果为预估准确"
+      ]
+    },
+    "G015": {
+      "target_statement": "Avoid using Uber Eats after bad delivery and support experiences.",
+      "label": "direct",
+      "rationale": "明确说有过糟糕体验后已停止使用Uber Eats，属已付诸行动的避免型目标。",
+      "supported_parts": [
+        "糟糕体验后停止使用Uber Eats"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G016": {
+      "target_statement": "Prefer trips with a single destination over multi-stop trips.",
+      "label": "direct",
+      "rationale": "明确说多数情况下更愿意只去一个地点而不是多个，偏好方向与范围一致。",
+      "supported_parts": [
+        "更愿意单一目的地"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G017": {
+      "target_statement": "Keep any intermediate stop on a multi-stop trip as short as possible.",
+      "label": "direct",
+      "rationale": "明确说担心中途停留占太多时间，并说会尽量避免、尽量让它快；适用条件是存在中途停留。",
+      "supported_parts": [
+        "避免中途停留耗时过长",
+        "尽量加快中途停留"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G018": {
+      "target_statement": "Call or message the driver in the app when the pickup spot is hard to find or the area is crowded.",
+      "label": "direct",
+      "rationale": "明确说应用内联系司机“很有帮助”，并列出上车点难找（门牌不清、GPS差）与人多拥挤两类情境；偏好方向与情境保留。",
+      "supported_parts": [
+        "认为应用内联系司机有帮助",
+        "适用情境为上车点难找或人多拥挤"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G019": {
+      "target_statement": "Give the driver a heads-up when an intermediate stop on a multi-stop trip takes longer than expected.",
+      "label": "inferred",
+      "rationale": "受访者认为中途停留超时前先告知司机“也有帮助”，但紧接着自述“我不认为我这样做过”；据此推断为一种被认可的偏好，而非已实践的行为要求。",
+      "supported_parts": [
+        "认为提前告知司机有帮助"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "认为有帮助等同希望在该情境这样做"
+      ],
+      "reasoning_steps": [
+        "原句是效果评价而非习惯陈述",
+        "因此按偏好推断，不声明已实践"
+      ]
+    },
+    "G020": {
+      "target_statement": "Be able to change the pickup point easily after a ride is booked when the ride starts from the current location.",
+      "label": "inferred",
+      "rationale": "受访者报告现在只有不用当前位置下单时才容易改上车点，用当前位置时很难、通常改为告知司机；据此推断其希望下单后仍能容易改点。原句是比较性抱怨，未直接提出要求。",
+      "supported_parts": [
+        "报告现在用当前位置时改点不容易"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "难度对比意味着希望改点更容易"
+      ],
+      "reasoning_steps": [
+        "对比“不用当前位置时容易”与现在的情形",
+        "推断期望结果为下单后可容易改点"
+      ]
+    },
+    "G021": {
+      "target_statement": "Notify the driver directly instead of changing the pickup point in the app when the pickup point needs to change.",
+      "label": "direct",
+      "rationale": "明确说想把上车点改掉时通常直接告知司机，而不是在应用里改；访谈者复述“直接联系司机是你的首选”后受访者答“Yeah”确认。",
+      "supported_parts": [
+        "改点时直接告知司机",
+        "不使用应用内改点"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G022": {
+      "target_statement": "Check the ride fare after the trip, to split the cost with friends or to use it as a receipt for work reimbursement.",
+      "label": "direct",
+      "rationale": "明确说行程结束后会看车费，用于与朋友分摊，或作为工作报销的凭证；两个情境共用同一核心动作（查看车费），未拆成近似重复节点。",
+      "supported_parts": [
+        "行程后查看车费",
+        "用途为分摊费用或工作报销"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    }
+  }
+}

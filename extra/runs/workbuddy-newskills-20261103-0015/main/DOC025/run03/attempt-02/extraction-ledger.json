@@ -1,0 +1,470 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC025",
+  "input_binding": {
+    "source_input_sha256": "d19df5da122052e4a391fc0ba98cf2241ca9264aa94d03883660d67d22ccc21e",
+    "source_sha256": "60dd50ac11eedde508a572585eef2739e31ba01a2f48fdce984f23f1f9af7a85",
+    "windows_sha256": "4700eb844d9d3cc94f15fb8db8b44d66bb999dffcb3dad464eed2ad8cf8b7d98",
+    "candidates_sha256": "7738644edee6ffd8349388c6e5e1c65e158496ef000c053e10be6d6c99dbad3e",
+    "extraction_sha256": "6c5e01c1e77b0211a314845678cbcd2d70e187de8a34ebf1e481a2a1d1d6d5c1"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "unknown",
+    "temperature": "unknown",
+    "budget": "1 initial pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 1,
+    "stop_reason": "完成首轮 13 个窗口的逐窗捕获并做全篇校正（指代、条件、例外、相反证据），未发现需追加补查轮的新意图，停止。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC025:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0009",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0010",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0011",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0012",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC025:W0013",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "回查全部 27 轮：指代（T016 'those' 指已保存职位、T009-010 'both of these' 指群组与连接两类方式、T003 'there' 指 LinkedIn）、条件继承（弱市仍探索）、例外与相反证据（T021 平台筛选粒度受限、网络外连接受限、请求被忽略；easy apply 有时仍需补充简历/答题）均已核对；问候与收尾轮无意图。",
+    "source_ids": [
+      "DOC025:T000",
+      "DOC025:T001",
+      "DOC025:T002",
+      "DOC025:T003",
+      "DOC025:T004",
+      "DOC025:T005",
+      "DOC025:T006",
+      "DOC025:T007",
+      "DOC025:T008",
+      "DOC025:T009",
+      "DOC025:T010",
+      "DOC025:T011",
+      "DOC025:T012",
+      "DOC025:T013",
+      "DOC025:T014",
+      "DOC025:T015",
+      "DOC025:T016",
+      "DOC025:T017",
+      "DOC025:T018",
+      "DOC025:T019",
+      "DOC025:T020",
+      "DOC025:T021",
+      "DOC025:T022",
+      "DOC025:T023",
+      "DOC025:T024",
+      "DOC025:T025",
+      "DOC025:T026"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "T003 明确市场不好仍探索各求职板机会，条件保留为 G001。"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "扩展职业人脉为使用 LinkedIn 的明确理由，保留为 G002。"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "保持行业信息更新为明确目的，保留为 G003。"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "在 LinkedIn 上探索职位机会（含浏览职位帖与推荐），保留为 G004。"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "split",
+      "final_goal_ids": [
+        "G002",
+        "G007",
+        "G004"
+      ],
+      "reason": "复合句含三个独立意图：连接新的人（并入 G002 的日常表达）、查看网络帖子（G007）、浏览职位帖与推荐（G004），分别承接且共享原句证据。"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "查找特定职位的意图及所选方式（关键词/地点/筛选）保留为 G005。"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "easy apply 自动复用档案以省时提交申请，保留为 G006。"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "审阅与提交为同一申请动作的步骤，与 C007 同义合并入 G006；补充简历/答题保留为 G006 条件。"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "查看信息流帖子与 C005 的'查看网络帖子'同义，合并入 G007；帖子来源细节保留在 G007 表述。"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "对感兴趣帖子点赞/评论/分享为独立互动意图，保留为 G008。"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "与已知的人建立连接及所选方式（搜索+个性化留言），保留为 G009。"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "加入活跃且相关的群组（经推荐发现），保留为 G010。"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "split",
+      "final_goal_ids": [
+        "G007",
+        "G011"
+      ],
+      "reason": "两个独立结果：查看群组帖子并入 G007（T007 已含群组帖子来源），与群组成员建立连接保留为 G011。"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G012"
+      ],
+      "reason": "开启职位提醒以接收推荐职位通知（应用或邮件），保留为 G012。"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G013"
+      ],
+      "reason": "管理各已保存筛选的提醒频率与通知类型，保留为 G013。"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G014"
+      ],
+      "reason": "经 My Jobs 访问已保存职位列表及各分类，保留为 G014。"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G015"
+      ],
+      "reason": "多次编辑个人资料各栏目并保存，保留为 G015。"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G016"
+      ],
+      "reason": "上传简历到 LinkedIn 仅为泛指功能说明，保留为 G016 但判 insufficient 待人工确认。"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G017"
+      ],
+      "reason": "open to work 状态仅为泛指功能说明，保留为 G017 但判 insufficient 待人工确认。"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "split",
+      "final_goal_ids": [
+        "G018",
+        "G019"
+      ],
+      "reason": "含期望的筛选能力（G018）与其服务的查找目的（G019）两个独立意图；平台不提供该选项记入 G018 条件。"
+    },
+    {
+      "candidate_id": "C021",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G020"
+      ],
+      "reason": "与网络外人员建立连接的受阻目的保留为 G020，障碍（被忽略/平台限制）记入条件。"
+    },
+    {
+      "candidate_id": "C022",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "使用时长/时段为背景习惯陈述，无独立目标意图；其提到的查看帖子与职位推荐已由 G007 与 G012 表达。"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC025:T003",
+          "quote": "every time I open the app, I'm I usually want to either connect with someone new or just see the post from my network or browse the job postings and the job recommendations that I received from the app",
+          "role": "basis",
+          "start_char": 507,
+          "end_char": 708
+        }
+      ],
+      "candidate_ids": [
+        "C005"
+      ],
+      "final_goal_ids": [
+        "G002",
+        "G007",
+        "G004"
+      ],
+      "outcome": "represented",
+      "reason": "复合意图句拆分后三个目标均承接，回查无遗漏。"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC025:T021",
+          "quote": "I often wish there was a way to filter the jobs by specific skills or technologies rather than just job titles or locations. Because sometimes I want to look for jobs that mention specific software or programming languages",
+          "role": "basis",
+          "start_char": 8135,
+          "end_char": 8357
+        }
+      ],
+      "candidate_ids": [
+        "C020"
+      ],
+      "final_goal_ids": [
+        "G018",
+        "G019"
+      ],
+      "outcome": "represented",
+      "reason": "筛选期望（G018）与其服务的查找目的（G019）拆分承接核对。"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC025:T021",
+          "quote": "another challenge is connecting with certain people who have strict privacy settings",
+          "role": "basis",
+          "start_char": 8416,
+          "end_char": 8500
+        }
+      ],
+      "candidate_ids": [
+        "C021"
+      ],
+      "final_goal_ids": [
+        "G020"
+      ],
+      "outcome": "represented",
+      "reason": "连接受阻叙述按受阻目的承接核对，障碍记入 G020 条件。"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC025:T019",
+          "quote": "you can upload your resume to Linkedin",
+          "role": "basis",
+          "start_char": 7544,
+          "end_char": 7582
+        },
+        {
+          "source_id": "DOC025:T019",
+          "quote": "you can update your status like indicating you're open to work",
+          "role": "basis",
+          "start_char": 7605,
+          "end_char": 7667
+        }
+      ],
+      "candidate_ids": [
+        "C018",
+        "C019"
+      ],
+      "final_goal_ids": [
+        "G016",
+        "G017"
+      ],
+      "outcome": "represented",
+      "reason": "两处功能说明保留为 insufficient 目标待人工确认，未升为已支持。"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC025:T023",
+          "quote": "I'll just check to some post or some job recommendation",
+          "role": "basis",
+          "start_char": 8994,
+          "end_char": 9049
+        }
+      ],
+      "candidate_ids": [],
+      "final_goal_ids": [
+        "G007",
+        "G012"
+      ],
+      "outcome": "represented",
+      "reason": "每日使用习惯佐证查看帖子与职位推荐两个目标的现实使用，无新增目标。"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC025:T005",
+          "quote": "a feature that is called easy apply. So this feature saves me a lot of time because I can automatically use my Linkedin profile for the application",
+          "role": "basis",
+          "start_char": 1516,
+          "end_char": 1663
+        }
+      ],
+      "candidate_ids": [
+        "C007",
+        "C008"
+      ],
+      "final_goal_ids": [
+        "G006"
+      ],
+      "outcome": "represented",
+      "reason": "申请合并簇回查：easy apply 与提交步骤同属 G006，补充材料步骤为条件。"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC025:T011",
+          "quote": "once I'm a member I can see the post from the group",
+          "role": "basis",
+          "start_char": 4331,
+          "end_char": 4382
+        }
+      ],
+      "candidate_ids": [
+        "C013"
+      ],
+      "final_goal_ids": [
+        "G007",
+        "G011"
+      ],
+      "outcome": "represented",
+      "reason": "群组帖子查看并入 G007、群内连接保留 G011 的拆分核对。"
+    }
+  ],
+  "limitations": [
+    "访谈为口语转写，含重复、口误与转写噪声（如 safe jobs 应为 saved jobs、'2, 3Â HAA day' 应为 2-3 hours a day），语义按上下文理解，原文未改动。",
+    "G016、G017 仅有泛指功能说明，支持不足，留待人工确认。",
+    "访问者（Interviewer）的提问仅用于界定话题范围，未作为涉众意图来源。"
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "786886092d9a48c14277f02e2cf1e00ea12efc2661c4d4f862ed3dc429d73e10",
+    "input_sha256": "5dcf09b4221afb39b594c52fb1a76a2a597e2fea8d797e8d930810a58a4cba44"
+  },
+  "judgments": {
+    "DOC028-C001": {
+      "target_statement": "用真实用户的亲历经验回答具体问题，比泛化搜索更贴合处境。",
+      "label": "direct",
+      "rationale": "T005 明确对比 Reddit 与 Google：前者给亲历经验、更贴合具体处境。",
+      "supported_parts": [
+        "对比：T006「personal experiences over facts」",
+        "可信度判断：T006「mostly legitimate」",
+        "目的：T006「more targeted results to the problem」"
+      ],
+      "unsupported_parts": [
+        "「legitimate」如何判断未说明",
+        "未说明与专业资料的取舍"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取对比",
+        "2. 取目的",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C002": {
+      "target_statement": "卡在技术问题上时，用社区问答替代 Stack Overflow 求解。",
+      "label": "direct",
+      "rationale": "T003 明确说把 Reddit 当 Stack Overflow 的替代，用于卡住时求助。",
+      "supported_parts": [
+        "定位：T004「an alternative for stack overflow」",
+        "场景：T004「when I'm stuck on a problem」"
+      ],
+      "unsupported_parts": [
+        "未说明为何要替代（SO 的什么问题）",
+        "未说明技术版块的具体名称"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取定位",
+        "2. 取场景",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C003": {
+      "target_statement": "在碎片时间里无目的地刷，满足好奇心、打发时间。",
+      "label": "direct",
+      "rationale": "T003 说会仅仅为了杀时间而登录，T025 说空闲时才刷。",
+      "supported_parts": [
+        "动机：T004「just to kill some time」",
+        "时段：T026「when I have like some downtime」"
+      ],
+      "unsupported_parts": [
+        "自述此时「没有特定目标」，与目标式使用相对",
+        "未说明每日时长（只说可能耗掉两小时）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取动机",
+        "2. 取时段",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C004": {
+      "target_statement": "查本地或具体事件的信息（如所在城市万圣节怎么过）。",
+      "label": "direct",
+      "rationale": "T003 以万圣节为例，说会在城市版块按关键词搜本地信息。",
+      "supported_parts": [
+        "做法：T004「browse my city's subreddit with keyword」",
+        "需求：T004「know what happens during Halloween」"
+      ],
+      "unsupported_parts": [
+        "未说明本地信息的时效如何保证",
+        "未说明是否依赖置顶帖"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取做法",
+        "2. 取需求",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C005": {
+      "target_statement": "保持匿名，发帖内容无法轻易追到本人。",
+      "label": "direct",
+      "rationale": "T011 说匿名是 Reddit 的核心价值，帖子难以追溯到人。",
+      "supported_parts": [
+        "判断：T012「the USP. Of Reddit is anonymity」",
+        "机制：T012「hard to trace a post back to the person」"
+      ],
+      "unsupported_parts": [
+        "他同时承认通过发帖史仍可能被识别（T055）",
+        "未说明是否会为此调整发言"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取判断",
+        "2. 取机制",
+        "3. 记录自述的反例",
+        "4. → direct"
+      ]
+    },
+    "DOC028-C006": {
+      "target_statement": "找到最对口的具体 subreddit 提问，以拿到更专业的回答。",
+      "label": "direct",
+      "rationale": "T051 说找 subreddit 很麻烦，T059 提出用 AI 定位并说明价值。",
+      "supported_parts": [
+        "问题：T052「the ability to find a subreddit is quite complicated」",
+        "价值：T060「much more value in posting in a specific subreddit」",
+        "方案：T060「a geni tool to find a particular subreddit」"
+      ],
+      "unsupported_parts": [
+        "未说明「对口」的判定标准",
+        "未说明细分版块人少导致无人回答的问题"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题",
+        "2. 取价值与方案",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C007": {
+      "target_statement": "买产品前看到多方背景的平衡评价，而非清一色好评。",
+      "label": "direct",
+      "rationale": "T033 说 Reddit 评价更平衡、有不同背景的人，据此做过多次购买决策。",
+      "supported_parts": [
+        "判断：T034「more of a balanced perspective」",
+        "效果：T034「made a lot of purchase decisions」"
+      ],
+      "unsupported_parts": [
+        "未说明如何识别软文/刷评",
+        "未说明与专业评测的权重"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取判断",
+        "2. 取效果",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C008": {
+      "target_statement": "健康类问题只取常识性建议，不用于具体诊疗。",
+      "label": "direct",
+      "rationale": "T035 明确划界：一般健康问题可用，具体病症不信也不推荐。",
+      "supported_parts": [
+        "可用：T036「good for general health, related questions」",
+        "边界：T036「would not trust for health, related things specific」"
+      ],
+      "unsupported_parts": [
+        "未说明「一般」与「具体」的分界依据",
+        "未说明是否核实回答者资质"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取可用范围",
+        "2. 取边界",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C009": {
+      "target_statement": "移动端要顺畅好用：能存草稿、能看清评论层级，别比第三方客户端差。",
+      "label": "direct",
+      "rationale": "T027 列举移动端三项问题，T063 再次强调官方 App 应做到最好。",
+      "supported_parts": [
+        "问题：T028「slow and clunky」",
+        "问题：T028「can't save it as a draft」",
+        "诉求：T064「the mobile app ui again should be much better」"
+      ],
+      "unsupported_parts": [
+        "他自己改用桌面端规避，未说明是否还会回移动端",
+        "未说明第三方客户端的具体优势"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取三项问题",
+        "2. 取诉求",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C010": {
+      "target_statement": "看到的内容可信，靠版主与自动审核兜住质量。",
+      "label": "direct",
+      "rationale": "T029 说社区有强版主时帖子可信，人工审核比纯算法可靠。",
+      "supported_parts": [
+        "机制：T030「a strong set of moderators, then the posts themselves are reliable」",
+        "理由：T030「a human element involved in moderating」"
+      ],
+      "unsupported_parts": [
+        "他承认网络内容不可能 100% 可信",
+        "未说明如何判断版主质量"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取机制",
+        "2. 取理由",
+        "3. 记录保留",
+        "4. → direct"
+      ]
+    },
+    "DOC028-C011": {
+      "target_statement": "按场景切换浏览形态：闲逛用卡片、检索用紧凑，并能按时间或热度排序。",
+      "label": "direct",
+      "rationale": "T041–T043 说可排序、可切卡片/紧凑视图，并按使用模式选择。",
+      "supported_parts": [
+        "排序：T042「sort posts by new by top by trending, rising」",
+        "视图：T044「card view or compact view」",
+        "场景匹配：T044「passive activity, I prefer, like card mode」"
+      ],
+      "unsupported_parts": [
+        "未说明默认视图",
+        "未说明是否保存过视图偏好"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取排序",
+        "2. 取视图与场景",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C012": {
+      "target_statement": "广告存在但不打断阅读，最好能完全去掉。",
+      "label": "direct",
+      "rationale": "T045 评价广告克制、位置固定，同时说最好无广告。",
+      "supported_parts": [
+        "评价：T046「The ads are quite subtle」",
+        "密度：T046「only one at any given time」",
+        "偏好：T046「better to have an ad free experience」"
+      ],
+      "unsupported_parts": [
+        "他装了广告拦截，实际体验可能未包含广告",
+        "未说明愿为此付费（T047 说暂时不买）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取评价",
+        "2. 取偏好",
+        "3. → direct"
+      ]
+    },
+    "DOC028-C013": {
+      "target_statement": "断网时仍能读已加载的帖子。",
+      "label": "direct",
+      "rationale": "T039 说断网后仍可读已缓存内容，但不能刷新或发帖。",
+      "supported_parts": [
+        "能力：T040「If you lose Internet connection it does save your feed」",
+        "限制：T040「won't allow you to make new posts, nor will it refresh」"
+      ],
+      "unsupported_parts": [
+        "自评「not very comprehensive」",
+        "未说明缓存保留时长"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取能力",
+        "2. 取限制",
+        "3. → direct"
+      ]
+    }
+  }
+}

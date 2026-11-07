@@ -1,0 +1,173 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "5db3ad17ce48a370c59b84749545f668355a077576074b51aedaf05704a75a2e",
+    "judgments_sha256": "8f07bb9d3e9f9f8a17aa5326158f6293337feed70b1f8775fc813398d7a1dd29"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G008",
+      "child_ids": [
+        "G006",
+        "G007",
+        "G009"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "三项改进分别回应原文点名的三个缺口（通话入口深、正式沟通需邮件、窄窗口难导航），若都实现可能降低弃用动机；但原文从未说这三项共同足以维持使用，且 G008 的理由主要是“校内沟通最快”（R3），与这三项无直接依赖。因此只作为候选组，保留 partial。",
+      "assumptions": [
+        "用户对 Slack 的留用判断会受上述三项改进影响",
+        "三项改进之间无相互替代关系"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC031:T025",
+          "quote": "I don't think it's, it's convincing enough for me to switch to a different application",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R4"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "用户需要在群组里开一次讨论会，且随后要给教授发正式邮件：通话入口更浅、邮件可一键跳转，能减少其转用 Teams 或外部工具的次数。",
+          "outcome": "supports",
+          "rationale": "分析假设场景，与 T021/T027 描述的两个缺口一致，说明子目标对维持使用有正向作用；但只是有帮助，不证明共同充分。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "用户同时开三个窗口与外部工具并排工作，且已持有对方邮箱或电话可直接联系（T023）：此时窄窗口导航与邮件入口的改进都可能被绕过，三项改进同时实现也未必改变留用判断。",
+          "outcome": "counterexample",
+          "rationale": "该异常场景取自 T023 与 T031 的实际做法，说明存在不经过 Slack 的替代路径，组内子目标不构成共同充分条件；故不升级为 supported/complete。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "检索结果过多是否应转为需求？期望方式是过滤、排序、缩小范围还是其他？可接受的筛选成本是多少？原文未给出任何一项。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "三项改进是否被视为维持使用 Slack 的共同条件？原文只把它们列为可改进点，没有说明与留用决定的共同充分关系。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R4",
+      "message": "通话更易访问是否确实增强留用意愿？原文只把“存在通话选项”与不弃用相连，未直接评价改进后的影响。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "已检查但无依据：G002（频道广受众触达）与 G001（按姓名即时触达）虽同属“即时触达”，但对象（广受众 vs 单人）与方式（频道发布 vs 查找个人）不同，T009 用“besides”并列而非包含，不能构成 specialization；与 G004 也无因果或帮助的原句依据，故不建边。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "已检查但无依据：G007（快捷邮件）与 G006（通话更易访问）虽同为改进请求，但原文未说明两者互为方式或彼此帮助；与 G008 也无原句把邮件改进与留用相连（T025 只提到通话选项），故不建边。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "已检查但无依据：G009（窄窗口导航）与 G008（继续使用）在 T031 中只有“可考虑的改进方向”，未出现弃用、切换或留用的表述；与 G005（共享文档）也无跨轮依据，故不建边。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC031-goal-model",
+      "message": "关系阶段已实际执行：按主题簇（即时触达、信息获取、协作共享、通话与邮件、留用、布局、检索）对 10 个目标做了候选对扫描，形成 4 条联系（3 supported、1 proposed）；未成边的同主题对逐条写在上方各目标问题中（G002、G007、G009），G004 与 G002 亦已检查（发帖 vs 获知，方向不通）。精化组只评估了 GR1 一个候选，结论 proposed/partial，成立组为 0。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G005",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "Collaborating with a teammate"
+      ],
+      "assumptions": [],
+      "rationale": "受访者把“即时共享文档”当作实现其第一个目标（即时沟通）的具体方式，并明确说 Slack 提供的是“与队友即时共享文档的简洁方式”。方式目标指向所服务的目的，方向为 G005→G001；原文未称共享文档足以覆盖所有即时沟通场景，故不据此声称充分性。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC031:T013",
+          "quote": "slack provides a pretty neat way to share a document instantly with a teammate",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G003",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "On joining a channel"
+      ],
+      "assumptions": [],
+      "rationale": "频道历史在加入时即可访问，使受访者能看到加入前已有的信息，从而有助于其了解系、项目与校园动态；原文把两者放在同一段连续表述中，前者是实现后者的信息来源，但不是唯一来源（也提到实时浏览频道）。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC031:T009",
+          "quote": "I have access to information that was there before I even joined the channel",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G001",
+      "target_id": "G008",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "受访者明确把“校内沟通最快”作为继续使用 Slack、不切换应用的理由，即时触达能力因此有助于维持目标；这是理由层面的帮助，不表示即时触达足以单独保证留用。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC031:T025",
+          "quote": "I would still use Slack because ultimately, it's the fastest way to communicate with people within the university.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G006",
+      "target_id": "G008",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [
+        "Calling is needed, especially in a group setting"
+      ],
+      "assumptions": [
+        "减少通话入口的导航成本会增强继续使用 Slack 的意愿"
+      ],
+      "rationale": "原文只说明“因为提供协作与通话选项，所以不会弃用”，把通话能力的存在与留用相连；并没有直接说“通话更易访问会让我更愿意留下”。因此按贡献方向保留为 proposed，等待确认，不升级为 supported，也不据此成立精化组。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC031:T025",
+          "quote": "Since it does provide the, you know, the option to collaborate and in, you know, make a call, I wouldn't, you know, abandon the app.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

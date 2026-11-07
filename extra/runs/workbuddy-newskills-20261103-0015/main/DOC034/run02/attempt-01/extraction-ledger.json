@@ -1,0 +1,576 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC034",
+  "input_binding": {
+    "source_input_sha256": "ad62f679efd8b41d1dd9a1c54548eea08c8464760f7a9149e11e52c34290a043",
+    "source_sha256": "2ff16797fffb4e1a64fe36770ddb9ee60e9c6649e58e2efb9d233f1a8e69fbf9",
+    "windows_sha256": "7c781047c2a13faa77be4eecf379f4f5e96e2d2fd9c05db35e4c3b8fd30d77de",
+    "candidates_sha256": "a3a1d3e0cca519c3ba2fd15230f21bf618273153aed6f4d0038083a7730b310e",
+    "extraction_sha256": "a182851503c7414c45e5af7bc0f0b1a76a25f81421831538f895d3b4bd311646"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "deepseek-v4.1-flash",
+    "temperature": "unknown",
+    "budget": "1 initial pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 1,
+    "stop_reason": "完成 13 个窗口的逐窗捕获与全篇校正，未发现需要第二轮定向补查的新有据意图；剩余不确定项（泛指能力表述、过去时偏好、渠道强度）已作为问题保留。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC034:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0009",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0010",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0011",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0012",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC034:W0013",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "逐窗读完后回看全部 27 轮：核对指代（'the task'、'that process'、'it' 分别指向何处）、问答范围（T016 的挫折提问、T018 的演进提问、T020 的增改提问各自回答边界）、条件继承（T003 的 'when I have the availability'、T011 的 'maybe'、T015 的 'if you post something there'）与相反证据（T005 否认职业发展作用、T015 称某些招聘工具更好）；未发现需另记 P2 的补查候选。",
+    "source_ids": [
+      "DOC034:T000",
+      "DOC034:T001",
+      "DOC034:T002",
+      "DOC034:T003",
+      "DOC034:T004",
+      "DOC034:T005",
+      "DOC034:T006",
+      "DOC034:T007",
+      "DOC034:T008",
+      "DOC034:T009",
+      "DOC034:T010",
+      "DOC034:T011",
+      "DOC034:T012",
+      "DOC034:T013",
+      "DOC034:T014",
+      "DOC034:T015",
+      "DOC034:T016",
+      "DOC034:T017",
+      "DOC034:T018",
+      "DOC034:T019",
+      "DOC034:T020",
+      "DOC034:T021",
+      "DOC034:T022",
+      "DOC034:T023",
+      "DOC034:T024",
+      "DOC034:T025",
+      "DOC034:T026"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "'It exists out there just to allow...' 是对平台定位的背景描述，未表达受访者希望达到或维持的状态。"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "保留网络联系这一用途的原意、对象（同事与前同学）与结果（了解近况）。"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "保留营销动作、LinkedIn 渠道与'曝光优于其他渠道'的比较结果。"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "保留招聘动作、人源数量与相对竞争对手的低成本。"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "保留个人求职与薪资观察这一用途，并保留偶发强度。"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "保留看社区活动的意图、时间／精力条件与邮件过载的理由。"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "保留向客户展示存在与资质以增加可信度这一结果。"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "保留身份可核实、照片与本人一致、排除诈骗嫌疑的具体含义。"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "受访者明确否认 LinkedIn 对其职业发展的作用，是否定陈述，无可承接的目标。"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "成本顾虑限定的是同一营销活动，作为条件并入 G002 的 context，不单独设目标。"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对现有发帖工具易用性的正面评价属已实现能力描述，未表达维持或改善的意图。"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "核心结果为跟踪 impressions 与营销指标；付费推广作为取得该结果的方式保留在 context。"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "保留学习内容的用途（快速深入）、质量比较与过去时偏好。"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "保留发布营销／awareness 贴这一核心动作，会议作为例示情境。"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "发布身份的选择是同一发布动作的前提，并入 G010 的 context，不机械拆为独立目标。"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G011"
+      ],
+      "reason": "定时发布有独立的结果依据（impressions 与受众时段），单独成为目标。"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "图片／视频／背景／表情是对同一发布内容的装饰步骤，并入 G010 的 context。"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "'hopefully, eventually win some business' 是期望性后果，未形成可验收的明确目标；曝光意图已由 G010／G011 承接。"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G012"
+      ],
+      "reason": "保留避免冷连接这一否定型意图及'只加认识的人'的范围。"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G013"
+      ],
+      "reason": "保留搜索档案、查看共同点、再考虑添加的完整链条与 C-suite 例子。"
+    },
+    {
+      "candidate_id": "C021",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "每周约 4/5 天的使用频率是事实陈述，未表达要达到或维持的状态。"
+    },
+    {
+      "candidate_id": "C022",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G014"
+      ],
+      "reason": "保留在 Lara jobs 发布招聘以获得更好候选人的意图、条件与比较对象。"
+    },
+    {
+      "candidate_id": "C023",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对平台独特性的信念（'the only game in town'）不含期望状态，未形成目标。"
+    },
+    {
+      "candidate_id": "C024",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G015"
+      ],
+      "reason": "挫折对象明确（广告与定向内容），作为避免型目标保留并标注推断来源。"
+    },
+    {
+      "candidate_id": "C025",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G016"
+      ],
+      "reason": "界面杂物与'有任务时'的情境均明确，作为条件化的避免型目标保留。"
+    },
+    {
+      "candidate_id": "C026",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "这是对 LinkedIn 产品演进方向的观察（'it's tried to focus on'），非受访者目标；营销触达已由 G002 承接。"
+    },
+    {
+      "candidate_id": "C027",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G017"
+      ],
+      "reason": "现有 AI 内容工具作为 G017 的背景条件，其核心诉求是更多自动化。"
+    },
+    {
+      "candidate_id": "C028",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G017"
+      ],
+      "reason": "保留内容开发自动化与缩减市场团队规模这一因果与愿望强度。"
+    },
+    {
+      "candidate_id": "C029",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G018"
+      ],
+      "reason": "保留'专业外观内容 + 免多次评审'的双重含义与原数量表述。"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T003",
+          "quote": "In some areas, you know, marketing the exposure, there is far better than we might get, you know, through Google ads or Facebook out of other channels. So we focus a lot on marketing.",
+          "role": "basis",
+          "start_char": 1305,
+          "end_char": 1488
+        }
+      ],
+      "candidate_ids": [
+        "C003",
+        "C010",
+        "C011"
+      ],
+      "final_goal_ids": [
+        "G002"
+      ],
+      "outcome": "represented",
+      "reason": "营销曝光与成本顾虑在 G002 中承接（成本入 context）；对工具易用性的评价作为现状不另设目标。"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "So I think the task would probably be kind of posting, marketing information are posting like a marketing post just for awareness.",
+          "role": "basis",
+          "start_char": 5632,
+          "end_char": 5762
+        }
+      ],
+      "candidate_ids": [
+        "C014",
+        "C015",
+        "C017"
+      ],
+      "final_goal_ids": [
+        "G010"
+      ],
+      "outcome": "represented",
+      "reason": "发布动作入 G010，发布身份切换与内容装饰并入其 context，避免把步骤拆成目标。"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "most people are going to be logging in, probably tomorrow morning. And so it doesn't really make sense, you know, in the evening, to post it.",
+          "role": "basis",
+          "start_char": 6717,
+          "end_char": 6858
+        }
+      ],
+      "candidate_ids": [
+        "C016"
+      ],
+      "final_goal_ids": [
+        "G011"
+      ],
+      "outcome": "represented",
+      "reason": "定时发布及其 impressions 理由单独成目标 G011，未与发布动作合并。"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T011",
+          "quote": "So I don't often kind of reach out and connect with you know other folks.",
+          "role": "basis",
+          "start_char": 7515,
+          "end_char": 7588
+        }
+      ],
+      "candidate_ids": [
+        "C019",
+        "C020"
+      ],
+      "final_goal_ids": [
+        "G012",
+        "G013"
+      ],
+      "outcome": "represented",
+      "reason": "避免冷连接与查资料后再添加分列 G012／G013；两者的例外关系留作待确认问题。"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T017",
+          "quote": "So I think one frustration would be, you know, sometimes the amount of ads and the amount of you know targeted stuff feels a little much.",
+          "role": "basis",
+          "start_char": 9435,
+          "end_char": 9572
+        }
+      ],
+      "candidate_ids": [
+        "C024",
+        "C025"
+      ],
+      "final_goal_ids": [
+        "G015",
+        "G016"
+      ],
+      "outcome": "represented",
+      "reason": "两项挫折分别转为条件化的避免型目标，均标注为推断来源并保留柔性强度。"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T019",
+          "quote": "I think what it's tried to focus on a lot more is, you know, marketing tools so becoming a lot more targeted so that your posts make in front of the right people.",
+          "role": "basis",
+          "start_char": 10558,
+          "end_char": 10720
+        }
+      ],
+      "candidate_ids": [
+        "C026"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "属平台演进观察，回答的是'LinkedIn 如何变化'，不是受访者要求的达成的状态。"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T013",
+          "quote": "I'd say, let's let's call it 4 out of 5 days a week I'm on Linkedin in some way, shape or form.",
+          "role": "basis",
+          "start_char": 8417,
+          "end_char": 8512
+        }
+      ],
+      "candidate_ids": [
+        "C021"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "使用频率事实，回答'多久用一次'，未含目标意图。"
+    },
+    {
+      "check_id": "S8",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T005",
+          "quote": "So for my own professional development. I can't say it's actually played that much of a role.",
+          "role": "basis",
+          "start_char": 2725,
+          "end_char": 2818
+        }
+      ],
+      "candidate_ids": [
+        "C009"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "否定陈述，与职业发展目标相反，不能改成要求。"
+    },
+    {
+      "check_id": "S9",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T015",
+          "quote": "If you post something there, you actually get better candidates than you might get from yeah posting something on Linkedin.",
+          "role": "basis",
+          "start_char": 8891,
+          "end_char": 9014
+        }
+      ],
+      "candidate_ids": [
+        "C022",
+        "C023"
+      ],
+      "final_goal_ids": [
+        "G014"
+      ],
+      "outcome": "represented",
+      "reason": "渠道比较转为 G014；'only game in town'的信念不进入目标。"
+    },
+    {
+      "check_id": "S10",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T001",
+          "quote": "It exists out there just to allow kind of professionals to connect and you know, live in the business world.",
+          "role": "basis",
+          "start_char": 736,
+          "end_char": 844
+        }
+      ],
+      "candidate_ids": [
+        "C001"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "平台定义属背景，无受访者期望状态。"
+    },
+    {
+      "check_id": "S11",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "So once I've posted it, it goes out to the network and it's on the feed, so I'll start to kind of get some interactions.",
+          "role": "basis",
+          "start_char": 7064,
+          "end_char": 7184
+        }
+      ],
+      "candidate_ids": [
+        "C018"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "获互动与赢得生意是'hopefully'修饰的期望后果，未形成可验收目标。"
+    }
+  ],
+  "limitations": [
+    "原文为英文访谈转写，含口语重复与识别噪声（如 'Linda' 指 Lynda、'Lara jobs'），未做人工校对。",
+    "材料仅覆盖单一受访者的使用经验，未涉及其他角色，目标范围限于所提供的访谈。",
+    "未对 'maybe'、'hopefully'、'would be great' 等弱化语气做量化，强度按原词保留。"
+  ]
+}

@@ -1,0 +1,589 @@
+{
+  "document_id": "DOC036",
+  "artifact_type": "isolated_model_reviewer_source_intent_inventory",
+  "human_gold": false,
+  "source_only": true,
+  "domain": "Instagram 本地购物、信任判断与有限社交",
+  "scope": "以本地商家发现、选购礼物、联系商家及控制自身社交应用使用为中心；社交作为相关的次要范围。",
+  "methodology": "逐段完整阅读原文后人工式语义判断；条目由评审模型编写，程序仅校验引用和序列化，不以关键词抽取代替理解。未读取技能、论文目标、tests、生成结果或既有评估。条目不是最终目标模型，不规定唯一层次或粒度。",
+  "intents": [
+    {
+      "intent_id": "DOC036:I01",
+      "intent": "在特殊场合寻找并购买合适礼物",
+      "subject": "受访购物者",
+      "conditions": "如情人节给女友挑蛋糕、花等时",
+      "modality": "明确主要用途",
+      "exceptions": "也可无预定商品浏览；非仅限某节日、女友或蛋糕",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T010",
+          "quote": "I use Instagram mainly to shop on days like Valentine's Day",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1019,
+          "quote_end_char": 1078,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T010",
+          "quote": "get like really good cakes. And and I and I order from there.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1685,
+          "quote_end_char": 1746,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I02",
+      "intent": "从商品展示获得设计参考并在线下市场寻找类似商品",
+      "subject": "受访购物者",
+      "conditions": "服饰等购买情境",
+      "modality": "明确第二购物用途",
+      "exceptions": "不是所有购物都在应用内下单或配送",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T010",
+          "quote": "I'll go to an actual market and ask for those. These designs I would have seen like online.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2243,
+          "quote_end_char": 2334,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I03",
+      "intent": "在新地点快速发现本地商家、货品、位置和联系方式",
+      "subject": "经常搬迁的受访者",
+      "conditions": "不熟悉当地且停留可能短暂时",
+      "modality": "明确便利目的",
+      "exceptions": "出于便利而非明确排斥其他购物渠道",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T056",
+          "quote": "when you go to a new place. You don't really know, like the vendors there",
+          "speaker": "Stakeholder",
+          "quote_start_char": 24175,
+          "quote_end_char": 24248,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T056",
+          "quote": "see where vendors are, cause their bios. You also have their location. which number to call which products they have.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 24386,
+          "quote_end_char": 24503,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I04",
+      "intent": "按商品词搜索商家，必要时加地点使结果相关",
+      "subject": "购物者",
+      "conditions": "寻找特定产品或供应商时",
+      "modality": "明确搜索策略",
+      "exceptions": "结果为商家账户；附近搜索是否自动定位本人表示不确定",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T012",
+          "quote": "if I don't see immediately what I'm looking for, I'll just add maybe the name of the location.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3505,
+          "quote_end_char": 3599,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T014",
+          "quote": "It. It shows me it would show me the accounts.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3919,
+          "quote_end_char": 3965,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I05",
+      "intent": "重用历史搜索快速回到以前访问过的商家",
+      "subject": "购物者",
+      "conditions": "隔一段时间再次使用时",
+      "modality": "明确赞赏的便利",
+      "exceptions": "与不愿登录及清历史自控策略并存，不代表希望永远跨所有场景保留历史",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T024",
+          "quote": "I don't have to. Always, you know, search for vendors. I can just pick one I used in the past.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9722,
+          "quote_end_char": 9816,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I06",
+      "intent": "通过商家图库及商品多样性开放地发现适合的购买选择",
+      "subject": "购物者",
+      "conditions": "尚无具体商品或比较选项时",
+      "modality": "明确喜欢的探索方式",
+      "exceptions": "不要求每次都先定好产品；具体布局只是当前描述",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T022",
+          "quote": "I don't have a particular product in mind.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7701,
+          "quote_end_char": 7743,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T022",
+          "quote": "see like a bunch of products from one vendor with different varieties.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8352,
+          "quote_end_char": 8422,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I07",
+      "intent": "查看评论、点赞及其与商品发布时间的合理关系以判断商家可信度",
+      "subject": "购物者",
+      "conditions": "决定向哪个账户购买时",
+      "modality": "明确风险筛查策略",
+      "exceptions": "不是平台正式排名、认证或单纯点赞越多越好；人工经验也不保证识别所有诈骗",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T024",
+          "quote": "The good with the gallery is that when you go to the gallery you have people commenting, and you also have likes.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10146,
+          "quote_end_char": 10259,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T062",
+          "quote": "The the products you uploaded 6 months ago would probably have more likes and more engagement than the 2 products you just uploaded today.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 28191,
+          "quote_end_char": 28329,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I08",
+      "intent": "避免恶意商家收款不交货造成损失",
+      "subject": "购物者",
+      "conditions": "面对可疑账户时",
+      "modality": "明确安全目的",
+      "exceptions": "受访者未实际损失钱；一次通过要求交货后付款避险，不可编造受害结果",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T014",
+          "quote": "when you send that money you will not get the product delivered to you",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4986,
+          "quote_end_char": 5056,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T014",
+          "quote": "I didn't lose my money",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5243,
+          "quote_end_char": 5265,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T014",
+          "quote": "you have to deliver before I pay you.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5326,
+          "quote_end_char": 5363,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I09",
+      "intent": "取得商家联系方式并通过适合渠道快速沟通",
+      "subject": "购物者和商家",
+      "conditions": "选好商品并询问/订购时",
+      "modality": "明确流程偏好",
+      "exceptions": "可用 Instagram chat；通常偏好商家给出的电话/WhatsApp，因为不要求商家总在线",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T016",
+          "quote": "in the account, bio, that that is where I would see, like, maybe their phone number",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5879,
+          "quote_end_char": 5962,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T016",
+          "quote": "I would always prefer to, you know, reach out to the number they've specified, because that way the communication is quicker.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6505,
+          "quote_end_char": 6630,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I10",
+      "intent": "直接在商家页面看到商品价格以减少联系询价",
+      "subject": "购物者",
+      "conditions": "比较、考虑商品时",
+      "modality": "明确改进愿望",
+      "exceptions": "对商家不标价的原因只是受访者推测；非已存在标价能力",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T058",
+          "quote": "I feel like they should put on the website on. I'm sorry on the pages",
+          "speaker": "Stakeholder",
+          "quote_start_char": 25491,
+          "quote_end_char": 25560,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T058",
+          "quote": "They don't put the price of the products.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 25599,
+          "quote_end_char": 25640,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I11",
+      "intent": "沟通价格、付款方式和送货地址并接收交付通知取得商品",
+      "subject": "购物者/商家",
+      "conditions": "正常确认订单后",
+      "modality": "明确现行跨应用流程",
+      "exceptions": "正常叙述先付款后配送；商家电话告知将到或已到，不是应用内自动追踪保证",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T058",
+          "quote": "ask for the phone number I can use for the payment.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 25921,
+          "quote_end_char": 25972,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T058",
+          "quote": "confirm my address",
+          "speaker": "Stakeholder",
+          "quote_start_char": 26016,
+          "quote_end_char": 26034,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T058",
+          "quote": "They'll give me a phone call.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 26195,
+          "quote_end_char": 26224,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I12",
+      "intent": "不登录也能浏览、搜索及查看商家资料",
+      "subject": "购物者",
+      "conditions": "想快速查看商品且不愿显示在线时",
+      "modality": "明确强烈改进愿望",
+      "exceptions": "匿名浏览有直接多处支持；匿名发帖仅采访者后期加入，不应等强度处理",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T024",
+          "quote": "I would have loved to use the application without signing in",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8947,
+          "quote_end_char": 9007,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T052",
+          "quote": "even if it's to view the profile of the vendor.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 22637,
+          "quote_end_char": 22684,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T054",
+          "quote": "Exactly. Yeah.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 23638,
+          "quote_end_char": 23652,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I13",
+      "intent": "限制不必要使用、避免无限滚动等机制耗费时间与影响消费",
+      "subject": "受访者",
+      "conditions": "无明确购物需要时",
+      "modality": "明确自我管理目的",
+      "exceptions": "有需要时仍用；退出登录、删应用/历史等为自控手段，不是要求平台自动删除所有数据",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T032",
+          "quote": "only use it when I have, you know, a need for it.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 16193,
+          "quote_end_char": 16242,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T034",
+          "quote": "very time consuming.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 17594,
+          "quote_end_char": 17614,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T052",
+          "quote": "I just I just kinda lock out myself and then delete the application on my phone.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 22224,
+          "quote_end_char": 22304,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I14",
+      "intent": "购物期内暂时保持登录以减少反复登录成本",
+      "subject": "购物者",
+      "conditions": "如节日前连续寻找礼物时",
+      "modality": "明确绕行策略",
+      "exceptions": "需求完成后再退出，与理想匿名浏览需求区分",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T052",
+          "quote": "leave myself to be, you know. locked in.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 23066,
+          "quote_end_char": 23106,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T052",
+          "quote": "once that period, you know, elapses. I can. And I've I've gotten what I want. I can log out from it.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 23111,
+          "quote_end_char": 23211,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I15",
+      "intent": "把个人分享限定给亲近朋友以保护生活隐私",
+      "subject": "受访社交用户",
+      "conditions": "偶尔发布生活内容及在线可见性时",
+      "modality": "明确个人隐私偏好",
+      "exceptions": "购物不是唯一讨论范围；本人私密账号，不表示要求商家账号全部私密",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T026",
+          "quote": "I make sure I have a private account",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12330,
+          "quote_end_char": 12366,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T026",
+          "quote": "only very close friends",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12412,
+          "quote_end_char": 12435,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T026",
+          "quote": "just my very close friends would see I'm online.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 12627,
+          "quote_end_char": 12675,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I16",
+      "intent": "通过关注关系在电话号码或邮箱变更后仍能重新联系朋友",
+      "subject": "经常跨国搬迁的社交用户",
+      "conditions": "需要保持或恢复朋友联系时",
+      "modality": "明确次要社交价值",
+      "exceptions": "采访者为简洁主要聚焦购物；该意图仍由受访者明确说出",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T030",
+          "quote": "I can always, you know, reconnect with you by getting in touch with you, using using the application.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 14405,
+          "quote_end_char": 14506,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC036:I17",
+      "intent": "参考他人服饰等社交内容形成购买灵感",
+      "subject": "购物者",
+      "conditions": "看到别人穿戴等内容时",
+      "modality": "明确影响机制，目标性弱于直接购物目的",
+      "exceptions": "本人也担心无意识影响并减少无目的使用；不能误写为希望增加诱导消费",
+      "epistemic_status": "推断",
+      "evidence": [
+        {
+          "source_id": "DOC036:T032",
+          "quote": "it will kind of play a role in me, actually acquiring it",
+          "speaker": "Stakeholder",
+          "quote_start_char": 15575,
+          "quote_end_char": 15631,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T032",
+          "quote": "I try to stay away from it a lot",
+          "speaker": "Stakeholder",
+          "quote_start_char": 15892,
+          "quote_end_char": 15924,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    }
+  ],
+  "background_candidates": [
+    {
+      "item": "Facebook类比的groups、名人关注和hashtags讲解",
+      "reason": "关于其他功能的一般解释，群组本人未用且推断存在；不是本人的购物核心需求。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T044",
+          "quote": "groups on Instagram I haven't used",
+          "speaker": "Stakeholder",
+          "quote_start_char": 20178,
+          "quote_end_char": 20212,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T036",
+          "quote": "you could also more or less follow like groups or hashtags.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 18537,
+          "quote_end_char": 18596,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    },
+    {
+      "item": "匿名发帖的后期采访者归纳",
+      "reason": "T071在已明确匿名浏览之外加了匿名发帖，T072简短同意不能等同详细独立陈述；作为弱候选保留，匹配时不强制认定遗漏。",
+      "epistemic_status": "不确定",
+      "evidence": [
+        {
+          "source_id": "DOC036:T071",
+          "quote": "anonymous browsing or anonymous posting.",
+          "speaker": "Interviewer",
+          "quote_start_char": 29561,
+          "quote_end_char": 29601,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T072",
+          "quote": "Yeah. Yes.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 29674,
+          "quote_end_char": 29684,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    },
+    {
+      "item": "商家业务账户发布产品、Amazon一键支付比较",
+      "reason": "说明服务边界，受访者为买方；不能由此添加其经营商店、平台托管付款或物流服务目标。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC036:T010",
+          "quote": "have it as a business account on Instagram",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1303,
+          "quote_end_char": 1345,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC036:T014",
+          "quote": "you need to still get in touch with the vendor",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4484,
+          "quote_end_char": 4530,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "受访者推测搜索自动基于附近位置，后面有手工加地点词的明确策略，不应断言系统定位保证。",
+    "T014可疑商家时要求先交货付款，T058通常流程则先付钱后配送；需保留场景差异，不能统一成强制先货后款。",
+    "T062明确纠正采访者“排名系统”，其实际是人工看点赞评论与发帖时间是否合理。",
+    "T071采访者把匿名浏览扩成匿名发帖，仅获宽泛简短附和；匿名发帖支持较弱。",
+    "groups 由 Facebook 类比而来，本人未在 Instagram 使用，不应视为已确证功能。"
+  ],
+  "source_document_hash_declared": "7358eb5f5fb3c5e955d634f132f17c54f5f5229dc069747a3d117eaab02ad7ef",
+  "read_range": {
+    "first_source_id": "DOC036:T000",
+    "last_source_id": "DOC036:T076",
+    "turn_count": 77,
+    "read_completely": true,
+    "reading_note": "全文语义阅读；DOC003首次长输出中段被截断后，已单独补读T066–T096。DOC028、DOC036分别按turn分段读完。其他文档完整读取。"
+  }
+}

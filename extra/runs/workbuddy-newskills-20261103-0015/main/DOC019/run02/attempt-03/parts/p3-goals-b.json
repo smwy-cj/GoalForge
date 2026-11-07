@@ -1,0 +1,190 @@
+[
+  {
+    "candidate_id": "G018",
+    "statement": "Keep a watchlist of interesting stocks and keep a tab on them",
+    "actor": "Stakeholder",
+    "context": ["使用频率不高但会持续留意（I don't use it a lot, but I do keep a tab）", "watchlist 是他登录后看到的第一个仪表盘内容（T032）"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [
+      {"source_id": "DOC019:T036", "quote": "I also like the watchlist feature. I I don't use it a lot, but I do keep a tab on some interesting stocks that I feel I might use.", "role": "basis"},
+      {"source_id": "DOC019:T032", "quote": "it shows me a dashboard in which I can like view whatever stocks that I have put in my watch list", "role": "context"}
+    ],
+    "judgment": {"label": "direct", "rationale": "T036 明确说他喜欢自选股功能并会持续留意感兴趣的股票，同时保留使用频率不高的限定；T032 说明登录后即可看到自选股。未把低频使用改写为不使用。", "supported_parts": ["关注并持续留意感兴趣的股票", "自选股列表"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T036 明确表述及频率限定", "T032 补充入口"]}
+  },
+  {
+    "candidate_id": "G019",
+    "statement": "Review the orders already placed",
+    "actor": "Stakeholder",
+    "context": ["在投资组合页内查看（T032）", "下单本身由 G012 承接，此处仅指查看已下订单"],
+    "origin": "inferred",
+    "inference": {"basis_candidate_ids": ["G016"], "reason": "他在描述典型会话时说明会在投资组合页查看已下的订单，这是每日跟踪持仓与市场变动（G016）的具体内容之一；查看已下订单的意图由持续使用推断。", "assumptions": ["把典型会话中列出的操作视为其有意执行的操作", "原文未对订单列表提出改进要求或具体字段"]},
+    "evidence": [{"source_id": "DOC019:T032", "quote": "I can look at the orders that I have placed. I can make some new orders if I want to.", "role": "basis"}],
+    "judgment": {"label": "inferred", "rationale": "原文为描述典型会话时列出的能力（I can look at the orders that I have placed），未以'我希望'的形式提出，也未说明查看订单的目的与频率；意图由持续使用及其每日跟踪（G016）推断。下单部分已由 G012 承接，此处不重复。", "supported_parts": ["查看已下订单"], "unsupported_parts": [], "assumptions": ["持续使用视为有意使用"], "reasoning_steps": ["T032 描述典型会话", "与 G016 的每日跟踪一致", "推断查看意图"]}
+  },
+  {
+    "candidate_id": "G020",
+    "statement": "Decide on a holding by considering its market-cap segment (small / mid / large cap), the attached risk and liquidity, and its performance over the past about 3 to 6 months",
+    "actor": "Stakeholder",
+    "context": ["流动性指更容易买入或卖出", "小市值看近 3 个月、大市值看近 6 个月表现", "适用于他做投资决策的场景（T021 追问决策过程）"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [
+      {"source_id": "DOC019:T022", "quote": "There is a 1 kind of segmentation called a small cap, mid cap and large cap, stocks", "role": "basis"},
+      {"source_id": "DOC019:T022", "quote": "I see how they have performed in the past 3 months.", "role": "context"},
+      {"source_id": "DOC019:T022", "quote": "by liquid. What I mean is, you can sell it, or you can buy it easily, much easier than a small cap stock", "role": "context"},
+      {"source_id": "DOC019:T022", "quote": "if they have not really performed well in the past 6 months.", "role": "context"}
+    ],
+    "judgment": {"label": "direct", "rationale": "T022 在被追问决策过程时明确列出他关注的维度：市值分层（小/中/大）、风险高低、流动性以及近 3 个月（小市值）与近 6 个月（大市值）的表现。这些是该目标的核心判断依据，时间与分层条件按原文保留。", "supported_parts": ["按市值分层、风险与流动性判断", "参考近 3-6 个月表现"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T022 明确列出决策因素", "同轮给出 3 个月与 6 个月两个观察窗口"]}
+  },
+  {
+    "candidate_id": "G021",
+    "statement": "Exit a large cap holding that has not performed well over about the past 6 months, because it indicates investors are pulling out",
+    "actor": "Stakeholder",
+    "modality_note": "",
+    "context": ["触发条件为大市值股近 6 个月表现不佳", "理由是有投资者在撤出、可能掌握他所没有的信息"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [
+      {"source_id": "DOC019:T022", "quote": "if they have not really performed well in the past 6 months. It is an indicator that a lot of people who have invested there are pulling out.", "role": "basis"},
+      {"source_id": "DOC019:T022", "quote": "at this point of time I would be inclined to get my stocks out of here.", "role": "context"}
+    ],
+    "judgment": {"label": "direct", "rationale": "T022 明确说明大市值股近 6 个月表现不佳时他会倾向撤出，并给出判断依据。强度为 I would be inclined to（倾向），未改写成必然规则。", "supported_parts": ["大市值股近 6 个月表现不佳时撤出"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T022 明确条件与动作"]}
+  },
+  {
+    "candidate_id": "G022",
+    "statement": "Sell a holding when he feels the profit from that trade has been maximized",
+    "actor": "Stakeholder",
+    "context": ["以'觉得利润已最大化'为主观判断", "与按表现撤出（G021）属不同触发条件"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [{"source_id": "DOC019:T022", "quote": "if I feel that I have maximized the amount of profit that I have to take from this particular transaction or trade, I would buy out my profits and sell the stock.", "role": "basis"}],
+    "judgment": {"label": "direct", "rationale": "T022 明确说明当他认为该笔交易的利润已达最大时，会兑现利润并卖出。主观判断（I feel）与获利目标均未替换为客观阈值。", "supported_parts": ["利润达到最大化时卖出兑现"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T022 明确条件与动作"]}
+  },
+  {
+    "candidate_id": "G023",
+    "statement": "Stay invested in a small cap stock even when it has gone down recently, if he has a positive outlook on it",
+    "actor": "Stakeholder",
+    "context": ["例外/容忍条件：对按表现撤出的例外", "理由是他认为下跌是因为他人尚未看到其潜力"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [
+      {"source_id": "DOC019:T022", "quote": "even if they have gone a bit down, I would still be fine with it, because I am taking a risk here", "role": "basis"},
+      {"source_id": "DOC019:T022", "quote": "I would keep a bet on it.", "role": "context"},
+      {"source_id": "DOC019:T022", "quote": "they will see the potential in the next few months or so", "role": "context"}
+    ],
+    "judgment": {"label": "direct", "rationale": "T022 明确说明小市值股即使近 3 个月下跌，只要他对这只股票有正面预期就会继续持有。这是他明确给出的例外条件，与 G021 的撤出规则并存，未合并成单一规则。", "supported_parts": ["小市值股短期下跌时按正面预期继续持有"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T022 明确例外与理由"]}
+  },
+  {
+    "candidate_id": "G024",
+    "statement": "Focus on long-term investments rather than intraday trading",
+    "actor": "Stakeholder",
+    "context": ["指认真交易阶段（最初一个月为试水）", "偏好表述（when I say trading, I mean ...）"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [{"source_id": "DOC019:T020", "quote": "when I say trading, I mean long term investments, mostly not intraday trading", "role": "basis"}],
+    "judgment": {"label": "direct", "rationale": "T020 明确说明他所谓的交易是长期投资、基本不做日内交易。原文使用 mostly not（基本不做），保留了强度而非绝对禁止。", "supported_parts": ["以长期投资为主", "基本不做日内交易"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T020 明确表述"]}
+  },
+  {
+    "candidate_id": "G025",
+    "statement": "Avoid exposure to highly volatile cryptocurrencies and to scam coins",
+    "actor": "Stakeholder",
+    "context": ["相对于股票与印度股市而言", "规避对象为高波动与诈骗币两类"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [{"source_id": "DOC019:T020", "quote": "I have been averse to doing cryptocurrency trades compared to stock stock trades, because. 1st of all, the market is very, very volatile for cryptocurrencies, then. Stocks, Indian stocks, Indian equity. and sometimes there are scam coins that just come up in cryptocurrency.", "role": "basis"}],
+    "judgment": {"label": "direct", "rationale": "T020 明确说明他对加密货币交易持规避态度，理由是高波动与诈骗币。目标按避免型保留，未反过来写成必须完全不持有加密货币（他同时表示会持续买入蓝筹币）。", "supported_parts": ["规避高波动的加密货币", "规避诈骗币"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T020 明确规避表述与两条理由"]}
+  },
+  {
+    "candidate_id": "G026",
+    "statement": "Keep cryptocurrency investment to blue chip coins (bitcoin, ethereum, polygon) as relatively safe investments",
+    "actor": "Stakeholder",
+    "context": ["会持续买入（continually invest）", "理由是被视为相对安全的投资"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [
+      {"source_id": "DOC019:T020", "quote": "I did use to continually invest in them, because they are relatively safe investments.", "role": "basis"},
+      {"source_id": "DOC019:T020", "quote": "the ones that are very popular, like bitcoin, ethereum, polygon, and stuff", "role": "context"}
+    ],
+    "judgment": {"label": "direct", "rationale": "T020 明确说明他会持续买入蓝筹币并给出理由（相对安全），同句给出具体币种示例。示例按原文保留为示例，未固化为唯一清单。", "supported_parts": ["持续投资蓝筹币", "理由是相对安全"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T020 明确表述与示例"]}
+  },
+  {
+    "candidate_id": "G027",
+    "statement": "Keep the amount invested in stocks much higher than the amount invested in cryptocurrencies",
+    "actor": "Stakeholder",
+    "context": ["比较对象是自己的股票投入与加密投入", "强度为 much, much higher"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [{"source_id": "DOC019:T020", "quote": "the amount of investment that I did in stock was definitely much, much higher than the amount of investments that I did in cryptocurrencies.", "role": "basis"}],
+    "judgment": {"label": "direct", "rationale": "T020 明确说明其股票投入远高于加密货币投入。目标保留比较结构与强度，未换算为具体比例或金额。", "supported_parts": ["股票投入显著高于加密投入"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T020 明确比较表述"]}
+  },
+  {
+    "candidate_id": "G028",
+    "statement": "Have the option of investing in mutual funds in the app, apart from just stocks",
+    "actor": "Stakeholder",
+    "context": ["认为更安全，可投入更大金额且更信任", "可行性不确定（I'm not sure how feasible it is）", "也不确定这是否是应用方的目标（I'm not sure if that is their goal or not）"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [
+      {"source_id": "DOC019:T046", "quote": "I'm not sure how feasible it is, but if they also had an option of investing in mutual funds and mutual funds apart from just stocks. I think that would be much more safer.", "role": "basis"},
+      {"source_id": "DOC019:T046", "quote": "You would be able to put in money in there in a lot more quantity and in with a lot more trust factor than individually putting in stocks. But yeah, I'm not sure if that is their goal or not.", "role": "context"}
+    ],
+    "judgment": {"label": "direct", "rationale": "T046 明确提出希望应用除股票外也能投资共同基金，并给出更安全、可投入更大金额与更信任的理由。可行性与应用方意图的不确定已在 context 保留，未把建议升级为确定要求。", "supported_parts": ["应用内提供共同基金投资选项"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T046 明确愿望句与理由"]}
+  },
+  {
+    "candidate_id": "G029",
+    "statement": "Place orders by voice (voice based orders)",
+    "actor": "Stakeholder",
+    "context": ["可行性不确定（if it is possible / I'm not sure）", "作为最想增加的一项功能被提出（an addition）"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [{"source_id": "DOC019:T058", "quote": "an addition of a voicing feature would be very good. I'm not sure. So voice based orders, if it is possible. or voice based summarization.", "role": "basis"}],
+    "judgment": {"label": "direct", "rationale": "T058 在回答'只能改一项'时明确提出语音下单是他希望增加的功能。不确定语气指向可行性，已保留在 context。与语音摘要在原文中以 or 并列，保留为替代关系而非必须同时具备。", "supported_parts": ["语音下单"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T058 明确表述"]}
+  },
+  {
+    "candidate_id": "G030",
+    "statement": "Get voice based summarization",
+    "actor": "Stakeholder",
+    "context": ["可行性不确定", "与语音下单以 or 并列的替代方案"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [{"source_id": "DOC019:T058", "quote": "an addition of a voicing feature would be very good. I'm not sure. So voice based orders, if it is possible. or voice based summarization.", "role": "basis"}],
+    "judgment": {"label": "direct", "rationale": "T058 明确把语音摘要作为语音功能的另一种可能形式提出。与 G029 属替代（or）关系，未拆成必须同时实现。", "supported_parts": ["语音摘要"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T058 明确表述"]}
+  },
+  {
+    "candidate_id": "G031",
+    "statement": "Avoid having to go into the app all the time just to check whatever he wants to ask",
+    "actor": "Stakeholder",
+    "context": ["避免型诉求（reduce the pain）", "语音功能（G029/G030）所服务的目的"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [{"source_id": "DOC019:T058", "quote": "that would help me reduce the pain of going into the app all the time to check it whatever I want to ask", "role": "basis"}],
+    "judgment": {"label": "direct", "rationale": "T058 明确表述反复打开应用查看是一处痛点并希望减少。目标按避免型保留，未限定必须零次打开或指定替代入口。", "supported_parts": ["减少反复打开应用查看的负担"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T058 明确表述痛点"]}
+  },
+  {
+    "candidate_id": "G032",
+    "statement": "Stay with the current app once set up and avoid switching to a new app, because setting up the system is time taking",
+    "actor": "Stakeholder",
+    "context": ["例外：新应用有他觉得离不开、非常惊艳的功能时可能转换", "转换意愿自评为 1-2（1 为最不倾向）"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [
+      {"source_id": "DOC019:T060", "quote": "I already have a system set up in front of me, and setting up the system is is like a time taking task in this scenario. So once I have set up, I don't think I would be very inclined to go to it", "role": "basis"},
+      {"source_id": "DOC019:T060", "quote": "unless and until there is some very mind blowing feature in that app that I feel that I need it, and I can't be without it.", "role": "context"}
+    ],
+    "judgment": {"label": "direct", "rationale": "T060 明确说明因为重新配置系统耗时，一旦配置好就不倾向更换应用，并给出例外条件。例外（unless and until ...）已在 context 保留，未写成绝对不换。", "supported_parts": ["配置完成后不倾向更换应用"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T060 明确表述与例外"]}
+  },
+  {
+    "candidate_id": "G033",
+    "statement": "Use a trading app that is user friendly and easy to use",
+    "actor": "Stakeholder",
+    "context": ["选择加密货币应用时明确给出的理由（Binance 因 user friendly 被选中）", "0 Dha 被评价为最简单的一个，但仍被认为复杂（T054）"],
+    "origin": "explicit",
+    "inference": null,
+    "evidence": [
+      {"source_id": "DOC019:T012", "quote": "I used binance because it was very user friendly at that point of time", "role": "basis"},
+      {"source_id": "DOC019:T016", "quote": "The reason I found binance to be the best was They had a very seamless interface to do the exchange", "role": "context"}
+    ],
+    "judgment": {"label": "direct", "rationale": "T012 明确把 user friendly 作为选用 Binance 的理由；T016 把无缝界面作为评为最佳的理由。这是他选择并继续使用交易应用所依据的质量目标，未写成具体界面指标（原文未给出）。", "supported_parts": ["应用易用、界面友好"], "unsupported_parts": [], "assumptions": [], "reasoning_steps": ["T012 明确选择理由", "T016 一致评价"]}
+  }
+]

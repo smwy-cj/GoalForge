@@ -1,0 +1,106 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "e10d51bec285070594c48cc41a0d759b939d997f5a393dfd59456154cf669007",
+    "judgments_sha256": "87d1952d35219930e30ba536e6fc5a918a89b406f4e0c0e9a41fabf7b813b47f"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G005",
+      "message": "按时间分类指阅读时间还是加入资料库的时间？T055 原话偏向阅读时间，T064 复述为加入时间，受访者只作总体确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G001",
+      "message": "统一阅读应用是全新独立应用、现有 Kindle 应用的扩展，还是学校门户内功能？T043、T047、T057、T064 分别指向不同落点。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G003",
+      "message": "导出的目标地应为 Google Drive、Kindle 账户还是统一应用本身？受访者说 I don't know，当前只保留“一个选定目的地”。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G006",
+      "message": "是否需要同时保留整本书的百分比？T049 先用整本 20% 举例，后明确要求按章显示。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "“They should be included”应纳入何处（学费/学校既有服务/应用功能）？这影响责任方与验收。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "“不先下载到电脑”是硬性条件还是仅更快的路径？原文把它与少步骤并列，未说明保留中转是否可接受。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC018-goal-model",
+      "message": "本模型未建立 AND 精化组：原文的四项功能是并列候选而非共同充分的一组，且导出与学校应用更像替代路径；如需层级，需补充共同充分性证据。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G003",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "For course articles delivered through the school portal"
+      ],
+      "assumptions": [],
+      "rationale": "导出功能是减少“下载到电脑→打开 Drive→导出 PDF”步骤的具体实现方式：同句把“export it to drive like very easily”与“not to download it to my computer”连在一起，说明导出服务于少步骤导入 iPad 的目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T037",
+          "quote": "if my in in my course, or in my assignment. They send some articles I can actually export it to to drive like very easily and not to download it to my computer.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G008",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "让现有 Kindle 应用管理 PDF 是“把 PDF 与电子书集中到一个应用”的一种选定实现方式；受访者说这样“会更方便”，未声称它足以覆盖全部阅读情境。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T043",
+          "quote": "I would say, it will be easier if my existing kindle app can manages Pdfs.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G007",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "School reading context only"
+      ],
+      "assumptions": [],
+      "rationale": "学校自建的在线阅读应用是“把阅读集中到一个应用”在校园情境下的具体化；教授发的文章直接在 iPad 上可读，但原文未说该应用覆盖校外的 Kindle 电子书与新闻阅读，故不声称覆盖一般目标的全部范围。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC018:T057",
+          "quote": "the school should have its own application for for online reading",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

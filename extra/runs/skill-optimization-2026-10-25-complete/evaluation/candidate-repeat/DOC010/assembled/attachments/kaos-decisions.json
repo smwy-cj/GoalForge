@@ -1,0 +1,226 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "d3e693d3fe170633f58e5a1256c33a85ea7dfd90bd977f152cd2f61dd8b9dc0e",
+    "judgments_sha256": "f00909f745dde572dd2b372e699ea43f88295bbe39b7867ccb9a524a725e1108"
+  },
+  "groups": [
+    {
+      "group_id": "FG001",
+      "parent_id": "G001",
+      "child_ids": [
+        "G002",
+        "G003",
+        "G004"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "原文列举主要规划用途，但未给出所有规划需要的封闭定义。",
+      "assumptions": [
+        "场景仅为作者概念层检查，不是形式化充分性证明。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "So for me, primary purpose is a planning. So whenever I use weather app, it's either to plan what I have to wear on a particular day or plan my outdoor activities. or just plan my trip or something.",
+          "role": "basis",
+          "start_char": 926,
+          "end_char": 1124
+        }
+      ],
+      "relation_ids": [
+        "R001",
+        "R002",
+        "R003"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "日常穿衣、户外和旅行安排均有天气信息时可支持该次规划。",
+          "outcome": "supports",
+          "rationale": "在所述条件下可解释这些子目标如何服务父目标；不扩大到所有场景。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "携带物品和交通方式的决定仍可缺失；三类安排完成不保证所有天气规划充分。",
+          "outcome": "counterexample",
+          "rationale": "未解决的充分性缺口保留候选；不补造根、额外前提目标或完整性。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "FG001",
+      "message": "原文列举主要规划用途，但未给出所有规划需要的封闭定义。 异常场景：携带物品和交通方式的决定仍可缺失；三类安排完成不保证所有天气规划充分。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G002",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "穿衣是天气规划的明确具体情境。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "So for me, primary purpose is a planning. So whenever I use weather app, it's either to plan what I have to wear on a particular day or plan my outdoor activities. or just plan my trip or something.",
+          "role": "basis",
+          "start_char": 926,
+          "end_char": 1124
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G003",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "户外活动规划是一般天气规划的一类。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "So for me, primary purpose is a planning. So whenever I use weather app, it's either to plan what I have to wear on a particular day or plan my outdoor activities. or just plan my trip or something.",
+          "role": "basis",
+          "start_char": 926,
+          "end_char": 1124
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G004",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "旅行规划是一般规划的具体情境。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "So for me, primary purpose is a planning. So whenever I use weather app, it's either to plan what I have to wear on a particular day or plan my outdoor activities. or just plan my trip or something.",
+          "role": "basis",
+          "start_char": 926,
+          "end_char": 1124
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G008",
+      "target_id": "G004",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "旅行前看整周天气服务规划和买票。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T019",
+          "quote": "I think it depends, because, you know, weather is like we cannot predict whether, although we have like good estimation. But sometimes it's not very accurate, so I guess, like for me, personally, I don't check it on a weekly basis. I do it daily. but like, if I have to plan a trip. I would check whether for entire week. Yes, because I have, as I said, like, I have to plan activities, and I have to buy ticket for tickets for those activities.",
+          "role": "basis",
+          "start_char": 3312,
+          "end_char": 3757
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G009",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "购票前看天气是户外活动规划的实际办法。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T021",
+          "quote": "Yeah. Yeah. So I went to Chicago and I, I had this plan with my friends to go to 6 flags. And usually it's like, it's very annoying when it's rain or when it's very cold. So there's no point in buying tickets at that point. So their checking weather was really helpful.",
+          "role": "basis",
+          "start_char": 3871,
+          "end_char": 4140
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G016",
+      "target_id": "G017",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "雨天频繁变化提醒是实时天气更新的特定情境。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T049",
+          "quote": "But like just to add, there for when there's like a rain like ongoing rain, for that I have like a frequent notifications like when it's stopping, when it's adding like when it's going so, for when it's about rain, I like have a like frequent notifications.",
+          "role": "basis",
+          "start_char": 8790,
+          "end_char": 9047
+        }
+      ]
+    },
+    {
+      "relation_id": "R007",
+      "source_id": "G017",
+      "target_id": "G018",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "及时短时信息有助选择步行或公交，仍不能保证不下雨。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T051",
+          "quote": "Yes, I think they are very important. just to give you example, last week, when I went for grocery shopping I had to make this make this decision to whether walk to the grocery store or take a bus. and since the store was just like 5Â min away, I thought I should just walk because the weather app said like, it's not gonna rain in like next 10Â min. But then it started raining and I got wet. So I I would like emphasize that real time updates are very important.",
+          "role": "basis",
+          "start_char": 9352,
+          "end_char": 9816
+        }
+      ]
+    },
+    {
+      "relation_id": "R008",
+      "source_id": "G012",
+      "target_id": "G013",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先得知雷暴洪水等情况，再推迟活动。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T035",
+          "quote": "I guess, like extreme weather conditions are really important, like thunderstorm or flood flooding conditions that are really important. Because if I see those kind of things. On my web app. I just like postpone the entire event and don't. Don't go out at all.",
+          "role": "basis",
+          "start_char": 6322,
+          "end_char": 6582
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

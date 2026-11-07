@@ -1,0 +1,105 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "440f2d2f47ebca3fca634584abc7bf07dcf125b42bd99e80eea71df082f6b856",
+    "judgments_sha256": "0f2dfe5d0571cf9d51d95648ba5507f5006e20194fe4d3ef53727a4dc9ff6d0a"
+  },
+  "groups": [
+    {
+      "group_id": "F1",
+      "parent_id": "G1",
+      "child_ids": [
+        "G2",
+        "G3",
+        "G5"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "日常准备、旅行安排和极端天气取消活动均服务于天气规划，但获取信息并不保证形成合适计划，且非旅行户外活动的决策规则未穷尽。不能仅凭用途列举断言整组充分。",
+      "assumptions": [
+        "若将来确认充分性，仍需明确不同情境如何触发、信息如何支撑规划决定。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "So for me, primary purpose is a planning. So whenever I use weather app, it's either to plan what I have to wear on a particular day or plan my outdoor activities. or just plan my trip or something.",
+          "role": "basis",
+          "start_char": 926,
+          "end_char": 1124
+        },
+        {
+          "source_id": "DOC010:T019",
+          "quote": "I think it depends, because, you know, weather is like we cannot predict whether, although we have like good estimation. But sometimes it's not very accurate, so I guess, like for me, personally, I don't check it on a weekly basis. I do it daily. but like, if I have to plan a trip. I would check whether for entire week. Yes, because I have, as I said, like, I have to plan activities, and I have to buy ticket for tickets for those activities.",
+          "role": "basis",
+          "start_char": 3312,
+          "end_char": 3757
+        },
+        {
+          "source_id": "DOC010:T035",
+          "quote": "I guess, like extreme weather conditions are really important, like thunderstorm or flood flooding conditions that are really important. Because if I see those kind of things. On my web app. I just like postpone the entire event and don't. Don't go out at all.",
+          "role": "basis",
+          "start_char": 6322,
+          "end_char": 6582
+        }
+      ]
+    },
+    {
+      "group_id": "F2",
+      "parent_id": "G8",
+      "child_ids": [
+        "G7",
+        "G9"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "降雨频繁通知与跨平台一致可能改善外出信息，但频繁通知可以仍旧过时，一致平台也可以共同错误，且非降雨情境未覆盖，故不足以实现实时天气更新。",
+      "assumptions": [],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T049",
+          "quote": "But like just to add, there for when there's like a rain like ongoing rain, for that I have like a frequent notifications like when it's stopping, when it's adding like when it's going so, for when it's about rain, I like have a like frequent notifications.",
+          "role": "basis",
+          "start_char": 8790,
+          "end_char": 9047
+        },
+        {
+          "source_id": "DOC010:T051",
+          "quote": "Yes, I think they are very important. just to give you example, last week, when I went for grocery shopping I had to make this make this decision to whether walk to the grocery store or take a bus. and since the store was just like 5Â min away, I thought I should just walk because the weather app said like, it's not gonna rain in like next 10Â min. But then it started raining and I got wet. So I I would like emphasize that real time updates are very important.",
+          "role": "basis",
+          "start_char": 9352,
+          "end_char": 9816
+        },
+        {
+          "source_id": "DOC010:T057",
+          "quote": "sometimes like I don't like when sometimes, if I if I haven't subscribed to the to the app, it just like shows me random ads, and I don't like that, and sometimes with the apps is they don't show you they don't get updates often. So I would see something like raining. But then, when I like so when I like, watch outside from my window, it's not raining at all. But then I go on the website and see. Oh, the weather like it's not raining, but in the app itself is showing it's raining. So I.",
+          "role": "basis",
+          "start_char": 10511,
+          "end_char": 11002
+        },
+        {
+          "source_id": "DOC010:T071",
+          "quote": "Be consistent. Yeah, yeah. About the ads. Yes, yes. Ads are also very annoying. So no ads, real time updates and should be consistent across all the platforms. These are like the 3 things that I would prefer.",
+          "role": "basis",
+          "start_char": 13023,
+          "end_char": 13231
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F1",
+      "message": "候选组尚未确认共同充分性：日常准备、旅行安排和极端天气取消活动均服务于天气规划，但获取信息并不保证形成合适计划，且非旅行户外活动的决策规则未穷尽。不能仅凭用途列举断言整组充分。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "F2",
+      "message": "候选组尚未确认共同充分性：降雨频繁通知与跨平台一致可能改善外出信息，但频繁通知可以仍旧过时，一致平台也可以共同错误，且非降雨情境未覆盖，故不足以实现实时天气更新。"
+    }
+  ]
+}

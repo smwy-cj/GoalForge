@@ -1,0 +1,737 @@
+{
+  "document_id": "DOC016",
+  "model_path": "revised/DOC016/v2/delivery/goal-model.json",
+  "required_goal_ids": [
+    "DOC016-G01",
+    "DOC016-G02",
+    "DOC016-G04",
+    "DOC016-G06",
+    "DOC016-G07",
+    "DOC016-G09",
+    "DOC016-G10",
+    "DOC016-G11",
+    "DOC016-G12",
+    "DOC016-G13",
+    "DOC016-G16",
+    "DOC016-G20",
+    "DOC016-G21"
+  ],
+  "model_sha256": "7ae8191e455beaa49b4a2b6972a1682d86fa8a7f3e0e5e841e8cfd1fe39530a0",
+  "source_sha256": "7272dc3b4b454fa69f25532012cbcac56b7daf43959dc3b669136cd985dc7890",
+  "hashes_match_assignment": true,
+  "source_read_ranges": [
+    {
+      "first_turn": "T000",
+      "last_turn": "T117",
+      "complete": true
+    }
+  ],
+  "source_complete_read": true,
+  "reviewed_goal_ids": [
+    "DOC016-G01",
+    "DOC016-G02",
+    "DOC016-G04",
+    "DOC016-G06",
+    "DOC016-G07",
+    "DOC016-G09",
+    "DOC016-G10",
+    "DOC016-G11",
+    "DOC016-G12",
+    "DOC016-G13",
+    "DOC016-G16",
+    "DOC016-G20",
+    "DOC016-G21"
+  ],
+  "goal_reviews": [
+    {
+      "goal_id": "DOC016-G01",
+      "statement": "在一个应用中汇集并分类浏览不同来源的新闻",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "在一个应用中汇集并分类浏览不同来源的新闻"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "受访者明确主要用途，分类与聚合为选定方式，产品名转写差异不纠正原件。"
+        ],
+        "label": "direct",
+        "rationale": "受访者明确主要用途，分类与聚合为选定方式，产品名转写差异不纠正原件。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T009说在一应用按类浏览不同新闻，T011解释汇总各类摘要且T013确认多源聚合。当前用途和分类方式明确，无需推断各来源接口具体实现。",
+      "source_ids": [
+        "DOC016:T008",
+        "DOC016:T009",
+        "DOC016:T010",
+        "DOC016:T011",
+        "DOC016:T012",
+        "DOC016:T013"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC016:T009",
+          "quote": "it's my easy way to browse different news in one app basically.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G02",
+      "statement": "保持了解商业、政治和编程动态，以辅助股票判断和软件工程工作",
+      "actor": "受访者",
+      "conditions": [
+        "政治与市场影响是受访者看法；不是保证投资收益"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "保持了解商业、政治和编程动态，以辅助股票判断和软件工程工作"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确三类及投资、职业双重用途；不提供投资建议或验证新闻预测有效性。"
+        ],
+        "label": "direct",
+        "rationale": "明确三类及投资、职业双重用途；不提供投资建议或验证新闻预测有效性。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T015把三类新闻与技术股判断相连，T025补充编程与软件工程职业。两个目的在当前句均保留；政治对股市影响是本人看法，没有转为收益保证。",
+      "source_ids": [
+        "DOC016:T014",
+        "DOC016:T015",
+        "DOC016:T016",
+        "DOC016:T017",
+        "DOC016:T024",
+        "DOC016:T025"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC016:T025",
+          "quote": "the main reason or the main goals for using this web app is to stay up to date with business, politics and programming.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G04",
+      "statement": "把多篇新闻的信息联系起来，以理解事件整体情况",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "把多篇新闻的信息联系起来，以理解事件整体情况"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确综合理解目的；T037需回看先前相关文章，不把浏览数等同理解。"
+        ],
+        "label": "direct",
+        "rationale": "明确综合理解目的；T037需回看先前相关文章，不把浏览数等同理解。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T029明确希望短时间多读后piece everything together，T037说明为关联事件回看早文。当前综合理解是明确目的，不把更多文章数量等同自动理解或需要新增算法。",
+      "source_ids": [
+        "DOC016:T027",
+        "DOC016:T028",
+        "DOC016:T029",
+        "DOC016:T033",
+        "DOC016:T036",
+        "DOC016:T037"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC016:T029",
+          "quote": "piece everything together and make certain logic behind what is exactly is going on around the world.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G06",
+      "statement": "把感兴趣而暂时没空深读的文章加入稍后阅读",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "把感兴趣而暂时没空深读的文章加入稍后阅读"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "结合T019及T049明确稍后深入用途，保留当前主用方式，不把少用board/unread自动设成需求。"
+        ],
+        "label": "direct",
+        "rationale": "结合T019及T049明确稍后深入用途，保留当前主用方式，不把少用board/unread自动设成需求。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T019说明暂没时间深读而保存，T021确认主要用read later，T049说明空闲再读技术细节。当前是带目的的已有功能维持，未将很少用的board/unread强加为要求。",
+      "source_ids": [
+        "DOC016:T018",
+        "DOC016:T019",
+        "DOC016:T020",
+        "DOC016:T021",
+        "DOC016:T031",
+        "DOC016:T048",
+        "DOC016:T049"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC016:T021",
+          "quote": "whatever things that I have to say for later, I just market relator.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC016:T049",
+          "quote": "those are the type of articles that I want to save and read later, when I have more free time",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G07",
+      "statement": "标记已读或隐藏不想再看的新闻，以继续浏览新一批内容",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "标记已读或隐藏不想再看的新闻，以继续浏览新一批内容"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "避免重复显示与换批流程是明确使用目的；不保证跨媒体所有相同报道已去重。"
+        ],
+        "label": "direct",
+        "rationale": "避免重复显示与换批流程是明确使用目的；不保证跨媒体所有相同报道已去重。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T021说mark read/hide让新闻不再显示，T023/031标已读后载入新批。当前描述两类操作的浏览目的成立；不保证hide单独就刷新整批，更没有保证跨媒体相同事件不再来。",
+      "source_ids": [
+        "DOC016:T019",
+        "DOC016:T021",
+        "DOC016:T023",
+        "DOC016:T030",
+        "DOC016:T031",
+        "DOC016:T033",
+        "DOC016:T045"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC016:T021",
+          "quote": "mark as read or hide, so I don't have to view it again.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G09",
+      "statement": "需要时能回看与当前新闻相关的先前报道，以补齐理解",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "需要时能回看与当前新闻相关的先前报道，以补齐理解"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "受访者为拼接事件主动回看，明确目的；不擅选自动关联界面。"
+        ],
+        "label": "direct",
+        "rationale": "受访者为拼接事件主动回看，明确目的；不擅选自动关联界面。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T037直接解释遇到相关报道时需回去收集早前文章信息，支持需要时回看的目的。当前不要求自动关联或降低所有往返滚动，因为有些回看有价值。",
+      "source_ids": [
+        "DOC016:T036",
+        "DOC016:T037"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC016:T037",
+          "quote": "I need to gather information in that article as well.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G10",
+      "statement": "查看新闻的原始发布时间与聚合接收时间，以判断时效和市场相关性",
+      "actor": "受访者",
+      "conditions": [
+        "受访者使用时间作投资判断，平台或新闻事实未经核验"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "查看新闻的原始发布时间与聚合接收时间，以判断时效和市场相关性"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "该信息如何用于市场判断在本轮详述，T043称无需改动；保留维持该能力的使用目的，不证明市场影响时间准确。"
+        ],
+        "label": "direct",
+        "rationale": "该信息如何用于市场判断在本轮详述，T043称无需改动；保留维持该能力的使用目的，不证明市场影响时间准确。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T041明确查看发布及接收时间并解释据发布时机判断市场可能尚未反应；T043认可当前时间展示。保留该有用能力的维持意图合理，金融因果仅为本人判断，不当已证市场事实。",
+      "source_ids": [
+        "DOC016:T030",
+        "DOC016:T031",
+        "DOC016:T040",
+        "DOC016:T041",
+        "DOC016:T042",
+        "DOC016:T043"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC016:T041",
+          "quote": "It will actually give you detail of published and received time.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G11",
+      "statement": "能按媒体内的新闻类别调整推荐，保留喜欢的类别而屏蔽不喜欢的类别",
+      "actor": "受访者",
+      "conditions": [
+        "不希望只能整家媒体退订"
+      ],
+      "author_origin": "inferred",
+      "author_support": {
+        "supported_parts": [
+          "能按媒体内的新闻类别调整推荐，保留喜欢的类别而屏蔽不喜欢的类别"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "被描述为缺失且有具体想法的灵活性是期望改善"
+        ],
+        "reasoning_steps": [
+          "表达无法按该偏好区分的具体不满，并认为只能退订媒体无帮助，支持细粒度调整目标推断。"
+        ],
+        "label": "inferred",
+        "rationale": "表达无法按该偏好区分的具体不满，并认为只能退订媒体无帮助，支持细粒度调整目标推断。"
+      },
+      "author_inference": {
+        "basis_candidate_ids": [],
+        "reason": "表达无法按该偏好区分的具体不满，并认为只能退订媒体无帮助，支持细粒度调整目标推断。",
+        "assumptions": [
+          "被描述为缺失且有具体想法的灵活性是期望改善"
+        ]
+      },
+      "independent_origin": "inferred",
+      "independent_support": "inferred",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T045具体不满无法在同一媒体保留喜欢类别而拒绝另一类，退订整媒体无帮助，T047确认感受。由有具体期望的缺失推断细粒度调整合理，范围未扩成所有跨源事件自动去重。",
+      "source_ids": [
+        "DOC016:T044",
+        "DOC016:T045",
+        "DOC016:T046",
+        "DOC016:T047"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC016:T045",
+          "quote": "I I don't like this type of news, but I do enjoy the news that is published by this media but related to other category.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [
+          {
+            "target_type": "goal",
+            "target_id": "DOC016-G11",
+            "message": "希望按媒体、主题及事件如何分别调整隐藏规则？",
+            "blocking": false
+          }
+        ],
+        "extraction_questions": [
+          {
+            "candidate_ids": [
+              "DOC016-G11"
+            ],
+            "question": "希望按媒体、主题及事件如何分别调整隐藏规则？",
+            "reason": "退订整媒体不足，但粒度与跨媒体范围未完全定义。"
+          }
+        ]
+      }
+    },
+    {
+      "goal_id": "DOC016-G12",
+      "statement": "空闲时深入阅读编程等技术文章，避免错过今后可能需要的技术细节",
+      "actor": "受访者",
+      "conditions": [
+        "主要技术文章，也包括需要深读的金融教育内容"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "空闲时深入阅读编程等技术文章，避免错过今后可能需要的技术细节"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "技术深读不同于日常快速扫读，保存此条件例外；不扩大成所有新闻必须全文精读。"
+        ],
+        "label": "direct",
+        "rationale": "技术深读不同于日常快速扫读，保存此条件例外；不扩大成所有新闻必须全文精读。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T049明确有空时细读技术文章，不漏将来可能用到的细节；T053补充金融教育深读。当前主要技术、也有金融例外的条件忠实，不与日常摘要快读目的矛盾。",
+      "source_ids": [
+        "DOC016:T048",
+        "DOC016:T049",
+        "DOC016:T052",
+        "DOC016:T053"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC016:T049",
+          "quote": "because I don't want to miss any details in that kind of news.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G13",
+      "statement": "在稍后阅读中增加分类，便于组织商业和编程等不同文章",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "在稍后阅读中增加分类，便于组织商业和编程等不同文章"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "明确建议并举商业、编程例子；不是只允许两类或要求固定分类算法。"
+        ],
+        "label": "direct",
+        "rationale": "明确建议并举商业、编程例子；不是只允许两类或要求固定分类算法。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T053在说明稍后阅读仅有排序/收藏后主动建议分业务和编程类，T055确认组织有帮助。当前增加分类是明确建议；没有补固定分类数、算法或保证阅读成效。",
+      "source_ids": [
+        "DOC016:T050",
+        "DOC016:T051",
+        "DOC016:T052",
+        "DOC016:T053",
+        "DOC016:T054",
+        "DOC016:T055"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC016:T053",
+          "quote": "Maybe by having different categories in the read. Later tab will be beneficial",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G16",
+      "statement": "新闻加载或接口失败时提供普通读者能理解的反馈",
+      "actor": "受访者",
+      "conditions": [
+        "接口或来源不可用时；故障原因与代码含义是受访者回忆，未验证"
+      ],
+      "author_origin": "inferred",
+      "author_support": {
+        "supported_parts": [
+          "新闻加载或接口失败时提供普通读者能理解的反馈"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "针对普通读者不懂的反馈问题，希望使其易理解"
+        ],
+        "reasoning_steps": [
+          "原文故障时显示HTTP代码，T079确认用户层面不相关，支持改善可理解反馈；未要求掩盖所有技术信息。"
+        ],
+        "label": "inferred",
+        "rationale": "原文故障时显示HTTP代码，T079确认用户层面不相关，支持改善可理解反馈；未要求掩盖所有技术信息。"
+      },
+      "author_inference": {
+        "basis_candidate_ids": [],
+        "reason": "原文故障时显示HTTP代码，T079确认用户层面不相关，支持改善可理解反馈；未要求掩盖所有技术信息。",
+        "assumptions": [
+          "针对普通读者不懂的反馈问题，希望使其易理解"
+        ]
+      },
+      "independent_origin": "inferred",
+      "independent_support": "inferred",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T075/077回忆加载失败呈开发者才能懂的状态码，T079同意对普通使用不相关。由具体不合用反馈推断提供可理解说明有依据；当前未认证故障根因或接口码解释，也未指定唯一修法。",
+      "source_ids": [
+        "DOC016:T074",
+        "DOC016:T075",
+        "DOC016:T076",
+        "DOC016:T077",
+        "DOC016:T078",
+        "DOC016:T079"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC016:T077",
+          "quote": "those code can basically only be understood by developers, but not by regular news readers.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G20",
+      "statement": "稍后阅读保存应简洁，减少与保存到board重复选项带来的误点和建板负担",
+      "actor": "受访者",
+      "conditions": [
+        "受访者认为重复；不证明其他用户无需board"
+      ],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "稍后阅读保存应简洁，减少与保存到board重复选项带来的误点和建板负担"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T097误点、需新建板后取消，T099确认偏好更简单选项；保留个人建议，不称两功能客观完全等价。"
+        ],
+        "label": "direct",
+        "rationale": "T097误点、需新建板后取消，T099确认偏好更简单选项；保留个人建议，不称两功能客观完全等价。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T095说自己只需一种稍后保存方式，T097说明误点board后建板/取消负担，T099确认偏好简洁。当前减少个人混淆忠实；不据此证明所有用户不需要board，更不与希望稍后分类矛盾。",
+      "source_ids": [
+        "DOC016:T094",
+        "DOC016:T095",
+        "DOC016:T096",
+        "DOC016:T097",
+        "DOC016:T098",
+        "DOC016:T099"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC016:T095",
+          "quote": "You just need one of those.",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        },
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC016:T097",
+          "quote": "click on save to board I will regret and end up creating a new board and then I would just cancel that action",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    },
+    {
+      "goal_id": "DOC016-G21",
+      "statement": "了解近期热门事件，以便与同事有共同话题",
+      "actor": "受访者",
+      "conditions": [],
+      "author_origin": "explicit",
+      "author_support": {
+        "supported_parts": [
+          "了解近期热门事件，以便与同事有共同话题"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T109确认是使用需要；不把社交价值漏掉或仅视为投资派生用途。"
+        ],
+        "label": "direct",
+        "rationale": "T109确认是使用需要；不把社交价值漏掉或仅视为投资派生用途。"
+      },
+      "author_inference": null,
+      "independent_origin": "explicit",
+      "independent_support": "direct",
+      "verdict": "supported_with_stated_boundaries",
+      "reason": "T107明确热点使自己与同事有共同话题，T109确认是使用需要。当前社交目的明确；不依赖T105可疑的can't/1015转写，也未补成固定15分钟验收。",
+      "source_ids": [
+        "DOC016:T104",
+        "DOC016:T105",
+        "DOC016:T106",
+        "DOC016:T107",
+        "DOC016:T108",
+        "DOC016:T109"
+      ],
+      "bound_evidence": [
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC016:T107",
+          "quote": "The ability to stay up to date to the latest hot topics. within the Us or around the world is also important, so that you will have a common topics with your coworker",
+          "evidence_role": "supporting",
+          "quote_exact_in_source_segment": true
+        }
+      ],
+      "all_bound_evidence_reviewed": true,
+      "origin_assessment": "与所读上下文相容；具体理由见reason",
+      "questions_issues_assessment": "已读取当前模型issues与提取review_questions；具体未知不自动构成错误，保留现有待澄清范围。",
+      "findings": [],
+      "questions_and_issues_reviewed": {
+        "model_issues": [],
+        "extraction_questions": []
+      }
+    }
+  ],
+  "reviewed_group_ids": [],
+  "group_review_scope": "本轮只补指定目标；无需重开此前组结论，未对组作新充分性裁决。"
+}

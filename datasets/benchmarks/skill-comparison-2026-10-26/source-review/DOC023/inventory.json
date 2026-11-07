@@ -1,0 +1,313 @@
+{
+  "document_id": "DOC023",
+  "artifact_type": "isolated_model_reviewer_source_intent_inventory",
+  "human_gold": false,
+  "source_only": true,
+  "domain": "LinkedIn 联系人与内推",
+  "scope": "受访者的联系人数量增长和通过现任员工校友争取求职内推。",
+  "methodology": "逐段完整阅读原文后人工式语义判断；条目由评审模型编写，程序仅校验引用和序列化，不以关键词抽取代替理解。未读取技能、论文目标、tests、生成结果或既有评估。条目不是最终目标模型，不规定唯一层次或粒度。",
+  "intents": [
+    {
+      "intent_id": "DOC023:I01",
+      "intent": "增加个人主页的联系人数以显示自己活跃",
+      "subject": "求职受访者",
+      "conditions": "经营 LinkedIn 个人资料时",
+      "modality": "明确首要目的之一",
+      "exceptions": "并非所有连接行为都只为内推",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC023:T003",
+          "quote": "enlarge my the number of my connections on my profile.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 515,
+          "quote_end_char": 569,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC023:T003",
+          "quote": "to show people that I'm active on Linkedin.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 860,
+          "quote_end_char": 903,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC023:I02",
+      "intent": "从目标公司现任员工取得内推，提高简历被招聘者看到的机会",
+      "subject": "求职受访者",
+      "conditions": "申请实习或全职岗位时",
+      "modality": "明确另一主要目的",
+      "exceptions": "不保证内推带来录取或一定看到简历",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC023:T003",
+          "quote": "get referrals from current employees",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1046,
+          "quote_end_char": 1082,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC023:T003",
+          "quote": "a referral really helps to get my resume being seen by recruiters.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1235,
+          "quote_end_char": 1301,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC023:I03",
+      "intent": "通过公司名与本人学校共同搜索潜在内推人",
+      "subject": "求职受访者",
+      "conditions": "开始寻找内推连接时",
+      "modality": "明确搜索策略",
+      "exceptions": "后续仍需看个人履历核实，不是搜索命中即满足",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "search on in the search bar. This company name, and also the school name that I am currently attending",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1895,
+          "quote_end_char": 1997,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC023:I04",
+      "intent": "筛选同时满足现任目标公司员工及同校背景的人",
+      "subject": "求职受访者",
+      "conditions": "检查搜索结果与个人经历时",
+      "modality": "明确筛选标准",
+      "exceptions": "排除前员工、只满足一项或都不满足者；这里只针对内推流程",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC023:T009",
+          "quote": "I will only choose people who is currently a company employee and who was my university's student.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3998,
+          "quote_end_char": 4096,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC023:I05",
+      "intent": "利用校友共同背景提高对方愿意帮助内推的可能性",
+      "subject": "求职受访者",
+      "conditions": "选择连接和撰写邀请时",
+      "modality": "明确策略理由",
+      "exceptions": "是受访者的概率信念，不保证校友答应",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC023:T011",
+          "quote": "Students who attend the same university tends to like want to help the alumni.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4767,
+          "quote_end_char": 4845,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC023:I06",
+      "intent": "给潜在联系人发邀请并附简短自我介绍和可能的内推请求",
+      "subject": "求职受访者",
+      "conditions": "确定合适个人后",
+      "modality": "明确现行操作",
+      "exceptions": "通常发 note；内推请求用 maybe，不能要求每次邀请都必须明说",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "hit the connect button",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2491,
+          "quote_end_char": 2513,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC023:T007",
+          "quote": "add a message to introduce myself",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2645,
+          "quote_end_char": 2678,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC023:T007",
+          "quote": "I maybe will also tell them",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2683,
+          "quote_end_char": 2710,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC023:I07",
+      "intent": "连接被接受后继续聊天处理内推细节",
+      "subject": "求职受访者与联系人",
+      "conditions": "对方接受邀请时",
+      "modality": "明确条件性流程",
+      "exceptions": "不接受则待处理，无进一步内容；不是要求强行联系未接受者",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "if they do, I can then start to chat with them for the further details.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2876,
+          "quote_end_char": 2947,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC023:T007",
+          "quote": "a pending status for that specific connection.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3050,
+          "quote_end_char": 3096,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC023:I08",
+      "intent": "减少无关搜索结果筛查并找到足够符合条件的人",
+      "subject": "求职受访者",
+      "conditions": "免费搜索结果有限且相关性差时",
+      "modality": "从明确障碍推导的改进意图",
+      "exceptions": "不应删掉“公司+学校”的真正筛选条件来机械提升数量",
+      "epistemic_status": "推断",
+      "evidence": [
+        {
+          "source_id": "DOC023:T013",
+          "quote": "go through like a lot of people in the search result",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5399,
+          "quote_end_char": 5451,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC023:T013",
+          "quote": "one or 2, or even none of the people in the search result.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5896,
+          "quote_end_char": 5954,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC023:I09",
+      "intent": "按成本和效果选择付费扩展结果或修改搜索词",
+      "subject": "求职受访者",
+      "conditions": "搜索限制妨碍找到潜在联系人时",
+      "modality": "明确替代策略",
+      "exceptions": "premium 成本高；可删词或更具体地调整，非总是购买",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC023:T015",
+          "quote": "purchase the linking premium",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6217,
+          "quote_end_char": 6245,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC023:T015",
+          "quote": "this costs a lot.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6371,
+          "quote_end_char": 6388,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC023:T015",
+          "quote": "modify the keywords",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6449,
+          "quote_end_char": 6468,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC023:I10",
+      "intent": "在连接邀请字符限制内传达所需内容，减少压缩文字的时间",
+      "subject": "求职受访者",
+      "conditions": "未连接的免费用户发送 note 时",
+      "modality": "明确障碍对应意图",
+      "exceptions": "原文200字符为受访者说法；未明确提出AI写作或取消所有长度限制方案",
+      "epistemic_status": "推断",
+      "evidence": [
+        {
+          "source_id": "DOC023:T017",
+          "quote": "only a limited like number of words to really convey what I want to talk to them.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7361,
+          "quote_end_char": 7442,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC023:T017",
+          "quote": "it really takes some time for me to like, shrink them words in my message.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7484,
+          "quote_end_char": 7558,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    }
+  ],
+  "background_candidates": [
+    {
+      "item": "竞争激烈的实习和全职市场",
+      "reason": "是内推动机背景，不是构建求职申请系统的独立要求。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC023:T003",
+          "quote": "the application for the internships and full time jobs. It's pretty competitive.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1140,
+          "quote_end_char": 1220,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "T003 的“3rd company”等转录不清，不据此指定第三家公司。",
+    "付费搜索容量和200字符是受访者描述，不是本评审验证的平台事实。",
+    "T007 初步结果含前员工，T009明确过滤只留现任员工；优先采用后续澄清。"
+  ],
+  "source_document_hash_declared": "2966cdb21f4ac14cb0797faf9c1297e343e83f8b4dd509cd3d473d3048d7bffb",
+  "read_range": {
+    "first_source_id": "DOC023:T000",
+    "last_source_id": "DOC023:T018",
+    "turn_count": 19,
+    "read_completely": true,
+    "reading_note": "全文语义阅读；DOC003首次长输出中段被截断后，已单独补读T066–T096。DOC028、DOC036分别按turn分段读完。其他文档完整读取。"
+  }
+}

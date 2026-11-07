@@ -1,0 +1,254 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "ffaec3267e592e79f1a166eac06602673ce5ed840914465be0f47e111000a040",
+    "input_sha256": "39de6ebfc8a65fd980bca9ee1c79085821e82531c2316a1fbb09630d80dada96"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Find a flight itinerary whose departure, arrival and connection times fit his onward transport, hotel needs and the schedules of the people he is meeting.",
+      "label": "direct",
+      "rationale": "T119 逐项列出中转衔接、与接送及会面对象时间匹配、时段是否合适；T031 说明到达时间会影响是否需要订酒店。主体、对象与条件均取自原句，未把例子固化为固定业务目标。",
+      "supported_parts": [
+        "时间与后续交通衔接",
+        "与他人日程匹配",
+        "到达时间影响住宿安排"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G002": {
+      "target_statement": "Find the best available fare for the itinerary he has chosen.",
+      "label": "direct",
+      "rationale": "T025 把拿到好价格列为主要关注点，T115 把好价格列为三大目标之一；无量化阈值，未编造阈值。",
+      "supported_parts": [
+        "以好价格为主要目标",
+        "价格需与所选行程匹配"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G003": {
+      "target_statement": "Compare the booking providers offered for a shortlisted itinerary and choose the one with the lowest final price and best terms.",
+      "label": "direct",
+      "rationale": "T077 描述逐家点击进入核对价格、评分与折扣，T115 明确把比较预订网站列为三大目标之一。",
+      "supported_parts": [
+        "逐家比较供应商",
+        "比价含折扣与最终价"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G004": {
+      "target_statement": "Search many origin, destination, date and cabin combinations at the same time to find the best option.",
+      "label": "direct",
+      "rationale": "T095 与 T099 明确表达希望同时铺开数百次、上万种组合的检索；数量来自受访者本人举例。",
+      "supported_parts": [
+        "并行多组合检索",
+        "覆盖机场、日期、舱位维度"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G005": {
+      "target_statement": "Stay logged out and anonymous while searching for flights on the aggregator.",
+      "label": "direct",
+      "rationale": "T053 明确避免登录并尽量匿名，T093 表示大概率永不登录；强度按原话保留，并未升级为绝对禁止。",
+      "supported_parts": [
+        "默认不登录",
+        "尽量匿名"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G006": {
+      "target_statement": "Keep his personal data from being collected or shared by the flight search and booking sites.",
+      "label": "direct",
+      "rationale": "T089 直接表达不希望数据被共享，T091 把信任列为对该类应用的重要要求；这是态度而非已验证事实。",
+      "supported_parts": [
+        "不愿数据被共享",
+        "隐私与信任是重要考量"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G007": {
+      "target_statement": "Be alerted when fares on the specific routes he is watching drop, so that he can book at the lower price.",
+      "label": "direct",
+      "rationale": "T087 叙述实际设置过多条航线提醒并说明用途；T085 同时表达对可行性怀疑，因此目标限定为'对已关注航线收到降价提醒'，未扩展为通用预测。",
+      "supported_parts": [
+        "关注航线的降价提醒"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G008": {
+      "target_statement": "Book one to one-and-a-half months before departure to obtain a better fare.",
+      "label": "direct",
+      "rationale": "T015 给出明确时间范围与目的（更好价格），并用 mostly/at least 表达强度。",
+      "supported_parts": [
+        "提前 1-1.5 个月",
+        "目的是更低票价"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G009": {
+      "target_statement": "Search by country or region instead of a single airport so that many airports are covered in one query.",
+      "label": "direct",
+      "rationale": "T065 说明改用国家/区域以便一次查询覆盖更多机场，属于自述做法与目的。",
+      "supported_parts": [
+        "以国家/区域为输入",
+        "一次覆盖多机场"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G010": {
+      "target_statement": "Restrict search results to his preferred departure and arrival windows and to a maximum number of hours in the air.",
+      "label": "direct",
+      "rationale": "T069 说明只在衔接时使用筛选，并给出两个具体限定（起降时段、空中时长上限）；'rarely' 的使用频率未改写为强制。",
+      "supported_parts": [
+        "限定起降时段",
+        "限定总飞行时长"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G011": {
+      "target_statement": "Rule out itineraries with 40 to 60 hours of total travel even when they are the cheapest listed.",
+      "label": "direct",
+      "rationale": "T073 说明宁可不选 40-60 小时的超长行程，即使它们最便宜；强度为 would rather not，未写成绝对禁止。",
+      "supported_parts": [
+        "排除 40-60 小时行程"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G012": {
+      "target_statement": "Allow at least 1.5 to 2 times the airport's minimum connection time at each connection.",
+      "label": "direct",
+      "rationale": "T123 给出明确倍数与目的（安全余量、应对延误），并说明签证例外。",
+      "supported_parts": [
+        "中转时间 ≥1.5-2 倍 MCT"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G013": {
+      "target_statement": "Check whether the lounge at the connection airport is open at the connection time.",
+      "label": "direct",
+      "rationale": "T123 自述把休息室开放时间作为选择中转的一个因素，并说明动机是走访休息室。",
+      "supported_parts": [
+        "查询中转机场休息室开放时间"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G014": {
+      "target_statement": "Have his card-based lounge entitlements kept up to date in one place and shown alongside the flight search.",
+      "label": "direct",
+      "rationale": "T125 明确说若能整合到 Skyscanner '会很好'；同一段又说第三方更新不准、他更信任源头，因此可靠性条件写入 context，未把愿望升级为必须。",
+      "supported_parts": [
+        "希望权益信息集中且与检索整合"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G015": {
+      "target_statement": "Show whether a fare is above or below the median for markets he is unfamiliar with.",
+      "label": "direct",
+      "rationale": "T109 说明用中位价判断陌生市场价格高低，T111 明确说在 Skyscanner 上也显示会 helpful 且是 nice to have。",
+      "supported_parts": [
+        "陌生市场的中位价对比"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G016": {
+      "target_statement": "Cut the time spent researching flights while covering more combinations.",
+      "label": "direct",
+      "rationale": "T137 把研究耗时列为最大障碍，T149 明确若能用更少时间检索更多组合就愿意迁移；条件是长期使用。",
+      "supported_parts": [
+        "降低检索耗时",
+        "同时覆盖更多组合"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G017": {
+      "target_statement": "Log in to the airline loyalty account to check award-seat availability and book a points ticket.",
+      "label": "direct",
+      "rationale": "T055/T057 说明奖赏座位只能在登录后的航空公司网站查看与预订，是这一出票方式的必要步骤。",
+      "supported_parts": [
+        "里程票须登录航司账户",
+        "在该渠道查看余位并出票"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G018": {
+      "target_statement": "Take routings with extra stops and lounge visits when he travels for pleasure and is not pressed for time.",
+      "label": "direct",
+      "rationale": "T019 明确说会为体验选择更多中转与世界最长航线，并说尽量最大化空中时间；这是旅行偏好，条件限定为度假且时间宽裕。",
+      "supported_parts": [
+        "为体验选择多停一站",
+        "最大化空中时间"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G019": {
+      "target_statement": "Keep using the aggregator interface he already knows so that each search takes less time.",
+      "label": "direct",
+      "rationale": "T105 与 T147 说明熟悉界面是继续用 Skyscanner 的实际理由，并量化了切换多花的时间。",
+      "supported_parts": [
+        "沿用熟悉界面",
+        "减少每次检索耗时"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G020": {
+      "target_statement": "Find the best flight option for a planned cash booking through research on aggregators.",
+      "label": "direct",
+      "rationale": "T115 把研究并找出可用行程与价格列为第一目标，T129 复述研究环节要看的东西；上层目标由原文自述支撑，不是为凑层级新增。",
+      "supported_parts": [
+        "以研究确定最优预订方案"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G021": {
+      "target_statement": "Prefer flight times that let him sleep at night over red-eye departures.",
+      "label": "direct",
+      "rationale": "T119 用 would rather 表达偏好，同时承认可接受红眼；未升级为禁止。",
+      "supported_parts": [
+        "偏好可睡整觉的时段"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    }
+  }
+}

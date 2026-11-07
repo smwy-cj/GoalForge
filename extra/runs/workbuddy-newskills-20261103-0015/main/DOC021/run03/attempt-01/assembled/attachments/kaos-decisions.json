@@ -1,0 +1,324 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "35db2d74256efb9bc41abc662bcb08a9a00b59d94585a4c781e31da8aff21347",
+    "judgments_sha256": "c8a8a23953290fc2810ee1b09858e6bf1dbd3d0a835a1935912b7079b1687369"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G001",
+      "child_ids": [
+        "G002",
+        "G006",
+        "G008",
+        "G009",
+        "G010"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "原文的流程顺序（选社区→找当地网站→按条件筛选→进一步收窄→联系房东）容易被读成对 G001 的充分分解，但缺少“房东回应并达成租赁”这一必要结果，且各步骤之间存在 precedes 关系而非充分条件；因此只保留为待确认组，不进入成立层级。",
+      "assumptions": [
+        "房源信息基本真实且站内或站外可联系到房东",
+        "找房过程以租到或确定一处住所为终点"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T029",
+          "quote": "So I will like visit a website like apartments.com, for example. Then I will log in. I will have a search bar with several filters where I can filter my options.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R1",
+        "R6",
+        "R7"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "在新城市按原文顺序完成选社区、找当地常用网站、按预算与户型筛选、按次要条件收窄并联系房东，房东正常回应，最终确定一处住所。",
+          "outcome": "supports",
+          "rationale": "该分析场景下五个子目标达成后父目标可实现，说明组有部分充分性依据。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "五个子目标都已完成，但房东始终不回复，或双方在价格与租期上无法达成一致，最终没有找到可住的房子。",
+          "outcome": "counterexample",
+          "rationale": "原文自己也说站内联系常无人回应（T013/T019），说明缺少回应与达成环节时子目标组不足以实现父目标，故完整性只能记 partial。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC021-goal-model",
+      "message": "G003/G004/G005 是选定社区的三条并列方式（原文用 One of the ways / the other ways），未声称任一单独即可选定社区，因此没有建 OR 替代组；是否需要建三个单方案组并逐一核对完整性？"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "该组缺少“房东回应并达成租赁”的结果与条件；若补齐，是否应把 G001 拆成“找到候选并建立联系”与“达成租赁”两个目标后重评？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G016",
+      "message": "G016 由“不能简短沟通”的抱怨反推，原文没有直接祈使；是否应只保留 G028（单一平台沟通）并删去该推断目标？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G018",
+      "message": "照片格式规则以 maybe 提出，且依赖网站能否约束房东；是否应降级为待确认方案而非目标？"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC021-goal-model",
+      "message": "C011（完全不回复说明管理不善）目前作为判断标准排除，未建避免型目标；若需表达“避免管理不善的房源”，应回到提取新增目标并重新核验。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G002",
+      "target_id": "G006",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原句用 and then 连接：先选定社区或地方，再按关键词搜索以找到该区域的相关网站；仅为先后，不主张因果。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T005",
+          "quote": "So usually I choose a neighborhood or a place where I want to find a house in, and then I start searching by such keywords to find relevant websites for that specific area",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G003",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "when the listings that fit budget and requirements cluster in some neighborhoods"
+      ],
+      "assumptions": [],
+      "rationale": "原文以 One of the ways 明示查看房源网站聚集情况是选定社区的一种实现方式；不声称该方式在所有情况下都够用。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T007",
+          "quote": "One of the ways is when I check these types of websites that show houses and apartments available.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G004",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "when people living in the target country can be asked"
+      ],
+      "assumptions": [],
+      "rationale": "原文以 the other ways 引出向当地居住者询问推荐，作为选定社区的另一实现方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T007",
+          "quote": "the other other ways, is asking people who lives, for example in that country, if they have any recommendation for the places",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G005",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "when there is a specific job or college to be near"
+      ],
+      "assumptions": [],
+      "rationale": "原文以 if…I will usually pick 说明就近于工作或学校是选定社区的方式之一。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T007",
+          "quote": "if I have a specific job, or if I'm studying at specific college, I will usually pick a neighborhood that's close to that area",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G007",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "when the neighborhood name is too narrow"
+      ],
+      "assumptions": [],
+      "rationale": "原文说画圈选区域能让选区更灵活，正是确定搜索区域（选定社区/地方）的实现方式；原文只谈灵活性，不保证覆盖全部情形。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T033",
+          "quote": "You can like, have more flexibility on selecting the area.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G008",
+      "target_id": "G009",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文以 after that 表示先用面积/卧室/预算筛选，再以次要条件收窄；仅为先后。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T009",
+          "quote": "after that, when I get many options, I can start filtering it down, using other non very important criteria",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G009",
+      "target_id": "G010",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "after narrowing to several options"
+      ],
+      "assumptions": [],
+      "rationale": "原文以 after filtering it down into several options 引出开始联系房东。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T011",
+          "quote": "so usually, after filtering it down into several options, I'll start with the communication process",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G012",
+      "target_id": "G013",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "when the provider does not reply through the platform"
+      ],
+      "assumptions": [],
+      "rationale": "未回复时改用邮箱/电话，是“把沟通放在站外、平台只用于发现房源”这一一般做法在具体情境中的实例；不表示该具体目标覆盖一般情形的全部范围。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T013",
+          "quote": "So I'll try to communicate with them using other methods like email or phone.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC021:T017",
+          "quote": "But I actually usually proceed with different type of communication outside of these apps.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G021",
+      "target_id": "G022",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文把“要求注册”列为额外步骤的具体例子，属于“避免冗长且结果不明的流程”这一更一般目标的专门情形。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T033",
+          "quote": "one of the things that I don't like is actually these extra steps like requiring you to register in the website.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R10",
+      "source_id": "G015",
+      "target_id": "G028",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "when the website shows how the communication process works"
+      ],
+      "assumptions": [],
+      "rationale": "原文说让用户看清沟通过程会使其更信任该功能、不再另寻他法并留在站内沟通；有帮助但不保证单独充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T073",
+          "quote": "This will make him like, trust the feature more, and never try something else, and just keep the communication in in the website.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R11",
+      "source_id": "G010",
+      "target_id": "G020",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [
+        "after both sides confirm availability and interest"
+      ],
+      "assumptions": [],
+      "rationale": "原文说提供个人信息可以在双方确认可用性与兴趣之后，确认发生于联系沟通中，故联系在前、提供信息在后。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T027",
+          "quote": "I think like giving the information could be after confirming the availability from the 2 parties",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R12",
+      "source_id": "G008",
+      "target_id": "G027",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文说这类筛选与网站汇集选项会带来价格区间与可选房源的总览；是帮助关系，不主张筛选足以单独形成总览。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC021:T057",
+          "quote": "these types of filters, and also these types of websites will collect a lot of options together will give me an overview about the price ranges",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

@@ -1,0 +1,222 @@
+{
+  "schema_version": "goalforge-isolated-forward-execution-1",
+  "run": "baseline-repeat",
+  "started_at": "2026-10-26T01:30:52.913341+00:00",
+  "task": "冻结三项技能对DOC003/DOC010/DOC013/DOC020/DOC023/DOC031/DOC028/DOC036逐篇前向提取、核验、组判断及待审交付",
+  "skill_root": "runs/skill-optimization-2026-10-25-phase1/before/skills",
+  "skill_files": [
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/evidence-rules.md",
+      "sha256": "b96abdae956c6244a699f61b03d51679137a8a4ace1bf3427f7f1fc984e62629"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/goal-boundaries.md",
+      "sha256": "e98b1a55e2670689a6aa924f3a69aa88d48488c1f81b9ceffb8f0f5d74e4ae9b"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/input-processing.md",
+      "sha256": "90930d4655d09cb892304f3ffd2bfbf29a488d3374e4b3b394f6ea098ec88af7"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/output-contract.md",
+      "sha256": "2f57f8d6ab1d16fa3dd6bddfd729e4d48d94c1a8e6b681b7b7e56837ce11badc"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/semantic-judgments.md",
+      "sha256": "770f88124c485076148fb7c11b712848d87273dd44a5ab5ee7efcf484e3bf1d2"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/tracing-contract.md",
+      "sha256": "b5ce28c8e51607996e645eeb86e301e29ec30a9ee05e5bb6b64ed4c39f8c3648"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/scripts/prepare_source.py",
+      "sha256": "4e8478615d11e8c871c718cdfb10e240f624588171c1dcc806bb9f7e3387efeb"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/scripts/render_review.py",
+      "sha256": "04211c2d6638fb6de79f477c6caccbac8c7bddaa8fc8b4ea243e9d2e5c11a876"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/scripts/simple_candidates.py",
+      "sha256": "f92bca21e92fc86f1dd79333a45c453c715fece57af5fb5ac2bd0dab38c878e4"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/scripts/trace_candidates.py",
+      "sha256": "0548e40acab5c738428841e6acaa3bb4fe6b74a60c986ecb48a765fd3c0c6bde"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/SKILL.md",
+      "sha256": "cba2a2e83f23ee492ac7a764afbd1ca7c50d22dd2026ad776f24c2e49022b5e3"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/assets/review-core.js",
+      "sha256": "f4bb28b4d24c2c5da6e5d13b5fded36bc3c4795006e29a644a5cd387fd595da6"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/assets/review-ui.js",
+      "sha256": "b6c90d3cd133b2635144baa93157e3da98a705f4857cf453caace9c1fe50da54"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/assets/simple-core.js",
+      "sha256": "3b697ec34304826dc190597500e04dca52988a70d40c25563c3b45c64d5aff3a"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/assets/simple-viewer.css",
+      "sha256": "7ce88bd4475656e0412d30a19684ad43d9b246f48ef84c8a6664de068126580a"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/assets/simple-viewer.html",
+      "sha256": "66517178b9b7770dcffe6811e03439a650cd4ca63df38e468b9cccc07a2a7e28"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/assets/simple-viewer.js",
+      "sha256": "3ccf079f4994bc9b7816e20adc538802905eb4c52afa57e5a604ce959a78c104"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/assets/viewer.css",
+      "sha256": "29a0075b0353c5ae4b71d0b81e75114dc1274c29584b3f872dd346bc2e314fd6"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/assets/viewer.html",
+      "sha256": "bc216ac9245a03fd8c9d3093d8205c540f6c9cf4bfce40d60a50873e57a48e37"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/assets/viewer.js",
+      "sha256": "26cf3be1ce2ea8d5f56c32815a72e89c93fb6f77d08722e0969a70259ac371a4"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/references/modeling-rules.md",
+      "sha256": "f1cafcf31b26643972904839f29dcd755bcd56761dd0c7f39d7ca97b2223fc43"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/references/output-contract.md",
+      "sha256": "01f15a2b3c6580ae3377800aa823ee18102c2450274135fa1713ae3dafea9759"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/references/reassessment.md",
+      "sha256": "294f28f2e1533eb0ce361bf6444c015f55578c223cc6628321b9bb9a149c5799"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/references/tools.md",
+      "sha256": "41c25c6b94cd46afd964029f170404da0b51473b69af2ec7c85343382772b025"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/scripts/assemble_model.py",
+      "sha256": "04c358feb81c2b3e6714500bbb1168d3952643ee2cd02863fe158e1fdaefb24f"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/scripts/export_model.py",
+      "sha256": "02e4a92c10912a59b5f84f0bbb758ba4c0281d7dfe1a13c27cccec30507565c3"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/scripts/finalize_model.py",
+      "sha256": "49d4d8ed700eec643e47ad6dabaaf78632ee500f7d656b703b2d7e569622b6f6"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/scripts/kaos_model.py",
+      "sha256": "baf5a69117c8e4d30439d64dacdb56cceb454a2626a171cbf2ee216809eafc8a"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/scripts/reconcile_model.py",
+      "sha256": "72ff141e55bda9d5f2d0603a938c263fcd39e6c84d4042d858c1aa33df2c1500"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/scripts/revise_model.py",
+      "sha256": "df893c62f2d563a106a77051b36731292d677f03a00a57dab68f377229a43f9a"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/scripts/serve_model.py",
+      "sha256": "484abf576e548357a978c52df5ead1f38b4815cccc7118e4be9fc03b301af80b"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/SKILL.md",
+      "sha256": "9fefae1386e604e2d0117925eb56896aad6113bc33b7e6abc040e988185bddda"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/references/human-feedback.md",
+      "sha256": "9fed658eff5e409f0a5c8876cfe09c0060cc8cc94beefeff3da402a3ee9868f3"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/references/output-contract.md",
+      "sha256": "be91e87e53d67a18919ac3b0df9bbe84c59ecb9d5dd4f5f6495e000c7de1cd64"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/references/semantic-review.md",
+      "sha256": "1aa2097d9a330d4286c8848cf2c237cd1a2d4150ec1cbd3bd62cdfa30a582cc0"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/references/tools.md",
+      "sha256": "a6e57a55624493702465e5e0d4cee13f7f044f01b67907690180319ffcaca137"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/scripts/feedback_contract.py",
+      "sha256": "ac88699ef0339b9b1cd7fcd3f545c794ead08e6f48479441518f51139e3f72f9"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/scripts/process_feedback.py",
+      "sha256": "28ea1d4ac1c7ffb5bb830ec01b84395f6b10c692a73620b30b73094f354de34d"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/scripts/review_model.py",
+      "sha256": "05682bfb8bd9174465cd5e430a2d4e31a77b88a451ea9e46d2426bc937be39d1"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/SKILL.md",
+      "sha256": "8fba75d78e42734bf111978ab0372aa4e3c7d3b8edc3c2415b339b00b1419699"
+    }
+  ],
+  "model": "unknown",
+  "temperature": "unknown",
+  "token_budget": "unknown",
+  "actual_tokens": "unknown",
+  "cost": "unknown",
+  "author": "同一助手从本轮八篇原文直接编制目标、支持理由和组判断；本地程序只组织、定位和核验",
+  "isolation": {
+    "allowed_sources": [
+      "datasets/processed/goalforge-v1/source/DOC003.json",
+      "datasets/processed/goalforge-v1/source/DOC003.txt",
+      "datasets/processed/goalforge-v1/source/DOC010.json",
+      "datasets/processed/goalforge-v1/source/DOC010.txt",
+      "datasets/processed/goalforge-v1/source/DOC013.json",
+      "datasets/processed/goalforge-v1/source/DOC013.txt",
+      "datasets/processed/goalforge-v1/source/DOC020.json",
+      "datasets/processed/goalforge-v1/source/DOC020.txt",
+      "datasets/processed/goalforge-v1/source/DOC023.json",
+      "datasets/processed/goalforge-v1/source/DOC023.txt",
+      "datasets/processed/goalforge-v1/source/DOC031.json",
+      "datasets/processed/goalforge-v1/source/DOC031.txt",
+      "datasets/processed/goalforge-v1/source/DOC028.json",
+      "datasets/processed/goalforge-v1/source/DOC028.txt",
+      "datasets/processed/goalforge-v1/source/DOC036.json",
+      "datasets/processed/goalforge-v1/source/DOC036.txt"
+    ],
+    "forbidden_read": [
+      "论文目标",
+      "output",
+      "output1",
+      "当前skills",
+      "tests",
+      "比较报告",
+      "之前运行",
+      "另一分支结果"
+    ],
+    "external_model_api": false,
+    "installed_dependencies": false,
+    "subagents": false,
+    "note": "本运行上下文隔离不等于统计独立；同一助手作者自检不等于独立语义评审。"
+  },
+  "full_source_read": {
+    "DOC003": true,
+    "DOC010": true,
+    "DOC013": true,
+    "DOC020": true,
+    "DOC023": true,
+    "DOC031": true,
+    "DOC028": true,
+    "DOC036": true
+  },
+  "independent_semantic": "not_run",
+  "formal_proof": "not_run",
+  "human": "pending"
+}

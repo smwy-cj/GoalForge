@@ -1,0 +1,361 @@
+{
+  "document_id": "DOC031",
+  "artifact_type": "isolated_model_reviewer_source_intent_inventory",
+  "human_gold": false,
+  "source_only": true,
+  "domain": "Slack 校园即时沟通与协作",
+  "scope": "受访者使用 Slack 联系同学、助教、教授、共享文件和浏览校园频道，并提出可达性改进。",
+  "methodology": "逐段完整阅读原文后人工式语义判断；条目由评审模型编写，程序仅校验引用和序列化，不以关键词抽取代替理解。未读取技能、论文目标、tests、生成结果或既有评估。条目不是最终目标模型，不规定唯一层次或粒度。",
+  "intents": [
+    {
+      "intent_id": "DOC031:I01",
+      "intent": "在校园内即时联系同学、助教和教授",
+      "subject": "受访学生",
+      "conditions": "日常校园沟通时",
+      "modality": "明确主要目的",
+      "exceptions": "WhatsApp仍是整体最常用即时消息应用；Slack为校园最快方式",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T005",
+          "quote": "talk to my peers, my teaching, teaching assistants in various subjects, and also my professors.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1408,
+          "quote_end_char": 1503,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T007",
+          "quote": "it's instant communication with anyone I wish to talk to within the university.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1742,
+          "quote_end_char": 1821,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I02",
+      "intent": "仅凭姓名或姓氏找到校园成员，无需先保存号码或邮箱",
+      "subject": "受访学生",
+      "conditions": "需要联系成员时",
+      "modality": "明确偏好和优势",
+      "exceptions": "需知道名字或姓；不等于可联系世界上任何人",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T007",
+          "quote": "I don't need to like save anybody's information.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1900,
+          "quote_end_char": 1948,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T007",
+          "quote": "if I know their name, or sometimes even their last name, I can look them up",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2011,
+          "quote_end_char": 2086,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I03",
+      "intent": "在手机或电脑上便捷沟通",
+      "subject": "受访学生",
+      "conditions": "跨设备使用时",
+      "modality": "明确便利目的",
+      "exceptions": "大屏与手机总体好用，狭窄浏览器另有问题",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T007",
+          "quote": "I can do it over my phone. I can do it if my laptop's open",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2140,
+          "quote_end_char": 2198,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I04",
+      "intent": "用频道立即触达广泛受众",
+      "subject": "受访学生",
+      "conditions": "向群体传递信息时",
+      "modality": "明确目的",
+      "exceptions": "未具体指定公告权限、人数或邮件群发功能",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T009",
+          "quote": "the channel feature within slack, where I can reach a wide audience immediately.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2531,
+          "quote_end_char": 2611,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I05",
+      "intent": "查看入频道前的历史内容与当前校园、专业讨论",
+      "subject": "受访学生",
+      "conditions": "加入频道或了解动态时",
+      "modality": "明确优势与信息目的",
+      "exceptions": "历史全面也导致搜索结果多，需要保留这种双面性",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T009",
+          "quote": "I have access to information that was there before I even joined the channel",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2849,
+          "quote_end_char": 2925,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T009",
+          "quote": "what's happening around within the department, within the program, what's happening around campus.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3227,
+          "quote_end_char": 3325,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I06",
+      "intent": "通过私信即时分享团队协作文件",
+      "subject": "学生与队友",
+      "conditions": "项目协作时",
+      "modality": "明确高频功能及目的",
+      "exceptions": "现场浏览文件夹选文件是当前步骤，不是固定操作路径要求",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T011",
+          "quote": "my most used feature is sharing documents when collaborating with teammates.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3655,
+          "quote_end_char": 3731,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T013",
+          "quote": "share a document instantly with a teammate.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3985,
+          "quote_end_char": 4028,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I07",
+      "intent": "按需格式化消息和附加不同类型文件",
+      "subject": "发送消息的学生",
+      "conditions": "撰写私信/共享文档时",
+      "modality": "明确可用操作",
+      "exceptions": "粗斜体、emoji 为说明，不必独立高层目标化",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T017",
+          "quote": "I can format the text, whatever, any way I want.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4946,
+          "quote_end_char": 4994,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T017",
+          "quote": "I can attach any type of file I want.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5059,
+          "quote_end_char": 5096,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I08",
+      "intent": "搜索历史讨论或资料并从大量命中中找到具体消息",
+      "subject": "受访学生",
+      "conditions": "用关键词查找教授发言等内容时",
+      "modality": "明确检索目的，改进相关性为推断",
+      "exceptions": "未知确切内容时更难；未提出删除历史解决信息过载",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T019",
+          "quote": "enter keywords to look, to look for something specific.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5610,
+          "quote_end_char": 5665,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T019",
+          "quote": "It's a little difficult to find. You know the message that I want to find?",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6306,
+          "quote_end_char": 6380,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I09",
+      "intent": "更容易发起语音视频通话，尤其群组通话",
+      "subject": "受访学生/协作群体",
+      "conditions": "需要音视频沟通时",
+      "modality": "明确改进愿望",
+      "exceptions": "已有通话能力，只是入口多窗口不便；不是新增一个完全缺失功能",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T021",
+          "quote": "it would be easier if it was just more access.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6984,
+          "quote_end_char": 7030,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T027",
+          "quote": "the call feature more accessible as well",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8814,
+          "quote_end_char": 8854,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T027",
+          "quote": "especially in a group setting",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8862,
+          "quote_end_char": 8891,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I10",
+      "intent": "已知电话号码时可用直接电话快速沟通",
+      "subject": "受访学生",
+      "conditions": "熟悉对方且有电话号码时",
+      "modality": "明确替代策略",
+      "exceptions": "不会因此放弃 Slack",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T023",
+          "quote": "if I have their email with not their emails, or if their phone number with me, I would just call them.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7310,
+          "quote_end_char": 7412,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T025",
+          "quote": "I would still use Slack",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7917,
+          "quote_end_char": 7940,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I11",
+      "intent": "从 Slack 快速跳转标准邮件应用给对方发正式邮件",
+      "subject": "受访学生",
+      "conditions": "向助教、教授等进行预期正式沟通时",
+      "modality": "明确新增愿望",
+      "exceptions": "要求导航到 Outlook/Gmail 等；不等同重做完整内置邮箱",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T027",
+          "quote": "a feature that would just immediately navigate to an Outlook or Gmail or any, any standard email app where I can email the person I want to",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8610,
+          "quote_end_char": 8749,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC031:I12",
+      "intent": "在桌面浏览器窗口缩窄并排工作时仍易于导航",
+      "subject": "受访学生",
+      "conditions": "同时打开多个窗口并缩小 Slack 宽度时",
+      "modality": "明确改进线索",
+      "exceptions": "手机和14寸全屏总体正常；不要求固定三窗布局",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T031",
+          "quote": "shrink the size of slack browser window, I feel like it's a little hard to navigate through the application.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10032,
+          "quote_end_char": 10140,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    }
+  ],
+  "background_candidates": [
+    {
+      "item": "Microsoft Teams、WhatsApp 与新用户建议",
+      "reason": "比较和使用背景；不意味着必须复制 Teams 所有功能。新手建议重述姓名查找与文件分享，不新增业务目标。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC031:T021",
+          "quote": "I used to use Microsoft teams a lot in my workplace.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6679,
+          "quote_end_char": 6731,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC031:T029",
+          "quote": "definitely highlight the features or collaboration like document sharing",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9349,
+          "quote_end_char": 9421,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "搜索结果过多是已述问题，没有明确指定新过滤器或AI方案。",
+    "直接电话是拥有对方号码时的替代，不能取代按姓名发现用户。",
+    "窗口变窄是桌面多窗口情境，不是手机布局有问题。"
+  ],
+  "source_document_hash_declared": "4f4c359b0aa66e459338fef571a2e6e2ddd5badd68f1bfe61e6950016957a6fe",
+  "read_range": {
+    "first_source_id": "DOC031:T000",
+    "last_source_id": "DOC031:T032",
+    "turn_count": 33,
+    "read_completely": true,
+    "reading_note": "全文语义阅读；DOC003首次长输出中段被截断后，已单独补读T066–T096。DOC028、DOC036分别按turn分段读完。其他文档完整读取。"
+  }
+}

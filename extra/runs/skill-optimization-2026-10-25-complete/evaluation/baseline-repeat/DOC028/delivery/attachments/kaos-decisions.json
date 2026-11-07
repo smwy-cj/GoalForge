@@ -1,0 +1,41 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "d4f5f32c4f9115fc5f4629aaf8413f4c61f18d18f24e4052bf73c977d38e6ca1",
+    "judgments_sha256": "84a269afdab7ffd23a0f03d0e3bfee85974b9bd93b5818366f58bfc1bf0637b0"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G003",
+      "child_ids": [
+        "G014",
+        "G015"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "找到特定社区及主题回答可能帮助解决问题，但答案可错误且是否解决问题未知。",
+      "assumptions": [
+        "分析假设：社区匹配正确仍可能得到错误回答，来源T061也明确保留坏回答风险。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC028:T059",
+          "quote": "Yeah, I would add, like a Gen. AI tool, to figure out what subreddit I should be accessing to ask my particular question, because oftentimes there are like you can. You can search for subreddit on let's say I'm not sure like let's say food. You can search for food it'll cover all kinds of food, but there are separated for. say, vegetarian dishes, or there are subreddits for something as vague as tomato based dishes or something like that, so you can post on food. It might be answered, it might not be answered. But there, there's much more value in posting in a specific subreddit, and finding that subreddit would be very useful. So I would implement, like a geni tool to find a particular subreddit.",
+          "role": "basis",
+          "start_char": 29382,
+          "end_char": 30088
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "整组充分性尚未由原文确立；分析假设：社区匹配正确仍可能得到错误回答，来源T061也明确保留坏回答风险。"
+    }
+  ]
+}

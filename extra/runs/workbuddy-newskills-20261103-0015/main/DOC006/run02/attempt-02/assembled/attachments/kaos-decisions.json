@@ -1,0 +1,122 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "bef037a74f14eab73c7d8f0f506ead217207fd50f66d451b2e830774972f3319",
+    "judgments_sha256": "c9dc8804222571c39edff19217f923836cc23e81c1ae0781cd7b6a76b62e2a8e"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC006-goal-model",
+      "message": "是否应把 G001、G003 与 G004（推荐推送）组织成 '不遗漏重要信息' 的 AND 精化组？现有材料只说明多个手段，无法声称这组子目标共同充分，故未建组。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "G010 来自 'might just' 的条件性建议，且受访者多次表示对数据泄露不在意；应保留为低优先级建议还是视为非需求？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "娱乐内容仅以 'maybe' 提及，是否需要作为稳定使用目标保留，还是仅作为 G008 过滤目标的情境背景？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G001",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "新闻/日常信息浏览是受访者用来避免遗漏重要信息的主要手段：T003 在被问 'why do you think [information browsing] is important' 时直接给出不想遗漏的回答。方式→目的方向。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T003",
+          "quote": "I do not want to miss out any important information like if there are any great events going on internationally.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G003",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "职位检索被视为获取同一类不可遗漏信息的手段：T003 把新的职位发布列为不想遗漏的信息，而 T001 的职位搜索正是获取它的方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T003",
+          "quote": "maybe there are some new job posting",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G004",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "受访者明确说职位列表问题较少，因为 AI 推荐会推送合适的职位；个性化推荐帮助（不保证充分）职位检索目标。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T017",
+          "quote": "because it can push you the right postings with artificial intelligence, recommendations.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G008",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "When searching for useful content such as jobs or housing"
+      ],
+      "assumptions": [],
+      "rationale": "受访者说做职位/房产搜索时平台把娱乐和有用内容混在一起推送，过滤娱乐内容有助于检索到有用内容；仅为帮助关系，不代表充分实现。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T023",
+          "quote": "when you are doing the including job searching and housing rental, searching whatever",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G011",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "信息流刷屏主要影响新闻/信息浏览体验"
+      ],
+      "rationale": "原文只说矩阵账号刷屏 'interferes with user experience'，未点名新闻浏览目标，故只作待确认的帮助关系。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC006:T043",
+          "quote": "they just flood the feed with irrelevant contents, and it interferes with user experience.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

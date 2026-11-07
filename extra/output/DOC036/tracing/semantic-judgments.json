@@ -1,0 +1,223 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "064196775f2d9edf9290ed032dd456ff28be329a566d60319eb240f6c3cf0ec8",
+    "input_sha256": "99d0407b9e32d595b80983ff65c0f49df24d79169b8471d6b9efcd9113423030"
+  },
+  "judgments": {
+    "DOC036-C001": {
+      "target_statement": "到陌生城市时快速找到本地卖家，知道他们卖什么、在哪、怎么联系。",
+      "label": "direct",
+      "rationale": "T056 说初到新地方不认识本地卖家，T012 说搜索会按所在地区返回卖家，T056 说主页含位置。",
+      "supported_parts": [
+        "场景：T057「when you go to a new place. You don't really know, like the vendors there」",
+        "机制：T013「cake vendors in the area you are in」",
+        "信息：T057「their bios. You also have their location」"
+      ],
+      "unsupported_parts": [
+        "未说明位置是自动定位还是卖家自填",
+        "未说明跨国时定位是否准确"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取场景",
+        "2. 取机制与信息",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C002": {
+      "target_statement": "用关键词（如 cakes）搜出对口卖家；结果不准时加上地名再搜。",
+      "label": "direct",
+      "rationale": "T012 说搜索框输入名称，结果不够就补地名。",
+      "supported_parts": [
+        "做法：T013「enter the name of of what you want to look for」",
+        "补充：T013「I'll just add maybe the name of the location」"
+      ],
+      "unsupported_parts": [
+        "未说明搜索结果的排序逻辑",
+        "未说明是否支持筛选"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取做法",
+        "2. 取补充",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C003": {
+      "target_statement": "节日（如情人节）能按指定礼物找到好店并下单。",
+      "label": "direct",
+      "rationale": "T010 明确说主要节日购物，并举例订蛋糕。",
+      "supported_parts": [
+        "场景：T011「shop on days like Valentine's Day」",
+        "对象：T011「a cake from a really good spot」"
+      ],
+      "unsupported_parts": [
+        "未说明其他节日是否同样",
+        "未说明预算"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取场景",
+        "2. 取对象",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C004": {
+      "target_statement": "没有明确目标时也能刷到多种商品，临场决定买什么。",
+      "label": "direct",
+      "rationale": "T022 说有时完全没有目标，靠翻图片临场决定。",
+      "supported_parts": [
+        "状态：T023「I go with a very open mind」",
+        "行为：T023「shuffle through like a bunch of images」",
+        "结果：T023「picking something that you know I not imagine I'll pick」"
+      ],
+      "unsupported_parts": [
+        "未说明这种模式的频率",
+        "未说明是否因此买过不需要的东西"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取状态",
+        "2. 取行为与结果",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C005": {
+      "target_statement": "能从卖家主页直接拿到联系方式，用电话或 WhatsApp 谈价与下单。",
+      "label": "direct",
+      "rationale": "T016 说联系方式在 bio 里，他更愿意直接打这个号码；T014 说必须自己联系卖家。",
+      "supported_parts": [
+        "位置：T017「in the account, bio... their phone number」",
+        "偏好：T017「reach out to the number they've specified」",
+        "前提：T015「you need to still get in touch with the vendor」"
+      ],
+      "unsupported_parts": [
+        "未说明站内聊天为何更慢（他给的理由是「不常在线」）",
+        "未说明支付方式的安全性"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取位置",
+        "2. 取偏好与前提",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C006": {
+      "target_statement": "能判断账号是否可信，避免打款后收不到货。",
+      "label": "direct",
+      "rationale": "T014 说他遇到过恶意账号，T062 说明他用互动量分布判断真伪。",
+      "supported_parts": [
+        "遭遇：T015「this Instagram account was actually a malicious account」",
+        "判据：T063「products more or less have similar likes」",
+        "用途：T063「know which accounts are probably good」"
+      ],
+      "unsupported_parts": [
+        "判据是他个人经验，未经平台验证",
+        "未说明被骗后的申诉途径"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取遭遇",
+        "2. 取判据",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C007": {
+      "target_statement": "不登录也能浏览卖家主页，想看就看、看完即走。",
+      "label": "direct",
+      "rationale": "T024 说希望不登录就能用，T052 说不登录连卖家主页都看不了。",
+      "supported_parts": [
+        "诉求：T025「use the application without signing in」",
+        "现状：T053「cannot access anything in the app. If I've not logged in」"
+      ],
+      "unsupported_parts": [
+        "未说明愿意用何种方式换取免登录（如限制次数）",
+        "他自述登录门槛也有自我约束作用（见 C011）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求",
+        "2. 取现状",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C008": {
+      "target_statement": "商品页直接标明价格，不必逐个私聊问价。",
+      "label": "direct",
+      "rationale": "T058 说卖家不标价，他觉得应该标出来。",
+      "supported_parts": [
+        "诉求：T059「I feel like they should put on the website」",
+        "现状：T059「They don't put the price of the products」"
+      ],
+      "unsupported_parts": [
+        "他自己也理解卖家不标价的动机（怕没人咨询）",
+        "未说明是否接受区间价"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求",
+        "2. 取现状",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C009": {
+      "target_statement": "换手机号、丢联系方式后仍能通过 Instagram 找到朋友。",
+      "label": "direct",
+      "rationale": "T030 说换号丢联系方式后仍能通过 Instagram 找回朋友。",
+      "supported_parts": [
+        "作用：T031「I could always lodge back there and get to you」",
+        "背景：T031「I keep changing my phone numbers」"
+      ],
+      "unsupported_parts": [
+        "未说明是否会定期整理好友",
+        "未说明是否用其他平台备份联系人"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取作用",
+        "2. 取背景",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C010": {
+      "target_statement": "账号保持私密，只有熟人能看到发布内容与在线状态。",
+      "label": "direct",
+      "rationale": "T026 说账号设为私密，只有很熟的朋友能看到。",
+      "supported_parts": [
+        "做法：T027「I make sure I have a private account」",
+        "范围：T027「only very close friends of me」"
+      ],
+      "unsupported_parts": [
+        "未说明是否区分「仅聊天」与「可见内容」",
+        "未说明对卖家账号是否也如此"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取做法",
+        "2. 取范围",
+        "3. → direct"
+      ]
+    },
+    "DOC036-C011": {
+      "target_statement": "控制使用时长，只在有需要时打开，避免被无限滚动与追动态牵着走。",
+      "label": "direct",
+      "rationale": "T034 指出无限滚动与追动态是成瘾机制，T032 说他只在有需要时才用。",
+      "supported_parts": [
+        "机制：T035「infinity school where it just keeps on updating content」",
+        "后果：T035「addictive and very time consuming」",
+        "应对：T033「stay away from it when I'm not having any use for it」"
+      ],
+      "unsupported_parts": [
+        "未说明是否用屏幕时间工具",
+        "未给出可接受的使用时长"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取机制",
+        "2. 取后果与应对",
+        "3. → direct"
+      ]
+    }
+  }
+}

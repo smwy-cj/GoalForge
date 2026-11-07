@@ -1,0 +1,269 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "3fa8190e4a08c582b80cb299c27a8977680cce8b00a05bbbe094ed00faabd81c",
+    "input_sha256": "485933cbbc972cf7ed8cbb54b9ab307a38d61e5d3ac1efe9cfcd71e10113c913"
+  },
+  "judgments": {
+    "DOC014-C001": {
+      "target_statement": "出门前按温度与降雨预报决定穿什么、骑车还是坐车、要不要带伞。",
+      "label": "direct",
+      "rationale": "T001 直接说明用途：「check the temperature outside, especially like the day before. So like, I can plan whether I should wear my thick coat or my light coat」，并给出雨具与交通方式的连带决定。",
+      "supported_parts": [
+        "着装：T002「wear my thick coat or my light coat」",
+        "雨具：T002「I make sure I have my umbrella」",
+        "交通：T002「skip going through bicycle and just go through the bus」"
+      ],
+      "unsupported_parts": [
+        "温度阈值未量化（多冷才改乘公交）",
+        "「25% 以上算可能下雨」是其后文给出的个人判断，未并入本目标"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取三项具体决定",
+        "2. 触发条件为前一天的温度与降雨预报",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C002": {
+      "target_statement": "按出门时段查看逐小时温度与降水概率，而不是只看全天概况。",
+      "label": "direct",
+      "rationale": "T005 说明查看的是逐小时数据，并解释原因是要对上出门时段。",
+      "supported_parts": [
+        "逐小时：T006「an hour by hour detail」",
+        "关注项：T006「the precipitation chances」",
+        "时段：T006「before our classes, what what the temperature is around that time」"
+      ],
+      "unsupported_parts": [
+        "未说明需要几小时的粒度或预报时长",
+        "未说明分钟级降水需求"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取查看粒度与原因",
+        "2. 与 C001 的出门决策相连",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C003": {
+      "target_statement": "极端天气发生时，能获知严重程度与官方建议的应对方式（撤离/躲避/防护）。",
+      "label": "direct",
+      "rationale": "T015 明确在收到台风警报时会查看严重程度与官方建议，T011 说这是最早获知消息的地方。",
+      "supported_parts": [
+        "严重程度与建议：T016「I'll read for what they recommend」",
+        "具体决策：T016「Should I evacuate the city? Should I just seek shelter」",
+        "获知渠道：T012「weather.com would be a good spot that I'll 1st see it」"
+      ],
+      "unsupported_parts": [
+        "受访者从未亲历极端天气事件（T013 明确），应急指南部分为推测",
+        "未说明告警的提前量要求"
+      ],
+      "assumptions": [
+        "「they have some sort of guide」为受访者推测，未见实际页面"
+      ],
+      "reasoning_steps": [
+        "1. 区分亲历部分与推测部分",
+        "2. 决策需求为直接陈述",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C004": {
+      "target_statement": "旅行前数周查看月/周预报（含云量），据以判断行程是否可行。",
+      "label": "direct",
+      "rationale": "T017 说明出行前会查月度/未来预报，并强调除温度降水外还看云量，用于判断行程是否可行。",
+      "supported_parts": [
+        "查看时机：T018「I immediately... check for future weather focus」",
+        "关注项：T018「not just like the temperature and precipitation... but also like the cloud coverage」",
+        "用途：T018「you might need to reconsider」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的最长提前期",
+        "历史数据来源不明"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取查看时机与关注项",
+        "2. 用途明确指向行程决策",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C005": {
+      "target_statement": "出发前 2–3 天用更准的短期预报做最终决定（去或不去）。",
+      "label": "direct",
+      "rationale": "T019 明确建议等到临近再决定，并给出 2–3 天的可靠性判断。",
+      "supported_parts": [
+        "做法：T020「wait till the end and then then decide」",
+        "依据：T020「at least like 2 or 3 days before. It's it's like, usually right」"
+      ],
+      "unsupported_parts": [
+        "2–3 天为个人经验，无数据支撑",
+        "未说明若最终预报仍不确定如何决策"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取做法与依据",
+        "2. 与 C004 的长周期预估构成先后两段",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C006": {
+      "target_statement": "雷达图更细致、更直观，并可切换多种参数（降水、积雪等）。",
+      "label": "direct",
+      "rationale": "T043 直接指出雷达可以更好，并说明期望（更细、更直观、多参数），以 windy.com 为参照。",
+      "supported_parts": [
+        "诉求：T044「the radar could be better」",
+        "内容：T044「There are like multiple parameters that you you can see」",
+        "参照：T044「much detailed and like intuitive like radar map」"
+      ],
+      "unsupported_parts": [
+        "未列出需要的全部参数",
+        "付费意愿为条件性表达"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求与参照",
+        "2. 与 C007 的广告诉求区分（功能 vs 干扰）",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C007": {
+      "target_statement": "页面上减少广告，尤其是不要有视频弹窗广告夹在内容之间。",
+      "label": "direct",
+      "rationale": "T037 具体清点页面广告数量并说明影响，T069 补充广告把内容割裂、需要滚动确认。",
+      "supported_parts": [
+        "数量：T038「there is 1, 2, 3, 4 ads」",
+        "强度：T038「it's just too much」",
+        "影响：T070「everything is separated by ads」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的广告数量",
+        "未表态是否接受付费去广告（T041 明确目前不需要）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取数量与影响",
+        "2. 两处互证",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C008": {
+      "target_statement": "界面配色更素净（纯黑或纯白），而不是现在的暗蓝色。",
+      "label": "direct",
+      "rationale": "T035 直接表达对暗蓝配色的不满并给出替代方案。",
+      "supported_parts": [
+        "不满：T036「the background, is like a dull blue, which I don't really like」",
+        "期望：T036「they could just make it plain black or plain white」"
+      ],
+      "unsupported_parts": [
+        "未说明是否与夜间模式相关",
+        "属主观审美"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取不满与期望",
+        "2. 与 C007 同段并列",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C009": {
+      "target_statement": "能按具体地点（徒步起点、山中酒店等）查天气，而不只是按城市。",
+      "label": "direct",
+      "rationale": "T067 明确说明城市级数据不足，需要具体地点的数据。",
+      "supported_parts": [
+        "问题：T068「it's not necessarily like a city that you're going to」",
+        "期望：T068「having that very local data would be definitely helpful」",
+        "场景：T068「at this particular hotel that's in like middle of nowhere」"
+      ],
+      "unsupported_parts": [
+        "未说明地点粒度（经纬度/POI）",
+        "未说明数据来源是否可得"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题与期望",
+        "2. 场景为徒步/登山/偏僻酒店",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C010": {
+      "target_statement": "默认不接收天气通知，需要时再自行打开。",
+      "label": "direct",
+      "rationale": "T055 与 T057 两次说明偏好零通知并已关闭。",
+      "supported_parts": [
+        "偏好：T056「I usually prefer no notifications」",
+        "现状：T058「I just prefer it off」"
+      ],
+      "unsupported_parts": [
+        "未说明是否愿意保留极端天气告警（与 C003 存在张力）",
+        "关闭方式为浏览器站点设置，非应用内"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取偏好与现状",
+        "2. 与 C003 对照发现张力",
+        "3. → direct，并转为人工问题"
+      ]
+    },
+    "DOC014-C011": {
+      "target_statement": "看到全球范围的重要天气事件新闻（不限本地）。",
+      "label": "direct",
+      "rationale": "T051 说明首页有全球天气事件区块，点开进入站内新闻。",
+      "supported_parts": [
+        "区块：T052「sections for like weather events, not necessarily in my city」",
+        "范围：T052「important weather events... across the world」"
+      ],
+      "unsupported_parts": [
+        "未说明更新频率",
+        "未说明是否可订阅特定地区"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取区块描述",
+        "2. 属维持型目标",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C012": {
+      "target_statement": "位置数据只留在本地、不被留存，也不因账号泄露而暴露所在城市。",
+      "label": "direct",
+      "rationale": "T061 说明其对位置数据的判断与顾虑：认为存在本地缓存可清除，登录状态下才有泄露担忧。",
+      "supported_parts": [
+        "现状判断：T062「if it's in my local cache... the data is gone」",
+        "条件性顾虑：T062「If I am logged in, though, I might be a little worried」",
+        "风险：T062「a leak could be a little scary」"
+      ],
+      "unsupported_parts": [
+        "对缓存位置为推测（受访者自述 not 100% sure）",
+        "未提出具体隐私要求（如不记录日志）"
+      ],
+      "assumptions": [
+        "「位置只存本地」为受访者推断，未经核实"
+      ],
+      "reasoning_steps": [
+        "1. 区分事实陈述与推测",
+        "2. 顾虑为条件性（仅登录时）",
+        "3. → direct"
+      ]
+    },
+    "DOC014-C013": {
+      "target_statement": "保留可用的个性化设置：收藏常看城市、按偏好切换摄氏/华氏。",
+      "label": "direct",
+      "rationale": "T045、T047、T071 三处分别说明收藏城市、温标切换与星标收藏功能，均属其在用的既有能力。",
+      "supported_parts": [
+        "城市：T046「I do have my cities set」",
+        "温标：T048「There is a option to change it at the top」",
+        "收藏：T072「it does have the option to like star your favorite cities」"
+      ],
+      "unsupported_parts": [
+        "三项合并为一个节点，可能掩盖各自差异",
+        "未说明是否需要多城市对比视图"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 三处均指向个性化设置",
+        "2. 合并为维持型目标并记录合并代价",
+        "3. → direct"
+      ]
+    }
+  }
+}

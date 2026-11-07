@@ -1,0 +1,836 @@
+{
+  "document_id": "DOC004",
+  "review_status": "first_pass_complete",
+  "local_goals": [
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G001",
+      "local_statement": "用 Zelle 在朋友之间快速完成小额转账与费用分摊。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自述为使用该应用的主要原因",
+        "Zelle 被定义为按手机号瞬时转账小额资金的方式",
+        "当前只能在手机端完成（见 C009）"
+      ],
+      "paper_ids": [
+        "g0",
+        "g2"
+      ],
+      "paper_statements": [
+        "Facilitate splitting costs with friends using digital payments.",
+        "Allow for instant transfer of money using phone numbers."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "分摊费用与手机号瞬时转账合并，角色和小额情境保留。",
+      "evidence": [
+        {
+          "evidence_id": "E0001",
+          "quote": "the main reason I use the app is to do sell payments to like a few of my friends. Basically split split costs and all of that.",
+          "source_turn_ids": [
+            "T005"
+          ],
+          "start_char": 939,
+          "end_char": 1065
+        },
+        {
+          "evidence_id": "E0002",
+          "quote": "Zelle is basically like a way to instantaneously transfer small amounts of money between, let's say, 2 different accounts just based on their phone number.",
+          "source_turn_ids": [
+            "T007"
+          ],
+          "start_char": 2072,
+          "end_char": 2227
+        },
+        {
+          "evidence_id": "E0003",
+          "quote": "So it's super easy to use.",
+          "source_turn_ids": [
+            "T007"
+          ],
+          "start_char": 2228,
+          "end_char": 2254
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G002",
+      "local_statement": "把闲置在活期账户的资金转入储蓄账户，以获取利息收益。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "持有独立的 checking 与 savings 账户",
+        "触发条件：活期账户余额较多时",
+        "储蓄账户未绑定借记卡，因此多数资金不在可刷卡账户内（见 C006）"
+      ],
+      "paper_ids": [
+        "g4"
+      ],
+      "paper_statements": [
+        "Enable transfer of funds between accounts."
+      ],
+      "correspondence": "local_narrower",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "本地明确 checking→savings 及利息目的，论文泛称账户转移。",
+      "evidence": [
+        {
+          "evidence_id": "E0004",
+          "quote": "when I have. Let's say a lot of funds in my checking account, so I normally transfer it over to my savings, so I can get even that little bit of interest I normally get.",
+          "source_turn_ids": [
+            "T005"
+          ],
+          "start_char": 1268,
+          "end_char": 1437
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G003",
+      "local_statement": "登录后在同一屏看到全部账户余额与近期交易，无需跳转多个页面。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "仪表盘同时展示 checking 与 savings 的余额、存款与取款",
+        "首页折叠区展示最近 5 笔交易"
+      ],
+      "paper_ids": [
+        "g11",
+        "g12",
+        "g14",
+        "g16"
+      ],
+      "paper_statements": [
+        "Present all bank accounts and balances on a dashboard upon sign-in.",
+        "Provide a quick overview of deposits and withdrawals.",
+        "Display recent transactions directly on the main screen.",
+        "Display comprehensive account information including balance and transaction history with details."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "账户、收支、最近交易与免跳转整合为便捷查看结果。",
+      "evidence": [
+        {
+          "evidence_id": "E0005",
+          "quote": "So it shows me all my bank accounts. So right now I have a checking and a savings account shows me how much it shows me the balance in each of the accounts, and it also shows me my deposits and withdrawals.",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 3972,
+          "end_char": 4178
+        },
+        {
+          "evidence_id": "E0006",
+          "quote": "it's a good thing that I can like. Just look at all of my spends on like in like a quick glance, and don't really have to go to like multiple screens to check all of that",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 4182,
+          "end_char": 4352
+        },
+        {
+          "evidence_id": "E0007",
+          "quote": "They also have a very small list of all the transactions, like all the recent transactions. So again, that's also good. Also because I don't have to like, you know, click on another link, or like another button, and then I'll check out this.",
+          "source_turn_ids": [
+            "T015"
+          ],
+          "start_char": 4411,
+          "end_char": 4652
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G004",
+      "local_statement": "设定财务目标，并按月跟踪收支以判断能否在期限内达成。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "对应产品内「plan and track」功能",
+        "受访者以此作为该行优于其他银行之处"
+      ],
+      "paper_ids": [
+        "g20",
+        "g21",
+        "g22"
+      ],
+      "paper_statements": [
+        "Enable users to set financial goals.",
+        "Allow users to track progress towards financial goals.",
+        "Track user's income and expenses."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "目标设定与按期限跟踪合并，但源文均有明确目的。",
+      "evidence": [
+        {
+          "evidence_id": "E0008",
+          "quote": "they also have like this plan and track feature where you can like track like, you can basically set monetary goals. And then track how you're doing that.",
+          "source_turn_ids": [
+            "T017"
+          ],
+          "start_char": 5608,
+          "end_char": 5762
+        },
+        {
+          "evidence_id": "E0009",
+          "quote": "So it lets me set a goal and then tells me how much exactly I'm supposed to be earning, and are spending every month to make sure I hit that goal by a specified timeframe",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 8164,
+          "end_char": 8334
+        },
+        {
+          "evidence_id": "E0010",
+          "quote": "obviously helps me keep on track and not really spend a lot",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 8364,
+          "end_char": 8423
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G005",
+      "local_statement": "按消费类别（如日用品、加油等）查看支出明细，而不仅按交易类型区分。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状仅按 card / Zelle / fee / account transfer 等交易类型标记，无商户类别",
+        "受访者认为分类在技术上容易实现且对用户有价值"
+      ],
+      "paper_ids": [
+        "g13",
+        "g17"
+      ],
+      "paper_statements": [
+        "Provide insights into spending habits and spending categories.",
+        "Categorize transactions by specific types beyond basic categories."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "明确商户/消费类别，与交易类型区分；论文较泛。",
+      "evidence": [
+        {
+          "evidence_id": "E0011",
+          "quote": "But apart from that, I don't really think it gives me like a breakdown of how much I'm spending and where. So I I think that it would be great to see something like that.",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 8428,
+          "end_char": 8598
+        },
+        {
+          "evidence_id": "E0012",
+          "quote": "it doesn't have any other sort of indicator to show that I've let's say, spend it on groceries or on fuel, or something like that.",
+          "source_turn_ids": [
+            "T023"
+          ],
+          "start_char": 10277,
+          "end_char": 10407
+        },
+        {
+          "evidence_id": "E0013",
+          "quote": "it just categorizes how I spend it. Like it says, if it's card Zelle or yeah, if it's like another fee or something like that, or if it's like an account transfer.",
+          "source_turn_ids": [
+            "T023"
+          ],
+          "start_char": 10092,
+          "end_char": 10255
+        },
+        {
+          "evidence_id": "E0014",
+          "quote": "I believe it's pretty easy to like categorize what we are spending on. And then I think it would be like a very valuable insight. For the users.",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 8602,
+          "end_char": 8746
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G006",
+      "local_statement": "在网银端设置借记卡的单笔/每日消费限额。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "手机应用内可设置卡片参数，网页端未找到入口",
+        "受访者认为入口不直观：寻找锁卡与限额需多次点击",
+        "当前紧迫性较低：多数资金在未绑定借记卡的储蓄账户"
+      ],
+      "paper_ids": [
+        "g24",
+        "g26",
+        "g43",
+        "g44"
+      ],
+      "paper_statements": [
+        "Allow users to set limits on transactions.",
+        "Allow users to set and modify parameters for card transactions, including daily limits.",
+        "Improve accessibility for less frequently used features.",
+        "Minimize the number of actions required to access niche features."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "回查 T025/T028/T033—T037，日上限由受访者描述，单笔上限由采访者提出任务并获后续认可；应保留双方来源。",
+      "evidence": [
+        {
+          "evidence_id": "E0015",
+          "quote": "I don't think they really have like a specific option where I can, like, you know. change my change the limits on the card per se, yeah.",
+          "source_turn_ids": [
+            "T035"
+          ],
+          "start_char": 13447,
+          "end_char": 13583
+        },
+        {
+          "evidence_id": "E0016",
+          "quote": "So obviously, that is something I would really like on my that. That's obviously something I'd really like to have.",
+          "source_turn_ids": [
+            "T037"
+          ],
+          "start_char": 13907,
+          "end_char": 14022
+        },
+        {
+          "evidence_id": "E0017",
+          "quote": "so obviously, it's not very intuitive. I would really like it to be a bit more better.",
+          "source_turn_ids": [
+            "T035"
+          ],
+          "start_char": 13182,
+          "end_char": 13268
+        },
+        {
+          "evidence_id": "E0018",
+          "quote": "the only reason I'm I haven't used it yet is because most of my funds are in my savings account, which is not tied to my debit card anyway.",
+          "source_turn_ids": [
+            "T037"
+          ],
+          "start_char": 14032,
+          "end_char": 14171
+        },
+        {
+          "evidence_id": "E0019",
+          "quote": "some of the more important features should be more accessible",
+          "source_turn_ids": [
+            "T059"
+          ],
+          "start_char": 24147,
+          "end_char": 24208
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G007",
+      "local_statement": "转账提交前核对金额与收款人，避免转错金额或转错对象。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "对应转账流程中的确认步骤"
+      ],
+      "paper_ids": [
+        "g36"
+      ],
+      "paper_statements": [
+        "Allow users to confirm transfer details before execution."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "确认步骤联系避免错金额或错收款人，保留动作目的。",
+      "evidence": [
+        {
+          "evidence_id": "E0020",
+          "quote": "So then it tells me it asks me if everything looks okay. So just to confirm which is a great detail.",
+          "source_turn_ids": [
+            "T043"
+          ],
+          "start_char": 18423,
+          "end_char": 18523
+        },
+        {
+          "evidence_id": "E0021",
+          "quote": "it makes sure that you don't send the wrong amount, or like to the wrong person.",
+          "source_turn_ids": [
+            "T045"
+          ],
+          "start_char": 19595,
+          "end_char": 19675
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G008",
+      "local_statement": "对房租、水电等固定支出设置可重复的定期转账，免去每次手动操作。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "可设频率（每周/每月）、执行日、首次日期、结束日期或次数"
+      ],
+      "paper_ids": [
+        "g8",
+        "g19",
+        "g35",
+        "g37"
+      ],
+      "paper_statements": [
+        "Allow users to schedule transfers.",
+        "Enable the scheduling of transactions.",
+        "Enable setting up repeated transfers with customizable frequency and specific dates.",
+        "Specify the transfer amount and date for scheduling the transfer."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported_with_scope_note",
+      "rationale": "定期转账明确，租金水电是受访者推测用途，不能提升为统一业务要求。",
+      "evidence": [
+        {
+          "evidence_id": "E0022",
+          "quote": "there's also an option for setup, repeated transfers. That's that I'm assuming is for like stuff like rent or utilities.",
+          "source_turn_ids": [
+            "T043"
+          ],
+          "start_char": 17574,
+          "end_char": 17694
+        },
+        {
+          "evidence_id": "E0023",
+          "quote": "it lets you schedule properly. It also lets you repeat the transactions is a great, so you don't have to come and keep on doing it again and again.",
+          "source_turn_ids": [
+            "T045"
+          ],
+          "start_char": 19703,
+          "end_char": 19850
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G009",
+      "local_statement": "网银端也支持 Zelle 转账，不必每次都切换到手机。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：网页端无 Zelle，只能通过外部账户转账（需知道对方账号）",
+        "动机：避免每次拿手机，更方便"
+      ],
+      "paper_ids": [
+        "g31"
+      ],
+      "paper_statements": [
+        "Integrate a peer-to-peer payment solution for convenience."
+      ],
+      "correspondence": "local_narrower",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "本地保留网页端与手机切换限制，论文一般 P2P 集成没有该条件。",
+      "evidence": [
+        {
+          "evidence_id": "E0024",
+          "quote": "I would like to see them implement Zelle on on the web app because I think it. It'll just be more convenient, so that I don't have to like reach. Reach my phone every time.",
+          "source_turn_ids": [
+            "T045"
+          ],
+          "start_char": 19264,
+          "end_char": 19436
+        },
+        {
+          "evidence_id": "E0025",
+          "quote": "I don't think Zelle is I don't think we can sell on of the web app.",
+          "source_turn_ids": [
+            "T041"
+          ],
+          "start_char": 16265,
+          "end_char": 16332
+        },
+        {
+          "evidence_id": "E0026",
+          "quote": "So I'll have to know the I have to know the what do you say? The account number to basically transfer this to someone.",
+          "source_turn_ids": [
+            "T041"
+          ],
+          "start_char": 16350,
+          "end_char": 16468
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G010",
+      "local_statement": "在网站上提供文字/聊天式客服（含 AI 机器人），可边处理其他事边求助。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：网站只有电话、预约面谈、留言、找网点，无在线文字客服",
+        "动机：文字沟通比电话更放松、不引发焦虑，且可同时做别的事",
+        "受访者认为对不熟悉网站操作的用户尤其有用"
+      ],
+      "paper_ids": [
+        "g3",
+        "g39",
+        "g40",
+        "g41",
+        "g42"
+      ],
+      "paper_statements": [
+        "Enable users to communicate with a representative through the website.",
+        "Provide a chat-based interface for customer support.",
+        "Reduce anxiety during support interactions.",
+        "Enable multitasking during support interactions.",
+        "Enable text-based interaction with an AI bot for support and navigation."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "文字客服、AI、减轻焦虑及多任务是明确愿望。",
+      "evidence": [
+        {
+          "evidence_id": "E0027",
+          "quote": "I am very used to having a chat based interface when it comes to support, because it lets I don't know. It's just more relaxing.",
+          "source_turn_ids": [
+            "T055"
+          ],
+          "start_char": 21662,
+          "end_char": 21790
+        },
+        {
+          "evidence_id": "E0028",
+          "quote": "It's not really anxiety inducing as much as the call. So and I can like multitask while texting like, let's say, the bank representative. So that would be a great option.",
+          "source_turn_ids": [
+            "T055"
+          ],
+          "start_char": 21819,
+          "end_char": 21989
+        },
+        {
+          "evidence_id": "E0029",
+          "quote": "It'd be great to just like text the AI bot. And then, like, get responses",
+          "source_turn_ids": [
+            "T055"
+          ],
+          "start_char": 22369,
+          "end_char": 22442
+        },
+        {
+          "evidence_id": "E0030",
+          "quote": "I don't see like a way to like text or like chat with a with a bank manager",
+          "source_turn_ids": [
+            "T053"
+          ],
+          "start_char": 21358,
+          "end_char": 21433
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G011",
+      "local_statement": "账户与资金安全：新设备登录必须二次验证，且每笔交易即时通知并可在应用内申诉。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "首次在本机登录即触发两步验证",
+        "交易通知可contest（申诉）被受访者视为安全感的来源"
+      ],
+      "paper_ids": [
+        "g15",
+        "g23",
+        "g25"
+      ],
+      "paper_statements": [
+        "Notify users of transactions through phone notifications.",
+        "Allow users to contest transactions.",
+        "Implement two-factor authentication to enhance security during sign-ins."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported_with_scope_note",
+      "rationale": "安全验证和通知申诉有原句；“必须”“每笔即时”强度需完整源文复核，未证明普遍安全保证。",
+      "evidence": [
+        {
+          "evidence_id": "E0031",
+          "quote": "They had this whole 2 factor thing authentication thing set up like from the get go. So that was good. So that way. That's like an additional layer of security.",
+          "source_turn_ids": [
+            "T019"
+          ],
+          "start_char": 6486,
+          "end_char": 6646
+        },
+        {
+          "evidence_id": "E0032",
+          "quote": "every time I do a transaction. I get a notification on my phone saying that this much amount of money has been spent, and then I can also contest it, which is great.",
+          "source_turn_ids": [
+            "T019"
+          ],
+          "start_char": 6721,
+          "end_char": 6886
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC004",
+      "local_id": "DOC004-G012",
+      "local_statement": "能开设投资账户直接交易，并在起步阶段获得顾问一对一指导。",
+      "local_origin": "inferred",
+      "local_trace_status": "inferred",
+      "local_context": [
+        "该行与 J.P. Morgan 合作提供交易账户",
+        "受访者认为对不知如何起步的投资者可避免损失"
+      ],
+      "paper_ids": [
+        "g45"
+      ],
+      "paper_statements": [
+        "Provide access to consultations with knowledgeable investment advisors to assist users who are new to investing."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": false,
+      "source_support_judgment": "current_capability_with_value",
+      "rationale": "描述现有交易账户和顾问并评价其价值，可作为认可能力；与新增要求分开。",
+      "evidence": [
+        {
+          "evidence_id": "E0033",
+          "quote": "they let you open and like open a trading account, and then trade directly, but they also have, like a team of advisors, or like you can have a 1 to one with an advisor which is a really good features.",
+          "source_turn_ids": [
+            "T061"
+          ],
+          "start_char": 24639,
+          "end_char": 24840
+        },
+        {
+          "evidence_id": "E0034",
+          "quote": "because if you're not, if you don't know where to start investing, you can like talk to someone. And instead of like losing a lot of money, you know, you could talk to someone who actually knows what they're doing",
+          "source_turn_ids": [
+            "T061"
+          ],
+          "start_char": 24865,
+          "end_char": 25078
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    }
+  ],
+  "paper_only": [
+    {
+      "document_id": "DOC004",
+      "paper_id": "g1",
+      "statement": "Support payments at retail outlets using digital payment methods.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g5",
+      "statement": "Allow users to access funds for transactions.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g6",
+      "statement": "Allow transfer to external accounts.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g7",
+      "statement": "Allow user to add and manage external accounts.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g9",
+      "statement": "Allow users to input account details for external transfers.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g10",
+      "statement": "Provide a user interface that is intuitive and user-friendly.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g18",
+      "statement": "Notify users of scheduled transfer status and expected execution date.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g27",
+      "statement": "Enable users to block specific types of card transactions.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g28",
+      "statement": "Provide a way to lock and unlock cards.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g29",
+      "statement": "Provide an option to replace a card.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g30",
+      "statement": "Include features commonly expected in banking services.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g32",
+      "statement": "Ensure main functions are accessible for daily use tasks such as transferring money and checking transactions.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g33",
+      "statement": "Provide clear and easily accessible options for different types of transfers.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g34",
+      "statement": "Track transfer activity and view scheduled transfers.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    },
+    {
+      "document_id": "DOC004",
+      "paper_id": "g38",
+      "statement": "Enter a note for tracking the purpose of a transfer.",
+      "local_ids": [],
+      "correspondence_status": "paper_only",
+      "source_support_assessment": "not_assessed",
+      "source_turns": null,
+      "rationale": null
+    }
+  ],
+  "source_review_limits": "Local-goal correspondence is complete; paper-only support outside pilot is not exhaustively judged.",
+  "counts": {
+    "local_goals": 12,
+    "local_with_correspondence": 12,
+    "paper_goals": 46,
+    "paper_with_correspondence": 31,
+    "paper_only": 15,
+    "local_only": 0
+  },
+  "local_refinement_count": 0,
+  "eligible_paper_runs": 10,
+  "relation_semantic_reviews": [],
+  "rubric": {
+    "why_how_hierarchy": "insufficient_expression",
+    "kaos_refinement_groups": "not_expressed_in_old_schema",
+    "full_group_sufficiency": "not_assessed",
+    "alternatives_completeness": "not_assessed",
+    "source_locations": "supported_by_deterministic_checks",
+    "human_or_independent_review": "not_run"
+  }
+}

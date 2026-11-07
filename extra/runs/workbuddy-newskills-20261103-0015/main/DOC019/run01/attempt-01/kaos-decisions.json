@@ -1,0 +1,134 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "274a35444c7e055e8c8854bc4b6e31a1f95f5c2321941a52058a1f6a96cc7186",
+    "judgments_sha256": "be45a4ed0bdf620c395eae36ce81dde15256786c2317c9eb2ec8b27a5aedfd58"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC019-goal-model",
+      "message": "精化组判断已逐对执行但未建立任何 AND 组：检查了 (G002,G003,G012,G013) 的学习类组合、(G005) 对 G015、(G006) 对 G010、(G011) 对 G009 等候选，没有一组能声称'共同满足足以实现父目标'——课程与指引不足以保证素养与算法理解，单一银行绑定环节不等于顺畅开户，资金通路不等于即时下单，日度仪表盘也不等于实时走势；单子目标组会退化为同一目标，故 groups 为空。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "组合仪表盘只有'最常用、喜欢'的表述，没有明确的维持或改进要求；是否应作为偏好型目标保留，还是仅作背景？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G016",
+      "message": "语音下单与语音摘要按原文'or'读作替代形式；若产品需要两者分别成立，应拆为两个目标，当前未拆。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R5",
+      "message": "银行账户绑定与法币出入金转换的依赖关系原文未明说，当前标 proposed；需确认绑定是否为转换的必要前提。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G005",
+      "target_id": "G015",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "银行账户绑定属于开户流程的初始环节"
+      ],
+      "assumptions": [],
+      "rationale": "G005 是开户最初环节的具体目标，G015 是开户整体尽可能简单的目标；T052 明确说复杂点就在开户的银行账户部分，T054 要求整个开户尽可能简单，故具体环节指向一般目标。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC019:T052",
+          "quote": "The only com the complex part is onboarding. And that I have already mentioned the bank account part of it.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC019:T054",
+          "quote": "so I would like it to be as easier as possible for me",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G006",
+      "target_id": "G010",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "资金需先能进入交易账户"
+      ],
+      "assumptions": [],
+      "rationale": "T018 说明无法把银行的钱换成本想投资的币，连第一步投资都做不到；法币通路对即时下单是有帮助的前提，但不保证下单本身的体验。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC019:T018",
+          "quote": "I was not able to get my cash from my bank to oh. a coin that I wanted to invest in.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G012",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T044 把'更多高级算法指引'作为获得算法理解的途径，T024 的目标是理解可用于获利的新算法；在应用内提供指引服务于该学习目的，但不保证学懂全部算法。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC019:T044",
+          "quote": "It would be, I think, good for me if I have some more guidance on advanced algorithms.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G013",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T044 的期货与期权课程属于 Academy 学习内容，服务于 T024 的金融素养目标；课程只是素养的一个来源，不覆盖全部素养要求。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC019:T044",
+          "quote": "they didn't have a very comprehensive Academy on futures and Options trading",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G005",
+      "target_id": "G006",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "银行账户绑定是法币出入金的技术前提"
+      ],
+      "rationale": "T018 把'绑定银行账户的顺畅接口'与'法币与加密资产转换的支付接口'并列提出，绑定账户可能帮助资金转换；但原文未说明两者机制上的依赖，故标 proposed。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC019:T018",
+          "quote": "if they had a seamless interface to integrate our bank accounts with coinbase at that point of time",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

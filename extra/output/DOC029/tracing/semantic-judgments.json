@@ -1,0 +1,164 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "158fb8ca6a88adf762fa59bb8afa17bd37daec02695c0d89668a521cc83a8197",
+    "input_sha256": "b4535990b48b1260ffd26d9a732c2e38c13f671e91e369b7c9d6b0d7b6a4c73b"
+  },
+  "judgments": {
+    "DOC029-C001": {
+      "target_statement": "从上次中断的地方直接继续看，清楚自己看到哪。",
+      "label": "direct",
+      "rationale": "T017 描述 Continue Watching 轮播，并说明它让他在很短时间内接上进度。",
+      "supported_parts": [
+        "入口：T018「continue watching for my Carousal」",
+        "效果：T018「right where I left off」",
+        "附加信息：T018「how much of the episode I have already completed」"
+      ],
+      "unsupported_parts": [
+        "未说明跨设备进度是否同步",
+        "未说明多久未看会被移出续看列表"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取入口",
+        "2. 取效果与附加信息",
+        "3. → direct"
+      ]
+    },
+    "DOC029-C002": {
+      "target_statement": "看完一部后能从「相似作品」里挑下一部。",
+      "label": "direct",
+      "rationale": "T021 说详情弹窗里有 More Like This，用于找相似内容。",
+      "supported_parts": [
+        "入口：T022「a section called more like this」",
+        "内容：T022「shows that are like similar to the show that I was currently watching」"
+      ],
+      "unsupported_parts": [
+        "未说明推荐准确度如何评价",
+        "未说明是否跨类型推荐"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取入口",
+        "2. 取内容",
+        "3. → direct"
+      ]
+    },
+    "DOC029-C003": {
+      "target_statement": "首页推荐贴合自己当下的心情与口味。",
+      "label": "direct",
+      "rationale": "T013 说呈现方式贴合需求与当下心情，T015 说匹配度做得很好。",
+      "supported_parts": [
+        "判断：T014「tailored to my needs. And what I'm like in the mood for today」",
+        "评价：T016「very good job in matching me」"
+      ],
+      "unsupported_parts": [
+        "「心情」如何被识别未说明",
+        "未说明推荐失准时的表现"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取判断",
+        "2. 取评价",
+        "3. → direct"
+      ]
+    },
+    "DOC029-C004": {
+      "target_statement": "打开就能播，不必层层点击。",
+      "label": "direct",
+      "rationale": "T013 说不用点很多按钮就能开始看，并把「方便」列为选它的理由。",
+      "supported_parts": [
+        "体验：T014「don't have to click a lot of buttons」",
+        "评价：T014「convenient to use」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的点击次数",
+        "未说明移动端是否同样顺手"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取体验",
+        "2. 取评价",
+        "3. → direct"
+      ]
+    },
+    "DOC029-C005": {
+      "target_statement": "把想看但当下没时间的片子存进清单，之后再安排。",
+      "label": "direct",
+      "rationale": "T017 说明 My List 存的是「打算之后看」的内容。",
+      "supported_parts": [
+        "定义：T018「movies or shows I have planned to watch later on」",
+        "场景：T018「didn't get time to watch right now」"
+      ],
+      "unsupported_parts": [
+        "未说明清单规模或整理方式",
+        "未说明是否按优先级排序"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取定义",
+        "2. 取场景",
+        "3. → direct"
+      ]
+    },
+    "DOC029-C006": {
+      "target_statement": "提前知道清单里的片何时下架，好优先安排。",
+      "label": "direct",
+      "rationale": "T025 说清单里的片会因合约到期下架，T029 提出下架前一个月提醒以便安排。",
+      "supported_parts": [
+        "痛点：T026「sometimes is not on Netflix」",
+        "方案：T030「one month before they get removed」",
+        "目的：T030「prioritize what I want to watch」"
+      ],
+      "unsupported_parts": [
+        "未说明提醒渠道（邮件/App）",
+        "未说明「一个月」这个提前量是否够用"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取痛点",
+        "2. 取方案与目的",
+        "3. → direct"
+      ]
+    },
+    "DOC029-C007": {
+      "target_statement": "用两三分钟的片段先试看，再决定要不要追新剧。",
+      "label": "direct",
+      "rationale": "T033 说他会在 YouTube 看两三分钟片段来决定，并设想 Netflix 提供片段轮播。",
+      "supported_parts": [
+        "现状：T034「go to those clips and decide if that suits me」",
+        "设想：T034「start offering me a recommendation carousel」",
+        "动机：T038「I just want to have a preview of the show but I'm not able to do that on Netflix」"
+      ],
+      "unsupported_parts": [
+        "未说明片段时长精度（2 分钟还是 3 分钟）",
+        "未说明是否愿意为此改变浏览习惯"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取现状做法",
+        "2. 取设想与动机",
+        "3. → direct"
+      ]
+    },
+    "DOC029-C008": {
+      "target_statement": "知道某部片现在在哪个平台能看，避免为一两部片再订阅一家。",
+      "label": "direct",
+      "rationale": "T025 明确说找不到片在哪个平台，只能再买一份订阅。",
+      "supported_parts": [
+        "问题：T026「trouble finding on which platform is it on」",
+        "后果：T026「buy a new subscription for a platform」"
+      ],
+      "unsupported_parts": [
+        "未说明是否用过聚合查询类应用",
+        "未说明愿为跨平台查询付费"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题",
+        "2. 取后果",
+        "3. → direct"
+      ]
+    }
+  }
+}

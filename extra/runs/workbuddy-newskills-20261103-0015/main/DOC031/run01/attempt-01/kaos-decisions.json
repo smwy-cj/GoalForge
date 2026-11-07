@@ -1,0 +1,90 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "cd503fb140012115a068215b1859441a9f9e95f523b2fb21aac4ec1b6efb6e9e",
+    "judgments_sha256": "c66b758b3db9e326127f99a0be52d39e6e9c8c2b9b189d73249ae76a3aa170d9"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G006",
+      "message": "T019 报告搜索结果被加入前的频道历史淹没、难以定位目标消息，但改进建议中未再提搜索；该困难应单列为改善目标，还是仅作为障碍线索保留在问题中？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "该改进以“could be considered”表述，是否只是可考虑的建议而非明确要求？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "“I would still use Slack”出现在回答提问的语境，是否应作为维持型目标，而非对访谈问题的表态？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "T023 以电话/邮件直接联系作为更快的替代做法，是否意味着“更快发起通话”本身也是需求？"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R2",
+      "message": "频道历史可见与“了解大家在讨论什么”之间只有并列陈述，没有明确的目的话语，是否成立为贡献联系？"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC031-goal-model",
+      "message": "全部目标来自一名学生对自身 Slack 使用的叙述，原文未给出量化指标、责任方或适用人群范围；模型按该受访者目标呈现，未分配给产品或开发方。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G005",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "与队友的即时沟通包含把文档即时送到对方这一具体做法"
+      ],
+      "rationale": "T012 追问该功能如何帮助达成目标，T013 回答时把即时分享文档直接归入先前所说的“instant communication”目标，即把文档发给队友是该目标的一种实现方式；原文不声称该方式足以实现全部即时沟通。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC031:T013",
+          "quote": "circling back to the first goal that I mentioned is that of instant communication. I think slack provides a pretty neat way to share a document instantly with a teammate.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G003",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [
+        "在加入频道后需要了解先前讨论时"
+      ],
+      "assumptions": [
+        "可取得加入前的频道历史，能帮助了解大家在谈论与分享什么"
+      ],
+      "rationale": "T009 把“加入即有频道历史、可取得加入前信息”与“知道大家在谈论什么、分享什么”并列陈述，前者对后者有帮助，但原文未明确说明二者的目的关系，故标为待确认。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC031:T009",
+          "quote": "when I join a channel, I have the history of that channel at my fingertips",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC031:T009",
+          "quote": "at any given point, it's good to know what people are talking about, what everyone's sharing",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

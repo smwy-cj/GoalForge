@@ -1,0 +1,45 @@
+{
+  "schema_version": "goalforge-relation-reassessment-1",
+  "base_model": {
+    "model_id": "FIX-goal-model",
+    "version": "v0.1.h1",
+    "core_sha256": "6a62bf4b0c266a4a47c756fc74dc4f9f1e0787f9152ed094fe16091fc0a1ee92"
+  },
+  "decisions": [
+    {
+      "pair_id": "P12",
+      "a": "FIX-G001",
+      "b": "FIX-G002",
+      "target_statements": {
+        "FIX-G001": "根据天气安排活动",
+        "FIX-G002": "根据降雨安排户外活动"
+      },
+      "label": "refinement",
+      "rationale": "重新核对新目标与原句后，保留降雨和户外活动的范围具体化（合成夹具）。",
+      "evidence_ids": [
+        "trace:E0001",
+        "E0002"
+      ],
+      "conditions": [],
+      "parent_id": "FIX-G001",
+      "child_id": "FIX-G002",
+      "interpretation": "scope_specialization"
+    },
+    {
+      "pair_id": "P13",
+      "a": "FIX-G001",
+      "b": "FIX-G003",
+      "target_statements": {
+        "FIX-G001": "根据天气安排活动",
+        "FIX-G003": "减少查找信息的费用"
+      },
+      "label": "none",
+      "rationale": "当前版本合成关系判断，未建立联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "parent_id": null,
+      "child_id": null,
+      "interpretation": null
+    }
+  ]
+}

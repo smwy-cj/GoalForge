@@ -1,0 +1,77 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "e371092f56b95568305e07ab2f3bd243bbeaa7c2a00665252d68aefd2d56c615",
+    "judgments_sha256": "077a88edc9126666df9ef83affcf38adac48a537aaa5b492ca9466cdeb98dbb6"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "是否需要区分“取消已预约行程”与“取消进行中的行程”？原句未说明是哪一种。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G019",
+      "message": "该目标是否应降为偏好而非要求（受访者自述未实践）？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G020",
+      "message": "若应用内本就不支持改点，这项目标是否应改写为“通过司机协调完成改点”？"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC026-goal-model",
+      "message": "本模型有2条联系、0个精化组：原文未出现可声称“共同充分”的子目标组合。是否需要回查“顺利完成一次行程”这类上层目的以形成层级？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G021",
+      "target_id": "G020",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "应用内修改上车点难以完成时"
+      ],
+      "assumptions": [
+        "司机能按新的上车点接人"
+      ],
+      "rationale": "在应用内难改上车点时，直接告知司机是受访者实际采用的方式，用来达成“把上车点变更落实”这一目的；只说明方式与目的关系，不声称该方式总能成功。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC026:T041",
+          "quote": "I think most of the time when I do want to change it, I give the driver a heads up instead of doing it on the app.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G019",
+      "target_id": "G017",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [
+        "中途停留确实超时"
+      ],
+      "assumptions": [
+        "提前告知能让司机理解延误，而不使停留变短"
+      ],
+      "rationale": "原句只说提前告知司机“有帮助”，可理解为对“让中途停留不至于拖太久”有缓解作用，但未证明能让停留变短，故保留为待确认。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC026:T039",
+          "quote": "in the circumstance where I'm doing a multi-stop letting the driver know if maybe I'm taking a little bit longer or just to give them a heads up about what's going on is also helpful.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

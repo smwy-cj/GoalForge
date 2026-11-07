@@ -1,0 +1,63 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "8800ff2c7a301774880477ebacd87ff0b3e4c1d1004c17ba1170fe528504350c",
+    "judgments_sha256": "365c40eedf01f42ed476b99777d3722a4a4dcc80facfdf20eeaf3e753381ade3"
+  },
+  "groups": [
+    {
+      "group_id": "DOC027-F1",
+      "parent_id": "DOC027-G18",
+      "child_ids": [
+        "DOC027-G17"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "父子均限定为浏览已选来源内容。若所需来源已添加且该范围内容均可在共同平台直接浏览，实现G17即可在该浏览任务中减少切换来源应用；这正是本人提出共同平台的目的。",
+      "assumptions": [
+        "所需社媒来源已由本人添加且其目标内容在共同平台中直接可读。",
+        "只覆盖所选内容浏览，不覆盖私信、发布、独有功能或总使用耗时。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC027:T105",
+          "quote": "Okay. so I'd say that I would be really happy if there was like this common platform which. Like I can design for myself. So it's it's an app, let's say, but it will have all of my favorite applications in one place, and give me, like an assortment of different kind of content, let's say, some good content from Twitter, some good content from Reddit, some good content from Instagram, and give it all in one place, because all of these applications are very good in their own way. But if there was like one just specific platform that maybe I can just add some social media on that. And that particular platform will show me content from that one particular app that I just added. So so it's basically like, maybe a common platform, so that I don't have to like juggle between apps and stuff like that.",
+          "role": "basis",
+          "start_char": 25840,
+          "end_char": 26644
+        },
+        {
+          "source_id": "DOC027:T107",
+          "quote": "Because I kind of like waste a lot of time just switching between apps which I don't want. I just want to open 1 1 app and get all the content and be done with it.",
+          "role": "basis",
+          "start_char": 26691,
+          "end_char": 26854
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "DOC027-G05",
+      "message": "希望如何选择地域新闻，现有位置设置是否确实造成限制？ 地域算法机制目前只是其解释。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "DOC027-G07",
+      "message": "帖子保存是否有政策、内容删除或可用性例外？ 原文强调本人删除/归档，尚未定义平台治理等边界。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "DOC027-G16",
+      "message": "跳过后的停止周期和广告重复判定是什么？ 两条是示例，不能变成未经确认的全局数量规则。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "DOC027-G17",
+      "message": "共同平台需覆盖哪些来源内容，是否允许部分内容外跳？ F1充分性限于能在共同平台直接读取的已选范围；实际整合可行性未验证。"
+    }
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "e8546e37a857b409bec76fa68b823e123b76531cd0d28676fe3e2ba6d9e87d9e",
+    "input_sha256": "48d244835d3b58258dc08b2be20110992c11c142ef3ae8162a1b8be54e4f471f"
+  },
+  "judgments": {
+    "DOC030-C001": {
+      "target_statement": "通过技术面试、拿到工作。",
+      "label": "direct",
+      "rationale": "T009 明确说主要目的是拿工作，T001 说刷题是为面试。",
+      "supported_parts": [
+        "目的：T010「the main purpose is just to get a job」",
+        "起因：T002「mainly for the job interviews」"
+      ],
+      "unsupported_parts": [
+        "未说明目标公司或岗位类型",
+        "未说明刷题与拿到 offer 之间的因果强度"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目的",
+        "2. 取起因",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C002": {
+      "target_statement": "提升日常学习与工作中的编码能力。",
+      "label": "direct",
+      "rationale": "T009 在「拿工作」之外补充想练编码能力，并说明对学业与工作有用。",
+      "supported_parts": [
+        "目的：T010「practice my coding skills」",
+        "收益：T010「beneficial in my daily work as a student, but also my work」"
+      ],
+      "unsupported_parts": [
+        "未说明能力提升的判定方式",
+        "与 C001 的权重未排序"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目的",
+        "2. 取收益",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C003": {
+      "target_statement": "按题型分类逐个攻克，把一类题全部做完作为里程碑。",
+      "label": "direct",
+      "rationale": "T011 明确按题型分类设里程碑，完成一类算达成。",
+      "supported_parts": [
+        "维度：T012「questions on arrays. There's questions on trees」",
+        "里程碑：T012「finish all the array questions in this category」",
+        "达成：T012「fulfill my masterm」"
+      ],
+      "unsupported_parts": [
+        "未说明完成的质量标准（是否限时、是否不看题解）",
+        "未说明总分类数"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取维度",
+        "2. 取里程碑",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C004": {
+      "target_statement": "按面试季调配训练强度：临近面试就每天练，平时只做少量保温。",
+      "label": "direct",
+      "rationale": "T013 说集中在面试季练，T015 说知道有面试就每天练。",
+      "supported_parts": [
+        "周期：T014「during the interviewing season」",
+        "强度：T014「10 questions a day」",
+        "触发：T016「practice daily if I know that an interview is coming up」"
+      ],
+      "unsupported_parts": [
+        "未说明非面试季的固定频率",
+        "「状态好」的判断标准未说明"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取周期",
+        "2. 取强度与触发",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C005": {
+      "target_statement": "用难度标签与推荐用时估算该在一道题上投入多久。",
+      "label": "direct",
+      "rationale": "T019 说难度标签给出粗略时间参照，T031 要求平台给出每题建议用时，同时承认难度与耗时不完全对应。",
+      "supported_parts": [
+        "用途：T020「a rough time on how much time I should spend」",
+        "诉求：T032「a recommended time for solving a question」",
+        "局限：T020「medium questions actually take long... than harder questions」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的时间误差",
+        "未说明不同语言/经验如何折算"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取用途",
+        "2. 取诉求",
+        "3. 记录局限",
+        "4. → direct"
+      ]
+    },
+    "DOC030-C006": {
+      "target_statement": "能用题号与同伴指认同一道题，便于讨论。",
+      "label": "direct",
+      "rationale": "T005 说朋友把题号发给他就能直接练；不同平台则要描述并查找。",
+      "supported_parts": [
+        "做法：T006「sent me... the leetcode question numbers」",
+        "条件：T006「if we're using the same platform he can just send me the number」"
+      ],
+      "unsupported_parts": [
+        "未说明题号是否跨版本稳定",
+        "未说明讨论的具体形式"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取做法",
+        "2. 取条件",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C007": {
+      "target_statement": "用精炼、面试高频的题单练，而不是随机刷。",
+      "label": "direct",
+      "rationale": "T007 说 NeetCode 的题单更精炼、更贴近面试高频。",
+      "supported_parts": [
+        "特点：T008「a more concise list of the questions」",
+        "理由：T008「more popular in in the job interviews」"
+      ],
+      "unsupported_parts": [
+        "未说明题单规模",
+        "未说明是否按公司分类"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取特点",
+        "2. 取理由",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C008": {
+      "target_statement": "随机遇到没学过的题型或算法，拓展知识面。",
+      "label": "direct",
+      "rationale": "T007 说用 LeetCode 随机题自测、发现没学过的算法。",
+      "supported_parts": [
+        "用法：T008「try a random question to just test myself」",
+        "目的：T008「see if there's a new algorithm that I haven't learned」"
+      ],
+      "unsupported_parts": [
+        "未说明随机题的比例",
+        "未说明发现新算法后的学习路径"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取用法",
+        "2. 取目的",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C009": {
+      "target_statement": "看不懂平台题解时，能找到把算法一步步讲透的讲解。",
+      "label": "direct",
+      "rationale": "T003 说 LeetCode 题解描述不够直观，GfG 会把算法走一遍。",
+      "supported_parts": [
+        "对比：T004「solutions are told, and the descriptions are not really helpful」",
+        "优势：T004「walk through the the exact algorithm」",
+        "优势：T004「more descriptions and more examples」"
+      ],
+      "unsupported_parts": [
+        "未说明是否付费使用 GfG",
+        "未说明是否看视频题解"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取对比",
+        "2. 取优势",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C010": {
+      "target_statement": "隔一段时间回头重做做过的题，防止遗忘。",
+      "label": "direct",
+      "rationale": "T017 说看完题解做完之后，隔段时间还要回头重做以防遗忘。",
+      "supported_parts": [
+        "做法：T018「go back to this question some other time」",
+        "目的：T018「make sure that you don't forget」"
+      ],
+      "unsupported_parts": [
+        "未说明复习间隔",
+        "未说明是否有系统化的复习清单"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取做法",
+        "2. 取目的",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C011": {
+      "target_statement": "能量化自己的进步：计时看速度、看累计做题数。",
+      "label": "direct",
+      "rationale": "T029 说用计时器量解题时间，T033 说看累计题数给他信心。",
+      "supported_parts": [
+        "计时：T030「time myself on how long it takes」",
+        "题量：T034「track all the questions I did」"
+      ],
+      "unsupported_parts": [
+        "未说明是否记录每题的用时曲线",
+        "未说明目标题量"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取计时",
+        "2. 取题量",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C012": {
+      "target_statement": "用周赛题训练「读懂陌生表述并转成熟悉模型」的能力。",
+      "label": "direct",
+      "rationale": "T035 说周赛题措辞不同，练的是把新表述转成熟悉模型的能力。",
+      "supported_parts": [
+        "差异：T036「worded differently」",
+        "能力：T036「gain the reading skills, to transform, like a new set」"
+      ],
+      "unsupported_parts": [
+        "未说明训练频率（他自己不入赛）",
+        "未说明效果如何衡量"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取差异",
+        "2. 取能力",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C013": {
+      "target_statement": "提交后能立刻修正刚发现的小错，不被频率限制挡住。",
+      "label": "direct",
+      "rationale": "T027 说刚想补一个 else 就被「提交太快」挡住，要等一段时间。",
+      "supported_parts": [
+        "问题：T028「the platform doesn't allow me to do that」",
+        "代价：T028「wait for a while to submit again」"
+      ],
+      "unsupported_parts": [
+        "未说明节流的具体间隔",
+        "未说明是否理解该机制的反作弊目的"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题",
+        "2. 取代价",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C014": {
+      "target_statement": "性能/排名数据稳定可信，能真实反映代码好坏。",
+      "label": "direct",
+      "rationale": "T027 说同一份旧代码性能指标反而下降，认为数据不能反映代码质量。",
+      "supported_parts": [
+        "问题：T028「the performance is not always correct」",
+        "判断：T028「does not reflect how well my code is」"
+      ],
+      "unsupported_parts": [
+        "未说明具体指标（运行时间/内存/百分位）",
+        "未考虑机器与评测环境差异"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题",
+        "2. 取判断",
+        "3. → direct"
+      ]
+    },
+    "DOC030-C015": {
+      "target_statement": "拿到更充分的测试用例自测，包括其他用户贡献的用例。",
+      "label": "direct",
+      "rationale": "T031 说现有用例太少，希望增加并允许用户贡献。",
+      "supported_parts": [
+        "诉求：T032「add more test cases」",
+        "现状：T032「one to 3 test case」",
+        "补充：T032「allow other users to add their custom... test cases」"
+      ],
+      "unsupported_parts": [
+        "未说明可接受的数量",
+        "未说明用户用例的质量如何保证"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取诉求",
+        "2. 取现状与补充",
+        "3. → direct"
+      ]
+    }
+  }
+}

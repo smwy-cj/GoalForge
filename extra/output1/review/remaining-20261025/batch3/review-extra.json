@@ -1,0 +1,35 @@
+{
+  "findings": [],
+  "correct_boundaries": [
+    {"boundary_id":"RR3-CB01","goal_ids":["DOC011-G05","DOC011-G08","DOC011-G12","DOC011-G15"],"source_ids":["DOC011:T043","DOC011:T045","DOC011:T015","DOC011:T075","DOC011:T087","DOC011:T017"],"reason":"增量提交是团队情境个人偏好，独立开发可不用PR或用更大PR；云端恢复以手工上传代码为限；历史图明确nice-to-have；pull/push维持目标有主要用途支持的正面推断，均应保留。"},
+    {"boundary_id":"RR3-CB02","goal_ids":["DOC017-G02","DOC017-G03","DOC017-G11","DOC017-G14","DOC017-G17","DOC017-G18"],"source_ids":["DOC017:T005","DOC017:T007","DOC017:T073","DOC017:T093","DOC017:T095","DOC017:T097","DOC017:T017","DOC017:T025","DOC017:T027"],"reason":"求职状态决定通知频率；邮件优先仍可手机通知；减少填写仍需按岗定制；AI识别职位与写申请的人审边界不同；帖子既慢又能转介；减少干扰是有依据的推断，不能改成禁所有通知。"},
+    {"boundary_id":"RR3-CB03","goal_ids":["DOC018-G01","DOC018-G04","DOC018-G08","DOC018-G09","DOC018-G11","DOC018-G12"],"source_ids":["DOC018:T019","DOC018:T043","DOC018:T051","DOC018:T055","DOC018:T059","DOC018:T011"],"reason":"个人阅读时长有弹性；Kindle管理PDF是可让步方式偏好；保存有价值课程PDF不等于所有材料丢失或无限保存权限；阅读时间与添加时间仍须区分；希望费用已包含；网页入口为基于不确定现况的弱建议。"},
+    {"boundary_id":"RR3-CB04","goal_ids":["DOC019-G05","DOC019-G06","DOC019-G12","DOC019-G13","DOC019-G14","DOC019-G15","DOC019-G18","DOC019-G19"],"source_ids":["DOC019:T018","DOC019:T028","DOC019:T036","DOC019:T046","DOC019:T058","DOC019:T060","DOC019:T020","DOC019:T030"],"reason":"顺畅银行接入/交易不等于绕过法规；组合页/清单的反复依赖和喜欢支持维持推断；基金及语音保留可行性未知；低迁移倾向有功能例外；加密风险偏好为个人推断，币种较安全不能升级为事实。"},
+    {"boundary_id":"RR3-CB05","goal_ids":["DOC021-G07","DOC021-G08","DOC021-G09","DOC021-G12","DOC021-G13","DOC021-G14","DOC021-G15"],"source_ids":["DOC021:T023","DOC021:T025","DOC021:T027","DOC021:T033","DOC021:T039","DOC021:T043","DOC021:T045","DOC021:T051","DOC021:T053","DOC021:T055"],"reason":"电商式选择是选现有房源而非付款；双方确认后才可能分享资料；地图圈选和可选筛选有明确维持用途；收藏位置选定navbar或菜单第一层；账号自愿；筛选包括未说明者不代表其政策已允许。"},
+    {"boundary_id":"RR3-CB06","goal_ids":["DOC036-G03","DOC036-G06","DOC036-G09","DOC036-G10","DOC036-G11","DOC036-G12","DOC036-G13","DOC036-G14","DOC036-G15"],"source_ids":["DOC036:T012","DOC036:T016","DOC036:T024","DOC036:T026","DOC036:T030","DOC036:T032","DOC036:T034","DOC036:T052","DOC036:T054","DOC036:T058"],"reason":"本地定位能力保持不确定；电话/WhatsApp是偏好且站内chat可选；免登录购物浏览、在线状态和私密帖子是不同目标；搜索历史与跨国朋友重连有明确使用目的；限用平台的自管策略有节前暂留登录例外；价格展示诉求明确而隐藏价格动机仍是猜测。"}
+  ],
+  "candidate_omission_risks": [
+    {
+      "finding_id":"RR3-001",
+      "category":"candidate_omission_risk",
+      "severity":"low",
+      "document_id":"DOC018",
+      "goal_ids":["DOC018-G06","DOC018-G07"],
+      "candidate_goal":"保留阅读时显示章节剩余时间的能力",
+      "source_evidence":[
+        {"source_id":"DOC018:T049","speaker":"Stakeholder","quote":"the application actually tells you how much time it's remaining for the chapter. So this is a very cool feature."},
+        {"source_id":"DOC018:T049","speaker":"Stakeholder","quote":"What I will love for this application to also show it's to actually show you how much percentage of the chapter you are right now"},
+        {"source_id":"DOC018:T055","speaker":"Stakeholder","quote":"And last, but not least, I would love to see the percentage of the chapter"},
+        {"source_id":"DOC018:T064","speaker":"Interviewer","quote":"you might have some other like little nice features like when you're reading how much longer is left in the chapter, for instance."},
+        {"source_id":"DOC018:T065","speaker":"Stakeholder","quote":"No, I think you pretty well summarized everything."}
+      ],
+      "coverage_checked_goal_ids":["DOC018-G01","DOC018-G02","DOC018-G03","DOC018-G04","DOC018-G05","DOC018-G06","DOC018-G07","DOC018-G08","DOC018-G09","DOC018-G10","DOC018-G11","DOC018-G12"],
+      "existing_coverage":"已核12目标的完整statement/conditions及绑定evidence。G06为减少阅读焦虑，G07为当前章节百分比，两者均全文绑定T049，其中剩余时间句已作为上下文出现。其余目标涉及阅读时长、导入/整合、Kindle PDF、导出、个人库、时间检索、学校app、费用、网页入口；statement/conditions均未独立表达保留章节剩余时间。T049存在于证据并不自动等于该维持意图已得到可见的独立表达。",
+      "reason":"本人对章节剩余时间明确正面赞赏，能够支持保留能力的合理维持推断，不能因已经实现或未用未来希望句式而排除。其后又说also show章节百分比，并在排序中专指百分比；最终剩余时间概括由采访者提出，受访者对整个概括泛确认。当前未能确定剩余时间应作为独立结果、与章节进度合并表达，还是仅作比较背景；因此保留候选遗漏风险，不将不确定性当作确证漏提。",
+      "recommendation":"在后续提取核验中确认章节剩余时间是否属于需继续保留的阅读能力，以及与G06/G07应合并承接还是独立表达；核实前不新增节点，也不删除该正面维持线索。",
+      "status":"not_confirmed",
+      "counts_as_confirmed_semantic_error":false,
+      "local_blocking_scope":"none; 仅DOC018进度展示覆盖的候选风险，G06/G07当前整句未据此判错。"
+    }
+  ]
+}

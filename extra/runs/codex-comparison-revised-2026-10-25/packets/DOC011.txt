@@ -1,0 +1,84 @@
+# DOC011
+## NEW
+G01 与课程队友异步协作修改代码，完成团队课程开发 | conditions: 学生团队情境；独立开发者无需固定使用PR。 | origin: explicit | support: direct
+G02 通过他人审查后再合并，保护主仓库免受未经审查的未知代码变更 | conditions: 协作项目，审查按团队或审阅者标准可批准或拒绝。 | origin: explicit | support: direct
+G03 合作时互相审查提交，使进入主分支的代码达到团队质量标准 | conditions: 提交可因未达标准被拒；个人项目通常不使用PR。 | origin: explicit | support: direct
+G04 在PR标题与描述中说明代码变更的上下文，供队友审查 | conditions:  | origin: explicit | support: direct
+G05 团队协作时偏好增量提交，降低每次审查内容量并保持流程顺畅 | conditions: 团队协作个人偏好；独立开发通常不用PR，假如用也可更大。 | origin: explicit | support: direct
+G06 通过项目看板规划开发、记录待办并讨论分派团队任务与审阅工作 | conditions: 看板可记录要求、变更大小频率及谁审哪个PR；不是软件自动替团队分派责任。 | origin: explicit | support: direct
+G07 将PR关联看板问题，合并时让看板自动反映完成情况 | conditions: 项目看板须已关联相应仓库；resolves加问题编号是本人示例。 | origin: explicit | support: direct
+G08 方便且安全地在云端保存代码，在本机损坏或遗失后可取回到另一机器继续工作 | conditions: 同步需手工pull/push；未上传的本地变化不在已云存代码范围。 | origin: explicit | support: direct
+G09 能回看保留的PR及其变更，追踪仓库和协作者的历史 | conditions: 不是所有历史关系已被当前线性视图清楚表达，G12另含可视化建议。 | origin: explicit | support: direct
+G10 作为助教查看学生项目代码并了解他们的进展 | conditions:  | origin: explicit | support: direct
+G11 更容易找到指导构建Actions工作流的资料，可考虑论坛或博客讨论入口 | conditions: 论坛/博客为可考虑方式，未指定唯一实现。 | origin: explicit | support: direct
+G12 可取但非必需地将分支创建、合并和相关问题按时间可视化，以理解仓库上下文 | conditions: 非必要功能，仅便利；既有带时间戳线性提交历史仍可查看。 | origin: explicit | support: direct
+G13 可以考虑集成AI咨询助手，帮助利用GitHub已有资源并指导创建PR或Actions文件 | conditions: 建议采纳和产品当前有无同类能力未知。 | origin: explicit | support: direct
+G14 独立开发时希望AI辅助代码审查并提供可参考的额外反馈 | conditions: 个人自审视角有限；AI是额外来源。 | origin: explicit | support: direct
+G15 按需要将远端最新代码拉到本地并上传自己的更新 | conditions:  | origin: inferred | support: inferred
+## PAPER
+g0 Support educational activities and track student progress.
+g1 Create, link, and manage projects with tracking boards.
+g2 Assign and organize tasks using layouts or Kanban boards.
+g3 Facilitate team management and task assignment.
+g4 Support creation and management of backlog issues for task organization.
+g5 Indicate readiness of entities for development.
+g6 Provide a platform for discussions and information exchange on workflows.
+g7 Support issue tracking and development process planning.
+g8 Allow users to synchronize code between the local machine and the online repository.
+g9 Provide commands to pull the latest code from the repository.
+g10 Provide commands to push the latest code to the online repository.
+g11 Allow changes to be made in the main branch of the repository.
+g12 Ensure the project board is linked to the repository.
+g13 Enable users to create branches for collaborative work.
+g14 Synchronize code changes manually.
+g15 Provide a button to merge code changes into the main branch.
+g16 Enable code pulling for work on different machines.
+g17 Enable merging of code changes through pull requests.
+g18 Use the technology consistently on a daily basis.
+g19 Facilitate collaboration among team members on code projects.
+g20 Enable asynchronous collaboration on code projects.
+g21 Ensure code meets standards before integration into the main branch.
+g22 Provide context for code changes to collaborators.
+g23 Ensure that code is reviewed by collaborators before proceeding.
+g24 Manage changes incrementally to provide less content for review.
+g25 Facilitate collaboration through pull requests.
+g26 Allow users to create a pull request with a title and description.
+g27 Use pull requests for reviewing changes individually.
+g28 Track who is reviewing each pull request.
+g29 Enable the use of keywords for automating pull request descriptions.
+g30 Allow users to search for public pull requests.
+g31 Save pull requests in a backlog for historical reference.
+g32 Allow users to see changes made through pull requests by collaborators.
+g33 Guide users through making pull requests.
+g34 Enable users to compare branches before merging changes.
+g35 Allow storage of work on separate branches to isolate changes.
+g36 Display branch creation and merge activities.
+g37 Show issues within branches with their corresponding timeline.
+g38 Approve or deny changes based on standards compliance.
+g39 Decide and document the requirements for the size and frequency of changes.
+g40 Ensure all changes are explicitly mentioned.
+g41 Display a green box indicating 'review required' after a review by a collaborator.
+g42 Indicate that merging is not allowed with a visual cue and a message stating merging is blocked.
+g43 Provide a text input area for adding comments.
+g44 Improve documentation clarity and accessibility.
+g45 Provide code review assistance.
+g46 Offer suggestions for code improvement.
+g47 Manage changes incrementally to maintain a seamless process.
+g48 Assign items in the backlog to team members.
+g49 Attach a title and description to items in the backlog.
+g50 Move items from the backlog to another part of the board.
+g51 Link a pull request to an issue in the Kanban board.
+g52 Automatically update the Kanban board when a pull request is merged.
+g53 Allow users to make requests using keywords.
+g54 Allow users to view code from different projects.
+g55 Allow users to search for projects using keywords.
+g56 Allow users to filter search results by file name, variable name, or programming language.
+g57 Allow users to access public discussion forums.
+g58 Allow users to search for other users by keywords in their username.
+g59 Store code safely to protect against machine corruption or loss.
+g60 Ensure the main repository is protected from unreviewed code changes.
+g61 Enable collaborative work in a cloud environment.
+g62 Facilitate transferring work from a cloud environment to another device.
+g63 Provide a convenient way to track the history of changes.
+g64 Include a visual mapping of the history to better understand branch creation, merging, and related timelines.
+g65 Facilitate the sending of action files.

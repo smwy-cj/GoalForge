@@ -1,0 +1,615 @@
+{
+  "document_id": "DOC010",
+  "round": "repeat",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "blinding_limit": "仅知第二轮A/B匿名代号；没有读取映射或生成分支，不推断跨轮代号对应。语言、粒度和模板特征可被猜测，属于有限盲法。",
+  "policy": "使用同一冻结129条意图，不迎合结果改清单；允许多对多不同粒度。候选/否定关系按其当前状态评价，supported不代表需求已采纳。无标准P/R/F1。",
+  "samples": [
+    {
+      "sample": "repeat:A",
+      "intent_matches": [
+        {
+          "intent_id": "DOC010:I01",
+          "goal_ids": [
+            "G002",
+            "G007"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“依天气决定穿戴和随身物品”的核心结果、条件和所选范围；DOC010:T007「plan what I have to wear on a particular day」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I02",
+          "goal_ids": [
+            "G001",
+            "G003",
+            "G004",
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“依天气安排户外活动和旅行”的核心结果、条件和所选范围；DOC010:T007「plan my outdoor activities. or just plan my trip」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I03",
+          "goal_ids": [
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“避免恶劣天气下不合适的户外活动和无效购票”的核心结果、条件和所选范围；DOC010:T021「it's very annoying when it's rain or when it's very cold. So there's no point in…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I04",
+          "goal_ids": [
+            "G005",
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“先通过语音助手快速取得天气，不足时查应用”的核心结果、条件和所选范围；DOC010:T013「I usually ask Siri or AI assistant for the weather information.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I05",
+          "goal_ids": [
+            "G010",
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在每次外出及陌生地点及时确认天气变化”的核心结果、条件和所选范围；DOC010:T025「basically, whenever I go out of my apartment. I I do check it.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I06",
+          "goal_ids": [
+            "G012",
+            "G013",
+            "G022"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“获悉极端天气以推迟活动或避免外出”的核心结果、条件和所选范围；DOC010:T035「I just like postpone the entire event and don't. Don't go out at all.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I07",
+          "goal_ids": [
+            "G014"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“极端天气时主动收到通知或预警”的核心结果、条件和所选范围；DOC010:T039「for extreme conditions, I'm just expecting, you know, the weather app to give me…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I08",
+          "goal_ids": [
+            "G015"
+          ],
+          "status": "partial",
+          "rationale": "G015保留普通每日三次与雨中例外，T041减少不必要频繁弹窗的负担目的没有正面保留。 原文：DOC010:T041「now I get it like 3 times per day」"
+        },
+        {
+          "intent_id": "DOC010:I09",
+          "goal_ids": [
+            "G016",
+            "G017"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“降雨期间更频繁取得开始、停止等实时更新”的核心结果、条件和所选范围；DOC010:T049「when it's about rain, I like have a like frequent notifications.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I10",
+          "goal_ids": [
+            "G017",
+            "G018"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“凭准确及时的天气选择步行或乘车，避免淋雨”的核心结果、条件和所选范围；DOC010:T051「make this decision to whether walk to the grocery store or take a bus.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I11",
+          "goal_ids": [
+            "G019",
+            "G021"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“让应用及时刷新且与网站等平台信息一致”的核心结果、条件和所选范围；DOC010:T057「the apps is they don't show you they don't get updates often.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I12",
+          "goal_ids": [
+            "G020"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“使用无广告天气体验”的核心结果、条件和所选范围；DOC010:T071「no ads, real time updates and should be consistent across all the platforms.」。按多对多承接，不要求节点数与冻结清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I02"
+          ],
+          "rationale": "与原文“依天气安排户外活动和旅行”一致；DOC010:T007「plan my outdoor activities. or just plan my trip」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I01"
+          ],
+          "rationale": "与原文“依天气决定穿戴和随身物品”一致；DOC010:T007「plan what I have to wear on a particular day」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I02"
+          ],
+          "rationale": "与原文“依天气安排户外活动和旅行”一致；DOC010:T007「plan my outdoor activities. or just plan my trip」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I02"
+          ],
+          "rationale": "与原文“依天气安排户外活动和旅行”一致；DOC010:T007「plan my outdoor activities. or just plan my trip」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I04"
+          ],
+          "rationale": "与原文“先通过语音助手快速取得天气，不足时查应用”一致；DOC010:T013「I usually ask Siri or AI assistant for the weather information.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I04"
+          ],
+          "rationale": "T013助手不足时打开应用是条件性备用策略，与G005先问语音可分；不是每次必须双查。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I01"
+          ],
+          "rationale": "与原文“依天气决定穿戴和随身物品”一致；DOC010:T007「plan what I have to wear on a particular day」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I02"
+          ],
+          "rationale": "与原文“依天气安排户外活动和旅行”一致；DOC010:T007「plan my outdoor activities. or just plan my trip」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I03"
+          ],
+          "rationale": "与原文“避免恶劣天气下不合适的户外活动和无效购票”一致；DOC010:T021「it's very annoying when it's rain or when it's very cold. So there's no point in…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I05"
+          ],
+          "rationale": "与原文“在每次外出及陌生地点及时确认天气变化”一致；DOC010:T025「basically, whenever I go out of my apartment. I I do check it.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I05"
+          ],
+          "rationale": "与原文“在每次外出及陌生地点及时确认天气变化”一致；DOC010:T025「basically, whenever I go out of my apartment. I I do check it.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I06"
+          ],
+          "rationale": "与原文“获悉极端天气以推迟活动或避免外出”一致；DOC010:T035「I just like postpone the entire event and don't. Don't go out at all.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I06"
+          ],
+          "rationale": "T035推迟活动与G022不出门是不同可满足结果，既保留极端条件，不视两个动词为过拆证据。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I07"
+          ],
+          "rationale": "与原文“极端天气时主动收到通知或预警”一致；DOC010:T039「for extreme conditions, I'm just expecting, you know, the weather app to give me…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I08"
+          ],
+          "rationale": "与原文“将一般天气通知调整到符合出门日程且不过度打扰”一致；DOC010:T041「now I get it like 3 times per day」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I09"
+          ],
+          "rationale": "与原文“降雨期间更频繁取得开始、停止等实时更新”一致；DOC010:T049「when it's about rain, I like have a like frequent notifications.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I09",
+            "DOC010:I10"
+          ],
+          "rationale": "与原文“降雨期间更频繁取得开始、停止等实时更新；凭准确及时的天气选择步行或乘车，避免淋雨”一致；DOC010:T049「when it's about rain, I like have a like frequent notifications.」；DOC010:T051「make this decision to whether walk to the grocery store or take a bus.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I10"
+          ],
+          "rationale": "与原文“凭准确及时的天气选择步行或乘车，避免淋雨”一致；DOC010:T051「make this decision to whether walk to the grocery store or take a bus.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I11"
+          ],
+          "rationale": "T057应用状态迟迟不更新与跨平台一致是相关但不同质量：各平台同样过时仍一致。故G019新鲜性与G021一致性分开合理。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I12"
+          ],
+          "rationale": "与原文“使用无广告天气体验”一致；DOC010:T071「no ads, real time updates and should be consistent across all the platforms.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G021",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I11"
+          ],
+          "rationale": "与原文“让应用及时刷新且与网站等平台信息一致”一致；DOC010:T057「the apps is they don't show you they don't get updates often.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G022",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I06"
+          ],
+          "rationale": "与原文“获悉极端天气以推迟活动或避免外出”一致；DOC010:T035「I just like postpone the entire event and don't. Don't go out at all.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [
+        {
+          "relation_id": "R001",
+          "judgment": "consistent",
+          "rationale": "T007穿衣是一般天气规划的具体用例。 当前按specialization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R002",
+          "judgment": "consistent",
+          "rationale": "T007户外活动是另一明确用例。 当前按specialization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R003",
+          "judgment": "consistent",
+          "rationale": "T007/T017旅行是天气规划的具体情境。 当前按specialization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R004",
+          "judgment": "consistent",
+          "rationale": "T019旅行前查整周是该规划所选信息范围。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R005",
+          "judgment": "consistent",
+          "rationale": "T021买活动票前看适宜天气是户外计划办法。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R006",
+          "judgment": "consistent",
+          "rationale": "T049降雨变化频繁通知是实时更新的具体情境。 当前按specialization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R007",
+          "judgment": "consistent",
+          "rationale": "T051及时更新帮助步行/公交决策，非保证天气。 当前按contribution/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R008",
+          "judgment": "consistent",
+          "rationale": "T035先知严重天气再推迟活动，描述顺序成立。 当前按precedes/supported状态评价，不等同充分精化。"
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T007三种规划用途有据；F001说明携物交通还可缺且partial，未用正例代替充分性证明。"
+        }
+      ]
+    },
+    {
+      "sample": "repeat:B",
+      "intent_matches": [
+        {
+          "intent_id": "DOC010:I01",
+          "goal_ids": [
+            "G001",
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“依天气决定穿戴和随身物品”的核心结果、条件和所选范围；DOC010:T007「plan what I have to wear on a particular day」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I02",
+          "goal_ids": [
+            "G001",
+            "G003",
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“依天气安排户外活动和旅行”的核心结果、条件和所选范围；DOC010:T007「plan my outdoor activities. or just plan my trip」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I03",
+          "goal_ids": [
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“避免恶劣天气下不合适的户外活动和无效购票”的核心结果、条件和所选范围；DOC010:T021「it's very annoying when it's rain or when it's very cold. So there's no point in…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I04",
+          "goal_ids": [
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“先通过语音助手快速取得天气，不足时查应用”的核心结果、条件和所选范围；DOC010:T013「I usually ask Siri or AI assistant for the weather information.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I05",
+          "goal_ids": [
+            "G005",
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在每次外出及陌生地点及时确认天气变化”的核心结果、条件和所选范围；DOC010:T025「basically, whenever I go out of my apartment. I I do check it.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I06",
+          "goal_ids": [
+            "G007"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“获悉极端天气以推迟活动或避免外出”的核心结果、条件和所选范围；DOC010:T035「I just like postpone the entire event and don't. Don't go out at all.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I07",
+          "goal_ids": [
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“极端天气时主动收到通知或预警”的核心结果、条件和所选范围；DOC010:T039「for extreme conditions, I'm just expecting, you know, the weather app to give me…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I08",
+          "goal_ids": [
+            "G004",
+            "G009"
+          ],
+          "status": "partial",
+          "rationale": "G009普通三次、G004日预报范围有据；减少普通频繁弹窗的目的隐含，未明确。 原文：DOC010:T041「now I get it like 3 times per day」"
+        },
+        {
+          "intent_id": "DOC010:I09",
+          "goal_ids": [
+            "G010",
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“降雨期间更频繁取得开始、停止等实时更新”的核心结果、条件和所选范围；DOC010:T049「when it's about rain, I like have a like frequent notifications.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I10",
+          "goal_ids": [
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“凭准确及时的天气选择步行或乘车，避免淋雨”的核心结果、条件和所选范围；DOC010:T051「make this decision to whether walk to the grocery store or take a bus.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I11",
+          "goal_ids": [
+            "G005",
+            "G011",
+            "G013"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“让应用及时刷新且与网站等平台信息一致”的核心结果、条件和所选范围；DOC010:T057「the apps is they don't show you they don't get updates often.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC010:I12",
+          "goal_ids": [
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“使用无广告天气体验”的核心结果、条件和所选范围；DOC010:T071「no ads, real time updates and should be consistent across all the platforms.」。按多对多承接，不要求节点数与冻结清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I01",
+            "DOC010:I02"
+          ],
+          "rationale": "与原文“依天气决定穿戴和随身物品；依天气安排户外活动和旅行”一致；DOC010:T007「plan what I have to wear on a particular day」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I01",
+            "DOC010:I04"
+          ],
+          "rationale": "T013先用助手、失效查应用的方式在support.rationale保留；目标statement较上位，结合解释可以承接而非声称只能语音。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I02",
+            "DOC010:I03"
+          ],
+          "rationale": "与原文“依天气安排户外活动和旅行；避免恶劣天气下不合适的户外活动和无效购票”一致；DOC010:T007「plan my outdoor activities. or just plan my trip」；DOC010:T021「it's very annoying when it's rain or when it's very cold. So there's no point in…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I02",
+            "DOC010:I08"
+          ],
+          "rationale": "T019普通每日/出行整周是同一预报范围的分情况策略，合并不损失条件。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I05",
+            "DOC010:I11"
+          ],
+          "rationale": "与原文“在每次外出及陌生地点及时确认天气变化；让应用及时刷新且与网站等平台信息一致”一致；DOC010:T025「basically, whenever I go out of my apartment. I I do check it.」；DOC010:T057「the apps is they don't show you they don't get updates often.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I05"
+          ],
+          "rationale": "与原文“在每次外出及陌生地点及时确认天气变化”一致；DOC010:T025「basically, whenever I go out of my apartment. I I do check it.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I06"
+          ],
+          "rationale": "与原文“获悉极端天气以推迟活动或避免外出”一致；DOC010:T035「I just like postpone the entire event and don't. Don't go out at all.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I07"
+          ],
+          "rationale": "与原文“极端天气时主动收到通知或预警”一致；DOC010:T039「for extreme conditions, I'm just expecting, you know, the weather app to give me…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I08"
+          ],
+          "rationale": "与原文“将一般天气通知调整到符合出门日程且不过度打扰”一致；DOC010:T041「now I get it like 3 times per day」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I09"
+          ],
+          "rationale": "与原文“降雨期间更频繁取得开始、停止等实时更新”一致；DOC010:T049「when it's about rain, I like have a like frequent notifications.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I09",
+            "DOC010:I10",
+            "DOC010:I11"
+          ],
+          "rationale": "T051短时及时信息服务步行/公交选择，质量目的和决策目的相连，非零误差保证；不强求必须拆两节点。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I12"
+          ],
+          "rationale": "与原文“使用无广告天气体验”一致；DOC010:T071「no ads, real time updates and should be consistent across all the platforms.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC010:I11"
+          ],
+          "rationale": "与原文“让应用及时刷新且与网站等平台信息一致”一致；DOC010:T057「the apps is they don't show you they don't get updates often.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T007/T017/T035对应部分规划情境，F001仅proposed/partial，未过度推成全部规划的必要充分方案。"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "SYN-RELEASE",
+  "input_binding": {
+    "source_input_sha256": "627600bcd879ced10f9d1cfb698a949ca9221b1053b8cca06d17ddd4c21673f6",
+    "source_sha256": "2d5610dba8bc1576aeb161f061b580afd709baf92da9774b48441c20721a9b49",
+    "windows_sha256": "201b2a817e890ae5ad97f0d72f95aa2c64d01c6ac0d346b9bacb293fda18e362",
+    "candidates_sha256": "38458f26bf26530b668d7d9e32767b990a81e9074fc812729708c13e4b77c56d",
+    "extraction_sha256": "1c12ab408c773ba08e5ff2ec07f049f5272a21bc83392fa43d24d55cb9232c6a"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "unknown",
+    "temperature": "unknown",
+    "budget": "unknown",
+    "usage": "unknown",
+    "skill_revision": "unknown",
+    "prompt_revision": "unknown",
+    "planned_passes": 1,
+    "stop_reason": "完成合成工程验收，未调用模型。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "shared",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "SYN-RELEASE:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "SYN-RELEASE:W0002",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "source_ids": [
+      "SYN-RELEASE:S001",
+      "SYN-RELEASE:S002",
+      "SYN-RELEASE:S003",
+      "SYN-RELEASE:S004",
+      "SYN-RELEASE:S005"
+    ],
+    "reason": "核对合成原句、允许渠道及目标映射，非独立语义评审。"
+  },
+  "entries": [
+    {
+      "candidate_id": "C1",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G1"
+      ],
+      "reason": "合成验收中保留完整结果与依据。"
+    },
+    {
+      "candidate_id": "C2",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G2"
+      ],
+      "reason": "合成验收中保留完整结果与依据。"
+    },
+    {
+      "candidate_id": "C3",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G3"
+      ],
+      "reason": "合成验收中保留完整结果与依据。"
+    },
+    {
+      "candidate_id": "C4",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G4"
+      ],
+      "reason": "合成验收中保留完整结果与依据。"
+    },
+    {
+      "candidate_id": "C5",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G5"
+      ],
+      "reason": "合成验收中保留完整结果与依据。"
+    }
+  ],
+  "source_checks": [],
+  "limitations": []
+}

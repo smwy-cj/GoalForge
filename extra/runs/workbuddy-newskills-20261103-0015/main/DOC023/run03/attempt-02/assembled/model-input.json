@@ -1,0 +1,1338 @@
+{
+  "schema_version": "goalforge-kaos-2",
+  "model_id": "DOC023-goal-model",
+  "version": "v1",
+  "parent": null,
+  "scope": {
+    "document_id": "DOC023",
+    "coverage": {
+      "scope": "provided_material",
+      "source_ids": [
+        "DOC023:T000",
+        "DOC023:T001",
+        "DOC023:T002",
+        "DOC023:T003",
+        "DOC023:T004",
+        "DOC023:T005",
+        "DOC023:T006",
+        "DOC023:T007",
+        "DOC023:T008",
+        "DOC023:T009",
+        "DOC023:T010",
+        "DOC023:T011",
+        "DOC023:T012",
+        "DOC023:T013",
+        "DOC023:T014",
+        "DOC023:T015",
+        "DOC023:T016",
+        "DOC023:T017",
+        "DOC023:T018"
+      ],
+      "omissions": []
+    }
+  },
+  "goals": [
+    {
+      "goal_id": "G001",
+      "statement": "Increase the number of connections shown on my LinkedIn profile.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "the count is what visitors see on his profile page"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "第一个主要目标",
+          "对象为主页显示的连接数量",
+          "方向为增加"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T003 直接陈述 'the 1st one is to enlarge ... the number of my connections on my profile'"
+        ],
+        "label": "direct",
+        "rationale": "受访者明确把'扩大主页连接数'列为第一个主要目标，主体、对象（主页上的连接数）与方向（增加）均一致。"
+      },
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ]
+    },
+    {
+      "goal_id": "G002",
+      "statement": "Show the people who view my profile that I am active on LinkedIn.",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "希望被看到的状态：在 LinkedIn 上活跃",
+          "受众为查看主页的人"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T003 把该状态说成增加连接数的目的（'to make sure'）",
+          "同轮上下文表明展示位置是主页的连接数区块"
+        ],
+        "label": "direct",
+        "rationale": "原文用 'to make sure that I ... show people that I'm active on Linkedin' 明确表达要达到的状态；这里的'people'指查看主页的人，由同句'number of connections you have'的展示语境确定。"
+      },
+      "evidence_ids": [
+        "E0003"
+      ]
+    },
+    {
+      "goal_id": "G003",
+      "statement": "Obtain referrals from current employees of the company I am applying to, since internship and full-time applications are competitive and a referral helps my resume be seen by recruiters.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "the target was referred to as 'my 3rd company'; the specific employer is not named in the transcript"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "目标：获得转介",
+          "来源限定：目标公司的现任员工",
+          "原因：申请竞争激烈、转介有助于简历被看到"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T003 直接陈述 'my sec second goal is to ... get referrals from current employees for my 3rd company'",
+          "同轮给出 'pretty competitive' 与 'referral really helps' 的理由"
+        ],
+        "label": "direct",
+        "rationale": "第二个主要目标原文明确；'current employees'的主体限制、'3rd company'的对象以及竞争激烈、希望简历被招聘方看到的原因均在同一轮给出。"
+      },
+      "evidence_ids": [
+        "E0004",
+        "E0005"
+      ]
+    },
+    {
+      "goal_id": "G004",
+      "statement": "Search LinkedIn by entering both the target company name and the name of the university I currently attend, so that the results list people with the same background as me.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "only when he wants to connect with people for a referral"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "动作：在搜索栏输入关键词检索",
+          "两个关键词同时使用：目标公司名 + 在读大学名",
+          "期望结果：同背景的人出现在结果中"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T007 'This company name, and also the school name that I am currently attending'",
+          "T011 说明公司关键词的必要性依据"
+        ],
+        "label": "direct",
+        "rationale": "检索动作、两个关键词（公司名+在读学校名）以及期望结果（同背景的人）都在 T007 明说；T011 给出加公司名的理由，未改变表述。"
+      },
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ]
+    },
+    {
+      "goal_id": "G005",
+      "statement": "Connect only with people who are currently employed at the target company and who attended my university, skipping former employees and people who satisfy only one or none of these requirements.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "former employees cannot refer him for the position",
+        "people who meet only one or none of the requirements are filtered out"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "选择规则：现任员工且校友（同时满足）",
+          "排除前员工（不能转介）",
+          "排除只满足一项或不满足者"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T009 'only choose people who is currently a company employee and who was my university's student'",
+          "T009 分别给出两类排除理由"
+        ],
+        "label": "direct",
+        "rationale": "两个并列条件是同一选择动作的共同限定（现任员工 AND 校友），排除项（前员工、只满足一项或不满足）也在同轮明说，未把 AND 改成 OR。"
+      },
+      "evidence_ids": [
+        "E0008",
+        "E0009",
+        "E0010"
+      ]
+    },
+    {
+      "goal_id": "G006",
+      "statement": "Open each candidate's profile to read their experience, and only send a connection request when that experience matches the position I am targeting.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "connect only if their experience is exactly what he is looking for"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "动作：进入候选人主页查看经历",
+          "条件：经历与其寻找的职位相符才发起连接"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T007 条件句 'If their experience are the exactly what I'm looking for. Then I'm going to hit the connect button'"
+        ],
+        "label": "direct",
+        "rationale": "查看经历与'符合条件才发起连接'构成一个条件动作；原文用 'If ... exactly what I'm looking for. Then ... connect' 明确条件关系。"
+      },
+      "evidence_ids": [
+        "E0011"
+      ]
+    },
+    {
+      "goal_id": "G007",
+      "statement": "Send a connection note that introduces myself, says that I would like a referral for the position, and mentions that I was also a student at the same university, to raise the chance they agree to refer me.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "LinkedIn limits the note to 200 characters for non-members",
+        "the note accompanies the connection request, before the invitation is accepted"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "动作：发送带附言的连接邀请",
+          "内容一：自我介绍",
+          "内容二：说明希望对方为该职位转介",
+          "内容三：说明同为该校学生，目的是提高转介意愿"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T007 'add a message to introduce myself ... refer me for the position'",
+          "T009 'I can tell them that I was also like a student in my university'",
+          "T017 给出附言字符上限作为外部约束"
+        ],
+        "label": "direct",
+        "rationale": "三个内容项（自我介绍、请对方转介、说明同校经历）都附着于同一个动作——随邀请发送的附言；同校说明的目的（提高对方愿意转介的可能性）原文明确。字符上限作为平台条件保留，不升级为受访者的要求。"
+      },
+      "evidence_ids": [
+        "E0012",
+        "E0013",
+        "E0014"
+      ]
+    },
+    {
+      "goal_id": "G008",
+      "statement": "Purchase LinkedIn Premium so that I can access as many potential connections as I want.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "chosen as the simplest option, but it costs a lot"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "动作：购买 LinkedIn Premium",
+          "期望结果：可访问任意多的潜在连接",
+          "强度：通常是首选/最省事，但成本高"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T015 'purchase the linking premium ... access as much as possible potential connections as I want to'",
+          "同轮补充 'costs a lot'"
+        ],
+        "label": "direct",
+        "rationale": "购买动作与其直接结果（不受限地访问潜在连接）同句给出；'usually / simplest way' 的偏好强度和'costs a lot' 的代价在 context 中保留，未升级为无条件强制。"
+      },
+      "evidence_ids": [
+        "E0015",
+        "E0016"
+      ]
+    },
+    {
+      "goal_id": "G009",
+      "statement": "Adjust the search keywords — deleting one or two of them or making them more specific — so that LinkedIn returns people with a more precise background.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "used as the alternative when results are unsatisfactory"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "动作：调整搜索关键词",
+          "两种方式：删掉一两个关键词，或更具体",
+          "期望结果：结果更精确"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "T015 'modify the keywords ... delete one or 2 of the keyword. or like to be more specific'"
+        ],
+        "label": "direct",
+        "rationale": "两种具体做法（删减关键词或更具体）是同一调整动作的可选方式，原文并列给出；期望结果是更精确的背景匹配，也在同句。'sometimes / other option' 的替代强度保留在 context。"
+      },
+      "evidence_ids": [
+        "E0017"
+      ]
+    }
+  ],
+  "refinement_groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G003",
+      "child_ids": [
+        "G004",
+        "G005",
+        "G006",
+        "G007"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "受访者把双关键词检索、条件筛选、核对经历、发带说明的邀请描述为获取转介的完整走法，四项目标分别对应这笔流程中的一环，共同构成一次转介请求的送达。但这组子目标只到'请求送达符合条件的人'为止：是否转介取决于对方意愿，且搜索结果可能根本没有人符合条件，因此无法声称共同充分，保留为候选组。",
+      "assumptions": [
+        "被请求者愿意按自己的判断决定是否转介",
+        "目标公司在 LinkedIn 上有可检索到的现任员工"
+      ],
+      "evidence_ids": [
+        "K0003",
+        "K0002",
+        "K0001"
+      ],
+      "relation_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "目标公司有若干同时满足'现任员工+同校校友'的人，且检索能返回他们：按 G004 检索、G005 过滤、G006 核对经历、G007 发出带说明的邀请后，转介请求确实送到符合条件的人手上。",
+          "outcome": "supports",
+          "rationale": "四项目标首尾相接覆盖了从检索到发出请求的全过程，正常情形下成立；但这只说明请求送达，不说明对方会转介。"
+        },
+        {
+          "kind": "exception",
+          "origin": "source",
+          "scenario": "搜索结果里只有一两个甚至没有符合条件的人（受访者自述的最坏情况）。",
+          "outcome": "counterexample",
+          "rationale": "即使四项目标都做到，也可能没有可请求的对象，父目标无法实现；这正是组不充分的反例，故收为 proposed/partial。",
+          "evidence_ids": [
+            "K0002"
+          ]
+        },
+        {
+          "kind": "exception",
+          "origin": "source",
+          "scenario": "非会员只能看到有限的结果列表，检索覆盖面被平台限制。",
+          "outcome": "counterexample",
+          "rationale": "检索这一步的可达范围受订阅状态限制，仅靠关键词检索无法覆盖全部潜在对象，需要 G008/G009 之类的手段补足。",
+          "evidence_ids": [
+            "K0003"
+          ]
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "对方接受了连接邀请但拒绝转介，或接受后不再回应。",
+          "outcome": "counterexample",
+          "rationale": "转介由对方决定，四项目标不含任何确保对方同意的措施，故不足以共同满足父目标。"
+        }
+      ]
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "So the 1st one is to enlarge my the number of my connections on my profile",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 494,
+      "end_char": 568,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 81,
+          "segment_end": 155,
+          "start_char": 494,
+          "end_char": 568
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "there is like a section called, like the number of connections you have",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 703,
+      "end_char": 774,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 290,
+          "segment_end": 361,
+          "start_char": 703,
+          "end_char": 774
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "to make sure that I to to show people that I'm active on Linkedin",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 837,
+      "end_char": 902,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 424,
+          "segment_end": 489,
+          "start_char": 837,
+          "end_char": 902
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "my sec second goal is to to get referrals from current employees for my 3rd company",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1018,
+      "end_char": 1101,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 605,
+          "segment_end": 688,
+          "start_char": 1018,
+          "end_char": 1101
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "It's pretty competitive. And sometimes a referral really helps to get my resume being seen by recruiters",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1196,
+      "end_char": 1300,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 783,
+          "segment_end": 887,
+          "start_char": 1196,
+          "end_char": 1300
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC023:T007",
+      "material_id": "M001",
+      "quote": "So when I want to connect with people for a referral. what I would 1st do is to to search on in the search bar. This company name, and also the school name that I am currently attending like",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1812,
+      "end_char": 2002,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T007",
+          "segment_start": 12,
+          "segment_end": 202,
+          "start_char": 1812,
+          "end_char": 2002
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 1800,
+        "end_char": 3096
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC023:T011",
+      "material_id": "M001",
+      "quote": "then only company employee is able to refer me",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4537,
+      "end_char": 4583,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T011",
+          "segment_start": 174,
+          "segment_end": 220,
+          "start_char": 4537,
+          "end_char": 4583
+        }
+      ],
+      "original_locator": {
+        "turn": "11",
+        "start_char": 4363,
+        "end_char": 5033
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC023:T009",
+      "material_id": "M001",
+      "quote": "I will only choose people who is currently a company employee and who was my university's student",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3998,
+      "end_char": 4095,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T009",
+          "segment_start": 713,
+          "segment_end": 810,
+          "start_char": 3998,
+          "end_char": 4095
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3285,
+        "end_char": 4277
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC023:T009",
+      "material_id": "M001",
+      "quote": "They are not current employees, so they are not able to refer me for the position",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3559,
+      "end_char": 3640,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T009",
+          "segment_start": 274,
+          "segment_end": 355,
+          "start_char": 3559,
+          "end_char": 3640
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3285,
+        "end_char": 4277
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC023:T009",
+      "material_id": "M001",
+      "quote": "They only satisfy, like one of the one, or like none of the that the requirements I want",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3791,
+      "end_char": 3879,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T009",
+          "segment_start": 506,
+          "segment_end": 594,
+          "start_char": 3791,
+          "end_char": 3879
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3285,
+        "end_char": 4277
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC023:T007",
+      "material_id": "M001",
+      "quote": "and then I am going to click on, click into their profile and to see about their experience. If their experience are the exactly what I'm looking for. Then I'm going to hit the connect button",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2322,
+      "end_char": 2513,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T007",
+          "segment_start": 522,
+          "segment_end": 713,
+          "start_char": 2322,
+          "end_char": 2513
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 1800,
+        "end_char": 3096
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC023:T007",
+      "material_id": "M001",
+      "quote": "and I will usually like add a message to introduce myself and I maybe will also tell them like I want to. If they will like to refer me for the position",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2621,
+      "end_char": 2773,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T007",
+          "segment_start": 821,
+          "segment_end": 973,
+          "start_char": 2621,
+          "end_char": 2773
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 1800,
+        "end_char": 3096
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC023:T009",
+      "material_id": "M001",
+      "quote": "I can tell them that I was also like a student in my university, and to increase the possibility that they want to refer me for the position",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4136,
+      "end_char": 4276,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T009",
+          "segment_start": 851,
+          "segment_end": 991,
+          "start_char": 4136,
+          "end_char": 4276
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3285,
+        "end_char": 4277
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC023:T017",
+      "material_id": "M001",
+      "quote": "usually for a non-member is 200 characters",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7292,
+      "end_char": 7334,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T017",
+          "segment_start": 393,
+          "segment_end": 435,
+          "start_char": 7292,
+          "end_char": 7334
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 6899,
+        "end_char": 7584
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC023:T015",
+      "material_id": "M001",
+      "quote": "is just to purchase the linking premium, because, like this, allow me to access like as much as possible potential connections as I want to",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6206,
+      "end_char": 6345,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T015",
+          "segment_start": 73,
+          "segment_end": 212,
+          "start_char": 6206,
+          "end_char": 6345
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 6133,
+        "end_char": 6717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC023:T015",
+      "material_id": "M001",
+      "quote": "But this is pretty like this costs a lot",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6347,
+      "end_char": 6387,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T015",
+          "segment_start": 214,
+          "segment_end": 254,
+          "start_char": 6347,
+          "end_char": 6387
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 6133,
+        "end_char": 6717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC023:T015",
+      "material_id": "M001",
+      "quote": "to modify the keywords in my when I was doing the searching. so I may kind of like delete one or 2 of the keyword. or like to be more specific",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6446,
+      "end_char": 6588,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T015",
+          "segment_start": 313,
+          "segment_end": 455,
+          "start_char": 6446,
+          "end_char": 6588
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 6133,
+        "end_char": 6717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0001",
+      "source_id": "DOC023:T007",
+      "material_id": "M001",
+      "quote": "what I would 1st do is to to search on in the search bar. This company name, and also the school name that I am currently attending like",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1866,
+      "end_char": 2002,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T007",
+          "segment_start": 66,
+          "segment_end": 202,
+          "start_char": 1866,
+          "end_char": 2002
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 1800,
+        "end_char": 3096
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0002",
+      "source_id": "DOC023:T013",
+      "material_id": "M001",
+      "quote": "in the worst case, like there are just like one or 2, or even none of the people in the search result",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5852,
+      "end_char": 5953,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T013",
+          "segment_start": 592,
+          "segment_end": 693,
+          "start_char": 5852,
+          "end_char": 5953
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 5260,
+        "end_char": 6003
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0003",
+      "source_id": "DOC023:T013",
+      "material_id": "M001",
+      "quote": "But if you are not, you're probably gonna able to access like a limited list of people",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5756,
+      "end_char": 5842,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T013",
+          "segment_start": 496,
+          "segment_end": 582,
+          "start_char": 5756,
+          "end_char": 5842
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 5260,
+        "end_char": 6003
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0004",
+      "source_id": "DOC023:T011",
+      "material_id": "M001",
+      "quote": "then only company employee is able to refer me",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4537,
+      "end_char": 4583,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T011",
+          "segment_start": 174,
+          "segment_end": 220,
+          "start_char": 4537,
+          "end_char": 4583
+        }
+      ],
+      "original_locator": {
+        "turn": "11",
+        "start_char": 4363,
+        "end_char": 5033
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0005",
+      "source_id": "DOC023:T009",
+      "material_id": "M001",
+      "quote": "I will only choose people who is currently a company employee and who was my university's student",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3998,
+      "end_char": 4095,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T009",
+          "segment_start": 713,
+          "segment_end": 810,
+          "start_char": 3998,
+          "end_char": 4095
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3285,
+        "end_char": 4277
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0006",
+      "source_id": "DOC023:T007",
+      "material_id": "M001",
+      "quote": "If their experience are the exactly what I'm looking for. Then I'm going to hit the connect button",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2415,
+      "end_char": 2513,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T007",
+          "segment_start": 615,
+          "segment_end": 713,
+          "start_char": 2415,
+          "end_char": 2513
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 1800,
+        "end_char": 3096
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0007",
+      "source_id": "DOC023:T009",
+      "material_id": "M001",
+      "quote": "I can tell them that I was also like a student in my university, and to increase the possibility that they want to refer me for the position",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4136,
+      "end_char": 4276,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T009",
+          "segment_start": 851,
+          "segment_end": 991,
+          "start_char": 4136,
+          "end_char": 4276
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3285,
+        "end_char": 4277
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0008",
+      "source_id": "DOC023:T015",
+      "material_id": "M001",
+      "quote": "is just to purchase the linking premium, because, like this, allow me to access like as much as possible potential connections as I want to",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6206,
+      "end_char": 6345,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T015",
+          "segment_start": 73,
+          "segment_end": 212,
+          "start_char": 6206,
+          "end_char": 6345
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 6133,
+        "end_char": 6717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0009",
+      "source_id": "DOC023:T015",
+      "material_id": "M001",
+      "quote": "to modify the keywords in my when I was doing the searching. so I may kind of like delete one or 2 of the keyword. or like to be more specific",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6446,
+      "end_char": 6588,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T015",
+          "segment_start": 313,
+          "segment_end": 455,
+          "start_char": 6446,
+          "end_char": 6588
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 6133,
+        "end_char": 6717
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0010",
+      "source_id": "DOC023:T003",
+      "material_id": "M001",
+      "quote": "to make sure that I to to show people that I'm active on Linkedin",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 837,
+      "end_char": 902,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T003",
+          "segment_start": 424,
+          "segment_end": 489,
+          "start_char": 837,
+          "end_char": 902
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 413,
+        "end_char": 1351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0011",
+      "source_id": "DOC023:T007",
+      "material_id": "M001",
+      "quote": "and then I am going to click on, click into their profile and to see about their experience",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2322,
+      "end_char": 2413,
+      "candidate_locations": [
+        {
+          "source_id": "DOC023:T007",
+          "segment_start": 522,
+          "segment_end": 613,
+          "start_char": 2322,
+          "end_char": 2413
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 1800,
+        "end_char": 3096
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "issues": [
+    {
+      "target_type": "goal",
+      "target_id": "G003",
+      "message": "原文 'for my 3rd company' 具体指哪家公司？当前目标按'所申请的公司'表述，是否应收窄为某家具体公司？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "购买 Premium 在原文是'通常最简单的方式'且'花费很高'，应作为目标保留，还是仅作为应对搜索结果受限的偏好方案？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G003",
+      "message": "原文说 'for my 3rd company'，具体指哪家公司？目前按'所申请的公司'泛化，是否应收窄？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "200 字符上限只作为条件保留；是否应把'在字符限制内完整传达意图'单列为质量目标？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "购买 Premium 属偏好方案且成本高，是否保留为目标，还是只作为应对结果受限的备选策略？",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "GR1 的三个反例（无符合条件者、非会员结果受限、对方拒绝转介）是否需要以新的障碍或目标承接，还是仅作为该组的未决缺口？",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC023-goal-model",
+      "message": "'对方接受邀请后继续沟通转介细节'在原文只是流程可能性（'I can then'），未建目标；是否需要补为条件目标？",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "这组层级仍需确认，尚未作为成立的精化展示。",
+      "blocking": false
+    }
+  ],
+  "limitations": [
+    "原始材料为英文访谈自动转写，含识别噪声（如 Linking=LinkedIn、except=accept、'the Madison' 等），未取得音频无法核对。",
+    "受访者口中的 200 字符上限与 Premium 权限为其自述，未经平台资料核实。",
+    "'my 3rd company' 的所指在转写中不明，目标按'所申请的公司'泛化处理并保留为未决问题。"
+  ],
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "7895eb9ed43b15895fc53b8228fa2ff72c516197dc3589317572490c04ceb169"
+    },
+    {
+      "path": "attachments/judgments.json",
+      "sha256": "71db58ae86adefbe14d67e2f89a3bd574ce765de02f9113a80e13358bec63fef"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "2966cdb21f4ac14cb0797faf9c1297e343e83f8b4dd509cd3d473d3048d7bffb"
+    },
+    {
+      "path": "attachments/kaos-decisions.json",
+      "sha256": "3466320e94dea7cb5f9879569a23d515b270c4f247b0dd443541148c9e22cf3b"
+    }
+  ],
+  "review": {
+    "status": "pending"
+  },
+  "changes": [],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G004",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "when he wants to connect with people to ask for a referral"
+      ],
+      "assumptions": [],
+      "rationale": "双关键词检索是受访者用来找到可转介对象的做法，服务于获取转介这一目的；原文把它说成求转介时的第一步，并在 T011 说明为何必须加公司名。",
+      "evidence_ids": [
+        "K0004"
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G005",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "把连接对象限制为现任员工且校友，是提高拿到转介可能性的具体做法（T009 明确说这样发消息时能提到同校经历以提高转介可能），服务于获取转介。",
+      "evidence_ids": [
+        "K0005"
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G006",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先核对对方经历与目标职位是否相符再发邀请，是筛选可转介对象的方式，直接服务于转介目的。",
+      "evidence_ids": [
+        "K0006"
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G007",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "随邀请发送附言说明来意并提到同校背景，是受访者实际用来争取转介的手段；同一句说明其目的是让对方愿意转介。",
+      "evidence_ids": [
+        "K0007"
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G008",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "only for non-members whose result list is limited"
+      ],
+      "assumptions": [],
+      "rationale": "购买 Premium 被说明为解除搜索结果数量限制、能访问任意多的潜在连接，因此帮助检索这一步拿到更多候选；原文未说它保证检索质量或转介成功，故只记贡献。",
+      "evidence_ids": [
+        "K0008"
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G009",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "when the results are unsatisfactory or the list is limited"
+      ],
+      "assumptions": [],
+      "rationale": "调整关键词（删减或更具体）是为了让检索返回更精确的背景匹配，帮助检索这一步的结果质量；原文把它作为 Premium 之外的替代办法，未声称必然成功。",
+      "evidence_ids": [
+        "K0009"
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G001",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "受访者明确说增加连接数是为了让查看主页的人看到自己在 LinkedIn 上活跃；增加数量有助于该观感，但不保证被这样看待（主页内容同样影响判断），故为贡献而非精化。",
+      "evidence_ids": [
+        "K0010"
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G004",
+      "target_id": "G007",
+      "type": "precedes",
+      "status": "rejected",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "已检查但无依据：原文只按步骤叙述先后（'and then I am going to click on...'，再'add a message'），检索的结果是一份候选名单而非被追求的结果状态，且两者之间还有筛选与看经历；顺序本身不构成结果层面的过程先后联系，两端已分别由 R1/R4 表达为目的-方式，故判 rejected。",
+      "evidence_ids": [
+        "K0011"
+      ]
+    }
+  ],
+  "source_binding": {
+    "sha256": "2966cdb21f4ac14cb0797faf9c1297e343e83f8b4dd509cd3d473d3048d7bffb"
+  }
+}

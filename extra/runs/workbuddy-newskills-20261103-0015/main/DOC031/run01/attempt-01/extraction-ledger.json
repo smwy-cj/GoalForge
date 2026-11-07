@@ -1,0 +1,797 @@
+{
+  "schema_version": "extraction-ledger-1",
+  "document_id": "DOC031",
+  "input_binding": {
+    "source_input_sha256": "3358a6d1164bda0a879d74447e80532fc5d42637932ae3efee2a0861c312b509",
+    "source_sha256": "4f4c359b0aa66e459338fef571a2e6e2ddd5badd68f1bfe61e6950016957a6fe",
+    "windows_sha256": "a3f48b8cdce34588e352a1b314b069fbe64808971ada5736a4c5d466823ee6f4",
+    "candidates_sha256": "5e8da99c80e53d325a9b302f6fe5ee5a5d8db91ff579c7ec7b5cb207b09e875f",
+    "extraction_sha256": "cd503fb140012115a068215b1859441a9f9e95f523b2fb21aac4ec1b6efb6e9e"
+  },
+  "run": {
+    "strategy": "windowed",
+    "model": "deepseek-v4.1-flash",
+    "temperature": "unknown",
+    "budget": "1 initial pass + <=2 repair rounds",
+    "usage": "unknown",
+    "skill_revision": "a5952d426b1624a3fcb2ce2829e1ae1ceb15e19dc3309d9571f3bc6b465deb6f",
+    "prompt_revision": "task-prompt-v1",
+    "planned_passes": 2,
+    "stop_reason": "完成一次 4/2 逐窗基础提取（16 个窗口）与一次全篇校正（指代、条件继承、让步与例外回查），未再发现新的有据意图，按计划停止。",
+    "passes": [
+      {
+        "pass_id": "P1",
+        "kind": "initial",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC031:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0009",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0010",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0011",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0012",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0013",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0014",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0015",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0016",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      },
+      {
+        "pass_id": "P2",
+        "kind": "full_context",
+        "context": "isolated",
+        "status": "completed",
+        "window_results": [
+          {
+            "window_id": "DOC031:W0001",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0002",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0003",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0004",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0005",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0006",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0007",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0008",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0009",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0010",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0011",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0012",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0013",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0014",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0015",
+            "status": "processed",
+            "reason": ""
+          },
+          {
+            "window_id": "DOC031:W0016",
+            "status": "processed",
+            "reason": ""
+          }
+        ]
+      }
+    ]
+  },
+  "full_context_review": {
+    "status": "completed",
+    "reason": "通读全部 33 轮并回查：T013 的 “the first goal” 指回 T007 的即时沟通；T012–T013 的 “this feature/how does it help” 指向 T011 的文档分享；T021–T025 中 “it/that feature/this kind of methods” 分别指 Slack 的通话功能与用电话直接联系的替代做法；T027 的 “adding on to that” 是把通话可及性并入改进请求；T031 的 “But then” 构成对前述良好体验的让步（仅缩小窗口场景有问题）；T019 的通话/历史叙述与 T009 的历史优势形成相反方向证据，已按障碍线索保留而非改成目标。",
+    "source_ids": [
+      "DOC031:T000",
+      "DOC031:T001",
+      "DOC031:T002",
+      "DOC031:T003",
+      "DOC031:T004",
+      "DOC031:T005",
+      "DOC031:T006",
+      "DOC031:T007",
+      "DOC031:T008",
+      "DOC031:T009",
+      "DOC031:T010",
+      "DOC031:T011",
+      "DOC031:T012",
+      "DOC031:T013",
+      "DOC031:T014",
+      "DOC031:T015",
+      "DOC031:T016",
+      "DOC031:T017",
+      "DOC031:T018",
+      "DOC031:T019",
+      "DOC031:T020",
+      "DOC031:T021",
+      "DOC031:T022",
+      "DOC031:T023",
+      "DOC031:T024",
+      "DOC031:T025",
+      "DOC031:T026",
+      "DOC031:T027",
+      "DOC031:T028",
+      "DOC031:T029",
+      "DOC031:T030",
+      "DOC031:T031",
+      "DOC031:T032"
+    ]
+  },
+  "entries": [
+    {
+      "candidate_id": "C001",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "现状描述（校内主要沟通方式），非期望状态；继续使用的维持意图另由 C018 承接。"
+    },
+    {
+      "candidate_id": "C002",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "每日使用习惯与使用量上升的趋势叙述，无独立期望结果。"
+    },
+    {
+      "candidate_id": "C003",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "受访者自称的第一个目标，保留即时沟通这一核心结果。"
+    },
+    {
+      "candidate_id": "C004",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "按姓名检索、无需保存联系方式是 G001 达成即时联系的选定方式，不另立目标。"
+    },
+    {
+      "candidate_id": "C005",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G001"
+      ],
+      "reason": "手机与笔记本都可联系是同一联系动作的载体条件，并入 G001。"
+    },
+    {
+      "candidate_id": "C006",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G002"
+      ],
+      "reason": "即时触达广泛受众是独立结果（“besides”与一对一即时沟通并列），单独保留。"
+    },
+    {
+      "candidate_id": "C007",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G003"
+      ],
+      "reason": "加入时即可看到频道历史是独立的状态结果，保留。"
+    },
+    {
+      "candidate_id": "C008",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "了解讨论与分享内容的维持型状态意图，保留。"
+    },
+    {
+      "candidate_id": "C009",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G004"
+      ],
+      "reason": "系、项目、校园动态是同一知情状态的范围细分，并入 G004。"
+    },
+    {
+      "candidate_id": "C010",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "协作时分享文档是最高频功能，构成独立的核心动作。"
+    },
+    {
+      "candidate_id": "C011",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "“即时把文档发给队友”与 C010 同一动作，补充即时性与对象，并入 G005。"
+    },
+    {
+      "candidate_id": "C012",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G005"
+      ],
+      "reason": "附件、任意文件类型、从本地文件夹选取属于分享文档的操作步骤与限定，并入 G005。"
+    },
+    {
+      "candidate_id": "C013",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "演示流程中对格式化与表情功能的描述，未表达独立期望结果。"
+    },
+    {
+      "candidate_id": "C014",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G006"
+      ],
+      "reason": "用关键词检索以定位特定过往消息，是带目的的使用意图，保留。"
+    },
+    {
+      "candidate_id": "C015",
+      "disposition": "uncertain",
+      "final_goal_ids": [],
+      "reason": "搜索结果被加入前历史淹没是明确的困难，但改进建议部分未再提搜索，无法确定是否构成独立改善目标，保留待确认。"
+    },
+    {
+      "candidate_id": "C016",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "通话较难发起并提出更易访问的期望，保留为独立目标。"
+    },
+    {
+      "candidate_id": "C017",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "用电话/邮件直接联系是受访者的替代做法，未对产品提出期望，仅作 G007 的背景。"
+    },
+    {
+      "candidate_id": "C018",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "明确表示会继续使用 Slack、不切换应用，属维持型意图，保留。"
+    },
+    {
+      "candidate_id": "C019",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G010"
+      ],
+      "reason": "“不弃用”与 C018 同一维持意图，其理由（提供协作与通话）作为条件并入 G010。"
+    },
+    {
+      "candidate_id": "C020",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G008"
+      ],
+      "reason": "quick email feature 及跳转到标准邮件应用的选定方式，构成独立目标。"
+    },
+    {
+      "candidate_id": "C021",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G007"
+      ],
+      "reason": "与 C016 同一“通话功能更易访问”请求，小组场景作为情境并入 G007。"
+    },
+    {
+      "candidate_id": "C022",
+      "disposition": "exclude",
+      "final_goal_ids": [],
+      "reason": "对新用户的建议内容，非受访者自身要达到的状态或对产品的要求；“仅凭姓名即可联系”已由 G001 承接。"
+    },
+    {
+      "candidate_id": "C023",
+      "disposition": "keep",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "缩小窗口时导航困难并提出可考虑的改进，保留为弱建议目标。"
+    },
+    {
+      "candidate_id": "C024",
+      "disposition": "merge",
+      "final_goal_ids": [
+        "G009"
+      ],
+      "reason": "手机与 14 寸大屏表现良好是 G009 的适用边界，并入其条件。"
+    }
+  ],
+  "source_checks": [
+    {
+      "check_id": "S1",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T001",
+          "quote": "slack is the primary mode of communication within my university, so I mainly use Slack to communicate with my peers and my professors",
+          "role": "basis",
+          "start_char": 612,
+          "end_char": 745
+        },
+        {
+          "source_id": "DOC031:T005",
+          "quote": "it's definitely something that I use every day to talk to my peers, my teaching, teaching assistants in various subjects, and also my professors",
+          "role": "basis",
+          "start_char": 1358,
+          "end_char": 1502
+        }
+      ],
+      "candidate_ids": [
+        "C001",
+        "C002"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "两处均为现状与使用频率描述，没有要达到或维持的具体结果，故不立目标。"
+    },
+    {
+      "check_id": "S2",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T013",
+          "quote": "circling back to the first goal that I mentioned is that of instant communication",
+          "role": "basis",
+          "start_char": 3858,
+          "end_char": 3939
+        },
+        {
+          "source_id": "DOC031:T007",
+          "quote": "if I know their name, or sometimes even their last name, I can look them up, and I can reach out to them almost immediately.",
+          "role": "basis",
+          "start_char": 2011,
+          "end_char": 2135
+        }
+      ],
+      "candidate_ids": [
+        "C003",
+        "C004"
+      ],
+      "final_goal_ids": [
+        "G001"
+      ],
+      "outcome": "represented",
+      "reason": "受访者自称的第一个目标，G001 保留即时联系结果与按姓名检索的方式。"
+    },
+    {
+      "check_id": "S3",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T009",
+          "quote": "I also like the channel feature within slack, where I can reach a wide audience immediately",
+          "role": "basis",
+          "start_char": 2519,
+          "end_char": 2610
+        }
+      ],
+      "candidate_ids": [
+        "C006"
+      ],
+      "final_goal_ids": [
+        "G002"
+      ],
+      "outcome": "represented",
+      "reason": "广受众即时触达是独立结果，未被一对一即时沟通吸收。"
+    },
+    {
+      "check_id": "S4",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T009",
+          "quote": "when I join a channel, I have the history of that channel at my fingertips, like so I have access to information that was there before I even joined the channel",
+          "role": "basis",
+          "start_char": 2765,
+          "end_char": 2925
+        }
+      ],
+      "candidate_ids": [
+        "C007"
+      ],
+      "final_goal_ids": [
+        "G003"
+      ],
+      "outcome": "represented",
+      "reason": "加入即可取得频道历史，作为独立状态目标保留。"
+    },
+    {
+      "check_id": "S5",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T009",
+          "quote": "it's good to know what people are talking about, what everyone's sharing, be it with respect to a particular subject, or could just be in general",
+          "role": "basis",
+          "start_char": 3018,
+          "end_char": 3163
+        }
+      ],
+      "candidate_ids": [
+        "C008",
+        "C009"
+      ],
+      "final_goal_ids": [
+        "G004"
+      ],
+      "outcome": "represented",
+      "reason": "知情状态合并为 G004，两个范围（话题与组织动态）都保留在目标中。"
+    },
+    {
+      "check_id": "S6",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T011",
+          "quote": "my most used feature is sharing documents when collaborating with teammates",
+          "role": "basis",
+          "start_char": 3655,
+          "end_char": 3730
+        },
+        {
+          "source_id": "DOC031:T013",
+          "quote": "slack provides a pretty neat way to share a document instantly with a teammate",
+          "role": "basis",
+          "start_char": 3949,
+          "end_char": 4027
+        },
+        {
+          "source_id": "DOC031:T017",
+          "quote": "there is an option to attach a document, and I can attach any type of file I want",
+          "role": "basis",
+          "start_char": 5014,
+          "end_char": 5095
+        }
+      ],
+      "candidate_ids": [
+        "C010",
+        "C011",
+        "C012"
+      ],
+      "final_goal_ids": [
+        "G005"
+      ],
+      "outcome": "represented",
+      "reason": "三处同一动作（把文档发给队友）的不同侧面：频率、即时性与附件方式，合并为 G005。"
+    },
+    {
+      "check_id": "S7",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T017",
+          "quote": "I can send you emojis. I can format the text, whatever, any way I want.",
+          "role": "basis",
+          "start_char": 4923,
+          "end_char": 4994
+        }
+      ],
+      "candidate_ids": [
+        "C013"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "属于界面功能与操作描述，受访者未表达这些功能的期望结果。"
+    },
+    {
+      "check_id": "S8",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T019",
+          "quote": "there is a search feature that I would use to I would enter keywords to look, to look for something specific",
+          "role": "basis",
+          "start_char": 5556,
+          "end_char": 5664
+        }
+      ],
+      "candidate_ids": [
+        "C014"
+      ],
+      "final_goal_ids": [
+        "G006"
+      ],
+      "outcome": "represented",
+      "reason": "关键词检索以定位特定消息，保留为 G006。"
+    },
+    {
+      "check_id": "S9",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T019",
+          "quote": "sometimes when I search for a keyword or keywords, I get way too much information in the search results",
+          "role": "basis",
+          "start_char": 6107,
+          "end_char": 6210
+        },
+        {
+          "source_id": "DOC031:T019",
+          "quote": "it's a little difficult to pass through things unless I know exactly what I'm looking for",
+          "role": "basis",
+          "start_char": 6215,
+          "end_char": 6304
+        }
+      ],
+      "candidate_ids": [
+        "C015"
+      ],
+      "final_goal_ids": [],
+      "outcome": "uncertain",
+      "reason": "困难明确，但 T026–T027 的改进清单未包含搜索，无法确定应否成为目标，保留待确认。"
+    },
+    {
+      "check_id": "S10",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T021",
+          "quote": "it would be easier if it was just more access",
+          "role": "basis",
+          "start_char": 6984,
+          "end_char": 7029
+        },
+        {
+          "source_id": "DOC031:T027",
+          "quote": "I would like the call feature more accessible as well, yeah, especially in a group setting",
+          "role": "basis",
+          "start_char": 8801,
+          "end_char": 8891
+        }
+      ],
+      "candidate_ids": [
+        "C016",
+        "C021"
+      ],
+      "final_goal_ids": [
+        "G007"
+      ],
+      "outcome": "represented",
+      "reason": "两处诉求同一结果（通话更易访问），小组场景作为情境保留。"
+    },
+    {
+      "check_id": "S11",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T023",
+          "quote": "if I have their email with not their emails, or if their phone number with me, I would just call them",
+          "role": "basis",
+          "start_char": 7310,
+          "end_char": 7411
+        }
+      ],
+      "candidate_ids": [
+        "C017"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "替代做法描述，未表达对 Slack 的期望；不作独立目标，仅作为 G007 背景。"
+    },
+    {
+      "check_id": "S12",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T025",
+          "quote": "I would still use Slack because ultimately, it's the fastest way to communicate with people within the university",
+          "role": "basis",
+          "start_char": 7917,
+          "end_char": 8030
+        },
+        {
+          "source_id": "DOC031:T025",
+          "quote": "Since it does provide the, you know, the option to collaborate and in, you know, make a call, I wouldn't, you know, abandon the app.",
+          "role": "basis",
+          "start_char": 7684,
+          "end_char": 7816
+        }
+      ],
+      "candidate_ids": [
+        "C018",
+        "C019"
+      ],
+      "final_goal_ids": [
+        "G010"
+      ],
+      "outcome": "represented",
+      "reason": "明确的继续使用意图，理由作为条件保留，未把“最快”当作已验证事实。"
+    },
+    {
+      "check_id": "S13",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T027",
+          "quote": "I would like a quick email feature",
+          "role": "basis",
+          "start_char": 8294,
+          "end_char": 8328
+        },
+        {
+          "source_id": "DOC031:T027",
+          "quote": "a feature that would just immediately navigate to an Outlook or Gmail or any, any standard email app where I can email the person I want to",
+          "role": "basis",
+          "start_char": 8610,
+          "end_char": 8749
+        }
+      ],
+      "candidate_ids": [
+        "C020"
+      ],
+      "final_goal_ids": [
+        "G008"
+      ],
+      "outcome": "represented",
+      "reason": "请求与选定实现方式都进入 G008，条件（需要邮件的正式沟通）保留在 context。"
+    },
+    {
+      "check_id": "S14",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T029",
+          "quote": "I would make them aware of the fact that you know everyone within this lac community is super accessible",
+          "role": "basis",
+          "start_char": 9127,
+          "end_char": 9231
+        },
+        {
+          "source_id": "DOC031:T029",
+          "quote": "definitely highlight the features or collaboration like document sharing and other document sharing and similar features",
+          "role": "basis",
+          "start_char": 9349,
+          "end_char": 9469
+        }
+      ],
+      "candidate_ids": [
+        "C022"
+      ],
+      "final_goal_ids": [],
+      "outcome": "excluded",
+      "reason": "对新用户的建议而非受访者自身目标；其中“凭姓名即可联系”已由 G001 承接。"
+    },
+    {
+      "check_id": "S15",
+      "evidence_candidates": [
+        {
+          "source_id": "DOC031:T031",
+          "quote": "shrink the size of slack browser window, I feel like it's a little hard to navigate through the application",
+          "role": "basis",
+          "start_char": 10032,
+          "end_char": 10139
+        },
+        {
+          "source_id": "DOC031:T031",
+          "quote": "I feel like that is an area of improvement that could be considered",
+          "role": "basis",
+          "start_char": 10141,
+          "end_char": 10208
+        }
+      ],
+      "candidate_ids": [
+        "C023",
+        "C024"
+      ],
+      "final_goal_ids": [
+        "G009"
+      ],
+      "outcome": "represented",
+      "reason": "缩小窗口时的导航改进作为弱建议保留，正面的手机/大屏表现作为边界条件。"
+    }
+  ],
+  "limitations": [
+    "原文为访谈转写，含口语重复、断句与自我更正（如 “I if I know their name”），语义按可读片段判断，未做文本规范化。",
+    "受访者未给出任何量化阈值（响应时间、结果条数、窗口层级数），目标中不编造阈值。",
+    "访谈只覆盖一名学生的使用经验，目标仅代表该受访者的叙述，不外推到其他用户。",
+    "本次未执行独立语义审查与形式证明，判断由生成会话自行编制。"
+  ]
+}

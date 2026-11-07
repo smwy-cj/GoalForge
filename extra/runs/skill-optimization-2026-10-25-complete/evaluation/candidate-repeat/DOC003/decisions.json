@@ -1,0 +1,480 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "ca46b5e26570434fc2ac64db8e0cc539d5152f3a4a0bc0c382894ad2ace4b48e",
+    "judgments_sha256": "196584564db4670e268326115e32f474f2151e62b3df7e62d472750915750c3a"
+  },
+  "groups": [
+    {
+      "group_id": "FG001",
+      "parent_id": "G001",
+      "child_ids": [
+        "G010",
+        "G032",
+        "G033",
+        "G034"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "用户明确说这些只是主观情境例子，无法给出客观穷尽标准；不能作为完整充分分解。",
+      "assumptions": [
+        "场景仅为作者概念层检查，不是形式化充分性证明。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "It's it's quite subjective and situational, so I'm not fully sure how to do it. But a way to do it would be to say that if I'm like, I said, if I'm transiting on or off from the same city, is it matching up with the schedules of the other modes of transport I'm planning to. Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules. Is it a good time of the day to fly? I would, I mean, I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "role": "basis",
+          "start_char": 42368,
+          "end_char": 42910
+        }
+      ],
+      "relation_ids": [
+        "R005",
+        "R007",
+        "R008",
+        "R009"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "适用条件下交通衔接、探访时间和转机余量合适，能支持候选行程评价。",
+          "outcome": "supports",
+          "rationale": "在所述条件下可解释这些子目标如何服务父目标；不扩大到所有场景。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "即使这些条件满足，签证问题或不可承担的票价仍可使行程不可选；睡眠本就可让步。",
+          "outcome": "counterexample",
+          "rationale": "未解决的充分性缺口保留候选；不补造根、额外前提目标或完整性。"
+        }
+      ]
+    },
+    {
+      "group_id": "FG002",
+      "parent_id": "G046",
+      "child_ids": [
+        "G028",
+        "G044",
+        "G045"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "并行、集中和简化流程为减时途径，未给出实际性能或全部研究正确性的保证。",
+      "assumptions": [
+        "场景仅为作者概念层检查，不是形式化充分性证明。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T137",
+          "quote": "So the biggest obstacle the 2 main obstacles is one. Research is very complicated. There's no one click platform where I can just give it all of my parameters, and it will find the best option for me. I have to invest a lot of time into finding. What's the ideal option? 2. I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum. just to make sure I'm hitting all of the right things while making my booking.",
+          "role": "basis",
+          "start_char": 49612,
+          "end_char": 50103
+        }
+      ],
+      "relation_ids": [
+        "R015",
+        "R016",
+        "R017"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "在查询性能良好且数据完整的分析假设下，可减少人工重复和切换。",
+          "outcome": "supports",
+          "rationale": "在所述条件下可解释这些子目标如何服务父目标；不扩大到所有场景。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "组合爆炸、资料过时或算法慢时，三项能力存在仍不保证研究更快且准确。",
+          "outcome": "counterexample",
+          "rationale": "未解决的充分性缺口保留候选；不补造根、额外前提目标或完整性。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "FG001",
+      "message": "用户明确说这些只是主观情境例子，无法给出客观穷尽标准；不能作为完整充分分解。 异常场景：即使这些条件满足，签证问题或不可承担的票价仍可使行程不可选；睡眠本就可让步。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "FG002",
+      "message": "并行、集中和简化流程为减时途径，未给出实际性能或全部研究正确性的保证。 异常场景：组合爆炸、资料过时或算法慢时，三项能力存在仍不保证研究更快且准确。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R001",
+      "source_id": "G003",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "提前订票是争取更优惠价格的个人策略。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T015",
+          "quote": "Ideally, I like to do it at least a couple of months before. Unfortunately for my at least my last few domestic flights, it's always ended up being like a 1 or 2 weeks before making them pretty pricey my flight for coming to the Us. Though I I did end up booking that almost like 2 months out. Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal.",
+          "role": "basis",
+          "start_char": 2616,
+          "end_char": 3015
+        }
+      ]
+    },
+    {
+      "relation_id": "R002",
+      "source_id": "G007",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "反复比较网站及时间服务寻找好价。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T025",
+          "quote": "So yeah, obviously, I'm reminiscing over what it would be like to be actually in that flight, or like in that in the middle of that trip. But my primary focus is to like get a really good deal when I'm actually booking my flights. So I keep on checking at regular intervals, just to make sure. Hey, am I getting a good deal? I check like dozens of different websites to just make sure I'm having the best deal possible. So, yeah.",
+          "role": "basis",
+          "start_char": 5960,
+          "end_char": 6389
+        }
+      ]
+    },
+    {
+      "relation_id": "R003",
+      "source_id": "G011",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "找到行程后比较供应商，寻找该行程的最佳可用价格。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T103",
+          "quote": "One, because these are aggregators. They allow me to have more flexibility in terms of finding the right itinerary. Second, once I've found the right itinerary. For myself, they allow me to find the best price for that itinerary. comparing all of the different booking options. And, 3, rd they also provide a certain level of protection, and they also provide their own set of coupons. So if that works out in my favor, I go with them. Otherwise I might just find out the itinerary from them. And book on any random website I want to, whichever is giving me a better deal with any sort of coupons and discounts that I can apply to it. So it's it's more as a place where I do research. and I get to find out my options rather than the booking aspect of things.",
+          "role": "basis",
+          "start_char": 38156,
+          "end_char": 38915
+        }
+      ]
+    },
+    {
+      "relation_id": "R004",
+      "source_id": "G012",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "适用折扣有助降低最终价格，未保证存在有效券。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T077",
+          "quote": "I use both of these very extensively. I make sure all the flight details like I said. All the connections and all the times are right for me, and they work for my schedule. specifically based on what my plans are, and when it comes to booking my ticket, when I go through the list of different options and providers. I look at the price. I take a look at the rating, and I often visit multiple providers from this page. So there's like a select button. You can click for every provider, and it takes you to their page with all the itinerary already loaded in, so you can compare prices. Sometimes prices increase, though that's pretty rare, and you can compare discounts on different providers. The final costs on different providers. Some providers have, like special discount codes for coming through a sky scanner. It it ends up, differing every time. It's not like a fixed thing.",
+          "role": "basis",
+          "start_char": 25756,
+          "end_char": 26639
+        }
+      ]
+    },
+    {
+      "relation_id": "R005",
+      "source_id": "G010",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "衔接交通和住宿帮助行程适配，仍须兼顾价钱和其他因素。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T031",
+          "quote": "Sure. So generally my process starts with an aggregator. I generally have 3 to 4 aggregators that I take a look at. I start off with using skyscanner. I put in a few of the like. I generally do country to country pairs, or like a relative area of the destination to the relative area of sorry relative area of the origin to the relative area of the destination. So like nearby airports, potential dates. So I try to mix it up with all sorts of options. and if I'm finding something that I'm liking, I might search for that in more detail. Let's say I'm liking a certain city pair, or I'm liking a specific date. Then I might search for options around that I look around the timings that are available. how that would factor it into whether I have to book a hotel. How does that connect with other modes of transport? So let's say I'm flying into a city, but then I have to travel to a different city by like a train, or something like that which is pretty common for me back home in India. So I try to plan out my travel, such that things fall into place, and I don't end up having to stay in a city for like 20Â h doing nothing. So my 1st priority starts with getting the price down, getting the city pairs slash country pairs down. Then I move on to the dates. and finally onto like time and overall logistics. That's that's the way I do it. Once I have a set of flights like in mind that are my ideal options. Then, depending on how expensive they are, I might check out other aggregators like Google flights, Kayak. There are bunches of them. That you can take a look at if it's not that expensive, then I'll just go through one of the platforms that are part of like skyscanner so bunch of different travel companies partner with skyscanner and have their prices come through. And I'll look at my ideal flights. I'll go to the actual providers website. I'll check out how much it costs me. I'll check out what sort of coupon options I have upgrade options I have. I'll just make sure all the terminal, all the logistics. Information is correct. I also sometimes check out providers directly without going through an aggregator. Sometimes you can get a better discount that way. So there's a lot of research that goes into it before I finally make the decision to book a flight. It's a pretty involved process. I end up taking, like at least an hour or so, just to scar out different options, combinations to find. What's the you know? Potential best option for booking. Once I've finalized on an itinerary and on a provider. I just fill out my information. If they need my passport details, my date of birth. My legal name and other details fill out the declaration forms. And I just pay the amount through my credit card website. That's that's generally the flow.",
+          "role": "basis",
+          "start_char": 7964,
+          "end_char": 10733
+        }
+      ]
+    },
+    {
+      "relation_id": "R006",
+      "source_id": "G026",
+      "target_id": "G010",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "赶末班火车是地面交通衔接的特定情境。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T083",
+          "quote": "I mean, yeah, there have been many such scenarios, but I I cannot exactly recall a specific one with all the details about it. But I could walk through a potential scenario with you. For example, let's say I'll give you a common example that used to happen with me. My university bachelor's university was in Vellor, and the closest airport ended up being Chennai. and to get to my home I ended up flying to Kolkata. so I would end up regularly, flying between Chennai and Kolkata, and the cheapest flight and the most convenient for me usually worked out to be the night flight. and it used to land at around 1020 pm. Now, to get from the airport to the train station where my the last train for the day would be leaving would be at 1145 pm. So I would run into a situation where I only had, like an hour, 20Â min gap. From the time I landed to the time I had to make on this make it on the station. So this was a logistical challenge for me, because I knew it was like a 50 50 situation. I knew half the times I'd make it half the times I didn't, which is, which is what actually ended up happening. So it was a risk. If I had a better option available, something that just maybe lands like 1Â h earlier, so that I would be able to make sure that I get home that night, and I don't miss my train, and I don't end up having to stay up for like 6, 7Â h, waiting for the next train early in the morning. Then I would go for that option. but it again depends on the price differential. If the price. Differential was way too high. Then I just couldn't afford to like, you know. Spend that much extra as a college student for the luxury of potentially not missing my train. as my time was cheaper compared to actual money. so I think priorities change with time. That's that's 1 of the common examples that used to happen to me back during my bachelor's.",
+          "role": "basis",
+          "start_char": 27971,
+          "end_char": 29822
+        }
+      ]
+    },
+    {
+      "relation_id": "R007",
+      "source_id": "G032",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "匹配被探访者日程是好行程的一个维度。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "It's it's quite subjective and situational, so I'm not fully sure how to do it. But a way to do it would be to say that if I'm like, I said, if I'm transiting on or off from the same city, is it matching up with the schedules of the other modes of transport I'm planning to. Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules. Is it a good time of the day to fly? I would, I mean, I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "role": "basis",
+          "start_char": 42368,
+          "end_char": 42910
+        }
+      ]
+    },
+    {
+      "relation_id": "R008",
+      "source_id": "G033",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "保留睡眠是可让步的行程偏好，不是充分条件。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T119",
+          "quote": "It's it's quite subjective and situational, so I'm not fully sure how to do it. But a way to do it would be to say that if I'm like, I said, if I'm transiting on or off from the same city, is it matching up with the schedules of the other modes of transport I'm planning to. Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules. Is it a good time of the day to fly? I would, I mean, I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "role": "basis",
+          "start_char": 42368,
+          "end_char": 42910
+        }
+      ]
+    },
+    {
+      "relation_id": "R009",
+      "source_id": "G034",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "宽余转机时间帮助行程可行，签证和延误仍影响。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport. So let me just clarify that Mct is the minimum connection time defined at a iata level. Iata is the organization that regulates and manages airports and airlines everything aerospace around the world. That time is basically. The minimum time somebody would need to connect including taking their luggage out and putting their luggage back in in one airport. going from the furthest away combination of gates. What is the furthest distance they might have to travel. That's how they come up with that time. Just to be safe and to account for delays based on the flight length. I I generally tend to at least go for 1.5 x or 2 x of that for a stopover. That's that's only my motive. I also end up looking. Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries. I like to maintain global access through priority pass. And if I'm in a different city, I wanted to check it out. What's it like. So that's also one factor that goes into it.",
+          "role": "basis",
+          "start_char": 43159,
+          "end_char": 44314
+        }
+      ]
+    },
+    {
+      "relation_id": "R010",
+      "source_id": "G027",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "必要成行时的降价提醒用来抓住相对便宜路线。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T087",
+          "quote": "There was only one time I used it, and I used it on Google flights. So I had to go back to my native place for a religious ceremony. The flight was like 3,000 one day. And I was like, Okay, I'm gonna book it tomorrow, after confirming everything, and the next day it was 18,000, literally 6 x so at that point of time I needed a reminder, because that was just way too much money to spend on a flight. I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price. I I book it in just because I have to make it there, and I have to find a relatively cheap flight to make it there. So that was the only time I set up an alert. And that was through Google flights.",
+          "role": "basis",
+          "start_char": 31220,
+          "end_char": 31928
+        }
+      ]
+    },
+    {
+      "relation_id": "R011",
+      "source_id": "G008",
+      "target_id": "G009",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "本人说明先价格/城市对再日期的研究顺序；非普适执行约束。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T031",
+          "quote": "Sure. So generally my process starts with an aggregator. I generally have 3 to 4 aggregators that I take a look at. I start off with using skyscanner. I put in a few of the like. I generally do country to country pairs, or like a relative area of the destination to the relative area of sorry relative area of the origin to the relative area of the destination. So like nearby airports, potential dates. So I try to mix it up with all sorts of options. and if I'm finding something that I'm liking, I might search for that in more detail. Let's say I'm liking a certain city pair, or I'm liking a specific date. Then I might search for options around that I look around the timings that are available. how that would factor it into whether I have to book a hotel. How does that connect with other modes of transport? So let's say I'm flying into a city, but then I have to travel to a different city by like a train, or something like that which is pretty common for me back home in India. So I try to plan out my travel, such that things fall into place, and I don't end up having to stay in a city for like 20Â h doing nothing. So my 1st priority starts with getting the price down, getting the city pairs slash country pairs down. Then I move on to the dates. and finally onto like time and overall logistics. That's that's the way I do it. Once I have a set of flights like in mind that are my ideal options. Then, depending on how expensive they are, I might check out other aggregators like Google flights, Kayak. There are bunches of them. That you can take a look at if it's not that expensive, then I'll just go through one of the platforms that are part of like skyscanner so bunch of different travel companies partner with skyscanner and have their prices come through. And I'll look at my ideal flights. I'll go to the actual providers website. I'll check out how much it costs me. I'll check out what sort of coupon options I have upgrade options I have. I'll just make sure all the terminal, all the logistics. Information is correct. I also sometimes check out providers directly without going through an aggregator. Sometimes you can get a better discount that way. So there's a lot of research that goes into it before I finally make the decision to book a flight. It's a pretty involved process. I end up taking, like at least an hour or so, just to scar out different options, combinations to find. What's the you know? Potential best option for booking. Once I've finalized on an itinerary and on a provider. I just fill out my information. If they need my passport details, my date of birth. My legal name and other details fill out the declaration forms. And I just pay the amount through my credit card website. That's that's generally the flow.",
+          "role": "basis",
+          "start_char": 7964,
+          "end_char": 10733
+        }
+      ]
+    },
+    {
+      "relation_id": "R012",
+      "source_id": "G011",
+      "target_id": "G015",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "最终选择供应商后才填信息付款。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T131",
+          "quote": "Sure. So I would start off by navigating to the website. And if I already have a plan in mind about where I need to go, and what what my situation is for that specific plan. I would start off by putting a country or a region in the. From then the 2. Then I'd fill out the relative dates. the passenger details and just search for different options. I would narrow them down based on my filters and different combinations. Once I've settled on a couple of itineraries, I would check out which one of them is giving me the best price which one of them works out best for me overall. I would then check out what is the best booking partner for these? Is it better to go through aggregator like Skyscanner? Is it better to go through on a different aggregator? Is it better to just directly book on the booking website? Is it better to directly book with the airline. So that sort of logistics happens, and once I've finalized my itinerary as well as the booking provider, I would then just go ahead, enter in all my details and pay for the booking through my card. That's that's the whole process.",
+          "role": "basis",
+          "start_char": 47412,
+          "end_char": 48506
+        }
+      ]
+    },
+    {
+      "relation_id": "R013",
+      "source_id": "G037",
+      "target_id": "G038",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "当前持卡记录支持判断权益，仍需及时的准入规则。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T125",
+          "quote": "Sure. But there, there's a lot of logistics and complexity that goes into it. So I'll not get into this too much. But because this this is a whole different line of questioning. But I have around 30 different credit cards, and there are various combinations of these cards that can get me into various lounges at various costs and times during the day. So it's it's not as simple as hey? You'll get lounge at this airport there, and the provider. In this case, whether it's skyscanner or whether it's any other booking website, they're not aware of what my options are so ideally. That's not the way it would be very nice if I could, input there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner. That would be wonderful. I know a few apps that have tried that, but generally it doesn't update well, and it doesn't work well. So I prefer going to the source of the truth for the lounge access and get my information from there, instead of like relying on any 3rd party service to give me that information.",
+          "role": "basis",
+          "start_char": 44438,
+          "end_char": 45545
+        }
+      ]
+    },
+    {
+      "relation_id": "R014",
+      "source_id": "G040",
+      "target_id": "G041",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "到发卡/通行证官方网站是查询政策开放和装修资料的选定方法。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T127",
+          "quote": "It is very situational again. Depends on the issuer of the card. or whatever pass I'm holding. Let's say I'm holding my diners card. So I just go to the Diners club website, go to airport lounges, go to the airport, go to the correct terminal, figure out. What's the lounge. What's their access policy? What's their timings? Is the renovation going on? Stuff like that? it it ends up varying in my case I have unlimited access, so I don't need to worry about. Oh, have I used the access on this card? If it's a card with limited access? I need to make sure. Oh, this card does still work at this airport, and it still has remaining balance in terms of usages, for, let's say, the month or the quarter or the year there are. There's like I told you, there's a huge amount of logistics that goes into just managing this yourself. let alone somebody else managing this for you. So there isn't a clear, defined answer I can give you so as to this is the exact way somebody can do it. It's very situational.",
+          "role": "basis",
+          "start_char": 45633,
+          "end_char": 46635
+        }
+      ]
+    },
+    {
+      "relation_id": "R015",
+      "source_id": "G028",
+      "target_id": "G046",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "同时看多组合缓解重复手工检索时间，但性能未知。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T095",
+          "quote": "The research aspect is the biggest obstacle, because you want to do around 500 searches at the same time, because you're doing combinations of city pairs, country pairs, dates. travelers, different classes, all sorts of combinations to make sure what's the best. So it just grows exponentially. You want to do hundreds of searches at the same time, but nobody wants to let you do those searches at the same time. So it ends up being a very time intensive thing. and nobody's there to feed you all the different combinations. You need to find all the possible routes you need to know the different tricks for getting cheaper prices, better pathways, better deals. So all of that goes into play. And it does end up being a significant time investment.",
+          "role": "basis",
+          "start_char": 34241,
+          "end_char": 34990
+        }
+      ]
+    },
+    {
+      "relation_id": "R016",
+      "source_id": "G044",
+      "target_id": "G046",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "集中信息可减少跳转负担，未保证任何实现都会更快。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T137",
+          "quote": "So the biggest obstacle the 2 main obstacles is one. Research is very complicated. There's no one click platform where I can just give it all of my parameters, and it will find the best option for me. I have to invest a lot of time into finding. What's the ideal option? 2. I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum. just to make sure I'm hitting all of the right things while making my booking.",
+          "role": "basis",
+          "start_char": 49612,
+          "end_char": 50103
+        }
+      ]
+    },
+    {
+      "relation_id": "R017",
+      "source_id": "G045",
+      "target_id": "G046",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "全参数后便捷找方案是减少研究负担的期望方式。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T137",
+          "quote": "So the biggest obstacle the 2 main obstacles is one. Research is very complicated. There's no one click platform where I can just give it all of my parameters, and it will find the best option for me. I have to invest a lot of time into finding. What's the ideal option? 2. I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum. just to make sure I'm hitting all of the right things while making my booking.",
+          "role": "basis",
+          "start_char": 49612,
+          "end_char": 50103
+        }
+      ]
+    },
+    {
+      "relation_id": "R018",
+      "source_id": "G016",
+      "target_id": "G017",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "匿名浏览及阻cookie用于少向另一个第三方分享资料；不保证绝对匿名。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T089",
+          "quote": "It does have the same functionality. Only reason I did it by Google flights is because I was already logged into my Google account by chance. Generally, I don't look through Google flights while logged in. I go through an incognito window route. and I block all the cookies. But since I knew I had to do that, I just went to my Google flights, went to the Google flights app through my normal browser where my Google credentials were already logged in. So it already knew who I was, and I didn't have to go through the pain of, you know. setting up an account. And stuff like that. plus skyscanner is a Chinese company, and I generally don't want my data to be shared. Google already has my data. Why give it to another party as well. So I was like, Okay. that's that's why I went through that option.",
+          "role": "basis",
+          "start_char": 32157,
+          "end_char": 32958
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

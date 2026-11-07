@@ -1,0 +1,70 @@
+{
+  "document_id": "DOC010",
+  "authorship": "same generating assistant; not independent semantic review",
+  "relation_pass": {
+    "specialization": "Checked narrower scenarios against broader extracted goals.",
+    "operationalization": "Checked stated ways and purposes, preserving optional and conditional adoption.",
+    "contribution": "Checked helpful results without treating them as guarantees.",
+    "precedes": "Checked only source-described ordering; no causal or refinement entailment assumed."
+  },
+  "relation_count": 13,
+  "group_count": 2,
+  "groups_supported_complete": 0,
+  "scope": "All authored relation candidates and refinement groups; not an exhaustive all-pairs assessment.",
+  "issues": [],
+  "independent_semantic": "not_run",
+  "formal_proof": "not_run",
+  "human": "pending",
+  "boundary_cases": [
+    {
+      "source_id": "DOC010:T031",
+      "category": "source/inference or goal-qualification boundary",
+      "judgment": "Residence history explains reduced checking in a familiar place; do not impose universal daily checks there.",
+      "status": "retained as documented exclusion"
+    },
+    {
+      "source_id": "DOC010:T055",
+      "category": "source/inference or goal-qualification boundary",
+      "judgment": "A guess about technology limitations does not specify a technical solution.",
+      "status": "retained as documented exclusion"
+    }
+  ],
+  "group_findings": [
+    {
+      "id": "SR-DOC010-G001",
+      "target": "F001",
+      "category": "refinement sufficiency",
+      "evidence": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "So for me, primary purpose is a planning. So whenever I use weather app, it's either to plan what I have to wear on a particular day or plan my outdoor activities. or just plan my trip or something.",
+          "role": "basis",
+          "start_char": 926,
+          "end_char": 1124
+        }
+      ],
+      "basis": "The three explicit planning uses are examples of the broad primary purpose; satisfying them does not establish completeness for every daily decision.",
+      "suggestion": "Keep proposed/partial; do not draw as established refinement.",
+      "status": "unresolved",
+      "disposition_reason": "No new source evidence establishes sufficiency."
+    },
+    {
+      "id": "SR-DOC010-G002",
+      "target": "F002",
+      "category": "refinement sufficiency",
+      "evidence": [
+        {
+          "source_id": "DOC010:T071",
+          "quote": "Be consistent. Yeah, yeah. About the ads. Yes, yes. Ads are also very annoying. So no ads, real time updates and should be consistent across all the platforms. These are like the 3 things that I would prefer.",
+          "role": "basis",
+          "start_char": 13023,
+          "end_char": 13231
+        }
+      ],
+      "basis": "App/website synchronization is a specific pair, not demonstrated coverage of every platform.",
+      "suggestion": "Keep proposed/partial; do not draw as established refinement.",
+      "status": "unresolved",
+      "disposition_reason": "No new source evidence establishes sufficiency."
+    }
+  ]
+}

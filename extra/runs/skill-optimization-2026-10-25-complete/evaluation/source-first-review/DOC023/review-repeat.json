@@ -1,0 +1,498 @@
+{
+  "document_id": "DOC023",
+  "round": "repeat",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "blinding_limit": "仅知第二轮A/B匿名代号；没有读取映射或生成分支，不推断跨轮代号对应。语言、粒度和模板特征可被猜测，属于有限盲法。",
+  "policy": "使用同一冻结129条意图，不迎合结果改清单；允许多对多不同粒度。候选/否定关系按其当前状态评价，supported不代表需求已采纳。无标准P/R/F1。",
+  "samples": [
+    {
+      "sample": "repeat:A",
+      "intent_matches": [
+        {
+          "intent_id": "DOC023:I01",
+          "goal_ids": [
+            "G001",
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“增加个人主页的联系人数以显示自己活跃”的核心结果、条件和所选范围；DOC023:T003「enlarge my the number of my connections on my profile.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I02",
+          "goal_ids": [
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“从目标公司现任员工取得内推，提高简历被招聘者看到的机会”的核心结果、条件和所选范围；DOC023:T003「get referrals from current employees」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I03",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "partial",
+          "rationale": "G004背景双条件正确，G008后续改词存在，仍没有初始公司名+大学名搜索策略。 原文：DOC023:T007「search on in the search bar. This company name, and also the school name that I …」"
+        },
+        {
+          "intent_id": "DOC023:I04",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“筛选同时满足现任目标公司员工及同校背景的人”的核心结果、条件和所选范围；DOC023:T009「I will only choose people who is currently a company employee and who was my uni…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I05",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "partial",
+          "rationale": "G004解释含同校可能更愿意帮助的信念，但未保留在消息中强调共同学校的策略。 原文：DOC023:T011「Students who attend the same university tends to like want to help the alumni.」"
+        },
+        {
+          "intent_id": "DOC023:I06",
+          "goal_ids": [
+            "G005"
+          ],
+          "status": "partial",
+          "rationale": "G005无条件并列介绍与请求，T007内推请求maybe被升格。 原文：DOC023:T007「hit the connect button」"
+        },
+        {
+          "intent_id": "DOC023:I07",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“连接被接受后继续聊天处理内推细节”的核心结果、条件和所选范围；DOC023:T007「if they do, I can then start to chat with them for the further details.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I08",
+          "goal_ids": [
+            "G007",
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“减少无关搜索结果筛查并找到足够符合条件的人”的核心结果、条件和所选范围；DOC023:T013「go through like a lot of people in the search result」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I09",
+          "goal_ids": [
+            "G007",
+            "G008",
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按成本和效果选择付费扩展结果或修改搜索词”的核心结果、条件和所选范围；DOC023:T015「purchase the linking premium」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I10",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在连接邀请字符限制内传达所需内容，减少压缩文字的时间”的核心结果、条件和所选范围；DOC023:T017「only a limited like number of words to really convey what I want to talk to them…」。按多对多承接，不要求节点数与冻结清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I01"
+          ],
+          "rationale": "与原文“增加个人主页的联系人数以显示自己活跃”一致；DOC023:T003「enlarge my the number of my connections on my profile.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I01"
+          ],
+          "rationale": "与原文“增加个人主页的联系人数以显示自己活跃”一致；DOC023:T003「enlarge my the number of my connections on my profile.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I02"
+          ],
+          "rationale": "与原文“从目标公司现任员工取得内推，提高简历被招聘者看到的机会”一致；DOC023:T003「get referrals from current employees」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC023:I03",
+            "DOC023:I04",
+            "DOC023:I05"
+          ],
+          "rationale": "T009双条件筛选正确；support.rationale保留校友帮助信念，但T007公司名+学校名具体输入搜索栏的初始方式未在本节点或其他目标保留。",
+          "issues": [
+            {
+              "category": "selected_means_loss",
+              "reason": "G008虽保留后续改关键词，但不等于初始明确公司名+大学名搜索；应补这一已选方式。"
+            }
+          ]
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC023:I06"
+          ],
+          "rationale": "T007通常介绍自己，only maybe问内推；statement和rationale把二者都当通常附注诉求，未保留请求可选。",
+          "issues": [
+            {
+              "category": "strength",
+              "reason": "“介绍自己并询问”应加“可能/适当时询问”，原文maybe不可等同请求口气礼貌就已保留。"
+            }
+          ]
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I07"
+          ],
+          "rationale": "与原文“连接被接受后继续聊天处理内推细节”一致；DOC023:T007「if they do, I can then start to chat with them for the further details.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I08",
+            "DOC023:I09"
+          ],
+          "rationale": "T015选择付费扩展联系人作为策略，但G007只写更多访问；support.rationale明确购买Premium且非必须，可以算该途径在record内保留。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I08",
+            "DOC023:I09"
+          ],
+          "rationale": "与原文“减少无关搜索结果筛查并找到足够符合条件的人；按成本和效果选择付费扩展结果或修改搜索词”一致；DOC023:T013「go through like a lot of people in the search result」；DOC023:T015「purchase the linking premium」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I09"
+          ],
+          "rationale": "与原文“按成本和效果选择付费扩展结果或修改搜索词”一致；DOC023:T015「purchase the linking premium」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I10"
+          ],
+          "rationale": "与原文“在连接邀请字符限制内传达所需内容，减少压缩文字的时间”一致；DOC023:T017「only a limited like number of words to really convey what I want to talk to them…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T003连接数显示活跃为所选办法但非充分，F001只候选partial，强度合适。"
+        },
+        {
+          "group_id": "F002",
+          "judgment": "consistent",
+          "rationale": "T007/T009/T015接触筛选交流可提升内推机会，F002承认对方选择；G005maybe偏差单列，不因此把整个候选结构视为强充分。"
+        }
+      ]
+    },
+    {
+      "sample": "repeat:B",
+      "intent_matches": [
+        {
+          "intent_id": "DOC023:I01",
+          "goal_ids": [
+            "G001",
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“增加个人主页的联系人数以显示自己活跃”的核心结果、条件和所选范围；DOC023:T003「enlarge my the number of my connections on my profile.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I02",
+          "goal_ids": [
+            "G003",
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“从目标公司现任员工取得内推，提高简历被招聘者看到的机会”的核心结果、条件和所选范围；DOC023:T003「get referrals from current employees」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I03",
+          "goal_ids": [
+            "G005"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过公司名与本人学校共同搜索潜在内推人”的核心结果、条件和所选范围；DOC023:T007「search on in the search bar. This company name, and also the school name that I …」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I04",
+          "goal_ids": [
+            "G006",
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“筛选同时满足现任目标公司员工及同校背景的人”的核心结果、条件和所选范围；DOC023:T009「I will only choose people who is currently a company employee and who was my uni…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I05",
+          "goal_ids": [
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“利用校友共同背景提高对方愿意帮助内推的可能性”的核心结果、条件和所选范围；DOC023:T011「Students who attend the same university tends to like want to help the alumni.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I06",
+          "goal_ids": [
+            "G007",
+            "G008",
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“给潜在联系人发邀请并附简短自我介绍和可能的内推请求”的核心结果、条件和所选范围；DOC023:T007「hit the connect button」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I07",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“连接被接受后继续聊天处理内推细节”的核心结果、条件和所选范围；DOC023:T007「if they do, I can then start to chat with them for the further details.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I08",
+          "goal_ids": [
+            "G013",
+            "G014"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“减少无关搜索结果筛查并找到足够符合条件的人”的核心结果、条件和所选范围；DOC023:T013「go through like a lot of people in the search result」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I09",
+          "goal_ids": [
+            "G013",
+            "G014"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按成本和效果选择付费扩展结果或修改搜索词”的核心结果、条件和所选范围；DOC023:T015「purchase the linking premium」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC023:I10",
+          "goal_ids": [
+            "G015"
+          ],
+          "status": "partial",
+          "rationale": "G015表达充分有据，T017减少压缩措辞所耗时间的目标没有正面承接。 原文：DOC023:T017「only a limited like number of words to really convey what I want to talk to them…」"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I01"
+          ],
+          "rationale": "与原文“增加个人主页的联系人数以显示自己活跃”一致；DOC023:T003「enlarge my the number of my connections on my profile.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I01"
+          ],
+          "rationale": "与原文“增加个人主页的联系人数以显示自己活跃”一致；DOC023:T003「enlarge my the number of my connections on my profile.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I02"
+          ],
+          "rationale": "与原文“从目标公司现任员工取得内推，提高简历被招聘者看到的机会”一致；DOC023:T003「get referrals from current employees」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I02"
+          ],
+          "rationale": "与原文“从目标公司现任员工取得内推，提高简历被招聘者看到的机会”一致；DOC023:T003「get referrals from current employees」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I03"
+          ],
+          "rationale": "与原文“通过公司名与本人学校共同搜索潜在内推人”一致；DOC023:T007「search on in the search bar. This company name, and also the school name that I …」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I04"
+          ],
+          "rationale": "与原文“筛选同时满足现任目标公司员工及同校背景的人”一致；DOC023:T009「I will only choose people who is currently a company employee and who was my uni…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I06"
+          ],
+          "rationale": "与原文“给潜在联系人发邀请并附简短自我介绍和可能的内推请求”一致；DOC023:T007「hit the connect button」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I06"
+          ],
+          "rationale": "与原文“给潜在联系人发邀请并附简短自我介绍和可能的内推请求”一致；DOC023:T007「hit the connect button」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I06"
+          ],
+          "rationale": "T007maybe内推明确保留为可能；与G008通常介绍可分别成立，拆分可保护语气差别。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I07"
+          ],
+          "rationale": "与原文“连接被接受后继续聊天处理内推细节”一致；DOC023:T007「if they do, I can then start to chat with them for the further details.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I04"
+          ],
+          "rationale": "与原文“筛选同时满足现任目标公司员工及同校背景的人”一致；DOC023:T009「I will only choose people who is currently a company employee and who was my uni…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I05"
+          ],
+          "rationale": "与原文“利用校友共同背景提高对方愿意帮助内推的可能性”一致；DOC023:T011「Students who attend the same university tends to like want to help the alumni.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I08",
+            "DOC023:I09"
+          ],
+          "rationale": "与原文“减少无关搜索结果筛查并找到足够符合条件的人；按成本和效果选择付费扩展结果或修改搜索词”一致；DOC023:T013「go through like a lot of people in the search result」；DOC023:T015「purchase the linking premium」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I08",
+            "DOC023:I09"
+          ],
+          "rationale": "与原文“减少无关搜索结果筛查并找到足够符合条件的人；按成本和效果选择付费扩展结果或修改搜索词”一致；DOC023:T013「go through like a lot of people in the search result」；DOC023:T015「purchase the linking premium」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC023:I10"
+          ],
+          "rationale": "T017充分表达目的支持inferred；另有压缩措辞耗时，statement主要保留表达结果，未正面承接减少编辑时间。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [
+        {
+          "relation_id": "R001",
+          "judgment": "consistent",
+          "rationale": "T003数量是展示活跃的本人所选方式，不保证他人评价。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R002",
+          "judgment": "consistent",
+          "rationale": "T003内推有助被招聘看到，概率贡献有据。 当前按contribution/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R003",
+          "judgment": "consistent",
+          "rationale": "T009选现任同校员工帮助争取内推，非充分。 当前按contribution/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R004",
+          "judgment": "consistent",
+          "rationale": "T007先用公司学校检索后看经历，顺序成立。 当前按precedes/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R005",
+          "judgment": "consistent",
+          "rationale": "T007看经历符合才邀请，顺序成立。 当前按precedes/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R006",
+          "judgment": "consistent",
+          "rationale": "T007邀请被接受后聊天，condition保留。 当前按precedes/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R007",
+          "judgment": "consistent",
+          "rationale": "T015删/细化词是该检索调整方式，不承诺一定更准。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R008",
+          "judgment": "consistent",
+          "rationale": "该specialization被rejected，与T007检索动作和T009结果筛选并非同一行为的区别一致；不把已否定边当错误成立边。 当前按specialization/rejected状态评价，不等同充分精化。"
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T007/T009沟通链有据，F001承认接受和意愿未知，partial合理；正常反例均标分析假设。"
+        }
+      ]
+    }
+  ]
+}

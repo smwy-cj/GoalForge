@@ -1,0 +1,74 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "fc3e1332c96fdea35b6dc68ff200d20118b08994d773401b0040310af3769890",
+    "judgments_sha256": "5df9637d929075869614ecdf42d8a7fe60a9fa3b15b782ded4b62e5b8c218908"
+  },
+  "groups": [
+    {
+      "group_id": "DOC014-F1",
+      "parent_id": "DOC014-G01",
+      "child_ids": [
+        "DOC014-G02"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "出门时段温度和降雨信息是准备依据，但不能单独确保穿衣、交通和雨具的实际安排已适合天气；行动与评价标准尚不完整。",
+      "assumptions": [
+        "仅认为天气信息可用于个人决策，不自动代替决策和执行。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC014:T001",
+          "quote": "Yeah. So I use it usually to check the temperature outside, especially like the day before. So like, I can plan whether I should wear my thick coat or my light coat. or you know, if it's like super cold, I might skip going through bicycle and just go through the bus, because it's like very cool to like cycle down. and I also check for rains. So if it's if there is a weather forecast for rain. I I make sure I have my umbrella. Yeah, that's how I use it in my daily routine.",
+          "role": "basis",
+          "start_char": 271,
+          "end_char": 747
+        },
+        {
+          "source_id": "DOC014:T003",
+          "quote": "1st is usually temperature, and like the rain meter, like the chance of happening like a rain happening tomorrow. So yeah, those 2 things.",
+          "role": "basis",
+          "start_char": 835,
+          "end_char": 973
+        },
+        {
+          "source_id": "DOC014:T005",
+          "quote": "Sure, I usually just like Google it. Usually weather.com is like among the 1st few links. So once I open it so city is already there. So I just like check like for the next day it gives my gives me like an hour by hour detail. So I check usually like, if if in in the morning time, you know, like before our classes, what what the temperature is around that time. So when I'm actually going out. And what's the what's the precipitation chances? So that's like between one and 100 usually 25 plus is like a good chance of rain happening. So yeah, that's that's how I usually do it.",
+          "role": "basis",
+          "start_char": 1115,
+          "end_char": 1695
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "DOC014-G05",
+      "message": "实际天气警报渠道和建议来源是什么，所需时效如何界定？ 访谈极端天气是设想，指南存在被本人明确标为假设。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "DOC014-G11",
+      "message": "雷达优先展示哪些参数与交互，何种改善才值得付费？ 购买有条件且评价标准未给。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "DOC014-G15",
+      "message": "登录和未登录时数据实际如何保存，期望保留哪些隐私控制？ 缓存与服务端存储是其猜测，未查产品事实。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "DOC014-G16",
+      "message": "局部天气需要定位到什么范围及指标？ 只有用途，没有精度标准。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "DOC014-F1",
+      "message": "候选组尚未证明共同充分性：出门时段温度和降雨信息是准备依据，但不能单独确保穿衣、交通和雨具的实际安排已适合天气；行动与评价标准尚不完整。"
+    }
+  ]
+}

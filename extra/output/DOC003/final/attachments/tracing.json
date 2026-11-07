@@ -1,0 +1,1997 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "output\\DOC003\\extraction.json",
+    "sha256": "17fd84cc0b7ee16dc934b192b164945f0c325e2794ac98d0bc49dc5f1873642f",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "632b2f4f92cb0feccc5b01a9b3c9073ab7220d5fd03c9080f573781dc8ed12c4",
+      "input_sha256": "17fd84cc0b7ee16dc934b192b164945f0c325e2794ac98d0bc49dc5f1873642f"
+    },
+    "bundle_sha256": "9e8f284d93842ae0fd86d8319db51cd6aa71916d0b50ea598f540dea530424e1"
+  },
+  "sources": [
+    {
+      "document_id": "DOC003",
+      "expected_hash": "3032b7ea3172c5caf65b213b02082dc97c1a99d5a9bf23baafeb27d45937f39e",
+      "actual_hash": "3032b7ea3172c5caf65b213b02082dc97c1a99d5a9bf23baafeb27d45937f39e",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "DOC003-C001",
+      "target_kind": "candidate",
+      "statement": "拿到当前可找到的最优票价（价格合理，且是认真比价后的结果）。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC003:S026",
+          "material_id": "M001",
+          "quote": "But my primary focus is to like get a really good deal when I'm actually booking my flights. So I keep on checking at regular intervals, just to make sure. Hey, am I getting a good deal?",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6098,
+          "end_char": 6284,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S026",
+              "segment_start": 158,
+              "segment_end": 344,
+              "start_char": 6098,
+              "end_char": 6284
+            }
+          ],
+          "original_locator": {
+            "line_start": 26,
+            "line_end": 26,
+            "start_char": 5940,
+            "end_char": 6389
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC003:S116",
+          "material_id": "M001",
+          "quote": "I would do that in terms of finding a good itinerary and finding a good price that works for me.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 41817,
+          "end_char": 41913,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S116",
+              "segment_start": 93,
+              "segment_end": 189,
+              "start_char": 41817,
+              "end_char": 41913
+            }
+          ],
+          "original_locator": {
+            "line_start": 116,
+            "line_end": 116,
+            "start_char": 41724,
+            "end_char": 42173
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC003:S026",
+          "material_id": "M001",
+          "quote": "I check like dozens of different websites to just make sure I'm having the best deal possible.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6285,
+          "end_char": 6379,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S026",
+              "segment_start": 345,
+              "segment_end": 439,
+              "start_char": 6285,
+              "end_char": 6379
+            }
+          ],
+          "original_locator": {
+            "line_start": 26,
+            "line_end": 26,
+            "start_char": 5940,
+            "end_char": 6389
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S026",
+          "DOC003:S116",
+          "DOC003:S026"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "首要目标：T025「my primary focus is to like get a really good deal」",
+          "持续核价：T025「I keep on checking at regular intervals」",
+          "跨站比价：T025「I check like dozens of different websites to just make sure I'm having the best deal possible」",
+          "复述确认：T115「finding a good itinerary and finding a good price that works for me」"
+        ],
+        "unsupported_parts": [
+          "「好价格」无客观阈值：T109 明确说「cannot give you like a concrete or objective criteria」，判断依赖其多年经验",
+          "未说明可接受的溢价上限（相对最低价能多付多少）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取 T025 的首要目标陈述与 T115 的复述互证",
+          "2. 对象（票价）、条件（比价后）与主体一致",
+          "3. 检索相反证据：无；T073 用 best 而非 cheapest，属取舍而非否定 → direct"
+        ],
+        "label": "direct",
+        "rationale": "T025 直接给出首要目标与做法：「my primary focus is to like get a really good deal when I'm actually booking my flights」，并说明以反复查询来确认；T115 复述目标时再次把「finding a good price」列为三项之一。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "拿到当前可找到的最优票价（价格合理，且是认真比价后的结果）。",
+        "label": "direct",
+        "rationale": "T025 直接给出首要目标与做法：「my primary focus is to like get a really good deal when I'm actually booking my flights」，并说明以反复查询来确认；T115 复述目标时再次把「finding a good price」列为三项之一。",
+        "supported_parts": [
+          "首要目标：T025「my primary focus is to like get a really good deal」",
+          "持续核价：T025「I keep on checking at regular intervals」",
+          "跨站比价：T025「I check like dozens of different websites to just make sure I'm having the best deal possible」",
+          "复述确认：T115「finding a good itinerary and finding a good price that works for me」"
+        ],
+        "unsupported_parts": [
+          "「好价格」无客观阈值：T109 明确说「cannot give you like a concrete or objective criteria」，判断依赖其多年经验",
+          "未说明可接受的溢价上限（相对最低价能多付多少）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取 T025 的首要目标陈述与 T115 的复述互证",
+          "2. 对象（票价）、条件（比价后）与主体一致",
+          "3. 检索相反证据：无；T073 用 best 而非 cheapest，属取舍而非否定 → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C002",
+      "target_kind": "candidate",
+      "statement": "拿到行程本身合适（时间与衔接可行）的机票，而不只是便宜。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC003:S108",
+          "material_id": "M001",
+          "quote": "Best results for me is a combination of the logistics in terms of the itinerary that I want the price and the flexibility.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 39706,
+          "end_char": 39828,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S108",
+              "segment_start": 20,
+              "segment_end": 142,
+              "start_char": 39706,
+              "end_char": 39828
+            }
+          ],
+          "original_locator": {
+            "line_start": 108,
+            "line_end": 108,
+            "start_char": 39686,
+            "end_char": 40078
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC003:S130",
+          "material_id": "M001",
+          "quote": "It should give me a good itinerary in terms of times, and it should match my situations.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 46866,
+          "end_char": 46954,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S130",
+              "segment_start": 101,
+              "segment_end": 189,
+              "start_char": 46866,
+              "end_char": 46954
+            }
+          ],
+          "original_locator": {
+            "line_start": 130,
+            "line_end": 130,
+            "start_char": 46765,
+            "end_char": 47275
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC003:S110",
+          "material_id": "M001",
+          "quote": "it is extremely situational, and I cannot give you like a concrete or objective criteria for that",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 40464,
+          "end_char": 40561,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S110",
+              "segment_start": 288,
+              "segment_end": 385,
+              "start_char": 40464,
+              "end_char": 40561
+            }
+          ],
+          "original_locator": {
+            "line_start": 110,
+            "line_end": 110,
+            "start_char": 40176,
+            "end_char": 41092
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S108",
+          "DOC003:S130",
+          "DOC003:S110"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "定义：T108「a combination of the logistics in terms of the itinerary that I want the price and the flexibility」",
+          "以行程与价格为主：T108「mostly focusing on the 1st 2」",
+          "复述：T130「a good itinerary in terms of times, and it should match my situations」"
+        ],
+        "unsupported_parts": [
+          "「合适」随处境变化，T110 明确拒绝给出客观标准",
+          "未说明行程不合适时愿意支付多少溢价"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分「好行程」与「好价格」两个目标（T115 并列）",
+          "2. 行程目标的对象与判断依据均由受访者给出",
+          "3. T110 的不确定是标准问题，不影响目标存在 → direct"
+        ],
+        "label": "direct",
+        "rationale": "T108 给出「best results」的定义：「a combination of the logistics in terms of the itinerary that I want the price and the flexibility」，并说明主要看前两项；T130 复述为「It should give me a good itinerary in terms of times, and it should match my situations」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "拿到行程本身合适（时间与衔接可行）的机票，而不只是便宜。",
+        "label": "direct",
+        "rationale": "T108 给出「best results」的定义：「a combination of the logistics in terms of the itinerary that I want the price and the flexibility」，并说明主要看前两项；T130 复述为「It should give me a good itinerary in terms of times, and it should match my situations」。",
+        "supported_parts": [
+          "定义：T108「a combination of the logistics in terms of the itinerary that I want the price and the flexibility」",
+          "以行程与价格为主：T108「mostly focusing on the 1st 2」",
+          "复述：T130「a good itinerary in terms of times, and it should match my situations」"
+        ],
+        "unsupported_parts": [
+          "「合适」随处境变化，T110 明确拒绝给出客观标准",
+          "未说明行程不合适时愿意支付多少溢价"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分「好行程」与「好价格」两个目标（T115 并列）",
+          "2. 行程目标的对象与判断依据均由受访者给出",
+          "3. T110 的不确定是标准问题，不影响目标存在 → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C003",
+      "target_kind": "candidate",
+      "statement": "中转停留时间不低于最短衔接时间（MCT）的 1.5 倍。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC003:S124",
+          "material_id": "M001",
+          "quote": "Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 43159,
+          "end_char": 43289,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S124",
+              "segment_start": 20,
+              "segment_end": 150,
+              "start_char": 43159,
+              "end_char": 43289
+            }
+          ],
+          "original_locator": {
+            "line_start": 124,
+            "line_end": 124,
+            "start_char": 43139,
+            "end_char": 44314
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC003:S124",
+          "material_id": "M001",
+          "quote": "I generally tend to at least go for 1.5 x or 2 x of that for a stopover.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 43868,
+          "end_char": 43940,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S124",
+              "segment_start": 729,
+              "segment_end": 801,
+              "start_char": 43868,
+              "end_char": 43940
+            }
+          ],
+          "original_locator": {
+            "line_start": 124,
+            "line_end": 124,
+            "start_char": 43139,
+            "end_char": 44314
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S124",
+          "DOC003:S124"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "量化规则：T123「at least 1.5 x the Mct」",
+          "经验取值：T123「at least 1.5 x or 2 x of that for a stopover」",
+          "不介意中转次数（除签证）：T123「Unless I have visa issues, I generally don't care very much about it」"
+        ],
+        "unsupported_parts": [
+          "MCT 的取值依赖机场与航司数据，受访者未说明如何获得",
+          "「1.5×」为经验值，未说明是否随航段长度或延误风险调整"
+        ],
+        "assumptions": [
+          "MCT 指 IATA 定义的最短衔接时间（受访者在同段自行解释）"
+        ],
+        "reasoning_steps": [
+          "1. 提取阈值、适用对象与例外条件",
+          "2. 阈值为受访者自述规则，非采访者提示 → 支持",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T123 给出可量化的自设规则：「as long as the I am at least 1.5 x the Mct. For that airport」，并补充「I generally tend to at least go for 1.5 x or 2 x of that for a stopover」，同时说明除签证外不介意中转本身。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "中转停留时间不低于最短衔接时间（MCT）的 1.5 倍。",
+        "label": "direct",
+        "rationale": "T123 给出可量化的自设规则：「as long as the I am at least 1.5 x the Mct. For that airport」，并补充「I generally tend to at least go for 1.5 x or 2 x of that for a stopover」，同时说明除签证外不介意中转本身。",
+        "supported_parts": [
+          "量化规则：T123「at least 1.5 x the Mct」",
+          "经验取值：T123「at least 1.5 x or 2 x of that for a stopover」",
+          "不介意中转次数（除签证）：T123「Unless I have visa issues, I generally don't care very much about it」"
+        ],
+        "unsupported_parts": [
+          "MCT 的取值依赖机场与航司数据，受访者未说明如何获得",
+          "「1.5×」为经验值，未说明是否随航段长度或延误风险调整"
+        ],
+        "assumptions": [
+          "MCT 指 IATA 定义的最短衔接时间（受访者在同段自行解释）"
+        ],
+        "reasoning_steps": [
+          "1. 提取阈值、适用对象与例外条件",
+          "2. 阈值为受访者自述规则，非采访者提示 → 支持",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C004",
+      "target_kind": "candidate",
+      "statement": "航班起降时间能与后续接驳交通、以及要会面对象的日程衔接，避免长时间空等。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC003:S032",
+          "material_id": "M001",
+          "quote": "How does that connect with other modes of transport? So let's say I'm flying into a city, but then I have to travel to a different city by like a train",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8728,
+          "end_char": 8879,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S032",
+              "segment_start": 784,
+              "segment_end": 935,
+              "start_char": 8728,
+              "end_char": 8879
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 7944,
+            "end_char": 10733
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC003:S032",
+          "material_id": "M001",
+          "quote": "I try to plan out my travel, such that things fall into place, and I don't end up having to stay in a city for like 20Â h doing nothing.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8957,
+          "end_char": 9093,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S032",
+              "segment_start": 1013,
+              "segment_end": 1149,
+              "start_char": 8957,
+              "end_char": 9093
+            }
+          ],
+          "original_locator": {
+            "line_start": 32,
+            "line_end": 32,
+            "start_char": 7944,
+            "end_char": 10733
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC003:S120",
+          "material_id": "M001",
+          "quote": "is it matching up with the schedules of the other modes of transport I'm planning to.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 42557,
+          "end_char": 42642,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S120",
+              "segment_start": 209,
+              "segment_end": 294,
+              "start_char": 42557,
+              "end_char": 42642
+            }
+          ],
+          "original_locator": {
+            "line_start": 120,
+            "line_end": 120,
+            "start_char": 42348,
+            "end_char": 42910
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S032",
+          "DOC003:S032",
+          "DOC003:S120"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "考虑接续交通：T031「How does that connect with other modes of transport」",
+          "避免空等：T031「I don't end up having to stay in a city for like 20Â h doing nothing」",
+          "与接驳日程对齐：T119「is it matching up with the schedules of the other modes of transport I'm planning to」"
+        ],
+        "unsupported_parts": [
+          "未说明需要平台提供何种接驳信息（火车时刻、末班时间等）",
+          "「会面对象日程」为条件之一，未说明其权重"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 定位规划陈述中的目的从句",
+          "2. 与 T119 的判断项互证",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T031 描述规划时必须考虑接续交通：「How does that connect with other modes of transport」，并给出目的「things fall into place, and I don't end up having to stay in a city for like 20Â h doing nothing」；T119 把「与接驳/会面对象日程是否对得上」列为行程是否合适的判断项。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "航班起降时间能与后续接驳交通、以及要会面对象的日程衔接，避免长时间空等。",
+        "label": "direct",
+        "rationale": "T031 描述规划时必须考虑接续交通：「How does that connect with other modes of transport」，并给出目的「things fall into place, and I don't end up having to stay in a city for like 20Â h doing nothing」；T119 把「与接驳/会面对象日程是否对得上」列为行程是否合适的判断项。",
+        "supported_parts": [
+          "考虑接续交通：T031「How does that connect with other modes of transport」",
+          "避免空等：T031「I don't end up having to stay in a city for like 20Â h doing nothing」",
+          "与接驳日程对齐：T119「is it matching up with the schedules of the other modes of transport I'm planning to」"
+        ],
+        "unsupported_parts": [
+          "未说明需要平台提供何种接驳信息（火车时刻、末班时间等）",
+          "「会面对象日程」为条件之一，未说明其权重"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 定位规划陈述中的目的从句",
+          "2. 与 T119 的判断项互证",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C005",
+      "target_kind": "candidate",
+      "statement": "避开耗时过长（40–60 小时）与红眼时段的航班，保证行程时长与睡眠。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC003:S074",
+          "material_id": "M001",
+          "quote": "the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 23576,
+          "end_char": 23699,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S074",
+              "segment_start": 327,
+              "segment_end": 450,
+              "start_char": 23576,
+              "end_char": 23699
+            }
+          ],
+          "original_locator": {
+            "line_start": 74,
+            "line_end": 74,
+            "start_char": 23249,
+            "end_char": 24025
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC003:S120",
+          "material_id": "M001",
+          "quote": "I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 42839,
+          "end_char": 42910,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S120",
+              "segment_start": 491,
+              "segment_end": 562,
+              "start_char": 42839,
+              "end_char": 42910
+            }
+          ],
+          "original_locator": {
+            "line_start": 120,
+            "line_end": 120,
+            "start_char": 42348,
+            "end_char": 42910
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S074",
+          "DOC003:S120"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "避开超长行程：T073「40, 50, 60Â h that I would rather not indulge in」",
+          "睡眠偏好：T119「I would rather get my night's sleep」"
+        ],
+        "unsupported_parts": [
+          "未给出时长上限或红眼时段的具体定义",
+          "红眼并非硬性排除（「I don't mind」），强度弱于时长"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 两处均为「避免」型表述，属可提取的目标形态",
+          "2. 记录红眼为弱偏好、超长行程为较强规避",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T073 说明国际线时避开超长行程：「the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in」；T119 说明对红眼的态度「I don't mind taking a red eye, but I would rather get my night's sleep」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "避开耗时过长（40–60 小时）与红眼时段的航班，保证行程时长与睡眠。",
+        "label": "direct",
+        "rationale": "T073 说明国际线时避开超长行程：「the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in」；T119 说明对红眼的态度「I don't mind taking a red eye, but I would rather get my night's sleep」。",
+        "supported_parts": [
+          "避开超长行程：T073「40, 50, 60Â h that I would rather not indulge in」",
+          "睡眠偏好：T119「I would rather get my night's sleep」"
+        ],
+        "unsupported_parts": [
+          "未给出时长上限或红眼时段的具体定义",
+          "红眼并非硬性排除（「I don't mind」），强度弱于时长"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 两处均为「避免」型表述，属可提取的目标形态",
+          "2. 记录红眼为弱偏好、超长行程为较强规避",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C006",
+      "target_kind": "candidate",
+      "statement": "对同一行程比较多个订票供应商的最终价格与可用折扣，再决定在哪下单。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC003:S078",
+          "material_id": "M001",
+          "quote": "I look at the price. I take a look at the rating, and I often visit multiple providers from this page.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 26073,
+          "end_char": 26175,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S078",
+              "segment_start": 337,
+              "segment_end": 439,
+              "start_char": 26073,
+              "end_char": 26175
+            }
+          ],
+          "original_locator": {
+            "line_start": 78,
+            "line_end": 78,
+            "start_char": 25736,
+            "end_char": 26639
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC003:S078",
+          "material_id": "M001",
+          "quote": "you can compare prices. Sometimes prices increase, though that's pretty rare, and you can compare discounts on different providers. The final costs on different providers.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 26319,
+          "end_char": 26490,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S078",
+              "segment_start": 583,
+              "segment_end": 754,
+              "start_char": 26319,
+              "end_char": 26490
+            }
+          ],
+          "original_locator": {
+            "line_start": 78,
+            "line_end": 78,
+            "start_char": 25736,
+            "end_char": 26639
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC003:S104",
+          "material_id": "M001",
+          "quote": "they allow me to find the best price for that itinerary. comparing all of the different booking options.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 38329,
+          "end_char": 38433,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S104",
+              "segment_start": 193,
+              "segment_end": 297,
+              "start_char": 38329,
+              "end_char": 38433
+            }
+          ],
+          "original_locator": {
+            "line_start": 104,
+            "line_end": 104,
+            "start_char": 38136,
+            "end_char": 38915
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S078",
+          "DOC003:S078",
+          "DOC003:S104"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "多供应商比较：T077「I often visit multiple providers from this page」",
+          "比较项：T077「you can compare discounts on different providers. The final costs on different providers」",
+          "目标陈述：T103「find the best price for that itinerary. comparing all of the different booking options」"
+        ],
+        "unsupported_parts": [
+          "未说明评分的使用方式与权重",
+          "价格与折扣随时变动（T077「It's not like a fixed thing」），未说明比较的截止规则"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分「找行程」与「在同一行程下找最低最终价」两个阶段",
+          "2. 第二阶段的行为与目的均有直接陈述",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T077 描述订票页的实际做法：「I look at the price. I take a look at the rating, and I often visit multiple providers from this page」，并说明可比较折扣与最终价；T103 把「find the best price for that itinerary, comparing all of the different booking options」列为使用聚合器的第二个理由。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "对同一行程比较多个订票供应商的最终价格与可用折扣，再决定在哪下单。",
+        "label": "direct",
+        "rationale": "T077 描述订票页的实际做法：「I look at the price. I take a look at the rating, and I often visit multiple providers from this page」，并说明可比较折扣与最终价；T103 把「find the best price for that itinerary, comparing all of the different booking options」列为使用聚合器的第二个理由。",
+        "supported_parts": [
+          "多供应商比较：T077「I often visit multiple providers from this page」",
+          "比较项：T077「you can compare discounts on different providers. The final costs on different providers」",
+          "目标陈述：T103「find the best price for that itinerary. comparing all of the different booking options」"
+        ],
+        "unsupported_parts": [
+          "未说明评分的使用方式与权重",
+          "价格与折扣随时变动（T077「It's not like a fixed thing」），未说明比较的截止规则"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分「找行程」与「在同一行程下找最低最终价」两个阶段",
+          "2. 第二阶段的行为与目的均有直接陈述",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C007",
+      "target_kind": "candidate",
+      "statement": "一次并行比较大量出发地/目的地/日期/舱位组合，而不是逐个查询。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC003:S100",
+          "material_id": "M001",
+          "quote": "So I'd like to search for all possible airports, let's say, from the Us. All, the top 20 most popular airports from the Us. To the top 5 or 6 most popular airports in India.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 35630,
+          "end_char": 35803,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S100",
+              "segment_start": 20,
+              "segment_end": 193,
+              "start_char": 35630,
+              "end_char": 35803
+            }
+          ],
+          "original_locator": {
+            "line_start": 100,
+            "line_end": 100,
+            "start_char": 35610,
+            "end_char": 36569
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC003:S100",
+          "material_id": "M001",
+          "quote": "So that works out to be 11,760 different combinations of flights, different combinations of dates and itineraries",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 36333,
+          "end_char": 36446,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S100",
+              "segment_start": 723,
+              "segment_end": 836,
+              "start_char": 36333,
+              "end_char": 36446
+            }
+          ],
+          "original_locator": {
+            "line_start": 100,
+            "line_end": 100,
+            "start_char": 35610,
+            "end_char": 36569
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC003:S096",
+          "material_id": "M001",
+          "quote": "you want to do around 500 searches at the same time, because you're doing combinations of city pairs, country pairs, dates. travelers, different classes",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 34294,
+          "end_char": 34446,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S096",
+              "segment_start": 73,
+              "segment_end": 225,
+              "start_char": 34294,
+              "end_char": 34446
+            }
+          ],
+          "original_locator": {
+            "line_start": 96,
+            "line_end": 96,
+            "start_char": 34221,
+            "end_char": 34990
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S100",
+          "DOC003:S100",
+          "DOC003:S096"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "并行多机场：T099「the top 20 most popular airports from the Us. To the top 5 or 6 most popular airports in India」",
+          "规模估算：T099「11,760 different combinations of flights」",
+          "组合爆炸：T095「combinations of city pairs, country pairs, dates. travelers, different classes」"
+        ],
+        "unsupported_parts": [
+          "11,760 为受访者口算估算，未核验",
+          "未说明可接受的单次查询耗时",
+          "里程票需要另一套并行搜索（T099 提到但未展开）"
+        ],
+        "assumptions": [
+          "该设想是「希望能同时比较」的诉求，而非对现有功能的要求"
+        ],
+        "reasoning_steps": [
+          "1. 区分现状障碍（T095）与期望（T099「I'd like to search for all possible airports」）",
+          "2. 期望句为第一人称「I'd like」→ 支持",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T099 给出具体的并行搜索设想与规模：「search for all possible airports... the top 20 most popular airports from the Us. To the top 5 or 6 most popular airports in India」，并估算「11,760 different combinations」；T095 说明这一需求来自组合爆炸。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "一次并行比较大量出发地/目的地/日期/舱位组合，而不是逐个查询。",
+        "label": "direct",
+        "rationale": "T099 给出具体的并行搜索设想与规模：「search for all possible airports... the top 20 most popular airports from the Us. To the top 5 or 6 most popular airports in India」，并估算「11,760 different combinations」；T095 说明这一需求来自组合爆炸。",
+        "supported_parts": [
+          "并行多机场：T099「the top 20 most popular airports from the Us. To the top 5 or 6 most popular airports in India」",
+          "规模估算：T099「11,760 different combinations of flights」",
+          "组合爆炸：T095「combinations of city pairs, country pairs, dates. travelers, different classes」"
+        ],
+        "unsupported_parts": [
+          "11,760 为受访者口算估算，未核验",
+          "未说明可接受的单次查询耗时",
+          "里程票需要另一套并行搜索（T099 提到但未展开）"
+        ],
+        "assumptions": [
+          "该设想是「希望能同时比较」的诉求，而非对现有功能的要求"
+        ],
+        "reasoning_steps": [
+          "1. 区分现状障碍（T095）与期望（T099「I'd like to search for all possible airports」）",
+          "2. 期望句为第一人称「I'd like」→ 支持",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C008",
+      "target_kind": "candidate",
+      "statement": "提前约 1–2 个月订票，以换取更好的价格。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC003:S016",
+          "material_id": "M001",
+          "quote": "Ideally, I like to do it at least a couple of months before.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2616,
+          "end_char": 2676,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S016",
+              "segment_start": 20,
+              "segment_end": 80,
+              "start_char": 2616,
+              "end_char": 2676
+            }
+          ],
+          "original_locator": {
+            "line_start": 16,
+            "line_end": 16,
+            "start_char": 2596,
+            "end_char": 3015
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC003:S016",
+          "material_id": "M001",
+          "quote": "Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 2910,
+          "end_char": 3015,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S016",
+              "segment_start": 314,
+              "segment_end": 419,
+              "start_char": 2910,
+              "end_char": 3015
+            }
+          ],
+          "original_locator": {
+            "line_start": 16,
+            "line_end": 16,
+            "start_char": 2596,
+            "end_char": 3015
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S016",
+          "DOC003:S016"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "理想提前量：T015「at least a couple of months before」",
+          "实际目标：T015「at least one to 1.5 months out」",
+          "目的：T015「just to get like a better price at a better deal」"
+        ],
+        "unsupported_parts": [
+          "承认近几次国内航班未做到（T015「always ended up being like a 1 or 2 weeks before」），属未达成的目标",
+          "未说明提前量与价格的量化关系"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 提取提前量与目的",
+          "2. 未达成不否定目标存在，只说明现状偏离",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T015 直接给出订票提前量与理由：「Ideally, I like to do it at least a couple of months before」「Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "提前约 1–2 个月订票，以换取更好的价格。",
+        "label": "direct",
+        "rationale": "T015 直接给出订票提前量与理由：「Ideally, I like to do it at least a couple of months before」「Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal」。",
+        "supported_parts": [
+          "理想提前量：T015「at least a couple of months before」",
+          "实际目标：T015「at least one to 1.5 months out」",
+          "目的：T015「just to get like a better price at a better deal」"
+        ],
+        "unsupported_parts": [
+          "承认近几次国内航班未做到（T015「always ended up being like a 1 or 2 weeks before」），属未达成的目标",
+          "未说明提前量与价格的量化关系"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 提取提前量与目的",
+          "2. 未达成不否定目标存在，只说明现状偏离",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C009",
+      "target_kind": "candidate",
+      "statement": "搜索与比价时保持匿名、不登录，避免个人数据被共享或被追踪抬价。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC003:S054",
+          "material_id": "M001",
+          "quote": "I generally am very privacy conscious. So I avoid logging in, and I try to keep myself as anonymized as possible.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15167,
+          "end_char": 15280,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S054",
+              "segment_start": 20,
+              "segment_end": 133,
+              "start_char": 15167,
+              "end_char": 15280
+            }
+          ],
+          "original_locator": {
+            "line_start": 54,
+            "line_end": 54,
+            "start_char": 15147,
+            "end_char": 15761
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC003:S054",
+          "material_id": "M001",
+          "quote": "if you end up booking flights or searching for specific flights pretty often they might increase the flight prices for you.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 15340,
+          "end_char": 15463,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S054",
+              "segment_start": 193,
+              "segment_end": 316,
+              "start_char": 15340,
+              "end_char": 15463
+            }
+          ],
+          "original_locator": {
+            "line_start": 54,
+            "line_end": 54,
+            "start_char": 15147,
+            "end_char": 15761
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC003:S094",
+          "material_id": "M001",
+          "quote": "considering the way I specifically use skyscanner, I would probably never log in.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 33892,
+          "end_char": 33973,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S094",
+              "segment_start": 451,
+              "segment_end": 532,
+              "start_char": 33892,
+              "end_char": 33973
+            }
+          ],
+          "original_locator": {
+            "line_start": 94,
+            "line_end": 94,
+            "start_char": 33441,
+            "end_char": 34115
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC003:S090",
+          "material_id": "M001",
+          "quote": "skyscanner is a Chinese company, and I generally don't want my data to be shared.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 32744,
+          "end_char": 32825,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S090",
+              "segment_start": 607,
+              "segment_end": 688,
+              "start_char": 32744,
+              "end_char": 32825
+            }
+          ],
+          "original_locator": {
+            "line_start": 90,
+            "line_end": 90,
+            "start_char": 32137,
+            "end_char": 32958
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S054",
+          "DOC003:S054",
+          "DOC003:S094",
+          "DOC003:S090"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "倾向：T053「I generally am very privacy conscious」",
+          "做法：T053「I avoid logging in, and I try to keep myself as anonymized as possible」",
+          "抬价顾虑：T053「they might increase the flight prices for you」",
+          "强度：T093「I would probably never log in」",
+          "数据共享顾虑：T090「skyscanner is a Chinese company, and I generally don't want my data to be shared」"
+        ],
+        "unsupported_parts": [
+          "存在明确例外：里程/积分订票必须登录航司账户（T053）",
+          "「无痕窗口、屏蔽 cookie」为 T090 提到的做法，未说明是否每次都执行",
+          "对「何种数据可接受」未给出边界"
+        ],
+        "assumptions": [
+          "把「避免登录」理解为一条持续适用的自我约束，而非单次选择"
+        ],
+        "reasoning_steps": [
+          "1. 区分一般取向（不登录）与例外（积分订票）",
+          "2. 两处动机（抬价、数据共享）同向支持",
+          "3. → direct，例外记入部分不支持"
+        ],
+        "label": "direct",
+        "rationale": "T053 明确陈述隐私取向与做法：「I generally am very privacy conscious. So I avoid logging in, and I try to keep myself as anonymized as possible」，并给出抬价顾虑；T093 进一步说「I would probably never log in」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "搜索与比价时保持匿名、不登录，避免个人数据被共享或被追踪抬价。",
+        "label": "direct",
+        "rationale": "T053 明确陈述隐私取向与做法：「I generally am very privacy conscious. So I avoid logging in, and I try to keep myself as anonymized as possible」，并给出抬价顾虑；T093 进一步说「I would probably never log in」。",
+        "supported_parts": [
+          "倾向：T053「I generally am very privacy conscious」",
+          "做法：T053「I avoid logging in, and I try to keep myself as anonymized as possible」",
+          "抬价顾虑：T053「they might increase the flight prices for you」",
+          "强度：T093「I would probably never log in」",
+          "数据共享顾虑：T090「skyscanner is a Chinese company, and I generally don't want my data to be shared」"
+        ],
+        "unsupported_parts": [
+          "存在明确例外：里程/积分订票必须登录航司账户（T053）",
+          "「无痕窗口、屏蔽 cookie」为 T090 提到的做法，未说明是否每次都执行",
+          "对「何种数据可接受」未给出边界"
+        ],
+        "assumptions": [
+          "把「避免登录」理解为一条持续适用的自我约束，而非单次选择"
+        ],
+        "reasoning_steps": [
+          "1. 区分一般取向（不登录）与例外（积分订票）",
+          "2. 两处动机（抬价、数据共享）同向支持",
+          "3. → direct，例外记入部分不支持"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C010",
+      "target_kind": "candidate",
+      "statement": "在陌生市场能判断票价相对水平（高于/低于中位），以便决定是否值得下单。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC003:S110",
+          "material_id": "M001",
+          "quote": "I can use Google flights for it because it tells me if the price is above, below, or lower than the Median.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 40985,
+          "end_char": 41092,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S110",
+              "segment_start": 809,
+              "segment_end": 916,
+              "start_char": 40985,
+              "end_char": 41092
+            }
+          ],
+          "original_locator": {
+            "line_start": 110,
+            "line_end": 110,
+            "start_char": 40176,
+            "end_char": 41092
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC003:S112",
+          "material_id": "M001",
+          "quote": "Sure. Yeah, it would help out for the times when I'm not familiar with the specific market.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 41208,
+          "end_char": 41299,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S112",
+              "segment_start": 20,
+              "segment_end": 111,
+              "start_char": 41208,
+              "end_char": 41299
+            }
+          ],
+          "original_locator": {
+            "line_start": 112,
+            "line_end": 112,
+            "start_char": 41188,
+            "end_char": 41499
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC003:S112",
+          "material_id": "M001",
+          "quote": "I won't really need that feature. But yeah, it's it's nice to have.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 41432,
+          "end_char": 41499,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S112",
+              "segment_start": 244,
+              "segment_end": 311,
+              "start_char": 41432,
+              "end_char": 41499
+            }
+          ],
+          "original_locator": {
+            "line_start": 112,
+            "line_end": 112,
+            "start_char": 41188,
+            "end_char": 41499
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S110",
+          "DOC003:S112",
+          "DOC003:S112"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "使用外部参考：T109「it tells me if the price is above, below, or lower than the Median」",
+          "适用条件：T111「for the times when I'm not familiar with the specific market」",
+          "明确回应：T111「Sure. Yeah, it would help out」"
+        ],
+        "unsupported_parts": [
+          "强度弱：「it's nice to have」，且他说熟悉市场后就不需要（T111）",
+          "未说明中位数口径（同期同航线/同舱位）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分「当前借助他站实现」与「希望本平台提供」",
+          "2. T111 的直接回应构成对期望的支持",
+          "3. 强度与适用范围记入部分不支持 → direct"
+        ],
+        "label": "direct",
+        "rationale": "T109 说明在陌生市场借助外部参考价：「I can use Google flights for it because it tells me if the price is above, below, or lower than the Median」；T111 被问到是否希望在 Skyscanner 也看到时说「Sure. Yeah, it would help out for the times when I'm not familiar with the specific market」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在陌生市场能判断票价相对水平（高于/低于中位），以便决定是否值得下单。",
+        "label": "direct",
+        "rationale": "T109 说明在陌生市场借助外部参考价：「I can use Google flights for it because it tells me if the price is above, below, or lower than the Median」；T111 被问到是否希望在 Skyscanner 也看到时说「Sure. Yeah, it would help out for the times when I'm not familiar with the specific market」。",
+        "supported_parts": [
+          "使用外部参考：T109「it tells me if the price is above, below, or lower than the Median」",
+          "适用条件：T111「for the times when I'm not familiar with the specific market」",
+          "明确回应：T111「Sure. Yeah, it would help out」"
+        ],
+        "unsupported_parts": [
+          "强度弱：「it's nice to have」，且他说熟悉市场后就不需要（T111）",
+          "未说明中位数口径（同期同航线/同舱位）"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 区分「当前借助他站实现」与「希望本平台提供」",
+          "2. T111 的直接回应构成对期望的支持",
+          "3. 强度与适用范围记入部分不支持 → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C011",
+      "target_kind": "candidate",
+      "statement": "对多条候选航线设置降价提醒，价格下探时及时获知并下单。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC003:S088",
+          "material_id": "M001",
+          "quote": "I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price. I I book it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 31622,
+          "end_char": 31742,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S088",
+              "segment_start": 422,
+              "segment_end": 542,
+              "start_char": 31622,
+              "end_char": 31742
+            }
+          ],
+          "original_locator": {
+            "line_start": 88,
+            "line_end": 88,
+            "start_char": 31200,
+            "end_char": 31928
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0030",
+          "source_id": "DOC003:S088",
+          "material_id": "M001",
+          "quote": "So that was the only time I set up an alert. And that was through Google flights.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 31847,
+          "end_char": 31928,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S088",
+              "segment_start": 647,
+              "segment_end": 728,
+              "start_char": 31847,
+              "end_char": 31928
+            }
+          ],
+          "original_locator": {
+            "line_start": 88,
+            "line_end": 88,
+            "start_char": 31200,
+            "end_char": 31928
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S088",
+          "DOC003:S088"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "多航线提醒：T087「I needed a reminder on a few different routes」",
+          "目的：T087「if any one of them goes down in price. I I book it」",
+          "实现渠道：T087「that was through Google flights」"
+        ],
+        "unsupported_parts": [
+          "仅使用过一次，且为必须成行的紧迫场景，是否有持续需求不明",
+          "该次使用依赖已登录的 Google 账号，与 C009 的匿名偏好存在张力（见人工问题）"
+        ],
+        "assumptions": [
+          "「a few different routes」理解为同时对多条候选航线设提醒"
+        ],
+        "reasoning_steps": [
+          "1. 提取需求与触发场景",
+          "2. 单次使用记录不否定需求，但强度需标注",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T087 描述唯一一次使用提醒的场景与目的：「I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price. I I book it」，并说明是通过 Google Flights 设置。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "对多条候选航线设置降价提醒，价格下探时及时获知并下单。",
+        "label": "direct",
+        "rationale": "T087 描述唯一一次使用提醒的场景与目的：「I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price. I I book it」，并说明是通过 Google Flights 设置。",
+        "supported_parts": [
+          "多航线提醒：T087「I needed a reminder on a few different routes」",
+          "目的：T087「if any one of them goes down in price. I I book it」",
+          "实现渠道：T087「that was through Google flights」"
+        ],
+        "unsupported_parts": [
+          "仅使用过一次，且为必须成行的紧迫场景，是否有持续需求不明",
+          "该次使用依赖已登录的 Google 账号，与 C009 的匿名偏好存在张力（见人工问题）"
+        ],
+        "assumptions": [
+          "「a few different routes」理解为同时对多条候选航线设提醒"
+        ],
+        "reasoning_steps": [
+          "1. 提取需求与触发场景",
+          "2. 单次使用记录不否定需求，但强度需标注",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C012",
+      "target_kind": "candidate",
+      "statement": "在一个平台上集齐比价、行程与订票信息，不必往返十余个网站。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0031",
+          "source_id": "DOC003:S138",
+          "material_id": "M001",
+          "quote": "I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 49886,
+          "end_char": 50024,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S138",
+              "segment_start": 294,
+              "segment_end": 432,
+              "start_char": 49886,
+              "end_char": 50024
+            }
+          ],
+          "original_locator": {
+            "line_start": 138,
+            "line_end": 138,
+            "start_char": 49592,
+            "end_char": 50103
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0032",
+          "source_id": "DOC003:S096",
+          "material_id": "M001",
+          "quote": "and nobody's there to feed you all the different combinations.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 34703,
+          "end_char": 34765,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S096",
+              "segment_start": 482,
+              "segment_end": 544,
+              "start_char": 34703,
+              "end_char": 34765
+            }
+          ],
+          "original_locator": {
+            "line_start": 96,
+            "line_end": 96,
+            "start_char": 34221,
+            "end_char": 34990
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S138",
+          "DOC003:S096"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "障碍陈述：T138「I don't get to have all of my information at one pace」",
+          "规模：T138「visit at least 10 to 12 different sites」",
+          "组合信息无处获取：T096「nobody's there to feed you all the different combinations」"
+        ],
+        "unsupported_parts": [
+          "未说明希望整合哪些具体信息（票价、行程、行李、休息室等）",
+          "「10 to 12」为估数",
+          "未说明是否要求聚合器承担订票（T047 明确预订仍在供应商站点完成）"
+        ],
+        "assumptions": [
+          "把「希望信息集中」视为目标，而非仅描述障碍"
+        ],
+        "reasoning_steps": [
+          "1. 障碍陈述含明确的价值取向（应能在一处获取）",
+          "2. 与 T096 的组合信息诉求同向",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T138 把它列为两大障碍之一：「I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum」，直接表达信息分散带来的负担。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "在一个平台上集齐比价、行程与订票信息，不必往返十余个网站。",
+        "label": "direct",
+        "rationale": "T138 把它列为两大障碍之一：「I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum」，直接表达信息分散带来的负担。",
+        "supported_parts": [
+          "障碍陈述：T138「I don't get to have all of my information at one pace」",
+          "规模：T138「visit at least 10 to 12 different sites」",
+          "组合信息无处获取：T096「nobody's there to feed you all the different combinations」"
+        ],
+        "unsupported_parts": [
+          "未说明希望整合哪些具体信息（票价、行程、行李、休息室等）",
+          "「10 to 12」为估数",
+          "未说明是否要求聚合器承担订票（T047 明确预订仍在供应商站点完成）"
+        ],
+        "assumptions": [
+          "把「希望信息集中」视为目标，而非仅描述障碍"
+        ],
+        "reasoning_steps": [
+          "1. 障碍陈述含明确的价值取向（应能在一处获取）",
+          "2. 与 T096 的组合信息诉求同向",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C013",
+      "target_kind": "candidate",
+      "statement": "输入全部参数后，由平台直接给出最优方案，不必自己逐轮迭代。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0033",
+          "source_id": "DOC003:S138",
+          "material_id": "M001",
+          "quote": "There's no one click platform where I can just give it all of my parameters, and it will find the best option for me.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 49695,
+          "end_char": 49812,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S138",
+              "segment_start": 103,
+              "segment_end": 220,
+              "start_char": 49695,
+              "end_char": 49812
+            }
+          ],
+          "original_locator": {
+            "line_start": 138,
+            "line_end": 138,
+            "start_char": 49592,
+            "end_char": 50103
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0034",
+          "source_id": "DOC003:S138",
+          "material_id": "M001",
+          "quote": "I have to invest a lot of time into finding. What's the ideal option?",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 49813,
+          "end_char": 49882,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S138",
+              "segment_start": 221,
+              "segment_end": 290,
+              "start_char": 49813,
+              "end_char": 49882
+            }
+          ],
+          "original_locator": {
+            "line_start": 138,
+            "line_end": 138,
+            "start_char": 49592,
+            "end_char": 50103
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0035",
+          "source_id": "DOC003:S086",
+          "material_id": "M001",
+          "quote": "it's kind of hard for these websites to also sort of predict what I would do, and let me know at an ideal time where maybe the cost is low for the exact itinerary that I want to take.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 30584,
+          "end_char": 30767,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S086",
+              "segment_start": 619,
+              "segment_end": 802,
+              "start_char": 30584,
+              "end_char": 30767
+            }
+          ],
+          "original_locator": {
+            "line_start": 86,
+            "line_end": 86,
+            "start_char": 29965,
+            "end_char": 31000
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S138",
+          "DOC003:S138",
+          "DOC003:S086"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "期望形态：T138「one click platform where I can just give it all of my parameters」",
+          "结果要求：T138「it will find the best option for me」",
+          "当前代价：T138「I have to invest a lot of time」"
+        ],
+        "unsupported_parts": [
+          "受访者同时认为难以实现：T086「it's kind of hard for these websites to also sort of predict what I would do」，属自我限定",
+          "未说明「全部参数」的具体清单"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取期望句与代价句",
+          "2. 记录 T086 的可行性怀疑，不改变需求方向",
+          "3. → direct"
+        ],
+        "label": "direct",
+        "rationale": "T138 以「There's no one click platform where I can just give it all of my parameters, and it will find the best option for me」表达期望的缺失面，并说明代价「I have to invest a lot of time into finding. What's the ideal option?」。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "输入全部参数后，由平台直接给出最优方案，不必自己逐轮迭代。",
+        "label": "direct",
+        "rationale": "T138 以「There's no one click platform where I can just give it all of my parameters, and it will find the best option for me」表达期望的缺失面，并说明代价「I have to invest a lot of time into finding. What's the ideal option?」。",
+        "supported_parts": [
+          "期望形态：T138「one click platform where I can just give it all of my parameters」",
+          "结果要求：T138「it will find the best option for me」",
+          "当前代价：T138「I have to invest a lot of time」"
+        ],
+        "unsupported_parts": [
+          "受访者同时认为难以实现：T086「it's kind of hard for these websites to also sort of predict what I would do」，属自我限定",
+          "未说明「全部参数」的具体清单"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "1. 取期望句与代价句",
+          "2. 记录 T086 的可行性怀疑，不改变需求方向",
+          "3. → direct"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "DOC003-C014",
+      "target_kind": "candidate",
+      "statement": "把信用卡权益与机场休息室准入信息整合进比价流程，便于在中转时使用休息室。",
+      "document_id": "DOC003",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0036",
+          "source_id": "DOC003:S126",
+          "material_id": "M001",
+          "quote": "it would be very nice if I could, input there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner. That would be wonderful.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 45038,
+          "end_char": 45261,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S126",
+              "segment_start": 620,
+              "segment_end": 843,
+              "start_char": 45038,
+              "end_char": 45261
+            }
+          ],
+          "original_locator": {
+            "line_start": 126,
+            "line_end": 126,
+            "start_char": 44418,
+            "end_char": 45545
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0037",
+          "source_id": "DOC003:S124",
+          "material_id": "M001",
+          "quote": "Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 43994,
+          "end_char": 44139,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S124",
+              "segment_start": 855,
+              "segment_end": 1000,
+              "start_char": 43994,
+              "end_char": 44139
+            }
+          ],
+          "original_locator": {
+            "line_start": 124,
+            "line_end": 124,
+            "start_char": 43139,
+            "end_char": 44314
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0038",
+          "source_id": "DOC003:S126",
+          "material_id": "M001",
+          "quote": "I know a few apps that have tried that, but generally it doesn't update well, and it doesn't work well.",
+          "evidence_role": "context",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 45262,
+          "end_char": 45365,
+          "candidate_locations": [
+            {
+              "source_id": "DOC003:S126",
+              "segment_start": 844,
+              "segment_end": 947,
+              "start_char": 45262,
+              "end_char": 45365
+            }
+          ],
+          "original_locator": {
+            "line_start": 126,
+            "line_end": 126,
+            "start_char": 44418,
+            "end_char": 45545
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC003:S126",
+          "DOC003:S124",
+          "DOC003:S126"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "整合愿望：T126「a website that keeps everything updated about what I have and what that would grant me access to」",
+          "与比价流程整合：T126「integrated with skyscanner」",
+          "动因：T124「will the lounge at that airport be open at that point of time?」"
+        ],
+        "unsupported_parts": [
+          "强度弱且自我限定：T126「I'll not get into this too much」",
+          "对第三方整合的可靠性存疑：T126「it doesn't update well, and it doesn't work well」，并倾向直接查发卡行（T126「the source of the truth」）",
+          "未说明需要哪些卡权益字段"
+        ],
+        "assumptions": [
+          "把「would be wonderful」视为期望而非闲谈"
+        ],
+        "reasoning_steps": [
+          "1. 取愿望句与动因句",
+          "2. 记录强度弱、可靠性存疑两项限定",
+          "3. 方向明确但实现路径被受访者自己否定 → direct，并列为人工问题"
+        ],
+        "label": "direct",
+        "rationale": "T126 明确表达整合愿望：「it would be very nice if I could, input there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner」，动因由 T124 说明（中转时想看休息室是否开放）。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "把信用卡权益与机场休息室准入信息整合进比价流程，便于在中转时使用休息室。",
+        "label": "direct",
+        "rationale": "T126 明确表达整合愿望：「it would be very nice if I could, input there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner」，动因由 T124 说明（中转时想看休息室是否开放）。",
+        "supported_parts": [
+          "整合愿望：T126「a website that keeps everything updated about what I have and what that would grant me access to」",
+          "与比价流程整合：T126「integrated with skyscanner」",
+          "动因：T124「will the lounge at that airport be open at that point of time?」"
+        ],
+        "unsupported_parts": [
+          "强度弱且自我限定：T126「I'll not get into this too much」",
+          "对第三方整合的可靠性存疑：T126「it doesn't update well, and it doesn't work well」，并倾向直接查发卡行（T126「the source of the truth」）",
+          "未说明需要哪些卡权益字段"
+        ],
+        "assumptions": [
+          "把「would be wonderful」视为期望而非闲谈"
+        ],
+        "reasoning_steps": [
+          "1. 取愿望句与动因句",
+          "2. 记录强度弱、可靠性存疑两项限定",
+          "3. 方向明确但实现路径被受访者自己否定 → direct，并列为人工问题"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "output\\DOC003\\tracing\\semantic-judgments.json",
+    "sha256": "5245774a403ebece4fab6cffba79c11a2b2b28679b5185ca474d75d4db885b37"
+  }
+}

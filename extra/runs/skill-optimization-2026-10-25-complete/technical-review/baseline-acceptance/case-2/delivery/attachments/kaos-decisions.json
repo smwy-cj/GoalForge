@@ -1,0 +1,99 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "53f40201a212a617b6731559d928bb741dfe874ba9b1b6426b84c19a8e48f84e",
+    "judgments_sha256": "f26a18c72fd7895eb6bd52e26fcf5642e5b474dea834f4ebc7ab70c83c78640f"
+  },
+  "groups": [
+    {
+      "group_id": "F1",
+      "parent_id": "G1",
+      "child_ids": [
+        "G2",
+        "G3"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "原文明确说明登记和送达共同满足上层目标。",
+      "assumptions": [],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "quote": "有效申请得到完整登记、有效回执送达，两项都满足即可实现上述目标。",
+          "role": "basis",
+          "start_char": 44,
+          "end_char": 76
+        }
+      ]
+    },
+    {
+      "group_id": "F2",
+      "parent_id": "G3",
+      "child_ids": [
+        "G4"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "原文允许邮件作为一种完整送达方案。",
+      "assumptions": [
+        "邮件和短信均为本场景允许的回执渠道。"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "quote": "回执允许通过邮件或短信送达，任一种渠道送达都算完成。",
+          "role": "basis",
+          "start_char": 77,
+          "end_char": 103
+        }
+      ]
+    },
+    {
+      "group_id": "F3",
+      "parent_id": "G3",
+      "child_ids": [
+        "G5"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "原文允许短信作为另一种完整送达方案。",
+      "assumptions": [
+        "邮件和短信均为本场景允许的回执渠道。"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN-KAOS:S1",
+          "quote": "回执允许通过邮件或短信送达，任一种渠道送达都算完成。",
+          "role": "basis",
+          "start_char": 77,
+          "end_char": 103
+        }
+      ]
+    }
+  ],
+  "questions": []
+}

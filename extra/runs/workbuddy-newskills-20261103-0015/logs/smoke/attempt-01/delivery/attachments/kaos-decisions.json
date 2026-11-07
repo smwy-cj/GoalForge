@@ -1,0 +1,100 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "ba7abc5b3cf602a65746abb4a62d82c085274cd83a5320eb2a4a0c5edfb0d2cf",
+    "judgments_sha256": "22981c82c20dc2d87a27339105cb2cdb3d7c190f271ac02b454b111fbf634fdf"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G006",
+      "child_ids": [
+        "G001",
+        "G002",
+        "G003"
+      ],
+      "kind": "and",
+      "status": "supported",
+      "completeness": "complete",
+      "rationale": "若先比较候选、看到含早餐总价、且在确认前看到取消期限，则可预期性在本次材料范围内得到共同满足。",
+      "assumptions": [
+        "酒店比较、价格可见与取消期限展示都发生在确认预订之前"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN001:T008",
+          "quote": "Overall I want the whole booking process to stay predictable",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R2"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "用户按常规流程比较酒店、查看含早餐总价后在看到取消期限的情况下确认预订",
+          "outcome": "supports",
+          "rationale": "三个子目标均满足时流程结果可预测"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "用户跳过比较直接预订，但仍在确认页看到取消期限",
+          "outcome": "supports",
+          "rationale": "即使未比较，取消期限展示仍维持可预期性，精化组不因该例外失效"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G004",
+      "message": "复用筛选条件是否为确定需求仍需确认。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G004",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "proposed",
+      "conditions": [],
+      "assumptions": [
+        "受访者重复使用相同筛选条件"
+      ],
+      "rationale": "复用筛选条件可减少重复比较，但不确定是否显著帮助。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN001:T005",
+          "quote": "That would help",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G001",
+      "target_id": "G003",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先比较可选酒店，才会进入确认预订环节。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "SYN001:T001",
+          "quote": "I usually compare three hotels before booking",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

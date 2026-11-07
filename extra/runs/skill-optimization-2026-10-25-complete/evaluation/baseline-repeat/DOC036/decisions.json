@@ -1,0 +1,73 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "dc5eb3885c36bc9120f9b8a9a24d24e422a6d4ccce9620b4f59eda848d14c9e9",
+    "judgments_sha256": "f88b38db86ecd4b669ac5d49f21c4293cd584f0f396273533dce5a6031bc3541"
+  },
+  "groups": [
+    {
+      "group_id": "F001",
+      "parent_id": "G001",
+      "child_ids": [
+        "G003",
+        "G005",
+        "G006",
+        "G019"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "找到商家、联系、浏览和收货帮助礼物购买，但商品是否适合对象与场合及恶意账号风险仍需考虑。",
+      "assumptions": [
+        "分析假设：买到并收到商品但不合收礼人喜好，特定礼物目的仍不能保证。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC036:T010",
+          "quote": "Yeah. And yes, you're right. So I use Instagram mainly to shop on days like Valentine's Day, for example. So I would go on Instagram to get my my girlfriend, maybe a cake from a really good spot or a a good So in Rwanda there is. There is this thing where you know, if you have a shop, you can actually more or less have it as a business account on Instagram, where you post like the products you make. So essentially, most of the things are like. They go from cakes to dresses to drawers, you know you can. And the list continues. So I try to spot like you know, accounts that I've mostly like cakes, because I know my girlfriend likes like eating cakes a lot. So I try to go. And then, you know, get like really good cakes. And and I and I order from there. But that's really been the main main way in which I purchase stuff on Instagram, because then I would go and see the the contact of the shop, and then I would use that now to reach out to them, either like to a landline or or, you know, using Whatsapp in. In other cases, I've used Whatsapp. Maybe if I if I'm looking to maybe purchase address. I would I could go to an account of a vendor who, you know, is who is showcasing this plot, and, you know, see the designs they have in store. and and I'll go to an actual market and ask for those. These designs I would have seen like online. So those have been the 2 primary use cases of of me using like, Instagram, yeah.",
+          "role": "basis",
+          "start_char": 987,
+          "end_char": 2415
+        }
+      ]
+    },
+    {
+      "group_id": "F002",
+      "parent_id": "G004",
+      "child_ids": [
+        "G010",
+        "G020"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "互动判断只是受访者辅助策略，原文不支持互动可保证识别所有骗子。",
+      "assumptions": [
+        "分析假设：恶意商家可能仿造互动分布，个人判断不能证明交易安全。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC036:T062",
+          "quote": "Yeah. Well, the the feature for the ranking. It's really it it doesn't. It doesn't really run. What it does is. you see if you are a seller right? And like, I was saying, if you have different products. the amount of likes you would have if you are actually a reputable business is going to be reasonable, right? So for example, if you have a hundred products and we just uploaded 2 products today. I would not expect 2 products today to have as many likes as products you uploaded 6 months ago. Right? The the products you uploaded 6 months ago would probably have more likes and more engagement than the 2 products you just uploaded today. However, if I go to your gallery, and I realize that your products more or less have similar likes and similar comments. It. It is fishy. It looks like it's a malicious site or a malicious account, and you're just trying to see who you can bait to pay, and then they never get the product they want. So in that way, it helps me. And this is probably just social engineering. It just helps me to know which accounts are probably good and which ones are not good I should buy from, and I should not buy from. Yeah. And it saved me some money actually with, there was one account. Yeah, so yeah, that's.",
+          "role": "basis",
+          "start_char": 27688,
+          "end_char": 28930
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F001",
+      "message": "整组充分性尚未由原文确立；分析假设：买到并收到商品但不合收礼人喜好，特定礼物目的仍不能保证。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "F002",
+      "message": "整组充分性尚未由原文确立；分析假设：恶意商家可能仿造互动分布，个人判断不能证明交易安全。"
+    }
+  ]
+}

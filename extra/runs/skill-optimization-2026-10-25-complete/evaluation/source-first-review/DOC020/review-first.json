@@ -1,0 +1,1001 @@
+{
+  "document_id": "DOC020",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "round": "first",
+  "blinding_limit": "仅知A/B匿名代号，未读映射或其他分支；语言、节点粒度、解释模板等方法特征可被猜测，因此属于有限盲法，非严格不可猜方法的双盲。",
+  "policy": "冻结129条意图不修改；允许多对多和不同粒度。supported评价源文支持及合理推断，不代表需求已采纳；proposed/partial结构按候选强度评价。未计算标准P/R/F1。",
+  "samples": [
+    {
+      "sample": "first:A",
+      "intent_matches": [
+        {
+          "intent_id": "DOC020:I01",
+          "goal_ids": [
+            "G001",
+            "G002",
+            "G023"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“不漏掉招聘邮件和学校通知”的实质结果与适用范围；DOC020:T009「to get the email from recruiters」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I02",
+          "goal_ids": [
+            "G034",
+            "G035",
+            "G036"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过邮件预约个人服务、接收商家优惠及偶尔联络朋友”的实质结果与适用范围；DOC020:T011「dentist or clinic or booking the appointment.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I03",
+          "goal_ids": [
+            "G003",
+            "G004",
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“快速筛读未读邮件并标记重要内容”的实质结果与适用范围；DOC020:T015「I look at those mails that I haven't read」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I04",
+          "goal_ids": [
+            "G005",
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“删除垃圾、无关及已结束对话以保持收件箱清晰”的实质结果与适用范围；DOC020:T015「if those are like trash or spam, I will just delete it.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I05",
+          "goal_ids": [
+            "G007",
+            "G038"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“标记暂时不能处理的邮件任务，空闲后回来完成”的实质结果与适用范围；DOC020:T015「I would just like tag it and then leave it there. and when I'm available I will …」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I06",
+          "goal_ids": [
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“使用不同邮箱区分重要通知与优惠信息”的实质结果与适用范围；DOC020:T017「I, I do this by have separate emails.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I07",
+          "goal_ids": [
+            "G010",
+            "G019",
+            "G037"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“由少量要点生成组织良好的邮件，再自行修改”的实质结果与适用范围；DOC020:T019「I would 1st list my main point.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I08",
+          "goal_ids": [
+            "G011",
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“调整字体大小并加粗重要句子”的实质结果与适用范围；DOC020:T021「adjust the font size」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I09",
+          "goal_ids": [
+            "G014"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“需要分享多媒体时通过云链接便于跨设备查看”的实质结果与适用范围；DOC020:T023「upload it to the cloud and then send the link」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I10",
+          "goal_ids": [
+            "G015"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“避免自动分类把重要邮件误投垃圾箱”的实质结果与适用范围；DOC020:T025「some important emails that will like end up in the spans folder.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I11",
+          "goal_ids": [
+            "G016",
+            "G017"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“发送后可修订邮件，让收件人看到新版本并可查编辑历史”的实质结果与适用范围；DOC020:T029「editing the email instead of sending a new one.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I12",
+          "goal_ids": [
+            "G018"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“可靠收到应到邮件，特别是网站注册验证邮件”的实质结果与适用范围；DOC020:T033「when you register some website and then send email to your inbox, and for some r…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I13",
+          "goal_ids": [
+            "G020"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在正文提到附件却未附文件时发送前警告”的实质结果与适用范围；DOC020:T037「I didn't attach the resume. It will warn me before I send it. I think that is re…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I14",
+          "goal_ids": [
+            "G021",
+            "G022"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“用AI提炼来信要点并突出容易漏看的关键词或限制”的实质结果与适用范围；DOC020:T041「Get the main point of that email.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I15",
+          "goal_ids": [
+            "G024",
+            "G025"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“减少逐封阅读大量邮件的时间”的实质结果与适用范围；DOC020:T053「I spend a lot of time just reading every email.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I16",
+          "goal_ids": [
+            "G026"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“重要邮件可即时提醒，但重要性判定必须值得信任”的实质结果与适用范围；DOC020:T059「good to receive notification for some important messages.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I17",
+          "goal_ids": [
+            "G027",
+            "G028"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“期限紧迫时转发及群发给团队以快速协调”的实质结果与适用范围；DOC020:T071「forwarding the email. And BBC, like, sent to all the people in my group.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I18",
+          "goal_ids": [
+            "G029",
+            "G030",
+            "G031"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“检索邮件并按标签过滤，亦可安排发送时间”的实质结果与适用范围；DOC020:T087「the most important would definitely be searching.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I19",
+          "goal_ids": [
+            "G032"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“探索收发双方共享的自定义类别或标识以便分类沟通”的实质结果与适用范围；DOC020:T091「it's probably not that practical」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I20",
+          "goal_ids": [
+            "G033"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“未来维持工作中的专业联系和沟通”的实质结果与适用范围；DOC020:T095「mostly at work.」。不要求独立节点数或层次与清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I01"
+          ],
+          "rationale": "与源文“不漏掉招聘邮件和学校通知”相符；DOC020:T009「to get the email from recruiters」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I01"
+          ],
+          "rationale": "与源文“不漏掉招聘邮件和学校通知”相符；DOC020:T009「to get the email from recruiters」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I03"
+          ],
+          "rationale": "与源文“快速筛读未读邮件并标记重要内容”相符；DOC020:T015「I look at those mails that I haven't read」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I03"
+          ],
+          "rationale": "T015先扫未读、标重要、再细读；标记与细读是可区别操作，成立，但它对识别前序工作不是反向因果（见R001）。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I04"
+          ],
+          "rationale": "与源文“删除垃圾、无关及已结束对话以保持收件箱清晰”相符；DOC020:T015「if those are like trash or spam, I will just delete it.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I03"
+          ],
+          "rationale": "与源文“快速筛读未读邮件并标记重要内容”相符；DOC020:T015「I look at those mails that I haven't read」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I05"
+          ],
+          "rationale": "与源文“标记暂时不能处理的邮件任务，空闲后回来完成”相符；DOC020:T015「I would just like tag it and then leave it there. and when I'm available I will …」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I04"
+          ],
+          "rationale": "与源文“删除垃圾、无关及已结束对话以保持收件箱清晰”相符；DOC020:T015「if those are like trash or spam, I will just delete it.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I06"
+          ],
+          "rationale": "与源文“使用不同邮箱区分重要通知与优惠信息”相符；DOC020:T017「I, I do this by have separate emails.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I07"
+          ],
+          "rationale": "与源文“由少量要点生成组织良好的邮件，再自行修改”相符；DOC020:T019「I would 1st list my main point.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I08"
+          ],
+          "rationale": "与源文“调整字体大小并加粗重要句子”相符；DOC020:T021「adjust the font size」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I08"
+          ],
+          "rationale": "与源文“调整字体大小并加粗重要句子”相符；DOC020:T021「adjust the font size」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [],
+          "rationale": "T021明确编辑后send，作为现行发送操作有据，虽冻结清单未单列发送节点。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I09"
+          ],
+          "rationale": "与源文“需要分享多媒体时通过云链接便于跨设备查看”相符；DOC020:T023「upload it to the cloud and then send the link」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I10"
+          ],
+          "rationale": "与源文“避免自动分类把重要邮件误投垃圾箱”相符；DOC020:T025「some important emails that will like end up in the spans folder.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I11"
+          ],
+          "rationale": "与源文“发送后可修订邮件，让收件人看到新版本并可查编辑历史”相符；DOC020:T029「editing the email instead of sending a new one.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I11"
+          ],
+          "rationale": "T029新版默认、旧版/历史可按需看是编辑后的收件端结果；与发件人编辑动作G016可分。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I12"
+          ],
+          "rationale": "与源文“可靠收到应到邮件，特别是网站注册验证邮件”相符；DOC020:T033「when you register some website and then send email to your inbox, and for some r…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I07"
+          ],
+          "rationale": "T037内置是比T019外部AI更具体的改进；G010与G019通过所选方式关系连接，非无意义复制。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I13"
+          ],
+          "rationale": "与源文“在正文提到附件却未附文件时发送前警告”相符；DOC020:T037「I didn't attach the resume. It will warn me before I send it. I think that is re…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G021",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I14"
+          ],
+          "rationale": "与源文“用AI提炼来信要点并突出容易漏看的关键词或限制”相符；DOC020:T041「Get the main point of that email.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G022",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I14"
+          ],
+          "rationale": "与源文“用AI提炼来信要点并突出容易漏看的关键词或限制”相符；DOC020:T041「Get the main point of that email.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G023",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I01"
+          ],
+          "rationale": "与源文“不漏掉招聘邮件和学校通知”相符；DOC020:T009「to get the email from recruiters」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G024",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I15"
+          ],
+          "rationale": "与源文“减少逐封阅读大量邮件的时间”相符；DOC020:T053「I spend a lot of time just reading every email.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G025",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I15"
+          ],
+          "rationale": "提案来自T054采访者，T055仅说one solution；statement Consider与解释准确保留这一较弱接受状态。",
+          "issues": []
+        },
+        {
+          "goal_id": "G026",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I16"
+          ],
+          "rationale": "与源文“重要邮件可即时提醒，但重要性判定必须值得信任”相符；DOC020:T059「good to receive notification for some important messages.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G027",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I17"
+          ],
+          "rationale": "与源文“期限紧迫时转发及群发给团队以快速协调”相符；DOC020:T071「forwarding the email. And BBC, like, sent to all the people in my group.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G028",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I17"
+          ],
+          "rationale": "与源文“期限紧迫时转发及群发给团队以快速协调”相符；DOC020:T071「forwarding the email. And BBC, like, sent to all the people in my group.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G029",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I18"
+          ],
+          "rationale": "与源文“检索邮件并按标签过滤，亦可安排发送时间”相符；DOC020:T087「the most important would definitely be searching.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G030",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I18"
+          ],
+          "rationale": "与源文“检索邮件并按标签过滤，亦可安排发送时间”相符；DOC020:T087「the most important would definitely be searching.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G031",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I18"
+          ],
+          "rationale": "与源文“检索邮件并按标签过滤，亦可安排发送时间”相符；DOC020:T087「the most important would definitely be searching.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G032",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I19"
+          ],
+          "rationale": "T091称可能不实际，T093为未定义类别设想；Explore及rationale明确未知，未虚构协议规范。",
+          "issues": []
+        },
+        {
+          "goal_id": "G033",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I20"
+          ],
+          "rationale": "与源文“未来维持工作中的专业联系和沟通”相符；DOC020:T095「mostly at work.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G034",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I02"
+          ],
+          "rationale": "与源文“通过邮件预约个人服务、接收商家优惠及偶尔联络朋友”相符；DOC020:T011「dentist or clinic or booking the appointment.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G035",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I02"
+          ],
+          "rationale": "与源文“通过邮件预约个人服务、接收商家优惠及偶尔联络朋友”相符；DOC020:T011「dentist or clinic or booking the appointment.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G036",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I02"
+          ],
+          "rationale": "与源文“通过邮件预约个人服务、接收商家优惠及偶尔联络朋友”相符；DOC020:T011「dentist or clinic or booking the appointment.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G037",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I07"
+          ],
+          "rationale": "与源文“由少量要点生成组织良好的邮件，再自行修改”相符；DOC020:T019「I would 1st list my main point.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G038",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I05"
+          ],
+          "rationale": "T015需要回复而当前无暇时稍后处理有据；与G007记录任务的标签动作可区分为记录手段和完成结果，允许分开。不能由此要求所有来信必回复。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [
+        {
+          "relation_id": "R001",
+          "judgment": "needs_revision",
+          "rationale": "T015先扫读判断重要再标记；目前G004标记反向贡献到G003“识别重要”会混淆先后，标记更直接支持之后注意/回访。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R002",
+          "judgment": "consistent",
+          "rationale": "T015快速扫未读后细读重要，顺序有据。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R003",
+          "judgment": "consistent",
+          "rationale": "T015标签记录暂不能回的任务然后有空完成，作为顺序成立；并不声称每封邮件都需回复。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R004",
+          "judgment": "consistent",
+          "rationale": "T017分账户可减少重要招聘邮件混杂，不保证不遗漏。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R005",
+          "judgment": "consistent",
+          "rationale": "T019生成草稿先于用户修改，顺序有据。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R006",
+          "judgment": "consistent",
+          "rationale": "T019/T021用户改好后再send，顺序成立。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R007",
+          "judgment": "consistent",
+          "rationale": "T021字号调整是当前发信前步骤，不是发送前普遍必要条件。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R008",
+          "judgment": "consistent",
+          "rationale": "T021加粗强调在发送前，保留场景后成立。 当前关系按包内precedes/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R009",
+          "judgment": "consistent",
+          "rationale": "T025/T027避免错分有助不漏招聘消息，不是到达保证。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R010",
+          "judgment": "consistent",
+          "rationale": "T037内置AI是T019按要点写信的具体方案。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R011",
+          "judgment": "consistent",
+          "rationale": "T041/T053摘要可节省逐封阅读，非保证摘要无遗漏。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R012",
+          "judgment": "consistent",
+          "rationale": "T045/T047突出容易漏看条目帮助重要邮件理解，关联成立。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R013",
+          "judgment": "consistent",
+          "rationale": "T054/T055批量摘要只是可考虑办法；operationalization保留候选语气方成立。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R014",
+          "judgment": "consistent",
+          "rationale": "T059可靠提醒可帮助防漏，但用户明确不完全依赖。 当前关系按包内contribution/supported评价，不等同一组充分精化。"
+        },
+        {
+          "relation_id": "R015",
+          "judgment": "consistent",
+          "rationale": "T087搜索是标签过滤可能采用的实现方式，方向正确。 当前关系按包内operationalization/supported评价，不等同一组充分精化。"
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T017/T027/T059的策略有助防漏，F001保留partial并承认收不到/识别失败，不把人工信任例外消掉。"
+        },
+        {
+          "group_id": "F002",
+          "judgment": "consistent",
+          "rationale": "T041/T045/T054摘要、突出细节、批量汇总是互补/替代策略；F002承认准确性未知，未强称充分。"
+        }
+      ]
+    },
+    {
+      "sample": "first:B",
+      "intent_matches": [
+        {
+          "intent_id": "DOC020:I01",
+          "goal_ids": [
+            "G001",
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“不漏掉招聘邮件和学校通知”的实质结果与适用范围；DOC020:T009「to get the email from recruiters」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I02",
+          "goal_ids": [
+            "G003",
+            "G004",
+            "G005"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过邮件预约个人服务、接收商家优惠及偶尔联络朋友”的实质结果与适用范围；DOC020:T011「dentist or clinic or booking the appointment.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I03",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "partial",
+          "rationale": "G006只保留标记重要，T015快速扫未读及细读重要邮件未建模。 原文：DOC020:T015「I look at those mails that I haven't read」"
+        },
+        {
+          "intent_id": "DOC020:I04",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“删除垃圾、无关及已结束对话以保持收件箱清晰”的实质结果与适用范围；DOC020:T015「if those are like trash or spam, I will just delete it.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I05",
+          "goal_ids": [
+            "G007"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“标记暂时不能处理的邮件任务，空闲后回来完成”的实质结果与适用范围；DOC020:T015「I would just like tag it and then leave it there. and when I'm available I will …」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I06",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“使用不同邮箱区分重要通知与优惠信息”的实质结果与适用范围；DOC020:T017「I, I do this by have separate emails.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I07",
+          "goal_ids": [
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“由少量要点生成组织良好的邮件，再自行修改”的实质结果与适用范围；DOC020:T019「I would 1st list my main point.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I08",
+          "goal_ids": [
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“调整字体大小并加粗重要句子”的实质结果与适用范围；DOC020:T021「adjust the font size」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I09",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“需要分享多媒体时通过云链接便于跨设备查看”的实质结果与适用范围；DOC020:T023「upload it to the cloud and then send the link」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I10",
+          "goal_ids": [
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“避免自动分类把重要邮件误投垃圾箱”的实质结果与适用范围；DOC020:T025「some important emails that will like end up in the spans folder.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I11",
+          "goal_ids": [
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“发送后可修订邮件，让收件人看到新版本并可查编辑历史”的实质结果与适用范围；DOC020:T029「editing the email instead of sending a new one.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I12",
+          "goal_ids": [
+            "G013"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“可靠收到应到邮件，特别是网站注册验证邮件”的实质结果与适用范围；DOC020:T033「when you register some website and then send email to your inbox, and for some r…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I13",
+          "goal_ids": [
+            "G014"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在正文提到附件却未附文件时发送前警告”的实质结果与适用范围；DOC020:T037「I didn't attach the resume. It will warn me before I send it. I think that is re…」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I14",
+          "goal_ids": [
+            "G015"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“用AI提炼来信要点并突出容易漏看的关键词或限制”的实质结果与适用范围；DOC020:T041「Get the main point of that email.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I15",
+          "goal_ids": [
+            "G015",
+            "G016"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“减少逐封阅读大量邮件的时间”的实质结果与适用范围；DOC020:T053「I spend a lot of time just reading every email.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I16",
+          "goal_ids": [
+            "G017"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“重要邮件可即时提醒，但重要性判定必须值得信任”的实质结果与适用范围；DOC020:T059「good to receive notification for some important messages.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I17",
+          "goal_ids": [
+            "G018"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“期限紧迫时转发及群发给团队以快速协调”的实质结果与适用范围；DOC020:T071「forwarding the email. And BBC, like, sent to all the people in my group.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I18",
+          "goal_ids": [
+            "G019",
+            "G020"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“检索邮件并按标签过滤，亦可安排发送时间”的实质结果与适用范围；DOC020:T087「the most important would definitely be searching.」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I19",
+          "goal_ids": [
+            "G021"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“探索收发双方共享的自定义类别或标识以便分类沟通”的实质结果与适用范围；DOC020:T091「it's probably not that practical」。不要求独立节点数或层次与清单一致。"
+        },
+        {
+          "intent_id": "DOC020:I20",
+          "goal_ids": [
+            "G005"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“未来维持工作中的专业联系和沟通”的实质结果与适用范围；DOC020:T095「mostly at work.」。不要求独立节点数或层次与清单一致。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I01"
+          ],
+          "rationale": "与源文“不漏掉招聘邮件和学校通知”相符；DOC020:T009「to get the email from recruiters」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I01"
+          ],
+          "rationale": "与源文“不漏掉招聘邮件和学校通知”相符；DOC020:T009「to get the email from recruiters」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I02"
+          ],
+          "rationale": "与源文“通过邮件预约个人服务、接收商家优惠及偶尔联络朋友”相符；DOC020:T011「dentist or clinic or booking the appointment.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I02"
+          ],
+          "rationale": "与源文“通过邮件预约个人服务、接收商家优惠及偶尔联络朋友”相符；DOC020:T011「dentist or clinic or booking the appointment.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "needs_revision",
+          "intent_ids": [
+            "DOC020:I02",
+            "DOC020:I20"
+          ],
+          "rationale": "T011偶尔朋友联系与T095/T099未来工作专业联系有不同时间和目的；support.rationale已保留rare/未来，所以不另判条件丢失，但单个目标把可独立满足的社交与专业用途混合。",
+          "issues": [
+            {
+              "category": "compound",
+              "reason": "朋友联系与工作专业联系来自不同情境；建议分别作用途或建立上位邮件沟通目标，保留现今偶尔与未来主要的范围。"
+            }
+          ]
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I03",
+            "DOC020:I04",
+            "DOC020:I06"
+          ],
+          "rationale": "T015–T017三种整理手段确为manageability服务，层次合并可接受；但其statement未含浏览未读/细读，不能把I03的完整日常筛读判已覆盖。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I05"
+          ],
+          "rationale": "与源文“标记暂时不能处理的邮件任务，空闲后回来完成”相符；DOC020:T015「I would just like tag it and then leave it there. and when I'm available I will …」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I07"
+          ],
+          "rationale": "T019 AI草拟后人工调整，T037希望内置；作为保留人类编辑的整体写信结果可接受，不要求每一步都独立成目标。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I08"
+          ],
+          "rationale": "与源文“调整字体大小并加粗重要句子”相符；DOC020:T021「adjust the font size」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I09"
+          ],
+          "rationale": "与源文“需要分享多媒体时通过云链接便于跨设备查看”相符；DOC020:T023「upload it to the cloud and then send the link」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I10"
+          ],
+          "rationale": "与源文“避免自动分类把重要邮件误投垃圾箱”相符；DOC020:T025「some important emails that will like end up in the spans folder.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I11"
+          ],
+          "rationale": "与源文“发送后可修订邮件，让收件人看到新版本并可查编辑历史”相符；DOC020:T029「editing the email instead of sending a new one.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I12"
+          ],
+          "rationale": "与源文“可靠收到应到邮件，特别是网站注册验证邮件”相符；DOC020:T033「when you register some website and then send email to your inbox, and for some r…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I13"
+          ],
+          "rationale": "与源文“在正文提到附件却未附文件时发送前警告”相符；DOC020:T037「I didn't attach the resume. It will warn me before I send it. I think that is re…」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I14",
+            "DOC020:I15"
+          ],
+          "rationale": "T041要点摘要与T045–T047突出微小限制可分别达成；但两者共同构成AI阅读辅助，合并仍保留两项，不因粒度较粗自动判错。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I15"
+          ],
+          "rationale": "与源文“减少逐封阅读大量邮件的时间”相符；DOC020:T053「I spend a lot of time just reading every email.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I16"
+          ],
+          "rationale": "与源文“重要邮件可即时提醒，但重要性判定必须值得信任”相符；DOC020:T059「good to receive notification for some important messages.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I17"
+          ],
+          "rationale": "T071/T075明确转发与群发在紧期限场景重要；并列保留能力，不声称必须同时执行或充分完成团队沟通，接受该上位协作条目。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I18"
+          ],
+          "rationale": "与源文“检索邮件并按标签过滤，亦可安排发送时间”相符；DOC020:T087「the most important would definitely be searching.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I18"
+          ],
+          "rationale": "与源文“检索邮件并按标签过滤，亦可安排发送时间”相符；DOC020:T087「the most important would definitely be searching.」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G021",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC020:I19"
+          ],
+          "rationale": "与源文“探索收发双方共享的自定义类别或标识以便分类沟通”相符；DOC020:T091「it's probably not that practical」。作为该受访者的目的、条件性方式或已标明的改进推断可保留，未额外读成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "分类/到达/提醒对应T027/T033/T059，F001以proposed/partial承认仍可能漏看，成立。"
+        }
+      ]
+    }
+  ]
+}

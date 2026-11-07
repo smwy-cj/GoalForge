@@ -1,0 +1,121 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "b9464d9b0fd5ff5c8f8138d98e82bdbb2c6b732f17de80dd14ef46ccf5ee7dbf",
+    "judgments_sha256": "be92e6f45f537010263582ed46c31b829d5cc186c1428d6b385948b727ba17cb"
+  },
+  "groups": [
+    {
+      "group_id": "F01",
+      "parent_id": "G01",
+      "child_ids": [
+        "G02",
+        "G03"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "日常穿戴与旅行活动规划是总体规划目的的具体实例，但两者没有完整覆盖非旅行的户外活动，原文也未将列举定义为穷尽。不能用实例并集证明充分精化。",
+      "assumptions": [],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "So for me, primary purpose is a planning. So whenever I use weather app, it's either to plan what I have to wear on a particular day or plan my outdoor activities. or just plan my trip or something.",
+          "role": "basis",
+          "start_char": 926,
+          "end_char": 1124
+        },
+        {
+          "source_id": "DOC010:T017",
+          "quote": "There are multiple. But one that I would say is like, whenever I'm planning something like a planning a big trip or something especially, which is which especially the AI, which where I have not been before. So I have to look up the information like, what's the weather there is like, and what kind of outdoor activities I can plan with my friends before, you know. Take like buying tickets for some stuff, I guess.",
+          "role": "basis",
+          "start_char": 2521,
+          "end_char": 2936
+        },
+        {
+          "source_id": "DOC010:T019",
+          "quote": "I think it depends, because, you know, weather is like we cannot predict whether, although we have like good estimation. But sometimes it's not very accurate, so I guess, like for me, personally, I don't check it on a weekly basis. I do it daily. but like, if I have to plan a trip. I would check whether for entire week. Yes, because I have, as I said, like, I have to plan activities, and I have to buy ticket for tickets for those activities.",
+          "role": "basis",
+          "start_char": 3312,
+          "end_char": 3757
+        }
+      ]
+    },
+    {
+      "group_id": "F02",
+      "parent_id": "G09",
+      "child_ids": [
+        "G08"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "雨天频繁通知与实时更新相关，但频繁并不保证实时，且只覆盖下雨情境。不能把局部通知偏好当作所有实时天气更新的充分实现。",
+      "assumptions": [],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T049",
+          "quote": "But like just to add, there for when there's like a rain like ongoing rain, for that I have like a frequent notifications like when it's stopping, when it's adding like when it's going so, for when it's about rain, I like have a like frequent notifications.",
+          "role": "basis",
+          "start_char": 8790,
+          "end_char": 9047
+        },
+        {
+          "source_id": "DOC010:T069",
+          "quote": "Phone. Yes, as I said earlier, real time updates is like the biggest issue. I want that to be something that all these new apps should have. And then I guess. I guess, like real time updates is the real issue right now, other than that.",
+          "role": "basis",
+          "start_char": 12720,
+          "end_char": 12956
+        }
+      ]
+    },
+    {
+      "group_id": "F03",
+      "parent_id": "G06",
+      "child_ids": [
+        "G05"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "警报可向避开极端天气的决策提供信息，但收到通知不能确保受访者看到、据此延期且不外出；这是可能贡献而非成立的充分精化。",
+      "assumptions": [],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T035",
+          "quote": "I guess, like extreme weather conditions are really important, like thunderstorm or flood flooding conditions that are really important. Because if I see those kind of things. On my web app. I just like postpone the entire event and don't. Don't go out at all.",
+          "role": "basis",
+          "start_char": 6322,
+          "end_char": 6582
+        },
+        {
+          "source_id": "DOC010:T039",
+          "quote": "Yeah. So so just to add, there, like, for extreme conditions, I'm just expecting, you know, the weather app to give me notifications or alert, because usually I do get those notifications through email or or through a text message from county itself, or sometimes whether apps, I guess.",
+          "role": "basis",
+          "start_char": 7297,
+          "end_char": 7583
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F01",
+      "message": "是否存在未被这两项目标覆盖的日常户外规划？目前仅保留候选组。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "F02",
+      "message": "雨天通知之外的实时数据范围和新鲜度标准仍未知。"
+    },
+    {
+      "target_type": "group",
+      "target_id": "F03",
+      "message": "通知送达与受访者实际调整计划之间的条件未给定。"
+    }
+  ]
+}

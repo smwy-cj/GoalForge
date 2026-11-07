@@ -1,0 +1,1178 @@
+{
+  "schema_version": "goalforge-kaos-2",
+  "model_id": "DOC029-goal-model",
+  "version": "v1",
+  "parent": null,
+  "scope": {
+    "document_id": "DOC029",
+    "coverage": {
+      "scope": "provided_material",
+      "source_ids": [
+        "DOC029:T000",
+        "DOC029:T001",
+        "DOC029:T002",
+        "DOC029:T003",
+        "DOC029:T004",
+        "DOC029:T005",
+        "DOC029:T006",
+        "DOC029:T007",
+        "DOC029:T008",
+        "DOC029:T009",
+        "DOC029:T010",
+        "DOC029:T011",
+        "DOC029:T012",
+        "DOC029:T013",
+        "DOC029:T014",
+        "DOC029:T015",
+        "DOC029:T016",
+        "DOC029:T017",
+        "DOC029:T018",
+        "DOC029:T019",
+        "DOC029:T020",
+        "DOC029:T021",
+        "DOC029:T022",
+        "DOC029:T023",
+        "DOC029:T024",
+        "DOC029:T025",
+        "DOC029:T026",
+        "DOC029:T027",
+        "DOC029:T028",
+        "DOC029:T029",
+        "DOC029:T030",
+        "DOC029:T031",
+        "DOC029:T032",
+        "DOC029:T033",
+        "DOC029:T034",
+        "DOC029:T035",
+        "DOC029:T036",
+        "DOC029:T037",
+        "DOC029:T038",
+        "DOC029:T039",
+        "DOC029:T040",
+        "DOC029:T041",
+        "DOC029:T042",
+        "DOC029:T043",
+        "DOC029:T044",
+        "DOC029:T045",
+        "DOC029:T046",
+        "DOC029:T047",
+        "DOC029:T048",
+        "DOC029:T049",
+        "DOC029:T050",
+        "DOC029:T051",
+        "DOC029:T052",
+        "DOC029:T053",
+        "DOC029:T054",
+        "DOC029:T055"
+      ],
+      "omissions": []
+    }
+  },
+  "goals": [
+    {
+      "goal_id": "G001",
+      "statement": "Present personalized content in a way that is tailored to the user's needs and current mood.",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "呈现方式按用户需要定制",
+          "呈现方式按用户当下心情定制"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原句明确把“呈现方式按我的需要和当下心情定制”作为偏爱 Netflix 的理由，T015 与母亲节例子再次确认推荐被感知为贴合个人情境；主体（对我的呈现）、对象（个性化内容）与质量含义一致，无额外阈值或方式被写入。"
+      },
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ]
+    },
+    {
+      "goal_id": "G002",
+      "statement": "Let the user start watching a movie with few clicks, including while the user is having a meal.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "While the user is having a meal."
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "开始播放所需的点击次数少",
+          "情境为用餐时观看"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "受访者以“不用点很多按钮就能开始看电影”说明便利性，并给出吃饭时观看的情境；目标保留“few clicks”和该情境，未把它升级为强制流程或具体点击数。"
+      },
+      "evidence_ids": [
+        "E0004"
+      ]
+    },
+    {
+      "goal_id": "G003",
+      "statement": "Let the user resume a partially watched show at the exact point where they left off, showing how much of the episode is completed and the current timestamp.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Resume is offered from the Continue Watching carousel."
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "从上次中断位置继续播放",
+          "显示已完成进度与时间戳",
+          "续播耗时短"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原句同时说明从上次中断处继续、耗时很短且方便，并说明显示已完成进度与时间戳；两个表述指向同一续播结果，故合并为一个目标。"
+      },
+      "evidence_ids": [
+        "E0005",
+        "E0006"
+      ]
+    },
+    {
+      "goal_id": "G004",
+      "statement": "Organize recommendations into genre-based carousels so the user can quickly pick something when in the mood for a specific genre.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Carousels are drawn from personalized content."
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "推荐按类型分组",
+          "用于特定类型心情下快速决定"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原句说明按类型组织的推荐轮播让他在“想看某个特定类型”时更容易决定；示例类型（Bollywood、critically acclaimed）只作说明，未固化为必须包含的类型清单。"
+      },
+      "evidence_ids": [
+        "E0007"
+      ]
+    },
+    {
+      "goal_id": "G005",
+      "statement": "Recommend shows similar to the one the user is viewing ('more like this'), offering multiple options so the user can choose.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Shown in the 'more info' modal of the title being viewed."
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "推荐与当前观看内容相似的剧集",
+          "提供多个选项供选择"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原句明确称赞“more like this”能正确识别与当前观看内容相似的剧集，并给出多个可选对象；目标保留“相似”与“多个选项”，未加入相似度阈值。"
+      },
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ]
+    },
+    {
+      "goal_id": "G006",
+      "statement": "Recommend titles saved in My List about one month before they are removed from Netflix, so the user can prioritize and watch them before they leave.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "For titles saved in My List.",
+        "About one month before removal."
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "提前约一个月提醒/推荐",
+          "对象为 My List 中已保存影片",
+          "目的在于及时观看"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原句明确建议在下架前约一个月推荐 My List 中的影片，并说明目的是优先观看；T031 确认“very helpful”。目标保留时间量（约一个月）、对象（My List）与建议强度，未改为强制通知。"
+      },
+      "evidence_ids": [
+        "E0010",
+        "E0011"
+      ]
+    },
+    {
+      "goal_id": "G007",
+      "statement": "Offer a carousel of selective 2-3 minute preview clips spanning genres, starting playback on hover, so an undecided user can judge whether a show suits them without leaving Netflix.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Presented as a recommendation carousel; a clip starts when the user hovers over a banner.",
+        "Clips last about 2-3 minutes and span genres such as funny, suspenseful and cliffhanger."
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "2-3 分钟预览片段",
+          "轮播形式",
+          "悬停触发播放",
+          "覆盖多种类型"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T033 提出 2-3 分钟片段轮播用于试看并决定，T035 确认轮播与悬停播放的形式；类型多样性以示例给出，故写作“spanning genres”并保留示例于 context，未把某几类定为必须。"
+      },
+      "evidence_ids": [
+        "E0012",
+        "E0013",
+        "E0014"
+      ]
+    },
+    {
+      "goal_id": "G008",
+      "statement": "Provide a play option on a preview clip so the user can jump directly to the full show.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "After the user decides to watch the previewed show."
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "预览后提供播放入口",
+          "直接进入正片"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原句在“决定要看”之后提出 play option 并直接跳回正片；保留“can probably”的建议强度与条件，未拆出独立的跳转步骤。"
+      },
+      "evidence_ids": [
+        "E0015"
+      ]
+    },
+    {
+      "goal_id": "G009",
+      "statement": "Keep undecided users on Netflix instead of losing them to YouTube, reducing churn.",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "降低 churn",
+          "留住犹豫的用户",
+          "把用户留在平台而非转向 YouTube"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原句明确断言该功能可降低退订率、留住用户并让用户留在平台，T039 进一步确认是“user retention”；这里记录的是受访者表达的期望结果，不是已验证的效果或具体指标。"
+      },
+      "evidence_ids": [
+        "E0016",
+        "E0017"
+      ]
+    },
+    {
+      "goal_id": "G010",
+      "statement": "Keep the software experience and the recommendation engine consistent over time so the service stays familiar to the user.",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G009"
+        ],
+        "reason": "受访者称赞 Netflix 在软件与推荐引擎上多年“very consistent”，并把整体熟悉感说成自己仍留在平台的原因；由此推断他希望这种一致性维持，而非仅作事实陈述。",
+        "assumptions": [
+          "“一致”指不出现明显的行为或界面变化，不排除对用户有利的新增功能"
+        ]
+      },
+      "support": {
+        "supported_parts": [
+          "软件与推荐引擎长期一致",
+          "熟悉感是继续使用的原因"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [
+          "一致性指不出现明显的行为/界面变化"
+        ],
+        "reasoning_steps": [
+          "识别评价对象为软件与推荐引擎",
+          "识别熟悉感与留存的原因关系",
+          "推断维持该状态的意图"
+        ],
+        "label": "inferred",
+        "rationale": "原文是评价（consistent、familiar）加上留存原因，没有直接说“请保持”；结合 G009 的留存意图推断出维持一致性目标。若只按字面，它只是现状描述，故标 inferred 并列出假设。"
+      },
+      "evidence_ids": [
+        "E0018",
+        "E0019"
+      ]
+    }
+  ],
+  "refinement_groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G001",
+      "child_ids": [
+        "G004",
+        "G005"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "类型轮播与相似片推荐都能让呈现更贴合需要，但两者合起来仍不覆盖按场合或无法命名的情绪选片，故只作为待确认的 AND 候选。",
+      "assumptions": [
+        "用户对类型有可命名的偏好时，类型轮播与相似推荐覆盖主要选片路径"
+      ],
+      "evidence_ids": [
+        "K0002",
+        "K0001"
+      ],
+      "relation_ids": [],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "用户明确想看纪录片或喜剧，类型轮播给出该类型片单，相似片推荐补充相近作品，用户能快速选定。",
+          "outcome": "supports",
+          "rationale": "两类子目标在该场景下共同覆盖选片需要。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "用户想按场合选片（如母亲节与母亲共看）或只有模糊情绪，类型与相似推荐可能都给不出合适候选，仍需场合型策展（见 T043）。",
+          "outcome": "counterexample",
+          "rationale": "存在两子目标合起来也不覆盖的情境，因此不能声称共同充分，组保持 proposed/partial。"
+        }
+      ]
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC029:T013",
+      "material_id": "M001",
+      "quote": "But the way they present it to me like it's. It seems to be very tailored to my needs. And what I'm like in the mood for today.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2207,
+      "end_char": 2334,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T013",
+          "segment_start": 227,
+          "segment_end": 354,
+          "start_char": 2207,
+          "end_char": 2334
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 1980,
+        "end_char": 2608
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC029:T015",
+      "material_id": "M001",
+      "quote": "Yeah, it does a very good job in matching me with the show that I want to watch.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2784,
+      "end_char": 2864,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T015",
+          "segment_start": 0,
+          "segment_end": 80,
+          "start_char": 2784,
+          "end_char": 2864
+        }
+      ],
+      "original_locator": {
+        "turn": "15",
+        "start_char": 2784,
+        "end_char": 2864
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC029:T043",
+      "material_id": "M001",
+      "quote": "they knew that it was mother's day, and they somehow they identified oh. personalized movie for my mother.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14637,
+      "end_char": 14743,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T043",
+          "segment_start": 330,
+          "segment_end": 436,
+          "start_char": 14637,
+          "end_char": 14743
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 14307,
+        "end_char": 15147
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC029:T013",
+      "material_id": "M001",
+      "quote": "I don't have to click a lot of buttons to get started to watch a movie while I'm having my meal. so it feels very convenient to use.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2408,
+      "end_char": 2540,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T013",
+          "segment_start": 428,
+          "segment_end": 560,
+          "start_char": 2408,
+          "end_char": 2540
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 1980,
+        "end_char": 2608
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC029:T017",
+      "material_id": "M001",
+      "quote": "So this is a very helpful feature that I like about Netflix is that right where I left off they I'm able to get back into it in like a very short amount of time in a very convenient manner.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4459,
+      "end_char": 4648,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T017",
+          "segment_start": 1325,
+          "segment_end": 1514,
+          "start_char": 4459,
+          "end_char": 4648
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 3134,
+        "end_char": 5715
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC029:T017",
+      "material_id": "M001",
+      "quote": "this also, it will show me how much of the episode I have already completed, and at what timestamp I am at.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4903,
+      "end_char": 5010,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T017",
+          "segment_start": 1769,
+          "segment_end": 1876,
+          "start_char": 4903,
+          "end_char": 5010
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 3134,
+        "end_char": 5715
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC029:T017",
+      "material_id": "M001",
+      "quote": "below them, there is a bunch of genres that they offer me based on my personalized content. I think they show me Bollywood. They show me critically acclaimed TV shows and other genres, basically. And they list a bunch of movies in those genres. So it becomes pretty easy for me to decide if I'm in the mood of something special, specific, like some specific genre.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5345,
+      "end_char": 5709,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T017",
+          "segment_start": 2211,
+          "segment_end": 2575,
+          "start_char": 5345,
+          "end_char": 5709
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 3134,
+        "end_char": 5715
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC029:T021",
+      "material_id": "M001",
+      "quote": "so I guess that is where Netflix shines like it is able to correctly identify what shows are in line with the similar show that I want to watch.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7058,
+      "end_char": 7202,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T021",
+          "segment_start": 658,
+          "segment_end": 802,
+          "start_char": 7058,
+          "end_char": 7202
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 6400,
+        "end_char": 7474
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC029:T021",
+      "material_id": "M001",
+      "quote": "It gives me an multiple It gives me options of multiple shows to watch so I can select my pick whatever I want to watch and then go ahead with it.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7328,
+      "end_char": 7474,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T021",
+          "segment_start": 928,
+          "segment_end": 1074,
+          "start_char": 7328,
+          "end_char": 7474
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 6400,
+        "end_char": 7474
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC029:T029",
+      "material_id": "M001",
+      "quote": "They can start recommending me the videos that I wanna watch that are in my list start recommending me like one month before they get removed.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9162,
+      "end_char": 9304,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T029",
+          "segment_start": 102,
+          "segment_end": 244,
+          "start_char": 9162,
+          "end_char": 9304
+        }
+      ],
+      "original_locator": {
+        "turn": "29",
+        "start_char": 9060,
+        "end_char": 9679
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC029:T031",
+      "material_id": "M001",
+      "quote": "Yes, yes, yes, I think that would be very helpful for me.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9858,
+      "end_char": 9915,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T031",
+          "segment_start": 0,
+          "segment_end": 57,
+          "start_char": 9858,
+          "end_char": 9915
+        }
+      ],
+      "original_locator": {
+        "turn": "31",
+        "start_char": 9858,
+        "end_char": 9915
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC029:T033",
+      "material_id": "M001",
+      "quote": "Netflix itself can start offering me a recommendation carousel, which only has like which only has a selective clip of a show that is only 2, 3Â min long, so that if I want to try a new show, I can like straight away, go to those clips and decide if that suits me",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10816,
+      "end_char": 11079,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T033",
+          "segment_start": 465,
+          "segment_end": 728,
+          "start_char": 10816,
+          "end_char": 11079
+        }
+      ],
+      "original_locator": {
+        "turn": "33",
+        "start_char": 10351,
+        "end_char": 11428
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC029:T033",
+      "material_id": "M001",
+      "quote": "those clips can have a diverse range of genres. For example, they can be funny clips. They can be suspenseful or cliffhanger clips.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11085,
+      "end_char": 11216,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T033",
+          "segment_start": 734,
+          "segment_end": 865,
+          "start_char": 11085,
+          "end_char": 11216
+        }
+      ],
+      "original_locator": {
+        "turn": "33",
+        "start_char": 10351,
+        "end_char": 11428
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC029:T035",
+      "material_id": "M001",
+      "quote": "Can be a carousal. Yeah, it can be a carousal, like, if I hover. Yeah, if I hover on a banner, it just starts playing a 2Â min video or a clip of some sort of a preview of the show. a personalized review, maybe.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11602,
+      "end_char": 11813,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T035",
+          "segment_start": 0,
+          "segment_end": 211,
+          "start_char": 11602,
+          "end_char": 11813
+        }
+      ],
+      "original_locator": {
+        "turn": "35",
+        "start_char": 11602,
+        "end_char": 11813
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC029:T033",
+      "material_id": "M001",
+      "quote": "if I want to watch them, then over there, Netflix can probably provide me with a play option, and I can directly jump back to the show that I wanna watch.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11274,
+      "end_char": 11428,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T033",
+          "segment_start": 923,
+          "segment_end": 1077,
+          "start_char": 11274,
+          "end_char": 11428
+        }
+      ],
+      "original_locator": {
+        "turn": "33",
+        "start_char": 10351,
+        "end_char": 11428
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC029:T037",
+      "material_id": "M001",
+      "quote": "So I think definitely like, this feature can help reduce the churn rate of Netflix also retain the users if they're even confused about watching a TV show or a movie. So yeah, it can help the user stay on the platform itself.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12640,
+      "end_char": 12865,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T037",
+          "segment_start": 458,
+          "segment_end": 683,
+          "start_char": 12640,
+          "end_char": 12865
+        }
+      ],
+      "original_locator": {
+        "turn": "37",
+        "start_char": 12182,
+        "end_char": 12865
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC029:T039",
+      "material_id": "M001",
+      "quote": "User retention, of course. Yes, correct.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12945,
+      "end_char": 12985,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T039",
+          "segment_start": 0,
+          "segment_end": 40,
+          "start_char": 12945,
+          "end_char": 12985
+        }
+      ],
+      "original_locator": {
+        "turn": "39",
+        "start_char": 12945,
+        "end_char": 12985
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC029:T047",
+      "material_id": "M001",
+      "quote": "I think Netflix has been very consistent with software. It has been very consistent with its recommendation engine.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16026,
+      "end_char": 16141,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T047",
+          "segment_start": 410,
+          "segment_end": 525,
+          "start_char": 16026,
+          "end_char": 16141
+        }
+      ],
+      "original_locator": {
+        "turn": "47",
+        "start_char": 15616,
+        "end_char": 16483
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC029:T047",
+      "material_id": "M001",
+      "quote": "apart from that, I think everyone, everything around Netflix seems very familiar to me. That's 1 of the reasons why I think I am very stuck to the platform.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16327,
+      "end_char": 16483,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T047",
+          "segment_start": 711,
+          "segment_end": 867,
+          "start_char": 16327,
+          "end_char": 16483
+        }
+      ],
+      "original_locator": {
+        "turn": "47",
+        "start_char": 15616,
+        "end_char": 16483
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0001",
+      "source_id": "DOC029:T021",
+      "material_id": "M001",
+      "quote": "so I guess that is where Netflix shines like it is able to correctly identify what shows are in line with the similar show that I want to watch.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7058,
+      "end_char": 7202,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T021",
+          "segment_start": 658,
+          "segment_end": 802,
+          "start_char": 7058,
+          "end_char": 7202
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 6400,
+        "end_char": 7474
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0002",
+      "source_id": "DOC029:T017",
+      "material_id": "M001",
+      "quote": "So it becomes pretty easy for me to decide if I'm in the mood of something special, specific, like some specific genre.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5590,
+      "end_char": 5709,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T017",
+          "segment_start": 2456,
+          "segment_end": 2575,
+          "start_char": 5590,
+          "end_char": 5709
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 3134,
+        "end_char": 5715
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0003",
+      "source_id": "DOC029:T037",
+      "material_id": "M001",
+      "quote": "So I think definitely like, this feature can help reduce the churn rate of Netflix also retain the users if they're even confused about watching a TV show or a movie. So yeah, it can help the user stay on the platform itself.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12640,
+      "end_char": 12865,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T037",
+          "segment_start": 458,
+          "segment_end": 683,
+          "start_char": 12640,
+          "end_char": 12865
+        }
+      ],
+      "original_locator": {
+        "turn": "37",
+        "start_char": 12182,
+        "end_char": 12865
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0004",
+      "source_id": "DOC029:T033",
+      "material_id": "M001",
+      "quote": "if I want to watch them, then over there, Netflix can probably provide me with a play option, and I can directly jump back to the show that I wanna watch.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11274,
+      "end_char": 11428,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T033",
+          "segment_start": 923,
+          "segment_end": 1077,
+          "start_char": 11274,
+          "end_char": 11428
+        }
+      ],
+      "original_locator": {
+        "turn": "33",
+        "start_char": 10351,
+        "end_char": 11428
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0005",
+      "source_id": "DOC029:T047",
+      "material_id": "M001",
+      "quote": "apart from that, I think everyone, everything around Netflix seems very familiar to me. That's 1 of the reasons why I think I am very stuck to the platform.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16327,
+      "end_char": 16483,
+      "candidate_locations": [
+        {
+          "source_id": "DOC029:T047",
+          "segment_start": 711,
+          "segment_end": 867,
+          "start_char": 16327,
+          "end_char": 16483
+        }
+      ],
+      "original_locator": {
+        "turn": "47",
+        "start_char": 15616,
+        "end_char": 16483
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "issues": [
+    {
+      "target_type": "goal",
+      "target_id": "G006",
+      "message": "下架前提醒是否还应告知该片之后在哪个平台可看？原文只说“找不到在哪个平台”，未提出由 Netflix 提供跨平台信息。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "预览片段应为正片片段、预告，还是“personalized review”？原文以 maybe 收尾，形态未定。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "“不用点很多按钮”的起点是否包含登录、选择 profile 等步骤？原文以点开影片到开始播放为语境。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G006",
+      "message": "下架前提醒是否要同时给出该片之后在哪个平台可看？原文只表达“找不到在哪个平台”，没有提出由 Netflix 提供跨平台信息。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "少点击的起点是否包含登录与选择 profile？原文以点开影片到开始播放为语境。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "预览片段是正片片段、预告还是“personalized review”？原文以 maybe 收尾，形态未定。",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "类型轮播与相似推荐是否被视为满足个性化呈现的主要方式？场合型个性化（母亲节例）不在两者覆盖内，组暂不成立。",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC029-goal-model",
+      "message": "games 仅被描述为既有功能且受访者自述不用，模型未纳入游戏相关目标，是否符合预期？",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "这组层级仍需确认，尚未作为成立的精化展示。",
+      "blocking": false
+    }
+  ],
+  "limitations": [
+    "转写稿有识别噪声（如 carousal、bread picker、3 to 4Â h），按可读语义判断，未核对音频。",
+    "全文通读一遍并按 4 轮窗口复核，未执行独立第二遍重读或他人复核。",
+    "受访者对 Netflix 现状的称赞被用作质量/维持依据，不能证明这些目标由平台承担或已被采纳。"
+  ],
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "c4ae61c1c36280cb50c66c5d762afae5d7c60d31a7d1837576155d5955bbd17f"
+    },
+    {
+      "path": "attachments/judgments.json",
+      "sha256": "3a036b4b90e3838e2848ac25936ea6b6e61268df64779c625338f4efe386c10c"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "7a83fb5d6371761614b085555fe6a35dcfa69a14f322e614cf098d76da1b6ee3"
+    },
+    {
+      "path": "attachments/kaos-decisions.json",
+      "sha256": "23182a93fde1ff5466015ee690a46f15b8bc534612849af07bd0995a6ee10322"
+    }
+  ],
+  "review": {
+    "status": "pending"
+  },
+  "changes": [],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G007",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "用户因犹豫看什么而可能转向 YouTube"
+      ],
+      "assumptions": [],
+      "rationale": "受访者明确说片段预览功能可降低 churn、留住犹豫用户并让其留在平台；这是有帮助的贡献，不声称足以保证留存。",
+      "evidence_ids": [
+        "K0003"
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G007",
+      "target_id": "G008",
+      "type": "precedes",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先看片段再做决定，决定后才用 play option 进入正片；原句顺序与条件都指向先后关系，而非因果充分。",
+      "evidence_ids": [
+        "K0004"
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G010",
+      "target_id": "G009",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "受访者说长期一致的软件/推荐引擎与整体熟悉感是他仍“stuck to the platform”的原因之一，故对留存有贡献；未声称一致即可保证留存。",
+      "evidence_ids": [
+        "K0005"
+      ]
+    }
+  ],
+  "source_binding": {
+    "sha256": "7a83fb5d6371761614b085555fe6a35dcfa69a14f322e614cf098d76da1b6ee3"
+  }
+}

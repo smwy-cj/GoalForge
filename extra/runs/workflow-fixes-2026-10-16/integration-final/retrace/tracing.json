@@ -1,0 +1,109 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-fixes-2026-10-16\\integration-final\\revision\\retrace-input.json",
+    "sha256": "2f6718e1ae8fb9dfcb4b7e3782f180b5bf41530e420c35f914e530794b1d6857",
+    "model_version": "goalforge-extraction-draft-2"
+  },
+  "target_model": {
+    "model_id": "FIX-goal-model",
+    "version": "v0.1.h1",
+    "core_sha256": "36f92e725cd854ae6d25aba3e93fea90efff56793ff05f32bb838f4840f412d1"
+  },
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "b372ee04d8320561e48d54a98c5c25718e40cab36cc85f701542a9042ed456d8",
+      "input_sha256": "2f6718e1ae8fb9dfcb4b7e3782f180b5bf41530e420c35f914e530794b1d6857"
+    },
+    "bundle_sha256": "7e3fd73b0153f33b8ae408de0e618d9fcd6188be16724f99cca5c312b92f2db4"
+  },
+  "sources": [
+    {
+      "document_id": "FIX",
+      "expected_hash": "d80c8f962e0199bfd6dc43db7bd7e2598901925c268775eee420813ba7cd081b",
+      "actual_hash": "d80c8f962e0199bfd6dc43db7bd7e2598901925c268775eee420813ba7cd081b",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "FIX-G001",
+      "target_kind": "goal",
+      "statement": "根据天气安排活动",
+      "document_id": "FIX",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "FIX:S001",
+          "material_id": "M001",
+          "quote": "使用者：我希望根据天气合理安排活动。",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 0,
+          "end_char": 18,
+          "candidate_locations": [
+            {
+              "source_id": "FIX:S001",
+              "segment_start": 0,
+              "segment_end": 18,
+              "start_char": 0,
+              "end_char": 18
+            }
+          ],
+          "original_locator": {
+            "line_start": 1,
+            "line_end": 1,
+            "start_char": 0,
+            "end_char": 18
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "FIX:S001"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [
+          "根据天气安排活动"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "重新阅读合成原句，删除修饰词后的新表述仍受支持；未沿用旧判断。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "根据天气安排活动",
+        "label": "direct",
+        "rationale": "重新阅读合成原句，删除修饰词后的新表述仍受支持；未沿用旧判断。",
+        "supported_parts": [
+          "根据天气安排活动"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "仅处理候选中 category=goal 的目标；其他诊断项仍留在提取产物中。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\workflow-fixes-2026-10-16\\integration-final\\new-judgments.json",
+    "sha256": "9e5cbe7c180f47b575df1d5323203e4bc250c73365fa6f720f955f1c769559a1"
+  }
+}

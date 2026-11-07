@@ -1,0 +1,138 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "ac273b7eb1b2fb828ab0c168cef3eade955b39ad4a9260f00260b7563d0326b7",
+    "judgments_sha256": "38d862472f7a89d76b3bd4594ac8f0f16af0ae044d88ac34a59e5ebc96f37441"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【specialization 已检查但无依据】逐窗核对全部目标对，未提取出成对的'一般目标 / 具体情境目标'关系：G001/G005/G006 为并列的不同购物用例而非一般-具体；G007 为新地方情境但无对应一般父目标。不为凑层级造泛化根，故不建 specialization 联系。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【operationalization 已检查但无依据】除 R1(G012→G011)、R3(G014→G015) 外，其余'方式→目的'候选（T012 找不到时加地点名再搜、T052 情人节期间保持登录、T058 电话询价等）均为同一目标内的操作步骤或现有流程，未形成独立目标端点；按联系发现规则不把操作先后/步骤当联系，故不建。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【contribution 已检查但无依据】除 R2(G013→G011) 外，'搜索结果下拉可复用过去供应商'、'搜索按地区返回供应商'、'社交内容促成购买(T032)' 等均为现状能力/正面评价或观察，缺独立目标端点或仅同主题相关；相关/相似不构成贡献联系，故不建。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【precedes 已检查但无依据】回查 T010/T024/T058 的流程顺序（搜索→看联系方式→联系→询价→付款→确认地址→等待→取货），'then/once' 均为涉众现有操作流程的步骤顺序，不是两个目标结果之间的先后声明；按规则不将操作先后当作 precedes 联系，故不建。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【AND 精化组 已检查但无依据】检查 G011 是否由 {G012 先交货再付款, G013 画廊判断} 共同满足足以实现：两者是避免被骗的两种方式/帮助，原文未声称二者共同充分（仍有其他诈骗手法与其他判断方式），不能声称'共同满足足以实现父目标'；故不建 supported+complete 组，也不为凑边扩写目标。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【AND 精化组 已检查但无依据】检查 G015 是否由 {G014 私密账户} 或其他组合精化：单子目标不构成 AND 组，且原文无共同充分性声明；G008/G009/G010 等为独立愿望/维持目标，彼此无'共同满足足以实现'的父子关系；故不建组。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【AND 精化组 场景检查 已检查但无依据】supported+complete 组需至少一条 normal 与一条 exception 场景、全部 outcome=supports、所有端点支持有效、所有依赖联系 supported；原文仅提供单次事件（T014 恶意账户一次经历、T062 省过一次钱），不足以证明任一组的共同充分性。无任何成立组，groups 为空是判断结果而非跳过判断。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G017",
+      "message": "【待确认】G017（商家页面应标价）为 insufficient：T058 涉众先提议 'should put'，随即自我让步'若标价则人们不再询价、商家失去定价反馈'。请人工判断涉众最终是否希望标价，以及该要求针对商家还是平台。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【相反证据/校正 已检查】采访者 T061 总结的 'ranking / 排名系统' 被涉众 T062 明确纠正为 'It doesn't really run'；不据采访者总结提取'排名/声誉系统'目标，也不据此建立联系。采访者 T059/T061 总结仅经涉众泛泛确认（T072/T074），不逐项升级为涉众目标。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【范围不确定 已检查】T071 采访者提出 'anonymous browsing or anonymous posting'，涉众 T072 仅泛泛 'Yeah. Yes.'；涉众此前只表达匿名浏览/不被人知道在线（T024）且账户私密（T026），未表达匿名发帖。'匿名发帖'无独立依据，不升级为目标；保留不确定。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【相反证据 已检查】T014 涉众称'必须联系商家'这种方式 'I'm sure it's definitely good that way, especially like my side of the world'，未要求改为像 Amazon 那样直接刷卡下单；不提取'去掉手动联系/直接下单'的改善目标。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC036-goal-model",
+      "message": "【排除项 已检查】T034 无限滚动/追动态 'addictive and very time consuming'、T036 关注名人 'irrelevant'、T044 群组/标签 'not the same thing' 等为抱怨、偏好评价或现状描述，按目标边界不自动成为要求或障碍，未提取目标；其可能关联的'避免耗时/避免沉迷'仅作问题保留，无明确意图依据不建节点。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G012",
+      "target_id": "G011",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "在 Instagram 购物、需向商家付款的情境下"
+      ],
+      "assumptions": [],
+      "rationale": "T014 涉众明确把'没丢钱'归因于坚持先交货再付款（'I didn't lose my money, because ... you have to deliver before I pay you'）；G012 是 G011（避免被恶意账户骗钱）的选定实现方式。仅为方式→目的，不声称该方式单独充分，也不把操作先后当精化。两端目标均为 direct。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC036:T014",
+          "quote": "I didn't lose my money, because maybe I was very wise to understand that. You know you have to deliver before I pay you.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G013",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "通过商家画廊的点赞/评论可判断账户可信时"
+      ],
+      "assumptions": [],
+      "rationale": "T062 'It just helps me to know which accounts ... I should buy from, and I should not buy from' 且 'it saved me some money actually'，T024 也说画廊互动 'helped me to spot ... malicious account'；G013 对 G011（避免被恶意账户骗钱）有帮助但未证明充分，按 contribution 而非精化。两端目标均为 direct。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC036:T062",
+          "quote": "It just helps me to know which accounts are probably good and which ones are not good I should buy from, and I should not buy from.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC036:T062",
+          "quote": "And it saved me some money actually with, there was one account.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G014",
+      "target_id": "G015",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "在自己的账户上发布内容/在线状态的情境下"
+      ],
+      "assumptions": [],
+      "rationale": "T026 'So it kind of helps to weed away ... people preying on your life' 中的 'it' 经全篇回查指代前文的私密账户安排（make sure I have a private account / only very close friends see my posts and online status）；G014 是 G015（谨慎发布、避免被人盯上）的选定方式。仅为方式→目的，不声称单独充分。两端目标均为 direct。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC036:T026",
+          "quote": "So it kind of helps to weed away the the the evils of you know, people preying on your life and on social media and all of that stuff.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

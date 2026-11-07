@@ -1,0 +1,160 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "a94ede93df9911de9dd8d71116aec599b0ea31b8b9e408e8680792fcf124d4b5",
+    "judgments_sha256": "0e03fb64c262bb34a8632b0b85da87c3c98a635dd99871a9da92adb02213816d"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G017",
+      "child_ids": [
+        "G001",
+        "G006"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "若推荐按兴趣给出相关内容、且文章短而全面，则“量少但相关且全、时间短”的聚合成功标准在典型情形下可被共同满足；但原文未给出覆盖完整性的保证，也无首次使用（无历史行为）时的替代路径，故只作候选组，不声称共同充分。",
+      "assumptions": [
+        "用户已有可用的阅读行为/兴趣资料",
+        "绝大多数相关事件存在可压缩为短文的内容"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC035:T035",
+          "quote": "It should provide not a lot, but it should provide all the relevant information",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R1",
+        "R2"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "某科技公司发布新 AI 模型：推荐按既有兴趣推出该新闻（G001），文章为覆盖要点的短文（G006），用户数分钟内读完。",
+          "outcome": "supports",
+          "rationale": "在该情形下 G017 的三项要素（相关、量少、时间短）均被满足。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "新用户没有任何阅读历史，或某相关事件只有千字长文、无可压缩版本。",
+          "outcome": "unknown",
+          "rationale": "原文未说明冷启动如何获得兴趣资料，也未要求所有文章都有短文版本；这两点会使共同充分性不成立，故完整性记为 partial。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "是否需要补充“聚合需覆盖多来源/多话题”的目标，才能主张 GR1 的共同充分性？当前原文只给出定性成功标准。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC035",
+      "message": "原文没有总体目的句，是否需要一根“高效获取个性化新闻”的根目标？当前未造根，保留多根结构。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "“不要推送议程”是否与 G001 的个性化推荐存在张力（需知道兴趣才能推荐）？原文未给出取舍规则。"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R1",
+      "message": "G001 只是 G017 相关性部分的手段，若后续补入覆盖性目标，R1 是否应改为 operationalization？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G001",
+      "target_id": "G017",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "兴趣匹配的推荐覆盖了成功标准中“与我的兴趣相关”的部分"
+      ],
+      "rationale": "G001 让推荐贴合兴趣与阅读行为，直接支撑 G017 所定义的成功标准中“与我兴趣相关的相关信息”这一半；但不保证覆盖全部相关新闻，故只记为贡献而非充分实现。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC035:T035",
+          "quote": "relevant information compared with my interest in a short amount of time",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G006",
+      "target_id": "G017",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "更短但全面的文章减少了单位信息量的阅读时间"
+      ],
+      "rationale": "G006 缩短文章并保持全面，使 G017 要求的“量不多、时间短”可得；原文明确把千字长文在有限时间内低效作为动机，故为有依据的贡献。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC035:T013",
+          "quote": "reading an article of, say a thousand words in a limited in a limited amount of time is not, is not very possible, is not very efficient",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G012",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "对象限定为突发新闻（breaking news）"
+      ],
+      "assumptions": [
+        "突发新闻属于需要及时到达的新闻事件的特例"
+      ],
+      "rationale": "G012 是 G002 在突发新闻情境下的具体目标，但时限更严（当天结束前），属于更窄情境的具体化，不声称覆盖 G002 的全部适用范围。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC035:T037",
+          "quote": "it should at least give me all the breaking news from the from the day by the end of the day, instead of giving it to me 4 days later",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G005",
+      "target_id": "G012",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "通知量受控后重要/突发新闻更不易被淹没"
+      ],
+      "rationale": "原文说明通知刷屏会导致错过重要新闻，故控制通知量有助于当天突发新闻被看到；只是有帮助，不保证到达。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC035:T021",
+          "quote": "it leads to it leads to missing some important news",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

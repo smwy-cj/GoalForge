@@ -1,0 +1,1920 @@
+--- before/README.md
++++ after/README.md
+@@ -11,13 +11,14 @@
+ - [查看目标模型并给意见](docs/06-人工审核界面与反馈处理说明.md)
+ - [三项 Skill 输入与输出](docs/05-Skill输入与输出说明.md)
+ - [Skill 首轮优化修改对照](docs/16-Skill初步修改内容对照.md)
++- [论文方法三阶段优化交付与验收](docs/19-三阶段优化交付与验收.md)、[2026.10.26技能安装包](dist/goalforge-2026-10-26/goalforge-skills.zip)
+ - [实现与验证状态](docs/03-Skills实施进度.md)
+ - [研究范围](docs/01-初步研究方案与阶段决策.md)、[数据集](docs/12-最终采用数据集说明.md)
+ 
+ ## 当前规范
+ 
+-使用者只需提供资料，查看有向无环目标图，对目标或层级给意见。底层采用 KAOS 核心子集：共同满足的子目标组成一个精化组，同一父目标的多个完整组表示替代方案。原文依据和必要条件按需展开。
++使用者只需提供资料，查看目标图、目标清单与独立联系，对目标、联系或层级给意见。底层采用 KAOS 核心子集：共同满足的子目标组成一个精化组，同一父目标的多个完整组表示替代方案。范围具体化、实现方式、贡献和过程先后另存为有类型的联系。原文依据和必要条件按需展开。
+ 
+ 主要交付为 HTML、机器 JSON、简短 Markdown 和证据附件；SVG 按需取出。当前模型由所在 Harness 的模型编制判断，Python 工具执行定位、版本核验、图结构检查和导出。结构通过不保证语义正确，也不代替人工决定。
+ 
+-项目源 Skill 位于 `skills/`。安装后应在应用中确认实际加载位置；当前不假定全局安装已完成。
++项目源 Skill 位于 `skills/`，2026.10.26版本已安装至本项目`.agents/skills`，文件与发布快照及实际Python导入路径已核对。应用自动发现仍应在新任务中确认；当前未进行全局安装。
+--- before/docs/03-Skills实施进度.md
++++ after/docs/03-Skills实施进度.md
+@@ -1,4 +1,6 @@
+ # 实现与验证状态
++
++2026-10-26 更新：论文方法三阶段优化已交付，详见[交付与验收](19-三阶段优化交付与验收.md)。提取增加分窗候选、全篇校正、一目标一核心动作及覆盖审计；kaos-2增加独立联系、场景检查、依赖失效与三种审核视图。八篇每分支两轮生成和源文优先的匿名模型评审完成；这是开发比较，非人工Gold。125项Python、13项JavaScript、19项真实浏览器检查通过，34份旧模型兼容通过。三个技能已发布并安装至项目`.agents/skills`，实际导入路径及44份文件与发布快照一致；本聊天热重载未作断言。下述日期记录保留为历史状态。
+ 
+ 记录日期：2026-10-18。功能以实际代码、文件和执行记录为依据。
+ 
+--- before/docs/05-Skill输入与输出说明.md
++++ after/docs/05-Skill输入与输出说明.md
+@@ -4,8 +4,8 @@
+ 
+ | Skill | 输入 | 机器交接 | 用户看到 |
+ |---|---|---|---|
+-| goal-extraction | 原件、范围、主体；或已有目标与源文；或修订任务/真实反馈 | extraction.json、忠实源文与位置映射；judgments.json、tracing.json | 短清单、影响判断的疑点，依据按需展开 |
+-| goal-model-building | 目标、支持判断、精化包与必要反馈 | 模型、精化组、证据、版本及清单 | 有向无环目标图、短说明；模型 JSON 与 SVG 可取出 |
++| goal-extraction | 原件、范围、主体；或已有目标与源文；或修订任务/真实反馈 | extraction.json、忠实源文与窗口；候选及覆盖记录；judgments.json、tracing.json | 一目标一核心动作的清单、影响判断的疑点，依据按需展开 |
++| goal-model-building | 目标、支持判断、联系/精化判断包与必要反馈 | 模型、独立联系、精化组、证据、版本及清单 | 有向无环目标图、目标联系、短说明；模型 JSON 与独立 SVG 可取出 |
+ | model-review | 当前模型、实际附件与用户意见 | 检查报告、反馈与受影响对象待办 | 必要问题、意见保存状态与修改说明 |
+ 
+ ## 文件职责
+@@ -13,12 +13,15 @@
+ - `extraction.json`：只列目标及依据、条件、推断和待确认问题；schema 为 goalforge-extraction-3。
+ - `judgments.json`：绑定实际目标输入的语义支持判断；schema 为 goalforge-semantic-judgments-1。
+ - `tracing.json`：只读核验的定位与完整语义支持结果；schema 为 goalforge-tracing-draft-1。
+-- `kaos-decisions.json`：绑定提取与支持包的精化组、假设、关系原句与问题；schema 为 goalforge-kaos-decisions-1。
+-- `goal-model.json`：可复用机器模型；schema 为 goalforge-kaos-1。
+-- `inspection.json`：实际执行的检查报告；schema 为 goalforge-kaos-check-1。
++- `source-windows.json`、`raw-candidates.json`、`extraction-ledger.json`：分窗、原始候选及每项最终去向，见[覆盖契约](../skills/goal-extraction/references/coverage-contract.md)；不替代语义支持判断。
++- `kaos-decisions.json`：绑定提取与支持包的联系、精化组、场景、假设、原句与问题；新任务 schema 为 goalforge-kaos-decisions-2。
++- `goal-model.json`：可复用机器模型，区分独立联系与成立精化；新任务 schema 为 goalforge-kaos-2。
++- `inspection.json`：实际执行的检查报告；新任务 schema 为 goalforge-kaos-check-2。
+ - `goal-model.html`、`goal-model.md`：来自同一模型的审核界面与短说明；SVG 按需生成。
+-- `review-feedback*.json`：用户意见与未完成草稿；schema 为 goalforge-simple-feedback-1。
+-- `revision-request.json`：真实反馈的处理范围与待办；schema 为 goalforge-kaos-revision-request-1。
++- `review-feedback*.json`：用户对目标、联系或组的意见与未完成草稿；新任务 schema 为 goalforge-simple-feedback-2。
++- `revision-request.json`：真实反馈的处理范围与待办；新任务 schema 为 goalforge-kaos-revision-request-2，含受影响联系及组。
++
++历史v1模型及对应判断/反馈/检查继续兼容；不自动升级或混用反馈。明确迁移步骤见[建模工具](../skills/goal-model-building/references/tools.md)。SVG分别导出成立精化图goal-model.svg和目标联系goal-relations.svg。
+ 
+ 文件名可加任务或版本后缀，schema 与绑定值不能凭文件名推断。原始资料、完整附件、模型与意见应保留在交付目录，用户通常只需打开 HTML。
+ 
+--- before/docs/06-人工审核界面与反馈处理说明.md
++++ after/docs/06-人工审核界面与反馈处理说明.md
+@@ -14,14 +14,18 @@
+ - 同一目标只画一次，可接受多个上层引用；没有依据的层级不连线，待确认建议另列问题。
+ - 点目标查看完整描述与原文；点连接点审核层级理由。可放大、适应宽度，或切换目标清单。
+ 
++新版可切换到“目标联系”，查看范围具体化、实现方式、有助于和过程先后。每项标明“有依据的联系／待确认联系／已否定联系”，点击查看原文、条件及理由并单独给意见。有帮助或操作先后都不表示足以实现上层目标；已否定记录只供回查，不当作有效联系。
++
+ ## 给出意见
+ 
+ 1. 选择“可以／需要修改／暂不确定”，必要时用自己的话说明原因。
+-2. 点击“保存意见”。目标内容与精化组分别记录，未填写不自动当成认可。
++2. 点击“保存意见”。目标内容、目标联系与精化组分别记录，未填写不自动当成认可。
+ 3. 有遗漏或整体建议时，在页面底部补充；允许只提交部分意见。
+ 4. 点击“导出审核意见→保存文件”，把审核 JSON 附回对话，或明确授权助手读取页面显示的保存路径。
+ 
+ 本地预览保存成功会返回 exports 下的实际文件路径；普通静态 HTML 只能发起浏览器下载请求。没有收到文件时用“复制完整内容”粘贴给助手，或“查看文本”手动保存。模型文件与审核意见分开取出，模型视图不包含原件备份。
++
++导出模型时可分别选择“目标层级SVG”和“目标联系SVG”；JSON与短说明保留同一模型中的联系及状态。旧版模型继续使用对应旧版意见包，不能直接导入新版。
+ 
+ ## 保留与恢复
+ 
+--- before/docs/07-完整流程操作手册.md
++++ after/docs/07-完整流程操作手册.md
+@@ -6,13 +6,14 @@
+ 
+ ```text
+ 提供原件与范围
+-→ 忠实读取并提取目标
++→ 忠实读取，分窗捕获并全篇校正
++→ 按一目标一核心动作整理，回查候选去向
+ → 核对原文和语义支持
+-→ 组织 KAOS 精化组
++→ 发现类型明确的目标联系，再核验 KAOS 精化组
+ → 检查实际模型和附件
+ → 交付目标 DAG、JSON、短说明
+ → 用户给意见并导出
+-→ 回查受影响目标/组，重建与复检
++→ 回查受影响目标/联系/组，重建与复检
+ → 用户审核修订结果
+ ```
+ 
+@@ -42,6 +43,10 @@
+ 
+ 用户主入口为 HTML，有向无环图与目标清单可切换，原文和精化理由可点击查看。机器 JSON、短 MD、实际证据附件与清单保留；SVG 可按需取出。文字保持简短，但主体、否定、时限和数量不能因简洁而丢失。
+ 
++新版增加独立“目标联系”视图，分别显示范围具体化、实现方式、贡献和过程先后，并标明有依据、待确认或已否定。联系可单独审核；有帮助不表示充分实现父目标。层级SVG与联系SVG分开导出。
++
++新任务默认v2，旧v1只读兼容和按原版本修订；明确升级使用upgrade-template与--migrate-from。拆分目标后单独核验证据和条件；目标或关系变化后重评相关联系及精化组。
++
+ 模型、意见和检查相互绑定当前内容。每次输出使用新路径，已有文件不覆盖。普通用户无需阅读哈希、判断包或检查细项。
+ 
+ ## 工具执行
+--- before/docs/10-主流Harness安装与使用指南.md
++++ after/docs/10-主流Harness安装与使用指南.md
+@@ -5,6 +5,17 @@
+ ## 安装
+ 
+ 将项目 skills 下的 goal-extraction、goal-model-building、model-review 三个完整目录复制到所用应用的项目发现位置，保持同级、目录名和全部 scripts/references/assets。证据核验实现已包含在 goal-extraction，无需安装旧 goal-tracing 目录。
++
++维护者可用本项目发布工具冻结版本、核对压缩包及实际加载脚本位置：
++
++```text
++python scripts/release_skills.py build skills dist/goalforge-2026-10-26 --version 2026.10.26-kaos2
++python scripts/release_skills.py verify dist/goalforge-2026-10-26
++python scripts/release_skills.py install dist/goalforge-2026-10-26 .agents/skills
++python scripts/release_skills.py verify-installed dist/goalforge-2026-10-26 .agents/skills
++```
++
++输出已存在时使用新路径；安装遇到已有同名技能会拒绝覆盖，先保留并核对既有修改。该工具验证实际文件及Python导入路径，不代表当前应用会话已经重新加载技能；应用发现仍按下文核对。
+ 
+ | 应用 | 项目位置 | 个人位置 |
+ |---|---|---|
+--- before/docs/17-借鉴论文的Skills优化方案.md
++++ after/docs/17-借鉴论文的Skills优化方案.md
+@@ -1,8 +1,8 @@
+ # 借鉴论文方法与建模代码的 Skills 优化方案
+ 
+-日期：2026-10-25。状态：第一批兼容改动已落实到仓库 skills，完成工程验证；尚未安装到应用发现目录，也未执行新的真实资料生成实验。第二批关系契约及第三批受控比较待实施。具体改动及验收范围见[第一阶段实施记录](18-论文方法优化第一阶段实施记录.md)。下文保留整体设计及尚待完成的语义验收要求。
++方案日期：2026-10-25；完成更新：2026-10-26。三批修改、八篇两轮开发比较、回归验收、打包和项目级安装均已完成，见[三阶段交付与验收](19-三阶段优化交付与验收.md)。实际比较采用上下文隔离运行与源文优先的匿名模型评审；精确模型参数和等预算控制不可获得，因此是描述性开发比较，不宣称严格受控实验或人工Gold。下文保留方案设计；与实际实施不一致的实验设想以交付记录为准。
+ 
+-补充实施状态（用户已确认）：第2.4节的“一目标一核心动作”已落实到仓库的提取、复核及建模交接规则，最终输出契约保持兼容。三个技能结构校验与14项覆盖回归通过；真实资料重新生成和独立语义验收仍待执行。详见[本次补充实施记录](../runs/skill-optimization-2026-10-25-atomic-action/实施记录.md)。第一阶段验证记录对应补充前版本。
++补充实施状态（用户已确认）：第2.4节的“一目标一核心动作”已落实到提取、复核及建模交接规则；真实资料比较也已执行。最终提取保持extraction-3，建模增加兼容v1的kaos-2。早期14项覆盖回归及第一阶段记录分别对应当时版本，见[第一阶段实施记录](18-论文方法优化第一阶段实施记录.md)和[动作粒度补充记录](../runs/skill-optimization-2026-10-25-atomic-action/实施记录.md)；最终验收为125项Python、13项JavaScript测试及三项技能结构检查通过。
+ 
+ 依据：当前三项 skills、冻结的新版技能快照、作者固定提交 `16c4ce8bed513bbfdada7ac900ba6b718617a6eb` 的 study1 代码，以及[新版559项目标比较](../runs/codex-comparison-revised-2026-10-25/新版与论文对比.md)。
+ 
+@@ -182,7 +182,7 @@
+ 
+ 主要代价：窗口与多轮调用增加成本、重复候选和整理负担；更细目标增加图复杂度；辅助关系要求整条工具链升级。以可配置轮次、局部复查、阅读折叠和分阶段兼容控制代价，不先为全部34篇启动昂贵重复实验。
+ 
+-现阶段优先实施第一批，再做第二批。先改善提取单元和可追溯覆盖，才能判断层级不足到底是缺节点、联系遗漏，还是充分性证据确实不足。
++三批实施现已完成：细化提取单元和覆盖追踪，保存独立目标联系，再完成比较与发布。实际资料中的候选精化组仍未达到成立条件，未为增加层级而提升状态；后续人工审核或严格预算实验不属于本次已完成验收的替代品。
+ 
+ ## 来源
+ 
+--- before/docs/19-三阶段优化交付与验收.md
++++ after/docs/19-三阶段优化交付与验收.md
+@@ -0,0 +1,73 @@
++# 三阶段技能优化交付与验收
++
++完成日期：2026-10-26。三阶段代码、开发验证、打包及项目级安装已完成。研究目录沿用开始工作时的2026-10-25命名；暂停前后的首次结果、失败记录和修订均保留。
++
++| 阶段 | 已完成 |
++|---|---|
++| 提取 | 忠实分窗、全篇校正、一目标一核心动作、候选处置与覆盖审计；保留条件、语气、例外和明确方式 |
++| 建模与复核 | kaos-2独立联系、严格精化组、正常/异常场景、依赖失效、明确v1迁移、三种视图、独立联系导出及反馈重评 |
++| 比较与发布 | 八篇每分支两次隔离前向运行、源文优先的匿名模型评审、固定目标集验证、真实浏览器、完整回归、冻结安装包与实际加载路径核对 |
++
++最终提取仍为goalforge-extraction-3，模型与判断包升级为kaos-2；旧v1继续可读、可检查、可导出。技能不执行模型生成的Python，语义判断由助手编制，程序检查真实文件、引用、版本和约束。
++
++## 现在的使用方式
++
++- [目标提取入口](../skills/goal-extraction/SKILL.md)：先捕获，再校正与整理，逐项记录候选去向。
++- [建模入口](../skills/goal-model-building/SKILL.md)：先保存范围具体化、实现方式、贡献和过程先后，再验证充分精化组。
++- [复核入口](../skills/model-review/SKILL.md)：目标、联系、组分别检查与审核。
++- [安装包](../dist/goalforge-2026-10-26/goalforge-skills.zip)、[版本与文件清单](../dist/goalforge-2026-10-26/manifest.json)。
++
++版本为`2026.10.26-kaos2`，包含三个技能的44个文件，已安装到`.agents/skills`。项目安装核对了实际Python导入路径与发布快照。当前聊天的技能自动发现/热重载未作断言；新任务按[安装指南](10-主流Harness安装与使用指南.md)核对实际入口，也可明确指定本项目技能路径。
++
++HTML提供成立精化图、目标清单和独立目标联系视图；联系有类型、方向、状态、条件、理由和原文，可单独给意见。JSON/MD保留全部记录，层级与联系SVG分别导出。待确认与已否定记录保留原状态，未审核内容仍待审。
++
++## 真实资料开发比较
++
++使用DOC003、DOC010、DOC013、DOC020、DOC023、DOC031、DOC028、DOC036。两分支分别使用冻结基线技能与本次实验技能，每分支两次上下文隔离运行。评审者先只读原文，冻结129条意图和279处引文，再评32份去组别标签模型，共核对516次意图、683个目标、193项联系和45个候选组。结构差异仍可能暴露方法特征。
++
++| 运行 | 目标 | 独立联系 | 候选精化组 | 成立组 | 129条清单完整对应 | 建议修改目标 | 建议修改联系 |
++|---|---:|---:|---:|---:|---:|---:|---:|
++| 基线首次 | 119 | 0 | 9 | 0 | 97 | 10 | 0 |
++| 新版首次 | 216 | 117 | 15 | 0 | 110 | 4 | 5 |
++| 基线重复 | 139 | 0 | 12 | 0 | 95 | 6 | 0 |
++| 新版重复 | 209 | 76 | 9 | 0 | 114 | 0 | 2 |
++
++新版重复另有1项联系被评为不确定。完整/部分/未对应分母、逐目标与逐联系判断见[开发对比](../runs/skill-optimization-2026-10-25-complete/evaluation/对比结果.md)及[绑定后的计数](../runs/skill-optimization-2026-10-25-complete/evaluation/metrics.json)。这里的基线是冻结技能重新运行的结果，不是把历史旧输出直接拿来算收益。
++
++| 文档 | 基线目标：首次/重复 | 新版目标：首次/重复 |
++|---|---:|---:|
++| DOC003 | 23/30 | 49/46 |
++| DOC010 | 11/13 | 23/22 |
++| DOC013 | 15/14 | 25/24 |
++| DOC020 | 21/24 | 38/39 |
++| DOC023 | 9/10 | 15/15 |
++| DOC028 | 15/16 | 25/25 |
++| DOC031 | 10/12 | 15/13 |
++| DOC036 | 15/20 | 26/25 |
++
++目标增加主要体现粒度与所记录内容变化，不能据此认定准确率提高，也不以接近论文目标数为成功标准。所有运行的成立精化组仍为0，源文不足的充分性候选保留partial/proposed；新增联系单独表达有据联系，没有被强行升级为充分关系。
++
++## 发现的问题与处理
++
++首次新版仍有示例被固化、已选搜索/私信方式只留在解释中、重复质量愿望被单列，以及联系端点/先后含义不一致。已据此补强目标边界、提取逆查、联系发现和语义复核规则，使用泛化判断而不把文档答案塞进生产提示。
++
++这些补充发生在评估之后，因此上述数据描述冻结的实验版本，不冒充最终补充规则的重新盲测成绩。逐项问题和源文清单errata原样保留。DOC003生成方自检另存51目标修订版，首次49目标仍参加比较，不以修订替换首次样本。
++
++独立技术验收还复现了页面模板字面串被再次替换导致HTML损坏的问题，已改为只替换原模板的一次处理，并加v1/v2回归；[失败复现](../runs/skill-optimization-2026-10-25-complete/technical-review/baseline-acceptance/placeholder-collision-result.json)保留。
++
++## 工程验收
++
++- 最终125项Python测试、13项JavaScript测试通过；三个正式技能结构校验通过。
++- 真实Chrome中19项页面操作检查通过：v1兼容、独立联系视图、状态展示、表单、意见版本和SVG内容。
++- 既有34份v1模型全部兼容核验通过，原文件与附件不变。
++- 固定同一组目标，对8篇分别构建仅精化v1与带联系v2，目标内容完全一致；每种确定性重建3次哈希一致。这是工程重复，不当作额外模型采样。
++- 发布包在无旧goal-tracing的隔离安装中实际执行15条工具操作，跑通覆盖、支持、v2交付及合成意见后的重评/重建，实际加载路径来自安装目录。
++- 包清单、压缩包、源技能和项目安装的44份文件一致；已有同名技能目录的覆盖会被拒绝。
++
++验证文件入口：[浏览器](../runs/skill-optimization-2026-10-25-complete/browser-verification.json)、[历史兼容](../runs/skill-optimization-2026-10-25-complete/legacy-compatibility.json)、[固定目标](../runs/skill-optimization-2026-10-25-complete/fixed-goal-modeling.json)、[隔离完整流程](../runs/skill-optimization-2026-10-25-complete/isolated-release-workflow-2/verification.json)、[项目安装回执](../runs/skill-optimization-2026-10-25-complete/project-install-receipt.json)。
++
++## 证据边界
++
++八篇为已接触开发数据；精确模型版本、温度、token、费用及等预算控制不可获得，均如实unknown。两个上下文隔离样本只作描述性对比，不宣称统计独立、显著性、严格消融或普遍提升。源文清单与语义复核来自隔离模型评审者，非人工Gold；不计算标准precision/recall/F1。
++
++实际独立评审另存于绑定文件；inspect自身只执行工程检查，其independent_semantic=not_run没有被手改为通过。形式证明和真实人工采纳均未执行，模型与修订仍人工待审。未改写原output/output1、冻结首次结果或旧模型；原文及所有意见身份继续按版本绑定。
+--- before/scripts/release_skills.py
++++ after/scripts/release_skills.py
+@@ -0,0 +1,118 @@
++"""Build, verify and install an exact three-skill release without overwriting edits."""
++import argparse
++import hashlib
++import json
++import shutil
++import subprocess
++import sys
++import tempfile
++import zipfile
++from pathlib import Path, PurePosixPath
++
++SKILLS = ('goal-extraction', 'goal-model-building', 'model-review')
++
++
++def sha(raw):
++    return hashlib.sha256(raw).hexdigest()
++
++
++def encode(data):
++    return (json.dumps(data,ensure_ascii=False,indent=2,allow_nan=False)+'\n').encode('utf-8')
++
++
++def require(condition, message):
++    if not condition: raise ValueError(message)
++
++
++def skill_files(root):
++    files={}
++    for name in SKILLS:
++        require((root/name/'SKILL.md').is_file(),'Missing skill: '+name)
++        for path in sorted((root/name).rglob('*')):
++            if path.is_file() and '__pycache__' not in path.parts and path.suffix!='.pyc':
++                require(not path.is_symlink() and (root/name).resolve() in path.resolve().parents,'Unsafe skill file')
++                files[path.relative_to(root).as_posix()]=path.read_bytes()
++    return files
++
++
++def build(source, output, version):
++    source,output=Path(source).resolve(),Path(output).resolve()
++    require(not output.exists(),'Use a new release directory')
++    require(isinstance(version,str) and version.strip(),'Release version required')
++    files=skill_files(source)
++    manifest=dict(schema_version='goalforge-skills-release-1',version=version,skills=list(SKILLS),
++                  files=[dict(path='skills/'+name,sha256=sha(raw)) for name,raw in files.items()])
++    output.mkdir(parents=True)
++    for name,raw in files.items():
++        target=output/'skills'/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
++    manifest_raw=encode(manifest);(output/'manifest.json').write_bytes(manifest_raw)
++    with zipfile.ZipFile(output/'goalforge-skills.zip','x',compression=zipfile.ZIP_DEFLATED) as archive:
++        archive.writestr('manifest.json',manifest_raw)
++        for name,raw in files.items():archive.writestr('skills/'+name,raw)
++    require(files==skill_files(source),'Source skills changed during release build; freeze and rebuild')
++    return verify(output)
++
++
++def verify(release):
++    release=Path(release).resolve()
++    manifest_raw=(release/'manifest.json').read_bytes();manifest=json.loads(manifest_raw)
++    require(manifest.get('schema_version')=='goalforge-skills-release-1' and manifest.get('skills')==list(SKILLS),'Invalid release schema/skills')
++    declared={}
++    for item in manifest['files']:
++        name=item['path'];parts=PurePosixPath(name).parts
++        require(not PurePosixPath(name).is_absolute() and len(parts)>=3 and parts[0]=='skills' and parts[1] in SKILLS
++                and '\\' not in name and ':' not in name and '..' not in parts and name not in declared,'Unsafe or duplicate release path')
++        path=release/name
++        require(release in path.resolve().parents and not path.is_symlink(),'Release path escapes package')
++        raw=path.read_bytes();require(sha(raw)==item['sha256'],'Release hash mismatch: '+name);declared[name]=raw
++    actual={'skills/'+name:raw for name,raw in skill_files(release/'skills').items()}
++    require(actual==declared,'Missing or extra skill files')
++    require(not (release/'skills/goal-tracing').exists(),'Legacy tracing must not enter release')
++    with zipfile.ZipFile(release/'goalforge-skills.zip') as archive:
++        require(len(archive.namelist())==len(set(archive.namelist())) and set(archive.namelist())==set(declared)|{'manifest.json'},'Archive members differ')
++        require(archive.read('manifest.json')==manifest_raw,'Archive manifest mismatch')
++        require(all(archive.read(name)==raw for name,raw in declared.items()),'Archive bytes differ')
++    return dict(status='passed',version=manifest['version'],files=len(declared),
++                manifest_sha256=sha(manifest_raw),archive_sha256=sha((release/'goalforge-skills.zip').read_bytes()))
++
++
++def verify_installed(release, destination):
++    result=verify(release);release,destination=Path(release).resolve(),Path(destination).resolve()
++    require(skill_files(release/'skills')==skill_files(destination),'Installed bytes differ from frozen release')
++    with tempfile.TemporaryDirectory(prefix='goalforge-import-check-') as tmp:
++        code='import json,sys;sys.path.insert(0,sys.argv[1]);import kaos_model,trace_candidates,simple_candidates;print(json.dumps(dict(kaos_model=kaos_model.__file__,trace_candidates=trace_candidates.__file__,simple_candidates=simple_candidates.__file__,schema=kaos_model.SCHEMA2)))'
++        process=subprocess.run([sys.executable,'-X','utf8','-c',code,str(destination/'goal-model-building/scripts')],
++                               cwd=tmp,capture_output=True,text=True,encoding='utf-8',timeout=30)
++        require(process.returncode==0,'Installed import failed: '+process.stderr)
++        loaded=json.loads(process.stdout)
++        for name in ('kaos_model','trace_candidates','simple_candidates'):
++            require(destination in Path(loaded[name]).resolve().parents,'Loaded code outside installation')
++    result.update(destination=str(destination),loaded=loaded,application_discovery='not_asserted')
++    return result
++
++
++def install(release, destination):
++    verify(release);release,destination=Path(release).resolve(),Path(destination).resolve()
++    require(not any((destination/name).exists() for name in SKILLS),'Existing skill directories are preserved; choose a fresh location or explicitly archive them first')
++    require(not destination.exists() or destination.is_dir(),'Installation destination is not a directory')
++    destination.mkdir(parents=True,exist_ok=True)
++    for name in SKILLS:
++        shutil.copytree(release/'skills'/name,destination/name,ignore=shutil.ignore_patterns('__pycache__','*.pyc'))
++    return verify_installed(release,destination)
++
++
++def main():
++    parser=argparse.ArgumentParser(description=__doc__);sub=parser.add_subparsers(dest='command',required=True)
++    p=sub.add_parser('build');p.add_argument('source',type=Path);p.add_argument('output',type=Path);p.add_argument('--version',required=True)
++    p=sub.add_parser('verify');p.add_argument('release',type=Path)
++    for name in ('install','verify-installed'):
++        p=sub.add_parser(name);p.add_argument('release',type=Path);p.add_argument('destination',type=Path)
++    args=parser.parse_args()
++    try:
++        result=(build(args.source,args.output,args.version) if args.command=='build' else verify(args.release) if args.command=='verify'
++                else install(args.release,args.destination) if args.command=='install' else verify_installed(args.release,args.destination))
++        print(json.dumps(result,ensure_ascii=False,indent=2))
++    except (ValueError,OSError,KeyError,zipfile.BadZipFile) as exc:parser.exit(2,str(exc)+'\n')
++
++
++if __name__=='__main__':main()
+--- before/skills/goal-extraction/references/coverage-contract.md
++++ after/skills/goal-extraction/references/coverage-contract.md
+@@ -1,77 +1,77 @@
+-# 提取覆盖记录契约与工具
+-
+-用途是审计“源文→原始候选→最终目标”。最终目标仍为 `goalforge-extraction-3`，模型仍为 `goalforge-kaos-1`；以下附件不改变支持判断，也不被模型组装器自动读取。旧结果没有记录时注明未执行，不补写虚构过程。
+-
+-## 文件与绑定
+-
+-| 文件 | 版本/内容 |
+-|---|---|
+-| source-input.json、source.txt | 既有忠实源文；偏移为标准全文 Unicode 码点半开区间 |
+-| source-windows.json | `goalforge-source-windows-1`：document_id，input_binding（document_hash、source_input_sha256），parameters（size、stride、unit），windows |
+-| raw-candidates.json | `goalforge-extraction-candidates-1`：document_id，input_binding（document_hash、source_input_sha256、windows_sha256），candidates |
+-| extraction-ledger.json | `extraction-ledger-1`：document_id，input_binding，run，full_context_review，entries，source_checks，limitations |
+-| coverage-check.json | `goalforge-coverage-check-1`：实际输入及 ledger 哈希、structure、workflow、pending、uncertain_*、counts、errors、limitations |
+-
+-哈希均为对应文件实际字节 SHA-256，不是路径或重新序列化后的猜测值。ledger 的 input_binding 含 source_input_sha256、source_sha256、windows_sha256、candidates_sha256、extraction_sha256，由模板工具计算。任何绑定文件变化都使旧记录失效，保存旧版后重评受影响处置并生成新版本，不能只替换哈希继续沿用结论。
+-
+-窗口包含 window_id、source_ids、start_char/end_char、text、segments。segments 保留 source_id、speaker、text、全局 start_char/end_char 及 window_start_char/window_end_char。unit=turn 仅用于所有片段均有原轮次定位的资料，否则为 segment；最后窗口抵达文末后停止，不再产生纯重复尾窗。size/stride 为正整数且 stride≤size。检查器重建窗口逐项比较，遗漏、错序或位置改写均不通过。
+-
+-## 原始候选
+-
+-每项含 candidate_id、statement、actor（未知 null）、modality（原语气简述，未知 unknown）、context（字符串数组）、origin（暂定 explicit/inferred/unknown）、pass_id、window_ids、evidence_candidates。原始 ID 如 C001，与最终 G001 分开，不因排序改变。
+-
+-证据沿用 source_id、quote、role=basis/context、start_char/end_char，至少一条 basis。覆盖工具要求已确定的全局偏移；引用必须在所列窗口对应的源片段内。跨窗校正可增加窗口引用，不能悄悄更换引文。未定位可靠时保留读取限制，不能伪造位置以通过检查。
+-
+-合并、拆分或排除都不删除冻结候选；原始记录可保留后来被否定的候选及原暂定判断。新发现的推断上层目标也先形成候选并走最终核验，不直接在模型中造节点。
+-
+-## 处置与重要片段回查
+-
+-entries 每个原始 candidate_id 恰好一项，含 disposition、final_goal_ids、reason。理由是简短可核对的语义依据，不能用“聚类相近”或“出现较少”代替。
+-
+-| disposition | 映射规则 |
+-|---|---|
+-| keep | 一个最终目标，保留本意；表述整理说明关键条件仍在 |
+-| merge | 一个最终目标，另有候选映射到同一目标；说明为何同义及哪些条件保留 |
+-| split | 至少两个不同最终目标，说明各自核心动作/结果的独立意图依据及共同、局部条件如何分配 |
+-| exclude | 无最终目标；说明背景、重复以外的排除理由或不支持部分 |
+-| uncertain | 可无目标，也可映射待确认目标；说明缺口，不因此升级语义支持 |
+-| pending | 空映射及待编制判断；工具报告未完成 |
+-
+-同一最终目标可以承接多个候选；保留主候选为 keep、其他同义候选为 merge 亦可。每个最终目标必须有原始候选来路，否则报告待补记录。复杂拆合按逐候选最终去向记录，不能为满足标签删除语义。
+-
+-“一目标一核心动作”用于最终目标整理，冻结原始候选允许含复合表达。拆分后保留原始候选ID与各最终目标ID的对应，每项单独核验；合并理由应说明核心动作、主体和条件一致。检查器只核对映射、引用与版本，不自动识别动词、判定原子性或继承原候选的语义支持。
+-
+-source_checks 只登记实际回查的重要片段，不要求逐句分类。每项 check_id、evidence_candidates、candidate_ids、final_goal_ids、outcome（represented/excluded/uncertain）、reason。represented 至少有最终目标；excluded 不带最终目标；若同时列候选与最终目标，其映射须与 entries 一致。待确认项持续显示。空数组不代表已经检查所有意图；是否漏掉应检查的片段由语义复核判断。
+-
+-## 运行与全文校正记录
+-
+-run 含 strategy（windowed/full_document）、model、temperature、budget、usage、skill_revision、prompt_revision、planned_passes、stop_reason、passes。不可获得项写 unknown；可获得的模型/技能版本或哈希、预算单位、实际耗时/token/费用写清楚。planned_passes 为正整数或 unknown，actual_passes 由非 not_run 的 pass 数计得，是作者声明的实际记录，不是工具观测模型调用。
+-
+-每个 pass 含 pass_id、kind（initial/repeat/focused/full_context；模板 unknown 待填）、context（shared/isolated/unknown）、status（completed/partial/not_run）、window_results。每个窗口恰好一项，status=processed/skipped/pending，skipped 必须有 reason。定向补查可以跳过无关窗；至少一次 initial 完成全部窗口，才能报告基础处理范围已记录。整篇策略也填写全部窗口处理状态，表明原文范围，不伪称分别调用了模型。
+-
+-full_context_review 含 status（completed/partial/not_run）、source_ids、reason。completed 要求核对全部源片段，并简述指代、条件、例外回查的实际范围；不是独立评审或形式证明。
+-
+-## 操作
+-
+-以下相对路径相对于任务工作目录；脚本路径替换为实际加载的技能路径。已有输出拒绝覆盖，修订使用新文件或目录。
+-
+-```text
+-python <skill>/scripts/prepare_source.py input.json work --window-size 4 --window-stride 2
+-python <skill>/scripts/check_coverage.py capture-template --source-input work/source-input.json --source work/source.txt --windows work/source-windows.json --output work/raw-candidates.json
+-```
+-
+-助手逐窗编制候选、保存运行记录，再整理 extraction.json。候选模板允许空集合；工具不会生成目标、推断处置或断言无目标。
+-
+-```text
+-python <skill>/scripts/check_coverage.py template --source-input work/source-input.json --source work/source.txt --windows work/source-windows.json --candidates work/raw-candidates.json --extraction work/extraction.json --output work/extraction-ledger.json
+-```
+-
+-填入真实运行与处置。空模板的 not_run/pending 是占位，不能当已执行；没有候选也需要记录实际基础读取轮次。然后检查：
+-
+-```text
+-python <skill>/scripts/check_coverage.py check --source-input work/source-input.json --source work/source.txt --windows work/source-windows.json --candidates work/raw-candidates.json --extraction work/extraction.json --ledger work/extraction-ledger.json --output work/coverage-check.json
+-```
+-
+-退出码0为结构通过且 workflow=recorded，1为结构通过但仍有 pending，2为结构/绑定错误。uncertain 不自动阻止 recorded，它表示去向已记录、语义仍未知；两种状态均不表示意图完整或精化可成立。报告恒为 semantic_completeness=not_assessed。随后照常执行 trace_candidates 核验当前目标及建模流程。
+-
+-只进行局部反馈修订时，不为了得到 recorded 假装重读全部资料；可保留 partial 及实际范围。审计记录与提取文件一同保存，但当前模型交付不会自动携带它，向用户说明其用途和位置。
++# 提取覆盖记录契约与工具
++
++用途是审计“源文→原始候选→最终目标”。最终目标仍为 `goalforge-extraction-3`，新模型使用 `goalforge-kaos-2`，历史 `goalforge-kaos-1` 继续兼容；以下附件不改变支持判断，也不被模型组装器自动读取。旧结果没有记录时注明未执行，不补写虚构过程。
++
++## 文件与绑定
++
++| 文件 | 版本/内容 |
++|---|---|
++| source-input.json、source.txt | 既有忠实源文；偏移为标准全文 Unicode 码点半开区间 |
++| source-windows.json | `goalforge-source-windows-1`：document_id，input_binding（document_hash、source_input_sha256），parameters（size、stride、unit），windows |
++| raw-candidates.json | `goalforge-extraction-candidates-1`：document_id，input_binding（document_hash、source_input_sha256、windows_sha256），candidates |
++| extraction-ledger.json | `extraction-ledger-1`：document_id，input_binding，run，full_context_review，entries，source_checks，limitations |
++| coverage-check.json | `goalforge-coverage-check-1`：实际输入及 ledger 哈希、structure、workflow、pending、uncertain_*、counts、errors、limitations |
++
++哈希均为对应文件实际字节 SHA-256，不是路径或重新序列化后的猜测值。ledger 的 input_binding 含 source_input_sha256、source_sha256、windows_sha256、candidates_sha256、extraction_sha256，由模板工具计算。任何绑定文件变化都使旧记录失效，保存旧版后重评受影响处置并生成新版本，不能只替换哈希继续沿用结论。
++
++窗口包含 window_id、source_ids、start_char/end_char、text、segments。segments 保留 source_id、speaker、text、全局 start_char/end_char 及 window_start_char/window_end_char。unit=turn 仅用于所有片段均有原轮次定位的资料，否则为 segment；最后窗口抵达文末后停止，不再产生纯重复尾窗。size/stride 为正整数且 stride≤size。检查器重建窗口逐项比较，遗漏、错序或位置改写均不通过。
++
++## 原始候选
++
++每项含 candidate_id、statement、actor（未知 null）、modality（原语气简述，未知 unknown）、context（字符串数组）、origin（暂定 explicit/inferred/unknown）、pass_id、window_ids、evidence_candidates。原始 ID 如 C001，与最终 G001 分开，不因排序改变。
++
++证据沿用 source_id、quote、role=basis/context、start_char/end_char，至少一条 basis。覆盖工具要求已确定的全局偏移；引用必须在所列窗口对应的源片段内。跨窗校正可增加窗口引用，不能悄悄更换引文。未定位可靠时保留读取限制，不能伪造位置以通过检查。
++
++合并、拆分或排除都不删除冻结候选；原始记录可保留后来被否定的候选及原暂定判断。新发现的推断上层目标也先形成候选并走最终核验，不直接在模型中造节点。
++
++## 处置与重要片段回查
++
++entries 每个原始 candidate_id 恰好一项，含 disposition、final_goal_ids、reason。理由是简短可核对的语义依据，不能用“聚类相近”或“出现较少”代替。
++
++| disposition | 映射规则 |
++|---|---|
++| keep | 一个最终目标，保留本意；表述整理说明关键条件仍在 |
++| merge | 一个最终目标，另有候选映射到同一目标；说明为何同义及哪些条件保留 |
++| split | 至少两个不同最终目标，说明各自核心动作/结果的独立意图依据及共同、局部条件如何分配 |
++| exclude | 无最终目标；说明背景、重复以外的排除理由或不支持部分 |
++| uncertain | 可无目标，也可映射待确认目标；说明缺口，不因此升级语义支持 |
++| pending | 空映射及待编制判断；工具报告未完成 |
++
++同一最终目标可以承接多个候选；保留主候选为 keep、其他同义候选为 merge 亦可。每个最终目标必须有原始候选来路，否则报告待补记录。复杂拆合按逐候选最终去向记录，不能为满足标签删除语义。
++
++“一目标一核心动作”用于最终目标整理，冻结原始候选允许含复合表达。拆分后保留原始候选ID与各最终目标ID的对应，每项单独核验；合并理由应说明核心动作、主体和条件一致。检查器只核对映射、引用与版本，不自动识别动词、判定原子性或继承原候选的语义支持。
++
++source_checks 只登记实际回查的重要片段，不要求逐句分类。每项 check_id、evidence_candidates、candidate_ids、final_goal_ids、outcome（represented/excluded/uncertain）、reason。represented 至少有最终目标；excluded 不带最终目标；若同时列候选与最终目标，其映射须与 entries 一致。待确认项持续显示。空数组不代表已经检查所有意图；是否漏掉应检查的片段由语义复核判断。
++
++## 运行与全文校正记录
++
++run 含 strategy（windowed/full_document）、model、temperature、budget、usage、skill_revision、prompt_revision、planned_passes、stop_reason、passes。不可获得项写 unknown；可获得的模型/技能版本或哈希、预算单位、实际耗时/token/费用写清楚。planned_passes 为正整数或 unknown，actual_passes 由非 not_run 的 pass 数计得，是作者声明的实际记录，不是工具观测模型调用。
++
++每个 pass 含 pass_id、kind（initial/repeat/focused/full_context；模板 unknown 待填）、context（shared/isolated/unknown）、status（completed/partial/not_run）、window_results。每个窗口恰好一项，status=processed/skipped/pending，skipped 必须有 reason。定向补查可以跳过无关窗；至少一次 initial 完成全部窗口，才能报告基础处理范围已记录。整篇策略也填写全部窗口处理状态，表明原文范围，不伪称分别调用了模型。
++
++full_context_review 含 status（completed/partial/not_run）、source_ids、reason。completed 要求核对全部源片段，并简述指代、条件、例外回查的实际范围；不是独立评审或形式证明。
++
++## 操作
++
++以下相对路径相对于任务工作目录；脚本路径替换为实际加载的技能路径。已有输出拒绝覆盖，修订使用新文件或目录。
++
++```text
++python <skill>/scripts/prepare_source.py input.json work --window-size 4 --window-stride 2
++python <skill>/scripts/check_coverage.py capture-template --source-input work/source-input.json --source work/source.txt --windows work/source-windows.json --output work/raw-candidates.json
++```
++
++助手逐窗编制候选、保存运行记录，再整理 extraction.json。候选模板允许空集合；工具不会生成目标、推断处置或断言无目标。
++
++```text
++python <skill>/scripts/check_coverage.py template --source-input work/source-input.json --source work/source.txt --windows work/source-windows.json --candidates work/raw-candidates.json --extraction work/extraction.json --output work/extraction-ledger.json
++```
++
++填入真实运行与处置。空模板的 not_run/pending 是占位，不能当已执行；没有候选也需要记录实际基础读取轮次。然后检查：
++
++```text
++python <skill>/scripts/check_coverage.py check --source-input work/source-input.json --source work/source.txt --windows work/source-windows.json --candidates work/raw-candidates.json --extraction work/extraction.json --ledger work/extraction-ledger.json --output work/coverage-check.json
++```
++
++退出码0为结构通过且 workflow=recorded，1为结构通过但仍有 pending，2为结构/绑定错误。uncertain 不自动阻止 recorded，它表示去向已记录、语义仍未知；两种状态均不表示意图完整或精化可成立。报告恒为 semantic_completeness=not_assessed。随后照常执行 trace_candidates 核验当前目标及建模流程。
++
++只进行局部反馈修订时，不为了得到 recorded 假装重读全部资料；可保留 partial 及实际范围。审计记录与提取文件一同保存，但当前模型交付不会自动携带它，向用户说明其用途和位置。
+--- before/skills/goal-extraction/references/extraction-strategy.md
++++ after/skills/goal-extraction/references/extraction-strategy.md
+@@ -19,7 +19,7 @@
+ 1. 找出期望动作或状态，区分独立结果、直接操作方式、前提、限定与替代；不以动词数决定目标数。
+ 2. 对有独立意图依据的多项动作分别表述，每项保留主体、对象及预期结果；前提和明确选定方式随所属目标保留。
+ 3. 逐项分配共同条件、局部条件及例外，并绑定证据；允许共享原句，仍分别判断 origin 与完整支持。
+-4. 在覆盖记录中保存原始候选到最终目标的拆分映射与理由。逆向回读原句，检查丢条件、强度变化、无意图依据的操作节点及目的/手段被合并；实质修订后重建支持包。
++4. 在覆盖记录中保存原始候选到最终目标的拆分映射与理由。先核对目标正文和context中实际保留的含义，再回读原句及理由；检查丢条件、强度变化、示例被固化、同一愿望重复建点，以及已选方式只出现在解释里。实质修订后重建支持包。
+ 
+ 用户清单可分主题和折叠，摘要不能替代底层原子目标及证据。语义粒度变细不等于质量提高，不为增加目标数拆出无价值节点。
+ 
+--- before/skills/goal-extraction/references/goal-boundaries.md
++++ after/skills/goal-extraction/references/goal-boundaries.md
+@@ -18,6 +18,8 @@
+ | 提议 | 涉众提出期望时可保留候选与建议强度，采纳未知仍未知；分析者建议单独说明 | “可以考虑”变承诺；采访者提问未获回应就算涉众目标 |
+ 
+ 障碍候选关联需说明依据；概念层分析不宣称已证明领域可发生性或阻碍条件。表达目标的人不自动承担实现责任，未知责任不随意分配给软件。
++
++用假设地点、日期或数量演示一般能力时，先作为相应目标的情境例保留，不仅因句中出现具体动作就另建固定业务目标；只有另有意图依据才把该特定范围列为目标。新的引文或对同一愿望的再次强调也不自动产生新目标：核对是否确有不同的动作、结果或独立验收维度，避免重复节点之间再造贡献联系。
+ 
+ ## 必须分开判断
+ 
+@@ -51,6 +53,8 @@
+ 
+ 共同条件传递到所有适用的拆分目标，局部条件仅绑定对应目标；否定、例外、建议强度和时间限制同样处理。目标可共享引文，但每个目标的完整语义都须单独核验，不能把复合候选的一次支持判断复制给全部拆分项。
+ 
++明确选定的关键方式须在statement/context或另一个有依据的方式目标中实际承接；仅在引文、判断理由或推断解释中提到，不算已进入目标内容。总体目的可以与方式分开，不要求每个父目标重复全部手段，但最终目标集合必须能追到该要求。
++
+ 有独立意图依据的目的与手段分别保留；原文明示的总体目的也可保留为上层目标，不为凑层级新增泛化摘要。独立动作的顺序或共同来源均不证明精化关系。语义无法确定的拆分保留具体问题，不靠动词计数、标点或目标数量定案。
+ 
+ ## 少量边界例
+--- before/skills/goal-model-building/SKILL.md
++++ after/skills/goal-model-building/SKILL.md
+@@ -9,19 +9,21 @@
+ 
+ ## 建模
+ 
+-- 按[精化规则](references/modeling-rules.md)建立共同满足的子目标组与完整替代方案，记录原句、理由和假设。
++- 先按[联系发现](references/relation-discovery.md)保存具体化、实现方式、贡献和过程先后的有向联系及判断状态，再按[精化规则](references/modeling-rules.md)核验共同充分的子目标组与完整替代方案。两阶段分别记录原句、条件、理由和假设。
+ - 不将相关、相似或操作先后当作精化；按上下文判断整组，不默认穷举两两关系。
+ - 不强造根目标或固定层数；允许多根、孤立与共享目标。未确认或不完整组保留问题，不绘成成立层级。
+ - 目标简短但不丢主体、否定、条件、时间和数量；主体与责任不擅自等同，未知不编造。
+ - 保留提取交接的“一目标一核心动作”粒度和稳定 ID，状态等目标按[目标边界](../goal-extraction/references/goal-boundaries.md)保留；主题概述只用于阅读，不能再次压缩或合并节点。发现复合目标须回到提取拆分与核验，动作先后不自动成为精化。提取覆盖记录由提取/复核工具审计，当前组装器不读取它，不能据其检查通过升级目标支持。
+ - 先组织目标、提出精化候选，再整组核验并以正常/异常场景检查。新增、拆合或实质改写目标须回到 goal-extraction 修订并核验，可由同一助手连续执行。
+-- 障碍、偏好、贡献、冲突、操作化和责任分别解释，不画成普通目标或成立精化边；语义资格沿用[目标边界](../goal-extraction/references/goal-boundaries.md)。当前无独立关联附件支持，不能声称已完整传递未承接的信息。
++- 贡献、实现方式等只进入v2定义的独立relations层，不自动成为成立精化。障碍、偏好、冲突和责任仍按现有字段及问题保留，不能伪装成四种联系之一；语义资格沿用[目标边界](../goal-extraction/references/goal-boundaries.md)。
+ 
+ ## 工具与交付
+ 
+ [模型契约](references/output-contract.md)定义唯一机器结构，[工具说明](references/tools.md)定义 template、assemble、inspect、finalize、feedback 与本地预览命令。使用实际判断与原文执行，不手填检查通过。
+ 
+-默认 HTML 为有向无环目标图，每目标一个节点、精化组一个连接点，共享目标只画一次。点击查看原文和意见，清单为可选阅读方式；箭头只表示层级展开。
++默认 HTML 为有向无环目标图，每目标一个节点、精化组一个连接点，共享目标只画一次。另有目标清单与目标联系视图；联系逐项标明类型、方向、状态和证据，单独审核及导出。精化图箭头只表示层级展开。
++
++新任务默认使用goalforge-kaos-2，旧v1继续读取。升级必须明确执行upgrade-template与assemble --migrate-from并重新编制判断，不从旧关系猜新类型。修订按依赖要求重评，不只替换文件哈希。
+ 
+ 交付 HTML、JSON、短 MD 与必要附件，SVG 按需取出。来源、判断、版本及检查绑定同一模型。保存提供实际回执或清楚说明仅发起下载，同时支持复制与完整文本。
+ 
+--- before/skills/goal-model-building/assets/simple-core.js
++++ after/skills/goal-model-building/assets/simple-core.js
+@@ -1,10 +1,11 @@
+ (function(root){
+ 'use strict';
+-function empty(binding){return {schema_version:'goalforge-simple-feedback-1',model:binding,status:'draft',entries:[],form_drafts:{},note:''};}
+-function targets(model,kind){return kind==='goal'?model.goals.map(g=>g.goal_id):kind==='group'?model.refinement_groups.map(g=>g.group_id):kind==='model'?[model.model_id]:[];}
++function empty(binding,model){return {schema_version:model?.schema_version==='goalforge-kaos-2'?'goalforge-simple-feedback-2':'goalforge-simple-feedback-1',model:binding,status:'draft',entries:[],form_drafts:{},note:''};}
++function targets(model,kind){return kind==='goal'?model.goals.map(g=>g.goal_id):kind==='group'?model.refinement_groups.map(g=>g.group_id):kind==='relation'&&model.schema_version==='goalforge-kaos-2'?(model.relations||[]).map(r=>r.relation_id):kind==='model'?[model.model_id]:[];}
+ function validate(packet,model,binding,submit=false){
+  const errors=[];
+- if(!packet||packet.schema_version!=='goalforge-simple-feedback-1'||!packet.model||['model_id','version','sha256'].some(k=>packet.model[k]!==binding[k]))return ['审核文件与当前模型版本不一致，当前草稿未改变。'];
++ const expected=model.schema_version==='goalforge-kaos-2'?'goalforge-simple-feedback-2':'goalforge-simple-feedback-1';
++ if(!packet||packet.schema_version!==expected||!packet.model||['model_id','version','sha256'].some(k=>packet.model[k]!==binding[k]))return ['审核文件与当前模型版本不一致，当前草稿未改变。'];
+  if(!['draft','submitted'].includes(packet.status)||typeof packet.note!=='string'||!Array.isArray(packet.entries)||!packet.form_drafts||typeof packet.form_drafts!=='object'||Array.isArray(packet.form_drafts))return ['审核文件结构无效。'];
+  const seen=new Set();
+  for(const e of packet.entries){if(!e||!targets(model,e.target_type).includes(e.target_id)){errors.push('意见指向了不存在的目标或层级。');continue;}const key=e.target_type+':'+e.target_id;if(seen.has(key))errors.push('同一项有重复意见。');seen.add(key);if(!['accept','modify','defer'].includes(e.decision)||typeof e.comment!=='string')errors.push('意见格式无效。');else if(e.decision!=='accept'&&!e.comment.trim())errors.push('请说明需要修改或暂不确定的原因。');}
+@@ -14,7 +15,7 @@
+  return [...new Set(errors)];
+ }
+ function packet(feedback,submit){return {...JSON.parse(JSON.stringify(feedback)),status:submit?'submitted':'draft',exported_at:new Date().toISOString()};}
+-function summary(feedback,model){return {goals:feedback.entries.filter(e=>e.target_type==='goal').length,total:model.goals.length,groups:feedback.entries.filter(e=>e.target_type==='group').length,groupTotal:model.refinement_groups.length,drafts:Object.keys(feedback.form_drafts).length};}
+-function markdown(feedback,model){const names={accept:'可以',modify:'需要修改',defer:'暂不确定'};const title=e=>e.target_type==='goal'?model.goals.find(g=>g.goal_id===e.target_id)?.statement:e.target_type==='group'?'目标层级 '+e.target_id:'整体意见';return '# 审核意见\n\n模型：'+model.model_id+' · '+model.version+'\n状态：'+(feedback.status==='submitted'?'已提交意见包':'草稿')+'（不代表完整模型认可）\n\n'+feedback.entries.map(e=>'## '+title(e)+'\n\n'+names[e.decision]+'\n\n'+(e.comment||'')+'\n').join('\n')+'\n整体补充：'+feedback.note+'\n';}
++function summary(feedback,model){return {goals:feedback.entries.filter(e=>e.target_type==='goal').length,total:model.goals.length,groups:feedback.entries.filter(e=>e.target_type==='group').length,groupTotal:model.refinement_groups.length,relations:feedback.entries.filter(e=>e.target_type==='relation').length,relationTotal:(model.relations||[]).length,drafts:Object.keys(feedback.form_drafts).length};}
++function markdown(feedback,model){const names={accept:'可以',modify:'需要修改',defer:'暂不确定'};const title=e=>e.target_type==='goal'?model.goals.find(g=>g.goal_id===e.target_id)?.statement:e.target_type==='group'?'目标层级 '+e.target_id:e.target_type==='relation'?'目标联系 '+e.target_id:'整体意见';return '# 审核意见\n\n模型：'+model.model_id+' · '+model.version+'\n状态：'+(feedback.status==='submitted'?'已提交意见包':'草稿')+'（不代表完整模型认可）\n\n'+feedback.entries.map(e=>'## '+title(e)+'\n\n'+names[e.decision]+'\n\n'+(e.comment||'')+'\n').join('\n')+'\n整体补充：'+feedback.note+'\n';}
+ const api={empty,validate,packet,summary,markdown};if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.SimpleReview=api;
+ })(typeof globalThis!=='undefined'?globalThis:this);
+--- before/skills/goal-model-building/assets/simple-viewer.css
++++ after/skills/goal-model-building/assets/simple-viewer.css
+@@ -3,3 +3,5 @@
+ .viewSwitch{display:flex;gap:5px}.viewSwitch button{font-size:13px;padding:6px 12px}.viewSwitch [aria-pressed=true]{background:#176d58;color:white}.dagCanvas{border:1px solid var(--line);border-radius:12px;background:#f8fbf8;overflow:auto;max-height:760px;min-height:190px}.dagCanvas svg{display:block;margin:auto;max-width:none}.dagTools{display:flex;align-items:center;gap:7px;margin:10px 0 20px;flex-wrap:wrap}.dagTools button{padding:3px 11px;min-height:35px}.dagTools small{color:var(--muted);font-size:12px}.layout{grid-template-columns:minmax(0,1.65fr) minmax(300px,.85fr)}aside{position:static;max-height:none;overflow:visible}@media(max-width:800px){.layout{grid-template-columns:1fr}.sectionhead{flex-wrap:wrap}.dagCanvas{max-height:600px}}
+ 
+ .layout>section,.layout>aside{min-width:0}.dagCanvas{width:100%;min-width:0}.sectionhead{min-width:0}
++
++.relationCard{border:1px dashed #56818b;border-radius:12px;padding:16px;margin:12px 0;background:#f7fbfc}.relationCard.proposed{border-color:#9a7629;background:#fffaf0}.relationCard.rejected{border-color:#888;background:#f5f5f5}.relationCard p button{text-align:left;white-space:normal}.viewSwitch{flex-wrap:wrap}
+--- before/skills/goal-model-building/assets/simple-viewer.html
++++ after/skills/goal-model-building/assets/simple-viewer.html
+@@ -1,12 +1,12 @@
+-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GoalForge · 目标模型</title><style>__CSS__</style></head><body>
+-<header><a href="#main" class="brand">GoalForge</a><span id="version"></span><span class="pending">待你审核</span></header>
+-<main id="main"><section class="intro"><p class="eyebrow">从资料到清楚的目标</p><h1>看看这些目标，是否符合你的意思</h1><p id="scope"></p><p class="hint">先看层级；点开一项目标，就能对照原文并给意见。</p><div id="limitations" class="notice" hidden></div></section>
+-<section class="actionbar" aria-label="审核进度"><div><strong id="progress"></strong><p id="saveStatus" role="status" aria-live="polite"></p></div><div class="actions"><button id="reviewFirst" class="primary">开始审核</button><button id="exportFeedback">导出审核意见</button><details class="more"><summary>更多</summary><div><button id="exportDraft">保存审核草稿</button><button id="importButton">导入审核文件</button><button id="modelFiles">导出模型文件</button></div></details></div></section>
+-<section class="layout"><section aria-label="目标层级"><div class="sectionhead"><h2>目标模型</h2><div class="viewSwitch" role="group" aria-label="模型展示方式"><button id="dagView" aria-pressed="true">层级图</button><button id="listView" aria-pressed="false">目标清单</button></div></div><p id="dagLegend" class="muted">从上到下展开目标；连接点说明共同条件或替代方案。点击目标或连接点即可审核。</p><div id="dagCanvas" class="dagCanvas" aria-label="目标有向无环图"></div><div id="dagTools" class="dagTools"><button id="zoomOut" aria-label="缩小层级图">－</button><button id="zoomIn" aria-label="放大层级图">＋</button><button id="fitDag">适应宽度</button><small>箭头表示层级展开，不表示操作先后或因果。</small></div><label id="searchBox" hidden>查找目标<input id="search" type="search" placeholder="输入目标中的文字"></label><p id="hierarchyHint" class="muted" hidden></p><div id="outline" hidden></div><section id="questionsSection" hidden><h2>还需要你确认</h2><p class="muted">这些问题保留在模型中，不会自动当作成立的层级。</p><div id="questions"></div></section></section>
+-<aside id="reader" aria-labelledby="readerHeading"><div id="emptyReader"><p class="eyebrow">对照原文</p><h2 id="readerHeading">从一项目标开始</h2><p>目标描述是否准确？子目标放在这里是否合适？你的意见会单独保存，导出后交回助手。</p><p class="muted">目标内容和层级关系分别审核；未给意见的部分保持待审。</p></div><div id="detail" hidden></div></aside></section>
+-<section class="overall"><h2>还有补充或遗漏吗？</h2><label for="overallNote">整体意见（选填）</label><textarea id="overallNote" rows="3" placeholder="例如：少了一项重要目标，或某些目标不应归在这里。"></textarea><p class="muted">可以只提交部分意见。未审核内容不会被当作认可，模型也不会因导出而自动修改。</p></section>
+-<details class="technical"><summary>查看版本、检查说明与完整记录</summary><div id="technical"></div></details>
+-</main><footer>KAOS 核心子集 · 概念层模型。结构检查不代表语义正确或形式化证明。</footer>
+-<dialog id="exportDialog" aria-labelledby="exportHeading"><div class="dialoghead"><h2 id="exportHeading">导出审核意见</h2><button id="closeExport">返回</button></div><label for="exportType">导出内容</label><select id="exportType"></select><p id="exportInfo"></p><div id="exportError" role="alert"></div><div id="errorLinks"></div><div class="exportActions"><button id="saveFile" class="primary">保存文件</button><button id="copyFile">复制完整内容</button><button id="showContent">查看文本</button><button id="saveAs" hidden>选择保存位置</button></div><p id="exportStatus" role="status" aria-live="polite"></p><div id="manualCopy" hidden><label for="exportText">完整内容（可全选复制；若手动保存，请使用 UTF-8）</label><textarea id="exportText" readonly rows="10" spellcheck="false"></textarea><p class="muted">可直接把完整审核 JSON 粘贴给助手，或按上方文件名保存。</p></div><button id="confirmSaved" hidden>我已确认文件保存</button><p class="muted">浏览器下载没有发生时，请复制或手动保存文本。模型文件不包含原始资料备份，完整附件请保留交付目录。</p></dialog>
+-<dialog id="importDialog" aria-labelledby="importHeading"><div class="dialoghead"><h2 id="importHeading">导入审核文件</h2><button id="closeImport">返回</button></div><p>仅接受这个模型版本的审核 JSON。核对后由你决定是否替换草稿；模型不变。</p><input id="importFile" type="file" accept=".json,application/json" aria-label="选择审核文件"><p id="importStatus" role="status"></p><button id="confirmImport" class="primary" disabled>替换当前审核草稿</button></dialog>
+-<script id="payload" type="application/json">__PAYLOAD__</script><script>__CORE__</script><script>__UI__</script></body></html>
++<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GoalForge · 目标模型</title><style>__CSS__</style></head><body>
++<header><a href="#main" class="brand">GoalForge</a><span id="version"></span><span class="pending">待你审核</span></header>
++<main id="main"><section class="intro"><p class="eyebrow">从资料到清楚的目标</p><h1>看看这些目标，是否符合你的意思</h1><p id="scope"></p><p class="hint">先看层级；点开一项目标，就能对照原文并给意见。</p><div id="limitations" class="notice" hidden></div></section>
++<section class="actionbar" aria-label="审核进度"><div><strong id="progress"></strong><p id="saveStatus" role="status" aria-live="polite"></p></div><div class="actions"><button id="reviewFirst" class="primary">开始审核</button><button id="exportFeedback">导出审核意见</button><details class="more"><summary>更多</summary><div><button id="exportDraft">保存审核草稿</button><button id="importButton">导入审核文件</button><button id="modelFiles">导出模型文件</button></div></details></div></section>
++<section class="layout"><section aria-label="目标层级"><div class="sectionhead"><h2>目标模型</h2><div class="viewSwitch" role="group" aria-label="模型展示方式"><button id="dagView" aria-pressed="true">层级图</button><button id="listView" aria-pressed="false">目标清单</button><button id="relationsView" aria-pressed="false" hidden>目标联系</button></div></div><p id="dagLegend" class="muted">从上到下展开目标；连接点说明共同条件或替代方案。点击目标或连接点即可审核。</p><div id="dagCanvas" class="dagCanvas" aria-label="目标有向无环图"></div><div id="dagTools" class="dagTools"><button id="zoomOut" aria-label="缩小层级图">－</button><button id="zoomIn" aria-label="放大层级图">＋</button><button id="fitDag">适应宽度</button><small>箭头表示层级展开，不表示操作先后或因果。</small></div><label id="searchBox" hidden>查找目标<input id="search" type="search" placeholder="输入目标中的文字"></label><p id="hierarchyHint" class="muted" hidden></p><div id="outline" hidden></div><section id="relationsPanel" hidden aria-label="目标联系"><p class="muted">联系按类型和方向阅读；有依据的联系也不表示足以实现上层目标。</p><div id="relationsList"></div></section><section id="questionsSection" hidden><h2>还需要你确认</h2><p class="muted">这些问题保留在模型中，不会自动当作成立的层级。</p><div id="questions"></div></section></section>
++<aside id="reader" aria-labelledby="readerHeading"><div id="emptyReader"><p class="eyebrow">对照原文</p><h2 id="readerHeading">从一项目标开始</h2><p>目标描述是否准确？子目标放在这里是否合适？你的意见会单独保存，导出后交回助手。</p><p class="muted">目标内容和层级关系分别审核；未给意见的部分保持待审。</p></div><div id="detail" hidden></div></aside></section>
++<section class="overall"><h2>还有补充或遗漏吗？</h2><label for="overallNote">整体意见（选填）</label><textarea id="overallNote" rows="3" placeholder="例如：少了一项重要目标，或某些目标不应归在这里。"></textarea><p class="muted">可以只提交部分意见。未审核内容不会被当作认可，模型也不会因导出而自动修改。</p></section>
++<details class="technical"><summary>查看版本、检查说明与完整记录</summary><div id="technical"></div></details>
++</main><footer>KAOS 核心子集 · 概念层模型。结构检查不代表语义正确或形式化证明。</footer>
++<dialog id="exportDialog" aria-labelledby="exportHeading"><div class="dialoghead"><h2 id="exportHeading">导出审核意见</h2><button id="closeExport">返回</button></div><label for="exportType">导出内容</label><select id="exportType"></select><p id="exportInfo"></p><div id="exportError" role="alert"></div><div id="errorLinks"></div><div class="exportActions"><button id="saveFile" class="primary">保存文件</button><button id="copyFile">复制完整内容</button><button id="showContent">查看文本</button><button id="saveAs" hidden>选择保存位置</button></div><p id="exportStatus" role="status" aria-live="polite"></p><div id="manualCopy" hidden><label for="exportText">完整内容（可全选复制；若手动保存，请使用 UTF-8）</label><textarea id="exportText" readonly rows="10" spellcheck="false"></textarea><p class="muted">可直接把完整审核 JSON 粘贴给助手，或按上方文件名保存。</p></div><button id="confirmSaved" hidden>我已确认文件保存</button><p class="muted">浏览器下载没有发生时，请复制或手动保存文本。模型文件不包含原始资料备份，完整附件请保留交付目录。</p></dialog>
++<dialog id="importDialog" aria-labelledby="importHeading"><div class="dialoghead"><h2 id="importHeading">导入审核文件</h2><button id="closeImport">返回</button></div><p>仅接受这个模型版本的审核 JSON。核对后由你决定是否替换草稿；模型不变。</p><input id="importFile" type="file" accept=".json,application/json" aria-label="选择审核文件"><p id="importStatus" role="status"></p><button id="confirmImport" class="primary" disabled>替换当前审核草稿</button></dialog>
++<script id="payload" type="application/json">__PAYLOAD__</script><script>__CORE__</script><script>__UI__</script></body></html>
+--- before/skills/goal-model-building/assets/simple-viewer.js
++++ after/skills/goal-model-building/assets/simple-viewer.js
+@@ -1,117 +1,130 @@
+-'use strict';
+-const $=id=>document.getElementById(id),payload=JSON.parse($('payload').textContent),model=payload.model,bound=payload.binding;
+-const goals=new Map(model.goals.map(g=>[g.goal_id,g])),groups=new Map(model.refinement_groups.map(g=>[g.group_id,g])),evidence=new Map(model.evidence_index.map(e=>[e.evidence_id,e]));
+-const key='goalforge-simple-feedback:'+bound.sha256;
+-let feedback=SimpleReview.empty(bound),storageProblem='',selected=null,pendingImport=null,exportSnapshot=null,busy=false,display='dag',dagScale=1;
+-try{const raw=localStorage.getItem(key);if(raw){const data=JSON.parse(raw);const errors=SimpleReview.validate(data,model,bound);if(errors.length)storageProblem='旧草稿未恢复：'+errors.join(' ');else feedback=data;}}catch(e){storageProblem='浏览器草稿无法保存，请及时导出或复制意见。';}
+-function add(parent,tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;parent.appendChild(el);return el;}
+-function button(parent,text,handler,cls){const el=add(parent,'button',text,cls);el.type='button';el.onclick=handler;return el;}
+-function persist(){feedback.status='draft';try{localStorage.setItem(key,JSON.stringify(feedback));storageProblem='';}catch(e){storageProblem='浏览器草稿未保存，请立即导出或复制。';}progress();}
+-function progress(){const s=SimpleReview.summary(feedback,model);$('progress').textContent=`目标已记录 ${s.goals}/${s.total} · 层级已记录 ${s.groups}/${s.groupTotal}`;$('saveStatus').textContent=storageProblem||`草稿保存在当前浏览器${s.drafts?'，有 '+s.drafts+' 项未完成意见':''}。导出后交回助手。`;}
+-function entry(kind,id){return feedback.entries.find(e=>e.target_type===kind&&e.target_id===id);}
+-function goalIssues(id){return model.issues.filter(i=>i.target_type==='goal'&&i.target_id===id);}
+-function isActive(group){return group.status==='supported'&&group.completeness==='complete';}
+-const byParent=new Map();for(const group of groups.values())if(isActive(group)){if(!byParent.has(group.parent_id))byParent.set(group.parent_id,[]);byParent.get(group.parent_id).push(group);}
+-function renderOutline(){
+- $('outline').replaceChildren();const children=new Set([...byParent.values()].flat().flatMap(g=>g.child_ids)),seen=new Set(),query=$('search').value.trim();
+- function node(id,parent,depth=0){
+-  const g=goals.get(id),card=add(parent,'article',undefined,'goal'+(selected?.kind==='goal'&&selected.id===id?' selected':''));card.dataset.goalId=id;
+-  button(card,g.statement,()=>openDetail('goal',id),'goalTitle');const meta=add(card,'div',undefined,'goalMeta');
+-  if(goalIssues(id).length||g.origin==='inferred')add(meta,'span','需确认','tag');
+-  const e=entry('goal',id);add(meta,'span',e?({accept:'已记录：可以',modify:'已记录：需修改',defer:'已记录：暂不确定'}[e.decision]):'点开查看依据并审核');
+-  if(seen.has(id)){add(card,'p','同一目标，也出现在其他层级；意见会同步。','muted shared');return;}seen.add(id);
+-  if(!query&&byParent.has(id)){
+-   const alternatives=byParent.get(id),details=add(card,'details');details.open=depth<1;add(details,'summary',`查看下一级目标${alternatives.length>1?'与替代方案':''}`);
+-   const nested=add(details,'div',undefined,'children');alternatives.forEach((group,i)=>{const section=add(nested,'section',undefined,'group');const head=add(section,'div',undefined,'groupHeader');add(head,'strong',alternatives.length>1?`方案 ${i+1}：任选一个完整方案；以下各项都需满足`:'以下各项都需满足');button(head,entry('group',group.group_id)?'查看层级意见':'审核这组层级',()=>openDetail('group',group.group_id));for(const child of group.child_ids)node(child,section,depth+1);});
+-  }
+- }
+- const roots=query?model.goals.filter(g=>g.statement.includes(query)).map(g=>g.goal_id):model.goals.filter(g=>!children.has(g.goal_id)).map(g=>g.goal_id);for(const id of roots)node(id,$('outline'));
+- if(!roots.length)add($('outline'),'p',query?'没有匹配的目标，请更换关键词。':'本次可读资料中没有提取到目标。','notice');
+- $('hierarchyHint').textContent=query?'搜索结果仅列匹配目标；清空搜索可恢复层级。':byParent.size?'展开查看具体目标，点击文字查看原文。共享目标会标明重复引用。':'当前资料尚未建立可靠的目标层级，以下目标独立列出。';
+- document.querySelectorAll('.dag-node').forEach(n=>n.classList.toggle('selected',!!selected&&(n.dataset.goal===selected.id||n.dataset.group===selected.id)));
+-}
+-function drawDag(){
+- $('dagCanvas').innerHTML=payload.svg;
+- const graphic=$('dagCanvas').querySelector('svg');
+- graphic.querySelectorAll('[data-goal],[data-group]').forEach(n=>{const kind=n.dataset.goal?'goal':'group',id=n.dataset.goal||n.dataset.group;n.onclick=()=>openDetail(kind,id);n.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openDetail(kind,id);}};});
+- if(!byParent.size&&model.goals.length)$('dagLegend').textContent='当前尚未建立有依据的层级，各项目标独立展示。点击目标查看原文并审核。';
+- fitDag();
+-}
+-function scaleDag(){const graphic=$('dagCanvas').querySelector('svg');if(!graphic)return;graphic.style.width=(Number(graphic.getAttribute('width'))*dagScale)+'px';graphic.style.height='auto';}
+-function fitDag(){const graphic=$('dagCanvas').querySelector('svg');if(!graphic)return;dagScale=Math.min(1,Math.max(.2,($('dagCanvas').clientWidth-8)/Number(graphic.getAttribute('width'))));scaleDag();}
+-function switchView(kind){display=kind;$('dagCanvas').hidden=$('dagTools').hidden=$('dagLegend').hidden=kind!=='dag';$('outline').hidden=$('hierarchyHint').hidden=kind==='dag';$('searchBox').hidden=kind==='dag'||model.goals.length<12;$('dagView').setAttribute('aria-pressed',String(kind==='dag'));$('listView').setAttribute('aria-pressed',String(kind==='list'));if(kind==='dag')fitDag();}
+-function renderQuestions(){
+- $('questions').replaceChildren();const seen=new Set();for(const i of model.issues){const q=i.target_type+':'+i.target_id+':'+i.message;if(seen.has(q))continue;seen.add(q);const b=button($('questions'),i.message,()=>openDetail(i.target_type,i.target_id),'question');add(b,'small','点开核对并给意见');}$('questionsSection').hidden=!seen.size;
+-}
+-function evidenceBlock(parent,refs){
+- const items=refs.map(id=>evidence.get(id)).filter(Boolean);if(!items.length){add(parent,'p','当前未找到可查看的原文依据。','notice');return;}
+- function show(p,e){add(p,'blockquote',e.quote);let location=Object.entries(e.original_locator||{}).filter(([k])=>!['start_char','end_char'].includes(k)).map(([k,v])=>({paragraph:'段落',page:'页码',slide:'幻灯片',turn:'轮次',line_start:'起始行',line_end:'结束行'}[k]||k)+' '+v).join(' · ');add(p,'small',location||e.source_id);if(!['native_text','human_verified'].includes(e.recognition_status))add(p,'p','这段依据来自识别稿，尚需核对原件。','notice');}
+- show(parent,items[0]);if(items.length>1){const d=add(parent,'details');add(d,'summary',`其他 ${items.length-1} 段依据`);items.slice(1).forEach(e=>show(d,e));}
+-}
+-function openDetail(kind,id){
+- selected={kind,id};$('emptyReader').hidden=true;$('detail').hidden=false;const panel=$('detail');panel.replaceChildren();
+- button(panel,'返回目标模型',()=>{const target=$(display==='dag'?'dagCanvas':'outline');target.scrollIntoView({block:'start'});target.querySelector('[role=button],button')?.focus();},'backOutline');
+- let title,refs=[];
+- if(kind==='goal'){
+-  const g=goals.get(id);title=g.statement;add(panel,'h2',title);if(g.conditions.length)add(panel,'p','适用条件：'+g.conditions.join('；'),'conditions');if(g.actor)add(panel,'p','目标主体：'+g.actor,'muted');
+-  if(g.origin==='inferred'){add(panel,'p','这项目标根据原文推断，请确认是否符合原意。','notice');if(g.inference){add(panel,'p',g.inference.reason);if(g.inference.assumptions?.length)add(panel,'p','推断条件：'+g.inference.assumptions.join('；'));}}
+-  refs=g.evidence_ids;
+- }else if(kind==='group'){
+-  const g=groups.get(id);title='这组层级是否合理？';add(panel,'h2',title);add(panel,'p','上层目标：'+goals.get(g.parent_id).statement);add(panel,'strong','以下各项在说明的条件下共同满足上层目标：');const list=add(panel,'ul');g.child_ids.forEach(gid=>add(list,'li',goals.get(gid).statement));add(panel,'p',g.rationale);if(g.assumptions.length)add(panel,'p','适用条件：'+g.assumptions.join('；'),'conditions');if(!isActive(g))add(panel,'p','这是待确认的层级建议，未作为成立的精化展开。','notice');refs=g.evidence_ids;
+- }else{title='整体与遗漏意见';add(panel,'h2',title);add(panel,'p','请说明缺了什么、哪里不清楚，或需要回查哪段资料。');}
+- const relevant=model.issues.filter(i=>i.target_type===kind&&i.target_id===id);for(const i of relevant)add(panel,'p',i.message,'notice');
+- if(refs.length){add(panel,'h3','原文依据');evidenceBlock(panel,refs);}
+- const form=add(panel,'form');const field=add(form,'fieldset',undefined,'choices');add(field,'legend',kind==='group'?'你对这组层级的判断':'你的判断');const draftKey=kind+':'+id,original=feedback.form_drafts[draftKey]||entry(kind,id)||{decision:'',comment:''};
+- const radios=[];for(const [value,text] of [['accept','可以'],['modify','需要修改'],['defer','暂不确定']]){const label=add(field,'label'),input=add(label,'input');input.type='radio';input.name='decision';input.value=value;input.checked=original.decision===value;add(label,'span',text);radios.push(input);}
+- const label=add(form,'label','意见或原因（需修改／暂不确定时填写）');label.htmlFor='opinion';const comment=add(form,'textarea');comment.id='opinion';comment.rows=3;comment.value=original.comment;comment.placeholder='用自己的话说明即可。';
+- const message=add(form,'p','意见保存后仍需导出交回助手。','muted');message.setAttribute('role','status');
+- function stage(){feedback.form_drafts[draftKey]={target_type:kind,target_id:id,decision:radios.find(r=>r.checked)?.value||'',comment:comment.value};persist();}
+- radios.forEach(r=>r.onchange=stage);comment.oninput=stage;
+- const actions=add(form,'div',undefined,'editorActions');const save=add(actions,'button','保存意见','primary');save.type='submit';
+- button(actions,'撤回本项意见',()=>{feedback.entries=feedback.entries.filter(e=>e.target_type!==kind||e.target_id!==id);delete feedback.form_drafts[draftKey];persist();renderOutline();openDetail(kind,id);});
+- form.onsubmit=e=>{e.preventDefault();const decision=radios.find(r=>r.checked)?.value;if(!decision||(decision!=='accept'&&!comment.value.trim())){message.textContent='请选择判断；需要修改或暂不确定时，请填写原因。';if(!decision)radios[0].focus();else comment.focus();return;}feedback.entries=feedback.entries.filter(e=>e.target_type!==kind||e.target_id!==id);feedback.entries.push({target_type:kind,target_id:id,decision,comment:comment.value});delete feedback.form_drafts[draftKey];persist();renderOutline();message.textContent='本项意见已记录。未审核内容保持待审，请导出后交回助手。';};
+- renderOutline();$('reader').scrollIntoView({block:'nearest'});panel.querySelector('h2').tabIndex=-1;panel.querySelector('h2').focus({preventScroll:true});
+-}
+-function options(list){$('exportType').replaceChildren();list.forEach(([v,t])=>{const o=add($('exportType'),'option',t);o.value=v;});}
+-function openExport(mode='feedback'){
+- options(mode==='model'?[['model-json','模型 JSON'],['model-md','简短说明 Markdown'],['model-svg','目标层级 SVG']]:[['feedback','正式审核意见 JSON'],['draft','审核草稿 JSON'],['feedback-md','可读意见摘要 Markdown']]);
+- $('exportType').value=mode==='draft'?'draft':mode==='model'?'model-json':'feedback';$('exportHeading').textContent=mode==='model'?'导出模型文件':'导出审核意见';prepareExport();$('exportDialog').showModal();
+-}
+-function prepareExport(){
+- const type=$('exportType').value,packet=SimpleReview.packet(feedback,type==='feedback');let text,mime='application/json',extension='json',errors=[];
+- if(type==='feedback'||type==='draft'){errors=SimpleReview.validate(packet,model,bound,type==='feedback');text=JSON.stringify(packet,null,2)+'\n';}
+- else if(type==='feedback-md'){text=SimpleReview.markdown(SimpleReview.packet(feedback,false),model);mime='text/markdown';extension='md';}
+- else if(type==='model-json')text=JSON.stringify(model,null,2)+'\n';
+- else if(type==='model-md'){text=payload.markdown;mime='text/markdown';extension='md';}
+- else{text=payload.svg;mime='image/svg+xml';extension='svg';}
+- const name=(type.startsWith('model-')?'goal-model':type==='draft'?'review-feedback-draft':'review-feedback')+'-'+model.model_id.replace(/[^a-zA-Z0-9_-]/g,'_')+'-'+model.version.replace(/[^a-zA-Z0-9._-]/g,'_')+'-'+new Date().toISOString().replace(/[:.]/g,'-')+'.'+extension;
+- exportSnapshot={text,mime,name,errors,kind:type};$('exportInfo').textContent=`${name} · ${new Blob([text]).size} 字节`;$('exportError').textContent=errors.join(' ');$('errorLinks').replaceChildren();
+- if(errors.length)for(const draft of Object.values(feedback.form_drafts))button($('errorLinks'),'返回未完成意见',()=>{$('exportDialog').close();openDetail(draft.target_type,draft.target_id);});
+- $('saveFile').disabled=$('copyFile').disabled=$('showContent').disabled=$('saveAs').disabled=!!errors.length;$('saveAs').hidden=typeof window.showSaveFilePicker!=='function';$('exportText').value=text;$('manualCopy').hidden=true;$('confirmSaved').hidden=true;$('exportStatus').textContent=errors.length?'可切换到“审核草稿 JSON”先保存进度。':'保存或复制后，请把审核意见交回助手。';
+-}
+-function showText(message){$('manualCopy').hidden=false;$('exportStatus').textContent=message;$('exportText').focus();$('exportText').select();}
+-$('saveFile').onclick=async()=>{
+- if(busy||!exportSnapshot||exportSnapshot.errors.length)return;busy=true;$('saveFile').disabled=true;const snapshot=exportSnapshot;
+- try{const configNode=$('local-save-config');if(configNode){const config=JSON.parse(configNode.textContent);const response=await fetch(config.endpoint,{method:'POST',headers:{'Content-Type':'application/json','X-GoalForge-Token':config.token},body:JSON.stringify({kind:snapshot.kind,content:snapshot.text}),credentials:'omit'});const receipt=await response.json();if(!response.ok)throw new Error(receipt.error||'本地保存失败');$('exportStatus').textContent='文件已实际保存：'+receipt.path+'（'+receipt.bytes+' 字节）。请将审核意见交回助手。';}
+- else{const url=URL.createObjectURL(new Blob([snapshot.text],{type:snapshot.mime+';charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=snapshot.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);$('exportStatus').textContent='已发起浏览器下载，请检查下载列表；未收到文件时可复制或查看文本。';$('confirmSaved').hidden=false;}}
+- catch(e){showText(e.name==='AbortError'?'保存已取消，内容仍保留。你也可以复制或手动保存。':'保存未完成：'+e.message+'。请复制或手动保存完整内容。');}
+- finally{busy=false;$('saveFile').disabled=false;}
+-};
+-$('saveAs').onclick=async()=>{if(busy||!exportSnapshot||exportSnapshot.errors.length)return;busy=true;$('saveAs').disabled=true;try{const handle=await window.showSaveFilePicker({suggestedName:exportSnapshot.name});const writable=await handle.createWritable();await writable.write(exportSnapshot.text);await writable.close();$('exportStatus').textContent='文件已写入所选位置。审核意见仍需交回助手。';}catch(e){showText(e.name==='AbortError'?'保存已取消，内容仍保留，可复制或手动保存。':'无法写入所选位置：'+e.message+'。请复制或手动保存。');}finally{busy=false;$('saveAs').disabled=false;}};
+-$('copyFile').onclick=async()=>{if(!exportSnapshot||exportSnapshot.errors.length)return;try{await navigator.clipboard.writeText(exportSnapshot.text);$('exportStatus').textContent='完整内容已复制，可直接粘贴给助手；这不代表模型已经修改。';}catch(e){showText('无法自动复制，请在下方全选并复制完整内容。');}};
+-$('showContent').onclick=()=>showText('下方是完整导出内容，可全选复制，或另存为 UTF-8 文件。');
+-$('confirmSaved').onclick=()=>{$('exportStatus').textContent='已记录你确认文件保存。请将审核意见交回助手。';$('confirmSaved').hidden=true;};
+-$('exportType').onchange=prepareExport;$('closeExport').onclick=()=>$('exportDialog').close();$('exportFeedback').onclick=()=>openExport();$('exportDraft').onclick=()=>openExport('draft');$('modelFiles').onclick=()=>openExport('model');
+-$('reviewFirst').onclick=()=>{const goal=model.goals.find(g=>!entry('goal',g.goal_id))||model.goals[0];if(goal)openDetail('goal',goal.goal_id);else openDetail('model',model.model_id);};
+-$('importButton').onclick=()=>{pendingImport=null;$('confirmImport').disabled=true;$('importFile').value='';$('importStatus').textContent='替换前建议先导出当前草稿。';$('importDialog').showModal();};$('closeImport').onclick=()=>$('importDialog').close();
+-$('importFile').onchange=async()=>{pendingImport=null;$('confirmImport').disabled=true;try{const file=$('importFile').files[0];if(!file)return;if(file.size>5*1024*1024)throw new Error('文件超过 5MB，请确认选择的是审核 JSON。');const data=JSON.parse(await file.text());const errors=SimpleReview.validate(data,model,bound,data.status==='submitted');if(errors.length)throw new Error(errors.join(' '));pendingImport=data;$('importStatus').textContent=`版本一致，包含 ${data.entries.length} 项意见；确认后替换当前草稿。`;$('confirmImport').disabled=false;}catch(e){$('importStatus').textContent=e.message+' 当前草稿保持不变。';}};
+-$('confirmImport').onclick=()=>{if(!pendingImport)return;feedback=JSON.parse(JSON.stringify(pendingImport));persist();$('overallNote').value=feedback.note;$('importDialog').close();renderOutline();if(selected)openDetail(selected.kind,selected.id);};
+-$('overallNote').value=feedback.note;$('overallNote').oninput=()=>{feedback.note=$('overallNote').value;persist();};$('search').oninput=renderOutline;$('searchBox').hidden=true;
+-$('dagView').onclick=()=>switchView('dag');$('listView').onclick=()=>switchView('list');$('zoomIn').onclick=()=>{dagScale=Math.min(2.5,dagScale*1.25);scaleDag();};$('zoomOut').onclick=()=>{dagScale=Math.max(.2,dagScale/1.25);scaleDag();};$('fitDag').onclick=fitDag;
+-window.addEventListener('resize',()=>{if(display==='dag')fitDag();});
+-$('version').textContent=model.version;$('scope').textContent=`${model.scope.document_id} · ${model.goals.length} 个目标。原文依据保留在各项目标旁。`;
+-if(model.limitations.length||payload.report.readiness==='blocked'){$('limitations').hidden=false;$('limitations').textContent=(payload.report.readiness==='blocked'?'部分目标仍有依据问题，请优先核对。 ':'')+model.limitations.join(' ');}
+-const technical=$('technical');add(technical,'p',`模型 ${model.model_id} · ${model.version}。结构及原文版本已核验；独立语义审查与形式证明未执行，人工待审。`);add(technical,'p',`完整记录：${model.goals.length} 个目标、${model.refinement_groups.length} 个精化组、${model.evidence_index.length} 段依据。没有评估全部两两关系，也不把未评估当作无关系。`);
+-const records=add(technical,'ul');for(const group of model.refinement_groups)button(add(records,'li'),'查看层级记录 '+group.group_id,()=>openDetail('group',group.group_id));button(technical,'导出当前模型文件',()=>openExport('model'));
+-window.addEventListener('beforeunload',e=>{if(storageProblem&&(feedback.entries.length||Object.keys(feedback.form_drafts).length||feedback.note)){e.preventDefault();e.returnValue='';}});
+-drawDag();renderOutline();renderQuestions();progress();
++'use strict';
++const $=id=>document.getElementById(id),payload=JSON.parse($('payload').textContent),model=payload.model,bound=payload.binding;
++const goals=new Map(model.goals.map(g=>[g.goal_id,g])),groups=new Map(model.refinement_groups.map(g=>[g.group_id,g])),evidence=new Map(model.evidence_index.map(e=>[e.evidence_id,e]));
++const relations=new Map((model.relations||[]).map(r=>[r.relation_id,r]));
++const relationTypes={specialization:'范围具体化',operationalization:'实现方式',contribution:'有助于',precedes:'过程先后'},relationStates={supported:'有依据的联系',proposed:'待确认联系',rejected:'已否定联系'};
++const key='goalforge-simple-feedback:'+bound.sha256;
++let feedback=SimpleReview.empty(bound,model),storageProblem='',selected=null,pendingImport=null,exportSnapshot=null,busy=false,display='dag',dagScale=1;
++try{const raw=localStorage.getItem(key);if(raw){const data=JSON.parse(raw);const errors=SimpleReview.validate(data,model,bound);if(errors.length)storageProblem='旧草稿未恢复：'+errors.join(' ');else feedback=data;}}catch(e){storageProblem='浏览器草稿无法保存，请及时导出或复制意见。';}
++function add(parent,tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;parent.appendChild(el);return el;}
++function button(parent,text,handler,cls){const el=add(parent,'button',text,cls);el.type='button';el.onclick=handler;return el;}
++function persist(){feedback.status='draft';try{localStorage.setItem(key,JSON.stringify(feedback));storageProblem='';}catch(e){storageProblem='浏览器草稿未保存，请立即导出或复制。';}progress();}
++function progress(){const s=SimpleReview.summary(feedback,model);$('progress').textContent=`目标已记录 ${s.goals}/${s.total} · 层级已记录 ${s.groups}/${s.groupTotal}${model.relations?' · 联系已记录 '+s.relations+'/'+s.relationTotal:''}`;$('saveStatus').textContent=storageProblem||`草稿保存在当前浏览器${s.drafts?'，有 '+s.drafts+' 项未完成意见':''}。导出后交回助手。`;}
++function entry(kind,id){return feedback.entries.find(e=>e.target_type===kind&&e.target_id===id);}
++function goalIssues(id){return model.issues.filter(i=>i.target_type==='goal'&&i.target_id===id);}
++function isActive(group){return group.status==='supported'&&group.completeness==='complete';}
++const byParent=new Map();for(const group of groups.values())if(isActive(group)){if(!byParent.has(group.parent_id))byParent.set(group.parent_id,[]);byParent.get(group.parent_id).push(group);}
++function renderOutline(){
++ $('outline').replaceChildren();const children=new Set([...byParent.values()].flat().flatMap(g=>g.child_ids)),seen=new Set(),query=$('search').value.trim();
++ function node(id,parent,depth=0){
++  const g=goals.get(id),card=add(parent,'article',undefined,'goal'+(selected?.kind==='goal'&&selected.id===id?' selected':''));card.dataset.goalId=id;
++  button(card,g.statement,()=>openDetail('goal',id),'goalTitle');const meta=add(card,'div',undefined,'goalMeta');
++  if(goalIssues(id).length||g.origin==='inferred')add(meta,'span','需确认','tag');
++  const e=entry('goal',id);add(meta,'span',e?({accept:'已记录：可以',modify:'已记录：需修改',defer:'已记录：暂不确定'}[e.decision]):'点开查看依据并审核');
++  if(seen.has(id)){add(card,'p','同一目标，也出现在其他层级；意见会同步。','muted shared');return;}seen.add(id);
++  if(!query&&byParent.has(id)){
++   const alternatives=byParent.get(id),details=add(card,'details');details.open=depth<1;add(details,'summary',`查看下一级目标${alternatives.length>1?'与替代方案':''}`);
++   const nested=add(details,'div',undefined,'children');alternatives.forEach((group,i)=>{const section=add(nested,'section',undefined,'group');const head=add(section,'div',undefined,'groupHeader');add(head,'strong',alternatives.length>1?`方案 ${i+1}：任选一个完整方案；以下各项都需满足`:'以下各项都需满足');button(head,entry('group',group.group_id)?'查看层级意见':'审核这组层级',()=>openDetail('group',group.group_id));for(const child of group.child_ids)node(child,section,depth+1);});
++  }
++ }
++ const roots=query?model.goals.filter(g=>g.statement.includes(query)).map(g=>g.goal_id):model.goals.filter(g=>!children.has(g.goal_id)).map(g=>g.goal_id);for(const id of roots)node(id,$('outline'));
++ if(!roots.length)add($('outline'),'p',query?'没有匹配的目标，请更换关键词。':'本次可读资料中没有提取到目标。','notice');
++ $('hierarchyHint').textContent=query?'搜索结果仅列匹配目标；清空搜索可恢复层级。':byParent.size?'展开查看具体目标，点击文字查看原文。共享目标会标明重复引用。':'当前资料尚未建立可靠的目标层级，以下目标独立列出。';
++ document.querySelectorAll('.dag-node').forEach(n=>n.classList.toggle('selected',!!selected&&(n.dataset.goal===selected.id||n.dataset.group===selected.id)));
++}
++function drawDag(){
++ $('dagCanvas').innerHTML=payload.svg;
++ const graphic=$('dagCanvas').querySelector('svg');
++ graphic.querySelectorAll('[data-goal],[data-group]').forEach(n=>{const kind=n.dataset.goal?'goal':'group',id=n.dataset.goal||n.dataset.group;n.onclick=()=>openDetail(kind,id);n.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openDetail(kind,id);}};});
++ if(!byParent.size&&model.goals.length)$('dagLegend').textContent='当前尚未建立有依据的层级，各项目标独立展示。点击目标查看原文并审核。';
++ fitDag();
++}
++function scaleDag(){const graphic=$('dagCanvas').querySelector('svg');if(!graphic)return;graphic.style.width=(Number(graphic.getAttribute('width'))*dagScale)+'px';graphic.style.height='auto';}
++function fitDag(){const graphic=$('dagCanvas').querySelector('svg');if(!graphic)return;dagScale=Math.min(1,Math.max(.2,($('dagCanvas').clientWidth-8)/Number(graphic.getAttribute('width'))));scaleDag();}
++function switchView(kind){display=kind;$('dagCanvas').hidden=$('dagTools').hidden=$('dagLegend').hidden=kind!=='dag';$('outline').hidden=$('hierarchyHint').hidden=kind!=='list';$('relationsPanel').hidden=kind!=='relations';$('searchBox').hidden=kind!=='list'||model.goals.length<12;$('relationsView').setAttribute('aria-pressed',String(kind==='relations'));$('dagView').setAttribute('aria-pressed',String(kind==='dag'));$('listView').setAttribute('aria-pressed',String(kind==='list'));if(kind==='dag')fitDag();}
++function renderQuestions(){
++ $('questions').replaceChildren();const seen=new Set();for(const i of model.issues){const q=i.target_type+':'+i.target_id+':'+i.message;if(seen.has(q))continue;seen.add(q);const b=button($('questions'),i.message,()=>openDetail(i.target_type,i.target_id),'question');add(b,'small','点开核对并给意见');}$('questionsSection').hidden=!seen.size;
++}
++function evidenceBlock(parent,refs){
++ const items=refs.map(id=>evidence.get(id)).filter(Boolean);if(!items.length){add(parent,'p','当前未找到可查看的原文依据。','notice');return;}
++ function show(p,e){add(p,'blockquote',e.quote);let location=Object.entries(e.original_locator||{}).filter(([k])=>!['start_char','end_char'].includes(k)).map(([k,v])=>({paragraph:'段落',page:'页码',slide:'幻灯片',turn:'轮次',line_start:'起始行',line_end:'结束行'}[k]||k)+' '+v).join(' · ');add(p,'small',location||e.source_id);if(!['native_text','human_verified'].includes(e.recognition_status))add(p,'p','这段依据来自识别稿，尚需核对原件。','notice');}
++ show(parent,items[0]);if(items.length>1){const d=add(parent,'details');add(d,'summary',`其他 ${items.length-1} 段依据`);items.slice(1).forEach(e=>show(d,e));}
++}
++function openDetail(kind,id){
++ selected={kind,id};$('emptyReader').hidden=true;$('detail').hidden=false;const panel=$('detail');panel.replaceChildren();
++ button(panel,'返回目标模型',()=>{const target=$(display==='dag'?'dagCanvas':display==='relations'?'relationsPanel':'outline');target.scrollIntoView({block:'start'});target.querySelector('[role=button],button')?.focus();},'backOutline');
++ let title,refs=[];
++ if(kind==='goal'){
++  const g=goals.get(id);title=g.statement;add(panel,'h2',title);if(g.conditions.length)add(panel,'p','适用条件：'+g.conditions.join('；'),'conditions');if(g.actor)add(panel,'p','目标主体：'+g.actor,'muted');
++  if(g.origin==='inferred'){add(panel,'p','这项目标根据原文推断，请确认是否符合原意。','notice');if(g.inference){add(panel,'p',g.inference.reason);if(g.inference.assumptions?.length)add(panel,'p','推断条件：'+g.inference.assumptions.join('；'));}}
++  refs=g.evidence_ids;
++ }else if(kind==='group'){
++  const g=groups.get(id);title='这组层级是否合理？';add(panel,'h2',title);add(panel,'p','上层目标：'+goals.get(g.parent_id).statement);add(panel,'strong','以下各项在说明的条件下共同满足上层目标：');const list=add(panel,'ul');g.child_ids.forEach(gid=>add(list,'li',goals.get(gid).statement));add(panel,'p',g.rationale);if(g.assumptions.length)add(panel,'p','适用条件：'+g.assumptions.join('；'),'conditions');if(!isActive(g))add(panel,'p','这是待确认的层级建议，未作为成立的精化展开。','notice');refs=g.evidence_ids;if(g.checks?.length){const checks=add(panel,'details');add(checks,'summary','正常与异常场景检查');for(const c of g.checks)add(checks,'p',(c.kind==='normal'?'正常场景':'异常场景')+' · '+(c.origin==='source'?'来自原文':'分析假设')+'：'+c.scenario+'；'+({supports:'在所述范围内支持',counterexample:'存在反例',unknown:'尚未确定'}[c.outcome])+'。'+c.rationale);}
++ }else if(kind==='relation'){
++  const r=relations.get(id);title=relationTypes[r.type];add(panel,'h2',title);add(panel,'p',relationStates[r.status],'notice');add(panel,'p','起点：'+goals.get(r.source_id).statement);add(panel,'p','终点：'+goals.get(r.target_id).statement);add(panel,'p',r.rationale);if(r.conditions.length)add(panel,'p','适用条件：'+r.conditions.join('；'));if(r.assumptions.length)add(panel,'p','分析假设：'+r.assumptions.join('；'));add(panel,'p','这项联系单独审核，不代表充分精化。','muted');refs=r.evidence_ids;
++ }else{title='整体与遗漏意见';add(panel,'h2',title);add(panel,'p','请说明缺了什么、哪里不清楚，或需要回查哪段资料。');}
++ const relevant=model.issues.filter(i=>i.target_type===kind&&i.target_id===id);for(const i of relevant)add(panel,'p',i.message,'notice');
++ if(refs.length){add(panel,'h3','原文依据');evidenceBlock(panel,refs);}
++ const form=add(panel,'form');const field=add(form,'fieldset',undefined,'choices');add(field,'legend',kind==='group'?'你对这组层级的判断':'你的判断');const draftKey=kind+':'+id,original=feedback.form_drafts[draftKey]||entry(kind,id)||{decision:'',comment:''};
++ const radios=[];for(const [value,text] of [['accept','可以'],['modify','需要修改'],['defer','暂不确定']]){const label=add(field,'label'),input=add(label,'input');input.type='radio';input.name='decision';input.value=value;input.checked=original.decision===value;add(label,'span',text);radios.push(input);}
++ const label=add(form,'label','意见或原因（需修改／暂不确定时填写）');label.htmlFor='opinion';const comment=add(form,'textarea');comment.id='opinion';comment.rows=3;comment.value=original.comment;comment.placeholder='用自己的话说明即可。';
++ const message=add(form,'p','意见保存后仍需导出交回助手。','muted');message.setAttribute('role','status');
++ function stage(){feedback.form_drafts[draftKey]={target_type:kind,target_id:id,decision:radios.find(r=>r.checked)?.value||'',comment:comment.value};persist();}
++ radios.forEach(r=>r.onchange=stage);comment.oninput=stage;
++ const actions=add(form,'div',undefined,'editorActions');const save=add(actions,'button','保存意见','primary');save.type='submit';
++ button(actions,'撤回本项意见',()=>{feedback.entries=feedback.entries.filter(e=>e.target_type!==kind||e.target_id!==id);delete feedback.form_drafts[draftKey];persist();renderOutline();openDetail(kind,id);});
++ form.onsubmit=e=>{e.preventDefault();const decision=radios.find(r=>r.checked)?.value;if(!decision||(decision!=='accept'&&!comment.value.trim())){message.textContent='请选择判断；需要修改或暂不确定时，请填写原因。';if(!decision)radios[0].focus();else comment.focus();return;}feedback.entries=feedback.entries.filter(e=>e.target_type!==kind||e.target_id!==id);feedback.entries.push({target_type:kind,target_id:id,decision,comment:comment.value});delete feedback.form_drafts[draftKey];persist();renderOutline();message.textContent='本项意见已记录。未审核内容保持待审，请导出后交回助手。';};
++ renderOutline();$('reader').scrollIntoView({block:'nearest'});panel.querySelector('h2').tabIndex=-1;panel.querySelector('h2').focus({preventScroll:true});
++}
++function options(list){$('exportType').replaceChildren();list.forEach(([v,t])=>{const o=add($('exportType'),'option',t);o.value=v;});}
++function openExport(mode='feedback'){
++ options(mode==='model'?[['model-json','模型 JSON'],['model-md','简短说明 Markdown'],['model-svg','目标层级 SVG'],...(model.relations?[['relations-svg','目标联系 SVG']]:[])]:[['feedback','正式审核意见 JSON'],['draft','审核草稿 JSON'],['feedback-md','可读意见摘要 Markdown']]);
++ $('exportType').value=mode==='draft'?'draft':mode==='model'?'model-json':'feedback';$('exportHeading').textContent=mode==='model'?'导出模型文件':'导出审核意见';prepareExport();$('exportDialog').showModal();
++}
++function prepareExport(){
++ const type=$('exportType').value,packet=SimpleReview.packet(feedback,type==='feedback');let text,mime='application/json',extension='json',errors=[];
++ if(type==='feedback'||type==='draft'){errors=SimpleReview.validate(packet,model,bound,type==='feedback');text=JSON.stringify(packet,null,2)+'\n';}
++ else if(type==='feedback-md'){text=SimpleReview.markdown(SimpleReview.packet(feedback,false),model);mime='text/markdown';extension='md';}
++ else if(type==='model-json')text=JSON.stringify(model,null,2)+'\n';
++ else if(type==='model-md'){text=payload.markdown;mime='text/markdown';extension='md';}
++ else{text=type==='relations-svg'?payload.relations_svg:payload.svg;mime='image/svg+xml';extension='svg';}
++ const name=(type==='relations-svg'?'goal-relations':type.startsWith('model-')?'goal-model':type==='draft'?'review-feedback-draft':'review-feedback')+'-'+model.model_id.replace(/[^a-zA-Z0-9_-]/g,'_')+'-'+model.version.replace(/[^a-zA-Z0-9._-]/g,'_')+'-'+new Date().toISOString().replace(/[:.]/g,'-')+'.'+extension;
++ exportSnapshot={text,mime,name,errors,kind:type};$('exportInfo').textContent=`${name} · ${new Blob([text]).size} 字节`;$('exportError').textContent=errors.join(' ');$('errorLinks').replaceChildren();
++ if(errors.length)for(const draft of Object.values(feedback.form_drafts))button($('errorLinks'),'返回未完成意见',()=>{$('exportDialog').close();openDetail(draft.target_type,draft.target_id);});
++ $('saveFile').disabled=$('copyFile').disabled=$('showContent').disabled=$('saveAs').disabled=!!errors.length;$('saveAs').hidden=typeof window.showSaveFilePicker!=='function';$('exportText').value=text;$('manualCopy').hidden=true;$('confirmSaved').hidden=true;$('exportStatus').textContent=errors.length?'可切换到“审核草稿 JSON”先保存进度。':'保存或复制后，请把审核意见交回助手。';
++}
++function showText(message){$('manualCopy').hidden=false;$('exportStatus').textContent=message;$('exportText').focus();$('exportText').select();}
++$('saveFile').onclick=async()=>{
++ if(busy||!exportSnapshot||exportSnapshot.errors.length)return;busy=true;$('saveFile').disabled=true;const snapshot=exportSnapshot;
++ try{const configNode=$('local-save-config');if(configNode){const config=JSON.parse(configNode.textContent);const response=await fetch(config.endpoint,{method:'POST',headers:{'Content-Type':'application/json','X-GoalForge-Token':config.token},body:JSON.stringify({kind:snapshot.kind,content:snapshot.text}),credentials:'omit'});const receipt=await response.json();if(!response.ok)throw new Error(receipt.error||'本地保存失败');$('exportStatus').textContent='文件已实际保存：'+receipt.path+'（'+receipt.bytes+' 字节）。请将审核意见交回助手。';}
++ else{const url=URL.createObjectURL(new Blob([snapshot.text],{type:snapshot.mime+';charset=utf-8'})),a=document.createElement('a');a.href=url;a.download=snapshot.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);$('exportStatus').textContent='已发起浏览器下载，请检查下载列表；未收到文件时可复制或查看文本。';$('confirmSaved').hidden=false;}}
++ catch(e){showText(e.name==='AbortError'?'保存已取消，内容仍保留。你也可以复制或手动保存。':'保存未完成：'+e.message+'。请复制或手动保存完整内容。');}
++ finally{busy=false;$('saveFile').disabled=false;}
++};
++$('saveAs').onclick=async()=>{if(busy||!exportSnapshot||exportSnapshot.errors.length)return;busy=true;$('saveAs').disabled=true;try{const handle=await window.showSaveFilePicker({suggestedName:exportSnapshot.name});const writable=await handle.createWritable();await writable.write(exportSnapshot.text);await writable.close();$('exportStatus').textContent='文件已写入所选位置。审核意见仍需交回助手。';}catch(e){showText(e.name==='AbortError'?'保存已取消，内容仍保留，可复制或手动保存。':'无法写入所选位置：'+e.message+'。请复制或手动保存。');}finally{busy=false;$('saveAs').disabled=false;}};
++$('copyFile').onclick=async()=>{if(!exportSnapshot||exportSnapshot.errors.length)return;try{await navigator.clipboard.writeText(exportSnapshot.text);$('exportStatus').textContent='完整内容已复制，可直接粘贴给助手；这不代表模型已经修改。';}catch(e){showText('无法自动复制，请在下方全选并复制完整内容。');}};
++$('showContent').onclick=()=>showText('下方是完整导出内容，可全选复制，或另存为 UTF-8 文件。');
++$('confirmSaved').onclick=()=>{$('exportStatus').textContent='已记录你确认文件保存。请将审核意见交回助手。';$('confirmSaved').hidden=true;};
++$('exportType').onchange=prepareExport;$('closeExport').onclick=()=>$('exportDialog').close();$('exportFeedback').onclick=()=>openExport();$('exportDraft').onclick=()=>openExport('draft');$('modelFiles').onclick=()=>openExport('model');
++$('reviewFirst').onclick=()=>{const goal=model.goals.find(g=>!entry('goal',g.goal_id))||model.goals[0];if(goal)openDetail('goal',goal.goal_id);else openDetail('model',model.model_id);};
++$('importButton').onclick=()=>{pendingImport=null;$('confirmImport').disabled=true;$('importFile').value='';$('importStatus').textContent='替换前建议先导出当前草稿。';$('importDialog').showModal();};$('closeImport').onclick=()=>$('importDialog').close();
++$('importFile').onchange=async()=>{pendingImport=null;$('confirmImport').disabled=true;try{const file=$('importFile').files[0];if(!file)return;if(file.size>5*1024*1024)throw new Error('文件超过 5MB，请确认选择的是审核 JSON。');const data=JSON.parse(await file.text());const errors=SimpleReview.validate(data,model,bound,data.status==='submitted');if(errors.length)throw new Error(errors.join(' '));pendingImport=data;$('importStatus').textContent=`版本一致，包含 ${data.entries.length} 项意见；确认后替换当前草稿。`;$('confirmImport').disabled=false;}catch(e){$('importStatus').textContent=e.message+' 当前草稿保持不变。';}};
++$('confirmImport').onclick=()=>{if(!pendingImport)return;feedback=JSON.parse(JSON.stringify(pendingImport));persist();$('overallNote').value=feedback.note;$('importDialog').close();renderOutline();if(selected)openDetail(selected.kind,selected.id);};
++$('overallNote').value=feedback.note;$('overallNote').oninput=()=>{feedback.note=$('overallNote').value;persist();};$('search').oninput=renderOutline;$('searchBox').hidden=true;
++$('relationsView').hidden=model.schema_version!=='goalforge-kaos-2';$('relationsView').onclick=()=>switchView('relations');
++$('dagView').onclick=()=>switchView('dag');$('listView').onclick=()=>switchView('list');$('zoomIn').onclick=()=>{dagScale=Math.min(2.5,dagScale*1.25);scaleDag();};$('zoomOut').onclick=()=>{dagScale=Math.max(.2,dagScale/1.25);scaleDag();};$('fitDag').onclick=fitDag;
++window.addEventListener('resize',()=>{if(display==='dag')fitDag();});
++$('version').textContent=model.version;$('scope').textContent=`${model.scope.document_id} · ${model.goals.length} 个目标。原文依据保留在各项目标旁。`;
++if(model.limitations.length||payload.report.readiness==='blocked'){$('limitations').hidden=false;$('limitations').textContent=(payload.report.readiness==='blocked'?'部分目标仍有依据问题，请优先核对。 ':'')+model.limitations.join(' ');}
++const technical=$('technical');add(technical,'p',`模型 ${model.model_id} · ${model.version}。结构及原文版本已核验；独立语义审查与形式证明未执行，人工待审。`);add(technical,'p',`完整记录：${model.goals.length} 个目标、${model.refinement_groups.length} 个精化组、${model.evidence_index.length} 段依据。没有评估全部两两关系，也不把未评估当作无关系。`);
++const records=add(technical,'ul');for(const group of model.refinement_groups)button(add(records,'li'),'查看层级记录 '+group.group_id,()=>openDetail('group',group.group_id));button(technical,'导出当前模型文件',()=>openExport('model'));
++window.addEventListener('beforeunload',e=>{if(storageProblem&&(feedback.entries.length||Object.keys(feedback.form_drafts).length||feedback.note)){e.preventDefault();e.returnValue='';}});
++function renderRelations(){
++ $('relationsList').replaceChildren();for(const r of relations.values()){
++  const card=add($('relationsList'),'article',undefined,'relationCard '+r.status);card.dataset.relationId=r.relation_id;
++  add(card,'strong',relationStates[r.status]+' · '+relationTypes[r.type]);
++  const endpoints=add(card,'p');button(endpoints,goals.get(r.source_id).statement,()=>openDetail('goal',r.source_id));add(endpoints,'span',' → ');button(endpoints,goals.get(r.target_id).statement,()=>openDetail('goal',r.target_id));
++  add(card,'p',r.rationale);button(card,'查看依据与审核联系',()=>openDetail('relation',r.relation_id));
++ }if(!relations.size)add($('relationsList'),'p','当前没有提交目标联系；不表示已排除所有可能联系。');
++}
++renderRelations();drawDag();renderOutline();renderQuestions();progress();
+--- before/skills/goal-model-building/references/modeling-rules.md
++++ after/skills/goal-model-building/references/modeling-rules.md
+@@ -4,7 +4,7 @@
+ 
+ 一个 AND 精化组表示：在明确领域假设下，该组子目标共同满足足以实现父目标。同一父目标多个完整组表示 OR 替代方案，每个方案内部仍全部满足。不能把主题相似、先后操作、有帮助或范围变窄直接当作这种充分关系。
+ 
+-从原文和上下文提出可能的精化组，核对整组，不穷举所有目标对。记录尚未确认的问题，未评估不等于无关系。
++先按[联系发现](relation-discovery.md)从原文识别类型明确的联系，再提出可能的精化组并核对整组，不穷举所有目标对。记录尚未确认的问题，未评估不等于无关系。
+ 
+ ## 组织、核验与场景检查
+ 
+@@ -21,7 +21,7 @@
+ - 障碍候选记录可能受阻的目标、发生情境和关系依据；不能确定端点时保留待关联问题。补救目标需另经提取核验。仅列障碍不等于完成风险分析。
+ - 偏好用于目标/方案取舍，保留适用条件和例外；更喜欢 A 不证明 A 足以满足父目标，也不证明 A 与 B 逻辑冲突。
+ - 贡献、冲突、操作化和责任与精化分开；负贡献不自动等于逻辑冲突，表达主体不自动等于实现责任方。不要把其他方法的关系全解释成 KAOS 精化。
+-- 当前契约没有专门辅助关系层，必要信息通过目标 conditions、依据与 questions/issues 承接，关键限制不只放在说明里。不能无损承接时记 limitations，不往 refinement_groups 塞入障碍、偏好或未定义关系；无记录也不表示已排除这些影响。
++- v2的relations只承接具体化、实现方式、贡献和过程先后；旧v1没有这一层。其他必要信息通过目标 conditions、依据与 questions/issues 承接，关键限制不只放在说明里。不能无损承接时记 limitations，不往 refinement_groups 塞入障碍、偏好或未定义关系；无记录也不表示已排除这些影响。
+ 
+ 父目标、子目标、条件与推断均需依据。缺中间层不强补；可保留多根、独立目标或少量待确认建议。status=proposed 或 completeness=partial 作为问题保留，不展开成已成立层级。
+ 
+@@ -35,7 +35,7 @@
+ 
+ 结构检查验证引用与无环，不能证明精化的充分性、完整性、可实现性。当前编制判断、独立语义审查、形式证明和人工意见分开报告。
+ 
+-无环规则仅约束当前精化图；未来独立辅助关系层须按各自语义核验，不能统一套用精化 DAG 规则。障碍、偏好和取舍优先放在相关目标/组详情及问题中，不自行增加独立图层。
++精化图保持DAG；辅助联系按[联系发现](relation-discovery.md)分别核验循环，不统一套用精化DAG。成立组在v2需记录正常与异常场景检查及实际依赖联系，具体契约见[输出契约](output-contract.md)。障碍、偏好和取舍优先放在相关目标/组详情及问题中，不自行增加未定义图层。
+ 
+ ## 理论依据
+ 
+--- before/skills/goal-model-building/references/output-contract.md
++++ after/skills/goal-model-building/references/output-contract.md
+@@ -1,42 +1,49 @@
+-# KAOS 目标模型契约
++# KAOS目标与联系契约
+ 
+-schema_version：goalforge-kaos-1。建模原则见[精化规则](modeling-rules.md)，运行见[工具](tools.md)。本契约是可执行的概念层核心子集，不代表完整形式化 KAOS。
++新任务默认 `goalforge-kaos-2`；历史 `goalforge-kaos-1` 继续读取、检查和导出，不自动迁移。两者均为概念层子集，不代表形式化证明。运行命令见[工具](tools.md)，联系语义见[联系发现](relation-discovery.md)。
+ 
+ ## 模型
+ 
+-| 字段 | 约束 |
+-|---|---|
+-| model_id / version / parent | 模型身份、当前版本、实际父模型绑定；首次 parent=null |
+-| scope | document_id、实际 coverage |
+-| goals | goal_id、statement、actor、conditions、origin、inference、support、evidence_ids |
+-| refinement_groups | 精化组数组，每组一种共同满足方案 |
+-| evidence_index | 位置核验后的原文依据，E 前缀为目标依据，K 前缀为关系原句 |
+-| issues | target_type（goal/group/model）、target_id、message、blocking |
+-| limitations | 实际资料与处理限制 |
+-| input_artifacts | attachments 下真实文件路径与 SHA-256 |
+-| review | 当前工具保持 status=pending，实际分项意见单独保存 |
+-| changes | 父对象快照、真实反馈哈希、删除 ID 与意见处理说明 |
++共同字段：model_id、version、parent、scope、goals、refinement_groups、evidence_index、issues、limitations、input_artifacts、review、changes。goals保留goal_id、statement、actor、conditions、origin、inference、support、evidence_ids。candidate_id直接作为goal_id，新增/拆合必须返回提取核验。actor不是实现责任分配。
+ 
+-actor 表示原文支持的主体，不据此自动认定 KAOS 系统代理责任。未知主体为 null，缺少完成条件记问题，不编造指标。
++v2增加relations及source_binding（sha256为实际标准全文字节哈希）；issues.target_type可为goal/group/relation/model。relation_id与goal_id、group_id互不冲突。review始终pending，实际分项意见另存。input_artifacts只引用attachments中的实际文件与SHA-256，inspect由附件重建全部内容，不信任手改模型。
+ 
+-本轮保持原 schema。candidate_id 直接沿用为 goal_id，不在建模阶段静默新增、拆合或改写目标；此类变化须回到提取核验阶段。当前没有 semantic-context.json 的绑定、消费或独立辅助关系结构；必要信息只由现有 conditions、inference、证据和 issues 承接，无法无损表达时列 limitations，不宣称附件已受验证。
++v1不接受relations字段；无类型来源的旧关系不会被猜测迁移。semantic-context.json及提取ledger不是模型语义输入，必要上下文仍以已核验目标条件和判断包表达。
+ 
+-## 精化判断包
++## 判断包
+ 
+-schema_version：goalforge-kaos-decisions-1。input_binding 绑定 extraction_sha256 和 judgments_sha256 的实际字节。groups 每项：
++新包为 `goalforge-kaos-decisions-2`，input_binding绑定extraction_sha256、judgments_sha256的实际字节，包含relations、groups、questions、reassessments。v1判断包继续采用旧格式。命令template默认v2；Python库兼容默认v1，新调用须明确version=2。
++
++relations每项示例：
+ 
+ ```json
+-{"group_id":"F1","parent_id":"G1","child_ids":["G2","G3"],"kind":"and","status":"supported","completeness":"complete","rationale":"说明共同满足的依据","assumptions":[],"evidence_ids":["E0001"],"evidence_quotes":[]}
++{"relation_id":"R1","source_id":"G2","target_id":"G1","type":"contribution","status":"proposed","conditions":[],"assumptions":[],"rationale":"说明有帮助但未证明充分的依据","evidence_ids":[],"evidence_quotes":[{"source_id":"DOC:S1","quote":"实际关系原句","role":"basis","start_char":0,"end_char":6}]}
+ ```
+ 
+-同一父目标的多个组表示完整替代方案；单成员组允许。status 为 supported/proposed，completeness 为 complete/partial；仅 supported+complete 进入成立的层级图。每组有真实依据与非空理由，成员、端点、方向有效，不自环或形成有向环，不重复同一方案。
++示例引文与位置须按真实原文编制。type为specialization/operationalization/contribution/precedes，方向按[联系定义](relation-discovery.md)；status为supported/proposed/rejected。必须有非空理由及实际定位的basis依据，supported的两端目标支持须为direct/inferred。conditions与assumptions为字符串数组。v2按各自类型检查循环，不对贡献关系一概要求DAG。
+ 
+-evidence_quotes 每条含 source_id、quote、role、start_char/end_char，用于定位说明关系的原句；工具核验后加入 K 依据并优先显示。引用存在不证明精化语义成立。
++目标依据保留E前缀；groups和relations中的evidence_quotes经全文核验后作为K前缀进入evidence_index，并写入对象evidence_ids。引用准确不证明语义判断成立。最终relations不再携带未定位的evidence_quotes。
+ 
+-questions 每项为 target_type、target_id、message。修订时 feedback_dispositions 含目标类型、ID、status（addressed/unresolved）与 reason，处理范围见[修订规范](reassessment.md)。
++## 精化组
+ 
+-## 交付视图
++groups每项包含group_id、parent_id、child_ids、kind=and、status=supported/proposed、completeness=complete/partial、rationale、assumptions、evidence_ids、evidence_quotes。同一父目标多个完整组为OR替代，每组内子目标共同满足；引用有效，不自环、无重复方案、精化图无环。
+ 
+-HTML、JSON、短 MD 来自同一冻结模型，附实际源文、判断与检查记录。SVG 按需生成。DAG 每目标一个节点，精化组为连接点，箭头从父目标向子目标展开；共享节点不复制，孤立目标保留。未知精化不伪装成成立边。
++v2可增加relation_ids与checks。relation_ids声明实际依赖的联系，端点须在本组父/子目标内。checks每项为kind=normal/exception、origin=source/analysis_assumption、scenario、outcome=supports/counterexample/unknown、rationale；source场景另有evidence_ids。缺少场景时可保留候选组，但supported+complete必须包含正常和异常两类，且全部outcome=supports，所有依赖联系为supported，所有目标支持有效。
+ 
+-manifest.json 列实际文件与哈希。HTML 内置同版本的 JSON、MD、DAG SVG 导出内容；完整原件仍在附件中。目标图、清单和文字说明不得自行补写语义。接口文件名可按任务调整，机器契约标识保持明确。
++只有supported+complete进入成立精化DAG。其余候选及反例继续留作问题，不因有贡献或先后关系就成立。场景检查仅记录编制者判断，不自动证明充分性。
++
++## 反馈、失效与明确迁移
++
++questions含target_type、target_id、message。feedback_dispositions含目标类型、ID、status=addressed/unresolved、reason；真实意见未明确处理时继续保留为问题。
++
++reassessments每项含assessment_id、target_type=relation/group、target_id、reason。目标语义、支持或证据变化及真实修改/待定意见会传播到相关联系与组；联系变化/争议传播到声明依赖它的组。比较实际证据内容，不能因引用编号没变沿用判断；标准全文变更时所有旧目标及相关联系/组均重查。受影响且保留的对象缺重评记录时拒绝构建，不能只更换哈希。详见[修订规范](reassessment.md)。
++
++升级先执行upgrade-template：生成空relations/groups及migration_parent旧模型绑定，由助手重新编制。assemble --migrate-from保留已核验的同一目标集合，生成新版本和迁移快照；未重新编制的旧组记录removed_group_ids并保留可见问题，不能静默消失。v1旧文件只读保留，不把旧related或proposed判断自动变成v2 supported。迁移与反馈修订参数不可混用。
++
++## 交付
++
++v2交付manifest为goalforge-kaos-delivery-2；检查报告为goalforge-kaos-check-2；反馈与待办为对应v2契约。旧v1维持原版本。
++
++HTML提供成立精化图、目标清单和独立联系视图。联系逐项显示方向/类型/状态、条件、假设及原句，可单独反馈；已否定记录仍保留。JSON与MD包含全部记录；SVG分为goal-model.svg与goal-relations.svg，不把贡献画成成立精化箭头。共享目标仍只在精化图画一个节点。
++
++所有导出来自同一冻结模型；manifest列实际文件哈希，HTML内置同版本导出内容，本地保存核验实际内容后返回回执。模型、附件或报告变更后重新inspect/finalize，旧检查不继续有效。
+--- before/skills/goal-model-building/references/reassessment.md
++++ after/skills/goal-model-building/references/reassessment.md
+@@ -5,6 +5,7 @@
+ ## 处理范围
+ 
+ - 目标修改或待定：回查原文，重新判断目标支持；所有包含该目标的精化组进入待办。
++- v2的端点联系也进入待办；联系修改或待定会使声明relation_ids依赖它的组进入待办。实际目标语义、条件、支持或证据变化，即使反馈没有点名也传播失效。
+ - 精化组意见：单独重评组的充分性、条件与原句；不强制重提全文目标。
+ - 补充和遗漏：记录整体问题，只在允许范围中回查并补入有依据内容。
+ - 未实际解决的意见继续成为问题，不因重建文件而消失。
+@@ -13,6 +14,8 @@
+ 目标 ID 保持稳定。新判断与当前目标输入绑定，精化包与实际提取、支持文件绑定。反馈处理结果不是语义修复成功的证据。
+ 
+ 新增/拆合保留新旧 ID 对应及原因，不能用旧 ID 掩盖不同含义。核验和组判断的实际输入变化后，重建绑定与检查；同一助手连续提取、核验和建模仍不是独立评审。
++
++v2判断包的reassessments记录assessment_id、target_type=relation/group、target_id、reason。每个仍保留的受影响联系/组必须有一次明确重评，否则assemble拒绝沿用结论；删除对象保留旧快照及删除ID，依赖它的剩余组仍需更新。理由是作者重评记录，不是人工确认。feedback_dispositions单独回答真实意见是否已处理，两者不能互相替代。v1修订保持旧版流程，不静默增加新版字段。
+ 
+ ## 重建
+ 
+--- before/skills/goal-model-building/references/relation-discovery.md
++++ after/skills/goal-model-building/references/relation-discovery.md
+@@ -0,0 +1,32 @@
++# 先发现联系，再核验精化组
++
++先对每个目标明确主体、预期结果、范围、条件及其目的/方式；理由保持简短可核对。优先同一问答、共同场景、明确跨轮指代及孤立目标的相关上下文，不默认穷举所有目标对，也不把未评估判成无关系。
++
++## 四种有向联系
++
++| type | 起点 source_id → 终点 target_id | 不能据此声称 |
++|---|---|---|
++| specialization | 具体情境中的目标 → 一般目标 | 某个情境覆盖一般目标的全部适用范围 |
++| operationalization | 实现方式/策略目标 → 所服务的目的 | 该方式在所有情况下均足以实现目的 |
++| contribution | 有帮助的目标 → 受帮助的目标 | 帮助等于充分保证；负贡献自动是冲突 |
++| precedes | 先发生的目标结果 → 后发生的目标结果 | 顺序等于因果或精化 |
++
++端点只能引用已提取、核验的目标；原文仅有操作背景而无目标资格时，不为了画联系造节点。新发现的有依据上层目标先返回提取，记录推断及假设，重核后再建模；不固定补几个根。
++
++每项记录条件、假设、关系原句、方向和简短理由。supported 表示编制者认为联系有依据，仍待人工审核；proposed 表示待确认；rejected 保留实际否定判断与依据。端点支持不足不能标 supported。没有评估过的目标对不补写 rejected。
++
++判断基于两端目标的实际正文和条件，不能在rationale中把端点悄悄改成更宽的目的或补入未保留的方式。两种替代方法可能分别服务同一目的，但一种方法不因此实现另一种方法；缺共同目的目标时先回查提取或留问题，不为连边补根。后续标记、归档等动作可能帮助之后回访，不能仅因同属处理流程就反向认定它帮助此前识别。近同义重复应回提取整理，不能用贡献边掩盖重复。条件只写影响本判断的具体限制，不用“在原文情境内”等通用句遮住范围不一致。
++
++具体化、实现方式和先后关系各自在非 rejected 子图中禁止循环；贡献可相互影响，不能一概套用精化DAG规则。方向有歧义时保留问题并重查，不能随意翻边消除循环。所有类型都不允许自环或重复同类型、同方向、同条件记录。
++
++## 转入精化核验
++
++只有实际声称子目标整组充分实现父目标时才编制 refinement_groups。按[建模规则](modeling-rules.md)检查共同充分性、替代完整性、范围及正常/异常场景；实际用作判断依据的联系在 relation_ids 中声明，不能省略依赖规避失效传播。
++
++checks 保存 kind=normal/exception、origin=source/analysis_assumption、scenario、outcome=supports/counterexample/unknown、rationale。来自原文的场景另引用 evidence_ids。分析场景明确为假设，不冒充源文事实。supported+complete 组必须包含两类场景且无未解决反例/未知，所有依赖联系也须 supported；这些字段由作者判断，程序不能证明充分性。
++
++发现不足就保留 proposed/partial 及具体缺口，不为增加边数扩写目标。普通联系始终单独展示，不转换成成立精化箭头；贡献或先后即使有依据也可能永远不形成精化组。
++
++## 有界修复
++
++结构失败后只修正定位到的引用、记录或经原文重新判断的对象，最多两轮局部修复（任务另有预算则按预算）；保存失败输入、报错、修改理由和实际次数。语义未知无新证据时停止该问题，继续其他对象。不能通过删除有依据目标、删除证据或任意改状态来凑通过；失败运行计入实验预算。
+--- before/skills/goal-model-building/references/tools.md
++++ after/skills/goal-model-building/references/tools.md
+@@ -10,7 +10,7 @@
+ python skills/goal-model-building/scripts/kaos_model.py template work/extraction.json work/judgments.json work/kaos-decisions.json
+ ```
+ 
+-空精化包 groups/questions 由助手根据原文填写，不复制空标签当结论；字段见[模型契约](output-contract.md)。
++默认生成v2判断包。relations、groups、questions由助手根据原文填写，不复制空标签当结论；字段见[模型契约](output-contract.md)。仅维护旧流程时加template --schema-version 1；Python库的decision_template保留version=1兼容默认，新调用显式传version=2。
+ 
+ ## 构建、核验、交付
+ 
+@@ -22,7 +22,16 @@
+ 
+ assemble 用实际支持包重执行核对，不要求重复输出人工追溯报告。inspect 核对当前结构、实际源文和输入；finalize 比对实际检查与内容，不接受口头 passed。阻断问题显式保留，资料或绑定错误拒绝交付。
+ 
+-默认 HTML/JSON/短 MD、必要附件和清单。加 finalize --svg 可同时输出 SVG 文件；HTML 本身也可导出同一 DAG SVG。
++默认 HTML/JSON/短 MD、必要附件和清单。v2的JSON/MD包含全部联系，HTML可单独审核联系。加 finalize --svg 同时输出层级goal-model.svg与联系goal-relations.svg；HTML可导出这两份独立图，联系不混进精化DAG。
++
++## 明确升级旧模型
++
++```text
++python skills/goal-model-building/scripts/kaos_model.py upgrade-template old/goal-model.json work/upgrade-decisions.json
++python skills/goal-model-building/scripts/kaos_model.py assemble old/attachments/extraction.json old/attachments/judgments.json old/attachments/source.txt work/upgrade-decisions.json work/upgraded --migrate-from old/goal-model.json
++```
++
++先编制upgrade-decisions再assemble。模板仅绑定旧模型及实际输入，groups/relations均为空，不自动复制旧判断或猜测类型。升级保持同一核验过的目标集合；若需改目标，先完成版本修订。旧文件保留，新模型保存迁移父绑定，再inspect/finalize。
+ 
+ ## 本地预览与保存
+ 
+--- before/skills/goal-model-building/scripts/kaos_model.py
++++ after/skills/goal-model-building/scripts/kaos_model.py
+@@ -20,6 +20,11 @@
+ 
+ SCHEMA = 'goalforge-kaos-1'
+ FEEDBACK = 'goalforge-simple-feedback-1'
++SCHEMA2 = 'goalforge-kaos-2'
++FEEDBACK2 = 'goalforge-simple-feedback-2'
++RELATION_TYPES = {'specialization': '范围具体化', 'operationalization': '实现方式',
++                  'contribution': '有助于', 'precedes': '过程先后'}
++RELATION_STATUS = {'supported': '有依据的联系', 'proposed': '待确认联系', 'rejected': '已否定联系'}
+ 
+ 
+ def encode(value):
+@@ -62,15 +67,19 @@
+     return result
+ 
+ 
+-def decision_template(extraction_raw, judgments_raw):
++def decision_template(extraction_raw, judgments_raw, version=1):
+     data = json.loads(extraction_raw.decode('utf-8-sig'))
+     validate_extraction(data)
+-    return dict(schema_version='goalforge-kaos-decisions-1',
++    require(version in {1, 2}, 'Unsupported decision version')
++    result = dict(schema_version='goalforge-kaos-decisions-' + str(version),
+                 input_binding=dict(extraction_sha256=digest(extraction_raw), judgments_sha256=digest(judgments_raw)),
+                 groups=[], questions=[])
+-
+-
+-def build(extraction_raw, judgments_raw, source_raw, decision_raw, previous=None, feedback=None):
++    if version == 2:
++        result.update(relations=[], reassessments=[])
++    return result
++
++
++def build(extraction_raw, judgments_raw, source_raw, decision_raw, previous=None, feedback=None, migration=None):
+     data = json.loads(extraction_raw.decode('utf-8-sig'))
+     validate_extraction(data)
+     source = source_raw.decode('utf-8')
+@@ -78,7 +87,9 @@
+     judgments = json.loads(judgments_raw.decode('utf-8-sig'))
+     traced = trace(data, judgments, source, digest(extraction_raw))
+     decisions = json.loads(decision_raw.decode('utf-8-sig'))
+-    require(decisions.get('schema_version') == 'goalforge-kaos-decisions-1', 'Unsupported KAOS judgment schema')
++    require(decisions.get('schema_version') in {'goalforge-kaos-decisions-1', 'goalforge-kaos-decisions-2'}, 'Unsupported KAOS judgment schema')
++    v2 = decisions['schema_version'] == 'goalforge-kaos-decisions-2'
++    require(v2 or not any(k in decisions for k in ('relations', 'reassessments', 'migration_parent')), 'v1 cannot consume v2 judgments')
+     require(decisions.get('input_binding') == dict(extraction_sha256=digest(extraction_raw), judgments_sha256=digest(judgments_raw)), 'Stale KAOS judgments')
+     evidence, goals, issues = {}, [], []
+     for c, t in zip(data['candidates'], traced['traces']):
+@@ -97,16 +108,19 @@
+     for q in data['review_questions']:
+         for gid in q['candidate_ids'] or [data['document_id'] + '-goal-model']:
+             issues.append(dict(target_type='goal' if q['candidate_ids'] else 'model', target_id=gid, message=q['question'], blocking=False))
+-    model = dict(schema_version=SCHEMA, model_id=data['document_id'] + '-goal-model', version='v1', parent=None,
++    model = dict(schema_version=SCHEMA2 if v2 else SCHEMA, model_id=data['document_id'] + '-goal-model', version='v1', parent=None,
+                  scope=dict(document_id=data['document_id'], coverage=data['coverage']),
+                  goals=goals, refinement_groups=copy.deepcopy(decisions['groups']), evidence_index=list(evidence.values()),
+                  issues=issues, limitations=list(dict.fromkeys(data['limitations'] + data['coverage']['omissions'] + data['conversion']['issues'])),
+                  input_artifacts=[], review=dict(status='pending'), changes=[])
++    if v2:
++        model['relations'] = copy.deepcopy(decisions['relations'])
++        model['source_binding'] = dict(sha256=digest(source_raw))
+     # The explanation of a relationship may occur outside the goal quotations.
+     # Locate those actual passages too, instead of showing an unrelated goal quote.
+     segments = {s['source_id']: s for s in data['segments']}
+     counter = 0
+-    for group in model['refinement_groups']:
++    for group in model['refinement_groups'] + model.get('relations', []):
+         for quote in group.pop('evidence_quotes', []):
+             require(isinstance(quote, dict), 'Invalid refinement quotation')
+             counter += 1
+@@ -116,23 +130,56 @@
+             model['evidence_index'].append(found)
+             group['evidence_ids'] = [found['evidence_id']] + group.get('evidence_ids', [])
+     for q in decisions.get('questions', []):
+-        require(isinstance(q, dict) and q.get('target_type') in {'goal', 'group', 'model'} and isinstance(q.get('message'), str) and q['message'].strip(), 'Invalid modeling question')
++        require(isinstance(q, dict) and q.get('target_type') in ({'goal', 'group', 'relation', 'model'} if v2 else {'goal', 'group', 'model'}) and isinstance(q.get('message'), str) and q['message'].strip(), 'Invalid modeling question')
+         model['issues'].append(dict(target_type=q['target_type'], target_id=q['target_id'], message=q['message'], blocking=False))
+     if data['status'] != 'completed':
+         model['limitations'].append('资料处理不完整，请核对范围与缺失部分。')
+     for g in model['refinement_groups']:
+         if g.get('status') != 'supported' or g.get('completeness') != 'complete':
+             model['issues'].append(dict(target_type='group', target_id=g.get('group_id'), message='这组层级仍需确认，尚未作为成立的精化展示。', blocking=False))
++    for relation in model.get('relations', []):
++        if relation.get('status') == 'proposed':
++            model['issues'].append(dict(target_type='relation', target_id=relation.get('relation_id'), message='这项联系尚待确认，不表示充分精化。', blocking=False))
++    require(not (migration is not None and previous is not None), 'Migration and feedback revision are separate operations')
++    if migration is not None:
++        check_structure(migration)
++        require(v2 and migration['schema_version'] == SCHEMA, 'Explicit migration is v1 to v2 only')
++        require(decisions.get('migration_parent') == binding(migration), 'Migration parent binding mismatch')
++        require(model['model_id'] == migration['model_id'] and model['goals'] == migration['goals'], 'Migration must keep the verified goal set; revise goals separately')
++        model['parent'] = binding(migration)
++        model['version'] = migration['version'] + '.kaos2'
++        model['changes'] = [dict(kind='explicit_v1_migration', before_goals=migration['goals'],
++                                before_groups=migration['refinement_groups'], before_relations=[],
++                                note='旧关系不推定新类型；当前精化及联系按新版判断重新核验。')]
++        omitted = sorted(target_ids(migration, 'group') - target_ids(model, 'group'))
++        model['changes'][0]['removed_group_ids'] = omitted
++        if omitted:
++            model['issues'].append(dict(target_type='model', target_id=model['model_id'],
++                message='升级后尚未重新编制的旧精化组：' + '、'.join(omitted) + '；旧判断保留在迁移快照中，请核对。', blocking=False))
++    else:
++        require('migration_parent' not in decisions, 'Migration judgments require --migrate-from')
+     if previous is not None:
+         require(feedback is not None, 'Revision requires actual feedback bound to the previous model')
+         validate_feedback(feedback, previous, submitted=True)
+-        require(previous['schema_version'] == SCHEMA, 'No automatic legacy KAOS conversion')
++        require(previous['schema_version'] == model['schema_version'], 'No automatic schema conversion; use explicit migration')
+         require(model['model_id'] == previous['model_id'], 'Revision must retain the model identity')
+         model['parent'] = binding(previous)
+         model['version'] = previous['version'] + '.r1'
+         model['changes'] = [dict(kind='rebuild_after_feedback', feedback_sha256=object_hash(feedback),
+                                  before_goals=previous['goals'], before_groups=previous['refinement_groups'],
+                                  removed_goal_ids=sorted(set(g['goal_id'] for g in previous['goals']) - set(g['goal_id'] for g in goals)))]
++        if v2:
++            affected = revision_dependencies(previous, model, feedback)
++            reassessed = ids(decisions.get('reassessments', []), 'assessment_id')
++            accounted_assessments = set()
++            for item in reassessed.values():
++                key = (item.get('target_type'), item.get('target_id'))
++                require(key in affected and key not in accounted_assessments and isinstance(item.get('reason'), str) and item['reason'].strip(), 'Invalid or duplicate reassessment')
++                accounted_assessments.add(key)
++            require(affected <= accounted_assessments, 'Changed goals/relations or feedback require explicit group/relation reassessments: ' + str(sorted(affected - accounted_assessments)))
++            model['changes'][0].update(before_relations=previous['relations'], reassessments=list(reassessed.values()),
++                removed_relation_ids=sorted({r['relation_id'] for r in previous['relations']} - {r['relation_id'] for r in model['relations']}),
++                removed_group_ids=sorted({g['group_id'] for g in previous['refinement_groups']} - {g['group_id'] for g in model['refinement_groups']}))
+         # An omitted issue is not a resolution. Preserve every requested change
+         # until the author explicitly accounts for it in this bound decision pack.
+         dispositions = decisions.get('feedback_dispositions', [])
+@@ -148,7 +195,7 @@
+         for target, opinion in targets.items():
+             if accounted.get(target, {}).get('status') != 'addressed':
+                 kind, identifier = target
+-                available = {g['goal_id'] for g in goals} if kind == 'goal' else {g['group_id'] for g in model['refinement_groups']} if kind == 'group' else {model['model_id']}
++                available = target_ids(model, kind)
+                 if identifier not in available:
+                     kind, identifier = 'model', model['model_id']
+                 model['issues'].append(dict(target_type=kind, target_id=identifier,
+@@ -159,13 +206,53 @@
+     return model
+ 
+ 
++def target_ids(model, kind):
++    return ({g['goal_id'] for g in model['goals']} if kind == 'goal' else
++            {g['group_id'] for g in model['refinement_groups']} if kind == 'group' else
++            {r['relation_id'] for r in model.get('relations', [])} if kind == 'relation' else
++            {model['model_id']} if kind == 'model' else set())
++
++
++def revision_dependencies(previous, model, feedback):
++    def states(m):
++        evidence = {e['evidence_id']: e for e in m['evidence_index']}
++        return {g['goal_id']: dict(goal=g, evidence=[evidence[e] for e in g['evidence_ids']]) for g in m['goals']}
++    old, new = states(previous), states(model)
++    changed = {gid for gid in old if old[gid] != new.get(gid)}
++    if previous['source_binding'] != model['source_binding']:
++        changed.update(old)
++    changed.update(e['target_id'] for e in feedback['entries'] if e['target_type'] == 'goal' and e['decision'] != 'accept')
++    old_relations = {r['relation_id']: r for r in previous['relations']}
++    new_relations = {r['relation_id']: r for r in model['relations']}
++    def relation_state(m, r):
++        evidence = {e['evidence_id']: e for e in m['evidence_index']}
++        return dict(relation=r, evidence=[evidence[e] for e in r['evidence_ids']])
++    relation_ids = {rid for rid, r in old_relations.items() if rid not in new_relations or
++                    relation_state(previous, r) != relation_state(model, new_relations[rid]) or
++                    changed.intersection([r['source_id'], r['target_id']])}
++    relation_ids.update(r['relation_id'] for r in model['relations'] if changed.intersection([r['source_id'], r['target_id']]))
++    relation_ids.update(e['target_id'] for e in feedback['entries'] if e['target_type'] == 'relation' and e['decision'] != 'accept')
++    group_ids = {g['group_id'] for g in previous['refinement_groups'] + model['refinement_groups']
++                 if changed.intersection([g['parent_id']] + g['child_ids']) or relation_ids.intersection(g.get('relation_ids', []))}
++    group_ids.update(e['target_id'] for e in feedback['entries'] if e['target_type'] == 'group' and e['decision'] != 'accept')
++    return ({('relation', rid) for rid in relation_ids if rid in new_relations} |
++            {('group', gid) for gid in group_ids if gid in target_ids(model, 'group')})
++
++
+ def check_structure(model):
+-    require(model.get('schema_version') == SCHEMA, 'Use the correct versioned model tool')
++    require(model.get('schema_version') in {SCHEMA, SCHEMA2}, 'Use the correct versioned model tool')
++    v2 = model['schema_version'] == SCHEMA2
++    if v2:
++        require(isinstance(model.get('source_binding'), dict) and isinstance(model['source_binding'].get('sha256'), str)
++                and re.fullmatch(r'[a-f0-9]{64}', model['source_binding']['sha256']), 'v2 source binding required')
++    require(v2 or 'relations' not in model, 'v1 cannot silently carry v2 relations')
+     require(model.get('review') == {'status': 'pending'}, 'This builder cannot manufacture human acceptance')
+     goals = ids(model['goals'], 'goal_id')
+     groups = ids(model['refinement_groups'], 'group_id')
+     evidence = ids(model['evidence_index'], 'evidence_id')
++    relations = ids(model['relations'], 'relation_id') if v2 else {}
+     require(not set(goals).intersection(groups), 'Goal and group IDs must be distinct')
++    require(not (set(relations) & (set(goals) | set(groups))), 'Relation IDs must be distinct from goals/groups')
+     for g in goals.values():
+         require(isinstance(g.get('statement'), str) and g['statement'].strip(), 'Goal statement required')
+         require(g.get('origin') in {'explicit', 'inferred'}, 'Only evidence-grounded goals enter this subset')
+@@ -201,11 +288,62 @@
+         colors[gid] = 2
+     for gid in goals:
+         visit(gid)
++    if v2:
++        validate_relations(relations, goals, evidence)
++        for group in groups.values():
++            refs = group.get('relation_ids', [])
++            require(string_list(refs) and len(refs) == len(set(refs)) and set(refs) <= set(relations), 'Invalid group relation dependencies')
++            members = {group['parent_id'], *group['child_ids']}
++            require(all({relations[r]['source_id'], relations[r]['target_id']} <= members for r in refs), 'Group relation dependency endpoints outside group')
++            checks = group.get('checks', [])
++            require(isinstance(checks, list), 'Invalid scenario checks')
++            for item in checks:
++                require(item.get('kind') in {'normal', 'exception'} and item.get('origin') in {'source', 'analysis_assumption'}
++                        and item.get('outcome') in {'supports', 'counterexample', 'unknown'}
++                        and all(isinstance(item.get(k), str) and item[k].strip() for k in ('scenario', 'rationale')), 'Invalid scenario check')
++                if item['origin'] == 'source':
++                    require(item.get('evidence_ids') and set(item['evidence_ids']) <= set(evidence), 'Source scenario requires evidence')
++            if active(group):
++                require(all(relations[r]['status'] == 'supported' for r in refs), 'Unconfirmed relation cannot support an established refinement')
++                require({c['kind'] for c in checks} == {'normal', 'exception'} and all(c['outcome'] == 'supports' for c in checks), 'Established refinement requires normal/exception checks without unresolved counterexamples')
+     for issue in model['issues']:
+-        require(issue.get('target_type') in {'goal', 'group', 'model'}, 'Invalid issue kind')
+-        allowed = goals if issue['target_type'] == 'goal' else groups if issue['target_type'] == 'group' else {model['model_id']: model}
++        require(issue.get('target_type') in ({'goal', 'group', 'relation', 'model'} if v2 else {'goal', 'group', 'model'}), 'Invalid issue kind')
++        allowed = target_ids(model, issue['target_type'])
+         require(issue.get('target_id') in allowed and isinstance(issue.get('message'), str) and issue['message'].strip(), 'Unknown issue target')
+     return goals, groups, evidence
++
++
++def validate_relations(relations, goals, evidence):
++    seen = set()
++    graphs = {kind: {gid: [] for gid in goals} for kind in ('specialization', 'operationalization', 'precedes')}
++    for r in relations.values():
++        a, b, kind = r.get('source_id'), r.get('target_id'), r.get('type')
++        require(a in goals and b in goals and a != b, 'Invalid relation endpoints')
++        require(kind in RELATION_TYPES and r.get('status') in RELATION_STATUS, 'Invalid relation type/status')
++        require(string_list(r.get('conditions')) and string_list(r.get('assumptions')), 'Relation conditions/assumptions required')
++        require(isinstance(r.get('rationale'), str) and r['rationale'].strip(), 'Relation rationale required')
++        refs = r.get('evidence_ids')
++        require(string_list(refs) and refs and len(refs) == len(set(refs)) and set(refs) <= set(evidence), 'Relation evidence required')
++        require(any(evidence[e]['location_status'] == 'exact' and evidence[e]['evidence_role'] == 'supporting' for e in refs), 'Relation requires located basis evidence')
++        key = (kind, a, b, tuple(sorted(r['conditions'])))
++        require(key not in seen, 'Duplicate typed relation')
++        seen.add(key)
++        if r['status'] == 'supported':
++            require(all(goals[gid]['support']['label'] in {'direct', 'inferred'} for gid in (a, b)), 'Supported relation has unsupported goals')
++        if kind in graphs and r['status'] != 'rejected':
++            graphs[kind][a].append(b)
++    for kind, graph in graphs.items():
++        state = {}
++        def visit(gid):
++            require(state.get(gid) != 1, 'Typed relation cycle: ' + kind)
++            if state.get(gid) == 2:
++                return
++            state[gid] = 1
++            for child in graph[gid]:
++                visit(child)
++            state[gid] = 2
++        for gid in graph:
++            visit(gid)
+ 
+ 
+ def active(group):
+@@ -230,39 +368,47 @@
+     files = read_artifacts(model, base)
+     required = ['extraction.json', 'judgments.json', 'source.txt', 'kaos-decisions.json']
+     require(all('attachments/' + k in files for k in required), 'Missing proof attachments')
+-    previous = json.loads(files['attachments/previous-model.json']) if model['parent'] else None
+-    feedback = json.loads(files['attachments/review-feedback.json']) if model['parent'] else None
++    migrated = bool(model['parent'] and model['changes'] and model['changes'][0]['kind'] == 'explicit_v1_migration')
++    previous = json.loads(files['attachments/previous-model.json']) if model['parent'] and not migrated else None
++    migration = json.loads(files['attachments/migration-model.json']) if migrated else None
++    feedback = json.loads(files['attachments/review-feedback.json']) if previous is not None else None
+     if previous is not None:
+         require(binding(previous) == model['parent'], 'Previous model binding mismatch')
+-    rebuilt = build(*(files['attachments/' + k] for k in required), previous=previous, feedback=feedback)
+-    for key in ('schema_version', 'model_id', 'version', 'parent', 'scope', 'goals', 'refinement_groups', 'evidence_index', 'issues', 'limitations', 'review', 'changes'):
++    if migration is not None:
++        require(binding(migration) == model['parent'], 'Migration model binding mismatch')
++    rebuilt = build(*(files['attachments/' + k] for k in required), previous=previous, feedback=feedback, migration=migration)
++    keys = ['schema_version', 'model_id', 'version', 'parent', 'scope', 'goals', 'refinement_groups', 'evidence_index', 'issues', 'limitations', 'review', 'changes']
++    if model['schema_version'] == SCHEMA2:
++        keys.extend(['relations', 'source_binding'])
++    for key in keys:
+         require(model[key] == rebuilt[key], 'Model differs from actual source/judgments: ' + key)
+     canonical = files['attachments/source.txt'].decode('utf-8')
+     for e in model['evidence_index']:
+         require(e['location_status'] == 'exact' and e['verification_scope'] == 'full_text' and e['source_version_status'] == 'verified', 'Unverified evidence location')
+         require(type(e['start_char']) is int and type(e['end_char']) is int and 0 <= e['start_char'] < e['end_char'] <= len(canonical) and canonical[e['start_char']:e['end_char']] == e['quote'], 'Evidence quote mismatch')
+-    return dict(schema_version='goalforge-kaos-check-1', model=binding(model), structure='passed',
++    return dict(schema_version='goalforge-kaos-check-2' if model['schema_version'] == SCHEMA2 else 'goalforge-kaos-check-1', model=binding(model), structure='passed',
+                 independent_semantic='not_run', formal_proof='not_run', human='pending',
+                 readiness='blocked' if any(i['blocking'] for i in model['issues']) else 'reviewable',
+                 note='已核验结构、实际原文与版本绑定；精化充分性来自编制判断，未进行形式化证明。')
+ 
+ 
+ def validate_feedback(packet, model, submitted=False):
+-    require(packet.get('schema_version') == FEEDBACK and packet.get('model') == binding(model), 'Feedback model/version/hash mismatch')
++    expected = FEEDBACK2 if model['schema_version'] == SCHEMA2 else FEEDBACK
++    require(packet.get('schema_version') == expected and packet.get('model') == binding(model), 'Feedback model/version/hash mismatch')
+     require(packet.get('status') in {'draft', 'submitted'} and (not submitted or packet['status'] == 'submitted'), 'Submitted feedback required')
+     goals, groups, _ = check_structure(model)
+     require(isinstance(packet.get('entries'), list) and isinstance(packet.get('form_drafts'), dict) and isinstance(packet.get('note'), str), 'Invalid feedback content')
+     seen = set()
+     for entry in packet['entries']:
+         kind, target = entry.get('target_type'), entry.get('target_id')
+-        allowed = goals if kind == 'goal' else groups if kind == 'group' else {model['model_id']: model} if kind == 'model' else {}
++        allowed = target_ids(model, kind)
+         require(target in allowed and (kind, target) not in seen, 'Unknown/duplicate feedback target')
+         seen.add((kind, target))
+         require(entry.get('decision') in {'accept', 'modify', 'defer'} and isinstance(entry.get('comment'), str), 'Invalid decision')
+         require(entry['decision'] == 'accept' or entry['comment'].strip(), 'Please explain the requested change/uncertainty')
+     for key, draft in packet['form_drafts'].items():
+-        require(isinstance(draft, dict) and draft.get('target_type') in {'goal', 'group', 'model'}, 'Invalid draft')
+-        allowed = goals if draft['target_type'] == 'goal' else groups if draft['target_type'] == 'group' else {model['model_id']: model}
++        require(isinstance(draft, dict) and draft.get('target_type') in {'goal', 'group', 'relation', 'model'}, 'Invalid draft')
++        allowed = target_ids(model, draft['target_type'])
+         require(draft.get('target_id') in allowed and key == draft['target_type'] + ':' + draft['target_id'], 'Unknown draft target')
+         require(draft.get('decision') in {'', 'accept', 'modify', 'defer'} and isinstance(draft.get('comment'), str), 'Invalid unfinished form')
+     if submitted:
+@@ -275,11 +421,17 @@
+     affected_goals = {e['target_id'] for e in packet['entries'] if e['target_type'] == 'goal' and e['decision'] != 'accept'}
+     affected_groups = {e['target_id'] for e in packet['entries'] if e['target_type'] == 'group' and e['decision'] != 'accept'}
+     affected_groups.update(g['group_id'] for g in model['refinement_groups'] if affected_goals.intersection([g['parent_id']] + g['child_ids']))
+-    return dict(schema_version='goalforge-kaos-revision-request-1', model=binding(model), feedback_sha256=object_hash(packet),
++    affected_relations = {e['target_id'] for e in packet['entries'] if e['target_type'] == 'relation' and e['decision'] != 'accept'}
++    affected_relations.update(r['relation_id'] for r in model.get('relations', []) if affected_goals.intersection([r['source_id'], r['target_id']]))
++    affected_groups.update(g['group_id'] for g in model['refinement_groups'] if affected_relations.intersection(g.get('relation_ids', [])))
++    result = dict(schema_version='goalforge-kaos-revision-request-2' if model['schema_version'] == SCHEMA2 else 'goalforge-kaos-revision-request-1', model=binding(model), feedback_sha256=object_hash(packet),
+                 affected_goal_ids=sorted(affected_goals), affected_group_ids=sorted(affected_groups),
+-                opinions=packet['entries'], note=packet['note'], status='awaiting_reassessment' if affected_goals or affected_groups or packet['note'].strip() else 'opinions_recorded',
++                opinions=packet['entries'], note=packet['note'], status='awaiting_reassessment' if affected_goals or affected_groups or affected_relations or packet['note'].strip() else 'opinions_recorded',
+                 next_step='依据原文处理意见；新目标重新绑定判断，精化组重新评估；assemble --previous --feedback 生成待审副本。',
+                 human_acceptance='not_inferred')
++    if model['schema_version'] == SCHEMA2:
++        result['affected_relation_ids'] = sorted(affected_relations)
++    return result
+ 
+ 
+ def fresh(directory):
+@@ -317,6 +469,14 @@
+             node(gid)
+     if not goals:
+         lines.append('本次可读材料中未提取到目标。')
++    if model.get('relations'):
++        lines += ['', '## 目标之间的联系', '', '下列联系不表示充分精化；待确认及已否定记录保留各自状态。', '']
++        for r in model['relations']:
++            lines += ['- ' + RELATION_STATUS[r['status']] + '：' + goals[r['source_id']]['statement'] +
++                      ' —[' + RELATION_TYPES[r['type']] + ']→ ' + goals[r['target_id']]['statement'],
++                      '  依据：' + r['rationale']]
++            if r['conditions'] or r['assumptions']:
++                lines.append('  条件／假设：' + '；'.join(r['conditions'] + r['assumptions']))
+     if model['issues'] or model['limitations']:
+         lines += ['', '## 需要确认', ''] + ['- ' + i['message'] for i in model['issues']] + ['- ' + s for s in model['limitations']]
+     lines += ['', '原文与层级依据可在 HTML 中展开。结构检查不等于语义证明，意见导出后交回助手。', '']
+@@ -410,6 +570,28 @@
+     return '\n'.join(result+['</svg>'])
+ 
+ 
++def relations_svg(model):
++    """A separate labelled relation list; never overload established DAG arrows."""
++    check_structure(model)
++    goals = {g['goal_id']: g for g in model['goals']}
++    rows, y = [], 90
++    for r in model.get('relations', []):
++        label = RELATION_STATUS[r['status']] + ' · ' + RELATION_TYPES[r['type']]
++        lines = diagram_rows(goals[r['source_id']]['statement'] + ' → ' + goals[r['target_id']]['statement'], 90)
++        height = 52 + 22 * len(lines)
++        color = {'supported': '#296a75', 'proposed': '#8b6725', 'rejected': '#777777'}[r['status']]
++        esc = lambda s: html.escape(str(s), quote=True)
++        rows.append(f'<g data-relation="{esc(r["relation_id"])}" role="button" tabindex="0" aria-label="{esc(label)}"><rect x="20" y="{y}" width="780" height="{height}" rx="8" fill="#fafafa" stroke="{color}" stroke-dasharray="5 4"/><text x="36" y="{y+25}" fill="{color}">{esc(label)}</text>')
++        for i, line in enumerate(lines):
++            rows.append(f'<text x="36" y="{y+51+i*22}">{esc(line)}</text>')
++        rows.append('</g>')
++        y += height + 14
++    return ('<svg xmlns="http://www.w3.org/2000/svg" width="820" height="' + str(max(160, y)) +
++            '" viewBox="0 0 820 ' + str(max(160, y)) + '" role="group" aria-label="目标联系，不表示充分精化">' +
++            '<style>text{font:15px system-ui,sans-serif}</style><rect width="100%" height="100%" fill="white"/>' +
++            '<text x="20" y="32">目标之间的联系</text><text x="20" y="60">独立于成立精化；箭头按联系类型解释，状态逐项标明。</text>' + ''.join(rows) + '</svg>')
++
++
+ def package(model, base, output, report=None, with_svg=False):
+     actual = inspect(model, base)
+     if report is not None:
+@@ -417,17 +599,25 @@
+     files = read_artifacts(model, base)
+     assets = Path(__file__).resolve().parents[1] / 'assets'
+     data = dict(model=model, binding=binding(model), report=actual, markdown=markdown(model), svg=svg(model))
++    if model['schema_version'] == SCHEMA2:
++        data['relations_svg'] = relations_svg(model)
+     payload = json.dumps(data, ensure_ascii=False, allow_nan=False).replace('<', '\\u003c').replace('\u2028', '\\u2028').replace('\u2029', '\\u2029')
+     page = (assets / 'simple-viewer.html').read_text(encoding='utf-8')
+-    page = page.replace('__CSS__', (assets / 'simple-viewer.css').read_text(encoding='utf-8'))
+-    page = page.replace('__PAYLOAD__', payload)
+-    page = page.replace('__CORE__', (assets / 'simple-core.js').read_text(encoding='utf-8'))
+-    page = page.replace('__UI__', (assets / 'simple-viewer.js').read_text(encoding='utf-8'))
++    replacements = {'__CSS__': (assets / 'simple-viewer.css').read_text(encoding='utf-8'),
++                    '__PAYLOAD__': payload,
++                    '__CORE__': (assets / 'simple-core.js').read_text(encoding='utf-8'),
++                    '__UI__': (assets / 'simple-viewer.js').read_text(encoding='utf-8')}
++    require(all(page.count(token) == 1 for token in replacements), 'Unexpected viewer template placeholders')
++    # Replace only tokens present in the original template. Inserted source text
++    # and assets may legitimately contain the same literal strings.
++    page = re.sub(r'__(?:CSS|PAYLOAD|CORE|UI)__', lambda match: replacements[match.group(0)], page)
+     files.update({'goal-model.json': encode(model), 'goal-model.md': data['markdown'].encode('utf-8'),
+                   'goal-model.html': page.encode('utf-8'), 'attachments/inspection.json': encode(actual)})
+     if with_svg:
+         files['goal-model.svg'] = data['svg'].encode('utf-8')
+-    manifest = dict(schema_version='goalforge-kaos-delivery-1', model=binding(model), readiness=actual['readiness'], human='pending',
++        if model['schema_version'] == SCHEMA2:
++            files['goal-relations.svg'] = data['relations_svg'].encode('utf-8')
++    manifest = dict(schema_version='goalforge-kaos-delivery-2' if model['schema_version'] == SCHEMA2 else 'goalforge-kaos-delivery-1', model=binding(model), readiness=actual['readiness'], human='pending',
+                     files=[dict(path=name, sha256=digest(raw)) for name, raw in files.items()])
+     files['manifest.json'] = encode(manifest)
+     out = fresh(output)
+@@ -443,10 +633,14 @@
+     sub = parser.add_subparsers(dest='mode', required=True)
+     p = sub.add_parser('template')
+     p.add_argument('extraction', type=Path); p.add_argument('judgments', type=Path); p.add_argument('output', type=Path)
++    p.add_argument('--schema-version', type=int, choices=(1, 2), default=2)
++    p = sub.add_parser('upgrade-template')
++    p.add_argument('model', type=Path); p.add_argument('output', type=Path)
+     p = sub.add_parser('assemble')
+     for name in ('extraction', 'judgments', 'source', 'decisions', 'output'):
+         p.add_argument(name, type=Path)
+     p.add_argument('--previous', type=Path); p.add_argument('--feedback', type=Path)
++    p.add_argument('--migrate-from', type=Path)
+     p = sub.add_parser('inspect')
+     p.add_argument('model', type=Path); p.add_argument('output', type=Path)
+     p = sub.add_parser('finalize')
+@@ -456,21 +650,38 @@
+     p.add_argument('model', type=Path); p.add_argument('feedback', type=Path); p.add_argument('output', type=Path)
+     args = parser.parse_args()
+     if args.mode == 'template':
+-        result = decision_template(args.extraction.read_bytes(), args.judgments.read_bytes())
++        result = decision_template(args.extraction.read_bytes(), args.judgments.read_bytes(), args.schema_version)
++        args.output.parent.mkdir(parents=True, exist_ok=True)
++        with args.output.open('xb') as handle:
++            handle.write(encode(result))
++    elif args.mode == 'upgrade-template':
++        model = load(args.model)
++        inspect(model, args.model.parent)
++        require(model['schema_version'] == SCHEMA, 'upgrade-template accepts v1 only')
++        files = read_artifacts(model, args.model.parent)
++        result = decision_template(files['attachments/extraction.json'], files['attachments/judgments.json'], 2)
++        result['migration_parent'] = binding(model)
++        # Empty groups and relations require authoring, not automatic promotion.
+         args.output.parent.mkdir(parents=True, exist_ok=True)
+         with args.output.open('xb') as handle:
+             handle.write(encode(result))
+     elif args.mode == 'assemble':
+         require(bool(args.previous) == bool(args.feedback), 'Use --previous and --feedback together')
++        require(not (args.migrate_from and args.previous), 'Do not mix migration and feedback revision')
+         raws = [getattr(args, k).read_bytes() for k in ('extraction', 'judgments', 'source', 'decisions')]
+         previous = load(args.previous) if args.previous else None
+         packet = load(args.feedback) if args.feedback else None
+         if previous is not None:
+             inspect(previous, args.previous.parent)
+-        result = build(*raws, previous=previous, feedback=packet)
++        migration = load(args.migrate_from) if args.migrate_from else None
++        if migration is not None:
++            inspect(migration, args.migrate_from.parent)
++        result = build(*raws, previous=previous, feedback=packet, migration=migration)
+         files = dict(zip(['extraction.json', 'judgments.json', 'source.txt', 'kaos-decisions.json'], raws))
+         if previous is not None:
+             files.update({'previous-model.json': encode(previous), 'review-feedback.json': encode(packet)})
++        if migration is not None:
++            files['migration-model.json'] = encode(migration)
+         result['input_artifacts'] = [dict(path='attachments/' + name, sha256=digest(raw)) for name, raw in files.items()]
+         out = fresh(args.output)
+         for name, raw in files.items():
+--- before/skills/goal-model-building/scripts/serve_model.py
++++ after/skills/goal-model-building/scripts/serve_model.py
+@@ -37,6 +37,9 @@
+     elif kind=='model-svg':
+         require(content == k.svg(model), 'Different model diagram')
+         stem,ext='goal-model','svg'
++    elif kind=='relations-svg':
++        require(model['schema_version'] == k.SCHEMA2 and content == k.relations_svg(model), 'Different relation diagram')
++        stem,ext='goal-relations','svg'
+     else:
+         raise ValueError('Unsupported export kind')
+     directory=(Path(root)/'exports').resolve()
+--- before/skills/model-review/SKILL.md
++++ after/skills/model-review/SKILL.md
+@@ -5,7 +5,7 @@
+ 
+ # 模型检查与意见处理
+ 
+-检查目标与精化组的依据、引用、方向和版本，记录必要问题并处理真实人工意见。程序检查、作者判断、独立语义审查、形式证明和人工决定分别记录。
++检查目标、独立联系与精化组的依据、引用、方向和版本，记录必要问题并处理真实人工意见。程序检查、作者判断、独立语义审查、形式证明和人工决定分别记录。
+ 
+ ## 检查
+ 
+@@ -21,6 +21,6 @@
+ 
+ 用户按[意见契约](references/human-feedback.md)分别审核目标内容和层级组，普通用户只看到“可以／需修改／暂不确定”。允许部分意见，未填写不算认可。
+ 
+-feedback 校验模型 ID、版本、哈希、引用与未完成表单，记录原意见并列出影响范围。目标修改传播到相关精化组；组的争议可单独重评。自然语言意见不自动变成已验证目标。
++feedback 校验模型 ID、版本、哈希、引用与未完成表单，记录原意见并列出影响范围。v2目标修改传播到端点联系及相关精化组，联系争议再传播到声明依赖它的组；组的争议可单独重评。自然语言意见不自动变成已验证目标。
+ 
+ 助手依待办回查与重建，按[修订规范](../goal-model-building/references/reassessment.md)复检和交付；不匹配判断需重新编制。原件、父模型与实际反馈保留。用户只看必要问题、短处理说明和待审结果。
+--- before/skills/model-review/references/human-feedback.md
++++ after/skills/model-review/references/human-feedback.md
+@@ -1,12 +1,12 @@
+ # 人工审核意见契约
+ 
+-schema_version：goalforge-simple-feedback-1。model 为被审模型的 model_id、version、sha256，不能以文件名代替内容绑定。
++v2模型使用schema_version：goalforge-simple-feedback-2；历史v1模型继续使用goalforge-simple-feedback-1，两者不可混用。model 为被审模型的 model_id、version、sha256，不能以文件名代替内容绑定。
+ 
+ ```json
+-{"schema_version":"goalforge-simple-feedback-1","model":{"model_id":"DOC-goal-model","version":"v1","sha256":"实际完整对象哈希"},"status":"draft","entries":[],"form_drafts":{},"note":""}
++{"schema_version":"goalforge-simple-feedback-2","model":{"model_id":"DOC-goal-model","version":"v1","sha256":"实际完整对象哈希"},"status":"draft","entries":[],"form_drafts":{},"note":""}
+ ```
+ 
+-entries 每项含 target_type（goal/group/model）、target_id、decision（accept/modify/defer）、comment。目标或精化组必须存在、同一对象不重复；修改或待定需理由。用户只看到“可以／需修改／暂不确定”。
++entries 每项含 target_type（v2为goal/group/relation/model；v1为goal/group/model）、target_id、decision（accept/modify/defer）、comment。目标、联系或精化组必须存在、同一对象不重复；修改或待定需理由。用户只看到“可以／需修改／暂不确定”。
+ 
+ form_drafts 保存未完成表单，以 type:id 为键，值含目标类型、ID、decision 和 comment；decision 可暂为空。note 是整体补充。导出时可加 exported_at。
+ 
+@@ -14,4 +14,4 @@
+ 
+ 导入先校验当前模型绑定和内容，再由用户确认替换；不自动合并多人意见或覆盖草稿。导出提供保存、复制与完整文本，本地保存须真实写入才返回成功回执。浏览器草稿不自动发送给助手。
+ 
+-用户分项目标判断与精化组判断分别保存，认可一项不扩大范围。反馈工具只生成待办，修订规则见[反馈与重建](../../goal-model-building/references/reassessment.md)。
++用户分项目标、联系与精化组判断分别保存，认可一项不扩大范围。反馈工具只生成待办，修订规则见[反馈与重建](../../goal-model-building/references/reassessment.md)。
+--- before/skills/model-review/references/output-contract.md
++++ after/skills/model-review/references/output-contract.md
+@@ -1,6 +1,6 @@
+ # 模型检查输出契约
+ 
+-检查由 kaos_model.py inspect 实际执行，schema_version 为 goalforge-kaos-check-1。
++检查由 kaos_model.py inspect 实际执行，v2模型的schema_version为goalforge-kaos-check-2，历史v1继续为goalforge-kaos-check-1。
+ 
+ | 字段 | 实际含义 |
+ |---|---|
+@@ -12,12 +12,12 @@
+ | readiness | 存在 blocking 问题为 blocked，否则 reviewable |
+ | note | 当前检查实际证明什么、未证明什么 |
+ 
+-检查实际文件哈希、源文全文引文、目标支持包、精化组成员/引用、循环与模型内容一致性。仅比较一段 passed 字符串不足以证明通过。
++检查实际文件哈希、源文全文引文、目标支持包、精化组成员/引用、联系类型/端点/状态、按类型的循环、依赖与场景记录，以及模型内容一致性。仅比较一段 passed 字符串不足以证明通过。
+ 
+ finalize 复执行并比对报告，模型或附件变化后不能继续使用不匹配报告。原文精确匹配不证明语义支持，概念层精化判断不等于形式化证明。
+ 
+-反馈处理另输出 goalforge-kaos-revision-request-1 的 revision-request.json：model、feedback_sha256、affected_goal_ids、affected_group_ids、opinions、note、status、next_step、human_acceptance。以及真实 review-feedback.json 和简短修改说明。
++反馈处理对v2输出goalforge-kaos-revision-request-2（另含affected_relation_ids），对历史v1输出goalforge-kaos-revision-request-1 的 revision-request.json：model、feedback_sha256、affected_goal_ids、affected_group_ids、opinions、note、status、next_step、human_acceptance。以及真实 review-feedback.json 和简短修改说明。
+ 
+ 机器报告默认由助手维护，用户只看影响判断的问题和真实意见保存状态。反馈字段见[人审契约](human-feedback.md)。
+ 
+-语义复核按[复核规范](semantic-review.md)另存可读记录，与本工程检查报告区分。本轮不新增语义评审 schema 或核心 issues 字段。readiness=blocked 是既有全局汇总值，实际问题范围仍由模型 issues 的目标/组引用说明，不能由此判定所有目标不受支持。
++语义复核按[复核规范](semantic-review.md)另存可读记录，与本工程检查报告区分。本轮不新增语义评审 schema 或核心 issues 字段。readiness=blocked 是既有全局汇总值，实际问题范围仍由模型 issues 的目标/联系/组引用说明，不能由此判定所有目标不受支持。
+--- before/skills/model-review/references/semantic-review.md
++++ after/skills/model-review/references/semantic-review.md
+@@ -34,9 +34,13 @@
+ - 拆分后共同条件是否完整传递，局部条件是否误扩散，AND/OR、否定、例外和“一键”等明确方式是否改变。
+ - 每个拆分目标是否有证据、原始候选映射和当前支持判断；共享引文不等于共享完整支持，操作先后不等于精化。
+ 
++先核对statement/conditions及实际相连的方式目标，再读解释；不能借rationale补足模型没有表达的要求。对举例场景和重复强调，核对是否真的有独立意图，避免把一条一般能力扩成固定示例目标或同义节点。对联系，核对端点原义、时间方向和替代方式是否被解释偷换。
++
+ 记录具体目标、原句、问题与理由，分别说明未拆开的独立结果和过度拆分，不以目标数增加评为改善。仅核验时给建议，实质拆合回交提取；旧结果没有候选记录时注明不可追溯部分，不补造生成历史。程序检查通过不能代替这一语义复核。
+ 
+ ## 记录和修改权限
++
++v2同时沿“候选联系→精化组→交付显示”回查：端点与方向是否符合[联系定义](../../goal-model-building/references/relation-discovery.md)，具体化/实现方式/贡献/先后是否混淆，supported是否有整项依据，proposed/rejected是否在页面保持其状态。检查正常、异常场景及未解决反例；实际用到的联系必须登记group.relation_ids。修改目标或联系后核对reassessments及受影响组，不能复制旧判断仅改绑定。未评估不写成rejected，结构无环不证明语义正确。
+ 
+ 语义复核单独保存可读记录，每个问题使用稳定标识，记录目标/组引用、证据、类别、判断依据、建议、状态及后续处置理由。分项可以“已解决、未解决、不适用”，没有新证据时允许未知；不因进入最终交付就消失。本轮核心 issues 尚无稳定问题 ID/分类字段，不向旧契约静默添加字段；可读记录中的关键未决问题同时写入已有 questions/issues，说明这不是完整的结构化问题生命周期实现。
+ 
+--- before/tests/simple_review.test.js
++++ after/tests/simple_review.test.js
+@@ -5,3 +5,5 @@
+ test('empty and unfinished feedback cannot submit but can save draft',()=>{const f=core.empty(binding);assert.ok(core.validate(f,model,binding,true).length);f.form_drafts['goal:G1']={target_type:'goal',target_id:'G1',decision:'modify',comment:'未写完'};assert.deepEqual(core.validate(f,model,binding,false),[]);assert.ok(core.validate(f,model,binding,true).length);});
+ test('stale imports, unknown targets and duplicate opinions are rejected',()=>{const f=core.empty(binding);f.model={...binding,version:'old'};assert.ok(core.validate(f,model,binding).length);f.model=binding;f.entries=[{target_type:'group',target_id:'unknown',decision:'accept',comment:''}];assert.ok(core.validate(f,model,binding).length);f.entries=[{target_type:'goal',target_id:'G1',decision:'accept',comment:''}];f.entries.push({...f.entries[0]});assert.ok(core.validate(f,model,binding).length);});
+ test('target and refinement decisions remain separate and exports are immutable snapshots',()=>{const f=core.empty(binding);f.entries=[{target_type:'group',target_id:'F1',decision:'modify',comment:'不能保证上层结果'}];const p=core.packet(f,true);f.entries[0].comment='后来修改';assert.equal(p.entries[0].comment,'不能保证上层结果');assert.equal(core.summary(p,model).goals,0);assert.match(core.markdown(p,model),/不代表完整模型认可/);});
++test('v2 relation feedback is separate, versioned, and included in exports',()=>{const m={...model,schema_version:'goalforge-kaos-2',relations:[{relation_id:'R1'}]};const f=core.empty(binding,m);f.entries=[{target_type:'relation',target_id:'R1',decision:'modify',comment:'贡献不充分'}];assert.equal(f.schema_version,'goalforge-simple-feedback-2');assert.deepEqual(core.validate(core.packet(f,true),m,binding,true),[]);assert.equal(core.summary(f,m).relations,1);assert.equal(core.summary(f,m).groups,0);assert.match(core.markdown(f,m),/目标联系 R1/);assert.ok(core.validate(f,model,binding,true).length);});
++test('v2 unfinished relation form prevents submit and cannot silently import v1 feedback',()=>{const m={...model,schema_version:'goalforge-kaos-2',relations:[{relation_id:'R1'}]};const f=core.empty(binding,m);f.form_drafts['relation:R1']={target_type:'relation',target_id:'R1',decision:'defer',comment:'待确认'};assert.deepEqual(core.validate(f,m,binding,false),[]);assert.ok(core.validate(f,m,binding,true).length);assert.ok(core.validate(core.empty(binding),m,binding,false).length);});
+--- before/tests/test_kaos_relations.py
++++ after/tests/test_kaos_relations.py
+@@ -0,0 +1,220 @@
++"""v2 relation lifecycle, v1 compatibility, dependency invalidation and exports."""
++import copy
++import json
++import subprocess
++import sys
++import tempfile
++import unittest
++from pathlib import Path
++
++from test_kaos_model import fixture as legacy_fixture, case as legacy_case, k
++
++
++def fixture():
++    data, source, judgments, decisions = legacy_fixture()
++    decisions.update(schema_version='goalforge-kaos-decisions-2', relations=[], reassessments=[])
++    for group in decisions['groups']:
++        group['relation_ids'] = []
++        group['checks'] = [dict(kind=kind, origin='analysis_assumption', scenario=scenario, outcome='supports',
++                                rationale='仅针对合成资料定义的有效申请和允许渠道，未扩展到其他系统。')
++                           for kind, scenario in [('normal', '指定有效申请按允许渠道处理。'), ('exception', '未送达或登记不全时，子目标也不满足，不构成子目标满足而父目标不满足的反例。')]]
++    quote = copy.deepcopy(decisions['groups'][0]['evidence_quotes'][0])
++    decisions['relations'] = [dict(relation_id='R1', source_id='G2', target_id='G1', type='contribution', status='supported',
++                                    conditions=[], assumptions=[], rationale='登记有助于申请处理目标，单独登记不保证回执送达。', evidence_ids=[], evidence_quotes=[quote])]
++    decisions['groups'][0]['relation_ids'] = ['R1']
++    return data, source, judgments, decisions
++
++
++def build_fixture():
++    data, source, j, d = fixture()
++    return k.build(k.encode(data), k.encode(j), source, k.encode(d))
++
++
++def feedback(model, kind='relation', identifier='R1'):
++    return dict(schema_version=k.FEEDBACK2, model=k.binding(model), status='submitted', entries=[
++        dict(target_type=kind, target_id=identifier, decision='modify', comment='合成测试意见：请重新评估。')], form_drafts={}, note='')
++
++
++class RelationTests(unittest.TestCase):
++    def test_relations_stay_separate_from_refinement_and_keep_evidence(self):
++        model = build_fixture()
++        self.assertEqual(model['schema_version'], k.SCHEMA2)
++        self.assertEqual(len(k.dag_layout(model)['edges']), 7)
++        self.assertEqual(model['relations'][0]['status'], 'supported')
++        self.assertTrue(model['relations'][0]['evidence_ids'][0].startswith('K'))
++        self.assertIn('不表示充分精化', k.markdown(model))
++        self.assertNotIn('data-relation', k.svg(model))
++        self.assertIn('data-relation="R1"', k.relations_svg(model))
++
++    def test_invalid_relations_and_no_silent_v1_fields(self):
++        for variant in ('endpoint', 'self', 'type', 'status', 'duplicate', 'no_basis', 'unsupported', 'v1'):
++            data, source, j, d = fixture()
++            r = d['relations'][0]
++            if variant == 'endpoint': r['target_id'] = 'missing'
++            elif variant == 'self': r['target_id'] = r['source_id']
++            elif variant == 'type': r['type'] = 'refinement'
++            elif variant == 'status': r['status'] = 'confirmed'
++            elif variant == 'duplicate': d['relations'].append(dict(copy.deepcopy(r), relation_id='R2'))
++            elif variant == 'no_basis': r['evidence_quotes'][0]['role'] = 'context'
++            elif variant == 'v1': d['schema_version'] = 'goalforge-kaos-decisions-1'
++            else:
++                j['judgments']['G2']['label'] = 'insufficient'
++                d['input_binding']['judgments_sha256'] = k.digest(k.encode(j)); d['groups'] = []
++            with self.subTest(variant=variant), self.assertRaises(ValueError):
++                k.build(k.encode(data), k.encode(j), source, k.encode(d))
++
++    def test_type_specific_cycles_allow_mutual_contribution_only(self):
++        for kind in k.RELATION_TYPES:
++            data, source, j, d = fixture()
++            d['groups'] = []
++            d['relations'][0]['type'] = kind
++            r = dict(copy.deepcopy(d['relations'][0]), relation_id='R2', source_id='G1', target_id='G2')
++            d['relations'].append(r)
++            with self.subTest(kind=kind):
++                if kind == 'contribution':
++                    self.assertEqual(len(k.build(k.encode(data), k.encode(j), source, k.encode(d))['relations']), 2)
++                else:
++                    with self.assertRaisesRegex(ValueError, 'cycle'):
++                        k.build(k.encode(data), k.encode(j), source, k.encode(d))
++
++    def test_proposed_rejected_and_counterexamples_cannot_establish_refinement(self):
++        for variant in ('proposed', 'rejected', 'counterexample', 'unknown', 'missing_check'):
++            data, source, j, d = fixture()
++            if variant in ('proposed', 'rejected'): d['relations'][0]['status'] = variant
++            elif variant == 'missing_check': d['groups'][0]['checks'].pop()
++            else: d['groups'][0]['checks'][1]['outcome'] = variant
++            with self.subTest(variant=variant), self.assertRaises(ValueError):
++                k.build(k.encode(data), k.encode(j), source, k.encode(d))
++            d['groups'][0].update(status='proposed', completeness='partial')
++            model = k.build(k.encode(data), k.encode(j), source, k.encode(d))
++            self.assertFalse(k.active(model['refinement_groups'][0]))
++
++    def test_feedback_propagates_from_goals_to_relations_and_groups(self):
++        model = build_fixture()
++        request = k.process_feedback(model, feedback(model, 'goal', 'G2'))
++        self.assertEqual(request['affected_relation_ids'], ['R1'])
++        self.assertEqual(request['affected_group_ids'], ['F1'])
++        request = k.process_feedback(model, feedback(model))
++        self.assertEqual(request['affected_goal_ids'], [])
++        self.assertEqual(request['affected_group_ids'], ['F1'])
++        old_packet = feedback(model); old_packet['schema_version'] = k.FEEDBACK
++        with self.assertRaises(ValueError): k.validate_feedback(old_packet, model, True)
++
++    def test_revision_requires_reassessment_and_keeps_unresolved_opinions(self):
++        data, source, j, d = fixture(); model = build_fixture(); packet = feedback(model)
++        with self.assertRaisesRegex(ValueError, 'reassessments'):
++            k.build(k.encode(data), k.encode(j), source, k.encode(d), previous=model, feedback=packet)
++        d['reassessments'] = [dict(assessment_id='A1', target_type='relation', target_id='R1', reason='重新核对贡献范围。'),
++                              dict(assessment_id='A2', target_type='group', target_id='F1', reason='重查依赖联系的整组充分性。')]
++        revised = k.build(k.encode(data), k.encode(j), source, k.encode(d), previous=model, feedback=packet)
++        self.assertEqual(revised['review'], {'status': 'pending'})
++        self.assertTrue(any(i['target_type'] == 'relation' and '前轮' in i['message'] for i in revised['issues']))
++        self.assertEqual(revised['changes'][0]['before_relations'], model['relations'])
++
++    def test_changed_conditions_even_without_goal_feedback_invalidate_relations(self):
++        from trace_candidates import judgment_template
++        data, source, j, d = fixture(); model = build_fixture(); packet = feedback(model, 'model', model['model_id'])
++        data['candidates'][1]['context'] = ['仅在人工录入场景']
++        current_j = judgment_template(data, k.encode(data)); current_j['judgments'] = j['judgments']
++        d['input_binding'] = dict(extraction_sha256=k.digest(k.encode(data)), judgments_sha256=k.digest(k.encode(current_j)))
++        with self.assertRaisesRegex(ValueError, 'reassessments'):
++            k.build(k.encode(data), k.encode(current_j), source, k.encode(d), previous=model, feedback=packet)
++
++    def test_changed_relation_quote_with_same_evidence_id_invalidates_dependents(self):
++        data, source, j, d = fixture(); model = build_fixture(); packet = feedback(model, 'model', model['model_id'])
++        d['relations'][0]['evidence_quotes'] = copy.deepcopy(d['groups'][1]['evidence_quotes'])
++        with self.assertRaisesRegex(ValueError, 'reassessments'):
++            k.build(k.encode(data), k.encode(j), source, k.encode(d), previous=model, feedback=packet)
++
++    def test_source_change_outside_existing_quotes_invalidates_old_judgments(self):
++        from trace_candidates import judgment_template
++        data, source, j, d = fixture(); model = build_fixture(); packet = feedback(model, 'model', model['model_id'])
++        source += '补充场景与例外，需重新核对。\n'.encode('utf-8')
++        data['document_hash'] = k.digest(source)
++        current_j = judgment_template(data, k.encode(data)); current_j['judgments'] = j['judgments']
++        d['input_binding'] = dict(extraction_sha256=k.digest(k.encode(data)), judgments_sha256=k.digest(k.encode(current_j)))
++        with self.assertRaisesRegex(ValueError, 'reassessments'):
++            k.build(k.encode(data), k.encode(current_j), source, k.encode(d), previous=model, feedback=packet)
++
++    def test_migration_requires_explicit_binding_and_keeps_v1_unchanged(self):
++        data, source, j, old_d = legacy_fixture()
++        old = k.build(k.encode(data), k.encode(j), source, k.encode(old_d)); saved = copy.deepcopy(old)
++        d = k.decision_template(k.encode(data), k.encode(j), 2)
++        d['migration_parent'] = k.binding(old)
++        with self.assertRaises(ValueError): k.build(k.encode(data), k.encode(j), source, k.encode(d))
++        new = k.build(k.encode(data), k.encode(j), source, k.encode(d), migration=old)
++        self.assertEqual(new['goals'], old['goals'])
++        self.assertEqual(new['relations'], [])
++        self.assertEqual(new['refinement_groups'], [])
++        self.assertEqual(new['changes'][0]['removed_group_ids'], ['F1', 'F2', 'F3'])
++        self.assertTrue(any('尚未重新编制' in i['message'] for i in new['issues']))
++        self.assertEqual(old, saved)
++
++    def test_cli_delivery_feedback_exports_and_tamper_detection(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            base = Path(tmp); data, source, j, d = fixture()
++            for name, raw in [('extraction.json', k.encode(data)), ('source.txt', source), ('judgments.json', k.encode(j)), ('decisions.json', k.encode(d))]:
++                (base/name).write_bytes(raw)
++            script = Path(k.__file__)
++            def cli(*args):
++                result = subprocess.run([sys.executable, '-X', 'utf8', str(script), *map(str,args)], capture_output=True, timeout=30)
++                self.assertEqual(result.returncode, 0, result.stderr.decode('utf-8', errors='replace'))
++            cli('template',base/'extraction.json',base/'judgments.json',base/'template.json')
++            self.assertEqual(k.load(base/'template.json')['schema_version'], 'goalforge-kaos-decisions-2')
++            cli('assemble',base/'extraction.json',base/'judgments.json',base/'source.txt',base/'decisions.json',base/'assembled')
++            cli('inspect',base/'assembled/model-input.json',base/'report.json')
++            cli('finalize',base/'assembled/model-input.json',base/'report.json',base/'delivery','--svg')
++            model = k.load(base/'delivery/goal-model.json')
++            self.assertEqual((base/'delivery/goal-relations.svg').read_text(encoding='utf-8'),k.relations_svg(model))
++            (base/'feedback.json').write_bytes(k.encode(feedback(model)))
++            cli('feedback',base/'delivery/goal-model.json',base/'feedback.json',base/'feedback-output')
++            self.assertEqual(k.load(base/'feedback-output/revision-request.json')['affected_relation_ids'], ['R1'])
++            from serve_model import save_export
++            receipt = save_export(model,base/'delivery',dict(kind='relations-svg',content=k.relations_svg(model)))
++            self.assertTrue(Path(receipt['path']).is_file())
++            model['relations'][0]['conditions'] = ['篡改条件']
++            with self.assertRaises(ValueError): k.inspect(model,base/'delivery')
++
++    def test_upgrade_cli_does_not_infer_types_from_legacy_groups(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            base = Path(tmp); old, _ = legacy_case(base/'old')
++            script = Path(k.__file__)
++            command = [sys.executable, str(script), 'upgrade-template', str(base/'old/model-input.json'), str(base/'upgrade.json')]
++            result = subprocess.run(command,capture_output=True,timeout=30)
++            self.assertEqual(result.returncode,0,result.stderr)
++            upgrade = k.load(base/'upgrade.json')
++            self.assertEqual(upgrade['groups'],[]);self.assertEqual(upgrade['relations'],[])
++            self.assertEqual(upgrade['migration_parent'], k.binding(old))
++            inputs = base/'old/attachments'
++            args = [sys.executable,str(script),'assemble',str(inputs/'extraction.json'),str(inputs/'judgments.json'),str(inputs/'source.txt'),str(base/'upgrade.json'),str(base/'upgraded'),'--migrate-from',str(base/'old/model-input.json')]
++            result=subprocess.run(args,capture_output=True,timeout=30)
++            self.assertEqual(result.returncode,0,result.stderr)
++            migrated=k.load(base/'upgraded/model-input.json')
++            report=k.inspect(migrated,base/'upgraded')
++            self.assertEqual(report['structure'],'passed')
++            k.package(migrated,base/'upgraded',base/'delivery',report,with_svg=True)
++            self.assertEqual(k.load(base/'delivery/goal-model.json')['parent'],k.binding(old))
++
++    def test_material_literal_template_tokens_do_not_corrupt_html_payload(self):
++        import re
++        from trace_candidates import judgment_template
++        for version in (1, 2):
++            with self.subTest(version=version), tempfile.TemporaryDirectory() as tmp:
++                data, source, j, d = fixture() if version == 2 else legacy_fixture()
++                literal='__CSS__ __PAYLOAD__ __CORE__ __UI__'
++                data['limitations'].append(literal)
++                current_j=judgment_template(data,k.encode(data));current_j['judgments']=j['judgments']
++                d['input_binding']=dict(extraction_sha256=k.digest(k.encode(data)),judgments_sha256=k.digest(k.encode(current_j)))
++                raws=[k.encode(data),k.encode(current_j),source,k.encode(d)]
++                model=k.build(*raws);base=Path(tmp)/'assembled'
++                for name,raw in zip(['extraction.json','judgments.json','source.txt','kaos-decisions.json'],raws):
++                    path=base/'attachments'/name;path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw)
++                    model['input_artifacts'].append(dict(path='attachments/'+name,sha256=k.digest(raw)))
++                k.package(model,base,Path(tmp)/'delivery')
++                page=(Path(tmp)/'delivery/goal-model.html').read_text(encoding='utf-8')
++                payload=json.loads(re.search(r'<script id="payload" type="application/json">(.*?)</script>',page,re.S).group(1))
++                self.assertEqual(payload['model'],model)
++                self.assertIn(literal,payload['model']['limitations'])
++
++
++if __name__ == '__main__': unittest.main()
+--- before/tests/test_skill_migration.py
++++ after/tests/test_skill_migration.py
+@@ -54,7 +54,7 @@
+     cli(tracer, work/'extraction.json', work/'tracing', '--source', work/'source.txt',
+         '--judgments', work/'judgments.json', '--review-md', cwd=work)
+     assert all((work/name).read_bytes() == raw for name, raw in before.items())
+-    cli(modeler, 'template', work/'extraction.json', work/'judgments.json', work/'kaos-decisions.json', cwd=work)
++    cli(modeler, 'template', work/'extraction.json', work/'judgments.json', work/'kaos-decisions.json', '--schema-version', '1', cwd=work)
+     authored_decisions = k.load(work/'kaos-decisions.json')
+     authored_decisions['groups'] = decisions['groups']
+     (work/'kaos-decisions.json').write_bytes(k.encode(authored_decisions))
+--- before/tests/test_skill_release.py
++++ after/tests/test_skill_release.py
+@@ -0,0 +1,40 @@
++"""Exact installation, no legacy dependency, package integrity and no overwrite."""
++import importlib.util
++import json
++import tempfile
++import unittest
++from pathlib import Path
++
++ROOT=Path(__file__).resolve().parents[1]
++SPEC=importlib.util.spec_from_file_location('release_skills',ROOT/'scripts/release_skills.py')
++r=importlib.util.module_from_spec(SPEC);SPEC.loader.exec_module(r)
++
++
++class ReleaseTests(unittest.TestCase):
++    def test_release_installs_exact_three_skills_and_imports_from_destination(self):
++        with tempfile.TemporaryDirectory() as tmp:
++            base=Path(tmp);release=base/'release';destination=base/'isolated/skills'
++            result=r.build(ROOT/'skills',release,'test-kaos2')
++            self.assertEqual(result['status'],'passed')
++            receipt=r.install(release,destination)
++            self.assertEqual(receipt['loaded']['schema'],'goalforge-kaos-2')
++            self.assertFalse((destination/'goal-tracing').exists())
++            source=(destination/'goal-extraction/SKILL.md').read_bytes()
++            with self.assertRaises(ValueError):r.install(release,destination)
++            self.assertEqual((destination/'goal-extraction/SKILL.md').read_bytes(),source)
++            with self.assertRaises(ValueError):r.build(ROOT/'skills',release,'test-kaos2')
++
++    def test_tamper_and_escaping_manifest_are_rejected_before_install(self):
++        for variant in ('tamper','escape','extra'):
++            with self.subTest(variant=variant),tempfile.TemporaryDirectory() as tmp:
++                base=Path(tmp);release=base/'release';r.build(ROOT/'skills',release,'test')
++                if variant=='tamper':(release/'skills/goal-extraction/SKILL.md').write_bytes(b'changed')
++                elif variant=='extra':(release/'skills/goal-extraction/extra.txt').write_bytes(b'extra')
++                else:
++                    m=json.loads((release/'manifest.json').read_bytes());m['files'][0]['path']='skills/goal-extraction/../../../outside'
++                    (release/'manifest.json').write_bytes(r.encode(m))
++                with self.assertRaises(ValueError):r.install(release,base/'install')
++                self.assertFalse((base/'install').exists())
++
++
++if __name__=='__main__':unittest.main()

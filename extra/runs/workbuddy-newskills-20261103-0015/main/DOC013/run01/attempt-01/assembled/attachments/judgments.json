@@ -1,0 +1,326 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "6287a6df5ca00add565e47a6f357c4da7ae3e6400462a7329cc7da66af7884dd",
+    "input_sha256": "baae9aa913159e1d666a5443b230e99c158dbfbc9ee707e743d02b7f98f64ca7"
+  },
+  "judgments": {
+    "G001": {
+      "target_statement": "Viewer can locate a specific type of video or content by searching with text or by applying filters.",
+      "label": "direct",
+      "rationale": "原文以 'essential' 明确要求观众能按特定类型获取内容，并给出文字搜索与筛选两种替代方式；目标保留两种方式的择一含义，未合并为必须同时使用。",
+      "supported_parts": [
+        "主体为观众",
+        "对象为特定类型视频/内容",
+        "方式为文字搜索或筛选（择一）",
+        "强度为 essential"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G002": {
+      "target_statement": "Viewer can browse visually through a large volume of content options, seeing thumbnails with descriptions and creator or actor information, and click through them.",
+      "label": "direct",
+      "rationale": "原文 'secondly, to be able to search visually' 与 'see a large volume of different options and click through it' 明确表达浏览意向，缩略图附描述、创作者与演员信息也有同句依据；'perhaps' 的弱化语气未改写为强制。",
+      "supported_parts": [
+        "浏览大量选项并点击穿行",
+        "缩略图附描述",
+        "展示创作者/演员信息"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G003": {
+      "target_statement": "Creator can create and upload a video or start a live stream from a creation option in the platform.",
+      "label": "direct",
+      "rationale": "原文 'I would want to see some option where I could go and create to upload a video or start a stream' 明确要求提供创建入口，并保留上传视频/开播两种替代方式。",
+      "supported_parts": [
+        "创建入口存在",
+        "可上传视频",
+        "可开始直播（替代方式）"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G004": {
+      "target_statement": "Creator can attach a description to an uploaded video and, optionally, a transcript or captions.",
+      "label": "direct",
+      "rationale": "'I would want to be able to ... put some sort of description in, add, perhaps a transcript captions' 直接支持描述与字幕的附加动作；'perhaps' 说明字幕为较弱/可选，目标以 optionally 保留该强度，未升级为必须。",
+      "supported_parts": [
+        "上传时填写描述",
+        "字幕/转写稿以 'perhaps' 提出，属可选项"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G005": {
+      "target_statement": "Creator can edit an uploaded video by adding sound effects, trimming and cropping it.",
+      "label": "direct",
+      "rationale": "原文把编辑列为 'would be very useful' 的能力，并具体给出加音效、裁剪、切割三种操作；这些是同一编辑动作的限定，未机械拆成多个目标。",
+      "supported_parts": [
+        "编辑已上传视频",
+        "加音效",
+        "裁剪/切割",
+        "强度为 'very useful' 的偏好"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G006": {
+      "target_statement": "The platform must ensure that some viewers cannot see certain content that is not suitable for all viewers.",
+      "label": "direct",
+      "rationale": "'we'll have to make sure' 为必须强度，对象是某些观众与某些内容；目标保留否定式约束，未改写为对所有内容做统一过滤。",
+      "supported_parts": [
+        "必须（have to）",
+        "部分观众不可见部分内容",
+        "适用范围为不适合所有观众的内容"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G007": {
+      "target_statement": "The platform must not allow streamers to share certain kinds of content with anybody.",
+      "label": "direct",
+      "rationale": "'should not be allowed to share with anybody' 直接给出禁止性要求，主体是 streamers，范围为某些类别内容；explicit language 仅是例示，写入 context 而不扩大为全部内容。",
+      "supported_parts": [
+        "禁止 streamer 分享某类内容",
+        "范围为任何对象",
+        "explicit language 为例示"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G008": {
+      "target_statement": "A search made with vague or imprecise criteria still returns meaningful results to the viewer.",
+      "label": "direct",
+      "rationale": "原文明确要求模糊条件仍得到有意义结果；未给出阈值或指标，目标未编造量化标准。",
+      "supported_parts": [
+        "模糊搜索条件",
+        "结果仍需有意义",
+        "主体为观众"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G009": {
+      "target_statement": "Video playback delivers a seamless stream of buffered data that does not freeze constantly on the viewer's machine.",
+      "label": "direct",
+      "rationale": "避免型意图与期望状态在同一句表达：不卡顿、连续缓冲流；'constantly' 限定保留，未升级为绝对零卡顿。",
+      "supported_parts": [
+        "避免持续卡顿",
+        "期望连续缓冲流",
+        "发生在观众端接收内容时"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G010": {
+      "target_statement": "Viewer can obtain the information they are after quickly through search instead of reading long-form material such as a book.",
+      "label": "direct",
+      "rationale": "原文把使用平台的目的概括为快速获得信息，并以'不读书、快速搜索'给出对照；目标保留'快速'与替代阅读的意图，未添加具体时延。",
+      "supported_parts": [
+        "快速获得信息",
+        "以搜索为主要途径",
+        "与阅读长文本相对照"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G011": {
+      "target_statement": "Uploads accept the creator's existing video formats without compatibility problems.",
+      "label": "inferred",
+      "rationale": "原文只以'可能有技术麻烦'的方式提出格式兼容，没有直接要求；由'需要确认兼容'推断出平台应接受既有格式，属合理推断但有假设。",
+      "supported_parts": [
+        "对象为上传的既有视频文件",
+        "关注格式兼容"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "列出的麻烦即希望避免的状态"
+      ],
+      "reasoning_steps": [
+        "识别障碍假设",
+        "取反得到期望状态",
+        "限定在格式兼容范围"
+      ]
+    },
+    "G012": {
+      "target_statement": "Uploads are not restricted by video length requirements.",
+      "label": "inferred",
+      "rationale": "原句是要求'确认没有时长要求'，语义上支持不受时长限制，但以障碍口吻出现，需标注推断；未给出具体时长上限。",
+      "supported_parts": [
+        "上传不受时长要求限制"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "'no length requirements' 指不设时长门槛"
+      ],
+      "reasoning_steps": [
+        "识别障碍假设",
+        "取反得到期望状态"
+      ]
+    },
+    "G013": {
+      "target_statement": "Publishing an uploaded video to the web is a simple process.",
+      "label": "insufficient",
+      "rationale": "原文只有反问，没有说明'简单'的标准、是否必须满足，也没有承诺；推断依据薄弱，不足以支持该目标表述。",
+      "supported_parts": [
+        "关切点是发布到网络的难度"
+      ],
+      "unsupported_parts": [
+        "未给出'简单'的判定标准",
+        "未表明平台必须保证流程简单"
+      ],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G014": {
+      "target_statement": "The creator does not have to wait for the whole video to be uploaded before it can be published.",
+      "label": "insufficient",
+      "rationale": "原句为未获回答的反问，既未确认要求，也未说明平台当前行为；不足以支持'不必等待完整上传'。",
+      "supported_parts": [
+        "关切点为发布与上传完成的先后"
+      ],
+      "unsupported_parts": [
+        "未确认是否要求上传完成前即可发布",
+        "未说明现行行为"
+      ],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G015": {
+      "target_statement": "Player controls are discoverable to first-time users, including while a video is playing.",
+      "label": "inferred",
+      "rationale": "原文是障碍观察而非直接要求，推断目标为控件可发现；依据包含具体情境（播放时隐藏、需移鼠标），未添加界面改版方案。",
+      "supported_parts": [
+        "首次使用者可能不认识控件",
+        "播放时控件隐藏",
+        "需移动到画面底部才出现"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "困难描述即希望改善的目标状态"
+      ],
+      "reasoning_steps": [
+        "识别表象与用户目的",
+        "推断目标状态"
+      ]
+    },
+    "G016": {
+      "target_statement": "Captions are accurate for viewers who do not speak English as a first language.",
+      "label": "insufficient",
+      "rationale": "原文明确表示'不确定准确度'，未提出准确度要求、人群范围外的程度或验收方式；不能把不确定升级为准确要求。",
+      "supported_parts": [
+        "关注自动字幕",
+        "关注非母语英语观众"
+      ],
+      "unsupported_parts": [
+        "未给出准确度要求或阈值",
+        "未确认是否需要为此改造"
+      ],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G017": {
+      "target_statement": "Player colors can be adjusted for colorblind viewers.",
+      "label": "inferred",
+      "rationale": "有正面依据（可作为改进工作）但强度为建议且现状未知；目标保留'可调整'的能力表述，未写成已确定交付项。",
+      "supported_parts": [
+        "色盲观众情境",
+        "颜色可调整为改进方向"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [
+        "该表述为改进建议"
+      ],
+      "reasoning_steps": [
+        "识别建议",
+        "推断目标状态"
+      ]
+    },
+    "G018": {
+      "target_statement": "The platform offers a premium tier that gives access to all content without ad interruptions.",
+      "label": "direct",
+      "rationale": "受访者确认存在 premium tier，并说明其承诺全部内容、无中断、无广告；目标保留'全部内容'与'无广告中断'两项结果。",
+      "supported_parts": [
+        "存在付费高级层级",
+        "承诺全部内容",
+        "无广告中断"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G019": {
+      "target_statement": "Premium subscription offers individual plans paid monthly or annually, a family plan for up to 5 members, and a student plan with a 1-month free trial.",
+      "label": "direct",
+      "rationale": "原文逐项列出个人（月/年）、家庭（最多 5 人）、学生（1 个月免费试用）三种方案；数量与期限按原文保留，未扩展其他档位。",
+      "supported_parts": [
+        "个人月付/年付",
+        "家庭最多 5 人",
+        "学生 1 个月免费试用"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G020": {
+      "target_statement": "User selects one premium plan through radio buttons and is then prompted for payment.",
+      "label": "direct",
+      "rationale": "原文描述单选按钮选择单一方案并随后进入付款提示；单选与付款顺序是明确选定的方式，保留在目标中。",
+      "supported_parts": [
+        "单选方式选择一种方案",
+        "随后提示付款"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G021": {
+      "target_statement": "Viewer can add content to a watch list.",
+      "label": "direct",
+      "rationale": "受访者报告观众具备加入 watch list 的能力；'I think' 的把握程度记入 rationale，目标仅陈述该能力。",
+      "supported_parts": [
+        "观众可将内容加入观看列表"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G022": {
+      "target_statement": "Viewer can follow or subscribe to creators and see the latest content from subscribed creators in a central subscriptions area.",
+      "label": "direct",
+      "rationale": "原文既说可关注/订阅创作者，也说明订阅页列出已订阅创作者的最新内容；两段为同一动作链，合并为一个目标并保留集中区域这一方式。",
+      "supported_parts": [
+        "关注/订阅创作者",
+        "集中订阅区列出最新内容"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    },
+    "G023": {
+      "target_statement": "Streaming can only begin 24 hours after a streaming account is set up.",
+      "label": "direct",
+      "rationale": "原文明确：开播需提前 24 小时通知，且直播只能在账号建立 24 小时后开始；时间数量与'只能'的限制均保留。",
+      "supported_parts": [
+        "24 小时等待",
+        "仅可在账号建立后开始直播",
+        "属安全合规要求"
+      ],
+      "unsupported_parts": [],
+      "assumptions": [],
+      "reasoning_steps": []
+    }
+  }
+}

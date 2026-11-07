@@ -1,0 +1,361 @@
+{
+  "document_id": "DOC010",
+  "artifact_type": "isolated_model_reviewer_source_intent_inventory",
+  "human_gold": false,
+  "source_only": true,
+  "domain": "天气信息与生活出行规划",
+  "scope": "受访者的天气应用日常/旅行决策、信息及时性和通知偏好。",
+  "methodology": "逐段完整阅读原文后人工式语义判断；条目由评审模型编写，程序仅校验引用和序列化，不以关键词抽取代替理解。未读取技能、论文目标、tests、生成结果或既有评估。条目不是最终目标模型，不规定唯一层次或粒度。",
+  "intents": [
+    {
+      "intent_id": "DOC010:I01",
+      "intent": "依天气决定穿戴和随身物品",
+      "subject": "受访者",
+      "conditions": "起床或出门前",
+      "modality": "明确主要目的",
+      "exceptions": "在熟悉长期居住地可能不查看",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "plan what I have to wear on a particular day",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1014,
+          "quote_end_char": 1058,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T013",
+          "quote": "I just plan what I wear or what I should carry on that day.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2025,
+          "quote_end_char": 2084,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I02",
+      "intent": "依天气安排户外活动和旅行",
+      "subject": "受访者与朋友",
+      "conditions": "活动及购票之前",
+      "modality": "明确主要目的",
+      "exceptions": "日常多看每日；旅行可看整周",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T007",
+          "quote": "plan my outdoor activities. or just plan my trip",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1062,
+          "quote_end_char": 1110,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T019",
+          "quote": "if I have to plan a trip. I would check whether for entire week.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3569,
+          "quote_end_char": 3633,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I03",
+      "intent": "避免恶劣天气下不合适的户外活动和无效购票",
+      "subject": "受访者",
+      "conditions": "如游乐园遇雨或过冷时",
+      "modality": "明确决策目的",
+      "exceptions": "Chicago 和 Six Flags 是实例，无地点限制",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T021",
+          "quote": "it's very annoying when it's rain or when it's very cold. So there's no point in buying tickets at that point.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 3984,
+          "quote_end_char": 4094,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I04",
+      "intent": "先通过语音助手快速取得天气，不足时查应用",
+      "subject": "受访者",
+      "conditions": "通常早上查询时",
+      "modality": "明确策略",
+      "exceptions": "应用足够时无需再查网站；网站是另一个信息渠道",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T013",
+          "quote": "I usually ask Siri or AI assistant for the weather information.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1692,
+          "quote_end_char": 1755,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T013",
+          "quote": "So I have to open the app itself and look information there.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 1836,
+          "quote_end_char": 1896,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I05",
+      "intent": "在每次外出及陌生地点及时确认天气变化",
+      "subject": "受访者",
+      "conditions": "去吃饭、咖啡或其他外出前；身处新地点时",
+      "modality": "明确使用方式与目的",
+      "exceptions": "在 Pakistan 长期居住熟悉气候时此前不查；无统一全球固定频率",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T025",
+          "quote": "basically, whenever I go out of my apartment. I I do check it.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4718,
+          "quote_end_char": 4780,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T033",
+          "quote": "whenever I'm like in the new place. I have to get familiar with the weather conditions there",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5872,
+          "quote_end_char": 5964,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I06",
+      "intent": "获悉极端天气以推迟活动或避免外出",
+      "subject": "受访者",
+      "conditions": "雷暴、洪水等条件出现时",
+      "modality": "明确高优先级目的",
+      "exceptions": "日常天气仍然重要，不是仅查极端天气",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T035",
+          "quote": "I just like postpone the entire event and don't. Don't go out at all.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6513,
+          "quote_end_char": 6582,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T037",
+          "quote": "I use it daily. To decide what I wear, what I carry out.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6825,
+          "quote_end_char": 6881,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I07",
+      "intent": "极端天气时主动收到通知或预警",
+      "subject": "受访者",
+      "conditions": "极端条件出现时",
+      "modality": "明确期待",
+      "exceptions": "邮件、短信、县政府和应用为其经历的渠道；未明确选定唯一通知渠道",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T039",
+          "quote": "for extreme conditions, I'm just expecting, you know, the weather app to give me notifications or alert",
+          "speaker": "Stakeholder",
+          "quote_start_char": 7335,
+          "quote_end_char": 7438,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I08",
+      "intent": "将一般天气通知调整到符合出门日程且不过度打扰",
+      "subject": "受访者",
+      "conditions": "一般日常天气",
+      "modality": "明确个人偏好",
+      "exceptions": "每天早中晚三次；不是所有条件均三次",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T041",
+          "quote": "now I get it like 3 times per day",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8111,
+          "quote_end_char": 8144,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T041",
+          "quote": "that's likely to blend in into my routine, because that's when I go. Usually go out.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8237,
+          "quote_end_char": 8321,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I09",
+      "intent": "降雨期间更频繁取得开始、停止等实时更新",
+      "subject": "受访者",
+      "conditions": "正在降雨或不利天气时",
+      "modality": "明确例外偏好",
+      "exceptions": "不应把一般天气也改为一直频繁通知",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T049",
+          "quote": "when it's about rain, I like have a like frequent notifications.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8983,
+          "quote_end_char": 9047,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T063",
+          "quote": "hourly, updates are important for extreme conditions when it's raining and not raining.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 11654,
+          "quote_end_char": 11741,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I10",
+      "intent": "凭准确及时的天气选择步行或乘车，避免淋雨",
+      "subject": "受访者",
+      "conditions": "短途出门时",
+      "modality": "明确实例目的和改进愿望",
+      "exceptions": "受访者承认预测技术有限，不是要求保证天气绝对正确",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T051",
+          "quote": "make this decision to whether walk to the grocery store or take a bus.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9479,
+          "quote_end_char": 9549,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T051",
+          "quote": "real time updates are very important.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9779,
+          "quote_end_char": 9816,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I11",
+      "intent": "让应用及时刷新且与网站等平台信息一致",
+      "subject": "受访者",
+      "conditions": "查看当前天气时",
+      "modality": "明确改进要求",
+      "exceptions": "应用显示雨而窗外、网站无雨是实例；区别于天气本身预测误差",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T057",
+          "quote": "the apps is they don't show you they don't get updates often.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 10679,
+          "quote_end_char": 10740,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T071",
+          "quote": "should be consistent across all the platforms.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 13136,
+          "quote_end_char": 13182,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC010:I12",
+      "intent": "使用无广告天气体验",
+      "subject": "受访者",
+      "conditions": "免费/未订阅应用展示随机广告时",
+      "modality": "明确理想体验",
+      "exceptions": "未表示愿意付费或必须提供某收费方案",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T071",
+          "quote": "no ads, real time updates and should be consistent across all the platforms.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 13106,
+          "quote_end_char": 13182,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    }
+  ],
+  "background_candidates": [
+    {
+      "item": "Pakistan、Chicago、上周买菜和五分钟步行",
+      "reason": "具体场景支撑熟悉度、活动规划和实时性的判断，非固定地点或时长要求。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC010:T031",
+          "quote": "when I was like back in Pakistan I never checked the weather.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 5666,
+          "quote_end_char": 5727,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC010:T051",
+          "quote": "the store was just like",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9560,
+          "quote_end_char": 9583,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "通知每天三次是一般天气的个人设置，降雨时更频繁是明确例外。",
+    "语音助手具体失败原因未说明。",
+    "天气预测准确与应用同步延迟是两种不同问题。"
+  ],
+  "source_document_hash_declared": "0763124f64e891178a095d38578c5fd3d497f4d7d5346a4b0c248c121c07053b",
+  "read_range": {
+    "first_source_id": "DOC010:T000",
+    "last_source_id": "DOC010:T077",
+    "turn_count": 78,
+    "read_completely": true,
+    "reading_note": "全文语义阅读；DOC003首次长输出中段被截断后，已单独补读T066–T096。DOC028、DOC036分别按turn分段读完。其他文档完整读取。"
+  }
+}

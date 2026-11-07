@@ -1,0 +1,210 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "ecd57342515c93cf5b1d6fef0f54f791be89c90f10c0a590680bab1593f59b0b",
+    "judgments_sha256": "4273cc1a93c741843903e9fcec3d0241ea272b99c0b8d1fbe5e7cef062a390cc"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC030-goal-model",
+      "message": "G001“get a job”范围很宽，是否保留为顶层目标，还是仅作为 G003 的背景？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G027",
+      "message": "提交冷却目标来自抱怨推断，是否应作为产品改进目标保留？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G028",
+      "message": "性能反馈一致性目标同样来自抱怨，是否保留？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G019",
+      "message": "只练未勾选题可能只是平台操作步骤，是否应独立成目标？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "T019 与 T029 的时间阈值不一致，是否需拆分或只保留较具体的一组？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G003",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "为求职面试做准备是实现获得工作这一总体目的的途径；原文说练习的主要目的就是找工作。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC030:T009",
+          "quote": "the main purpose is just to get a job",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G004",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "公司题目来自 LeetCode 或其变体"
+      ],
+      "assumptions": [],
+      "rationale": "在 LeetCode 练习是因为公司从这里取题，因此该方式服务于面试准备。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC030:T003",
+          "quote": "all the companies take questions or variations of the questions from the leetcode, and it's the primary reason I use leetcode",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G005",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "NeetCode 的精简分类清单被明确用于练习面试题，服务于面试准备。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC030:T007",
+          "quote": "I used NeetCode to practice the questions specific for job interviews.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G010",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "面试临近时"
+      ],
+      "assumptions": [],
+      "rationale": "临面试前每天练习使准备更充分，对面试准备有贡献但非充分条件。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC030:T015",
+          "quote": "Because after you practice right before the interview, your your brain is more functioning and you can prepare better",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G008",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "按朋友分享的真题号练习可提升面试准备度，原文明确说因此更 prepared。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC030:T005",
+          "quote": "So he just sent me, like the the leetcode question numbers to me, so I can directly practice the the question numbers and and get used to it, so I can be more prepared for my interviews",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G023",
+      "target_id": "G003",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "看到做题数量带来的信心使面试答题更自信、少紧张，对面试表现有帮助。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC030:T033",
+          "quote": "So in my job interview I can be more confident and not be so nervous when I am answering questions",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G007",
+      "target_id": "G017",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "LeetCode 解法说明不清时"
+      ],
+      "assumptions": [],
+      "rationale": "GeeksforGeeks 的详细解法讲解帮助他在看解法阶段理解题目，对 G017 的理解步骤有贡献。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC030:T003",
+          "quote": "I mainly use it to find find a like more explained solution",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G015",
+      "target_id": "G013",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "超过目标时间后"
+      ],
+      "assumptions": [],
+      "rationale": "超时后在同类题上加练可改善下次表现，服务于按难度的时间目标。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC030:T019",
+          "quote": "I will just try to practice more on this category of questions, so I can do better next time.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G012",
+      "target_id": "G010",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "需要耐心且无干扰"
+      ],
+      "assumptions": [],
+      "rationale": "预留大块无干扰时间是完成每日练习的条件性帮助，非充分保证。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC030:T015",
+          "quote": "you need to like allocate a good chunk of the time for you to sit down and go through the practice go through the problems like more patiently",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

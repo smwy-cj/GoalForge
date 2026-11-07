@@ -1,0 +1,42 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "43bd744072320343501d7b8fc8376c2f1a645b9bf58cfd45ba721e8bb81f2304",
+    "judgments_sha256": "93f75a9988daed1659a313e320b59f7876e610acc9db27de3c0059a63dda30fe"
+  },
+  "groups": [
+    {
+      "group_id": "DOC010-F001",
+      "parent_id": "DOC010-G002",
+      "child_ids": [
+        "DOC010-G004",
+        "DOC010-G005",
+        "DOC010-G008"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "当前天气、严重天气和实时变化有助于规划，但不足以共同保证旅行和购票决策。",
+      "assumptions": [
+        "上述内容仅为待核验组织方案；不把操作顺序、贡献或主题相关当作共同充分精化。"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC010:T019",
+          "quote": "I think it depends, because, you know, weather is like we cannot predict whether, although we have like good estimation. But sometimes it's not very accurate, so I guess, like for me, personally, I don't check it on a weekly basis. I do it daily. but like, if I have to plan a trip. I would check whether for entire week. Yes, because I have, as I said, like, I have to plan activities, and I have to buy ticket for tickets for those activities.",
+          "role": "basis",
+          "start_char": 3312,
+          "end_char": 3757
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC010-goal-model",
+      "message": "当前精化候选均有共同充分性缺口，仅供审核；未确认方案不展示为成立层级。"
+    }
+  ]
+}

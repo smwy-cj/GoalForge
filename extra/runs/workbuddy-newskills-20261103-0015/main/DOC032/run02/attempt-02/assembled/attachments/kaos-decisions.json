@@ -1,0 +1,102 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "37438189afd047071ebc017479483f24e49e0d98d2d3350e15e0d6250b4ea557",
+    "judgments_sha256": "be3c19479f039f2bde50a5b5ecb67debb7de199a64512c19e8fc0c0e4b6175f8"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G003",
+      "message": "整理会话列表仅获挫败性表达（T019 尝试管理而无可行手段、只能搁置），期望结果未知，是否保留为需求请人工确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G002",
+      "message": "发消息给同事（G002）与与朋友和家人交流（G001）因对象范围不同未建联系，是否补充贡献/实现联系待人工确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "避免丢机永久丢消息为推断的避免型目标，其强度与成立性请人工复核。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G012",
+      "message": "云端存储（G012）与避免丢机丢消息（G011）之间原文无直接关系句，未建贡献联系，是否补充待人工确认。"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC032-goal-model",
+      "message": "转写含识别噪声（Ping、stress typing the award、25, a million bytes），相关目标语义按上下文理解为置顶、输入关键词、约25MB，请人工复核该解释。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G004",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "置顶使最关心的亲友会话在他打开微信时最先可见，直接降低与这些亲友交流的触达成本，有助于实现与朋友和家人交流的主要目标；引文同时表明置顶对象正是亲友，效果是打开应用首先可见。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC032:T021",
+          "quote": "so whenever I open. We chat. The 1st the 1st chat box I could see is my girlfriend, or some groups.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC032:T023",
+          "quote": "Yeah, it's simply because that I wanna they are the friends or, yeah, they are friends or families that I cares most about. So I'll just ping them at top of the screen.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G007",
+      "target_id": "G006",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "按文本关键词找图片是会话内消息搜索的具体情境：T027 以 even 表明图片检索是会话内搜索能力的延伸，T045 显示他进入具体聊天界面输入关键词检索图片；具体情境目标（图片检索）指向一般目标（会话内限双方消息搜索）。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC032:T027",
+          "quote": "and I could even search for image that just with apple in it.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC032:T045",
+          "quote": "So sometimes I want to search for a card like a credit card and look for the card number, and I will go to the chat box and I will search credit card, and it will show up all the images that have a credit card in it.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G012",
+      "target_id": "G010",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "T071 明确说明若微信支持消息云端存储，换手机时就无需再担心；云端存储（保留全部消息随时可用）直接有助于换机时保留全部消息的目标。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC032:T071",
+          "quote": "and I don't need to worry anymore when I change my phone",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

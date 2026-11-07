@@ -1,0 +1,268 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "8ab56ba02c65beacf96e5bfe0228488ff82d21d0883d2a54cf7b7c03a2f03522",
+    "input_sha256": "c13cf4c42c2716481ee79581980d44b46a1c04b0c5c4b329fa7949887a4785ac"
+  },
+  "judgments": {
+    "DOC004-C001": {
+      "target_statement": "用 Zelle 在朋友之间快速完成小额转账与费用分摊。",
+      "label": "direct",
+      "rationale": "T005 直接陈述「the main reason I use the app is to do sell payments to like a few of my friends. Basically split split costs」，用途（朋友间小额转账与分摊）与主体均由第一人称给出；T007 补充 Zelle 的即时、按手机号转账特性，与目标对象一致。",
+      "supported_parts": [
+        "主要用途：T005「the main reason I use the app is to do sell payments to like a few of my friends」",
+        "费用分摊：T005「Basically split split costs and all of that」",
+        "机制特性（即时、按手机号）：T007「instantaneously transfer small amounts of money... just based on their phone number」"
+      ],
+      "unsupported_parts": [
+        "未说明使用频率与单笔金额范围",
+        "「sell」为 Zelle 的转写误写，语义按上下文理解为 Zelle"
+      ],
+      "assumptions": [
+        "把「sell payments」理解为 Zelle payments"
+      ],
+      "reasoning_steps": [
+        "1. 定位主用途陈述，确认主体为受访者本人",
+        "2. 核对对象：朋友间、小额、分摊 → 与目标一致",
+        "3. 检索相反证据：T045 仍称 Zelle 是唯一缺失但最想要的功能，同向 → direct"
+      ]
+    },
+    "DOC004-C002": {
+      "target_statement": "把闲置在活期账户的资金转入储蓄账户，以获取利息收益。",
+      "label": "direct",
+      "rationale": "T005 描述「when I have. Let's say a lot of funds in my checking account, so I normally transfer it over to my savings, so I can get even that little bit of interest」，触发条件、动作与目的（获息）在同一句内完整给出。",
+      "supported_parts": [
+        "触发条件：T005「when I have. Let's say a lot of funds in my checking account」",
+        "动作：T005「I normally transfer it over to my savings」",
+        "目的：T005「so I can get even that little bit of interest」"
+      ],
+      "unsupported_parts": [
+        "未说明转账频率、金额阈值或是否使用自动转账",
+        "未说明利率高低是否影响其在银行间的选择"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 拆解为条件、动作、目的三要素",
+        "2. 三要素同句出现且为自述习惯（normally）→ 直接支持",
+        "3. 未发现相反证据 → direct"
+      ]
+    },
+    "DOC004-C003": {
+      "target_statement": "登录后在同一屏看到全部账户余额与近期交易，无需跳转多个页面。",
+      "label": "direct",
+      "rationale": "T015 连续三处描述同一诉求：仪表盘展示全部账户余额与存取的「quick glance」、无需「go to multiple screens」、以及首页折叠区展示最近交易而「don't have to click on another link」。对象（总览、少跳转）与主体一致。",
+      "supported_parts": [
+        "一屏展示账户与余额：T015「shows me the balance in each of the accounts, and it also shows me my deposits and withdrawals」",
+        "快速总览、不跨屏：T015「Just look at all of my spends on like in like a quick glance, and don't really have to go to like multiple screens」",
+        "近期交易无需跳转：T015「don't have to like, you know, click on another link, or like another button」"
+      ],
+      "unsupported_parts": [
+        "「近期交易」限最近 5 笔（T023），未说明受访者是否认为 5 笔足够",
+        "未说明是否要求自定义首屏模块"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 三处表述指向同一行为（在首屏完成信息获取）",
+        "2. 均为对现有体验的正面陈述，属维持型目标",
+        "3. 与后续批评不冲突：T059 仍称主要功能「really good」→ direct"
+      ]
+    },
+    "DOC004-C004": {
+      "target_statement": "设定财务目标，并按月跟踪收支以判断能否在期限内达成。",
+      "label": "direct",
+      "rationale": "T017 与 T021 两次描述同一功能：「plan and track feature where you can like track like, you can basically set monetary goals. And then track how you're doing that」；T021 补充按月收支与期限内达成目标。设定目标与跟踪进度两要素齐全。",
+      "supported_parts": [
+        "设定金钱目标：T017「you can basically set monetary goals」",
+        "跟踪进展：T017「And then track how you're doing that」",
+        "按月收支与期限：T021「how much exactly I'm supposed to be earning, and are spending every month to make sure I hit that goal by a specified timeframe」"
+      ],
+      "unsupported_parts": [
+        "未说明目标类型（储蓄额/支出上限）与达成失败时的处理",
+        "未说明受访者本人是否长期使用该功能，仅称「helps me keep on track」"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 两处描述互证，非单次提及",
+        "2. 目标对象与主体一致 → 直接支持",
+        "3. 无相反证据 → direct"
+      ]
+    },
+    "DOC004-C005": {
+      "target_statement": "按消费类别（如日用品、加油等）查看支出明细，而不仅按交易类型区分。",
+      "label": "direct",
+      "rationale": "T021 明确说现有功能只到收支跟踪、缺分类：「I don't really think it gives me like a breakdown of how much I'm spending and where. So I I think that it would be great to see something like that」；T023 在现场查看交易列表后确认只按 card/Zelle/fee 分类，未按商户类别。",
+      "supported_parts": [
+        "缺少分类明细：T021「I don't think it gives me like a breakdown of how much I'm spending and where」",
+        "期望：T021「I think that it would be great to see something like that」",
+        "现状只有交易类型：T023「it just categorizes how I spend it. Like it says, if it's card Zelle...」",
+        "缺失商户类别：T023「it doesn't have any other sort of indicator to show that I've let's say, spend it on groceries or on fuel」"
+      ],
+      "unsupported_parts": [
+        "未指定类别体系、统计周期与呈现形式（图表/列表）",
+        "「pretty easy to categorize」是受访者对实现难度的判断，不是需求内容"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 区分「期望」与「现状缺失」两处表述，二者互补",
+        "2. 现场操作后的复核（T023）排除了「功能已存在只是没找到」的可能",
+        "3. → direct"
+      ]
+    },
+    "DOC004-C006": {
+      "target_statement": "在网银端设置借记卡的单笔/每日消费限额。",
+      "label": "direct",
+      "rationale": "T035 在网页端实地寻找后断言「I don't think they really have like a specific option where I can... change the limits on the card」；T037 明确表达愿望「that is something I would really like on my... That's obviously something I'd really like to have」。对象（卡片限额）与主体一致。",
+      "supported_parts": [
+        "网页端无该选项：T035「I don't think they really have like a specific option where I can... change the limits on the card per se」",
+        "明确愿望：T037「that is something I would really like... I'd really like to have」",
+        "可参照的既有能力（手机端可设）：T025「what's the Max limit per day, and all of that」"
+      ],
+      "unsupported_parts": [
+        "紧迫性自陈较低：T037「most of my funds are in my savings account, which is not tied to my debit card」，强意愿与低紧迫性并存",
+        "「没有该功能」为受访者找不到后的判断（I don't think），未由产品方确认",
+        "限额类型（单笔/每日/线上）在原文中不统一"
+      ],
+      "assumptions": [
+        "把「找不到入口」视为功能缺失，而非仅入口隐蔽；T035 同时提到「not very intuitive」，两种解释都成立"
+      ],
+      "reasoning_steps": [
+        "1. 记录现场操作路径（T033-T035）与结论",
+        "2. 区分「功能缺失」与「入口不直观」两种可能，未自行裁决",
+        "3. 记录 T037 的强意愿与低紧迫性张力，列为人工问题 → direct"
+      ]
+    },
+    "DOC004-C007": {
+      "target_statement": "转账提交前核对金额与收款人，避免转错金额或转错对象。",
+      "label": "direct",
+      "rationale": "T043 描述流程中的确认步骤「it asks me if everything looks okay. So just to confirm which is a great detail」；T045 说明其价值「it makes sure that you don't send the wrong amount, or like to the wrong person」。机制与防错目的均为直接陈述。",
+      "supported_parts": [
+        "确认步骤：T043「it asks me if everything looks okay. So just to confirm」",
+        "防错目的：T045「it makes sure that you don't send the wrong amount, or like to the wrong person」"
+      ],
+      "unsupported_parts": [
+        "未说明确认页应包含哪些字段（收款人、金额、日期）",
+        "未说明是否需要在确认后提供撤销窗口"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 定位确认步骤的操作描述与其价值说明",
+        "2. 价值说明直接对应「避免转错」这一结果 → 支持",
+        "3. → direct"
+      ]
+    },
+    "DOC004-C008": {
+      "target_statement": "对房租、水电等固定支出设置可重复的定期转账，免去每次手动操作。",
+      "label": "direct",
+      "rationale": "T043 描述操作时提到「there's also an option for setup, repeated transfers. That's that I'm assuming is for like stuff like rent or utilities」；T045 正面评价「it lets you schedule properly. It also lets you repeat the transactions... so you don't have to come and keep on doing it again and again」。",
+      "supported_parts": [
+        "重复转账选项：T043「there's also an option for setup, repeated transfers」",
+        "用途判断（房租/水电）：T043「I'm assuming is for like stuff like rent or utilities」",
+        "免重复操作：T045「so you don't have to come and keep on doing it again and again」"
+      ],
+      "unsupported_parts": [
+        "「rent or utilities」为受访者推测（assuming），非其实际用途",
+        "未说明其本人是否需要定期转账（如是否租房）"
+      ],
+      "assumptions": [
+        "频率与日期选项来自其当场操作观察（weekly/monthly、执行日、首次日期、结束日期或次数）"
+      ],
+      "reasoning_steps": [
+        "1. 区分受访者的实际操作观察与其用途推测",
+        "2. 免重复操作的价值判断为直接陈述 → 支持",
+        "3. → direct，推测部分记入假设"
+      ]
+    },
+    "DOC004-C009": {
+      "target_statement": "网银端也支持 Zelle 转账，不必每次都切换到手机。",
+      "label": "direct",
+      "rationale": "T045 直接提出「I would like to see them implement Zelle on on the web app because I think it. It'll just be more convenient, so that I don't have to like reach. Reach my phone every time」；T041 记录现场确认网页端无 Zelle、只能靠外部账户转账。",
+      "supported_parts": [
+        "愿望：T045「I would like to see them implement Zelle on on the web app」",
+        "动机：T045「so that I don't have to like reach. Reach my phone every time」",
+        "现状缺失：T041「I don't think Zelle is I don't think we can sell on of the web app」",
+        "替代方案成本：T041「I'll have to know the... account number to basically transfer this to someone」"
+      ],
+      "unsupported_parts": [
+        "「more convenient」为定性表述，未量化节省的时间或步骤",
+        "未说明网页端是否应保留外部账户转账作为替代"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 区分现状（无 Zelle）与期望（网页支持）",
+        "2. 动机句直接给出收益（不必拿手机）→ 支持",
+        "3. 与 C001 关系见模型关系判断 → direct"
+      ]
+    },
+    "DOC004-C010": {
+      "target_statement": "在网站上提供文字/聊天式客服（含 AI 机器人），可边处理其他事边求助。",
+      "label": "direct",
+      "rationale": "T055 连续三处表达同一诉求：习惯文字客服「I am very used to having a chat based interface when it comes to support」、比电话更不焦虑且可多任务、希望有 AI 机器人可直接对话；T053 记录现场找不到文字/聊天入口。",
+      "supported_parts": [
+        "偏好文字客服：T055「I am very used to having a chat based interface when it comes to support」",
+        "理由（不焦虑、可多任务）：T055「it's not really anxiety inducing as much as the call. So and I can like multitask while texting」",
+        "AI 机器人：T055「It'd be great to just like text the AI bot. And then, like, get responses」",
+        "现状缺失：T053「I don't see like a way to like text or like chat with a with a bank manager」"
+      ],
+      "unsupported_parts": [
+        "未说明文字客服与电话/预约的优先级，也未要求完全取代电话",
+        "「对不熟悉网站的用户也有用」是受访者对他人处境的推断",
+        "未说明是否需要人工转入、以及排队与响应时长要求"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 三处表述合并为同一诉求（网站提供文字客服）",
+        "2. 现场寻路失败（T053）确认现状确有缺口",
+        "3. 理由为用户偏好陈述，不构成对实现方式的要求 → direct"
+      ]
+    },
+    "DOC004-C011": {
+      "target_statement": "账户与资金安全：新设备登录必须二次验证，且每笔交易即时通知并可在应用内申诉。",
+      "label": "direct",
+      "rationale": "T019 描述并正面评价两项机制：首次在本机登录即触发两步验证「They had this whole 2 factor thing authentication thing set up like from the get go. So that was good」；每笔交易有通知且可申诉「I get a notification on my phone... and then I can also contest it, which is great」。两处均以「good/great」收束，属维持型目标。",
+      "supported_parts": [
+        "两步验证：T019「2 factor thing authentication thing set up like from the get go」",
+        "附加安全层：T019「That's like an additional layer of security」",
+        "交易通知：T019「every time I do a transaction. I get a notification on my phone」",
+        "可申诉：T019「I can also contest it, which is great」"
+      ],
+      "unsupported_parts": [
+        "表述方式为对既有机制的赞许，而非明确要求保留（偏 endorsement）",
+        "未说明是否每次登录都需二次验证（原文限于首次本机登录）",
+        "申诉流程的具体环节未展开"
+      ],
+      "assumptions": [
+        "赞许既有安全机制被理解为希望其持续保留"
+      ],
+      "reasoning_steps": [
+        "1. 两处机制并列于同一安全话题下",
+        "2. 均为现状描述加正面评价 → 维持型目标成立",
+        "3. 记录 endorsement 性质与合并的代价，转为人工问题 → direct"
+      ]
+    },
+    "DOC004-C012": {
+      "target_statement": "能开设投资账户直接交易，并在起步阶段获得顾问一对一指导。",
+      "label": "inferred",
+      "rationale": "原文没有对投资功能的需求表述，只有对其存在与价值的评价：T061「they let you open and like open a trading account, and then trade directly, but they also have, like a team of advisors... which is a really good features」，并解释对不知如何起步者可避免损失。「希望保留并可获得该能力」由赞许与理由正向推断，而非直接陈述；且受访者未使用过该功能。",
+      "supported_parts": [
+        "能力存在：T061「open a trading account, and then trade directly」",
+        "顾问一对一：T061「you can have a 1 to one with an advisor」",
+        "正向价值判断：T061「which is a really good features」"
+      ],
+      "unsupported_parts": [
+        "无直接需求句：全文未出现「我希望/我需要」投资功能的表述",
+        "受访者未使用过该功能，评价基于介绍而非体验",
+        "顾问服务的可用性、收费与等待时间未核实"
+      ],
+      "assumptions": [
+        "对功能的正面评价被视为希望其保留并可用",
+        "评价对象为该行与 J.P. Morgan 合作提供的投资服务（T061）"
+      ],
+      "reasoning_steps": [
+        "1. 检索是否有直接诉求 → 只有评价句，排除 direct",
+        "2. 检索正面推断依据 → 赞许 + 对特定用户价值的说明，构成正向依据",
+        "3. 因有正面依据而非资料不足，判 inferred 而非 insufficient",
+        "4. 无相反证据 → 不作 contradicted"
+      ]
+    }
+  }
+}

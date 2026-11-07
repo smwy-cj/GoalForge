@@ -1,0 +1,453 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "AUDIT-goal-model",
+  "version": "v0.1.h1",
+  "parent_version": "v0.1",
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "50aef5c08fc7a0d5d4a775744fb68e44cc772b041d2b2cce490ab2a6ed2a502f"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "abc2e2c3483eaa6848247022251799b1f2f671562480fa80bdea7409761737a6"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "6bb02f0bc18500de21781cd5646d47dba8d8f6e22aaff2415f5f589f49fc0ce0"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "80c7b4c499a18d9ecea01cb128ae7016eea922537044333b0eab6d9802562349"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "AUDIT"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "AUDIT-G001",
+      "statement": "根据天气和时间安排活动",
+      "source_candidate_ids": [
+        "AUDIT-C001"
+      ],
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_ids": [
+        "E0001"
+      ],
+      "trace_status": "needs_retrace",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "AUDIT-G002",
+      "statement": "根据降雨安排户外活动",
+      "source_candidate_ids": [
+        "AUDIT-C002"
+      ],
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_ids": [
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "AUDIT-G003",
+      "statement": "减少查找信息的费用",
+      "source_candidate_ids": [
+        "AUDIT-C003"
+      ],
+      "origin": "explicit",
+      "actor": "使用者",
+      "context": [],
+      "evidence_ids": [
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P12",
+      "a": "AUDIT-G001",
+      "b": "AUDIT-G002",
+      "label": "uncertain",
+      "interpretation": "scope_specialization",
+      "rationale": "目标或证据已变化，该关系退回待评估；原判断保留在previous_decision。",
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "previous_decision": {
+        "pair_id": "P12",
+        "a": "AUDIT-G001",
+        "b": "AUDIT-G002",
+        "label": "refinement",
+        "parent_id": "AUDIT-G001",
+        "child_id": "AUDIT-G002",
+        "interpretation": "scope_specialization",
+        "rationale": "受控示例：降雨与户外活动是范围具体化。",
+        "evidence_ids": [
+          "E0001",
+          "E0002"
+        ],
+        "conditions": [],
+        "review_status": "pending"
+      },
+      "assessment_status": "not_run",
+      "trace_status": "needs_retrace"
+    },
+    {
+      "pair_id": "P13",
+      "a": "AUDIT-G001",
+      "b": "AUDIT-G003",
+      "label": "uncertain",
+      "rationale": "目标或证据已变化，该关系退回待评估；原判断保留在previous_decision。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "previous_decision": {
+        "pair_id": "P13",
+        "a": "AUDIT-G001",
+        "b": "AUDIT-G003",
+        "label": "none",
+        "rationale": "夹具未建立联系。",
+        "evidence_ids": [],
+        "conditions": [],
+        "review_status": "pending"
+      },
+      "assessment_status": "not_run",
+      "trace_status": "needs_retrace"
+    },
+    {
+      "pair_id": "P23",
+      "a": "AUDIT-G002",
+      "b": "AUDIT-G003",
+      "label": "none",
+      "rationale": "夹具未建立联系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending"
+    }
+  ],
+  "edges": [],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "AUDIT:S001",
+      "material_id": "M001",
+      "quote": "使用者：我希望根据天气安排活动。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 0,
+      "end_char": 16,
+      "candidate_locations": [
+        {
+          "source_id": "AUDIT:S001",
+          "segment_start": 0,
+          "segment_end": 16,
+          "start_char": 0,
+          "end_char": 16
+        }
+      ],
+      "original_locator": {
+        "line_start": 1,
+        "line_end": 1,
+        "start_char": 0,
+        "end_char": 16
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "AUDIT:S002",
+      "material_id": "M001",
+      "quote": "使用者：我希望根据降雨安排户外活动。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17,
+      "end_char": 35,
+      "candidate_locations": [
+        {
+          "source_id": "AUDIT:S002",
+          "segment_start": 0,
+          "segment_end": 18,
+          "start_char": 17,
+          "end_char": 35
+        }
+      ],
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 17,
+        "end_char": 35
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "AUDIT:S003",
+      "material_id": "M001",
+      "quote": "使用者：我希望减少查找信息的费用。",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 36,
+      "end_char": 53,
+      "candidate_locations": [
+        {
+          "source_id": "AUDIT:S003",
+          "segment_start": 0,
+          "segment_end": 17,
+          "start_char": 36,
+          "end_char": 53
+        }
+      ],
+      "original_locator": {
+        "line_start": 3,
+        "line_end": 3,
+        "start_char": 36,
+        "end_char": 53
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "AUDIT-C001",
+      "goal_id": "AUDIT-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "AUDIT-C002",
+      "goal_id": "AUDIT-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "AUDIT-C003",
+      "goal_id": "AUDIT-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 3,
+    "evaluated_pairs": 1,
+    "unassessed_pair_ids": [
+      "P12",
+      "P13"
+    ]
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": [
+      {
+        "feedback_id": "AUDIT-EDIT-NOT-REAL-USER",
+        "feedback_sha256": "b6125573ed28db20463d70b79e84fa95036eaae38f3ed9242906a864b8fc38ca",
+        "feedback_path": "attachments/human-feedback-b6125573ed28db20.json",
+        "base_model": {
+          "model_id": "AUDIT-goal-model",
+          "version": "v0.1",
+          "content_sha256": "38a3c7176a44b6336c9935cfbe4ba4bcdceed8061601b23d398747ed20961af2",
+          "core_sha256": "d8d6fed8099c389475d2b2ea350554b357862dc16bc2c49b8a0beb7f8e928337",
+          "review_target_sha256": "f7ff4dfb5ab54e898d924d9a404fdcf53f99a0caab24df46495590e74d67416f"
+        },
+        "reviewer": {
+          "name": "工程测试，不是真实人工验收"
+        },
+        "entries": [
+          {
+            "entry_id": "AUDIT-E1",
+            "target_type": "goal",
+            "target_id": "AUDIT-G001",
+            "decision": "modify",
+            "proposed": {
+              "statement": "根据天气和时间安排活动"
+            },
+            "reason": "受控增加时间条件，验证原支持是否失效。",
+            "reviewed_at": "2026-10-16T00:00:00+08:00"
+          }
+        ],
+        "overall": {
+          "decision": "request_changes",
+          "full_scope_ack": false,
+          "acknowledge_limits": false,
+          "comment": "受控CLI衔接测试"
+        },
+        "imported_at": "2026-10-16T09:13:25.964505+00:00",
+        "applied_to_version": "v0.1.h1"
+      }
+    ],
+    "feedback_artifacts": [
+      {
+        "path": "attachments/human-feedback-b6125573ed28db20.json",
+        "sha256": "9cc52ee39d97d34bb0285cdb421f4b968242577053d4ae6cabbbcccb25727eca"
+      }
+    ]
+  },
+  "changes": [
+    {
+      "kind": "human_feedback_revision",
+      "feedback_id": "AUDIT-EDIT-NOT-REAL-USER",
+      "feedback_sha256": "b6125573ed28db20463d70b79e84fa95036eaae38f3ed9242906a864b8fc38ca",
+      "parent_core_sha256": "d8d6fed8099c389475d2b2ea350554b357862dc16bc2c49b8a0beb7f8e928337",
+      "before_goals": [
+        {
+          "goal_id": "AUDIT-G001",
+          "statement": "根据天气安排活动",
+          "source_candidate_ids": [
+            "AUDIT-C001"
+          ],
+          "origin": "explicit",
+          "actor": "使用者",
+          "context": [],
+          "evidence_ids": [
+            "E0001"
+          ],
+          "trace_status": "direct",
+          "review_status": "pending"
+        },
+        {
+          "goal_id": "AUDIT-G002",
+          "statement": "根据降雨安排户外活动",
+          "source_candidate_ids": [
+            "AUDIT-C002"
+          ],
+          "origin": "explicit",
+          "actor": "使用者",
+          "context": [],
+          "evidence_ids": [
+            "E0002"
+          ],
+          "trace_status": "direct",
+          "review_status": "pending"
+        },
+        {
+          "goal_id": "AUDIT-G003",
+          "statement": "减少查找信息的费用",
+          "source_candidate_ids": [
+            "AUDIT-C003"
+          ],
+          "origin": "explicit",
+          "actor": "使用者",
+          "context": [],
+          "evidence_ids": [
+            "E0003"
+          ],
+          "trace_status": "direct",
+          "review_status": "pending"
+        }
+      ],
+      "before_pairs": [
+        {
+          "pair_id": "P12",
+          "a": "AUDIT-G001",
+          "b": "AUDIT-G002",
+          "label": "refinement",
+          "parent_id": "AUDIT-G001",
+          "child_id": "AUDIT-G002",
+          "interpretation": "scope_specialization",
+          "rationale": "受控示例：降雨与户外活动是范围具体化。",
+          "evidence_ids": [
+            "E0001",
+            "E0002"
+          ],
+          "conditions": [],
+          "review_status": "pending"
+        },
+        {
+          "pair_id": "P13",
+          "a": "AUDIT-G001",
+          "b": "AUDIT-G003",
+          "label": "none",
+          "rationale": "夹具未建立联系。",
+          "evidence_ids": [],
+          "conditions": [],
+          "review_status": "pending"
+        },
+        {
+          "pair_id": "P23",
+          "a": "AUDIT-G002",
+          "b": "AUDIT-G003",
+          "label": "none",
+          "rationale": "夹具未建立联系。",
+          "evidence_ids": [],
+          "conditions": [],
+          "review_status": "pending"
+        }
+      ],
+      "before_edges": [
+        {
+          "edge_id": "R001",
+          "type": "refinement",
+          "decision_id": "P12",
+          "conditions": [],
+          "review_status": "pending",
+          "parent_id": "AUDIT-G001",
+          "child_id": "AUDIT-G002",
+          "interpretation": "scope_specialization"
+        }
+      ],
+      "entries": [
+        {
+          "entry_id": "AUDIT-E1",
+          "target_type": "goal",
+          "target_id": "AUDIT-G001",
+          "decision": "modify",
+          "proposed": {
+            "statement": "根据天气和时间安排活动"
+          },
+          "reason": "受控增加时间条件，验证原支持是否失效。",
+          "reviewed_at": "2026-10-16T00:00:00+08:00"
+        }
+      ],
+      "routes": [
+        {
+          "entry_id": "AUDIT-E1",
+          "decision": "modify",
+          "target_id": "AUDIT-G001",
+          "status": "applied_needs_retrace",
+          "next_skill": "goal-tracing"
+        }
+      ]
+    }
+  ],
+  "delivery": {
+    "mode": "human_feedback",
+    "readiness": "unchecked",
+    "limitations": [
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。",
+      "结构检查已绑定当前版本；独立语义审查未执行；人工状态以实际审核记录为准。"
+    ],
+    "files": []
+  }
+}

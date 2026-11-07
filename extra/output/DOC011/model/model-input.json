@@ -1,0 +1,2004 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC011-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "b71600388d4a489e0023bb45d99a8f09b2acc3f174765d2d0249881a3ff9fe85"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "fab5f81a0c442846ef740c20045492c4247cce873bbf99b1e88f19b6091b20a2"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "2ed33cf99983f305dccfc3f3a10e43f7fac608a48a4bd02dd79356c6a79315f5"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "a7bcaec88a1d4bedcf6d5a97bd0a20e516e63b2b5b0c092f499e9430128b50df"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC011"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC011-G001",
+      "statement": "与队友异步协作修改同一份代码，完成课程与项目作业。",
+      "source_candidate_ids": [
+        "DOC011-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "主要身份为学生与助教",
+        "队友同时有仓库写权限，无法约到共同工作时间时靠异步协作"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G002",
+      "statement": "代码合并进主分支前必须经他人审查，防止未审改动进入主干。",
+      "source_candidate_ids": [
+        "DOC011-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "审查由同一仓库的其他协作者执行",
+        "不达标可拒绝合并"
+      ],
+      "evidence_ids": [
+        "E0004",
+        "E0005",
+        "E0006"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G003",
+      "statement": "改动按小步增量提交，减少协作者每次要审查的内容量。",
+      "source_candidate_ids": [
+        "DOC011-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "自述为个人偏好，非团队强制",
+        "独自开发时反而倾向大 PR，因为没人要审"
+      ],
+      "evidence_ids": [
+        "E0007",
+        "E0008"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G004",
+      "statement": "能回看仓库的变更历史，包括每次提交改了什么、由谁改。",
+      "source_candidate_ids": [
+        "DOC011-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "PR 不会被删除，保留在列表中可追溯"
+      ],
+      "evidence_ids": [
+        "E0009",
+        "E0010",
+        "E0011"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G005",
+      "statement": "代码安全保存在云端，本机损坏或丢失时可换机拉取继续。",
+      "source_candidate_ids": [
+        "DOC011-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "也支持协作者各自分支存放工作，不影响主仓库"
+      ],
+      "evidence_ids": [
+        "E0012",
+        "E0013",
+        "E0014"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G006",
+      "statement": "检索并阅读他人公开仓库的代码。",
+      "source_candidate_ids": [
+        "DOC011-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "可按关键词、文件名、变量名、语言筛选",
+        "范围含仓库、PR、issue、讨论区与用户名"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016",
+        "E0017"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G007",
+      "statement": "用看板跟踪任务状态与分工（backlog → 待办 → 进行中）。",
+      "source_candidate_ids": [
+        "DOC011-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "任务以 issue 形式建立，含标题、描述与被指派人",
+        "团队开会决定指派后再移入待办列"
+      ],
+      "evidence_ids": [
+        "E0018",
+        "E0019",
+        "E0020"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G008",
+      "statement": "PR 与看板 issue 关联，合并后看板状态自动更新。",
+      "source_candidate_ids": [
+        "DOC011-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "依赖项目已链接到对应仓库",
+        "通过 resolves / #issue 关键词关联"
+      ],
+      "evidence_ids": [
+        "E0021",
+        "E0022"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G009",
+      "statement": "GitHub Actions 的官方文档更易查，并提供讨论区或博客。",
+      "source_candidate_ids": [
+        "DOC011-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "现状：官方文档「broad」且难找，多数信息来自 Stack Overflow 等外部来源"
+      ],
+      "evidence_ids": [
+        "E0023",
+        "E0024",
+        "E0025"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G010",
+      "statement": "以可视化方式呈现分支创建与合并的历史，而不只是线性提交栈。",
+      "source_candidate_ids": [
+        "DOC011-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "自评为 nice-to-have，非必需",
+        "期望同时看到分支内的 issue 与时间线"
+      ],
+      "evidence_ids": [
+        "E0026",
+        "E0027",
+        "E0028"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC011-G011",
+      "statement": "内置 AI 助手，辅助代码审查与操作引导，并帮用户用上平台已有的资源。",
+      "source_candidate_ids": [
+        "DOC011-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，GitHub 用户：学生／独立开发者／助教）",
+      "context": [
+        "动机：独立开发者只能自己审自己，缺少第二意见",
+        "期望覆盖：审查建议、PR 与 actions 文件的操作引导"
+      ],
+      "evidence_ids": [
+        "E0029",
+        "E0030",
+        "E0031"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC011-G001",
+      "b": "DOC011-G002",
+      "label": "related",
+      "rationale": "T083 把 PR 的价值概括为「保护主仓库免于未审改动」，而主仓库正是多人协作的对象（T024 说明队友都有写权限）；审查是协作流程中的质量关卡，但二者一个是流程、一个是要求，非精化。",
+      "evidence_ids": [
+        "E0001",
+        "E0003"
+      ],
+      "conditions": [
+        "仅在多人仓库中成立；独自开发时他不走 PR（T046）"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC011-G001",
+      "b": "DOC011-G003",
+      "label": "related",
+      "rationale": "T043 给出增量提交的理由就是协作：「provides less content for my collaborators to have to review」，说明 G003 服务于 G001 的协作效率；但提交粒度不等于协作本身。",
+      "evidence_ids": [
+        "E0001",
+        "E0005"
+      ],
+      "conditions": [
+        "独自开发时他倾向大改动（T046）"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC011-G001",
+      "b": "DOC011-G004",
+      "label": "none",
+      "rationale": "DOC011-G001 的对象是与队友异步协作改代码（T023），DOC011-G004 的对象是回看变更历史（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC011-G001",
+      "b": "DOC011-G005",
+      "label": "related",
+      "rationale": "T077 把云端仓库直接称为「collaborative cloud environment」，并说明协作者可在自己分支存放工作；云端存储是协作的前提条件。",
+      "evidence_ids": [
+        "E0001",
+        "E0011"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC011-G001",
+      "b": "DOC011-G006",
+      "label": "none",
+      "rationale": "DOC011-G001 的对象是与队友异步协作改代码（T023），DOC011-G006 的对象是检索阅读公开仓库代码（T081）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC011-G001",
+      "b": "DOC011-G007",
+      "label": "related",
+      "rationale": "T054 说明看板用于「facilitate team management」，T059 描述团队开会分配 issue，看板是 G001 分工环节的载体；但它是管理工具，不是协作本身。",
+      "evidence_ids": [
+        "E0001",
+        "E0015"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC011-G001",
+      "b": "DOC011-G008",
+      "label": "related",
+      "rationale": "T069 的 PR-issue 联动把代码合并与任务状态连起来，正好覆盖协作的两个环节；但自动化联动是效率增强，不是协作的必要条件。",
+      "evidence_ids": [
+        "E0001",
+        "E0017"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC011-G001",
+      "b": "DOC011-G009",
+      "label": "none",
+      "rationale": "DOC011-G001 的对象是与队友异步协作改代码（T023），DOC011-G009 的对象是Actions 文档更易查并有讨论区（T085）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC011-G001",
+      "b": "DOC011-G010",
+      "label": "none",
+      "rationale": "DOC011-G001 的对象是与队友异步协作改代码（T023），DOC011-G010 的对象是可视化分支合并历史（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC011-G001",
+      "b": "DOC011-G011",
+      "label": "none",
+      "rationale": "DOC011-G001 的对象是与队友异步协作改代码（T023），DOC011-G011 的对象是内置 AI 助手辅助审查与操作（T093/T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC011-G002",
+      "b": "DOC011-G003",
+      "label": "related",
+      "rationale": "T043 明确因果：增量提交是为了「less content for my collaborators to have to review」——即降低审查负担。手段与要求不同，故为 related。",
+      "evidence_ids": [
+        "E0005",
+        "E0003"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC011-G002",
+      "b": "DOC011-G004",
+      "label": "related",
+      "rationale": "T083 在同一句里把 PR 的两个价值并列：「stays safe from unknown code changes」与「a very convenient way to track history」，二者由同一机制（PR 不被删除、保留在列表）同时提供。",
+      "evidence_ids": [
+        "E0003",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC011-G002",
+      "b": "DOC011-G005",
+      "label": "none",
+      "rationale": "DOC011-G002 的对象是合并前须经他人审查（T083），DOC011-G005 的对象是代码云端安全保存可换机续用（T075）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC011-G002",
+      "b": "DOC011-G006",
+      "label": "none",
+      "rationale": "DOC011-G002 的对象是合并前须经他人审查（T083），DOC011-G006 的对象是检索阅读公开仓库代码（T081）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC011-G002",
+      "b": "DOC011-G007",
+      "label": "none",
+      "rationale": "DOC011-G002 的对象是合并前须经他人审查（T083），DOC011-G007 的对象是用看板跟踪任务与分工（T053/T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC011-G002",
+      "b": "DOC011-G008",
+      "label": "none",
+      "rationale": "DOC011-G002 的对象是合并前须经他人审查（T083），DOC011-G008 的对象是PR 合并后看板自动更新（T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC011-G002",
+      "b": "DOC011-G009",
+      "label": "none",
+      "rationale": "DOC011-G002 的对象是合并前须经他人审查（T083），DOC011-G009 的对象是Actions 文档更易查并有讨论区（T085）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC011-G002",
+      "b": "DOC011-G010",
+      "label": "none",
+      "rationale": "DOC011-G002 的对象是合并前须经他人审查（T083），DOC011-G010 的对象是可视化分支合并历史（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC011-G002",
+      "b": "DOC011-G011",
+      "label": "related",
+      "rationale": "T097 把 AI 助手直接用于代码审查：「would review help me with code reviews, provide suggestions」，作为审查环节的补充反馈源；但未表示可替代人工审查。",
+      "evidence_ids": [
+        "E0003",
+        "E0021"
+      ],
+      "conditions": [
+        "AI 建议被视为补充而非替代"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC011-G003",
+      "b": "DOC011-G004",
+      "label": "none",
+      "rationale": "DOC011-G003 的对象是小步增量提交（T043），DOC011-G004 的对象是回看变更历史（T083）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC011-G003",
+      "b": "DOC011-G005",
+      "label": "none",
+      "rationale": "DOC011-G003 的对象是小步增量提交（T043），DOC011-G005 的对象是代码云端安全保存可换机续用（T075）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC011-G003",
+      "b": "DOC011-G006",
+      "label": "none",
+      "rationale": "DOC011-G003 的对象是小步增量提交（T043），DOC011-G006 的对象是检索阅读公开仓库代码（T081）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC011-G003",
+      "b": "DOC011-G007",
+      "label": "none",
+      "rationale": "DOC011-G003 的对象是小步增量提交（T043），DOC011-G007 的对象是用看板跟踪任务与分工（T053/T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC011-G003",
+      "b": "DOC011-G008",
+      "label": "none",
+      "rationale": "DOC011-G003 的对象是小步增量提交（T043），DOC011-G008 的对象是PR 合并后看板自动更新（T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC011-G003",
+      "b": "DOC011-G009",
+      "label": "none",
+      "rationale": "DOC011-G003 的对象是小步增量提交（T043），DOC011-G009 的对象是Actions 文档更易查并有讨论区（T085）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC011-G003",
+      "b": "DOC011-G010",
+      "label": "none",
+      "rationale": "DOC011-G003 的对象是小步增量提交（T043），DOC011-G010 的对象是可视化分支合并历史（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC011-G003",
+      "b": "DOC011-G011",
+      "label": "none",
+      "rationale": "DOC011-G003 的对象是小步增量提交（T043），DOC011-G011 的对象是内置 AI 助手辅助审查与操作（T093/T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC011-G004",
+      "b": "DOC011-G005",
+      "label": "none",
+      "rationale": "DOC011-G004 的对象是回看变更历史（T083），DOC011-G005 的对象是代码云端安全保存可换机续用（T075）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC011-G004",
+      "b": "DOC011-G006",
+      "label": "none",
+      "rationale": "DOC011-G004 的对象是回看变更历史（T083），DOC011-G006 的对象是检索阅读公开仓库代码（T081）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC011-G004",
+      "b": "DOC011-G007",
+      "label": "none",
+      "rationale": "DOC011-G004 的对象是回看变更历史（T083），DOC011-G007 的对象是用看板跟踪任务与分工（T053/T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC011-G004",
+      "b": "DOC011-G008",
+      "label": "none",
+      "rationale": "DOC011-G004 的对象是回看变更历史（T083），DOC011-G008 的对象是PR 合并后看板自动更新（T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC011-G004",
+      "b": "DOC011-G009",
+      "label": "none",
+      "rationale": "DOC011-G004 的对象是回看变更历史（T083），DOC011-G009 的对象是Actions 文档更易查并有讨论区（T085）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC011-G004",
+      "b": "DOC011-G010",
+      "label": "related",
+      "rationale": "T087 把两者直接对照：现有提交历史「is all like very much a linear stack of changes」，但「doesn't give like a an exact history」，因此希望可视化分支与合并位置。G010 是 G004 在分支拓扑层面的补足，属改进而非其具体化。",
+      "evidence_ids": [
+        "E0006",
+        "E0019"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC011-G004",
+      "b": "DOC011-G011",
+      "label": "none",
+      "rationale": "DOC011-G004 的对象是回看变更历史（T083），DOC011-G011 的对象是内置 AI 助手辅助审查与操作（T093/T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC011-G005",
+      "b": "DOC011-G006",
+      "label": "none",
+      "rationale": "DOC011-G005 的对象是代码云端安全保存可换机续用（T075），DOC011-G006 的对象是检索阅读公开仓库代码（T081）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC011-G005",
+      "b": "DOC011-G007",
+      "label": "none",
+      "rationale": "DOC011-G005 的对象是代码云端安全保存可换机续用（T075），DOC011-G007 的对象是用看板跟踪任务与分工（T053/T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC011-G005",
+      "b": "DOC011-G008",
+      "label": "none",
+      "rationale": "DOC011-G005 的对象是代码云端安全保存可换机续用（T075），DOC011-G008 的对象是PR 合并后看板自动更新（T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC011-G005",
+      "b": "DOC011-G009",
+      "label": "none",
+      "rationale": "DOC011-G005 的对象是代码云端安全保存可换机续用（T075），DOC011-G009 的对象是Actions 文档更易查并有讨论区（T085）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC011-G005",
+      "b": "DOC011-G010",
+      "label": "none",
+      "rationale": "DOC011-G005 的对象是代码云端安全保存可换机续用（T075），DOC011-G010 的对象是可视化分支合并历史（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC011-G005",
+      "b": "DOC011-G011",
+      "label": "none",
+      "rationale": "DOC011-G005 的对象是代码云端安全保存可换机续用（T075），DOC011-G011 的对象是内置 AI 助手辅助审查与操作（T093/T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC011-G006",
+      "b": "DOC011-G007",
+      "label": "none",
+      "rationale": "DOC011-G006 的对象是检索阅读公开仓库代码（T081），DOC011-G007 的对象是用看板跟踪任务与分工（T053/T059）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC011-G006",
+      "b": "DOC011-G008",
+      "label": "none",
+      "rationale": "DOC011-G006 的对象是检索阅读公开仓库代码（T081），DOC011-G008 的对象是PR 合并后看板自动更新（T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC011-G006",
+      "b": "DOC011-G009",
+      "label": "none",
+      "rationale": "DOC011-G006 的对象是检索阅读公开仓库代码（T081），DOC011-G009 的对象是Actions 文档更易查并有讨论区（T085）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC011-G006",
+      "b": "DOC011-G010",
+      "label": "none",
+      "rationale": "DOC011-G006 的对象是检索阅读公开仓库代码（T081），DOC011-G010 的对象是可视化分支合并历史（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC011-G006",
+      "b": "DOC011-G011",
+      "label": "none",
+      "rationale": "DOC011-G006 的对象是检索阅读公开仓库代码（T081），DOC011-G011 的对象是内置 AI 助手辅助审查与操作（T093/T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC011-G007",
+      "b": "DOC011-G008",
+      "label": "related",
+      "rationale": "T069 说明 PR 可挂到看板 issue 上，合并后看板自动反映；两者是同一任务流的两端（任务跟踪与代码合并），联动使其闭环。",
+      "evidence_ids": [
+        "E0015",
+        "E0017"
+      ],
+      "conditions": [
+        "需先把项目链接到仓库（T068）"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC011-G007",
+      "b": "DOC011-G009",
+      "label": "none",
+      "rationale": "DOC011-G007 的对象是用看板跟踪任务与分工（T053/T059），DOC011-G009 的对象是Actions 文档更易查并有讨论区（T085）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC011-G007",
+      "b": "DOC011-G010",
+      "label": "none",
+      "rationale": "DOC011-G007 的对象是用看板跟踪任务与分工（T053/T059），DOC011-G010 的对象是可视化分支合并历史（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC011-G007",
+      "b": "DOC011-G011",
+      "label": "none",
+      "rationale": "DOC011-G007 的对象是用看板跟踪任务与分工（T053/T059），DOC011-G011 的对象是内置 AI 助手辅助审查与操作（T093/T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC011-G008",
+      "b": "DOC011-G009",
+      "label": "none",
+      "rationale": "DOC011-G008 的对象是PR 合并后看板自动更新（T069），DOC011-G009 的对象是Actions 文档更易查并有讨论区（T085）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC011-G008",
+      "b": "DOC011-G010",
+      "label": "none",
+      "rationale": "DOC011-G008 的对象是PR 合并后看板自动更新（T069），DOC011-G010 的对象是可视化分支合并历史（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC011-G008",
+      "b": "DOC011-G011",
+      "label": "none",
+      "rationale": "DOC011-G008 的对象是PR 合并后看板自动更新（T069），DOC011-G011 的对象是内置 AI 助手辅助审查与操作（T093/T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC011-G009",
+      "b": "DOC011-G010",
+      "label": "none",
+      "rationale": "DOC011-G009 的对象是Actions 文档更易查并有讨论区（T085），DOC011-G010 的对象是可视化分支合并历史（T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC011-G009",
+      "b": "DOC011-G011",
+      "label": "related",
+      "rationale": "T093 提出 AI 助手的用途之一是「use all the resources available on Github」，而 T085 抱怨的正是 Actions 文档难找、信息散落外部；AI 引导与文档改进针对同一获取门槛。",
+      "evidence_ids": [
+        "E0017",
+        "E0020"
+      ],
+      "conditions": [
+        "二者为并列解法，AI 不替代文档"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC011-G010",
+      "b": "DOC011-G011",
+      "label": "none",
+      "rationale": "DOC011-G010 的对象是可视化分支合并历史（T087），DOC011-G011 的对象是内置 AI 助手辅助审查与操作（T093/T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [
+        "仅在多人仓库中成立；独自开发时他不走 PR（T046）"
+      ],
+      "review_status": "pending",
+      "a": "DOC011-G001",
+      "b": "DOC011-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P002",
+      "conditions": [
+        "独自开发时他倾向大改动（T046）"
+      ],
+      "review_status": "pending",
+      "a": "DOC011-G001",
+      "b": "DOC011-G003"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P004",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC011-G001",
+      "b": "DOC011-G005"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P006",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC011-G001",
+      "b": "DOC011-G007"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P007",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC011-G001",
+      "b": "DOC011-G008"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P011",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC011-G002",
+      "b": "DOC011-G003"
+    },
+    {
+      "edge_id": "R007",
+      "type": "related",
+      "decision_id": "P012",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC011-G002",
+      "b": "DOC011-G004"
+    },
+    {
+      "edge_id": "R008",
+      "type": "related",
+      "decision_id": "P019",
+      "conditions": [
+        "AI 建议被视为补充而非替代"
+      ],
+      "review_status": "pending",
+      "a": "DOC011-G002",
+      "b": "DOC011-G011"
+    },
+    {
+      "edge_id": "R009",
+      "type": "related",
+      "decision_id": "P033",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC011-G004",
+      "b": "DOC011-G010"
+    },
+    {
+      "edge_id": "R010",
+      "type": "related",
+      "decision_id": "P046",
+      "conditions": [
+        "需先把项目链接到仓库（T068）"
+      ],
+      "review_status": "pending",
+      "a": "DOC011-G007",
+      "b": "DOC011-G008"
+    },
+    {
+      "edge_id": "R011",
+      "type": "related",
+      "decision_id": "P054",
+      "conditions": [
+        "二者为并列解法，AI 不替代文档"
+      ],
+      "review_status": "pending",
+      "a": "DOC011-G009",
+      "b": "DOC011-G011"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC011:S024",
+      "material_id": "M001",
+      "quote": "from my student perspective is like team collaboration",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4334,
+      "end_char": 4388,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S024",
+          "segment_start": 78,
+          "segment_end": 132,
+          "start_char": 4334,
+          "end_char": 4388
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 4256,
+        "end_char": 4736
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC011:S024",
+      "material_id": "M001",
+      "quote": "we are asynchronous collab, asynchronously collaborating on this code",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4595,
+      "end_char": 4664,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S024",
+          "segment_start": 339,
+          "segment_end": 408,
+          "start_char": 4595,
+          "end_char": 4664
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 4256,
+        "end_char": 4736
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC011:S104",
+      "material_id": "M001",
+      "quote": "It really did help facilitate our asynchronous workflows.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 23299,
+      "end_char": 23356,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S104",
+          "segment_start": 56,
+          "segment_end": 113,
+          "start_char": 23299,
+          "end_char": 23356
+        }
+      ],
+      "original_locator": {
+        "line_start": 104,
+        "line_end": 104,
+        "start_char": 23243,
+        "end_char": 23356
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC011:S084",
+      "material_id": "M001",
+      "quote": "the port request feature simply because it's a great way to make sure that the main repository stays safe from unknown code changes before they are reviewed by others",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17598,
+      "end_char": 17764,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S084",
+          "segment_start": 131,
+          "segment_end": 297,
+          "start_char": 17598,
+          "end_char": 17764
+        }
+      ],
+      "original_locator": {
+        "line_start": 84,
+        "line_end": 84,
+        "start_char": 17467,
+        "end_char": 18156
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC011:S032",
+      "material_id": "M001",
+      "quote": "the code, is up to standard of the team or their personal standard",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6904,
+      "end_char": 6970,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S032",
+          "segment_start": 29,
+          "segment_end": 95,
+          "start_char": 6904,
+          "end_char": 6970
+        }
+      ],
+      "original_locator": {
+        "line_start": 32,
+        "line_end": 32,
+        "start_char": 6875,
+        "end_char": 7041
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC011:S034",
+      "material_id": "M001",
+      "quote": "Either approved, or they can also be denied if they don't meet the standards.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7092,
+      "end_char": 7169,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S034",
+          "segment_start": 20,
+          "segment_end": 97,
+          "start_char": 7092,
+          "end_char": 7169
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 7072,
+        "end_char": 7169
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC011:S044",
+      "material_id": "M001",
+      "quote": "I personally prefer to do it incrementally",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9286,
+      "end_char": 9328,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S044",
+          "segment_start": 137,
+          "segment_end": 179,
+          "start_char": 9286,
+          "end_char": 9328
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 9149,
+        "end_char": 9341
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC011:S046",
+      "material_id": "M001",
+      "quote": "It provides less content for my collaborators to have to review",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9386,
+      "end_char": 9449,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S046",
+          "segment_start": 20,
+          "segment_end": 83,
+          "start_char": 9386,
+          "end_char": 9449
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 9366,
+        "end_char": 9847
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC011:S084",
+      "material_id": "M001",
+      "quote": "It's also a very convenient way to track history.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17766,
+      "end_char": 17815,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S084",
+          "segment_start": 299,
+          "segment_end": 348,
+          "start_char": 17766,
+          "end_char": 17815
+        }
+      ],
+      "original_locator": {
+        "line_start": 84,
+        "line_end": 84,
+        "start_char": 17467,
+        "end_char": 18156
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC011:S084",
+      "material_id": "M001",
+      "quote": "in that backlog I mean to see, like what changes were made with this pull request",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17914,
+      "end_char": 17995,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S084",
+          "segment_start": 447,
+          "segment_end": 528,
+          "start_char": 17914,
+          "end_char": 17995
+        }
+      ],
+      "original_locator": {
+        "line_start": 84,
+        "line_end": 84,
+        "start_char": 17467,
+        "end_char": 18156
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC011:S084",
+      "material_id": "M001",
+      "quote": "plus other like changes that were made by my collaborators.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18097,
+      "end_char": 18156,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S084",
+          "segment_start": 630,
+          "segment_end": 689,
+          "start_char": 18097,
+          "end_char": 18156
+        }
+      ],
+      "original_locator": {
+        "line_start": 84,
+        "line_end": 84,
+        "start_char": 17467,
+        "end_char": 18156
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC011:S076",
+      "material_id": "M001",
+      "quote": "having a convenient place to store my code in a in a in a safe manner",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15098,
+      "end_char": 15167,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S076",
+          "segment_start": 69,
+          "segment_end": 138,
+          "start_char": 15098,
+          "end_char": 15167
+        }
+      ],
+      "original_locator": {
+        "line_start": 76,
+        "line_end": 76,
+        "start_char": 15029,
+        "end_char": 15383
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC011:S076",
+      "material_id": "M001",
+      "quote": "I would still have my work in a cloud environment that I could simply I'm gonna use the keyword pull onto a different machine",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15220,
+      "end_char": 15345,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S076",
+          "segment_start": 191,
+          "segment_end": 316,
+          "start_char": 15220,
+          "end_char": 15345
+        }
+      ],
+      "original_locator": {
+        "line_start": 76,
+        "line_end": 76,
+        "start_char": 15029,
+        "end_char": 15383
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC011:S078",
+      "material_id": "M001",
+      "quote": "They can store their work on that branch",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15713,
+      "end_char": 15753,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S078",
+          "segment_start": 221,
+          "segment_end": 261,
+          "start_char": 15713,
+          "end_char": 15753
+        }
+      ],
+      "original_locator": {
+        "line_start": 78,
+        "line_end": 78,
+        "start_char": 15492,
+        "end_char": 15963
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC011:S082",
+      "material_id": "M001",
+      "quote": "public repositories are visible to anybody",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16460,
+      "end_char": 16502,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S082",
+          "segment_start": 112,
+          "segment_end": 154,
+          "start_char": 16460,
+          "end_char": 16502
+        }
+      ],
+      "original_locator": {
+        "line_start": 82,
+        "line_end": 82,
+        "start_char": 16348,
+        "end_char": 17256
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC011:S082",
+      "material_id": "M001",
+      "quote": "it can then search the entire Github database for public repositories that I can look at",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16767,
+      "end_char": 16855,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S082",
+          "segment_start": 419,
+          "segment_end": 507,
+          "start_char": 16767,
+          "end_char": 16855
+        }
+      ],
+      "original_locator": {
+        "line_start": 82,
+        "line_end": 82,
+        "start_char": 16348,
+        "end_char": 17256
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC011:S082",
+      "material_id": "M001",
+      "quote": "I can also filter based on language.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17111,
+      "end_char": 17147,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S082",
+          "segment_start": 763,
+          "segment_end": 799,
+          "start_char": 17111,
+          "end_char": 17147
+        }
+      ],
+      "original_locator": {
+        "line_start": 82,
+        "line_end": 82,
+        "start_char": 16348,
+        "end_char": 17256
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC011:S052",
+      "material_id": "M001",
+      "quote": "a project is essentially just a tracking board",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10737,
+      "end_char": 10783,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S052",
+          "segment_start": 126,
+          "segment_end": 172,
+          "start_char": 10737,
+          "end_char": 10783
+        }
+      ],
+      "original_locator": {
+        "line_start": 52,
+        "line_end": 52,
+        "start_char": 10611,
+        "end_char": 10798
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC011:S054",
+      "material_id": "M001",
+      "quote": "Kanban board where you're actually assigning tasks, and you can facilitate team management that way",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10857,
+      "end_char": 10956,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S054",
+          "segment_start": 32,
+          "segment_end": 131,
+          "start_char": 10857,
+          "end_char": 10956
+        }
+      ],
+      "original_locator": {
+        "line_start": 54,
+        "line_end": 54,
+        "start_char": 10825,
+        "end_char": 11280
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC011:S060",
+      "material_id": "M001",
+      "quote": "we would add that to the backlog, we would meet together as a team. discuss who should be assigned",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12381,
+      "end_char": 12479,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S060",
+          "segment_start": 131,
+          "segment_end": 229,
+          "start_char": 12381,
+          "end_char": 12479
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 12250,
+        "end_char": 12602
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC011:S070",
+      "material_id": "M001",
+      "quote": "when that port request is merged, the Kanban board would automatically reflect that",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13992,
+      "end_char": 14075,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S070",
+          "segment_start": 382,
+          "segment_end": 465,
+          "start_char": 13992,
+          "end_char": 14075
+        }
+      ],
+      "original_locator": {
+        "line_start": 70,
+        "line_end": 70,
+        "start_char": 13610,
+        "end_char": 14136
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC011:S068",
+      "material_id": "M001",
+      "quote": "you can actually attach it to an issue in the Kanban board",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13367,
+      "end_char": 13425,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S068",
+          "segment_start": 53,
+          "segment_end": 111,
+          "start_char": 13367,
+          "end_char": 13425
+        }
+      ],
+      "original_locator": {
+        "line_start": 68,
+        "line_end": 68,
+        "start_char": 13314,
+        "end_char": 13576
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC011:S086",
+      "material_id": "M001",
+      "quote": "their documentation overall is a little broad. or it's it's very. It's very difficult to find.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18721,
+      "end_char": 18815,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S086",
+          "segment_start": 354,
+          "segment_end": 448,
+          "start_char": 18721,
+          "end_char": 18815
+        }
+      ],
+      "original_locator": {
+        "line_start": 86,
+        "line_end": 86,
+        "start_char": 18367,
+        "end_char": 19063
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC011:S086",
+      "material_id": "M001",
+      "quote": "So if they. Could have a forum or such, or like a a blog, tab forward discussions or information on building these action workflows. It'd be great.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18916,
+      "end_char": 19063,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S086",
+          "segment_start": 549,
+          "segment_end": 696,
+          "start_char": 18916,
+          "end_char": 19063
+        }
+      ],
+      "original_locator": {
+        "line_start": 86,
+        "line_end": 86,
+        "start_char": 18367,
+        "end_char": 19063
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC011:S086",
+      "material_id": "M001",
+      "quote": "most of the documentation, I find is from other external sources. Stack, overflow, for example.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18820,
+      "end_char": 18915,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S086",
+          "segment_start": 453,
+          "segment_end": 548,
+          "start_char": 18820,
+          "end_char": 18915
+        }
+      ],
+      "original_locator": {
+        "line_start": 86,
+        "line_end": 86,
+        "start_char": 18367,
+        "end_char": 19063
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC011:S088",
+      "material_id": "M001",
+      "quote": "It would be to see a visual mapping of the repository history.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19345,
+      "end_char": 19407,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S088",
+          "segment_start": 138,
+          "segment_end": 200,
+          "start_char": 19345,
+          "end_char": 19407
+        }
+      ],
+      "original_locator": {
+        "line_start": 88,
+        "line_end": 88,
+        "start_char": 19207,
+        "end_char": 20020
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC011:S088",
+      "material_id": "M001",
+      "quote": "visually see there was new branches made where they were merged in",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19806,
+      "end_char": 19872,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S088",
+          "segment_start": 599,
+          "segment_end": 665,
+          "start_char": 19806,
+          "end_char": 19872
+        }
+      ],
+      "original_locator": {
+        "line_start": 88,
+        "line_end": 88,
+        "start_char": 19207,
+        "end_char": 20020
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC011:S088",
+      "material_id": "M001",
+      "quote": "it's not an essential feature, it's more so. Just like convenience. Nice to have feature.",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19255,
+      "end_char": 19344,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S088",
+          "segment_start": 48,
+          "segment_end": 137,
+          "start_char": 19255,
+          "end_char": 19344
+        }
+      ],
+      "original_locator": {
+        "line_start": 88,
+        "line_end": 88,
+        "start_char": 19207,
+        "end_char": 20020
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC011:S094",
+      "material_id": "M001",
+      "quote": "if a Github was to integrate such an assistant to allow users to consult with it to have better to use all the resources available on Github",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 20715,
+      "end_char": 20855,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S094",
+          "segment_start": 220,
+          "segment_end": 360,
+          "start_char": 20715,
+          "end_char": 20855
+        }
+      ],
+      "original_locator": {
+        "line_start": 94,
+        "line_end": 94,
+        "start_char": 20495,
+        "end_char": 20877
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC011:S098",
+      "material_id": "M001",
+      "quote": "if I was to have maybe an AI assistant or something that would review help me with code reviews, provide suggestions",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21245,
+      "end_char": 21361,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S098",
+          "segment_start": 149,
+          "segment_end": 265,
+          "start_char": 21245,
+          "end_char": 21361
+        }
+      ],
+      "original_locator": {
+        "line_start": 98,
+        "line_end": 98,
+        "start_char": 21096,
+        "end_char": 21588
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC011:S098",
+      "material_id": "M001",
+      "quote": "I have another source of feedback that I can incorporate",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21363,
+      "end_char": 21419,
+      "candidate_locations": [
+        {
+          "source_id": "DOC011:S098",
+          "segment_start": 267,
+          "segment_end": 323,
+          "start_char": 21363,
+          "end_char": 21419
+        }
+      ],
+      "original_locator": {
+        "line_start": 98,
+        "line_end": 98,
+        "start_char": 21096,
+        "end_char": 21588
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC011-C001",
+      "goal_id": "DOC011-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C002",
+      "goal_id": "DOC011-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C003",
+      "goal_id": "DOC011-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C004",
+      "goal_id": "DOC011-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C005",
+      "goal_id": "DOC011-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C006",
+      "goal_id": "DOC011-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C007",
+      "goal_id": "DOC011-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C008",
+      "goal_id": "DOC011-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C009",
+      "goal_id": "DOC011-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C010",
+      "goal_id": "DOC011-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC011-C011",
+      "goal_id": "DOC011-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 55,
+    "evaluated_pairs": 55
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "assemble",
+    "readiness": "unchecked",
+    "limitations": [
+      "模型尚未经过 model-review；导出完整性检查不能替代模型质量审核。",
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。"
+    ],
+    "files": []
+  }
+}

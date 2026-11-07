@@ -1,0 +1,1977 @@
+{
+  "record_type": "independent_context_pilot_review_local_record_not_core_schema",
+  "review_date_local": "2026-10-24",
+  "reviewer": "/root/pilot_review",
+  "execution_model_exact_id": "unknown",
+  "execution_model_switch_status": "unknown",
+  "independence": {
+    "source_criteria_written_before_outputs": true,
+    "generator_context_inherited": false,
+    "external_human_review": false,
+    "formal_proof": "not_run",
+    "author_review_files_read": false,
+    "limitations": "独立上下文模型复核；与生成方共享模型体系。精确模型ID/采样参数/额度中断后的运行模型连续性未知。"
+  },
+  "scope": {
+    "source_documents": {
+      "DOC010": "T000-T077 (78)",
+      "DOC023": "T000-T018 (19)",
+      "DOC031": "T000-T032 (33)"
+    },
+    "baseline": {
+      "goals": 27,
+      "groups": 7,
+      "supported_complete": 0
+    },
+    "revised": {
+      "goals": 37,
+      "groups": 9,
+      "supported_complete": 1
+    },
+    "unreviewed_goals": [],
+    "unreviewed_groups": [],
+    "semantic_materials_read": [
+      "全部6份delivery/goal-model.json的goals含条件/origin/inference/support、issues、limitations及引用映射",
+      "全部6份kaos-decisions.json（全部组、依据和问题）",
+      "第一阶段完整source.txt/source-input.json及规则；第二阶段对争议轮次回读",
+      "本次_run/evaluation-protocol.md及model-review/references/tools.md"
+    ],
+    "programmatic_materials_checked": [
+      "全部extraction候选到交付目标的投影",
+      "全部judgments到support的投影",
+      "全部决策组到交付组的投影",
+      "191处模型引文与全文/轮次精确对应",
+      "6份冻结source输入及assembled/delivery一致性"
+    ],
+    "not_claimed_read_or_reviewed": [
+      "author-review.md未用于接受结论",
+      "模板和全部运行记录未逐一语义阅读",
+      "HTML/SVG未做浏览器视觉/交互测试",
+      "录音/原始JSON附件未重新核听或逐字比对",
+      "旧output、研究答案、development_reference、upstream_reference未读取"
+    ]
+  },
+  "alignments": [
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G1"
+      ],
+      "revised_goal_ids": [
+        "G01"
+      ],
+      "source_turns": [
+        "DOC010:T007",
+        "DOC010:T013"
+      ],
+      "semantic_unit": "总体天气规划",
+      "assessment": "两者保留穿着、户外活动、旅行的用途；新版明确是不同情境，不是每次三者同时完成。旧版支持理由也有该限定。语义相当。"
+    },
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G2"
+      ],
+      "revised_goal_ids": [
+        "G02",
+        "G13"
+      ],
+      "source_turns": [
+        "DOC010:T013",
+        "DOC010:T014",
+        "DOC010:T015",
+        "DOC010:T025",
+        "DOC010:T037"
+      ],
+      "semantic_unit": "日常准备与便捷取得信息",
+      "assessment": "G02承接穿戴携带物目的；新增G13从“信息够用便结束查询”和助手失败后用应用推断便利获取，有正面依据且标inferred。旧版G2已保存助手路径障碍，新增是将隐含结果显式化，不直接判旧版漏提。"
+    },
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G3"
+      ],
+      "revised_goal_ids": [
+        "G03"
+      ],
+      "source_turns": [
+        "DOC010:T017",
+        "DOC010:T019",
+        "DOC010:T021"
+      ],
+      "semantic_unit": "旅行、整周天气、购票前规划",
+      "assessment": "均保留旅行时整周、平日逐日的区别及买票前用途；游乐园只是例子，没有无条件禁止雨天旅行。"
+    },
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G4"
+      ],
+      "revised_goal_ids": [
+        "G04"
+      ],
+      "source_turns": [
+        "DOC010:T031",
+        "DOC010:T033"
+      ],
+      "semantic_unit": "陌生地点熟悉天气",
+      "assessment": "均保留新地点与长期熟悉地点的差异，没有泛化地域属性或强制定位功能。"
+    },
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G5"
+      ],
+      "revised_goal_ids": [
+        "G05",
+        "G06"
+      ],
+      "source_turns": [
+        "DOC010:T035",
+        "DOC010:T037",
+        "DOC010:T039"
+      ],
+      "semantic_unit": "极端天气告警和避免外出",
+      "assessment": "旧版合并通知及延期/避免外出的用途，新版拆分信息与用户行为；两者均有来源。新版未授权应用自动取消活动，拆分不是旧版缺失。"
+    },
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G6"
+      ],
+      "revised_goal_ids": [
+        "G07"
+      ],
+      "source_turns": [
+        "DOC010:T041",
+        "DOC010:T043",
+        "DOC010:T044",
+        "DOC010:T045",
+        "DOC010:T049",
+        "DOC010:T065"
+      ],
+      "semantic_unit": "常规通知频率偏好",
+      "assessment": "三次有明确确认；旧版早午晚“各一次”未保留时间分布的usually及偏好语气，存在轻度强化（PR-001）。新版约三次/更愿意并保留降雨例外，更忠实。"
+    },
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G7"
+      ],
+      "revised_goal_ids": [
+        "G08"
+      ],
+      "source_turns": [
+        "DOC010:T049",
+        "DOC010:T063",
+        "DOC010:T066",
+        "DOC010:T067"
+      ],
+      "semantic_unit": "降雨时频繁通知",
+      "assessment": "两者都保留条件与频率未知。新版“雨势变化”可被理解为雨强，原文adding/going不清，记录PR-003局部歧义，未确认是新增雨强要求。旧版“降雨变化”更保守。"
+    },
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G8"
+      ],
+      "revised_goal_ids": [
+        "G09",
+        "G12"
+      ],
+      "source_turns": [
+        "DOC010:T051",
+        "DOC010:T054",
+        "DOC010:T055",
+        "DOC010:T057",
+        "DOC010:T060",
+        "DOC010:T061",
+        "DOC010:T069",
+        "DOC010:T071"
+      ],
+      "semantic_unit": "实时更新与可靠性",
+      "assessment": "实时更新均有直接支持；新版G12将错报导致外出受阻的可靠性改善另列为inferred并排除零误差。旧版G8及问题已区分时效和准确性，但未单列改善结果；不因多一个节点确认旧版漏提。旧版技术限制归因语气见PR-002。"
+    },
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G9"
+      ],
+      "revised_goal_ids": [
+        "G11"
+      ],
+      "source_turns": [
+        "DOC010:T057",
+        "DOC010:T059",
+        "DOC010:T060",
+        "DOC010:T061",
+        "DOC010:T071"
+      ],
+      "semantic_unit": "跨平台天气一致",
+      "assessment": "均指天气信息而非界面一致，且未将一致等同正确。新版明确同步故障原因尚未核实。"
+    },
+    {
+      "document": "DOC010",
+      "baseline_goal_ids": [
+        "G10"
+      ],
+      "revised_goal_ids": [
+        "G10"
+      ],
+      "source_turns": [
+        "DOC010:T057",
+        "DOC010:T071"
+      ],
+      "semantic_unit": "无广告",
+      "assessment": "无广告是明确偏好且有受阻体验；两版均未加免费或特定商业模式，新版偏好语气更可见。旧版目标式表述本身不等于强制采纳。"
+    },
+    {
+      "document": "DOC023",
+      "baseline_goal_ids": [
+        "G1"
+      ],
+      "revised_goal_ids": [
+        "G01"
+      ],
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "semantic_unit": "增加人脉数量",
+      "assessment": "均忠实保留数量目的，没有用采访者的“有意义连接”替代，也无数量指标。"
+    },
+    {
+      "document": "DOC023",
+      "baseline_goal_ids": [
+        "G2"
+      ],
+      "revised_goal_ids": [
+        "G02"
+      ],
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "semantic_unit": "向他人展示活跃",
+      "assessment": "均保存目的与连接数这一选定展示方式；不声称他人必定认同活跃。"
+    },
+    {
+      "document": "DOC023",
+      "baseline_goal_ids": [
+        "G3"
+      ],
+      "revised_goal_ids": [
+        "G03"
+      ],
+      "source_turns": [
+        "DOC023:T003",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "semantic_unit": "目标公司在职员工内推",
+      "assessment": "均保留实习/全职及现任员工范围；未把3rd company当第三家公司约束，未把个人资格理解升级为所有公司政策。"
+    },
+    {
+      "document": "DOC023",
+      "baseline_goal_ids": [
+        "G4"
+      ],
+      "revised_goal_ids": [
+        "G04"
+      ],
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "semantic_unit": "增加简历被看到的机会",
+      "assessment": "均保留有时有帮助的或然性，不保证招聘结果。来源是明确用途，direct可成立。"
+    },
+    {
+      "document": "DOC023",
+      "baseline_goal_ids": [
+        "G5"
+      ],
+      "revised_goal_ids": [
+        "G05",
+        "G06",
+        "G07"
+      ],
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "semantic_unit": "在职与同校的筛选交集",
+      "assessment": "新版将复合筛选拆成父目标及两个条件，父限定具体求内推情境。两版均不选已离职者，同校帮助是信念而非保证。旧版“校友”与在读范围已有待确认问题，新版“本校就读背景”更包容；不以此确认旧版排除在读。"
+    },
+    {
+      "document": "DOC023",
+      "baseline_goal_ids": [
+        "G6",
+        "G7"
+      ],
+      "revised_goal_ids": [
+        "G10",
+        "G11"
+      ],
+      "source_turns": [
+        "DOC023:T009",
+        "DOC023:T013",
+        "DOC023:T015"
+      ],
+      "semantic_unit": "足量可访问人选与匹配背景",
+      "assessment": "两版都区分访问数量限制与相关性，未保证购买会员解决匹配。旧版改善负担/扩大候选标inferred；新版G10/G11以T015明说访问尽可能多、改词找更匹配者标direct，有直接用途依据。不能仅以标签不同判错。"
+    },
+    {
+      "document": "DOC023",
+      "baseline_goal_ids": [
+        "G8"
+      ],
+      "revised_goal_ids": [
+        "G08",
+        "G12"
+      ],
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T017"
+      ],
+      "semantic_unit": "附言表达与压缩负担",
+      "assessment": "新版将已有明确附言用途与从限制推断的改善拆开；旧版合并并标inferred，核心含义均受支持。两版均保留内推请求非必附，也没指定无限字数。"
+    },
+    {
+      "document": "DOC023",
+      "baseline_goal_ids": [],
+      "revised_goal_ids": [
+        "G09"
+      ],
+      "source_turns": [
+        "DOC023:T007"
+      ],
+      "semantic_unit": "接受连接后继续聊细节",
+      "assessment": "新版明确保留现有能力的使用目的和接受条件。旧版内推目标及F2提及对方接受这一依赖，未独立表达继续聊天的结果；这是可回查的覆盖风险，仍可能被广义内推过程覆盖，不确认漏提。"
+    },
+    {
+      "document": "DOC023",
+      "baseline_goal_ids": [
+        "G7"
+      ],
+      "revised_goal_ids": [
+        "G13"
+      ],
+      "source_turns": [
+        "DOC023:T015"
+      ],
+      "semantic_unit": "昂贵会员与替代方式取舍",
+      "assessment": "旧版G7条件保留费用高及扩大可见范围，新版从因费用改词的行为推断减少昂贵依赖并保留仍可购买；推断有依据。不是要求免费，不把旧版未单列成本节点直接当遗漏。"
+    },
+    {
+      "document": "DOC031",
+      "baseline_goal_ids": [
+        "G1"
+      ],
+      "revised_goal_ids": [
+        "G01"
+      ],
+      "source_turns": [
+        "DOC031:T001",
+        "DOC031:T005",
+        "DOC031:T007",
+        "DOC031:T025"
+      ],
+      "semantic_unit": "校内即时沟通",
+      "assessment": "均限定大学对象；新版条件保留仍继续使用Slack，不推出一应用包办全部沟通。即时未量化，不自动等于每人立即回应。"
+    },
+    {
+      "document": "DOC031",
+      "baseline_goal_ids": [
+        "G2"
+      ],
+      "revised_goal_ids": [
+        "G02",
+        "G03"
+      ],
+      "source_turns": [
+        "DOC031:T007",
+        "DOC031:T029",
+        "DOC031:T031"
+      ],
+      "semantic_unit": "免存联系方式找人及多设备",
+      "assessment": "旧版复合，新版拆分。赞赏、日常用途及推荐给新人提供维持意图依据，不因已实现而删掉。姓氏可查需结合sometimes和重名未知，条件已有约束；没有确认跨全网或唯一定位保证。"
+    },
+    {
+      "document": "DOC031",
+      "baseline_goal_ids": [
+        "G3"
+      ],
+      "revised_goal_ids": [
+        "G04"
+      ],
+      "source_turns": [
+        "DOC031:T009"
+      ],
+      "semantic_unit": "频道触及广泛受众",
+      "assessment": "均保留频道方式和较广受众，立即是原文诉求，没有扩为保证全员已读。"
+    },
+    {
+      "document": "DOC031",
+      "baseline_goal_ids": [
+        "G4"
+      ],
+      "revised_goal_ids": [
+        "G05",
+        "G06"
+      ],
+      "source_turns": [
+        "DOC031:T009",
+        "DOC031:T019"
+      ],
+      "semantic_unit": "加入前历史和了解动态",
+      "assessment": "旧版复合目标direct，新版分历史维持inferred与了解动态direct。T009有明确赞赏和用途，两种来源判断都可辩护；新版更显式标维持推断，不因此判旧版虚构。两者均保留历史价值，没有因搜索拥挤删除历史。"
+    },
+    {
+      "document": "DOC031",
+      "baseline_goal_ids": [
+        "G5"
+      ],
+      "revised_goal_ids": [
+        "G07"
+      ],
+      "source_turns": [
+        "DOC031:T011",
+        "DOC031:T013",
+        "DOC031:T017",
+        "DOC031:T029"
+      ],
+      "semantic_unit": "协作时即时分享文档",
+      "assessment": "两版保留私信方式在条件中；没有把逐步附件操作、表情格式或any file升级为无限文件规格。"
+    },
+    {
+      "document": "DOC031",
+      "baseline_goal_ids": [
+        "G6"
+      ],
+      "revised_goal_ids": [
+        "G08"
+      ],
+      "source_turns": [
+        "DOC031:T018",
+        "DOC031:T019"
+      ],
+      "semantic_unit": "从大量结果找到所需消息",
+      "assessment": "均由明确检索任务与困难推断改善，有正面依据；未指定删除旧消息或唯一算法。"
+    },
+    {
+      "document": "DOC031",
+      "baseline_goal_ids": [
+        "G7"
+      ],
+      "revised_goal_ids": [
+        "G09"
+      ],
+      "source_turns": [
+        "DOC031:T021",
+        "DOC031:T023",
+        "DOC031:T025",
+        "DOC031:T027"
+      ],
+      "semantic_unit": "更易进入音视频/群组通话",
+      "assessment": "均正确保留功能已经存在、入口不便与有号码时可外拨等条件；未把不便升级为放弃Slack。"
+    },
+    {
+      "document": "DOC031",
+      "baseline_goal_ids": [
+        "G8"
+      ],
+      "revised_goal_ids": [
+        "G10"
+      ],
+      "source_turns": [
+        "DOC031:T027"
+      ],
+      "semantic_unit": "正式沟通快捷跳转邮件应用",
+      "assessment": "两版完整保留正式沟通与外部标准邮件应用这一选定方式，不自动发、不仅限一个厂商。"
+    },
+    {
+      "document": "DOC031",
+      "baseline_goal_ids": [
+        "G9"
+      ],
+      "revised_goal_ids": [
+        "G11"
+      ],
+      "source_turns": [
+        "DOC031:T031"
+      ],
+      "semantic_unit": "缩窄浏览器窗口导航",
+      "assessment": "两版保留多窗口窄浏览器条件和手机/大屏正面体验。新版显式保留could be considered建议语气；旧版仍能方便导航是合理期望表达，但建议状态可更清楚（PR-004），不是已确认承诺。"
+    }
+  ],
+  "goal_reviews": [
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G1",
+      "statement": "根据天气规划日常穿着、携带物品、户外活动和旅行。",
+      "source_turns": [
+        "DOC010:T007",
+        "DOC010:T013"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两者保留穿着、户外活动、旅行的用途；新版明确是不同情境，不是每次三者同时完成。旧版支持理由也有该限定。语义相当。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G2",
+      "statement": "日常外出前了解当天的天气，以决定穿着和携带物品。",
+      "source_turns": [
+        "DOC010:T013",
+        "DOC010:T014",
+        "DOC010:T015",
+        "DOC010:T025",
+        "DOC010:T037"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "G02承接穿戴携带物目的；新增G13从“信息够用便结束查询”和助手失败后用应用推断便利获取，有正面依据且标inferred。旧版G2已保存助手路径障碍，新增是将隐含结果显式化，不直接判旧版漏提。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G3",
+      "statement": "计划旅行时，在购买户外活动门票前了解目的地一周天气，以安排活动。",
+      "source_turns": [
+        "DOC010:T017",
+        "DOC010:T019",
+        "DOC010:T021"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留旅行时整周、平日逐日的区别及买票前用途；游乐园只是例子，没有无条件禁止雨天旅行。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G4",
+      "statement": "到不熟悉的地方时，借助天气应用熟悉当地天气状况。",
+      "source_turns": [
+        "DOC010:T031",
+        "DOC010:T033"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留新地点与长期熟悉地点的差异，没有泛化地域属性或强制定位功能。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G5",
+      "statement": "收到雷暴、洪水等极端天气的通知或警报，以便推迟活动并避免外出。",
+      "source_turns": [
+        "DOC010:T035",
+        "DOC010:T037",
+        "DOC010:T039"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版合并通知及延期/避免外出的用途，新版拆分信息与用户行为；两者均有来源。新版未授权应用自动取消活动，拆分不是旧版缺失。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G6",
+      "statement": "常规天气通知每天早晨、下午和晚上各一次，以融入通常外出的日程。",
+      "source_turns": [
+        "DOC010:T041",
+        "DOC010:T043",
+        "DOC010:T044",
+        "DOC010:T045",
+        "DOC010:T049",
+        "DOC010:T065"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "qualified_by_findings",
+      "finding_ids": [
+        "PR-001"
+      ],
+      "assessment": "三次有明确确认；旧版早午晚“各一次”未保留时间分布的usually及偏好语气，存在轻度强化（PR-001）。新版约三次/更愿意并保留降雨例外，更忠实。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G7",
+      "statement": "持续降雨时，更频繁地收到降雨开始、停止及变化的通知。",
+      "source_turns": [
+        "DOC010:T049",
+        "DOC010:T063",
+        "DOC010:T066",
+        "DOC010:T067"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两者都保留条件与频率未知。新版“雨势变化”可被理解为雨强，原文adding/going不清，记录PR-003局部歧义，未确认是新增雨强要求。旧版“降雨变化”更保守。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G8",
+      "statement": "获得实时天气更新，帮助在外出时决定步行还是乘车等安排。",
+      "source_turns": [
+        "DOC010:T051",
+        "DOC010:T054",
+        "DOC010:T055",
+        "DOC010:T057",
+        "DOC010:T060",
+        "DOC010:T061",
+        "DOC010:T069",
+        "DOC010:T071"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "qualified_by_findings",
+      "finding_ids": [
+        "PR-002"
+      ],
+      "assessment": "实时更新均有直接支持；新版G12将错报导致外出受阻的可靠性改善另列为inferred并排除零误差。旧版G8及问题已区分时效和准确性，但未单列改善结果；不因多一个节点确认旧版漏提。旧版技术限制归因语气见PR-002。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G9",
+      "statement": "天气信息在应用、网站及其他使用的平台之间保持一致。",
+      "source_turns": [
+        "DOC010:T057",
+        "DOC010:T059",
+        "DOC010:T060",
+        "DOC010:T061",
+        "DOC010:T071"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均指天气信息而非界面一致，且未将一致等同正确。新版明确同步故障原因尚未核实。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "goal_id": "G10",
+      "statement": "使用天气应用时不受广告打扰。",
+      "source_turns": [
+        "DOC010:T057",
+        "DOC010:T071"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "无广告是明确偏好且有受阻体验；两版均未加免费或特定商业模式，新版偏好语气更可见。旧版目标式表述本身不等于强制采纳。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "goal_id": "G1",
+      "statement": "增加LinkedIn个人档案上的人脉连接数量。",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均忠实保留数量目的，没有用采访者的“有意义连接”替代，也无数量指标。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "goal_id": "G2",
+      "statement": "通过个人档案向他人展示自己在LinkedIn上活跃。",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保存目的与连接数这一选定展示方式；不声称他人必定认同活跃。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "goal_id": "G3",
+      "statement": "获得目标公司的现任员工为实习或全职岗位提供内推。",
+      "source_turns": [
+        "DOC023:T003",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留实习/全职及现任员工范围；未把3rd company当第三家公司约束，未把个人资格理解升级为所有公司政策。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "goal_id": "G4",
+      "statement": "借助内推提高简历被招聘人员看到的机会。",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留有时有帮助的或然性，不保证招聘结果。来源是明确用途，direct可成立。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "goal_id": "G5",
+      "statement": "寻找并选择同时是目标公司现任员工和本校校友的潜在人脉，以提高获得内推的可能性。",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "新版将复合筛选拆成父目标及两个条件，父限定具体求内推情境。两版均不选已离职者，同校帮助是信念而非保证。旧版“校友”与在读范围已有待确认问题，新版“本校就读背景”更包容；不以此确认旧版排除在读。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "goal_id": "G6",
+      "statement": "搜索结果更准确地匹配所需潜在人脉的背景，减少逐个排除不匹配结果的负担。",
+      "source_turns": [
+        "DOC023:T009",
+        "DOC023:T013",
+        "DOC023:T015"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两版都区分访问数量限制与相关性，未保证购买会员解决匹配。旧版改善负担/扩大候选标inferred；新版G10/G11以T015明说访问尽可能多、改词找更匹配者标direct，有直接用途依据。不能仅以标签不同判错。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "goal_id": "G7",
+      "statement": "能够查看足够多的潜在人脉，以找到符合需要的联系对象。",
+      "source_turns": [
+        "DOC023:T009",
+        "DOC023:T013",
+        "DOC023:T015"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两版都区分访问数量限制与相关性，未保证购买会员解决匹配。旧版改善负担/扩大候选标inferred；新版G10/G11以T015明说访问尽可能多、改词找更匹配者标direct，有直接用途依据。不能仅以标签不同判错。 旧版G7条件保留费用高及扩大可见范围，新版从因费用改词的行为推断减少昂贵依赖并保留仍可购买；推断有依据。不是要求免费，不把旧版未单列成本节点直接当遗漏。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "goal_id": "G8",
+      "statement": "连接邀请获接受前，能够在附言中充分表达自我介绍和内推意图，减少压缩措辞的时间。",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T017"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "新版将已有明确附言用途与从限制推断的改善拆开；旧版合并并标inferred，核心含义均受支持。两版均保留内推请求非必附，也没指定无限字数。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "goal_id": "G1",
+      "statement": "通过Slack与大学内的同学、助教和教授即时沟通。",
+      "source_turns": [
+        "DOC031:T001",
+        "DOC031:T005",
+        "DOC031:T007",
+        "DOC031:T025"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均限定大学对象；新版条件保留仍继续使用Slack，不推出一应用包办全部沟通。即时未量化，不自动等于每人立即回应。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "goal_id": "G2",
+      "statement": "只知道姓名或姓氏即可找到并联系校内人员，无需预先保存电话或邮箱，手机和笔记本上均能使用。",
+      "source_turns": [
+        "DOC031:T007",
+        "DOC031:T029",
+        "DOC031:T031"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版复合，新版拆分。赞赏、日常用途及推荐给新人提供维持意图依据，不因已实现而删掉。姓氏可查需结合sometimes和重名未知，条件已有约束；没有确认跨全网或唯一定位保证。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "goal_id": "G3",
+      "statement": "通过频道迅速向较广的受众传达信息。",
+      "source_turns": [
+        "DOC031:T009"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留频道方式和较广受众，立即是原文诉求，没有扩为保证全员已读。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "goal_id": "G4",
+      "statement": "加入频道后可查看加入前的历史信息，并了解课程、项目、院系和校园的讨论动态。",
+      "source_turns": [
+        "DOC031:T009",
+        "DOC031:T019"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版复合目标direct，新版分历史维持inferred与了解动态direct。T009有明确赞赏和用途，两种来源判断都可辩护；新版更显式标维持推断，不因此判旧版虚构。两者均保留历史价值，没有因搜索拥挤删除历史。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "goal_id": "G5",
+      "statement": "与队友协作时，即时分享所需文档。",
+      "source_turns": [
+        "DOC031:T011",
+        "DOC031:T013",
+        "DOC031:T017",
+        "DOC031:T029"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两版保留私信方式在条件中；没有把逐步附件操作、表情格式或any file升级为无限文件规格。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "goal_id": "G6",
+      "statement": "搜索大量频道历史时，更容易找到自己需要的特定消息。",
+      "source_turns": [
+        "DOC031:T018",
+        "DOC031:T019"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均由明确检索任务与困难推断改善，有正面依据；未指定删除旧消息或唯一算法。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "goal_id": "G7",
+      "statement": "更方便、快速地进入语音或视频通话，尤其是群组通话。",
+      "source_turns": [
+        "DOC031:T021",
+        "DOC031:T023",
+        "DOC031:T025",
+        "DOC031:T027"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均正确保留功能已经存在、入口不便与有号码时可外拨等条件；未把不便升级为放弃Slack。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "goal_id": "G8",
+      "statement": "正式联系助教或教授时，能从Slack快捷跳转到Outlook、Gmail等邮件应用给对方发邮件。",
+      "source_turns": [
+        "DOC031:T027"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两版完整保留正式沟通与外部标准邮件应用这一选定方式，不自动发、不仅限一个厂商。"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "goal_id": "G9",
+      "statement": "多个窗口并排、Slack浏览器窗口缩小时，仍能方便地导航。",
+      "source_turns": [
+        "DOC031:T031"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "qualified_by_findings",
+      "finding_ids": [
+        "PR-004"
+      ],
+      "assessment": "两版保留多窗口窄浏览器条件和手机/大屏正面体验。新版显式保留could be considered建议语气；旧版仍能方便导航是合理期望表达，但建议状态可更清楚（PR-004），不是已确认承诺。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G01",
+      "statement": "借助天气信息安排自己的着装、户外活动或旅行。",
+      "source_turns": [
+        "DOC010:T007",
+        "DOC010:T013"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两者保留穿着、户外活动、旅行的用途；新版明确是不同情境，不是每次三者同时完成。旧版支持理由也有该限定。语义相当。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G02",
+      "statement": "根据日常天气决定当天穿什么、携带什么。",
+      "source_turns": [
+        "DOC010:T013",
+        "DOC010:T014",
+        "DOC010:T015",
+        "DOC010:T025",
+        "DOC010:T037"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "G02承接穿戴携带物目的；新增G13从“信息够用便结束查询”和助手失败后用应用推断便利获取，有正面依据且标inferred。旧版G2已保存助手路径障碍，新增是将隐含结果显式化，不直接判旧版漏提。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G03",
+      "statement": "规划旅行时查看整周天气，以便在购买活动门票前安排户外活动。",
+      "source_turns": [
+        "DOC010:T017",
+        "DOC010:T019",
+        "DOC010:T021"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留旅行时整周、平日逐日的区别及买票前用途；游乐园只是例子，没有无条件禁止雨天旅行。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G04",
+      "statement": "到不熟悉的地方时，通过天气信息熟悉当地天气状况。",
+      "source_turns": [
+        "DOC010:T031",
+        "DOC010:T033"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留新地点与长期熟悉地点的差异，没有泛化地域属性或强制定位功能。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G05",
+      "statement": "极端天气发生时，希望天气应用提供通知或警报。",
+      "source_turns": [
+        "DOC010:T035",
+        "DOC010:T037",
+        "DOC010:T039"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版合并通知及延期/避免外出的用途，新版拆分信息与用户行为；两者均有来源。新版未授权应用自动取消活动，拆分不是旧版缺失。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G06",
+      "statement": "看到雷暴、洪水等极端天气信息时，推迟整个活动并避免外出。",
+      "source_turns": [
+        "DOC010:T035",
+        "DOC010:T037",
+        "DOC010:T039"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版合并通知及延期/避免外出的用途，新版拆分信息与用户行为；两者均有来源。新版未授权应用自动取消活动，拆分不是旧版缺失。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G07",
+      "statement": "平常更愿意在早晨、下午和晚上每天约三次收到天气通知，以配合外出安排。",
+      "source_turns": [
+        "DOC010:T041",
+        "DOC010:T043",
+        "DOC010:T044",
+        "DOC010:T045",
+        "DOC010:T049",
+        "DOC010:T065"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "三次有明确确认；旧版早午晚“各一次”未保留时间分布的usually及偏好语气，存在轻度强化（PR-001）。新版约三次/更愿意并保留降雨例外，更忠实。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G08",
+      "statement": "下雨时更频繁地收到雨势变化、开始或停止的更新通知。",
+      "source_turns": [
+        "DOC010:T049",
+        "DOC010:T063",
+        "DOC010:T066",
+        "DOC010:T067"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "qualified_by_findings",
+      "finding_ids": [
+        "PR-003"
+      ],
+      "assessment": "两者都保留条件与频率未知。新版“雨势变化”可被理解为雨强，原文adding/going不清，记录PR-003局部歧义，未确认是新增雨强要求。旧版“降雨变化”更保守。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G09",
+      "statement": "希望天气应用提供实时天气更新。",
+      "source_turns": [
+        "DOC010:T051",
+        "DOC010:T054",
+        "DOC010:T055",
+        "DOC010:T057",
+        "DOC010:T060",
+        "DOC010:T061",
+        "DOC010:T069",
+        "DOC010:T071"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "实时更新均有直接支持；新版G12将错报导致外出受阻的可靠性改善另列为inferred并排除零误差。旧版G8及问题已区分时效和准确性，但未单列改善结果；不因多一个节点确认旧版漏提。旧版技术限制归因语气见PR-002。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G10",
+      "statement": "更愿意使用没有广告干扰的天气应用。",
+      "source_turns": [
+        "DOC010:T057",
+        "DOC010:T071"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "无广告是明确偏好且有受阻体验；两版均未加免费或特定商业模式，新版偏好语气更可见。旧版目标式表述本身不等于强制采纳。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G11",
+      "statement": "希望各平台上的天气信息保持一致。",
+      "source_turns": [
+        "DOC010:T057",
+        "DOC010:T059",
+        "DOC010:T060",
+        "DOC010:T061",
+        "DOC010:T071"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均指天气信息而非界面一致，且未将一致等同正确。新版明确同步故障原因尚未核实。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G12",
+      "statement": "希望外出决策所依据的天气信息更可靠，减少因错误预报而意外淋雨的情况。",
+      "source_turns": [
+        "DOC010:T051",
+        "DOC010:T054",
+        "DOC010:T055",
+        "DOC010:T057",
+        "DOC010:T060",
+        "DOC010:T061",
+        "DOC010:T069",
+        "DOC010:T071"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "实时更新均有直接支持；新版G12将错报导致外出受阻的可靠性改善另列为inferred并排除零误差。旧版G8及问题已区分时效和准确性，但未单列改善结果；不因多一个节点确认旧版漏提。旧版技术限制归因语气见PR-002。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "goal_id": "G13",
+      "statement": "早晨希望方便地获得足够有用的天气信息来安排当天准备。",
+      "source_turns": [
+        "DOC010:T013",
+        "DOC010:T014",
+        "DOC010:T015",
+        "DOC010:T025",
+        "DOC010:T037"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "G02承接穿戴携带物目的；新增G13从“信息够用便结束查询”和助手失败后用应用推断便利获取，有正面依据且标inferred。旧版G2已保存助手路径障碍，新增是将隐含结果显式化，不直接判旧版漏提。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G01",
+      "statement": "增加领英个人资料显示的人脉数量。",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均忠实保留数量目的，没有用采访者的“有意义连接”替代，也无数量指标。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G02",
+      "statement": "让他人看出自己在领英上保持活跃。",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保存目的与连接数这一选定展示方式；不声称他人必定认同活跃。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G03",
+      "statement": "在申请实习或全职职位时，从目标公司的现任员工获得内推。",
+      "source_turns": [
+        "DOC023:T003",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留实习/全职及现任员工范围；未把3rd company当第三家公司约束，未把个人资格理解升级为所有公司政策。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G04",
+      "statement": "借助内推增加简历被招聘人员看到的机会。",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留有时有帮助的或然性，不保证招聘结果。来源是明确用途，direct可成立。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G05",
+      "statement": "求内推时，只选择同时是目标公司现任员工、又有本校就读背景的潜在人脉。",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "新版将复合筛选拆成父目标及两个条件，父限定具体求内推情境。两版均不选已离职者，同校帮助是信念而非保证。旧版“校友”与在读范围已有待确认问题，新版“本校就读背景”更包容；不以此确认旧版排除在读。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G06",
+      "statement": "求内推时，确认所选潜在人脉目前仍在目标公司任职。",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "新版将复合筛选拆成父目标及两个条件，父限定具体求内推情境。两版均不选已离职者，同校帮助是信念而非保证。旧版“校友”与在读范围已有待确认问题，新版“本校就读背景”更包容；不以此确认旧版排除在读。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G07",
+      "statement": "求内推时，选择有本校就读背景的潜在人脉，以增加其愿意帮助的可能性。",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "新版将复合筛选拆成父目标及两个条件，父限定具体求内推情境。两版均不选已离职者，同校帮助是信念而非保证。旧版“校友”与在读范围已有待确认问题，新版“本校就读背景”更包容；不以此确认旧版排除在读。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G08",
+      "statement": "发送连接邀请时，能够用附言介绍自己，并在需要时说明内推请求。",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T017"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "新版将已有明确附言用途与从限制推断的改善拆开；旧版合并并标inferred，核心含义均受支持。两版均保留内推请求非必附，也没指定无限字数。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G09",
+      "statement": "连接邀请被接受后，能继续聊天沟通内推的进一步细节。",
+      "source_turns": [
+        "DOC023:T007"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "新版明确保留现有能力的使用目的和接受条件。旧版内推目标及F2提及对方接受这一依赖，未独立表达继续聊天的结果；这是可回查的覆盖风险，仍可能被广义内推过程覆盖，不确认漏提。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G10",
+      "statement": "能够接触到足够多、符合自己寻找背景的人脉搜索结果。",
+      "source_turns": [
+        "DOC023:T009",
+        "DOC023:T013",
+        "DOC023:T015"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两版都区分访问数量限制与相关性，未保证购买会员解决匹配。旧版改善负担/扩大候选标inferred；新版G10/G11以T015明说访问尽可能多、改词找更匹配者标direct，有直接用途依据。不能仅以标签不同判错。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G11",
+      "statement": "通过调整搜索关键词，获得背景更符合自己要求的人脉结果。",
+      "source_turns": [
+        "DOC023:T009",
+        "DOC023:T013",
+        "DOC023:T015"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两版都区分访问数量限制与相关性，未保证购买会员解决匹配。旧版改善负担/扩大候选标inferred；新版G10/G11以T015明说访问尽可能多、改词找更匹配者标direct，有直接用途依据。不能仅以标签不同判错。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G12",
+      "statement": "希望在邀请附言中充分表达想说的话，并减少为字符限制反复压缩措辞的负担。",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T017"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "新版将已有明确附言用途与从限制推断的改善拆开；旧版合并并标inferred，核心含义均受支持。两版均保留内推请求非必附，也没指定无限字数。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "goal_id": "G13",
+      "statement": "寻找潜在人脉时，希望减少对昂贵付费会员的依赖。",
+      "source_turns": [
+        "DOC023:T015"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版G7条件保留费用高及扩大可见范围，新版从因费用改词的行为推断减少昂贵依赖并保留仍可购买；推断有依据。不是要求免费，不把旧版未单列成本节点直接当遗漏。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G01",
+      "statement": "在大学内与同学、助教和教授保持即时沟通。",
+      "source_turns": [
+        "DOC031:T001",
+        "DOC031:T005",
+        "DOC031:T007",
+        "DOC031:T025"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均限定大学对象；新版条件保留仍继续使用Slack，不推出一应用包办全部沟通。即时未量化，不自动等于每人立即回应。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G02",
+      "statement": "只知道校内对象的姓名或姓氏时，也能快速找到并联系对方，无需先保存电话或邮箱。",
+      "source_turns": [
+        "DOC031:T007",
+        "DOC031:T029",
+        "DOC031:T031"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版复合，新版拆分。赞赏、日常用途及推荐给新人提供维持意图依据，不因已实现而删掉。姓氏可查需结合sometimes和重名未知，条件已有约束；没有确认跨全网或唯一定位保证。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G03",
+      "statement": "能在手机或笔记本电脑上联系校内人员。",
+      "source_turns": [
+        "DOC031:T007",
+        "DOC031:T029",
+        "DOC031:T031"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版复合，新版拆分。赞赏、日常用途及推荐给新人提供维持意图依据，不因已实现而删掉。姓氏可查需结合sometimes和重名未知，条件已有约束；没有确认跨全网或唯一定位保证。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G04",
+      "statement": "通过频道立即向较广的受众传达信息。",
+      "source_turns": [
+        "DOC031:T009"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均保留频道方式和较广受众，立即是原文诉求，没有扩为保证全员已读。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G05",
+      "statement": "加入频道后，仍能获取自己加入之前的历史信息。",
+      "source_turns": [
+        "DOC031:T009",
+        "DOC031:T019"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版复合目标direct，新版分历史维持inferred与了解动态direct。T009有明确赞赏和用途，两种来源判断都可辩护；新版更显式标维持推断，不因此判旧版虚构。两者均保留历史价值，没有因搜索拥挤删除历史。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G06",
+      "statement": "了解频道中课程、系所、项目和校园正在讨论或分享的事情。",
+      "source_turns": [
+        "DOC031:T009",
+        "DOC031:T019"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "旧版复合目标direct，新版分历史维持inferred与了解动态direct。T009有明确赞赏和用途，两种来源判断都可辩护；新版更显式标维持推断，不因此判旧版虚构。两者均保留历史价值，没有因搜索拥挤删除历史。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G07",
+      "statement": "与队友协作时，能即时分享所需文档。",
+      "source_turns": [
+        "DOC031:T011",
+        "DOC031:T013",
+        "DOC031:T017",
+        "DOC031:T029"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两版保留私信方式在条件中；没有把逐步附件操作、表情格式或any file升级为无限文件规格。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G08",
+      "statement": "希望更容易从大量关键词搜索结果中找到自己所需的消息或讨论记录。",
+      "source_turns": [
+        "DOC031:T018",
+        "DOC031:T019"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均由明确检索任务与困难推断改善，有正面依据；未指定删除旧消息或唯一算法。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G09",
+      "statement": "希望更容易、更快捷地进入音频或视频通话，尤其是群组通话。",
+      "source_turns": [
+        "DOC031:T021",
+        "DOC031:T023",
+        "DOC031:T025",
+        "DOC031:T027"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "均正确保留功能已经存在、入口不便与有号码时可外拨等条件；未把不便升级为放弃Slack。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G10",
+      "statement": "需要与助教或教授正式沟通时，希望从 Slack 快速跳转到标准邮件应用，向该对象发送邮件。",
+      "source_turns": [
+        "DOC031:T027"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两版完整保留正式沟通与外部标准邮件应用这一选定方式，不自动发、不仅限一个厂商。"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "goal_id": "G11",
+      "statement": "希望可以改善 Slack 浏览器窗口缩窄时的导航便利性。",
+      "source_turns": [
+        "DOC031:T031"
+      ],
+      "source_and_support_review": "reviewed_in_full_with_conditions_origin_inference_and_support",
+      "conclusion": "supported_with_recorded_conditions",
+      "finding_ids": [],
+      "assessment": "两版保留多窗口窄浏览器条件和手机/大屏正面体验。新版显式保留could be considered建议语气；旧版仍能方便导航是合理期望表达，但建议状态可更清楚（PR-004），不是已确认承诺。"
+    }
+  ],
+  "group_reviews": [
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "group_id": "F1",
+      "parent_id": "G1",
+      "child_ids": [
+        "G2",
+        "G3",
+        "G5"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC010:T007",
+        "DOC010:T019",
+        "DOC010:T035"
+      ],
+      "reason": "G2/G3/G5涉及不同规划用途；普通户外活动并未穷尽，也无从信息到合适计划的充分规则。proposed/partial适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC010",
+      "group_id": "F2",
+      "parent_id": "G8",
+      "child_ids": [
+        "G7",
+        "G9"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC010:T049",
+        "DOC010:T051",
+        "DOC010:T057",
+        "DOC010:T071"
+      ],
+      "reason": "频繁通知可仍旧过时，多平台可一致地错；降雨局部不覆盖所有实时更新。proposed/partial适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "group_id": "F01",
+      "parent_id": "G01",
+      "child_ids": [
+        "G02",
+        "G03"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC010:T007",
+        "DOC010:T017",
+        "DOC010:T019"
+      ],
+      "reason": "穿戴及旅行是实例，不穷尽总体户外规划；未形成成立AND。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "group_id": "F02",
+      "parent_id": "G09",
+      "child_ids": [
+        "G08"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC010:T049",
+        "DOC010:T063",
+        "DOC010:T069"
+      ],
+      "reason": "下雨时频繁通知不保证实时或覆盖非降雨。候选状态正确；G08词义风险不使组升级成立。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC010",
+      "group_id": "F03",
+      "parent_id": "G06",
+      "child_ids": [
+        "G05"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC010:T035",
+        "DOC010:T039"
+      ],
+      "reason": "收到告警不等于已读、决定延期并实际不外出；仍为贡献候选，未宣称充分。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "group_id": "F1",
+      "parent_id": "G2",
+      "child_ids": [
+        "G1"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "reason": "连接数增加不必然让他人看见并认为活跃；候选适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "group_id": "F2",
+      "parent_id": "G3",
+      "child_ids": [
+        "G5",
+        "G6",
+        "G7",
+        "G8"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T009",
+        "DOC023:T011",
+        "DOC023:T013",
+        "DOC023:T017"
+      ],
+      "reason": "找到匹配人、更多结果及充分附言仍依赖他人接受/愿意内推。没有误将寻找过程当保证。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC023",
+      "group_id": "F3",
+      "parent_id": "G4",
+      "child_ids": [
+        "G3"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "reason": "sometimes helps不构成确定内推效果；候选适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "group_id": "F01",
+      "parent_id": "G05",
+      "child_ids": [
+        "G06",
+        "G07"
+      ],
+      "author_status": "supported",
+      "author_completeness": "complete",
+      "review_conclusion": "supported_with_explicit_scope",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "reason": "G05只约束本例所选人脉同时满足在职与同校。G06核验同一所选人脉的在职属性，G07保留同校选择；在资料真实且当前、两者约束同一选择集合的解释下，两条件合取足够满足父筛选约束。无须对方愿意帮助或存在至少一个候选人，父目标本来不保证内推或候选存在。资料真实性是显式领域假设，未当已证事实；complete只限这两项资格。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "group_id": "F02",
+      "parent_id": "G03",
+      "child_ids": [
+        "G05",
+        "G08",
+        "G09"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC023:T007",
+        "DOC023:T009",
+        "DOC023:T011"
+      ],
+      "reason": "资格筛选、附言和接受后聊天不保证他人接受及内推。候选适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "group_id": "F03",
+      "parent_id": "G02",
+      "child_ids": [
+        "G01"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "reason": "数量与别人判断之间仍有可见性/理解条件，候选适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC023",
+      "group_id": "F04",
+      "parent_id": "G04",
+      "child_ids": [
+        "G03"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC023:T003"
+      ],
+      "reason": "有时帮助不能保证每次提高曝光；候选适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "group_id": "F1",
+      "parent_id": "G1",
+      "child_ids": [
+        "G2",
+        "G3",
+        "G5",
+        "G7"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC031:T007",
+        "DOC031:T009",
+        "DOC031:T013",
+        "DOC031:T025",
+        "DOC031:T027"
+      ],
+      "reason": "便利功能集合不保证即时通信达成，且不一定每次共同使用；候选适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "baseline",
+      "document": "DOC031",
+      "group_id": "F2",
+      "parent_id": "G4",
+      "child_ids": [
+        "G6"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC031:T009",
+        "DOC031:T019"
+      ],
+      "reason": "搜索更容易本身不赋予加入前历史访问，也不保证了解动态；候选适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "group_id": "F01",
+      "parent_id": "G01",
+      "child_ids": [
+        "G02",
+        "G03",
+        "G04",
+        "G07"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC031:T007",
+        "DOC031:T009",
+        "DOC031:T013"
+      ],
+      "reason": "找人、多设备、频道和分享有帮助，但不是完整的即时沟通充分条件；候选适当。",
+      "formal_proof": "not_run"
+    },
+    {
+      "branch": "revised",
+      "document": "DOC031",
+      "group_id": "F02",
+      "parent_id": "G06",
+      "child_ids": [
+        "G05"
+      ],
+      "author_status": "proposed",
+      "author_completeness": "partial",
+      "review_conclusion": "candidate_correct",
+      "source_turns": [
+        "DOC031:T009",
+        "DOC031:T019"
+      ],
+      "reason": "能访问历史并不保证获知当前动态，需相关性与阅读等条件；候选适当。",
+      "formal_proof": "not_run"
+    }
+  ],
+  "findings": [
+    {
+      "id": "PR-001",
+      "branch": "baseline",
+      "document": "DOC010",
+      "objects": [
+        "G6"
+      ],
+      "category": "semantic_deviation",
+      "severity": "low",
+      "status": "confirmed_local_wording_strengthening",
+      "blocking_extension": false,
+      "evidence": [
+        {
+          "source_id": "DOC010:T041",
+          "quote": "it's usually in the morning. in the afternoon, afternoon and in the evening."
+        },
+        {
+          "source_id": "DOC010:T044",
+          "quote": "For notifications, and you change the frequency to thrice a day."
+        },
+        {
+          "source_id": "DOC010:T045",
+          "quote": "Yes, yes."
+        }
+      ],
+      "judgment": "每日三次本身有确认，问题是把通常的早午晚分布写成每天各一次，并弱化个人偏好状态。降雨例外已保留，故是局部轻度强化而非无条件总上限错误。",
+      "suggestion": "改为受访者平常偏好一天约三次、通常分布在早晨下午晚上；保留已配置状态及降雨例外。",
+      "comparison": "revised G07已清楚表达约三次、更愿意及例外。"
+    },
+    {
+      "id": "PR-002",
+      "branch": "baseline",
+      "document": "DOC010",
+      "objects": [
+        "G8.conditions"
+      ],
+      "category": "expression_insufficiency",
+      "severity": "low",
+      "status": "unresolved_attribution_wording",
+      "blocking_extension": false,
+      "evidence": [
+        {
+          "source_id": "DOC010:T055",
+          "quote": "It's just like the technology is not there yet, I guess."
+        }
+      ],
+      "judgment": "“受访者承认技术对天气预测仍有限制”没有显式保留猜测语气；但仍归属于受访者，并未据此断定具体技术根因。不能据此计为严重信念事实化。",
+      "suggestion": "改成受访者猜测可能与预测技术限制有关，根因未核实。",
+      "comparison": "revised G09明确写猜测和非核实事实。"
+    },
+    {
+      "id": "PR-003",
+      "branch": "revised",
+      "document": "DOC010",
+      "objects": [
+        "G08",
+        "F02"
+      ],
+      "category": "source_ambiguity_and_wording_risk",
+      "severity": "low",
+      "status": "unresolved_in_v1",
+      "blocking_extension": false,
+      "evidence": [
+        {
+          "source_id": "DOC010:T049",
+          "quote": "when it's stopping, when it's adding like when it's going"
+        },
+        {
+          "source_id": "DOC010:T063",
+          "quote": "when it's raining and not raining."
+        }
+      ],
+      "judgment": "v1“雨势变化”可被读成雨强变化，但原文能稳妥支持的是雨情开始、停止和变化，adding/going含义不清。尚不能确认作者意在新增强度指标，故不计确认语义错误；若按雨强义解释，direct整句支持不足。F02已为proposed/partial，并未由此形成错误成立精化。",
+      "suggestion": "另存版本将“雨势变化”收窄为“雨情变化”或“降雨状态变化”，保留开始/停止与不确定频率；同步重核支持与依赖F02。",
+      "comparison": "baseline G7用“降雨开始、停止及变化”更保守。"
+    },
+    {
+      "id": "PR-004",
+      "branch": "baseline",
+      "document": "DOC031",
+      "objects": [
+        "G9"
+      ],
+      "category": "expression_insufficiency",
+      "severity": "low",
+      "status": "unresolved_suggestion_status",
+      "blocking_extension": false,
+      "evidence": [
+        {
+          "source_id": "DOC031:T031",
+          "quote": "I feel like that is an area of improvement that could be considered."
+        }
+      ],
+      "judgment": "目标及条件清楚表达缩窗改善方向，却未突出原文是可考虑的建议。目标式“仍能方便导航”可合理读为期望，且人工状态pending，不确认其已变成强制承诺。",
+      "suggestion": "在陈述或条件明确“可考虑改善”的建议状态，保持场景不变。",
+      "comparison": "revised G11已在陈述与条件保留建议语气。"
+    }
+  ],
+  "coverage_recheck": [
+    {
+      "document": "DOC010",
+      "candidate": "便捷获取足够天气信息/可靠性改善",
+      "baseline": "G2/G8及证据和问题已有路径、预测误差语境；未分别建便利性和可靠性目标",
+      "revised": "G13/G12为有依据推断",
+      "status": "richer_explicit_representation_not_confirmed_baseline_omission"
+    },
+    {
+      "document": "DOC023",
+      "candidate": "接受后聊天进一步细节",
+      "baseline": "无独立目标；G3内推目的、F2接受依赖及T007完整证据已保留",
+      "revised": "G09显式有条件保留",
+      "status": "candidate_coverage_risk_not_confirmed_omission"
+    },
+    {
+      "document": "DOC023",
+      "candidate": "减轻昂贵会员依赖",
+      "baseline": "G7条件保留成本取舍",
+      "revised": "G13从因成本转向改词推断改善",
+      "status": "richer_explicit_representation_not_confirmed_baseline_omission"
+    },
+    {
+      "document": "DOC031",
+      "candidate": "多设备、加入前历史、动态关注",
+      "baseline": "G2/G4复合覆盖",
+      "revised": "G02/G03、G05/G06分开表达",
+      "status": "covered_in_both_granularity_difference"
+    },
+    {
+      "document": "DOC031",
+      "candidate": "格式、表情、any file、步骤左右布局",
+      "baseline": "G5操作背景/证据",
+      "revised": "G07条件/证据",
+      "status": "no_confirmed_independent_result_intent_no_required_new_nodes"
+    },
+    {
+      "document": "DOC010/DOC023/DOC031",
+      "candidate": "第一阶段重要意图与例外总体回查",
+      "baseline": "主要意图均有目标或必要上下文承载；局部表达和候选风险另记",
+      "revised": "全部重要意图及例外有目标/条件/问题/证据承载",
+      "status": "no_confirmed_omissions_found_within_read_scope_not_exhaustiveness_proof"
+    }
+  ],
+  "engineering": {
+    "inspect_reexecuted": 6,
+    "all_structure_passed": true,
+    "exact_model_quotes_checked": 191,
+    "projection_or_quote_errors": [],
+    "details": "engineering/projection-and-evidence-audit.json",
+    "original_inspections_changed": false,
+    "core_independent_semantic_status": "not_run_unchanged"
+  },
+  "gate_v1": {
+    "decision": "pass_with_nonblocking_findings",
+    "blocking_revised_severe_deviations": [],
+    "semantic_basis": "新版没有尚未处置的严重无依据强化、信念事实化或错误成立精化。PR-003局部歧义可保守修订，不构成扩展阻断。无为消错删除已支持重要意图的证据。",
+    "required_before_expansion": [],
+    "recommended_revision": [
+      "PR-003另存版本收窄雨势措辞并重核G08/F02"
+    ],
+    "human_acceptance": "pending",
+    "formal_proof": "not_run"
+  },
+  "revision_followup": {
+    "status": "completed",
+    "artifact": "pilot-v2-followup.json",
+    "finding_id": "PR-003",
+    "v1_status": "unresolved_in_v1_preserved",
+    "v2_status": "resolved_by_conservative_wording",
+    "final_selection": {
+      "DOC010": "revised external v2",
+      "DOC023": "revised v1",
+      "DOC031": "revised v1"
+    },
+    "final_gate": "pass",
+    "version_limitation": {
+      "external_artifact_version": "v2",
+      "internal_model_version": "v1",
+      "internal_parent": null,
+      "assessment": "内部仍version=v1、parent=null，不能声称工具已递增原生模型版本。外层revision-record中的路径、双哈希和ID映射可辨别助手修订谱系；后续引用须同时绑定路径和哈希，不能仅用model_id/version识别。未来需支持非人工反馈的修订入口。该限制已透明记录，不影响当前实际文件的可核验性。"
+    }
+  },
+  "interpretation_limits": [
+    "不以目标或问题条目数计算错误率/加权得分。",
+    "三篇为已接触开发案例，不能外推总体技能优劣或其余31篇正确率。",
+    "不是随机重复实验；生成上下文差异与采样不可控，不能把差异全归因技能修改。",
+    "原文精确定位不证明含义；本次模型语义复核不是外部验证或人工采纳。"
+  ]
+}

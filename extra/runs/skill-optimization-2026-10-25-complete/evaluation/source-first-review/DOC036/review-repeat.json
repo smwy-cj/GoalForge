@@ -1,0 +1,792 @@
+{
+  "document_id": "DOC036",
+  "round": "repeat",
+  "reviewer": "独立上下文模型评审者",
+  "human_gold": false,
+  "blinding_limit": "仅知第二轮A/B匿名代号；没有读取映射或生成分支，不推断跨轮代号对应。语言、粒度和模板特征可被猜测，属于有限盲法。",
+  "policy": "使用同一冻结129条意图，不迎合结果改清单；允许多对多不同粒度。候选/否定关系按其当前状态评价，supported不代表需求已采纳。无标准P/R/F1。",
+  "samples": [
+    {
+      "sample": "repeat:A",
+      "intent_matches": [
+        {
+          "intent_id": "DOC036:I01",
+          "goal_ids": [
+            "G001"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在特殊场合寻找并购买合适礼物”的核心结果、条件和所选范围；DOC036:T010「I use Instagram mainly to shop on days like Valentine's Day」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I02",
+          "goal_ids": [
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“从商品展示获得设计参考并在线下市场寻找类似商品”的核心结果、条件和所选范围；DOC036:T010「I'll go to an actual market and ask for those. These designs I would have seen l…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I03",
+          "goal_ids": [
+            "G003",
+            "G017"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在新地点快速发现本地商家、货品、位置和联系方式”的核心结果、条件和所选范围；DOC036:T056「when you go to a new place. You don't really know, like the vendors there」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I04",
+          "goal_ids": [
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按商品词搜索商家，必要时加地点使结果相关”的核心结果、条件和所选范围；DOC036:T012「if I don't see immediately what I'm looking for, I'll just add maybe the name of…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I05",
+          "goal_ids": [
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“重用历史搜索快速回到以前访问过的商家”的核心结果、条件和所选范围；DOC036:T024「I don't have to. Always, you know, search for vendors. I can just pick one I use…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I06",
+          "goal_ids": [
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过商家图库及商品多样性开放地发现适合的购买选择”的核心结果、条件和所选范围；DOC036:T022「I don't have a particular product in mind.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I07",
+          "goal_ids": [
+            "G010",
+            "G020"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“查看评论、点赞及其与商品发布时间的合理关系以判断商家可信度”的核心结果、条件和所选范围；DOC036:T024「The good with the gallery is that when you go to the gallery you have people com…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I08",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“避免恶意商家收款不交货造成损失”的核心结果、条件和所选范围；DOC036:T014「when you send that money you will not get the product delivered to you」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I09",
+          "goal_ids": [
+            "G005"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“取得商家联系方式并通过适合渠道快速沟通”的核心结果、条件和所选范围；DOC036:T016「in the account, bio, that that is where I would see, like, maybe their phone num…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I10",
+          "goal_ids": [
+            "G018"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“直接在商家页面看到商品价格以减少联系询价”的核心结果、条件和所选范围；DOC036:T058「I feel like they should put on the website on. I'm sorry on the pages」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I11",
+          "goal_ids": [
+            "G019"
+          ],
+          "status": "partial",
+          "rationale": "G019保留价格/付款/地址及收货，T058商家将到/到达时电话通知未承接。 原文：DOC036:T058「ask for the phone number I can use for the payment.」"
+        },
+        {
+          "intent_id": "DOC036:I12",
+          "goal_ids": [
+            "G007",
+            "G008"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“不登录也能浏览、搜索及查看商家资料”的核心结果、条件和所选范围；DOC036:T024「I would have loved to use the application without signing in」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I13",
+          "goal_ids": [
+            "G014",
+            "G015",
+            "G016"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“限制不必要使用、避免无限滚动等机制耗费时间与影响消费”的核心结果、条件和所选范围；DOC036:T032「only use it when I have, you know, a need for it.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I14",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“购物期内暂时保持登录以减少反复登录成本”；DOC036:T052「leave myself to be, you know. locked in.」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        },
+        {
+          "intent_id": "DOC036:I15",
+          "goal_ids": [
+            "G011",
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“把个人分享限定给亲近朋友以保护生活隐私”的核心结果、条件和所选范围；DOC036:T026「I make sure I have a private account」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I16",
+          "goal_ids": [
+            "G013"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过关注关系在电话号码或邮箱变更后仍能重新联系朋友”的核心结果、条件和所选范围；DOC036:T030「I can always, you know, reconnect with you by getting in touch with you, using u…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I17",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“参考他人服饰等社交内容形成购买灵感”；DOC036:T032「it will kind of play a role in me, actually acquiring it」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I01"
+          ],
+          "rationale": "与原文“在特殊场合寻找并购买合适礼物”一致；DOC036:T010「I use Instagram mainly to shop on days like Valentine's Day」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I02"
+          ],
+          "rationale": "与原文“从商品展示获得设计参考并在线下市场寻找类似商品”一致；DOC036:T010「I'll go to an actual market and ask for those. These designs I would have seen l…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I03",
+            "DOC036:I04"
+          ],
+          "rationale": "与原文“在新地点快速发现本地商家、货品、位置和联系方式；按商品词搜索商家，必要时加地点使结果相关”一致；DOC036:T056「when you go to a new place. You don't really know, like the vendors there」；DOC036:T012「if I don't see immediately what I'm looking for, I'll just add maybe the name of…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I08"
+          ],
+          "rationale": "T014险些遇到恶意商家但没失钱，inferred避免损失合适；support.rationale保留先送后付为该案例方式，未要求所有交易如此。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I09"
+          ],
+          "rationale": "与原文“取得商家联系方式并通过适合渠道快速沟通”一致；DOC036:T016「in the account, bio, that that is where I would see, like, maybe their phone num…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I06"
+          ],
+          "rationale": "与原文“通过商家图库及商品多样性开放地发现适合的购买选择”一致；DOC036:T022「I don't have a particular product in mind.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I12"
+          ],
+          "rationale": "与原文“不登录也能浏览、搜索及查看商家资料”一致；DOC036:T024「I would have loved to use the application without signing in」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I12"
+          ],
+          "rationale": "与原文“不登录也能浏览、搜索及查看商家资料”一致；DOC036:T024「I would have loved to use the application without signing in」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I05"
+          ],
+          "rationale": "与原文“重用历史搜索快速回到以前访问过的商家”一致；DOC036:T024「I don't have to. Always, you know, search for vendors. I can just pick one I use…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I07"
+          ],
+          "rationale": "T024点赞评论作为购买线索，G020额外保留T062按年龄分布判断，不建自动信誉排名。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I15"
+          ],
+          "rationale": "与原文“把个人分享限定给亲近朋友以保护生活隐私”一致；DOC036:T026「I make sure I have a private account」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I15"
+          ],
+          "rationale": "与原文“把个人分享限定给亲近朋友以保护生活隐私”一致；DOC036:T026「I make sure I have a private account」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I16"
+          ],
+          "rationale": "与原文“通过关注关系在电话号码或邮箱变更后仍能重新联系朋友”一致；DOC036:T030「I can always, you know, reconnect with you by getting in touch with you, using u…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I13"
+          ],
+          "rationale": "与原文“限制不必要使用、避免无限滚动等机制耗费时间与影响消费”一致；DOC036:T032「only use it when I have, you know, a need for it.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I13"
+          ],
+          "rationale": "与原文“限制不必要使用、避免无限滚动等机制耗费时间与影响消费”一致；DOC036:T032「only use it when I have, you know, a need for it.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I13"
+          ],
+          "rationale": "T052主动退出/删应用/清历史在support.rationale保留为替代自控策略，而非平台默认卸载，强度正确。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I03"
+          ],
+          "rationale": "与原文“在新地点快速发现本地商家、货品、位置和联系方式”一致；DOC036:T056「when you go to a new place. You don't really know, like the vendors there」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I10"
+          ],
+          "rationale": "与原文“直接在商家页面看到商品价格以减少联系询价”一致；DOC036:T058「I feel like they should put on the website on. I'm sorry on the pages」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I11"
+          ],
+          "rationale": "T058价格、付款、地址和收货流程合并可接受，保留先付款普通情境；没有承接T058送达前/到时电话通知，I11部分。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I07"
+          ],
+          "rationale": "与原文“查看评论、点赞及其与商品发布时间的合理关系以判断商家可信度”一致；DOC036:T024「The good with the gallery is that when you go to the gallery you have people com…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T012/T016/T022/T058发现选购和收货是购物链，F001承认礼物适合和诚信仍未知，partial恰当。"
+        },
+        {
+          "group_id": "F002",
+          "judgment": "consistent",
+          "rationale": "T024/T062互动只是本人判断线索，F002保持partial，不造平台认证充分性。"
+        }
+      ]
+    },
+    {
+      "sample": "repeat:B",
+      "intent_matches": [
+        {
+          "intent_id": "DOC036:I01",
+          "goal_ids": [
+            "G001",
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在特殊场合寻找并购买合适礼物”的核心结果、条件和所选范围；DOC036:T010「I use Instagram mainly to shop on days like Valentine's Day」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I02",
+          "goal_ids": [
+            "G002"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“从商品展示获得设计参考并在线下市场寻找类似商品”的核心结果、条件和所选范围；DOC036:T010「I'll go to an actual market and ask for those. These designs I would have seen l…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I03",
+          "goal_ids": [
+            "G003",
+            "G020"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“在新地点快速发现本地商家、货品、位置和联系方式”的核心结果、条件和所选范围；DOC036:T056「when you go to a new place. You don't really know, like the vendors there」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I04",
+          "goal_ids": [
+            "G003"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“按商品词搜索商家，必要时加地点使结果相关”的核心结果、条件和所选范围；DOC036:T012「if I don't see immediately what I'm looking for, I'll just add maybe the name of…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I05",
+          "goal_ids": [
+            "G010"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“重用历史搜索快速回到以前访问过的商家”的核心结果、条件和所选范围；DOC036:T024「I don't have to. Always, you know, search for vendors. I can just pick one I use…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I06",
+          "goal_ids": [
+            "G007",
+            "G012"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过商家图库及商品多样性开放地发现适合的购买选择”的核心结果、条件和所选范围；DOC036:T022「I don't have a particular product in mind.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I07",
+          "goal_ids": [
+            "G011"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“查看评论、点赞及其与商品发布时间的合理关系以判断商家可信度”的核心结果、条件和所选范围；DOC036:T024「The good with the gallery is that when you go to the gallery you have people com…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I08",
+          "goal_ids": [
+            "G005",
+            "G006"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“避免恶意商家收款不交货造成损失”的核心结果、条件和所选范围；DOC036:T014「when you send that money you will not get the product delivered to you」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I09",
+          "goal_ids": [
+            "G004"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“取得商家联系方式并通过适合渠道快速沟通”的核心结果、条件和所选范围；DOC036:T016「in the account, bio, that that is where I would see, like, maybe their phone num…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I10",
+          "goal_ids": [
+            "G021"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“直接在商家页面看到商品价格以减少联系询价”的核心结果、条件和所选范围；DOC036:T058「I feel like they should put on the website on. I'm sorry on the pages」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I11",
+          "goal_ids": [
+            "G022",
+            "G023",
+            "G024",
+            "G025"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“沟通价格、付款方式和送货地址并接收交付通知取得商品”的核心结果、条件和所选范围；DOC036:T058「ask for the phone number I can use for the payment.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I12",
+          "goal_ids": [
+            "G008",
+            "G009"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“不登录也能浏览、搜索及查看商家资料”的核心结果、条件和所选范围；DOC036:T024「I would have loved to use the application without signing in」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I13",
+          "goal_ids": [
+            "G017",
+            "G018"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“限制不必要使用、避免无限滚动等机制耗费时间与影响消费”的核心结果、条件和所选范围；DOC036:T032「only use it when I have, you know, a need for it.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I14",
+          "goal_ids": [
+            "G019"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“购物期内暂时保持登录以减少反复登录成本”的核心结果、条件和所选范围；DOC036:T052「leave myself to be, you know. locked in.」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I15",
+          "goal_ids": [
+            "G013",
+            "G014"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“把个人分享限定给亲近朋友以保护生活隐私”的核心结果、条件和所选范围；DOC036:T026「I make sure I have a private account」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I16",
+          "goal_ids": [
+            "G015",
+            "G016"
+          ],
+          "status": "complete",
+          "rationale": "这些目标共同保留“通过关注关系在电话号码或邮箱变更后仍能重新联系朋友”的核心结果、条件和所选范围；DOC036:T030「I can always, you know, reconnect with you by getting in touch with you, using u…」。按多对多承接，不要求节点数与冻结清单一致。"
+        },
+        {
+          "intent_id": "DOC036:I17",
+          "goal_ids": [],
+          "status": "absent",
+          "rationale": "没有目标承接冻结意图“参考他人服饰等社交内容形成购买灵感”；DOC036:T032「it will kind of play a role in me, actually acquiring it」。缺覆盖不自动意味着既有目标错误或必须实现此能力。"
+        }
+      ],
+      "goal_assessments": [
+        {
+          "goal_id": "G001",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I01"
+          ],
+          "rationale": "与原文“在特殊场合寻找并购买合适礼物”一致；DOC036:T010「I use Instagram mainly to shop on days like Valentine's Day」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G002",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I02"
+          ],
+          "rationale": "与原文“从商品展示获得设计参考并在线下市场寻找类似商品”一致；DOC036:T010「I'll go to an actual market and ask for those. These designs I would have seen l…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G003",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I03",
+            "DOC036:I04"
+          ],
+          "rationale": "与原文“在新地点快速发现本地商家、货品、位置和联系方式；按商品词搜索商家，必要时加地点使结果相关”一致；DOC036:T056「when you go to a new place. You don't really know, like the vendors there」；DOC036:T012「if I don't see immediately what I'm looking for, I'll just add maybe the name of…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G004",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I09"
+          ],
+          "rationale": "与原文“取得商家联系方式并通过适合渠道快速沟通”一致；DOC036:T016「in the account, bio, that that is where I would see, like, maybe their phone num…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G005",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I08"
+          ],
+          "rationale": "与原文“避免恶意商家收款不交货造成损失”一致；DOC036:T014「when you send that money you will not get the product delivered to you」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G006",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I08"
+          ],
+          "rationale": "T014可疑卖家先交付后付款及T058普通先付款互为场景例外，condition明确保留，没有自相矛盾。",
+          "issues": []
+        },
+        {
+          "goal_id": "G007",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I06"
+          ],
+          "rationale": "与原文“通过商家图库及商品多样性开放地发现适合的购买选择”一致；DOC036:T022「I don't have a particular product in mind.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G008",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I12"
+          ],
+          "rationale": "与原文“不登录也能浏览、搜索及查看商家资料”一致；DOC036:T024「I would have loved to use the application without signing in」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G009",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I12"
+          ],
+          "rationale": "与原文“不登录也能浏览、搜索及查看商家资料”一致；DOC036:T024「I would have loved to use the application without signing in」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G010",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I05"
+          ],
+          "rationale": "与原文“重用历史搜索快速回到以前访问过的商家”一致；DOC036:T024「I don't have to. Always, you know, search for vendors. I can just pick one I use…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G011",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I07"
+          ],
+          "rationale": "与原文“查看评论、点赞及其与商品发布时间的合理关系以判断商家可信度”一致；DOC036:T024「The good with the gallery is that when you go to the gallery you have people com…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G012",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I01",
+            "DOC036:I06"
+          ],
+          "rationale": "T024评论不仅帮助识别可信度，最后还帮助判断送女友是否适合；独立礼物选择线索有据，冻结清单未单列此作用。",
+          "issues": []
+        },
+        {
+          "goal_id": "G013",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I15"
+          ],
+          "rationale": "与原文“把个人分享限定给亲近朋友以保护生活隐私”一致；DOC036:T026「I make sure I have a private account」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G014",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I15"
+          ],
+          "rationale": "与原文“把个人分享限定给亲近朋友以保护生活隐私”一致；DOC036:T026「I make sure I have a private account」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G015",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I16"
+          ],
+          "rationale": "与原文“通过关注关系在电话号码或邮箱变更后仍能重新联系朋友”一致；DOC036:T030「I can always, you know, reconnect with you by getting in touch with you, using u…」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G016",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I16"
+          ],
+          "rationale": "T030希望进一步了解交流对象并关注是保留联系的选定办法，可与未来丢号再联系结果分开。",
+          "issues": []
+        },
+        {
+          "goal_id": "G017",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I13"
+          ],
+          "rationale": "与原文“限制不必要使用、避免无限滚动等机制耗费时间与影响消费”一致；DOC036:T032「only use it when I have, you know, a need for it.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G018",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I13"
+          ],
+          "rationale": "与原文“限制不必要使用、避免无限滚动等机制耗费时间与影响消费”一致；DOC036:T032「only use it when I have, you know, a need for it.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G019",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I14"
+          ],
+          "rationale": "T052只购物期暂留登录，是本人绕行；结束后退出与理想匿名浏览不矛盾。",
+          "issues": []
+        },
+        {
+          "goal_id": "G020",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I03"
+          ],
+          "rationale": "与原文“在新地点快速发现本地商家、货品、位置和联系方式”一致；DOC036:T056「when you go to a new place. You don't really know, like the vendors there」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G021",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I10"
+          ],
+          "rationale": "与原文“直接在商家页面看到商品价格以减少联系询价”一致；DOC036:T058「I feel like they should put on the website on. I'm sorry on the pages」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G022",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I11"
+          ],
+          "rationale": "与原文“沟通价格、付款方式和送货地址并接收交付通知取得商品”一致；DOC036:T058「ask for the phone number I can use for the payment.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G023",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I11"
+          ],
+          "rationale": "与原文“沟通价格、付款方式和送货地址并接收交付通知取得商品”一致；DOC036:T058「ask for the phone number I can use for the payment.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G024",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I11"
+          ],
+          "rationale": "与原文“沟通价格、付款方式和送货地址并接收交付通知取得商品”一致；DOC036:T058「ask for the phone number I can use for the payment.」。依本人的具体场景/记录中保留的条件或推断强度可支持，未解释成普遍保证。",
+          "issues": []
+        },
+        {
+          "goal_id": "G025",
+          "judgment": "supported",
+          "intent_ids": [
+            "DOC036:I11"
+          ],
+          "rationale": "T058供应商电话通知已到/将到再收货都保留，非自动端到端物流保证。",
+          "issues": []
+        }
+      ],
+      "relation_assessments": [
+        {
+          "relation_id": "R001",
+          "judgment": "consistent",
+          "rationale": "T012搜索供货商是T010礼物采购途径。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R002",
+          "judgment": "consistent",
+          "rationale": "T022无预定商品的多样浏览是挑礼物途径。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R003",
+          "judgment": "consistent",
+          "rationale": "T024评论可帮助礼物是否适合的判断，不保证合意。 当前按contribution/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R004",
+          "judgment": "consistent",
+          "rationale": "T014可疑卖家先交付再付款是防该损失策略。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R005",
+          "judgment": "consistent",
+          "rationale": "T024/T062互动线索可帮助防可疑账号，无安全保证。 当前按contribution/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R006",
+          "judgment": "consistent",
+          "rationale": "T030关注连接是丢号码后仍可联络的所选手段。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R007",
+          "judgment": "consistent",
+          "rationale": "T052退出增加访问阻力用于限制无目的使用。 当前按operationalization/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R008",
+          "judgment": "consistent",
+          "rationale": "T058先问价再取支付号码支付，顺序有据。 当前按precedes/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R009",
+          "judgment": "consistent",
+          "rationale": "T058普通情境支付后确认地址，别混入可疑先货后款情境。 当前按precedes/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R010",
+          "judgment": "consistent",
+          "rationale": "T058确认地址后等待电话和收货，顺序成立。 当前按precedes/supported状态评价，不等同充分精化。"
+        },
+        {
+          "relation_id": "R011",
+          "judgment": "needs_revision",
+          "rationale": "T056商家位置和货品信息是T012搜索后获得的价值；原文没有说明先得这些信息再贡献查找帐号，当前方向缺直接依据，宜由搜索贡献到本地商家了解。 当前按contribution/supported状态评价，不等同充分精化。"
+        }
+      ],
+      "group_assessments": [
+        {
+          "group_id": "F001",
+          "judgment": "consistent",
+          "rationale": "T014/T024/T062互动和先交货付款只处理部分风险，F001承认可伪造及普通交易例外，候选partial合理。"
+        }
+      ]
+    }
+  ]
+}

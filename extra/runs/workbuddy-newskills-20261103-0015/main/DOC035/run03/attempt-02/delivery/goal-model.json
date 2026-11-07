@@ -1,0 +1,1773 @@
+{
+  "schema_version": "goalforge-kaos-2",
+  "model_id": "DOC035-goal-model",
+  "version": "v1",
+  "parent": null,
+  "scope": {
+    "document_id": "DOC035",
+    "coverage": {
+      "scope": "provided_material",
+      "source_ids": [
+        "DOC035:T000",
+        "DOC035:T001",
+        "DOC035:T002",
+        "DOC035:T003",
+        "DOC035:T004",
+        "DOC035:T005",
+        "DOC035:T006",
+        "DOC035:T007",
+        "DOC035:T008",
+        "DOC035:T009",
+        "DOC035:T010",
+        "DOC035:T011",
+        "DOC035:T012",
+        "DOC035:T013",
+        "DOC035:T014",
+        "DOC035:T015",
+        "DOC035:T016",
+        "DOC035:T017",
+        "DOC035:T018",
+        "DOC035:T019",
+        "DOC035:T020",
+        "DOC035:T021",
+        "DOC035:T022",
+        "DOC035:T023",
+        "DOC035:T024",
+        "DOC035:T025",
+        "DOC035:T026",
+        "DOC035:T027",
+        "DOC035:T028",
+        "DOC035:T029",
+        "DOC035:T030",
+        "DOC035:T031",
+        "DOC035:T032",
+        "DOC035:T033",
+        "DOC035:T034",
+        "DOC035:T035",
+        "DOC035:T036",
+        "DOC035:T037",
+        "DOC035:T038",
+        "DOC035:T039",
+        "DOC035:T040",
+        "DOC035:T041",
+        "DOC035:T042",
+        "DOC035:T043",
+        "DOC035:T044",
+        "DOC035:T045",
+        "DOC035:T046",
+        "DOC035:T047",
+        "DOC035:T048",
+        "DOC035:T049"
+      ],
+      "omissions": []
+    }
+  },
+  "goals": [
+    {
+      "goal_id": "G001",
+      "statement": "Get the news of an event within a couple of days of the event happening",
+      "actor": "Stakeholder",
+      "conditions": [
+        "For events that have just happened",
+        "Timing matters for personal interests in fast-moving technology and politics"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 I would like / I like 明确表达在事件发生后几天内得到新闻，主体、对象与时间范围一致；同段强调时机对个人兴趣很重要，T009 的过时新闻例子仅作反证说明，未构成相反要求。条件与偏好强度已保留在 context。"
+      },
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ]
+    },
+    {
+      "goal_id": "G002",
+      "statement": "Receive all breaking news of the day by the end of the day, instead of 4 days later when already read or heard",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Importance rated 9 on a 0 to 10 scale",
+        "Applies to the web application or application used to read news"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 should at least give me all the breaking news ... by the end of the day 明确要求当天全部突发新闻的时点，并用 instead of 4 days later 保留否定；9/10 强度由同段评分句支持，写入 context 不自造指标。"
+      },
+      "evidence_ids": [
+        "E0003",
+        "E0004"
+      ]
+    },
+    {
+      "goal_id": "G003",
+      "statement": "Have article content that is small but comprehensive, covering every aspect of the event",
+      "actor": "Stakeholder",
+      "conditions": [
+        "For at least some articles",
+        "So that a roughly thousand-word article need not be read in limited time",
+        "Short and comprehensive are required together, not as alternatives"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T017 明确 small but comprehensive 且 covers every aspect，T013 明确 would love to have smaller content for some of the articles，T031 以 As I said 回指并说 content should not be long；三处同一愿望，短与全面为同一对象的并列限定（AND），保留不拆，也不把举例的千字数固化为指标。"
+      },
+      "evidence_ids": [
+        "E0005",
+        "E0006",
+        "E0007"
+      ]
+    },
+    {
+      "goal_id": "G004",
+      "statement": "Have no ads on the news page and a reading experience not hammered by unnecessary ads",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Ads that cover content make the article difficult to read"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文两处以 ideal ... would be not having ads / not hammered by unnecessary ads 明确表达避免型结果，第三句说明广告遮挡内容的障碍；保留否定 unnecessary 与 not having，未把障碍取反当成唯一补救方案，也未升级为对所有平台的强制要求。"
+      },
+      "evidence_ids": [
+        "E0008",
+        "E0009",
+        "E0010"
+      ]
+    },
+    {
+      "goal_id": "G005",
+      "statement": "Avoid excessive/spam notifications that lead to missing important news",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Notifications from news websites and applications",
+        "Missing important news is the stated consequence to be avoided"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T021 以 should not be spammed 明确约束并以 because ... leads to missing some important news 给出后果，T013 以 might lead to missing a few important news 佐证；两处同一条件，T015 演唱会例子是具体实例不另造固定目标。保留避免型结果与后果，不把抱怨升级为已证明障碍或零误差要求。"
+      },
+      "evidence_ids": [
+        "E0011",
+        "E0012"
+      ]
+    },
+    {
+      "goal_id": "G006",
+      "statement": "Present a notification with just the headline on top, plus the article image on the left if there is one, plus a few words of the preface if written",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Image is included only if the article has one",
+        "Preface words are included only if a preface was written",
+        "Purpose is to catch interest so the article is read from the notification"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 for example ... should just contain the headline 给出通知构成的明确要求，并用两个 if 条件限定图片与前言、用 can / would be great 保留可选强度与顺序（左侧图片、顶部标题）；多个限定属同一通知对象的并列约束，不机械拆成多目标，也不把示例固化为唯一版式。"
+      },
+      "evidence_ids": [
+        "E0013"
+      ]
+    },
+    {
+      "goal_id": "G007",
+      "statement": "Receive news updates via notifications tailored to my reading behavior and interests (preferred channel)",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Stated preference (great channel), not a mandatory requirement",
+        "Applies when using mobile news applications/portals"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文在回答偏好渠道时明确称按行为追踪的通知是 great channel to receive news updates，主体、方式（track my behavior / according to that）与偏好方向一致；保留偏好强度，不把个人偏好升级为全体默认或强制流程。"
+      },
+      "evidence_ids": [
+        "E0014"
+      ]
+    },
+    {
+      "goal_id": "G008",
+      "statement": "Receive news recommendations curated to my habits and interests (best-liked feature and a reason to choose a platform)",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Explicit preference (big fan / best feature), not upgraded to a mandatory requirement",
+        "Recommendations are based on searches and Google App activity"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T039 称推荐为 best feature、T021 称 great experience、T043 列为选择平台的标准、T047 自称 big fan；多处明确表达按习惯/兴趣定制的偏好与维持意图，方向一致。保留推荐方式与偏好强度，不把正面评价升格为必须，也不因多处出现而另造重复节点。"
+      },
+      "evidence_ids": [
+        "E0015",
+        "E0016",
+        "E0017"
+      ]
+    },
+    {
+      "goal_id": "G009",
+      "statement": "Have a feature to disable a topic/event so less related news is shown",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Analogous to Instagram seeing less of certain reels/posts"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 there should be a feature to disable that topic 明确提出功能愿望，对象是对某话题/事件不感兴趣的新闻，方式是看少（see less of those）；保留该明确选定方式，未把 Instagram 类比固化为实现细节。其 caveat 另拆为 G010，避免把例外藏进条件后强化本目标。"
+      },
+      "evidence_ids": [
+        "E0018"
+      ]
+    },
+    {
+      "goal_id": "G010",
+      "statement": "Still show breaking news for a disabled topic/event, but not its in-depth articles or analysis",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Applies when a topic/event has been disabled via G009",
+        "This is the stated caveat/exception to the disable-topic feature"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文明确以 there is a caveat ... it should still show you the breaking news, but not the in depth articles ... but they should show breaking news 给出与 G009 方向不同的独立结果（仍显示突发新闻、不显示深度文章）；主体、条件与两处否定均逐字保留，作为例外单独承接而非删去或合并进 G009 的条件。"
+      },
+      "evidence_ids": [
+        "E0019"
+      ]
+    },
+    {
+      "goal_id": "G011",
+      "statement": "Have user-defined topic buckets to group multiple news articles and later read all articles of a chosen topic",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Like Pinterest / Google Images topic buckets",
+        "In addition to existing archive/bookmark features, not replacing them"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 I would love to have one feature 明确表达功能愿望，并完整给出自定义桶、多篇加入、按主题稍后读取全部相关文章三个环节；这些属同一功能的操作步骤与预期结果，不机械拆成多目标，也保留 Pinterest/Google Images 类比与与现有 bookmark 并存的前提。"
+      },
+      "evidence_ids": [
+        "E0020"
+      ]
+    },
+    {
+      "goal_id": "G012",
+      "statement": "Share news articles directly via WhatsApp (auto-opening the WhatsApp link), as the best way to share",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Stated preference (the best way), not a mandatory requirement",
+        "Current alternative is copying the link into chat applications"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 It is the best way to share news articles with others 明确评价直接 Whatsapp 分享（自动打开链接）为最佳方式；保留偏好方向与选定方式，不把 best way 升级为必须存在该功能，也不把现有复制链接做法当成要求。"
+      },
+      "evidence_ids": [
+        "E0021"
+      ]
+    },
+    {
+      "goal_id": "G013",
+      "statement": "Have a news aggregation feature provide all relevant information matched to my interests in a short time, not a lot of news",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Stated as the success criterion of a news aggregation feature (collecting news into a single view)"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [
+          "可辨部分：短时间内提供与兴趣相关的相关信息"
+        ],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [
+          "核对整句语义而非仅位置命中",
+          "识别转写破碎导致判据不完整",
+          "按 insufficient 保留并列为未决问题"
+        ],
+        "label": "insufficient",
+        "rationale": "原句多处破碎（it should provide a law、if that is、Make a deem、any sort of），not a lot 与 all the relevant information 的关系及成功判据无法确证；仅可辨短时间内提供与兴趣相关的相关信息这一倾向，完整表述缺乏可靠支持，按证据口径如实保留为支持不足，不升级为 direct/inferred，也不删去该候选。"
+      },
+      "evidence_ids": [
+        "E0022"
+      ]
+    },
+    {
+      "goal_id": "G014",
+      "statement": "Navigate from the homepage to articles to related/similar articles without getting confused",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Navigation includes articles similar to the one just read and articles previously read",
+        "A reason to choose one news platform over another"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 navigation is an important part 与 as an user should not get very confused while navigating 明确表达导航不困惑的结果，并列出首页→文章→相关/相似文章的导航范围；保留范围与否定，不把操作先后当成精化关系。"
+      },
+      "evidence_ids": [
+        "E0023"
+      ]
+    },
+    {
+      "goal_id": "G015",
+      "statement": "Have a user-friendly, intuitive UI so actions need no thought and news reading is smoother",
+      "actor": "Stakeholder",
+      "conditions": [
+        "An unintuitive UI would make me choose another news platform",
+        "Purpose is a smoother news reading experience"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文明确以 how user friendly ... not very intuitive ... would make me choose another news platform 表达 UI 直观性要求，并以 make my news reading experience more smoother 给出目的；保留条件、后果与目的，不把偏好升级为可量化指标或形式化验收标准。"
+      },
+      "evidence_ids": [
+        "E0024"
+      ]
+    },
+    {
+      "goal_id": "G016",
+      "statement": "See multiple sources and different stances for the same news, not only one source or one side",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G008"
+        ],
+        "reason": "T039 把多来源列为最有用的功能之一并明确说 you don't only see one side of that news，T011 强调不同出版物与知道来源，T031 以立场比较来源；由这些正面评价推断涉众希望继续拥有该能力。原文未出现 should/must 式明确要求，故按推断保留，不判 direct。",
+        "assumptions": [
+          "对现有正面功能评价可推断为希望继续拥有的维持意图"
+        ]
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [
+          "正面评价可推断为维持意图"
+        ],
+        "reasoning_steps": [
+          "核对多来源/多立场原句",
+          "区分现状正面评价与明确要求",
+          "以维持意图作有正面依据的推断"
+        ],
+        "label": "inferred",
+        "rationale": "位置与整句均命中：T039/T011 明确描述多来源、多立场与来源可见，但措辞是对 Google News 现状的正面评价而非明确要求，维持意图需经推断。已列明推断依据与必要假设，未把信念当事实，也未把正面评价升级为强制；整句含义在推断下得到支持，故 unsupported_parts 为空。"
+      },
+      "evidence_ids": [
+        "E0025",
+        "E0026"
+      ]
+    },
+    {
+      "goal_id": "G017",
+      "statement": "Have news sources cited so the origin of the news is visible",
+      "actor": "Stakeholder",
+      "conditions": [],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G016"
+        ],
+        "reason": "T011 把 all of the sources are cited 作为 Google News 可信度 one of the best 的原因，推断涉众希望维持来源被引用/可追溯；原文未以 should/must 提出要求，故按推断保留。",
+        "assumptions": [
+          "对可信度来源的正面评价可推断为维持意图"
+        ]
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [
+          "正面评价可推断为维持意图"
+        ],
+        "reasoning_steps": [
+          "核对来源被引用的原句",
+          "识别其作为可信度理由的角色",
+          "以维持意图作有正面依据的推断"
+        ],
+        "label": "inferred",
+        "rationale": "原句明确说明来源被引用是可信度评价的依据，位置与语义一致；但它是现状描述与评价，要求意味来自与 G016 同源的维持意图推断，已写明依据与假设，不升级为 direct，也不把 Google News 这一具体产品固化为唯一实现。"
+      },
+      "evidence_ids": [
+        "E0027"
+      ]
+    },
+    {
+      "goal_id": "G018",
+      "statement": "The company should not be able to store all the data I have been looking at",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Data privacy concern"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 should not be able to ... store all of the data 明确表达禁止性约束，主体（公司）、对象（浏览过的全部数据）与否定一致；保留 all 的范围与 should not 强度，未改写为绝对不收集任何数据。"
+      },
+      "evidence_ids": [
+        "E0028"
+      ]
+    },
+    {
+      "goal_id": "G019",
+      "statement": "News-publishing companies should not use my data to push their own agenda or propaganda",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Data privacy concern",
+        "Concerns the companies publishing the news"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 They should not be able to use this data to push some agenda of their own, or ... propaganda 明确表达禁止性约束，主体、用途与否定一致；与 G018 是不同动作（存储 vs 使用），分别保留，不合并丢掉任一范围。"
+      },
+      "evidence_ids": [
+        "E0029"
+      ]
+    },
+    {
+      "goal_id": "G020",
+      "statement": "Limit use of my data to recommendation systems as the only acceptable scope",
+      "actor": "Stakeholder",
+      "conditions": [
+        "The only limit the stakeholder is convinced to go to considering data privacy"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 the only limit that I am ... convinced to go to 明确把数据使用范围限定为推荐系统，保留 only 这一边界与 concerned 的顾虑语气；语句有重复停顿但边界含义可辨，未把该限定扩大为全面禁止或缩小为可有可无的偏好。"
+      },
+      "evidence_ids": [
+        "E0030"
+      ]
+    },
+    {
+      "goal_id": "G021",
+      "statement": "Avoid an automated news curation system using knowledge of my interests to push an agenda on me",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Expressed as a very serious concern with may/might (belief, not established fact)",
+        "Related to but not identical with recommendation features"
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G008"
+        ],
+        "reason": "T029 明确担心自动策展系统若掌握兴趣 might be able to push some agenda on me 并称 very serious concern；由此推断涉众希望避免该结果。原文用 may/might 表达的是顾虑/信念而非已证实事实，故不把信念当事实，也不把顾虑升级为 direct 的明确要求。",
+        "assumptions": [
+          "把顾虑解读为希望避免相应结果的意图",
+          "自动策展系统与推荐系统相关但不等同"
+        ]
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [
+          "顾虑可解读为避免意图",
+          "信念不当事实用"
+        ],
+        "reasoning_steps": [
+          "核对顾虑原句与强度词",
+          "保留 may/might 的不确定性",
+          "区分与推荐偏好的条件差异"
+        ],
+        "label": "inferred",
+        "rationale": "原句以 one concern / very serious concern 明确表达顾虑，位置与语义一致；希望避免该结果属有正面依据的推断，已写明依据与假设，并保留 may/might 的不确定性，不把信念内容当成已验证事实，也不与 T047 偏好推荐判为矛盾（条件不同）。"
+      },
+      "evidence_ids": [
+        "E0031"
+      ]
+    },
+    {
+      "goal_id": "G022",
+      "statement": "Have news content available on topics I am interested in: technology (devices, AI models, companies, layoffs), sports (F1, cricket), and Indian and American politics",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Stated interests/preferences, not a mandatory content filter",
+        "Mentioned as found in recommendations or headlines"
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G008"
+        ],
+        "reason": "T007 详细列出最感兴趣的内容类别（technology、sports、Indian and American politics），结合多处要求按兴趣推荐，推断系统应覆盖这些内容范围；原文仅陈述口味兴趣（I'm interested in / I find those interesting），未直接要求系统提供或过滤，故按推断并保留偏好强度。",
+        "assumptions": [
+          "兴趣类别可作为推荐内容范围的条件，而非独立强制需求"
+        ]
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [
+          "口味背景结合推荐偏好可推断内容范围"
+        ],
+        "reasoning_steps": [
+          "核对三类兴趣原句",
+          "区分口味背景与明确系统要求",
+          "结合 G008 推断内容范围并保留偏好强度"
+        ],
+        "label": "inferred",
+        "rationale": "三类兴趣原句逐字命中，位置与语义一致；但原文回答的是最感兴趣的内容（口味背景），系统应覆盖这些内容属结合按兴趣推荐推断出的范围，已写明依据与假设，不把口味自动变成强制需求，也不把 F1 周末等举例固化为固定业务目标。"
+      },
+      "evidence_ids": [
+        "E0032",
+        "E0033",
+        "E0034"
+      ]
+    },
+    {
+      "goal_id": "G023",
+      "statement": "Stick to headlines only whenever I don't have time",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Conditional on not having time",
+        "Described as part of the usual reading process"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 or I just stick to headlines whenever I don't have time 明确表达带条件的行为选择，条件（没时间）与结果（只看标题）一致；保留该条件性偏好，不把习惯升级为强制流程，也不因它是现状描述就删除有条件的行为意图。"
+      },
+      "evidence_ids": [
+        "E0035"
+      ]
+    },
+    {
+      "goal_id": "G024",
+      "statement": "Use Google News as the preferred platform for reading news",
+      "actor": "Stakeholder",
+      "conditions": [
+        "Stated preference, not a mandate or an exclusive requirement"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文以 my preferred platform ... would be Google news 明确表达首选平台偏好，主体与对象一致；保留 preferred 的偏好强度，未升级为必须使用或排除其他平台，也未把该具体产品推断为对所有实现的要求。"
+      },
+      "evidence_ids": [
+        "E0036"
+      ]
+    }
+  ],
+  "refinement_groups": [],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC035:T009",
+      "material_id": "M001",
+      "quote": "If an event has happened today, then I would like to get the news. I like to get the news of the event in a couple of days itself.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4056,
+      "end_char": 4186,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T009",
+          "segment_start": 583,
+          "segment_end": 713,
+          "start_char": 4056,
+          "end_char": 4186
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3473,
+        "end_char": 4186
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC035:T009",
+      "material_id": "M001",
+      "quote": "So the timing is a very important part for my own personal interests, and even in the fast moving technology and political world timing is very important.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3901,
+      "end_char": 4055,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T009",
+          "segment_start": 428,
+          "segment_end": 582,
+          "start_char": 3901,
+          "end_char": 4055
+        }
+      ],
+      "original_locator": {
+        "turn": "9",
+        "start_char": 3473,
+        "end_char": 4186
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC035:T037",
+      "material_id": "M001",
+      "quote": "and like, if a web, application or application that I'm using to read news, it should at least give me all the breaking news from the from the day by the end of the day, instead of giving it to me 4 days later, when I have already read it, or I have already heard it from someone else",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14214,
+      "end_char": 14498,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T037",
+          "segment_start": 221,
+          "segment_end": 505,
+          "start_char": 14214,
+          "end_char": 14498
+        }
+      ],
+      "original_locator": {
+        "turn": "37",
+        "start_char": 13993,
+        "end_char": 14553
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC035:T037",
+      "material_id": "M001",
+      "quote": "Yeah. So for breaking news alerts an application or web application should give it like on a scale of 0 to sorry for on a scale of 0 to 10 I would I would say that 9 is my level for importance to see breaking news alerts",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13993,
+      "end_char": 14213,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T037",
+          "segment_start": 0,
+          "segment_end": 220,
+          "start_char": 13993,
+          "end_char": 14213
+        }
+      ],
+      "original_locator": {
+        "turn": "37",
+        "start_char": 13993,
+        "end_char": 14553
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC035:T017",
+      "material_id": "M001",
+      "quote": "And another thing would be if the article is smaller but comprehensive, it would be a great experience if the article is, if the article or the news content is small, but it is, it covers every aspect of the it covers every aspect of the event, or whatever it is talking about.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7584,
+      "end_char": 7861,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T017",
+          "segment_start": 372,
+          "segment_end": 649,
+          "start_char": 7584,
+          "end_char": 7861
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 7212,
+        "end_char": 7861
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC035:T013",
+      "material_id": "M001",
+      "quote": "So a huge, like the huge content in these articles, is also a challenge that I am that I have been facing with, and would I would love to have smaller content for some of for for some of the articles to get up to speed with.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6073,
+      "end_char": 6297,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T013",
+          "segment_start": 972,
+          "segment_end": 1196,
+          "start_char": 6073,
+          "end_char": 6297
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 5101,
+        "end_char": 6297
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC035:T031",
+      "material_id": "M001",
+      "quote": "One thing that matters is the length of the article. As I said, the content should not be long",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11940,
+      "end_char": 12034,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T031",
+          "segment_start": 39,
+          "segment_end": 133,
+          "start_char": 11940,
+          "end_char": 12034
+        }
+      ],
+      "original_locator": {
+        "turn": "31",
+        "start_char": 11901,
+        "end_char": 13161
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC035:T017",
+      "material_id": "M001",
+      "quote": "So my ideal news reading experience would be not having ads on the news page.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7506,
+      "end_char": 7583,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T017",
+          "segment_start": 294,
+          "segment_end": 371,
+          "start_char": 7506,
+          "end_char": 7583
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 7212,
+        "end_char": 7861
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC035:T017",
+      "material_id": "M001",
+      "quote": "My ideal news reading experience is is an experience that is not hammered by unnecessary ads.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7212,
+      "end_char": 7305,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T017",
+          "segment_start": 0,
+          "segment_end": 93,
+          "start_char": 7212,
+          "end_char": 7305
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 7212,
+        "end_char": 7861
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC035:T017",
+      "material_id": "M001",
+      "quote": "There are in some of the news articles. There are a lot of ads that even cover the content, and it is difficult to read the news article or the content that the article is about because of these ads.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7306,
+      "end_char": 7505,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T017",
+          "segment_start": 94,
+          "segment_end": 293,
+          "start_char": 7306,
+          "end_char": 7505
+        }
+      ],
+      "original_locator": {
+        "turn": "17",
+        "start_char": 7212,
+        "end_char": 7861
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC035:T021",
+      "material_id": "M001",
+      "quote": "But again, notification should not be should not be spammed, because again, as I said, it leads to it leads to missing some important news.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8897,
+      "end_char": 9036,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T021",
+          "segment_start": 813,
+          "segment_end": 952,
+          "start_char": 8897,
+          "end_char": 9036
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 8084,
+        "end_char": 9036
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC035:T013",
+      "material_id": "M001",
+      "quote": "if you turn the notifications on for for these websites, or for these applications, they tend to spam a lot. They tend to spam a lot in in a day, and this might lead to missing a few important news that would really affect me.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5311,
+      "end_char": 5537,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T013",
+          "segment_start": 210,
+          "segment_end": 436,
+          "start_char": 5311,
+          "end_char": 5537
+        }
+      ],
+      "original_locator": {
+        "turn": "13",
+        "start_char": 5101,
+        "end_char": 6297
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC035:T023",
+      "material_id": "M001",
+      "quote": "Yeah. So, for example, the notification should just contain the headline. if they have, if they have included an image in the article, the image can be the image can be put to the side in the notification to the left side of the notification, the headline on the top, and if they have written a preface, a few words of the preface would be great to catch my interest in the notification, and I would for sure be reading that article from that notification.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9225,
+      "end_char": 9681,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T023",
+          "segment_start": 0,
+          "segment_end": 456,
+          "start_char": 9225,
+          "end_char": 9681
+        }
+      ],
+      "original_locator": {
+        "turn": "23",
+        "start_char": 9225,
+        "end_char": 9681
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC035:T021",
+      "material_id": "M001",
+      "quote": "And if I'm using mobile applications for these for these news for the news portals, I have notifications also also provide to be a great what do we say? Great channel to receive news updates because they track my, they kind of track my behavior. What articles I read, and what articles I I am interested in, and they give notifications according to that.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8542,
+      "end_char": 8896,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T021",
+          "segment_start": 458,
+          "segment_end": 812,
+          "start_char": 8542,
+          "end_char": 8896
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 8084,
+        "end_char": 9036
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC035:T039",
+      "material_id": "M001",
+      "quote": "So one feature that I have that I found out to be the best is the recommendation. Oh. it tracks my behavior, I guess it tracks, and it tracks my behavior. It tracks my habits and it like, it shows the news that I am interested in on the Google search on the Google search page that that has been a great thing.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14798,
+      "end_char": 15108,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T039",
+          "segment_start": 122,
+          "segment_end": 432,
+          "start_char": 14798,
+          "end_char": 15108
+        }
+      ],
+      "original_locator": {
+        "turn": "39",
+        "start_char": 14676,
+        "end_char": 15859
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC035:T021",
+      "material_id": "M001",
+      "quote": "I use the recommendations that are present in the Google Search Page. Whenever you go to the Google Search Page, you find the recommendations for different kinds of news. They are curated to what you search and what you do on the Google App, and that has been a great experience for me until now.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8166,
+      "end_char": 8462,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T021",
+          "segment_start": 82,
+          "segment_end": 378,
+          "start_char": 8166,
+          "end_char": 8462
+        }
+      ],
+      "original_locator": {
+        "turn": "21",
+        "start_char": 8084,
+        "end_char": 9036
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC035:T043",
+      "material_id": "M001",
+      "quote": "There are multiple features that would make me choose one news platform over the another one is recommendations. Like. what do we say? Recommendations based on my habits, based on my interests that I've found that I've been that I've been going through",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16949,
+      "end_char": 17201,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T043",
+          "segment_start": 55,
+          "segment_end": 307,
+          "start_char": 16949,
+          "end_char": 17201
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 16894,
+        "end_char": 17995
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC035:T041",
+      "material_id": "M001",
+      "quote": "Okay, so for this. I think there should be. There should be a feature to disable the topic like we have an Instagram where we don't like some reels or some post we are, we are able to. We are able to see less of those. There should be a feature that will that will also do this for news. So for some news you don't want to see some news related to some related to some topic related to some event, there should be a feature to disable that topic.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15998,
+      "end_char": 16444,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T041",
+          "segment_start": 0,
+          "segment_end": 446,
+          "start_char": 15998,
+          "end_char": 16444
+        }
+      ],
+      "original_locator": {
+        "turn": "41",
+        "start_char": 15998,
+        "end_char": 16777
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC035:T041",
+      "material_id": "M001",
+      "quote": "But another, there is a caveat with this, with this feature that if there is a breaking news with that in that event that you're not interested in, it should still show you the breaking news, but not the not the in depth articles or not. Like not the in depth, analysis of those events or topics, but they should show breaking news.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16445,
+      "end_char": 16777,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T041",
+          "segment_start": 447,
+          "segment_end": 779,
+          "start_char": 16445,
+          "end_char": 16777
+        }
+      ],
+      "original_locator": {
+        "turn": "41",
+        "start_char": 15998,
+        "end_char": 16777
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC035:T027",
+      "material_id": "M001",
+      "quote": "But I would love to have. I would love to have one feature, that is, topic buckets like defined topic buckets like they have in Pinterest or Google images that you can define your own topic buckets. And then you can add multiple news articles to that topic bucket. So whenever you want to do some later reading, you can just go to the you can just go to the topic that you want to read and get all the articles that are there that are related to that topic.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10512,
+      "end_char": 10969,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T027",
+          "segment_start": 193,
+          "segment_end": 650,
+          "start_char": 10512,
+          "end_char": 10969
+        }
+      ],
+      "original_locator": {
+        "turn": "27",
+        "start_char": 10319,
+        "end_char": 10969
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC035:T025",
+      "material_id": "M001",
+      "quote": "or if there is an option to share it directly via Whatsapp, which like, automatically opens the Whatsapp link. It is. It is the best way to share news articles with others.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10007,
+      "end_char": 10179,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T025",
+          "segment_start": 225,
+          "segment_end": 397,
+          "start_char": 10007,
+          "end_char": 10179
+        }
+      ],
+      "original_locator": {
+        "turn": "25",
+        "start_char": 9782,
+        "end_char": 10179
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC035:T035",
+      "material_id": "M001",
+      "quote": "Yeah. if a news aggregation feature is there, it should provide a law. It should provide not a lot, but it should provide all the relevant information that again, relevant information compared with my interest in a short amount of time, if that is.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13418,
+      "end_char": 13666,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T035",
+          "segment_start": 0,
+          "segment_end": 248,
+          "start_char": 13418,
+          "end_char": 13666
+        }
+      ],
+      "original_locator": {
+        "turn": "35",
+        "start_char": 13418,
+        "end_char": 13828
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC035:T043",
+      "material_id": "M001",
+      "quote": "another. Yeah, Major, important thing is another important thing is navigations, navigations through various news and navigations, through the homepage to the article to the related articles the articles which are similar to the article that you have just read, and articles that you have. That articles that you have been reading, so navigation is an important part. You should not like the as as an user should not get very confused while navigating",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17202,
+      "end_char": 17653,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T043",
+          "segment_start": 308,
+          "segment_end": 759,
+          "start_char": 17202,
+          "end_char": 17653
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 16894,
+        "end_char": 17995
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC035:T043",
+      "material_id": "M001",
+      "quote": "and another part would be how user friendly the application of the portal is if I have to. If I have to like, think about doing certain actions, and it is not very intuitive in the in the ui of the application. It would make me choose another news platform over it. So to like, make my news to make my news reading experience more smoother.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17655,
+      "end_char": 17995,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T043",
+          "segment_start": 761,
+          "segment_end": 1101,
+          "start_char": 17655,
+          "end_char": 17995
+        }
+      ],
+      "original_locator": {
+        "turn": "43",
+        "start_char": 16894,
+        "end_char": 17995
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC035:T039",
+      "material_id": "M001",
+      "quote": "And one thing that Google news does is it gives multiple sources for the same for this, for a similar news. So you don't get what do we say you don't get You don't get news from only one source, and you don't only see one side of that news you get to see multiple sites.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15109,
+      "end_char": 15379,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T039",
+          "segment_start": 433,
+          "segment_end": 703,
+          "start_char": 15109,
+          "end_char": 15379
+        }
+      ],
+      "original_locator": {
+        "turn": "39",
+        "start_char": 14676,
+        "end_char": 15859
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC035:T011",
+      "material_id": "M001",
+      "quote": "And there are like on Google News itself, you find different publications and articles from different publications. So you tend to get what? From where the news is coming from.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4507,
+      "end_char": 4683,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T011",
+          "segment_start": 195,
+          "segment_end": 371,
+          "start_char": 4507,
+          "end_char": 4683
+        }
+      ],
+      "original_locator": {
+        "turn": "11",
+        "start_char": 4312,
+        "end_char": 4946
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC035:T011",
+      "material_id": "M001",
+      "quote": "for the credibility of the news source the application that I use Google news is one of the best, because all of the sources are cited. Like all of the sources are cited in Google News.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4321,
+      "end_char": 4506,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T011",
+          "segment_start": 9,
+          "segment_end": 194,
+          "start_char": 4321,
+          "end_char": 4506
+        }
+      ],
+      "original_locator": {
+        "turn": "11",
+        "start_char": 4312,
+        "end_char": 4946
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC035:T047",
+      "material_id": "M001",
+      "quote": "But the company should not be able to like store all of the data that I have been looking at",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18290,
+      "end_char": 18382,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T047",
+          "segment_start": 97,
+          "segment_end": 189,
+          "start_char": 18290,
+          "end_char": 18382
+        }
+      ],
+      "original_locator": {
+        "turn": "47",
+        "start_char": 18193,
+        "end_char": 18813
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC035:T047",
+      "material_id": "M001",
+      "quote": "and the companies that are that are like that are publishing this news. They should not be. They should not be able to use this data to push some agenda of their own, or to push some push, some propaganda of their own using my data.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18384,
+      "end_char": 18616,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T047",
+          "segment_start": 191,
+          "segment_end": 423,
+          "start_char": 18384,
+          "end_char": 18616
+        }
+      ],
+      "original_locator": {
+        "turn": "47",
+        "start_char": 18193,
+        "end_char": 18813
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC035:T047",
+      "material_id": "M001",
+      "quote": "So data privacy is, I am. I'm concerned about data privacy using it for recommendation systems is the only limit that I am able to, that that I am convinced to go to. Considering my data, privacy.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18617,
+      "end_char": 18813,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T047",
+          "segment_start": 424,
+          "segment_end": 620,
+          "start_char": 18617,
+          "end_char": 18813
+        }
+      ],
+      "original_locator": {
+        "turn": "47",
+        "start_char": 18193,
+        "end_char": 18813
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC035:T029",
+      "material_id": "M001",
+      "quote": "And that is why that is one concern that I have with automated news curation systems that if they are able to. If they're able to get my interests, they they might be they might be able to push some agenda on me. And this is a this is a very serious concern that I have with automated use curation.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11469,
+      "end_char": 11767,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T029",
+          "segment_start": 336,
+          "segment_end": 634,
+          "start_char": 11469,
+          "end_char": 11767
+        }
+      ],
+      "original_locator": {
+        "turn": "29",
+        "start_char": 11133,
+        "end_char": 11767
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0032",
+      "source_id": "DOC035:T007",
+      "material_id": "M001",
+      "quote": "So some of the some of the content that I'm interested is in technology. So different companies are releasing news different companies releasing new devices or recently different companies releasing their new AI models. if there is any. If there is any news about a company or about their employees, layoffs or anything anything related to technology.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2390,
+      "end_char": 2741,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T007",
+          "segment_start": 6,
+          "segment_end": 357,
+          "start_char": 2390,
+          "end_char": 2741
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 2384,
+        "end_char": 3351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0033",
+      "source_id": "DOC035:T007",
+      "material_id": "M001",
+      "quote": "If there is any relevant news regarding f 1 during like of the Grand Prix or of the off season off season off track politics that happens in f 1 or anything related to it, or even sports news related to cricket. I find those interesting.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2826,
+      "end_char": 3063,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T007",
+          "segment_start": 442,
+          "segment_end": 679,
+          "start_char": 2826,
+          "end_char": 3063
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 2384,
+        "end_char": 3351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0034",
+      "source_id": "DOC035:T007",
+      "material_id": "M001",
+      "quote": "And this is another major aspect of reading news is getting to know getting to know about politics, both Indian and American politics as it as it affects us.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3064,
+      "end_char": 3221,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T007",
+          "segment_start": 680,
+          "segment_end": 837,
+          "start_char": 3064,
+          "end_char": 3221
+        }
+      ],
+      "original_locator": {
+        "turn": "7",
+        "start_char": 2384,
+        "end_char": 3351
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0035",
+      "source_id": "DOC035:T003",
+      "material_id": "M001",
+      "quote": "or I just stick to headlines whenever I don't have time",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1357,
+      "end_char": 1412,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T003",
+          "segment_start": 640,
+          "segment_end": 695,
+          "start_char": 1357,
+          "end_char": 1412
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 717,
+        "end_char": 1662
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0036",
+      "source_id": "DOC035:T003",
+      "material_id": "M001",
+      "quote": "my preferred platform for reading news would be Google news",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 726,
+      "end_char": 785,
+      "candidate_locations": [
+        {
+          "source_id": "DOC035:T003",
+          "segment_start": 9,
+          "segment_end": 68,
+          "start_char": 726,
+          "end_char": 785
+        }
+      ],
+      "original_locator": {
+        "turn": "3",
+        "start_char": 717,
+        "end_char": 1662
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "issues": [
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "原文尚不足以支持这项目标，或存在相反证据。",
+      "blocking": true
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "T035 关于聚合功能成功标准的原句多处破碎（it should provide a law、Make a deem），not a lot 与 all the relevant information 的关系及验收判据需回原文确认；本轮按支持不足如实保留，未升级。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G021",
+      "message": "T029 对自动策展系统推议程的表述使用 may/might，是顾虑/信念而非已证实事实；请确认是否应作为明确的避免型需求，以及其与偏好推荐并存的条件差异。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G016",
+      "message": "T011/T039 对来源被引用、多来源多立场是现状功能的正面评价，未出现 should/must；请确认将其作为推断的维持意图是否恰当。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G017",
+      "message": "T011/T039 对来源被引用、多来源多立场是现状功能的正面评价，未出现 should/must；请确认将其作为推断的维持意图是否恰当。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G022",
+      "message": "T007 列出的技术/体育/政治兴趣类别属于口味背景，是否应作为推荐系统的内容范围条件而非独立目标，需确认。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "T041 的 caveat（被禁用话题仍显示突发新闻、不显示深度文章）已拆为独立目标并保留例外方向；请确认拆分粒度与例外是否完整传递。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "T041 的 caveat（被禁用话题仍显示突发新闻、不显示深度文章）已拆为独立目标并保留例外方向；请确认拆分粒度与例外是否完整传递。",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC035-goal-model",
+      "message": "整篇为需求获取访谈，多处为现状流程、寒暄与偏好描述；本轮对纯现状/寒暄窗口不另造目标，请确认提取范围与口径。",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC035-goal-model",
+      "message": "原文未出现明确的具体化/实现方式/贡献/过程先后关系原句（多为同主题并列、操作先后、偏好张力或条件例外），本轮不建立独立 relations 与 AND 精化组；请确认该建模判断是否恰当、是否遗漏可成立的联系方式。",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "聚合功能成功标准原句破碎，需回原文确认 not a lot 与 all the relevant information 的关系及验收判据，再决定是否收窄表述或补充依据；当前按 insufficient 保留。",
+      "blocking": false
+    }
+  ],
+  "limitations": [
+    "原文为英文访谈转写，含大量重复、自我修正与破碎语句（如 T035 的 it should provide a law / Make a deem、T019/T033/T045 仅语气词），按原样保留未润色，不静默纠正。",
+    "未联网、未读取任何参考答案、历史目标、关系或评分；仅使用本任务目录的原文与冻结技能只读目录。",
+    "本任务为同一任务的续跑 attempt-02，从原文重新开始；未参考被外部中断的前一 attempt 产物（本目录初始仅有 brief.md 与 source/DOC035.json）。",
+    "转写中的 news caution system (T028)、automated use curation (T029)、a law (T035) 等按原音转写理解，未作拼写或同音纠正。",
+    "语义判断、独立联系与精化组判断由本生成会话编制；未执行独立语义评审或形式证明，人工接受状态保持待审。"
+  ],
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "822010f50e70de1196e7401185f964b89ab2a3a2f8b94f786c476f89913c9912"
+    },
+    {
+      "path": "attachments/judgments.json",
+      "sha256": "b72848a2b83b932a239f1f40ac1abb0b481951466db5adf1c38c6c771a2affa4"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "e6762c502fbd1f1f2eb3be46240e384cbde4480c73eb696651c574511346133a"
+    },
+    {
+      "path": "attachments/kaos-decisions.json",
+      "sha256": "9f0d26f3a11de943af6bd943c00235788c6b48c245e1c080074d27f832e43862"
+    }
+  ],
+  "review": {
+    "status": "pending"
+  },
+  "changes": [],
+  "relations": [],
+  "source_binding": {
+    "sha256": "e6762c502fbd1f1f2eb3be46240e384cbde4480c73eb696651c574511346133a"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "evaluation_type": "controlled_injection_not_natural_errors",
+  "injected_defect": "evaluated_pairs=999",
+  "original_model_sha256": "58c4f465cbf279a20838b8ad6bf3cf4f0cfa2d03e6e563b6ca253c434d237e95",
+  "original_preserved": true,
+  "executed": [
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\model-review\\scripts\\review_model.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-tests\\model-review-draft-1\\controlled-count-repair\\injected-model.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-tests\\model-review-draft-1\\controlled-count-repair\\proposal",
+        "--mode",
+        "propose"
+      ],
+      "returncode": 0,
+      "stdout": "{\"structure_status\": \"failed\", \"semantic_status\": \"not_run\", \"goal_count\": 9, \"pair_count\": 36, \"blocking_count\": 1, \"needs_review_count\": 6}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\model-review\\scripts\\review_model.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-tests\\model-review-draft-1\\controlled-count-repair\\injected-model.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-tests\\model-review-draft-1\\controlled-count-repair\\repaired",
+        "--patches",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-tests\\model-review-draft-1\\controlled-count-repair\\proposal\\patches.json"
+      ],
+      "returncode": 0,
+      "stdout": "{\"structure_status\": \"passed\", \"semantic_status\": \"not_run\", \"goal_count\": 9, \"pair_count\": 36, \"blocking_count\": 0, \"needs_review_count\": 6}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\skills\\goal-model-building\\scripts\\finalize_model.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-tests\\model-review-draft-1\\controlled-count-repair\\repaired\\repaired-model.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-tests\\model-review-draft-1\\controlled-count-repair\\repaired\\review-report.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-tests\\model-review-draft-1\\controlled-count-repair\\delivery"
+      ],
+      "returncode": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human_review\": \"pending\"}\n",
+      "stderr": ""
+    }
+  ],
+  "repair": [
+    {
+      "attempt_id": "A1",
+      "patch_ids": [
+        "PATCH-coverage"
+      ],
+      "before_version": "v0.1",
+      "before_core_sha256": "4ce77a0e382a583285896572b521152ab8ccba7b755e6c5bd5482f50eaa9d9d0",
+      "status": "applied",
+      "model_calls": 0,
+      "token_usage": null,
+      "stop_reason": "one_transaction_complete",
+      "after_version": "v0.1.r1",
+      "after_core_sha256": "47188fd80d189ed550e4ba2f9bd6b511dbc841f3b4f6c194e7f92592d33d229b",
+      "resolved_issue_ids": [
+        "I-6813c5d5afac"
+      ],
+      "new_issue_ids": [],
+      "elapsed_seconds": 0.0
+    }
+  ],
+  "rejected_patch": [
+    {
+      "attempt_id": "A1",
+      "patch_ids": [],
+      "before_version": "v0.1",
+      "before_core_sha256": "4ce77a0e382a583285896572b521152ab8ccba7b755e6c5bd5482f50eaa9d9d0",
+      "status": "rolled_back",
+      "model_calls": 0,
+      "token_usage": null,
+      "stop_reason": "Stale patch version or core hash",
+      "elapsed_seconds": 0.015
+    }
+  ],
+  "semantic_review": "not_run",
+  "human_review": "pending",
+  "model_calls": 0,
+  "token_usage": null
+}

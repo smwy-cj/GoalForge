@@ -1,0 +1,1557 @@
+{
+  "schema_version": "goalforge-tracing-draft-1",
+  "input_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\extra\\runs\\workbuddy-newskills-20261103-0015\\main\\DOC022\\run03\\attempt-02\\extraction.json",
+    "sha256": "b6c0ea23120251303d692f8698fd8b15b4fd9c33d109baa48fea71bba76742e4",
+    "model_version": "goalforge-extraction-3"
+  },
+  "target_model": null,
+  "semantic_binding": {
+    "schema_version": "goalforge-semantic-judgments-1",
+    "input_binding": {
+      "data_sha256": "1148bf593fcf5f6fc53f2d8cc4c17ffc78cbee16feb4ed2e782c9c34285dc7db",
+      "input_sha256": "b6c0ea23120251303d692f8698fd8b15b4fd9c33d109baa48fea71bba76742e4"
+    },
+    "bundle_sha256": "37a222b31d0f2ada1df44b438c93520d3b84492178864fca35fa422107cc280c"
+  },
+  "sources": [
+    {
+      "document_id": "DOC022",
+      "expected_hash": "23a8f0f90a085f224b23df63f633d36714a3c3971f425614296633839308300a",
+      "actual_hash": "23a8f0f90a085f224b23df63f633d36714a3c3971f425614296633839308300a",
+      "availability": "available"
+    }
+  ],
+  "status": "completed",
+  "traces": [
+    {
+      "target_id": "G001",
+      "target_kind": "candidate",
+      "statement": "Be able to open plain vim in the terminal and modify code on any server that has no graphical user interface",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0001",
+          "source_id": "DOC022:T015",
+          "material_id": "M001",
+          "quote": "I can just easily open the vim and and modify the code",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4697,
+          "end_char": 4751,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T015",
+              "segment_start": 1114,
+              "segment_end": 1168,
+              "start_char": 4697,
+              "end_char": 4751
+            }
+          ],
+          "original_locator": {
+            "turn": "15",
+            "start_char": 3583,
+            "end_char": 5456
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0002",
+          "source_id": "DOC022:T021",
+          "material_id": "M001",
+          "quote": "you can only run vim on the terminal, because you can only access to the command line interface. There is no user interface. There's no graphic interface on the server.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 6448,
+          "end_char": 6616,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T021",
+              "segment_start": 507,
+              "segment_end": 675,
+              "start_char": 6448,
+              "end_char": 6616
+            }
+          ],
+          "original_locator": {
+            "turn": "21",
+            "start_char": 5941,
+            "end_char": 6792
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0003",
+          "source_id": "DOC022:T015",
+          "material_id": "M001",
+          "quote": "I can also use the plain bin to to coding to modify any files in any server",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5211,
+          "end_char": 5286,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T015",
+              "segment_start": 1628,
+              "segment_end": 1703,
+              "start_char": 5211,
+              "end_char": 5286
+            }
+          ],
+          "original_locator": {
+            "turn": "15",
+            "start_char": 3583,
+            "end_char": 5456
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T015",
+          "DOC022:T021",
+          "DOC022:T015"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [
+          "把现状能力陈述视为维持型目标"
+        ],
+        "reasoning_steps": [
+          "定位 T015/T021/T075 原句",
+          "核对无 UI、仅命令行的适用条件",
+          "确认方式为 plain vim 而非 Vs code"
+        ],
+        "label": "inferred",
+        "rationale": "T015 反复陈述可在任意服务器用纯 vim 改文件并强调 matters much，T021/T075 给出无 UI 的条件与沿用依据；主体、对象、条件（无图形界面/仅命令行）与方式（终端里的纯 vim）均逐项核对，位置命中不等于语义支持一项已单独确认。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Be able to open plain vim in the terminal and modify code on any server that has no graphical user interface",
+        "label": "inferred",
+        "rationale": "T015 反复陈述可在任意服务器用纯 vim 改文件并强调 matters much，T021/T075 给出无 UI 的条件与沿用依据；主体、对象、条件（无图形界面/仅命令行）与方式（终端里的纯 vim）均逐项核对，位置命中不等于语义支持一项已单独确认。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [
+          "把现状能力陈述视为维持型目标"
+        ],
+        "reasoning_steps": [
+          "定位 T015/T021/T075 原句",
+          "核对无 UI、仅命令行的适用条件",
+          "确认方式为 plain vim 而非 Vs code"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G002",
+      "target_kind": "candidate",
+      "statement": "Customize the local development environment by installing plugins and configuring the vim interface to fit personal experience",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0004",
+          "source_id": "DOC022:T015",
+          "material_id": "M001",
+          "quote": "I will install a bunch of like cool plugins.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5038,
+          "end_char": 5082,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T015",
+              "segment_start": 1455,
+              "segment_end": 1499,
+              "start_char": 5038,
+              "end_char": 5082
+            }
+          ],
+          "original_locator": {
+            "turn": "15",
+            "start_char": 3583,
+            "end_char": 5456
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0005",
+          "source_id": "DOC022:T015",
+          "material_id": "M001",
+          "quote": "I will like, customize the interface to make it.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 5083,
+          "end_char": 5131,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T015",
+              "segment_start": 1500,
+              "segment_end": 1548,
+              "start_char": 5083,
+              "end_char": 5131
+            }
+          ],
+          "original_locator": {
+            "turn": "15",
+            "start_char": 3583,
+            "end_char": 5456
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0006",
+          "source_id": "DOC022:T035",
+          "material_id": "M001",
+          "quote": "And all all of those things can can get customized just in the config file.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 12704,
+          "end_char": 12779,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T035",
+              "segment_start": 514,
+              "segment_end": 589,
+              "start_char": 12704,
+              "end_char": 12779
+            }
+          ],
+          "original_locator": {
+            "turn": "35",
+            "start_char": 12190,
+            "end_char": 12785
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T015",
+          "DOC022:T015",
+          "DOC022:T035"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T015 用 I will 明确表达装插件与定制界面以贴合个人体验，T035/T031 补充这些定制都落在 config file；主体（受访者）、对象（本地 vim）、方式（配置文件/插件）一致，本地与纯 vim 的区分保留在 context。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Customize the local development environment by installing plugins and configuring the vim interface to fit personal experience",
+        "label": "direct",
+        "rationale": "T015 用 I will 明确表达装插件与定制界面以贴合个人体验，T035/T031 补充这些定制都落在 config file；主体（受访者）、对象（本地 vim）、方式（配置文件/插件）一致，本地与纯 vim 的区分保留在 context。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G003",
+      "target_kind": "candidate",
+      "statement": "Make every system's vim behave like the local customized vim by keeping and reusing the config file",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0007",
+          "source_id": "DOC022:T031",
+          "material_id": "M001",
+          "quote": "you can. You can, make every system just like your local local customization.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10271,
+          "end_char": 10348,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T031",
+              "segment_start": 1363,
+              "segment_end": 1440,
+              "start_char": 10271,
+              "end_char": 10348
+            }
+          ],
+          "original_locator": {
+            "turn": "31",
+            "start_char": 8908,
+            "end_char": 10550
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0008",
+          "source_id": "DOC022:T031",
+          "material_id": "M001",
+          "quote": "If you keep that config file that like, if you put put it in the server and and the server will will be just like your local beam.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 10349,
+          "end_char": 10479,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T031",
+              "segment_start": 1441,
+              "segment_end": 1571,
+              "start_char": 10349,
+              "end_char": 10479
+            }
+          ],
+          "original_locator": {
+            "turn": "31",
+            "start_char": 8908,
+            "end_char": 10550
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T031",
+          "DOC022:T031"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "inferred",
+        "rationale": "T031 直接支撑保留配置使各系统一致，T069 的账号同步对比补充可移植性；未把偏好升级为强制，未删掉'config file'这一明确选定的方式。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Make every system's vim behave like the local customized vim by keeping and reusing the config file",
+        "label": "inferred",
+        "rationale": "T031 直接支撑保留配置使各系统一致，T069 的账号同步对比补充可移植性；未把偏好升级为强制，未删掉'config file'这一明确选定的方式。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G004",
+      "target_kind": "candidate",
+      "statement": "Prefer a lightweight editor that opens quickly and avoids the RAM/CPU cost of graphical editors",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0009",
+          "source_id": "DOC022:T015",
+          "material_id": "M001",
+          "quote": "and also vim is very like, it's very light, and it opens. You can open like very quick.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 4463,
+          "end_char": 4550,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T015",
+              "segment_start": 880,
+              "segment_end": 967,
+              "start_char": 4463,
+              "end_char": 4550
+            }
+          ],
+          "original_locator": {
+            "turn": "15",
+            "start_char": 3583,
+            "end_char": 5456
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0010",
+          "source_id": "DOC022:T027",
+          "material_id": "M001",
+          "quote": "that just make make the speed way more faster when you use them. And if you have using Vs cord, or any kind of like graphical interface editor, you will. You will see it costs like like RAM usage or or CPU usage. It usually costs a lot.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 8361,
+          "end_char": 8597,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T027",
+              "segment_start": 883,
+              "segment_end": 1119,
+              "start_char": 8361,
+              "end_char": 8597
+            }
+          ],
+          "original_locator": {
+            "turn": "27",
+            "start_char": 7478,
+            "end_char": 8663
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T015",
+          "DOC022:T027"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "inferred",
+        "rationale": "轻量/快速与低资源在 T015、T027 有正面依据，但原文是属性描述与选择理由而非明确要求，故保留 Prefer 强度并判 inferred，不升级为 must。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Prefer a lightweight editor that opens quickly and avoids the RAM/CPU cost of graphical editors",
+        "label": "inferred",
+        "rationale": "轻量/快速与低资源在 T015、T027 有正面依据，但原文是属性描述与选择理由而非明确要求，故保留 Prefer 强度并判 inferred，不升级为 must。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G005",
+      "target_kind": "candidate",
+      "statement": "Keep hands on the keyboard without using the mouse in order to improve coding efficiency",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0011",
+          "source_id": "DOC022:T055",
+          "material_id": "M001",
+          "quote": "you don't have to like, use your mouse to to select this. Select that",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19033,
+          "end_char": 19102,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T055",
+              "segment_start": 1219,
+              "segment_end": 1288,
+              "start_char": 19033,
+              "end_char": 19102
+            }
+          ],
+          "original_locator": {
+            "turn": "55",
+            "start_char": 17814,
+            "end_char": 20204
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0012",
+          "source_id": "DOC022:T055",
+          "material_id": "M001",
+          "quote": "everything you do is on the keyboard, and you can. Your your hands will never like. Leave your keyboards, and you can, you can finish everything on it.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19103,
+          "end_char": 19254,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T055",
+              "segment_start": 1289,
+              "segment_end": 1440,
+              "start_char": 19103,
+              "end_char": 19254
+            }
+          ],
+          "original_locator": {
+            "turn": "55",
+            "start_char": 17814,
+            "end_char": 20204
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0013",
+          "source_id": "DOC022:T063",
+          "material_id": "M001",
+          "quote": "and actually actually keep keeping your hands on the keyboard. Just do improve your efficiency.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 23742,
+          "end_char": 23837,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T063",
+              "segment_start": 653,
+              "segment_end": 748,
+              "start_char": 23742,
+              "end_char": 23837
+            }
+          ],
+          "original_locator": {
+            "turn": "63",
+            "start_char": 23089,
+            "end_char": 23931
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T055",
+          "DOC022:T055",
+          "DOC022:T063"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T055 明确说图形界面下不必用鼠标、一切在键盘完成，T063 明说手不离键盘提升效率；核心动作（键盘操作）与预期结果（效率）都有原句支撑，方式未被抽象删掉。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Keep hands on the keyboard without using the mouse in order to improve coding efficiency",
+        "label": "direct",
+        "rationale": "T055 明确说图形界面下不必用鼠标、一切在键盘完成，T063 明说手不离键盘提升效率；核心动作（键盘操作）与预期结果（效率）都有原句支撑，方式未被抽象删掉。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G006",
+      "target_kind": "candidate",
+      "statement": "Use whichever development tool gives better efficiency, since efficiency is what developers ultimately want",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0014",
+          "source_id": "DOC022:T069",
+          "material_id": "M001",
+          "quote": "eventually, all the developer we all we want is efficiency and which tool give us better efficiency. We will use that that tool.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 28921,
+          "end_char": 29049,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T069",
+              "segment_start": 2610,
+              "segment_end": 2738,
+              "start_char": 28921,
+              "end_char": 29049
+            }
+          ],
+          "original_locator": {
+            "turn": "69",
+            "start_char": 26311,
+            "end_char": 29114
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0015",
+          "source_id": "DOC022:T069",
+          "material_id": "M001",
+          "quote": "So yeah, for nowadays, I actually, I actually start to learn how to use Vs code. Right now, yeah, for for better efficiency.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 28771,
+          "end_char": 28895,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T069",
+              "segment_start": 2460,
+              "segment_end": 2584,
+              "start_char": 28771,
+              "end_char": 28895
+            }
+          ],
+          "original_locator": {
+            "turn": "69",
+            "start_char": 26311,
+            "end_char": 29114
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T069",
+          "DOC022:T069"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T069 直接陈述'all the developer we all we want is efficiency'与'which tool give us better efficiency. We will use that tool'，并以自己开始学 VS Code 为例证；主体、结果与选择标准一致，逐字符引文保留了 we all we want 的转写原样。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Use whichever development tool gives better efficiency, since efficiency is what developers ultimately want",
+        "label": "direct",
+        "rationale": "T069 直接陈述'all the developer we all we want is efficiency'与'which tool give us better efficiency. We will use that tool'，并以自己开始学 VS Code 为例证；主体、结果与选择标准一致，逐字符引文保留了 we all we want 的转写原样。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G007",
+      "target_kind": "candidate",
+      "statement": "Have an editor that must support plugins or extensions so tools can fit every requirement of a developer",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0016",
+          "source_id": "DOC022:T103",
+          "material_id": "M001",
+          "quote": "I think extension or plugin, there's a must for editor",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 40277,
+          "end_char": 40331,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T103",
+              "segment_start": 19,
+              "segment_end": 73,
+              "start_char": 40277,
+              "end_char": 40331
+            }
+          ],
+          "original_locator": {
+            "turn": "103",
+            "start_char": 40258,
+            "end_char": 40952
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0017",
+          "source_id": "DOC022:T103",
+          "material_id": "M001",
+          "quote": "The the editor must supports plugins or extensions, so that so that tools will fit like every requirements for me.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 40832,
+          "end_char": 40946,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T103",
+              "segment_start": 574,
+              "segment_end": 688,
+              "start_char": 40832,
+              "end_char": 40946
+            }
+          ],
+          "original_locator": {
+            "turn": "103",
+            "start_char": 40258,
+            "end_char": 40952
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T103",
+          "DOC022:T103"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T103 明确说 'there's a must for editor' 与 'The the editor must supports plugins or extensions'，强度 must 与目的 so that tools will fit every requirements 均逐字保留；主体（编辑器）、对象（插件/扩展）、强度都核对。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Have an editor that must support plugins or extensions so tools can fit every requirement of a developer",
+        "label": "direct",
+        "rationale": "T103 明确说 'there's a must for editor' 与 'The the editor must supports plugins or extensions'，强度 must 与目的 so that tools will fit every requirements 均逐字保留；主体（编辑器）、对象（插件/扩展）、强度都核对。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G008",
+      "target_kind": "candidate",
+      "statement": "Have a large community around the editor so users can see how people solve issues and see real people improving the product",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0018",
+          "source_id": "DOC022:T109",
+          "material_id": "M001",
+          "quote": "And that is what I mean how community is important for an editor, because because when when it when it has a community, you can, you can see how people solve issues.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 41975,
+          "end_char": 42140,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T109",
+              "segment_start": 498,
+              "segment_end": 663,
+              "start_char": 41975,
+              "end_char": 42140
+            }
+          ],
+          "original_locator": {
+            "turn": "109",
+            "start_char": 41477,
+            "end_char": 42787
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0019",
+          "source_id": "DOC022:T109",
+          "material_id": "M001",
+          "quote": "How big is the community?",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 42575,
+          "end_char": 42600,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T109",
+              "segment_start": 1098,
+              "segment_end": 1123,
+              "start_char": 42575,
+              "end_char": 42600
+            }
+          ],
+          "original_locator": {
+            "turn": "109",
+            "start_char": 41477,
+            "end_char": 42787
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0020",
+          "source_id": "DOC022:T103",
+          "material_id": "M001",
+          "quote": "And no, nobody wants to use any products that backs of community that you you will.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 40617,
+          "end_char": 40700,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T103",
+              "segment_start": 359,
+              "segment_end": 442,
+              "start_char": 40617,
+              "end_char": 40700
+            }
+          ],
+          "original_locator": {
+            "turn": "103",
+            "start_char": 40258,
+            "end_char": 40952
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T109",
+          "DOC022:T109",
+          "DOC022:T103"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "inferred",
+        "rationale": "社区重要性与'社区规模而非平台'在 T109、T103 有正面依据，但原文为评价/重要性判断而非明确要求，故判 inferred 并在 context 保留'规模而非平台'的限定，未把信念当事实。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Have a large community around the editor so users can see how people solve issues and see real people improving the product",
+        "label": "inferred",
+        "rationale": "社区重要性与'社区规模而非平台'在 T109、T103 有正面依据，但原文为评价/重要性判断而非明确要求，故判 inferred 并在 context 保留'规模而非平台'的限定，未把信念当事实。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G009",
+      "target_kind": "candidate",
+      "statement": "Be able to start work at any device by getting familiar with every tool",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0021",
+          "source_id": "DOC022:T087",
+          "material_id": "M001",
+          "quote": "my mentality is that I need to like, get familiar.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 35863,
+          "end_char": 35913,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T087",
+              "segment_start": 2198,
+              "segment_end": 2248,
+              "start_char": 35863,
+              "end_char": 35913
+            }
+          ],
+          "original_locator": {
+            "turn": "87",
+            "start_char": 33665,
+            "end_char": 36008
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0022",
+          "source_id": "DOC022:T087",
+          "material_id": "M001",
+          "quote": "I can start work at any device.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 35937,
+          "end_char": 35968,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T087",
+              "segment_start": 2272,
+              "segment_end": 2303,
+              "start_char": 35937,
+              "end_char": 35968
+            }
+          ],
+          "original_locator": {
+            "turn": "87",
+            "start_char": 33665,
+            "end_char": 36008
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T087",
+          "DOC022:T087"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T087 直接说 'my mentality is that I need to get familiar' 与 'I can start work at any device'；动作（熟悉每个工具）与结果（任意设备开工）均有原句，未把现状能力自动扩展成额外要求。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Be able to start work at any device by getting familiar with every tool",
+        "label": "direct",
+        "rationale": "T087 直接说 'my mentality is that I need to get familiar' 与 'I can start work at any device'；动作（熟悉每个工具）与结果（任意设备开工）均有原句，未把现状能力自动扩展成额外要求。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G010",
+      "target_kind": "candidate",
+      "statement": "Not stick to a single tool for a developer; evaluate each situation and choose the best plan",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0023",
+          "source_id": "DOC022:T075",
+          "material_id": "M001",
+          "quote": "I don't think we need to like like, stick to a single tool for a developer. I think just it just depends.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 30744,
+          "end_char": 30849,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T075",
+              "segment_start": 970,
+              "segment_end": 1075,
+              "start_char": 30744,
+              "end_char": 30849
+            }
+          ],
+          "original_locator": {
+            "turn": "75",
+            "start_char": 29774,
+            "end_char": 31047
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0024",
+          "source_id": "DOC022:T075",
+          "material_id": "M001",
+          "quote": "you just you just you just need to like, like, evaluate the situation you got, and just choose the best plan for you.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 30900,
+          "end_char": 31017,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T075",
+              "segment_start": 1126,
+              "segment_end": 1243,
+              "start_char": 30900,
+              "end_char": 31017
+            }
+          ],
+          "original_locator": {
+            "turn": "75",
+            "start_char": 29774,
+            "end_char": 31047
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T075",
+          "DOC022:T075"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T075 明确否定固守单一工具（don't ... stick to a single tool）并给出按情境评估选最佳方案；否定、主体（a developer）与建议强度（I think / just depends）都保留。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Not stick to a single tool for a developer; evaluate each situation and choose the best plan",
+        "label": "direct",
+        "rationale": "T075 明确否定固守单一工具（don't ... stick to a single tool）并给出按情境评估选最佳方案；否定、主体（a developer）与建议强度（I think / just depends）都保留。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G011",
+      "target_kind": "candidate",
+      "statement": "Keep using vim out of habit even though looking cool no longer matters",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0025",
+          "source_id": "DOC022:T063",
+          "material_id": "M001",
+          "quote": "But yeah, but I still like, I get used to it. So I will keep using it",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 23672,
+          "end_char": 23741,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T063",
+              "segment_start": 583,
+              "segment_end": 652,
+              "start_char": 23672,
+              "end_char": 23741
+            }
+          ],
+          "original_locator": {
+            "turn": "63",
+            "start_char": 23089,
+            "end_char": 23931
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0026",
+          "source_id": "DOC022:T063",
+          "material_id": "M001",
+          "quote": "So I actually, I don't care about how cool I am anymore.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 23592,
+          "end_char": 23648,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T063",
+              "segment_start": 503,
+              "segment_end": 559,
+              "start_char": 23592,
+              "end_char": 23648
+            }
+          ],
+          "original_locator": {
+            "turn": "63",
+            "start_char": 23089,
+            "end_char": 23931
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T063",
+          "DOC022:T063"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T063 用 I will keep using it 明确维持使用，并明确说不再在意酷；否定与强度变化都保留在 context，未把已放弃的偏好升级为强制，也未因 T075 的相反表述改写标题。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Keep using vim out of habit even though looking cool no longer matters",
+        "label": "direct",
+        "rationale": "T063 用 I will keep using it 明确维持使用，并明确说不再在意酷；否定与强度变化都保留在 context，未把已放弃的偏好升级为强制，也未因 T075 的相反表述改写标题。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G012",
+      "target_kind": "candidate",
+      "statement": "Avoid recommending vim for front-end development because vim cannot display the colors front-end work needs",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0027",
+          "source_id": "DOC022:T061",
+          "material_id": "M001",
+          "quote": "And being couldn't support that. And yeah, so especially for for front end development, I won't recommend using being currently.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 22344,
+          "end_char": 22472,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T061",
+              "segment_start": 1681,
+              "segment_end": 1809,
+              "start_char": 22344,
+              "end_char": 22472
+            }
+          ],
+          "original_locator": {
+            "turn": "61",
+            "start_char": 20663,
+            "end_char": 22765
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T061"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "T061 明确说前端开发 'I won't recommend using being currently'，原因是 vim 无法显示颜色；避免型目标、适用情境（前端）、建议强度与例外（要花很多力气）都逐项保留。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Avoid recommending vim for front-end development because vim cannot display the colors front-end work needs",
+        "label": "direct",
+        "rationale": "T061 明确说前端开发 'I won't recommend using being currently'，原因是 vim 无法显示颜色；避免型目标、适用情境（前端）、建议强度与例外（要花很多力气）都逐项保留。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G013",
+      "target_kind": "candidate",
+      "statement": "Have an editor that integrates the whole development pipeline (coding, build, test, deploy, code review, monitoring, cloud access) in one app through extensions",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0028",
+          "source_id": "DOC022:T081",
+          "material_id": "M001",
+          "quote": "the whole pipeline is integrating Vs code",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 32810,
+          "end_char": 32851,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T081",
+              "segment_start": 1429,
+              "segment_end": 1470,
+              "start_char": 32810,
+              "end_char": 32851
+            }
+          ],
+          "original_locator": {
+            "turn": "81",
+            "start_char": 31381,
+            "end_char": 33174
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0029",
+          "source_id": "DOC022:T081",
+          "material_id": "M001",
+          "quote": "and the requirements is actually created by the product.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 33109,
+          "end_char": 33165,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T081",
+              "segment_start": 1728,
+              "segment_end": 1784,
+              "start_char": 33109,
+              "end_char": 33165
+            }
+          ],
+          "original_locator": {
+            "turn": "81",
+            "start_char": 31381,
+            "end_char": 33174
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0030",
+          "source_id": "DOC022:T091",
+          "material_id": "M001",
+          "quote": "Vs code, just run lots of the pipeline. Just use every like, every different extensions",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 36458,
+          "end_char": 36545,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T091",
+              "segment_start": 65,
+              "segment_end": 152,
+              "start_char": 36458,
+              "end_char": 36545
+            }
+          ],
+          "original_locator": {
+            "turn": "91",
+            "start_char": 36393,
+            "end_char": 37578
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0031",
+          "source_id": "DOC022:T087",
+          "material_id": "M001",
+          "quote": "the the modifying code. push a code code review deployment monitoring and and also access to access to cloud like aws. Everything can do it. Everything. Everything can be finished on Vs code",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 35323,
+          "end_char": 35513,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T087",
+              "segment_start": 1658,
+              "segment_end": 1848,
+              "start_char": 35323,
+              "end_char": 35513
+            }
+          ],
+          "original_locator": {
+            "turn": "87",
+            "start_char": 33665,
+            "end_char": 36008
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T081",
+          "DOC022:T081",
+          "DOC022:T091",
+          "DOC022:T087"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "inferred",
+        "rationale": "整条流水线在 T081/T087/T091 有正面依据，但原文是对产品能力/需求演进的描述与评价，不是明确要求，故判 inferred；未把'VS Code'这一具体工具固化为目标，保留 in one app through extensions 的方式。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Have an editor that integrates the whole development pipeline (coding, build, test, deploy, code review, monitoring, cloud access) in one app through extensions",
+        "label": "inferred",
+        "rationale": "整条流水线在 T081/T087/T091 有正面依据，但原文是对产品能力/需求演进的描述与评价，不是明确要求，故判 inferred；未把'VS Code'这一具体工具固化为目标，保留 in one app through extensions 的方式。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G014",
+      "target_kind": "candidate",
+      "statement": "Be able to resume the tmux/vim working session immediately after the computer shuts down",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0032",
+          "source_id": "DOC022:T051",
+          "material_id": "M001",
+          "quote": "I can also store the store. The process of the team up. So if I computer, just get shut down or anything, I can just resume back to my process like immediately.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 17008,
+          "end_char": 17168,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T051",
+              "segment_start": 2134,
+              "segment_end": 2294,
+              "start_char": 17008,
+              "end_char": 17168
+            }
+          ],
+          "original_locator": {
+            "turn": "51",
+            "start_char": 14874,
+            "end_char": 17255
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T051"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "inferred",
+        "rationale": "T051 直接支撑关机后立刻恢复会话，但原文是能力/工作流描述而非明确要求，故判 inferred，保留 tmux 会话与意外关机条件。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Be able to resume the tmux/vim working session immediately after the computer shuts down",
+        "label": "inferred",
+        "rationale": "T051 直接支撑关机后立刻恢复会话，但原文是能力/工作流描述而非明确要求，故判 inferred，保留 tmux 会话与意外关机条件。",
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": []
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    },
+    {
+      "target_id": "G015",
+      "target_kind": "candidate",
+      "statement": "Make the editor's customization/configuration easy to understand and maintain without a separate config-file language",
+      "document_id": "DOC022",
+      "submitted_evidence": [
+        {
+          "evidence_id": "E0033",
+          "source_id": "DOC022:T055",
+          "material_id": "M001",
+          "quote": "The most struggles thing is to like to to sort to figure out how how like config file works. So that's a whole different language.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 19764,
+          "end_char": 19894,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T055",
+              "segment_start": 1950,
+              "segment_end": 2080,
+              "start_char": 19764,
+              "end_char": 19894
+            }
+          ],
+          "original_locator": {
+            "turn": "55",
+            "start_char": 17814,
+            "end_char": 20204
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        },
+        {
+          "evidence_id": "E0034",
+          "source_id": "DOC022:T069",
+          "material_id": "M001",
+          "quote": "You have to keep growing your your customized file. You have to keep it. You have to like, make it portable to every, every, to every device. And that is actually that pretty pretty mess.",
+          "evidence_role": "supporting",
+          "location_status": "exact",
+          "verification_scope": "full_text",
+          "start_char": 27811,
+          "end_char": 27998,
+          "candidate_locations": [
+            {
+              "source_id": "DOC022:T069",
+              "segment_start": 1500,
+              "segment_end": 1687,
+              "start_char": 27811,
+              "end_char": 27998
+            }
+          ],
+          "original_locator": {
+            "turn": "69",
+            "start_char": 26311,
+            "end_char": 29114
+          },
+          "recognition_status": "native_text",
+          "source_version_status": "verified",
+          "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+        }
+      ],
+      "located_evidence": [],
+      "search_scope": {
+        "source_ids": [
+          "DOC022:T055",
+          "DOC022:T069"
+        ],
+        "policy": "仅核对指定片段，不宣称全文穷尽检索"
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [
+          "把'配置困难'这一抱怨/障碍线索升级为对编辑器的明确要求缺少正面依据"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "定位 T055/T069/T093 困难与对比原句",
+          "核对是否存在明确要求表述",
+          "确认仅为抱怨/背景，判 insufficient"
+        ],
+        "label": "insufficient",
+        "rationale": "原文 T055/T069/T093 只描述学习配置文件的困难、维护可移植配置的麻烦以及可用 GPT/市场安装缓解，属于抱怨与障碍线索，并未明确表达'编辑器应简化配置'这一要求；按目标边界，抱怨不自动证明障碍、问题取反不自动成为唯一补救方式，故如实保留 insufficient，不升级为 direct/inferred。"
+      },
+      "submitted_semantic_judgment": {
+        "target_statement": "Make the editor's customization/configuration easy to understand and maintain without a separate config-file language",
+        "label": "insufficient",
+        "rationale": "原文 T055/T069/T093 只描述学习配置文件的困难、维护可移植配置的麻烦以及可用 GPT/市场安装缓解，属于抱怨与障碍线索，并未明确表达'编辑器应简化配置'这一要求；按目标边界，抱怨不自动证明障碍、问题取反不自动成为唯一补救方式，故如实保留 insufficient，不升级为 direct/inferred。",
+        "supported_parts": [],
+        "unsupported_parts": [
+          "把'配置困难'这一抱怨/障碍线索升级为对编辑器的明确要求缺少正面依据"
+        ],
+        "assumptions": [],
+        "reasoning_steps": [
+          "定位 T055/T069/T093 困难与对比原句",
+          "核对是否存在明确要求表述",
+          "确认仅为抱怨/背景，判 insufficient"
+        ]
+      },
+      "issues": [],
+      "suggested_changes": [],
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [],
+  "limitations": [
+    "定位工具不判断语义；语义结论来自另外保存的当前助手或人工判断，非独立审核。",
+    "处理目标清单中已有目标；不会自动新增或改写目标。"
+  ],
+  "judgment_artifact": {
+    "path": "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\extra\\runs\\workbuddy-newskills-20261103-0015\\main\\DOC022\\run03\\attempt-02\\judgments.json",
+    "sha256": "949b5810e772e695632e7bd094409a77f3237c86c96df14a9d3593bf699ec611"
+  }
+}

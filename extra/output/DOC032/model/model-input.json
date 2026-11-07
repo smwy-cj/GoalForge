@@ -1,0 +1,1208 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC032-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "929cd7cbcab7e3a812f23c662eb61c6f280a02faba1ad5353ed79ba3bfe95c67"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "4c34b169f9b6e283380542e2e10528442e4b182dda5c884a0b11696355e2357e"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "f417d031983b03f0f4d62d67861e86424e74f51fe2ac237cea63f7d11fc7b511"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "ad1c779172a2a3597aeb33abe800ce3b18c92e722b947d949749245c806ddc20"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC032"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC032-G001",
+      "statement": "与朋友和家人保持沟通（私聊与群聊）。",
+      "source_candidate_ids": [
+        "DOC032-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，微信重度用户，日常以微信为主要 IM）",
+      "context": [
+        "自述这是使用微信的主要目标",
+        "对象限定为熟人，而非陌生人"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC032-G002",
+      "statement": "把最在意的人与群置顶，一打开就能看到。",
+      "source_candidate_ids": [
+        "DOC032-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，微信重度用户，日常以微信为主要 IM）",
+      "context": [
+        "对象：女朋友与关心的群",
+        "理由：这些人是他最在乎的"
+      ],
+      "evidence_ids": [
+        "E0003",
+        "E0004",
+        "E0005"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC032-G003",
+      "statement": "按关键词全局搜索消息，不限对象与场景。",
+      "source_candidate_ids": [
+        "DOC032-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，微信重度用户，日常以微信为主要 IM）",
+      "context": [
+        "入口：顶部搜索栏",
+        "范围：私聊与群聊全部命中"
+      ],
+      "evidence_ids": [
+        "E0006",
+        "E0007"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC032-G004",
+      "statement": "在单个会话内检索消息，缩小范围。",
+      "source_candidate_ids": [
+        "DOC032-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，微信重度用户，日常以微信为主要 IM）",
+      "context": [
+        "入口：会话右上角三点 → 搜索消息",
+        "可只搜该对话内的内容"
+      ],
+      "evidence_ids": [
+        "E0008",
+        "E0009",
+        "E0010"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC032-G005",
+      "statement": "只用文字就能搜到图片（如按「信用卡」找出那张照片）。",
+      "source_candidate_ids": [
+        "DOC032-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，微信重度用户，日常以微信为主要 IM）",
+      "context": [
+        "实例：20 天前发过信用卡照片，靠关键词直接找到",
+        "替代方案：往上翻到那一天，很费时"
+      ],
+      "evidence_ids": [
+        "E0011",
+        "E0012"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC032-G006",
+      "statement": "用微信完成付款与转账，出门不带现金和卡。",
+      "source_candidate_ids": [
+        "DOC032-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，微信重度用户，日常以微信为主要 IM）",
+      "context": [
+        "自评这是「最有用的功能」",
+        "方式：扫码或出示付款码，指纹/面容确认"
+      ],
+      "evidence_ids": [
+        "E0013",
+        "E0014"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC032-G007",
+      "statement": "能直接发送超过 25MB 的文件，不必绕到网盘再发链接。",
+      "source_candidate_ids": [
+        "DOC032-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，微信重度用户，日常以微信为主要 IM）",
+      "context": [
+        "现状：超出限制只能上传云盘发链接"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC032-G008",
+      "statement": "消息在云端随时可取，换机不必手动迁移、丢了也能找回。",
+      "source_candidate_ids": [
+        "DOC032-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，微信重度用户，日常以微信为主要 IM）",
+      "context": [
+        "现状：消息只存在本机，不存服务器",
+        "代价：换机要手动搬、手机丢了全没、还占本地空间"
+      ],
+      "evidence_ids": [
+        "E0017",
+        "E0018",
+        "E0019"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC032-G001",
+      "b": "DOC032-G002",
+      "label": "related",
+      "rationale": "T021–T023 的置顶本质是对沟通对象排序：把最在意的人放在列表最上方，减少每次打开时的寻找成本。但 G001 是全部往来，G002 只处理其中几个。",
+      "evidence_ids": [
+        "E0001",
+        "E0005"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC032-G001",
+      "b": "DOC032-G003",
+      "label": "related",
+      "rationale": "T025 的搜索用于找回沟通过的内容，是沟通记录的二次利用。但 G001 是当下交流，G003 是回溯历史。",
+      "evidence_ids": [
+        "E0001",
+        "E0006"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC032-G001",
+      "b": "DOC032-G004",
+      "label": "none",
+      "rationale": "DOC032-G001 的对象是与朋友家人沟通（T013），DOC032-G004 的对象是会话内检索（T025/T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC032-G001",
+      "b": "DOC032-G005",
+      "label": "none",
+      "rationale": "DOC032-G001 的对象是与朋友家人沟通（T013），DOC032-G005 的对象是按文字搜图片（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC032-G001",
+      "b": "DOC032-G006",
+      "label": "none",
+      "rationale": "DOC032-G001 的对象是与朋友家人沟通（T013），DOC032-G006 的对象是微信支付（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC032-G001",
+      "b": "DOC032-G007",
+      "label": "none",
+      "rationale": "DOC032-G001 的对象是与朋友家人沟通（T013），DOC032-G007 的对象是发送大文件（T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC032-G001",
+      "b": "DOC032-G008",
+      "label": "related",
+      "rationale": "T071 说希望「所有消息一直可用」，隐含的正是与家人朋友的长期往来记录。但 G008 是存储形态，G001 是沟通本身。",
+      "evidence_ids": [
+        "E0001",
+        "E0018"
+      ],
+      "conditions": [
+        "G008 的价值来自 G001 累积的历史"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC032-G002",
+      "b": "DOC032-G003",
+      "label": "none",
+      "rationale": "DOC032-G002 的对象是最在意的人置顶（T021），DOC032-G003 的对象是全局关键词搜消息（T025）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC032-G002",
+      "b": "DOC032-G004",
+      "label": "none",
+      "rationale": "DOC032-G002 的对象是最在意的人置顶（T021），DOC032-G004 的对象是会话内检索（T025/T027）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC032-G002",
+      "b": "DOC032-G005",
+      "label": "none",
+      "rationale": "DOC032-G002 的对象是最在意的人置顶（T021），DOC032-G005 的对象是按文字搜图片（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC032-G002",
+      "b": "DOC032-G006",
+      "label": "none",
+      "rationale": "DOC032-G002 的对象是最在意的人置顶（T021），DOC032-G006 的对象是微信支付（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC032-G002",
+      "b": "DOC032-G007",
+      "label": "none",
+      "rationale": "DOC032-G002 的对象是最在意的人置顶（T021），DOC032-G007 的对象是发送大文件（T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC032-G002",
+      "b": "DOC032-G008",
+      "label": "none",
+      "rationale": "DOC032-G002 的对象是最在意的人置顶（T021），DOC032-G008 的对象是消息云端可取（T059/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC032-G003",
+      "b": "DOC032-G004",
+      "label": "related",
+      "rationale": "T025 把两者说成同一次检索的两种入口：顶部搜索栏搜全部，会话内三点菜单只搜该对话。范围不同，机制相同。",
+      "evidence_ids": [
+        "E0006",
+        "E0008"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC032-G003",
+      "b": "DOC032-G005",
+      "label": "none",
+      "rationale": "DOC032-G003 的对象是全局关键词搜消息（T025），DOC032-G005 的对象是按文字搜图片（T045）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC032-G003",
+      "b": "DOC032-G006",
+      "label": "none",
+      "rationale": "DOC032-G003 的对象是全局关键词搜消息（T025），DOC032-G006 的对象是微信支付（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC032-G003",
+      "b": "DOC032-G007",
+      "label": "none",
+      "rationale": "DOC032-G003 的对象是全局关键词搜消息（T025），DOC032-G007 的对象是发送大文件（T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC032-G003",
+      "b": "DOC032-G008",
+      "label": "none",
+      "rationale": "DOC032-G003 的对象是全局关键词搜消息（T025），DOC032-G008 的对象是消息云端可取（T059/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC032-G004",
+      "b": "DOC032-G005",
+      "label": "related",
+      "rationale": "T027 说会话内搜索「even search for image」，T045 把按文字搜图列为最有用功能之一——它是会话内检索的一个特例，靠图像内容识别扩展了可搜对象。",
+      "evidence_ids": [
+        "E0008",
+        "E0011"
+      ],
+      "conditions": [
+        "G005 是 G004 在图片内容上的延伸"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC032-G004",
+      "b": "DOC032-G006",
+      "label": "none",
+      "rationale": "DOC032-G004 的对象是会话内检索（T025/T027），DOC032-G006 的对象是微信支付（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC032-G004",
+      "b": "DOC032-G007",
+      "label": "none",
+      "rationale": "DOC032-G004 的对象是会话内检索（T025/T027），DOC032-G007 的对象是发送大文件（T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC032-G004",
+      "b": "DOC032-G008",
+      "label": "none",
+      "rationale": "DOC032-G004 的对象是会话内检索（T025/T027），DOC032-G008 的对象是消息云端可取（T059/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC032-G005",
+      "b": "DOC032-G006",
+      "label": "none",
+      "rationale": "DOC032-G005 的对象是按文字搜图片（T045），DOC032-G006 的对象是微信支付（T033）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC032-G005",
+      "b": "DOC032-G007",
+      "label": "none",
+      "rationale": "DOC032-G005 的对象是按文字搜图片（T045），DOC032-G007 的对象是发送大文件（T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC032-G005",
+      "b": "DOC032-G008",
+      "label": "none",
+      "rationale": "DOC032-G005 的对象是按文字搜图片（T045），DOC032-G008 的对象是消息云端可取（T059/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC032-G006",
+      "b": "DOC032-G007",
+      "label": "none",
+      "rationale": "DOC032-G006 的对象是微信支付（T033），DOC032-G007 的对象是发送大文件（T055）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC032-G006",
+      "b": "DOC032-G008",
+      "label": "none",
+      "rationale": "DOC032-G006 的对象是微信支付（T033），DOC032-G008 的对象是消息云端可取（T059/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC032-G007",
+      "b": "DOC032-G008",
+      "label": "related",
+      "rationale": "两者都是承载能力不足：文件受 25MB 限制只能走云盘，消息不受云端保存只能留本机。一个管传输、一个管留存，但都指向「微信不是为重度内容设计的」。",
+      "evidence_ids": [
+        "E0015",
+        "E0017"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC032-G001",
+      "b": "DOC032-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P002",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC032-G001",
+      "b": "DOC032-G003"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P007",
+      "conditions": [
+        "G008 的价值来自 G001 累积的历史"
+      ],
+      "review_status": "pending",
+      "a": "DOC032-G001",
+      "b": "DOC032-G008"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P014",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC032-G003",
+      "b": "DOC032-G004"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P019",
+      "conditions": [
+        "G005 是 G004 在图片内容上的延伸"
+      ],
+      "review_status": "pending",
+      "a": "DOC032-G004",
+      "b": "DOC032-G005"
+    },
+    {
+      "edge_id": "R006",
+      "type": "related",
+      "decision_id": "P028",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC032-G007",
+      "b": "DOC032-G008"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC032:S014",
+      "material_id": "M001",
+      "quote": "the main goal for me to use Wechat is just communicating with my friends and family",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3331,
+      "end_char": 3414,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S014",
+          "segment_start": 29,
+          "segment_end": 112,
+          "start_char": 3331,
+          "end_char": 3414
+        }
+      ],
+      "original_locator": {
+        "line_start": 14,
+        "line_end": 14,
+        "start_char": 3302,
+        "end_char": 3470
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC032:S016",
+      "material_id": "M001",
+      "quote": "I could choose to open a private chat or group chat",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 3963,
+      "end_char": 4014,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S016",
+          "segment_start": 275,
+          "segment_end": 326,
+          "start_char": 3963,
+          "end_char": 4014
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 3688,
+        "end_char": 4069
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC032:S022",
+      "material_id": "M001",
+      "quote": "there's a feature called Ping",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5044,
+      "end_char": 5073,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S022",
+          "segment_start": 63,
+          "segment_end": 92,
+          "start_char": 5044,
+          "end_char": 5073
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 4981,
+        "end_char": 5335
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC032:S022",
+      "material_id": "M001",
+      "quote": "the 1st chat box I could see is my girlfriend",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5273,
+      "end_char": 5318,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S022",
+          "segment_start": 292,
+          "segment_end": 337,
+          "start_char": 5273,
+          "end_char": 5318
+        }
+      ],
+      "original_locator": {
+        "line_start": 22,
+        "line_end": 22,
+        "start_char": 4981,
+        "end_char": 5335
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC032:S024",
+      "material_id": "M001",
+      "quote": "they are friends or families that I cares most about",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5652,
+      "end_char": 5704,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S024",
+          "segment_start": 90,
+          "segment_end": 142,
+          "start_char": 5652,
+          "end_char": 5704
+        }
+      ],
+      "original_locator": {
+        "line_start": 24,
+        "line_end": 24,
+        "start_char": 5562,
+        "end_char": 5756
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC032:S026",
+      "material_id": "M001",
+      "quote": "all the relevant messages, no matter with whom",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6140,
+      "end_char": 6186,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S026",
+          "segment_start": 192,
+          "segment_end": 238,
+          "start_char": 6140,
+          "end_char": 6186
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 5948,
+        "end_char": 6500
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC032:S026",
+      "material_id": "M001",
+      "quote": "I will simply type the messages at the top of the screen",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6054,
+      "end_char": 6110,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S026",
+          "segment_start": 106,
+          "segment_end": 162,
+          "start_char": 6054,
+          "end_char": 6110
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 5948,
+        "end_char": 6500
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC032:S026",
+      "material_id": "M001",
+      "quote": "I can go to the chat interface and touch a additional settings button",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6340,
+      "end_char": 6409,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S026",
+          "segment_start": 392,
+          "segment_end": 461,
+          "start_char": 6340,
+          "end_char": 6409
+        }
+      ],
+      "original_locator": {
+        "line_start": 26,
+        "line_end": 26,
+        "start_char": 5948,
+        "end_char": 6500
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC032:S028",
+      "material_id": "M001",
+      "quote": "a search message and I simply type the search message",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6846,
+      "end_char": 6899,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S028",
+          "segment_start": 274,
+          "segment_end": 327,
+          "start_char": 6846,
+          "end_char": 6899
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 6572,
+        "end_char": 7119
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC032:S028",
+      "material_id": "M001",
+      "quote": "all the messages relevant with apple will pop up",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6988,
+      "end_char": 7036,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S028",
+          "segment_start": 416,
+          "segment_end": 464,
+          "start_char": 6988,
+          "end_char": 7036
+        }
+      ],
+      "original_locator": {
+        "line_start": 28,
+        "line_end": 28,
+        "start_char": 6572,
+        "end_char": 7119
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC032:S046",
+      "material_id": "M001",
+      "quote": "I could search for some certain image through stress typing the award",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 10144,
+      "end_char": 10213,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S046",
+          "segment_start": 73,
+          "segment_end": 142,
+          "start_char": 10144,
+          "end_char": 10213
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 10071,
+        "end_char": 10437
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC032:S048",
+      "material_id": "M001",
+      "quote": "I could just simply type credit card, and it will show up the messages with that credit card",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11022,
+      "end_char": 11114,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S048",
+          "segment_start": 444,
+          "segment_end": 536,
+          "start_char": 11022,
+          "end_char": 11114
+        }
+      ],
+      "original_locator": {
+        "line_start": 48,
+        "line_end": 48,
+        "start_char": 10578,
+        "end_char": 11133
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC032:S034",
+      "material_id": "M001",
+      "quote": "the most useful feature in wechat",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7860,
+      "end_char": 7893,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S034",
+          "segment_start": 51,
+          "segment_end": 84,
+          "start_char": 7860,
+          "end_char": 7893
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 7809,
+        "end_char": 8342
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC032:S034",
+      "material_id": "M001",
+      "quote": "we could just pay by wechat",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 8197,
+      "end_char": 8224,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S034",
+          "segment_start": 388,
+          "segment_end": 415,
+          "start_char": 8197,
+          "end_char": 8224
+        }
+      ],
+      "original_locator": {
+        "line_start": 34,
+        "line_end": 34,
+        "start_char": 7809,
+        "end_char": 8342
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC032:S056",
+      "material_id": "M001",
+      "quote": "wechat will limits the size of the file to be transferred",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12086,
+      "end_char": 12143,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S056",
+          "segment_start": 150,
+          "segment_end": 207,
+          "start_char": 12086,
+          "end_char": 12143
+        }
+      ],
+      "original_locator": {
+        "line_start": 56,
+        "line_end": 56,
+        "start_char": 11936,
+        "end_char": 12335
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC032:S056",
+      "material_id": "M001",
+      "quote": "I have to save my file on some cloud drive and send a link",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12232,
+      "end_char": 12290,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S056",
+          "segment_start": 296,
+          "segment_end": 354,
+          "start_char": 12232,
+          "end_char": 12290
+        }
+      ],
+      "original_locator": {
+        "line_start": 56,
+        "line_end": 56,
+        "start_char": 11936,
+        "end_char": 12335
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC032:S060",
+      "material_id": "M001",
+      "quote": "all the messages are on your phone",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12878,
+      "end_char": 12912,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S060",
+          "segment_start": 220,
+          "segment_end": 254,
+          "start_char": 12878,
+          "end_char": 12912
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 12658,
+        "end_char": 13167
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC032:S060",
+      "material_id": "M001",
+      "quote": "I have to manually and transfer all the messages to a new phone",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13038,
+      "end_char": 13101,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S060",
+          "segment_start": 380,
+          "segment_end": 443,
+          "start_char": 13038,
+          "end_char": 13101
+        }
+      ],
+      "original_locator": {
+        "line_start": 60,
+        "line_end": 60,
+        "start_char": 12658,
+        "end_char": 13167
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC032:S072",
+      "material_id": "M001",
+      "quote": "I wanna keep all my messages available all the time",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14542,
+      "end_char": 14593,
+      "candidate_locations": [
+        {
+          "source_id": "DOC032:S072",
+          "segment_start": 116,
+          "segment_end": 167,
+          "start_char": 14542,
+          "end_char": 14593
+        }
+      ],
+      "original_locator": {
+        "line_start": 72,
+        "line_end": 72,
+        "start_char": 14426,
+        "end_char": 14770
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC032-C001",
+      "goal_id": "DOC032-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC032-C002",
+      "goal_id": "DOC032-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC032-C003",
+      "goal_id": "DOC032-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC032-C004",
+      "goal_id": "DOC032-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC032-C005",
+      "goal_id": "DOC032-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC032-C006",
+      "goal_id": "DOC032-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC032-C007",
+      "goal_id": "DOC032-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC032-C008",
+      "goal_id": "DOC032-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 28,
+    "evaluated_pairs": 28
+  },
+  "issues": [],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "assemble",
+    "readiness": "unchecked",
+    "limitations": [
+      "模型尚未经过 model-review；导出完整性检查不能替代模型质量审核。",
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。"
+    ],
+    "files": []
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "7895eb9ed43b15895fc53b8228fa2ff72c516197dc3589317572490c04ceb169",
+    "judgments_sha256": "71db58ae86adefbe14d67e2f89a3bd574ce765de02f9113a80e13358bec63fef"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G003",
+      "child_ids": [
+        "G004",
+        "G005",
+        "G006",
+        "G007"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "受访者把双关键词检索、条件筛选、核对经历、发带说明的邀请描述为获取转介的完整走法，四项目标分别对应这笔流程中的一环，共同构成一次转介请求的送达。但这组子目标只到'请求送达符合条件的人'为止：是否转介取决于对方意愿，且搜索结果可能根本没有人符合条件，因此无法声称共同充分，保留为候选组。",
+      "assumptions": [
+        "被请求者愿意按自己的判断决定是否转介",
+        "目标公司在 LinkedIn 上有可检索到的现任员工"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "what I would 1st do is to to search on in the search bar. This company name, and also the school name that I am currently attending like",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "目标公司有若干同时满足'现任员工+同校校友'的人，且检索能返回他们：按 G004 检索、G005 过滤、G006 核对经历、G007 发出带说明的邀请后，转介请求确实送到符合条件的人手上。",
+          "outcome": "supports",
+          "rationale": "四项目标首尾相接覆盖了从检索到发出请求的全过程，正常情形下成立；但这只说明请求送达，不说明对方会转介。"
+        },
+        {
+          "kind": "exception",
+          "origin": "source",
+          "scenario": "搜索结果里只有一两个甚至没有符合条件的人（受访者自述的最坏情况）。",
+          "outcome": "counterexample",
+          "rationale": "即使四项目标都做到，也可能没有可请求的对象，父目标无法实现；这正是组不充分的反例，故收为 proposed/partial。",
+          "evidence_ids": []
+        },
+        {
+          "kind": "exception",
+          "origin": "source",
+          "scenario": "非会员只能看到有限的结果列表，检索覆盖面被平台限制。",
+          "outcome": "counterexample",
+          "rationale": "检索这一步的可达范围受订阅状态限制，仅靠关键词检索无法覆盖全部潜在对象，需要 G008/G009 之类的手段补足。",
+          "evidence_ids": []
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "对方接受了连接邀请但拒绝转介，或接受后不再回应。",
+          "outcome": "counterexample",
+          "rationale": "转介由对方决定，四项目标不含任何确保对方同意的措施，故不足以共同满足父目标。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G003",
+      "message": "原文说 'for my 3rd company'，具体指哪家公司？目前按'所申请的公司'泛化，是否应收窄？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G007",
+      "message": "200 字符上限只作为条件保留；是否应把'在字符限制内完整传达意图'单列为质量目标？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "购买 Premium 属偏好方案且成本高，是否保留为目标，还是只作为应对结果受限的备选策略？"
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "GR1 的三个反例（无符合条件者、非会员结果受限、对方拒绝转介）是否需要以新的障碍或目标承接，还是仅作为该组的未决缺口？"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC023-goal-model",
+      "message": "'对方接受邀请后继续沟通转介细节'在原文只是流程可能性（'I can then'），未建目标；是否需要补为条件目标？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G004",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "when he wants to connect with people to ask for a referral"
+      ],
+      "assumptions": [],
+      "rationale": "双关键词检索是受访者用来找到可转介对象的做法，服务于获取转介这一目的；原文把它说成求转介时的第一步，并在 T011 说明为何必须加公司名。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T011",
+          "quote": "then only company employee is able to refer me",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G005",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "把连接对象限制为现任员工且校友，是提高拿到转介可能性的具体做法（T009 明确说这样发消息时能提到同校经历以提高转介可能），服务于获取转介。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T009",
+          "quote": "I will only choose people who is currently a company employee and who was my university's student",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G006",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "先核对对方经历与目标职位是否相符再发邀请，是筛选可转介对象的方式，直接服务于转介目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "If their experience are the exactly what I'm looking for. Then I'm going to hit the connect button",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G007",
+      "target_id": "G003",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "随邀请发送附言说明来意并提到同校背景，是受访者实际用来争取转介的手段；同一句说明其目的是让对方愿意转介。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T009",
+          "quote": "I can tell them that I was also like a student in my university, and to increase the possibility that they want to refer me for the position",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G008",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "only for non-members whose result list is limited"
+      ],
+      "assumptions": [],
+      "rationale": "购买 Premium 被说明为解除搜索结果数量限制、能访问任意多的潜在连接，因此帮助检索这一步拿到更多候选；原文未说它保证检索质量或转介成功，故只记贡献。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T015",
+          "quote": "is just to purchase the linking premium, because, like this, allow me to access like as much as possible potential connections as I want to",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G009",
+      "target_id": "G004",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "when the results are unsatisfactory or the list is limited"
+      ],
+      "assumptions": [],
+      "rationale": "调整关键词（删减或更具体）是为了让检索返回更精确的背景匹配，帮助检索这一步的结果质量；原文把它作为 Premium 之外的替代办法，未声称必然成功。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T015",
+          "quote": "to modify the keywords in my when I was doing the searching. so I may kind of like delete one or 2 of the keyword. or like to be more specific",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G001",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "受访者明确说增加连接数是为了让查看主页的人看到自己在 LinkedIn 上活跃；增加数量有助于该观感，但不保证被这样看待（主页内容同样影响判断），故为贡献而非精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T003",
+          "quote": "to make sure that I to to show people that I'm active on Linkedin",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G004",
+      "target_id": "G007",
+      "type": "precedes",
+      "status": "rejected",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "已检查但无依据：原文只按步骤叙述先后（'and then I am going to click on...'，再'add a message'），检索的结果是一份候选名单而非被追求的结果状态，且两者之间还有筛选与看经历；顺序本身不构成结果层面的过程先后联系，两端已分别由 R1/R4 表达为目的-方式，故判 rejected。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC023:T007",
+          "quote": "and then I am going to click on, click into their profile and to see about their experience",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

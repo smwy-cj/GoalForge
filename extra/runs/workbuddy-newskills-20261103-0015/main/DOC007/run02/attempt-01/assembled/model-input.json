@@ -1,0 +1,1330 @@
+{
+  "schema_version": "goalforge-kaos-2",
+  "model_id": "DOC007-goal-model",
+  "version": "v1",
+  "parent": null,
+  "scope": {
+    "document_id": "DOC007",
+    "coverage": {
+      "scope": "provided_material",
+      "source_ids": [
+        "DOC007:T000",
+        "DOC007:T001",
+        "DOC007:T002",
+        "DOC007:T003",
+        "DOC007:T004",
+        "DOC007:T005",
+        "DOC007:T006",
+        "DOC007:T007",
+        "DOC007:T008",
+        "DOC007:T009",
+        "DOC007:T010",
+        "DOC007:T011",
+        "DOC007:T012",
+        "DOC007:T013",
+        "DOC007:T014",
+        "DOC007:T015",
+        "DOC007:T016",
+        "DOC007:T017",
+        "DOC007:T018",
+        "DOC007:T019",
+        "DOC007:T020",
+        "DOC007:T021",
+        "DOC007:T022",
+        "DOC007:T023",
+        "DOC007:T024",
+        "DOC007:T025",
+        "DOC007:T026",
+        "DOC007:T027",
+        "DOC007:T028",
+        "DOC007:T029",
+        "DOC007:T030",
+        "DOC007:T031",
+        "DOC007:T032",
+        "DOC007:T033",
+        "DOC007:T034",
+        "DOC007:T035",
+        "DOC007:T036",
+        "DOC007:T037",
+        "DOC007:T038",
+        "DOC007:T039",
+        "DOC007:T040",
+        "DOC007:T041",
+        "DOC007:T042",
+        "DOC007:T043",
+        "DOC007:T044",
+        "DOC007:T045",
+        "DOC007:T046",
+        "DOC007:T047",
+        "DOC007:T048",
+        "DOC007:T049",
+        "DOC007:T050",
+        "DOC007:T051",
+        "DOC007:T052",
+        "DOC007:T053",
+        "DOC007:T054",
+        "DOC007:T055",
+        "DOC007:T056",
+        "DOC007:T057",
+        "DOC007:T058",
+        "DOC007:T059",
+        "DOC007:T060",
+        "DOC007:T061",
+        "DOC007:T062",
+        "DOC007:T063",
+        "DOC007:T064",
+        "DOC007:T065",
+        "DOC007:T066",
+        "DOC007:T067",
+        "DOC007:T068",
+        "DOC007:T069",
+        "DOC007:T070",
+        "DOC007:T071",
+        "DOC007:T072",
+        "DOC007:T073",
+        "DOC007:T074",
+        "DOC007:T075",
+        "DOC007:T076",
+        "DOC007:T077",
+        "DOC007:T078",
+        "DOC007:T079",
+        "DOC007:T080",
+        "DOC007:T081",
+        "DOC007:T082",
+        "DOC007:T083",
+        "DOC007:T084",
+        "DOC007:T085"
+      ],
+      "omissions": []
+    }
+  },
+  "goals": [
+    {
+      "goal_id": "G001",
+      "statement": "Complete routine online grocery orders efficiently, without spending time exploring or browsing items.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "when the week is busy or the purchase is the usual regular stock"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "受访者明确说明上线的目的就是效率、不是为了逛，并给出繁忙周与常规补货两种情境；结尾又确认访谈摘要准确。否定只针对“随机浏览”，原文并未要求移除探索功能，因此目标写成效率结果而非“取消探索”。"
+      },
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ]
+    },
+    {
+      "goal_id": "G002",
+      "statement": "Generate a grocery list automatically from the user's past orders.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "uses the user's own order history"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文直接表达“如果能看我过去的订单并帮我生成购物清单就好了”，动作与结果都明确；强度是“it would be cool”，属于期望而非硬性要求，已按原强度记录。同轮发现已有 Buy again 功能，但那是逐项手动加购，不等于自动生成清单。"
+      },
+      "evidence_ids": [
+        "E0004"
+      ]
+    },
+    {
+      "goal_id": "G003",
+      "statement": "Provide reusable grocery-list templates that the user can customize for different occasions such as a weekly list and a party-planning list.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "weekly shopping",
+        "party planning"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文明示希望有可重复使用、可按场合定制的模板清单，并在 T068 明确说这是“在重复自己”，属于同一愿望的再次强调；结尾摘要也把 custom lists 列为会提升体验的功能，并被受访者确认。"
+      },
+      "evidence_ids": [
+        "E0005",
+        "E0006"
+      ]
+    },
+    {
+      "goal_id": "G004",
+      "statement": "Reduce the typing and clicking needed for each order by letting the user open one saved list and read through it instead of rebuilding the list.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "recurring grocery orders"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文把“打开一份清单浏览”与“减少打字和点击”作为同一改造的预期结果直接说出，动作与质量结果都在句内。该目标与模板目标共享情境，但验收维度是交互代价，不是模板是否存在，故单独保留。"
+      },
+      "evidence_ids": [
+        "E0007"
+      ]
+    },
+    {
+      "goal_id": "G005",
+      "statement": "Keep the recurring grocery list comprehensive so that forgotten items do not force an extra trip to the store.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "shopping from memory"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文把“更全面、不容易漏项、否则要再跑一趟实体店”作为复用清单的另一个结果直接表述，属于独立于交互代价的质量意图。"
+      },
+      "evidence_ids": [
+        "E0008",
+        "E0009"
+      ]
+    },
+    {
+      "goal_id": "G006",
+      "statement": "Every two weeks, show the user the grocery list for sign-off and then place the order for pickup.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "biweekly cadence",
+        "user signs off before the order is placed",
+        "pickup"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文具体描述了双周展示清单、用户确认后自动下单、再到店取货的流程，周期、确认环节和履约方式都保留。受访者随后怀疑该功能可能已存在但被埋没（原句“They actually might...so buried”），这只影响可发现性，不否定该流程是期望结果。"
+      },
+      "evidence_ids": [
+        "E0010",
+        "E0011"
+      ]
+    },
+    {
+      "goal_id": "G007",
+      "statement": "Suggest features that are likely useful to the user based on how the user is using the platform.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "existing features such as lists and Buy again are buried"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文明示“should”级别的诉求：按使用情况主动推荐可能有用的功能。前文把功能被埋没、界面不直观作为问题，本目标是受访者自己给出的补救方式，不是分析者补造。"
+      },
+      "evidence_ids": [
+        "E0012"
+      ]
+    },
+    {
+      "goal_id": "G008",
+      "statement": "Make store-specific availability clearly visible while searching so that items unavailable at the selected store are not added to the cart.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "searching Amazon before Whole Foods is selected"
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G001"
+        ],
+        "reason": "效率目标下，加错店铺导致的回头重搜是明确的时间损耗，据此推断需要更清楚的店铺可用性提示。",
+        "assumptions": [
+          "受访者希望减少该类返工"
+        ]
+      },
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [
+          "受访者希望减少因漏选店铺造成的返工",
+          "更清楚的可用性标识不会被当作干扰"
+        ],
+        "reasoning_steps": [
+          "T026 描述忘选店铺后加入不可用商品并需重新筛选",
+          "T032 说明 Whole Foods 图标存在但不显眼、容易漏看",
+          "据此推断期望在搜索阶段清楚显示店铺可用性"
+        ],
+        "label": "inferred",
+        "rationale": "原文只有抱怨与后果（图标不显眼、漏选店铺后把不可用商品加入购物车、又要回头重搜），没有一句直接提出改进要求。由“漏选导致返工”推断期望是让店铺可用性在加购前清楚可见，推断依赖用户希望减少返工这一假设。"
+      },
+      "evidence_ids": [
+        "E0013",
+        "E0014"
+      ]
+    },
+    {
+      "goal_id": "G009",
+      "statement": "Recommend products in a feed when the user is scrolling through a category such as snacks.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "exploratory category browsing, e.g. snacks",
+        "not for routine known-item orders"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文明确设想在按类目滚动浏览时出现类似信息流的推荐；语气是“kind of be interesting”，且紧接“或后端可能已经这样做”，强度弱、不确定是否已有实现，均按原样保留。该目标只在探索情境成立，与例行采购的效率目标不矛盾。"
+      },
+      "evidence_ids": [
+        "E0015"
+      ]
+    },
+    {
+      "goal_id": "G010",
+      "statement": "Find out how purchase data shared between the in-store and online grocery channels is used.",
+      "actor": "Stakeholder",
+      "conditions": [
+        "account linked to Whole Foods purchases"
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "support": {
+        "supported_parts": [],
+        "unsupported_parts": [],
+        "assumptions": [],
+        "reasoning_steps": [],
+        "label": "direct",
+        "rationale": "原文直接说对线上线下共享的购买数据如何使用“一直好奇”，并提到隐私顾虑；这是想知道的诉求，不是要求新增功能，强度按“curious / wondered”保留，未升级为强制透明度要求。"
+      },
+      "evidence_ids": [
+        "E0016",
+        "E0017"
+      ]
+    }
+  ],
+  "refinement_groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G001",
+      "child_ids": [
+        "G003",
+        "G006"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "例行补货情境下，“可复用模板 + 双周确认下单”覆盖了选品与下单两段主要操作，是可能共同满足效率目标的组合；但它没有覆盖新商品搜索、店铺可用性判断、结算与取货安排，无法声称整组共同充分，故保留为候选。",
+      "assumptions": [
+        "用户已有一份覆盖常规采购的清单模板",
+        "双周节奏与用户实际采购频率相符"
+      ],
+      "evidence_ids": [
+        "K0002",
+        "K0001"
+      ],
+      "relation_ids": [
+        "R1",
+        "R6"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "一次典型的双周常规补货：用户打开已定制好的周清单，逐项确认后系统按清单下单并安排取货。",
+          "outcome": "supports",
+          "rationale": "该情境下选品与下单都由模板和自动下单承接，操作量明显下降，说明组合对效率目标有实质帮助。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "某一周需要买清单外的新商品，或部分商品在该门店缺货。",
+          "outcome": "counterexample",
+          "rationale": "此时仍需手动搜索、判断店铺可用性并处理替代品，组内两个子目标都没有承接这些步骤，说明整组不构成共同充分。"
+        }
+      ]
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC007:T050",
+      "material_id": "M001",
+      "quote": "I'm really there for efficiency. I'm not there to look around.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11835,
+      "end_char": 11897,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T050",
+          "segment_start": 207,
+          "segment_end": 269,
+          "start_char": 11835,
+          "end_char": 11897
+        }
+      ],
+      "original_locator": {
+        "turn": "50",
+        "start_char": 11628,
+        "end_char": 12444
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC007:T022",
+      "material_id": "M001",
+      "quote": "if I have like, a really busy week, and I don't have time to physically go or if I'm just buying the same things that I always buy and like don't need to explore",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2968,
+      "end_char": 3129,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T022",
+          "segment_start": 342,
+          "segment_end": 503,
+          "start_char": 2968,
+          "end_char": 3129
+        }
+      ],
+      "original_locator": {
+        "turn": "22",
+        "start_char": 2626,
+        "end_char": 3207
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC007:T082",
+      "material_id": "M001",
+      "quote": "that was a very accurate summary of everything that I wanted to share",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 20187,
+      "end_char": 20256,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T082",
+          "segment_start": 12,
+          "segment_end": 81,
+          "start_char": 20187,
+          "end_char": 20256
+        }
+      ],
+      "original_locator": {
+        "turn": "82",
+        "start_char": 20175,
+        "end_char": 20321
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC007:T034",
+      "material_id": "M001",
+      "quote": "it would be cool if they could look at all of my past orders, and like come up with a grocery list for me",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7739,
+      "end_char": 7844,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T034",
+          "segment_start": 422,
+          "segment_end": 527,
+          "start_char": 7739,
+          "end_char": 7844
+        }
+      ],
+      "original_locator": {
+        "turn": "34",
+        "start_char": 7317,
+        "end_char": 8216
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC007:T038",
+      "material_id": "M001",
+      "quote": "it would be nice like if they could have almost a template grocery list that I could just like reuse every time that I customize, like my weekly grocery list versus my like party planning grocery list",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 9341,
+      "end_char": 9541,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T038",
+          "segment_start": 547,
+          "segment_end": 747,
+          "start_char": 9341,
+          "end_char": 9541
+        }
+      ],
+      "original_locator": {
+        "turn": "38",
+        "start_char": 8794,
+        "end_char": 9566
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC007:T068",
+      "material_id": "M001",
+      "quote": "I'm kind of repeating myself, but the ability to create templates of a grocery list. and then just like Reuse",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16747,
+      "end_char": 16856,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T068",
+          "segment_start": 39,
+          "segment_end": 148,
+          "start_char": 16747,
+          "end_char": 16856
+        }
+      ],
+      "original_locator": {
+        "turn": "68",
+        "start_char": 16708,
+        "end_char": 17309
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC007:T078",
+      "material_id": "M001",
+      "quote": "the biggest overhaul would probably be, I just like click on one list and read through it rather than like having to reconstruct the list every time. So I think it would like reduce the amount of typing and clicking",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18605,
+      "end_char": 18820,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T078",
+          "segment_start": 170,
+          "segment_end": 385,
+          "start_char": 18605,
+          "end_char": 18820
+        }
+      ],
+      "original_locator": {
+        "turn": "78",
+        "start_char": 18435,
+        "end_char": 19161
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC007:T078",
+      "material_id": "M001",
+      "quote": "and also be more comprehensive, because sometimes I just like, forget things",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18822,
+      "end_char": 18898,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T078",
+          "segment_start": 387,
+          "segment_end": 463,
+          "start_char": 18822,
+          "end_char": 18898
+        }
+      ],
+      "original_locator": {
+        "turn": "78",
+        "start_char": 18435,
+        "end_char": 19161
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC007:T078",
+      "material_id": "M001",
+      "quote": "I forgot one item, and then I'll have to like physically. Go into the store for that.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18993,
+      "end_char": 19078,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T078",
+          "segment_start": 558,
+          "segment_end": 643,
+          "start_char": 18993,
+          "end_char": 19078
+        }
+      ],
+      "original_locator": {
+        "turn": "78",
+        "start_char": 18435,
+        "end_char": 19161
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC007:T068",
+      "material_id": "M001",
+      "quote": "it would be interesting if they had like a way to every 2 weeks. They show you like, okay, here's your grocery list.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16953,
+      "end_char": 17069,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T068",
+          "segment_start": 245,
+          "segment_end": 361,
+          "start_char": 16953,
+          "end_char": 17069
+        }
+      ],
+      "original_locator": {
+        "turn": "68",
+        "start_char": 16708,
+        "end_char": 17309
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC007:T068",
+      "material_id": "M001",
+      "quote": "once you sign off on it. I'm going to place this order, and then you can go pick it up.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17093,
+      "end_char": 17180,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T068",
+          "segment_start": 385,
+          "segment_end": 472,
+          "start_char": 17093,
+          "end_char": 17180
+        }
+      ],
+      "original_locator": {
+        "turn": "68",
+        "start_char": 16708,
+        "end_char": 17309
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC007:T072",
+      "material_id": "M001",
+      "quote": "they should just like somehow find a way to suggest features that might be useful to me, based on how I'm using this platform.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17628,
+      "end_char": 17754,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T072",
+          "segment_start": 62,
+          "segment_end": 188,
+          "start_char": 17628,
+          "end_char": 17754
+        }
+      ],
+      "original_locator": {
+        "turn": "72",
+        "start_char": 17566,
+        "end_char": 17754
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC007:T032",
+      "material_id": "M001",
+      "quote": "there's like a whole foods icon that appears under the ones that like are actually available in whole foods. But it's not like that visible. So like, it's easy to miss.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6176,
+      "end_char": 6344,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T032",
+          "segment_start": 334,
+          "segment_end": 502,
+          "start_char": 6176,
+          "end_char": 6344
+        }
+      ],
+      "original_locator": {
+        "turn": "32",
+        "start_char": 5842,
+        "end_char": 7007
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC007:T026",
+      "material_id": "M001",
+      "quote": "I'll add things to my cart that aren't available at my local whole foods",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4595,
+      "end_char": 4667,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T026",
+          "segment_start": 657,
+          "segment_end": 729,
+          "start_char": 4595,
+          "end_char": 4667
+        }
+      ],
+      "original_locator": {
+        "turn": "26",
+        "start_char": 3938,
+        "end_char": 4701
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC007:T046",
+      "material_id": "M001",
+      "quote": "it would kind of be interesting if they like made it when I'm scrolling through like more of, or they probably do this on the back end. But like a Facebook news feed where it's like recommending things.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 11048,
+      "end_char": 11250,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T046",
+          "segment_start": 414,
+          "segment_end": 616,
+          "start_char": 11048,
+          "end_char": 11250
+        }
+      ],
+      "original_locator": {
+        "turn": "46",
+        "start_char": 10634,
+        "end_char": 11250
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC007:T066",
+      "material_id": "M001",
+      "quote": "I've been curious like, how do they use that kind of information?",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16137,
+      "end_char": 16202,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T066",
+          "segment_start": 489,
+          "segment_end": 554,
+          "start_char": 16137,
+          "end_char": 16202
+        }
+      ],
+      "original_locator": {
+        "turn": "66",
+        "start_char": 15648,
+        "end_char": 16313
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC007:T066",
+      "material_id": "M001",
+      "quote": "I've always wondered about the privacy concerns with",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15862,
+      "end_char": 15914,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T066",
+          "segment_start": 214,
+          "segment_end": 266,
+          "start_char": 15862,
+          "end_char": 15914
+        }
+      ],
+      "original_locator": {
+        "turn": "66",
+        "start_char": 15648,
+        "end_char": 16313
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0001",
+      "source_id": "DOC007:T078",
+      "material_id": "M001",
+      "quote": "I just like click on one list and read through it rather than like having to reconstruct the list every time.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18645,
+      "end_char": 18754,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T078",
+          "segment_start": 210,
+          "segment_end": 319,
+          "start_char": 18645,
+          "end_char": 18754
+        }
+      ],
+      "original_locator": {
+        "turn": "78",
+        "start_char": 18435,
+        "end_char": 19161
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0002",
+      "source_id": "DOC007:T068",
+      "material_id": "M001",
+      "quote": "They show you like, okay, here's your grocery list.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17018,
+      "end_char": 17069,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T068",
+          "segment_start": 310,
+          "segment_end": 361,
+          "start_char": 17018,
+          "end_char": 17069
+        }
+      ],
+      "original_locator": {
+        "turn": "68",
+        "start_char": 16708,
+        "end_char": 17309
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0003",
+      "source_id": "DOC007:T079",
+      "material_id": "M001",
+      "quote": "you're using these apps for you know, efficiency purposes more than exploring new products",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19307,
+      "end_char": 19397,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T079",
+          "segment_start": 125,
+          "segment_end": 215,
+          "start_char": 19307,
+          "end_char": 19397
+        }
+      ],
+      "original_locator": {
+        "turn": "79",
+        "start_char": 19182,
+        "end_char": 20095
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0004",
+      "source_id": "DOC007:T078",
+      "material_id": "M001",
+      "quote": "So I think it would like reduce the amount of typing and clicking",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18755,
+      "end_char": 18820,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T078",
+          "segment_start": 320,
+          "segment_end": 385,
+          "start_char": 18755,
+          "end_char": 18820
+        }
+      ],
+      "original_locator": {
+        "turn": "78",
+        "start_char": 18435,
+        "end_char": 19161
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0005",
+      "source_id": "DOC007:T078",
+      "material_id": "M001",
+      "quote": "and also be more comprehensive, because sometimes I just like, forget things",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18822,
+      "end_char": 18898,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T078",
+          "segment_start": 387,
+          "segment_end": 463,
+          "start_char": 18822,
+          "end_char": 18898
+        }
+      ],
+      "original_locator": {
+        "turn": "78",
+        "start_char": 18435,
+        "end_char": 19161
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0006",
+      "source_id": "DOC007:T078",
+      "material_id": "M001",
+      "quote": "I forgot one item, and then I'll have to like physically. Go into the store for that.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18993,
+      "end_char": 19078,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T078",
+          "segment_start": 558,
+          "segment_end": 643,
+          "start_char": 18993,
+          "end_char": 19078
+        }
+      ],
+      "original_locator": {
+        "turn": "78",
+        "start_char": 18435,
+        "end_char": 19161
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0007",
+      "source_id": "DOC007:T034",
+      "material_id": "M001",
+      "quote": "I feel like that part is more what's difficult, like figuring out exactly what I need for a month or 2 weeks.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7459,
+      "end_char": 7568,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T034",
+          "segment_start": 142,
+          "segment_end": 251,
+          "start_char": 7459,
+          "end_char": 7568
+        }
+      ],
+      "original_locator": {
+        "turn": "34",
+        "start_char": 7317,
+        "end_char": 8216
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0008",
+      "source_id": "DOC007:T068",
+      "material_id": "M001",
+      "quote": "once you sign off on it. I'm going to place this order, and then you can go pick it up.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17093,
+      "end_char": 17180,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T068",
+          "segment_start": 385,
+          "segment_end": 472,
+          "start_char": 17093,
+          "end_char": 17180
+        }
+      ],
+      "original_locator": {
+        "turn": "68",
+        "start_char": 16708,
+        "end_char": 17309
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "K0009",
+      "source_id": "DOC007:T032",
+      "material_id": "M001",
+      "quote": "I'll have to like go back and like research for it",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 6721,
+      "end_char": 6771,
+      "candidate_locations": [
+        {
+          "source_id": "DOC007:T032",
+          "segment_start": 879,
+          "segment_end": 929,
+          "start_char": 6721,
+          "end_char": 6771
+        }
+      ],
+      "original_locator": {
+        "turn": "32",
+        "start_char": 5842,
+        "end_char": 7007
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "issues": [
+    {
+      "target_type": "goal",
+      "target_id": "G003",
+      "message": "模板复用（G003）与减少打字点击（G004）是否应合并为一个目标？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G004",
+      "message": "模板复用（G003）与减少打字点击（G004）是否应合并为一个目标？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G001",
+      "message": "效率目标与探索型推荐流是否构成冲突或应分情境并存？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "效率目标与探索型推荐流是否构成冲突或应分情境并存？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "店铺可用性可见性目标是否得到足够依据？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G010",
+      "message": "对数据使用方式的好奇是否应作为产品目标？",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "GR1 只覆盖常规补货的选品与下单，遇到新商品或缺货时仍缺口明显；是否需要补充搜索/可用性子目标后才可能成立？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G008",
+      "message": "G008 由“图标不显眼、容易漏选店铺”的抱怨推断而来，原文未直接提出改进要求；是否应改为待确认而非已支持目标？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G006",
+      "message": "受访者怀疑双周清单功能可能已存在但被埋没（T068），该目标应保留为功能目标，还是改为“让已有功能可被发现”？",
+      "blocking": false
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G009",
+      "message": "推荐流只适用于类目探索情境，与例行采购的效率目标条件不同；是否需要明确两者适用边界，避免被读成冲突？",
+      "blocking": false
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC007-goal-model",
+      "message": "已逐对检查其余目标（G002、G004、G005、G007、G009、G010 之间及与 G001 的组合），只能找到贡献或方式类联系，找不到可声称 AND 共同充分的组；该结论是否需要更多访谈证据确认？",
+      "blocking": false
+    },
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "这组层级仍需确认，尚未作为成立的精化展示。",
+      "blocking": false
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R6",
+      "message": "这项联系尚待确认，不表示充分精化。",
+      "blocking": false
+    }
+  ],
+  "limitations": [
+    "仅依据单次访谈转写；Buy again、Your list、双周清单等现有功能的实际实现未核实。",
+    "转写含口语重复与识别噪声（如 'I'm about like'、'a an option'），个别句子按上下文理解。",
+    "未获得产品文档或第二来源，现有能力与期望改进的边界只能按受访者口述判断。"
+  ],
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "27bd6b64effae82c5c382abb6b7f665fe13edb51680b522393aea3ddf04c47d0"
+    },
+    {
+      "path": "attachments/judgments.json",
+      "sha256": "c5b7d7292d693c5f5209fbf286615fbe4e0da604e14d8756be3efc870bf512bb"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "236c845ece2f3583b2d8ab714e712fc26820c24b5e264f392b9ea6430a9ece63"
+    },
+    {
+      "path": "attachments/kaos-decisions.json",
+      "sha256": "5dfd91cb0d13f5d8c7aa133d8d423f0eecfac87dc63eb54b7f89668118637526"
+    }
+  ],
+  "review": {
+    "status": "pending"
+  },
+  "changes": [],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G003",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "routine repeat purchasing"
+      ],
+      "assumptions": [],
+      "rationale": "可复用模板是实现“例行采购少花时间”的具体方式：原文把自定义清单列为提升便利性的功能，并在结尾摘要中被受访者确认。",
+      "evidence_ids": [
+        "K0003"
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G004",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "recurring orders"
+      ],
+      "assumptions": [],
+      "rationale": "减少打字与点击直接降低每单的操作时间，对效率目标有正向帮助；原文同句给出该结果，但未声称它是效率的唯一保证。",
+      "evidence_ids": [
+        "K0004"
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G003",
+      "target_id": "G005",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "list is reused rather than rebuilt"
+      ],
+      "assumptions": [],
+      "rationale": "原文把“复用一份清单”与“更全面、不容易漏项”放在同一改造结果里，模板复用对清单完整性有正向帮助。",
+      "evidence_ids": [
+        "K0005"
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G005",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "an item is forgotten"
+      ],
+      "assumptions": [],
+      "rationale": "漏项会导致额外跑一趟实体店，浪费原本想节省的时间，因此清单完整性帮助效率目标；该联系由同一段叙述的两个结果连接，属于推断性贡献而非明示因果。",
+      "evidence_ids": [
+        "K0006"
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G002",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "user has past orders"
+      ],
+      "assumptions": [],
+      "rationale": "原文说规划“这一两周到底要买什么”才是最费劲的部分，自动生成清单正好减少这段规划投入，因而帮助效率目标。",
+      "evidence_ids": [
+        "K0007"
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G006",
+      "target_id": "G001",
+      "type": "operationalization",
+      "status": "proposed",
+      "conditions": [
+        "routine restocking every two weeks"
+      ],
+      "assumptions": [
+        "双周节奏与用户约每两周采购一次的频率相符"
+      ],
+      "rationale": "双周确认后自动下单是省去重复下单动作的具体方式，方向上实现效率目的；但原句只描述流程，未说明其目的，故记为待确认。",
+      "evidence_ids": [
+        "K0008"
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G008",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "item not available at the selected store"
+      ],
+      "assumptions": [],
+      "rationale": "若可用性能在加购前看清，就不必回头重新搜索不可用商品，直接减少返工时间，帮助效率目标。",
+      "evidence_ids": [
+        "K0009"
+      ]
+    }
+  ],
+  "source_binding": {
+    "sha256": "236c845ece2f3583b2d8ab714e712fc26820c24b5e264f392b9ea6430a9ece63"
+  }
+}

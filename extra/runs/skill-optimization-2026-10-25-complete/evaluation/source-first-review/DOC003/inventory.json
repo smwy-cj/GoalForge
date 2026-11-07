@@ -1,0 +1,684 @@
+{
+  "document_id": "DOC003",
+  "artifact_type": "isolated_model_reviewer_source_intent_inventory",
+  "human_gold": false,
+  "source_only": true,
+  "domain": "航班行程研究与跨网站订票",
+  "scope": "以受访者使用 Skyscanner 研究现金票为中心，同时保留跨聚合器、供应商、航司、积分票和贵宾室的必要边界。",
+  "methodology": "逐段完整阅读原文后人工式语义判断；条目由评审模型编写，程序仅校验引用和序列化，不以关键词抽取代替理解。未读取技能、论文目标、tests、生成结果或既有评估。条目不是最终目标模型，不规定唯一层次或粒度。",
+  "intents": [
+    {
+      "intent_id": "DOC003:I01",
+      "intent": "找到价格合适且满足行程安排的航班",
+      "subject": "受访旅客（主要本人，也替亲友）",
+      "conditions": "计划旅行并研究现金票时",
+      "modality": "明确的主要目的",
+      "exceptions": "有时为体验航班接受更贵、更长路线",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T025",
+          "quote": "my primary focus is to like get a really good deal",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6102,
+          "quote_end_char": 6152,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T107",
+          "quote": "Best results for me is a combination of the logistics in terms of the itinerary that I want the price and the flexibility. All 3 aspects combined. mostly focusing on the 1st 2.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 39706,
+          "quote_end_char": 39882,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I02",
+      "intent": "尽量提前订票以获得较好价格",
+      "subject": "旅客",
+      "conditions": "理想订票时机",
+      "modality": "偏好而非硬约束",
+      "exceptions": "最近国内行程常仅提前一两周；紧急旅行可当天订",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T015",
+          "quote": "Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 2910,
+          "quote_end_char": 3015,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T027",
+          "quote": "there are rare occasions where I just have to book a flight.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6592,
+          "quote_end_char": 6652,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I03",
+      "intent": "在不同时间反复比价并探索多个网站的最佳优惠",
+      "subject": "旅客",
+      "conditions": "有时间研究时",
+      "modality": "通常行为服务于省钱",
+      "exceptions": "可能跨几天或几周，没有固定频率；最后一分钟可很快完成",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T025",
+          "quote": "I check like dozens of different websites to just make sure I'm having the best deal possible.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6285,
+          "quote_end_char": 6379,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T027",
+          "quote": "It is very situationally dependent.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 6916,
+          "quote_end_char": 6951,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I04",
+      "intent": "灵活组合区域、国家、邻近机场及日期，缩小到可行行程",
+      "subject": "旅客",
+      "conditions": "研究起讫地点时",
+      "modality": "明确策略",
+      "exceptions": "不是始终限制本地机场或某个固定城市对",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T031",
+          "quote": "I generally do country to country pairs",
+          "speaker": "Stakeholder",
+          "quote_start_char": 8143,
+          "quote_end_char": 8182,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T065",
+          "quote": "I would rather search with a series of different airports.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 18956,
+          "quote_end_char": 19014,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I05",
+      "intent": "使航班时刻与后续交通、住宿、会面安排和休息相匹配",
+      "subject": "旅客",
+      "conditions": "比较可行行程时",
+      "modality": "主要质量标准",
+      "exceptions": "可接受红眼，但更愿意睡好；价格太高可接受等车风险",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T031",
+          "quote": "I don't end up having to stay in a city",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9024,
+          "quote_end_char": 9063,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T119",
+          "quote": "Is it matching up with the schedules of the person who, if I'm going to meet somebody, and that's it. Is it matching up with their schedules.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 42643,
+          "quote_end_char": 42784,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T119",
+          "quote": "I don't mind taking a red eye, but I would rather get my night's sleep.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 42839,
+          "quote_end_char": 42910,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I06",
+      "intent": "比较供应商价格、评价、折扣、优惠券和升级，确定最终总价与订票渠道",
+      "subject": "旅客",
+      "conditions": "已圈定理想航班后",
+      "modality": "明确主要目的及策略",
+      "exceptions": "可跨聚合器或直接向供应商、航司订票，渠道不固定",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T077",
+          "quote": "I look at the price. I take a look at the rating, and I often visit multiple providers from this page.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 26073,
+          "quote_end_char": 26175,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T103",
+          "quote": "whichever is giving me a better deal with any sort of coupons and discounts that I can apply to it.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 38691,
+          "quote_end_char": 38790,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I07",
+      "intent": "确认每段航班、转机、当地日期时间、终站等物流细节适合自己",
+      "subject": "旅客",
+      "conditions": "选择行程、跳转供应商前",
+      "modality": "明确检查目的",
+      "exceptions": "展示所有功能本身不等于使用所有过滤器",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T077",
+          "quote": "I make sure all the flight details like I said. All the connections and all the times are right for me, and they work for my schedule.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 25794,
+          "quote_end_char": 25928,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T031",
+          "quote": "I'll just make sure all the terminal, all the logistics. Information is correct.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 9933,
+          "quote_end_char": 10013,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I08",
+      "intent": "按国际或国内场景平衡价格和总旅程时长",
+      "subject": "旅客",
+      "conditions": "浏览排序结果时",
+      "modality": "情境偏好",
+      "exceptions": "国际主要看 best 避免廉价结果中四五六十小时行程；国内多数看 cheapest；不是一概选最快",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T073",
+          "quote": "when I'm booking domestic, it's mostly going through the cheapest tab.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 23864,
+          "quote_end_char": 23934,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T073",
+          "quote": "the best is like a more medium section, like something that balances between price and the time taken.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 23703,
+          "quote_end_char": 23805,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I09",
+      "intent": "必要时用出到达时窗及最长旅行时长过滤不合适航班",
+      "subject": "旅客",
+      "conditions": "接续其他交通或有时长上限时",
+      "modality": "条件性策略",
+      "exceptions": "通常很少使用过滤器，不要求所有过滤器均为个人目标",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T069",
+          "quote": "The filters. I don't use it very often unless I'm connecting onto something.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 21873,
+          "quote_end_char": 21949,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T069",
+          "quote": "If I also have a hard limit on the number of hours I want to spend in the sky.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 22088,
+          "quote_end_char": 22166,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I10",
+      "intent": "行程不合适时重查替代路线，兼顾紧迫性和预算",
+      "subject": "旅客",
+      "conditions": "所选航班细节不符合期望时",
+      "modality": "条件性处理",
+      "exceptions": "紧急且无好替代则仍订；学生预算可能优先于时间舒适度",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T081",
+          "quote": "I try to just rerun through all of my options. Make sure I'm not missing something.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 27573,
+          "quote_end_char": 27656,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T083",
+          "quote": "If the price. Differential was way too high. Then I just couldn't afford to like, you know. Spend that much extra",
+          "speaker": "Stakeholder",
+          "quote_start_char": 29455,
+          "quote_end_char": 29568,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I11",
+      "intent": "在陌生市场判断当前价格是否合理",
+      "subject": "旅客",
+      "conditions": "不熟悉地区票价时",
+      "modality": "有帮助、可有可无",
+      "exceptions": "熟悉后不再需要该功能；并未要求持续预测最低价",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T109",
+          "quote": "I can use Google flights for it because it tells me if the price is above, below, or lower than the Median.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 40985,
+          "quote_end_char": 41092,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T111",
+          "quote": "it would help out for the times when I'm not familiar with the specific market.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 41220,
+          "quote_end_char": 41299,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I12",
+      "intent": "保留足够转机缓冲以应对延误与机场连接",
+      "subject": "旅客",
+      "conditions": "有中转且无签证障碍时",
+      "modality": "个人安全偏好",
+      "exceptions": "不普遍限制中转次数；一般至少最短转机时间的1.5倍或2倍",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "Unless I have visa issues, I generally don't care very much about it",
+          "speaker": "Stakeholder",
+          "quote_start_char": 43159,
+          "quote_end_char": 43227,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T123",
+          "quote": "I I generally tend to at least go for 1.5 x or 2 x of that for a stopover.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 43866,
+          "quote_end_char": 43940,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I13",
+      "intent": "核查转机贵宾室是否开放以及自己能否使用",
+      "subject": "旅客",
+      "conditions": "考虑停留机场、时刻和信用卡/通行证权益时",
+      "modality": "个人偏好",
+      "exceptions": "取决于卡、终站、访问政策、剩余额度及施工；不是保证任一机场可用",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "will the lounge at that airport be open at that point of time?",
+          "speaker": "Stakeholder",
+          "quote_start_char": 43998,
+          "quote_end_char": 44060,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T127",
+          "quote": "What's their access policy? What's their timings? Is the renovation going on?",
+          "speaker": "Stakeholder",
+          "quote_start_char": 45908,
+          "quote_end_char": 45985,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I14",
+      "intent": "希望最新个人权益信息可与行程研究整合",
+      "subject": "旅客",
+      "conditions": "有网站能可靠保存并更新卡片权益时",
+      "modality": "条件性愿望",
+      "exceptions": "现有服务更新不好，当前更信任发卡方/通行证官方来源",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T125",
+          "quote": "there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner. That would be wonderful.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 45078,
+          "quote_end_char": 45261,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T125",
+          "quote": "I prefer going to the source of the truth for the lounge access",
+          "speaker": "Stakeholder",
+          "quote_start_char": 45369,
+          "quote_end_char": 45432,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I15",
+      "intent": "研究现金票时尽量匿名并减少数据分享",
+      "subject": "旅客",
+      "conditions": "一般浏览 Skyscanner 或 Google Flights 时",
+      "modality": "强烈隐私偏好",
+      "exceptions": "积分票必须登录；极特殊被迫场景可能登录；单纯承诺不售数据不足以取得信任",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T053",
+          "quote": "I avoid logging in, and I try to keep myself as anonymized as possible.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 15209,
+          "quote_end_char": 15280,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T093",
+          "quote": "It would be a very specific scenario that I really need to do this.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 33974,
+          "quote_end_char": 34041,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I16",
+      "intent": "需要积分票时登录持有积分的航空公司查询并兑换",
+      "subject": "旅客",
+      "conditions": "决定用里程或积分而非现金时",
+      "modality": "条件性流程",
+      "exceptions": "明确不使用 Skyscanner 查询积分票；知道但不亲用第三方积分聚合器",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T057",
+          "quote": "if I have to make a points or an award booking, I'd log on to the airline that I have a loyalty account with where I have my points.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 17580,
+          "quote_end_char": 17712,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I17",
+      "intent": "特殊刚需且价格骤升时接收多个路线的降价提醒",
+      "subject": "旅客",
+      "conditions": "必须出行而现价过高时",
+      "modality": "过去一次的条件性目标",
+      "exceptions": "既有 Google 登录让设置更方便；不是要求新建 Skyscanner 提醒功能，该功能已被受访者确认存在",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T087",
+          "quote": "I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 31622,
+          "quote_end_char": 31730,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T089",
+          "quote": "It does have the same functionality.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 32157,
+          "quote_end_char": 32193,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I18",
+      "intent": "更快、更准确、同时研究大量路线日期舱位组合",
+      "subject": "旅客",
+      "conditions": "跨城市、日期、舱位及现金/积分方案搜索时",
+      "modality": "明确改进愿望",
+      "exceptions": "未给固定速度阈值或必须节省百分比；长期少量节时也有价值",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T095",
+          "quote": "You want to do hundreds of searches at the same time",
+          "speaker": "Stakeholder",
+          "quote_start_char": 34536,
+          "quote_end_char": 34588,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T149",
+          "quote": "more accurately research for things while spending less time at it.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 53133,
+          "quote_end_char": 53200,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T155",
+          "quote": "even if it's saving me just a couple of minutes, because they add up.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 54223,
+          "quote_end_char": 54292,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I19",
+      "intent": "在一处取得研究所需信息，减少多站切换",
+      "subject": "旅客",
+      "conditions": "确定理想订票方案时",
+      "modality": "由障碍直接支持的改进意图",
+      "exceptions": "不能据此把所有外部业务都声明为 Skyscanner 现有职责",
+      "epistemic_status": "推断",
+      "evidence": [
+        {
+          "source_id": "DOC003:T137",
+          "quote": "I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites",
+          "speaker": "Stakeholder",
+          "quote_start_char": 49886,
+          "quote_end_char": 49998,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I20",
+      "intent": "凭熟悉的稳定界面降低搜索操作负担",
+      "subject": "旅客",
+      "conditions": "大量重复搜索时",
+      "modality": "明确选择平台的理由",
+      "exceptions": "别的平台多半只多花30秒到1分钟；达到更快研究可愿意投入学习",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T143",
+          "quote": "the website doesn't change very often the interface remains the same.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 50989,
+          "quote_end_char": 51058,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T147",
+          "quote": "being familiar with the user interface and being able to quickly key in things and search for things just saves you time.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 52551,
+          "quote_end_char": 52672,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    },
+    {
+      "intent_id": "DOC003:I21",
+      "intent": "完成行程和渠道决策后提供旅客资料并付款取得机票",
+      "subject": "旅客/代订者",
+      "conditions": "最终订票阶段",
+      "modality": "明确最终行为目的",
+      "exceptions": "Skyscanner 只链接供应商行程页，不自行订票；可能需要护照资料和声明",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T131",
+          "quote": "enter in all my details and pay for the booking through my card.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 48409,
+          "quote_end_char": 48473,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T133",
+          "quote": "It links you to the others who can do the bookings.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 48664,
+          "quote_end_char": 48715,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ],
+      "interpretation_note": ""
+    }
+  ],
+  "background_candidates": [
+    {
+      "item": "航空爱好、最长航班和停留城市的故事",
+      "reason": "说明行程偏好，不能把示例 Singapore–Newark 或无限中转写为每次任务的固定目标。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T019",
+          "quote": "I try to maximize my time in the air.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 4812,
+          "quote_end_char": 4849,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    },
+    {
+      "item": "首页控件和完整过滤器列表",
+      "reason": "讲解界面能力，非受访者全部需求；其明确很少用过滤器。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T067",
+          "quote": "I also get the ability to filter by flight emissions",
+          "speaker": "Stakeholder",
+          "quote_start_char": 21445,
+          "quote_end_char": 21497,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        },
+        {
+          "source_id": "DOC003:T069",
+          "quote": "I rarely make much differentiation over here in terms of the filters.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 22345,
+          "quote_end_char": 22414,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    },
+    {
+      "item": "随机选择的 Indigo 经 Istanbul、Bombay 行程",
+      "reason": "演示例子，无证据表明是拟订行程。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T075",
+          "quote": "I selected one of the flight paths randomly.",
+          "speaker": "Stakeholder",
+          "quote_start_char": 24212,
+          "quote_end_char": 24256,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    },
+    {
+      "item": "其他聚合器矩阵数量与11,760组合示例",
+      "reason": "说明组合研究复杂性，不宜误作硬性系统容量或精确需求数量。",
+      "epistemic_status": "明确",
+      "evidence": [
+        {
+          "source_id": "DOC003:T099",
+          "quote": "11,760 different combinations of flights",
+          "speaker": "Stakeholder",
+          "quote_start_char": 36357,
+          "quote_end_char": 36397,
+          "offsets": "canonical .txt character offsets; end exclusive"
+        }
+      ]
+    }
+  ],
+  "unresolved": [
+    "行程好坏明确依情境，没有全局固定权重或价格阈值。",
+    "“never log in”有被迫或特殊需求例外，不能写成绝对禁止登录。",
+    "贵宾室整合是有条件愿望；受访者强调现有第三方更新不可靠。",
+    "积分查询为并行旅程，受访者明确不在 Skyscanner 完成。",
+    "价格跟踪与隐私判断是受访者信念，不能当成平台事实。"
+  ],
+  "source_document_hash_declared": "3032b7ea3172c5caf65b213b02082dc97c1a99d5a9bf23baafeb27d45937f39e",
+  "read_range": {
+    "first_source_id": "DOC003:T000",
+    "last_source_id": "DOC003:T162",
+    "turn_count": 163,
+    "read_completely": true,
+    "reading_note": "全文语义阅读；DOC003首次长输出中段被截断后，已单独补读T066–T096。DOC028、DOC036分别按turn分段读完。其他文档完整读取。"
+  }
+}

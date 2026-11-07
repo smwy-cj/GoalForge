@@ -1,0 +1,38 @@
+{
+  "design": "all refinement groups plus purposive full-document goal review",
+  "independence": "fresh review context separate from generating agents; same model family, not human or formal proof",
+  "full_document_goal_review": {
+    "batch1": [
+      "DOC003",
+      "DOC009",
+      "DOC034"
+    ],
+    "batch2": [
+      "DOC014",
+      "DOC022",
+      "DOC025"
+    ],
+    "batch3": [
+      "DOC004",
+      "DOC026",
+      "DOC033"
+    ]
+  },
+  "all_groups_review": "Every refinement group in all 31 expanded documents, including proposed/partial; read parent/children, conditions, assumptions, evidence and enough original context for the actual claim.",
+  "other_goals": "All goals receive author semantic self-review and deterministic checks. Non-sampled goals are independently reviewed only as refinement endpoints or if a specific risk requires it; do not claim full independent goal coverage.",
+  "sampling_rationale": "Purposive spread across long/short sources and three processing batches. Not random and not an unseen accuracy test. Main comparison remains the three pilot documents.",
+  "repair": "Confirmed material issues are repaired in a separate artifact revision and independently rechecked on affected objects; preserve originals and do not fabricate human feedback.",
+  "status": "batch2_and_batch3_review_running; batch1_waiting_for_remaining_sources_to_finish",
+  "additional_risk_triggered_full_review": {
+    "batch3": [
+      "DOC015"
+    ],
+    "batch1": [
+      "DOC012"
+    ]
+  },
+  "additional_review_reason": {
+    "DOC015": "Exact quantitative quotation contains U+00A0 and an encoding artifact; separate reported timings/prices from desired thresholds. Not selected by goal-count quality inference.",
+    "DOC012": "Two interview sections exchange question/answer roles. Independently confirm actor attribution and no accidental cross-person merging."
+  }
+}

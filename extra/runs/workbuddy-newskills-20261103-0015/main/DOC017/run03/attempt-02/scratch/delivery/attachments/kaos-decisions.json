@@ -1,0 +1,124 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "3b94eb53b4f7cbcafd5a1dd3ce8c4cbe3ebc479d014e31305e3110952adbe25b",
+    "judgments_sha256": "0eb3e50aa598d77086cb49af3c2848fe93c132369cfdeb541c2d34de67c74321"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "goal",
+      "target_id": "G004",
+      "message": "非活跃期的'一周一次'是必须的上限，还是仅表示可接受？若为上限，需明确超过频率即违规。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G011",
+      "message": "'相关'是否需要可判定标准（如技能匹配度或领域限定），还是交由平台自行判断？"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "签证/资格信息是平台应展示的内容，还是受访者自行核对的习惯？原文只说明这是其考虑项。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G014",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "档案内容（经验、技能、项目）足以代表受访者的技能集"
+      ],
+      "rationale": "以档案（经验、技能、项目）自动生成岗位列表，是实现'按技能集匹配更新'的一种手段；原文把列表生成依据直接落在经验与技能集上，方向为手段→目的。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T039",
+          "quote": "I kinda assume that it's already set right when it provides me the job list. and I don't need to add any more filters, right? So based on my experience, based on my skill sets.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G012",
+      "target_id": "G002",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "AI 匹配可作为技能匹配的实现方式"
+      ],
+      "rationale": "原文以算法按兴趣与技能集匹配、给出必要岗位来描述被称赞的 AI 机制，属实现'按技能集接收更新'的方式目标；未声称该方式在所有情况下都充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T091",
+          "quote": "And it just finds your interest and matches with your skill set and gets you the necessary roles.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G016",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "把不相关岗位标记为不感兴趣并要求其不再出现，有助于减少不相关推送这一目标；单次标记不保证整体相关性，故只作贡献不作精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T057",
+          "quote": "So I just like, sometimes I kind of blacklist those jobs. And yeah, I just remove those from. I just say that I'm uninterested. and I hope that it doesn't come.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G018",
+      "target_id": "G017",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "公司网站接受转移的资料"
+      ],
+      "rationale": "把平台内资料转移到公司网站，能减少页内申请时的重复录入，从而帮助'在应用内页内查看公司门户并申请'这一目标；不构成其充分条件。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T067",
+          "quote": "I would also prefer that all the details from my job portal is already like transferred to those reviews or Company's website.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G020",
+      "target_id": "G011",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [],
+      "rationale": "原文把'相关或更新的岗位列表'并列陈述，排除六个月至一年以上的陈旧岗位有助于减少不相关更新；只是贡献，非充分。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC017:T071",
+          "quote": "not having a relevant or updated job list.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

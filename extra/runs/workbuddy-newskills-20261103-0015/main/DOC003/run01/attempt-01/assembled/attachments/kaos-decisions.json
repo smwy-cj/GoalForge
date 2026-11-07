@@ -1,0 +1,271 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "f844659c742e22b4d50763c4bb98899547919acb0c61039d25eea2e9681710bb",
+    "judgments_sha256": "6c0dc6067d1a354217aa0908f8419e93aa72441b6ad3e1d2c08c029506799f00"
+  },
+  "groups": [
+    {
+      "group_id": "GR1",
+      "parent_id": "G005",
+      "child_ids": [
+        "G004",
+        "G006"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "一次覆盖大量组合与把信息集中到一处，分别压缩“逐对搜索”和“跨站核对”的时间，是让研究更快的最直接手段；但原文没有声称两者合起来足以让研究显著变快，也未覆盖其提到的“更准确”。",
+      "assumptions": [
+        "平台能在可接受时间内执行上万组合搜索",
+        "信息集中后无需再逐站复核"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T137",
+          "quote": "I end up having to visit at least 10 to 12 different sites at a mostly at a minimum.",
+          "role": "basis"
+        }
+      ],
+      "relation_ids": [
+        "R1",
+        "R2"
+      ],
+      "checks": [
+        {
+          "kind": "normal",
+          "origin": "analysis_assumption",
+          "scenario": "一个有明确机场与日期范围的国际行程：一次搜索覆盖全部组合，并在同一处看到各提供方报价，检索用时明显下降。",
+          "outcome": "supports",
+          "rationale": "两个子目标各自消除一类往返成本，正常情形下叠加后确实缩短检索。"
+        },
+        {
+          "kind": "exception",
+          "origin": "analysis_assumption",
+          "scenario": "票价逐日波动需要隔几天回访，或用户不熟悉新界面：即使组合与信息集中，研究仍需多轮并带有学习成本。",
+          "outcome": "counterexample",
+          "rationale": "该情形下两项目标并未覆盖回访与学习成本，无法声称整组足以实现显著更快。"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "GR1",
+      "message": "G004+G006 是否足以让研究显著更快？原文只有感受性时长（10–15分钟到数小时），没有阈值，且“更准确”未被覆盖。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G013",
+      "message": "预填信息交接是明确要求，还是仅描述现有流程？维持意图需确认。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G006",
+      "message": "“一处”的范围未界定：单个聚合器、聚合器+提供方，还是含休息室等外部信息？"
+    },
+    {
+      "target_type": "model",
+      "target_id": "DOC003-goal-model",
+      "message": "T107 的“flexibility”未被定义；是否需要独立目标或仅作为条件？"
+    },
+    {
+      "target_type": "relation",
+      "target_id": "R9",
+      "message": "匿名避免涨价的贡献联系基于受访者担心（might），未经证实；是否保留为supported？"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G004",
+      "target_id": "G005",
+      "type": "operationalization",
+      "status": "supported",
+      "conditions": [
+        "platform can execute the full combination set in an acceptable time"
+      ],
+      "assumptions": [
+        "一次覆盖大量组合能减少逐对搜索的往返次数"
+      ],
+      "rationale": "受访者把“同一时间跑数百个组合搜索”当作缩短研究时间的实现方式；不声称单靠它就能让研究显著变快。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T095",
+          "quote": "you want to do around 500 searches at the same time",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G006",
+      "target_id": "G005",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "集中信息减少的跨站切换不会被新的核对成本抵消"
+      ],
+      "rationale": "把信息集中到一处可直接减少其在10–12个站点间来回核对的时间，从而帮助实现更快的检索。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T137",
+          "quote": "I end up having to visit at least 10 to 12 different sites at a mostly at a minimum.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G003",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "各提供方报价差异不会小到可忽略"
+      ],
+      "rationale": "比较多个预订网站能暴露同一行程的不同最终价与折扣，有助于拿到更好价格，但不保证最低价。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T103",
+          "quote": "they allow me to find the best price for that itinerary. comparing all of the different booking options.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R4",
+      "source_id": "G008",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "an alert fires before the fare rises again"
+      ],
+      "assumptions": [
+        "票价下跌窗口足够长，能完成预订"
+      ],
+      "rationale": "多路线降价提醒让他在票价下探时及时下单，有助于取得更好价格；不保证价格一定下降。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T087",
+          "quote": "if any one of them goes down in price. I I book it",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R5",
+      "source_id": "G009",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "the market benchmark is available for that route"
+      ],
+      "assumptions": [
+        "中位数能代表该市场的常见价位"
+      ],
+      "rationale": "价格相对市场中位数的判断帮助他识别当前报价是否偏高，从而支持拿到好价格；仅是判断辅助。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T111",
+          "quote": "it would help out for the times when I'm not familiar with the specific market.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R6",
+      "source_id": "G010",
+      "target_id": "G001",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "the itinerary includes at least one stopover"
+      ],
+      "assumptions": [
+        "MCT数据可得且按机场定义"
+      ],
+      "rationale": "“换乘至少留1.5倍MCT”是“行程时间适合我”的一般目标在经停情境下的具体化；不声称覆盖无经停或签证受限的情形。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T123",
+          "quote": "I generally tend to at least go for 1.5 x or 2 x of that for a stopover.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R7",
+      "source_id": "G011",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "空等与过长总时长确实会让行程不适合其日程"
+      ],
+      "rationale": "避免长时间空等/过长总时长，有助于得到时间上真正可用的行程；不构成充分条件。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T073",
+          "quote": "the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R8",
+      "source_id": "G014",
+      "target_id": "G001",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "展示的衔接信息准确"
+      ],
+      "rationale": "中转等待、当地时间与到达日等详情让他能判断行程是否与日程相符，从而帮助找到合适行程。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T077",
+          "quote": "All the connections and all the times are right for me, and they work for my schedule.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R9",
+      "source_id": "G007",
+      "target_id": "G002",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [],
+      "assumptions": [
+        "差别定价的判断来自其自述担心，未经验证"
+      ],
+      "rationale": "他认为保持匿名可避免因被跟踪搜索而被提价，因此匿名有助于守住价格；该机制是受访者陈述的信念。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC003:T053",
+          "quote": "they might increase the flight prices for you",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

@@ -1,0 +1,936 @@
+{
+  "schema_version": "goalforge-forward-execution-1",
+  "branch": "baseline",
+  "generated_at": "2026-10-26T01:13:04.455521+00:00",
+  "scope": [
+    "DOC003",
+    "DOC010",
+    "DOC013",
+    "DOC020",
+    "DOC023",
+    "DOC031",
+    "DOC028",
+    "DOC036"
+  ],
+  "source_scope": "All turns of the eight provided canonical interviews, no reference labels.",
+  "author": "current assistant model",
+  "model": "unknown",
+  "temperature": "unknown",
+  "tokens": "unknown",
+  "cost": "unknown",
+  "external_llm_calls": 0,
+  "dependency_installations": 0,
+  "skill_modifications": 0,
+  "context_isolation": "Separate subagent context from the other generation branch; statistical independence is not claimed.",
+  "independent_semantic_review": "not_run",
+  "formal_proof": "not_run",
+  "human_acceptance": "pending",
+  "skill_files": [
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/SKILL.md",
+      "sha256": "cba2a2e83f23ee492ac7a764afbd1ca7c50d22dd2026ad776f24c2e49022b5e3"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/SKILL.md",
+      "sha256": "9fefae1386e604e2d0117925eb56896aad6113bc33b7e6abc040e988185bddda"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/SKILL.md",
+      "sha256": "8fba75d78e42734bf111978ab0372aa4e3c7d3b8edc3c2415b339b00b1419699"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/input-processing.md",
+      "sha256": "90930d4655d09cb892304f3ffd2bfbf29a488d3374e4b3b394f6ea098ec88af7"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/goal-boundaries.md",
+      "sha256": "e98b1a55e2670689a6aa924f3a69aa88d48488c1f81b9ceffb8f0f5d74e4ae9b"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/output-contract.md",
+      "sha256": "2f57f8d6ab1d16fa3dd6bddfd729e4d48d94c1a8e6b681b7b7e56837ce11badc"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/evidence-rules.md",
+      "sha256": "b96abdae956c6244a699f61b03d51679137a8a4ace1bf3427f7f1fc984e62629"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/semantic-judgments.md",
+      "sha256": "770f88124c485076148fb7c11b712848d87273dd44a5ab5ee7efcf484e3bf1d2"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/references/tracing-contract.md",
+      "sha256": "b5ce28c8e51607996e645eeb86e301e29ec30a9ee05e5bb6b64ed4c39f8c3648"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/references/modeling-rules.md",
+      "sha256": "f1cafcf31b26643972904839f29dcd755bcd56761dd0c7f39d7ca97b2223fc43"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/references/output-contract.md",
+      "sha256": "01f15a2b3c6580ae3377800aa823ee18102c2450274135fa1713ae3dafea9759"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/references/tools.md",
+      "sha256": "41c25c6b94cd46afd964029f170404da0b51473b69af2ec7c85343382772b025"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/references/tools.md",
+      "sha256": "a6e57a55624493702465e5e0d4cee13f7f044f01b67907690180319ffcaca137"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/references/output-contract.md",
+      "sha256": "be91e87e53d67a18919ac3b0df9bbe84c59ecb9d5dd4f5f6495e000c7de1cd64"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/model-review/references/semantic-review.md",
+      "sha256": "1aa2097d9a330d4286c8848cf2c237cd1a2d4150ec1cbd3bd62cdfa30a582cc0"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/scripts/prepare_source.py",
+      "sha256": "4e8478615d11e8c871c718cdfb10e240f624588171c1dcc806bb9f7e3387efeb"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/scripts/trace_candidates.py",
+      "sha256": "0548e40acab5c738428841e6acaa3bb4fe6b74a60c986ecb48a765fd3c0c6bde"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/scripts/simple_candidates.py",
+      "sha256": "f92bca21e92fc86f1dd79333a45c453c715fece57af5fb5ac2bd0dab38c878e4"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-extraction/scripts/render_review.py",
+      "sha256": "04211c2d6638fb6de79f477c6caccbac8c7bddaa8fc8b4ea243e9d2e5c11a876"
+    },
+    {
+      "path": "runs/skill-optimization-2026-10-25-phase1/before/skills/goal-model-building/scripts/kaos_model.py",
+      "sha256": "baf5a69117c8e4d30439d64dacdb56cceb454a2626a171cbf2ee216809eafc8a"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC003.json",
+      "sha256": "10ca00051303fd04d7245455d9862693f31a386114941a3e894a1fa17eb11dd3"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC003.txt",
+      "sha256": "3032b7ea3172c5caf65b213b02082dc97c1a99d5a9bf23baafeb27d45937f39e"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC010.json",
+      "sha256": "59846a70650d8613cfbeebc046f582069976ffa4ba847a804e1e1c128a14a126"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC010.txt",
+      "sha256": "0763124f64e891178a095d38578c5fd3d497f4d7d5346a4b0c248c121c07053b"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC013.json",
+      "sha256": "0f20de455321b4c764292ed7eaa4af086ede221430dcc07d353abfcf20573fbe"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC013.txt",
+      "sha256": "f91319c2d822e5b70651d3ef319b32e3829a431db0fe31fb9e7bee9f395c2435"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC020.json",
+      "sha256": "b0c8b5299d367caa218e3014f15ad7318a5dc2f6341bcca045d45e9a2c361b19"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC020.txt",
+      "sha256": "90b485f2662fedd6a4f4c4f0c9e409f6d5a47400d26e11d933e7e2964bc98628"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC023.json",
+      "sha256": "8dc743543993dd3a095c7017536f31a42773cb5cbfb580c72fb4e96b4bf0b09d"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC023.txt",
+      "sha256": "2966cdb21f4ac14cb0797faf9c1297e343e83f8b4dd509cd3d473d3048d7bffb"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC031.json",
+      "sha256": "bc9344a51b94702893d65d57e6254ae5e62fd5689c4efeeab228b9eac8206eec"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC031.txt",
+      "sha256": "4f4c359b0aa66e459338fef571a2e6e2ddd5badd68f1bfe61e6950016957a6fe"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC028.json",
+      "sha256": "b5f45b9223be7de70fb110791c6bbd98938fda6b2ae05a241fbf4b9228c30d57"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC028.txt",
+      "sha256": "8336403cbac134a1f72ea0a195465db926b317b0ce9b2cb5a27893a990a79200"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC036.json",
+      "sha256": "cff3ce9cc12fa3be1dad5cb489805099882a1fe2eb7207716a70a5feb27a5bec"
+    },
+    {
+      "path": "datasets/processed/goalforge-v1/source/DOC036.txt",
+      "sha256": "7358eb5f5fb3c5e955d634f132f17c54f5f5229dc069747a3d117eaab02ad7ef"
+    }
+  ],
+  "counts": {
+    "DOC003": 23,
+    "DOC010": 11,
+    "DOC013": 15,
+    "DOC020": 21,
+    "DOC023": 9,
+    "DOC031": 10,
+    "DOC028": 15,
+    "DOC036": 15
+  },
+  "commands": [
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\prepare_source.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC003.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003",
+        "--canonical-text",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC003.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\extraction.json",
+        "--judgment-template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\judgments-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\tracing",
+        "--source",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\source.txt",
+        "--judgments",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\judgments.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\decisions-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "assemble",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\source.txt",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\decisions.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\assembled"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "inspect",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\inspection.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "finalize",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\inspection.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC003\\delivery"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\prepare_source.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC010.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010",
+        "--canonical-text",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC010.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\extraction.json",
+        "--judgment-template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\judgments-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\tracing",
+        "--source",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\source.txt",
+        "--judgments",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\judgments.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\decisions-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "assemble",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\source.txt",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\decisions.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\assembled"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "inspect",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\inspection.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "finalize",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\inspection.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC010\\delivery"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\prepare_source.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC013.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013",
+        "--canonical-text",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC013.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\extraction.json",
+        "--judgment-template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\judgments-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\tracing",
+        "--source",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\source.txt",
+        "--judgments",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\judgments.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\decisions-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "assemble",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\source.txt",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\decisions.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\assembled"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "inspect",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\inspection.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "finalize",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\inspection.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC013\\delivery"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\prepare_source.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC020.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020",
+        "--canonical-text",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC020.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\extraction.json",
+        "--judgment-template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\judgments-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\tracing",
+        "--source",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\source.txt",
+        "--judgments",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\judgments.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\decisions-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "assemble",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\source.txt",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\decisions.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\assembled"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "inspect",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\inspection.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "finalize",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\inspection.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC020\\delivery"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\prepare_source.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC023.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023",
+        "--canonical-text",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC023.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\extraction.json",
+        "--judgment-template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\judgments-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\tracing",
+        "--source",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\source.txt",
+        "--judgments",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\judgments.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\decisions-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "assemble",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\source.txt",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\decisions.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\assembled"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "inspect",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\inspection.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "finalize",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\inspection.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC023\\delivery"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\prepare_source.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC031.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031",
+        "--canonical-text",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC031.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\extraction.json",
+        "--judgment-template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\judgments-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\tracing",
+        "--source",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\source.txt",
+        "--judgments",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\judgments.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\decisions-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "assemble",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\source.txt",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\decisions.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\assembled"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "inspect",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\inspection.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "finalize",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\inspection.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC031\\delivery"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\prepare_source.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC028.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028",
+        "--canonical-text",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC028.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\extraction.json",
+        "--judgment-template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\judgments-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\tracing",
+        "--source",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\source.txt",
+        "--judgments",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\judgments.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\decisions-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "assemble",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\source.txt",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\decisions.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\assembled"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "inspect",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\inspection.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "finalize",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\inspection.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC028\\delivery"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\prepare_source.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC036.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036",
+        "--canonical-text",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\datasets\\processed\\goalforge-v1\\source\\DOC036.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\extraction.json",
+        "--judgment-template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\judgments-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-extraction\\scripts\\trace_candidates.py",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\tracing",
+        "--source",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\source.txt",
+        "--judgments",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\judgments.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "template",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\decisions-template.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "assemble",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\extraction.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\judgments.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\source.txt",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\decisions.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\assembled"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "inspect",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\inspection.json"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "C:\\Users\\cjsmwy\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-phase1\\before\\skills\\goal-model-building\\scripts\\kaos_model.py",
+        "finalize",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\assembled\\model-input.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\inspection.json",
+        "D:\\Desktop\\summer_pro\\GoalForge\\GoalForge\\runs\\skill-optimization-2026-10-25-complete\\evaluation\\baseline\\DOC036\\delivery"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"readiness\": \"reviewable\", \"human\": \"pending\"}\n",
+      "stderr": ""
+    }
+  ],
+  "failures": [],
+  "repairs": [],
+  "selection": "One forward attempt; all failures and repairs retained. No best-of selection.",
+  "forbidden_materials_read": false
+}

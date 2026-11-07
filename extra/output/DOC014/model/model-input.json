@@ -1,0 +1,2357 @@
+{
+  "schema_version": "goalforge-model-draft-1",
+  "model_id": "DOC014-goal-model",
+  "version": "v0.1",
+  "parent_version": null,
+  "input_artifacts": [
+    {
+      "path": "attachments/extraction.json",
+      "sha256": "485933cbbc972cf7ed8cbb54b9ab307a38d61e5d3ac1efe9cfcd71e10113c913"
+    },
+    {
+      "path": "attachments/tracing.json",
+      "sha256": "32d3ed2a490dc7f597d072edd7af11394a0b18c561d3652808fc4828bddea702"
+    },
+    {
+      "path": "attachments/relation-decisions.json",
+      "sha256": "599fe9d3ecbc84aa91112d837a1d40467381b9fbdec207119e23e35e15c1e5c7"
+    },
+    {
+      "path": "attachments/source.txt",
+      "sha256": "eebba55d517e727bfe5b96a5d2838730286410fb9528aff8ad92f7eaa773e1ce"
+    }
+  ],
+  "document_scope": {
+    "document_ids": [
+      "DOC014"
+    ],
+    "cross_document_allowed": false
+  },
+  "goals": [
+    {
+      "goal_id": "DOC014-G001",
+      "statement": "出门前按温度与降雨预报决定穿什么、骑车还是坐车、要不要带伞。",
+      "source_candidate_ids": [
+        "DOC014-C001"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "通常在前一天查看",
+        "判断依据为温度区间与降雨概率（25% 以上视为可能下雨）"
+      ],
+      "evidence_ids": [
+        "E0001",
+        "E0002",
+        "E0003"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G002",
+      "statement": "按出门时段查看逐小时温度与降水概率，而不是只看全天概况。",
+      "source_candidate_ids": [
+        "DOC014-C002"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "关注早晨上课前那一小时的温度与降水"
+      ],
+      "evidence_ids": [
+        "E0004",
+        "E0005",
+        "E0006"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G003",
+      "statement": "极端天气发生时，能获知严重程度与官方建议的应对方式（撤离/躲避/防护）。",
+      "source_candidate_ids": [
+        "DOC014-C003"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "期望应用成为最早看到消息的地方",
+        "现状：严重预警也由地方政府与气象机构发布"
+      ],
+      "evidence_ids": [
+        "E0007",
+        "E0008",
+        "E0009"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G004",
+      "statement": "旅行前数周查看月/周预报（含云量），据以判断行程是否可行。",
+      "source_candidate_ids": [
+        "DOC014-C004"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "场景：海滩度假要看云量；观星/天文行程怕阴天",
+        "也会先查历史数据"
+      ],
+      "evidence_ids": [
+        "E0010",
+        "E0011",
+        "E0012"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G005",
+      "statement": "出发前 2–3 天用更准的短期预报做最终决定（去或不去）。",
+      "source_candidate_ids": [
+        "DOC014-C005"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "自评：几周前的预报很难准，2–3 天内通常可靠",
+        "误差可能正好落在「去/不去」的分界上"
+      ],
+      "evidence_ids": [
+        "E0013",
+        "E0014"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G006",
+      "statement": "雷达图更细致、更直观，并可切换多种参数（降水、积雪等）。",
+      "source_candidate_ids": [
+        "DOC014-C006"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "对标 windy.com：整个应用就是雷达，动画细节多",
+        "自评若做好，可能因此付费"
+      ],
+      "evidence_ids": [
+        "E0015",
+        "E0016",
+        "E0017"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G007",
+      "statement": "页面上减少广告，尤其是不要有视频弹窗广告夹在内容之间。",
+      "source_candidate_ids": [
+        "DOC014-C007"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "现状：一页 4–5 个广告，含视频弹窗",
+        "后果：需要上下滚动确认内容是否刷新"
+      ],
+      "evidence_ids": [
+        "E0018",
+        "E0019",
+        "E0020"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G008",
+      "statement": "界面配色更素净（纯黑或纯白），而不是现在的暗蓝色。",
+      "source_candidate_ids": [
+        "DOC014-C008"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "与广告并列为界面上的两处不满"
+      ],
+      "evidence_ids": [
+        "E0021",
+        "E0022"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G009",
+      "statement": "能按具体地点（徒步起点、山中酒店等）查天气，而不只是按城市。",
+      "source_candidate_ids": [
+        "DOC014-C009"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "场景：目的地不是城市，城市级数据没有参考价值"
+      ],
+      "evidence_ids": [
+        "E0023",
+        "E0024",
+        "E0025"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G010",
+      "statement": "默认不接收天气通知，需要时再自行打开。",
+      "source_candidate_ids": [
+        "DOC014-C010"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "自述在电脑上偏好零通知",
+        "通过浏览器站点设置关闭通知权限"
+      ],
+      "evidence_ids": [
+        "E0026",
+        "E0027"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G011",
+      "statement": "看到全球范围的重要天气事件新闻（不限本地）。",
+      "source_candidate_ids": [
+        "DOC014-C011"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "首页有专门区块，点开进入站内新闻页"
+      ],
+      "evidence_ids": [
+        "E0028",
+        "E0029"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G012",
+      "statement": "位置数据只留在本地、不被留存，也不因账号泄露而暴露所在城市。",
+      "source_candidate_ids": [
+        "DOC014-C012"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "推断：位置存在本地浏览器缓存，清缓存即可清除",
+        "顾虑集中在已登录状态下的泄露风险"
+      ],
+      "evidence_ids": [
+        "E0030",
+        "E0031",
+        "E0032"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    },
+    {
+      "goal_id": "DOC014-G013",
+      "statement": "保留可用的个性化设置：收藏常看城市、按偏好切换摄氏/华氏。",
+      "source_candidate_ids": [
+        "DOC014-C013"
+      ],
+      "origin": "explicit",
+      "actor": "受访者（Stakeholder，weather.com 网页版用户）",
+      "context": [
+        "已设两个城市（现居与家乡）",
+        "默认华氏，手动切到摄氏"
+      ],
+      "evidence_ids": [
+        "E0033",
+        "E0034",
+        "E0035"
+      ],
+      "trace_status": "direct",
+      "review_status": "pending"
+    }
+  ],
+  "pair_decisions": [
+    {
+      "pair_id": "P001",
+      "a": "DOC014-G001",
+      "b": "DOC014-G002",
+      "label": "related",
+      "rationale": "T005 说明看逐小时数据的目的正是判断出门那一时段的温度与降水（「when I'm actually going out」），G002 是 G001 的信息依据；但一个是决策、一个是查看粒度，非精化。",
+      "evidence_ids": [
+        "E0001",
+        "E0002"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P002",
+      "a": "DOC014-G001",
+      "b": "DOC014-G003",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G003 的对象是极端天气获知程度与建议（T011/T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P003",
+      "a": "DOC014-G001",
+      "b": "DOC014-G004",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G004 的对象是旅行前数周看预报含云量（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P004",
+      "a": "DOC014-G001",
+      "b": "DOC014-G005",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G005 的对象是出发前 2–3 天最终确认（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P005",
+      "a": "DOC014-G001",
+      "b": "DOC014-G006",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G006 的对象是雷达更细更多参数（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P006",
+      "a": "DOC014-G001",
+      "b": "DOC014-G007",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G007 的对象是减少广告（T037/T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P007",
+      "a": "DOC014-G001",
+      "b": "DOC014-G008",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G008 的对象是配色更素净（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P008",
+      "a": "DOC014-G001",
+      "b": "DOC014-G009",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G009 的对象是按具体地点查天气（T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P009",
+      "a": "DOC014-G001",
+      "b": "DOC014-G010",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G010 的对象是默认不接收通知（T055/T057）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P010",
+      "a": "DOC014-G001",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P011",
+      "a": "DOC014-G001",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P012",
+      "a": "DOC014-G001",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G001 的对象是出门前按温度与降雨做准备（T001），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P013",
+      "a": "DOC014-G002",
+      "b": "DOC014-G003",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G003 的对象是极端天气获知程度与建议（T011/T015）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P014",
+      "a": "DOC014-G002",
+      "b": "DOC014-G004",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G004 的对象是旅行前数周看预报含云量（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P015",
+      "a": "DOC014-G002",
+      "b": "DOC014-G005",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G005 的对象是出发前 2–3 天最终确认（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P016",
+      "a": "DOC014-G002",
+      "b": "DOC014-G006",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G006 的对象是雷达更细更多参数（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P017",
+      "a": "DOC014-G002",
+      "b": "DOC014-G007",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G007 的对象是减少广告（T037/T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P018",
+      "a": "DOC014-G002",
+      "b": "DOC014-G008",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G008 的对象是配色更素净（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P019",
+      "a": "DOC014-G002",
+      "b": "DOC014-G009",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G009 的对象是按具体地点查天气（T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P020",
+      "a": "DOC014-G002",
+      "b": "DOC014-G010",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G010 的对象是默认不接收通知（T055/T057）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P021",
+      "a": "DOC014-G002",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P022",
+      "a": "DOC014-G002",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P023",
+      "a": "DOC014-G002",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G002 的对象是按出门时段看逐小时数据（T005），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P024",
+      "a": "DOC014-G003",
+      "b": "DOC014-G004",
+      "label": "none",
+      "rationale": "DOC014-G003 的对象是极端天气获知程度与建议（T011/T015），DOC014-G004 的对象是旅行前数周看预报含云量（T017）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P025",
+      "a": "DOC014-G003",
+      "b": "DOC014-G005",
+      "label": "none",
+      "rationale": "DOC014-G003 的对象是极端天气获知程度与建议（T011/T015），DOC014-G005 的对象是出发前 2–3 天最终确认（T019）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P026",
+      "a": "DOC014-G003",
+      "b": "DOC014-G006",
+      "label": "none",
+      "rationale": "DOC014-G003 的对象是极端天气获知程度与建议（T011/T015），DOC014-G006 的对象是雷达更细更多参数（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P027",
+      "a": "DOC014-G003",
+      "b": "DOC014-G007",
+      "label": "none",
+      "rationale": "DOC014-G003 的对象是极端天气获知程度与建议（T011/T015），DOC014-G007 的对象是减少广告（T037/T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P028",
+      "a": "DOC014-G003",
+      "b": "DOC014-G008",
+      "label": "none",
+      "rationale": "DOC014-G003 的对象是极端天气获知程度与建议（T011/T015），DOC014-G008 的对象是配色更素净（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P029",
+      "a": "DOC014-G003",
+      "b": "DOC014-G009",
+      "label": "none",
+      "rationale": "DOC014-G003 的对象是极端天气获知程度与建议（T011/T015），DOC014-G009 的对象是按具体地点查天气（T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P030",
+      "a": "DOC014-G003",
+      "b": "DOC014-G010",
+      "label": "uncertain",
+      "rationale": "两处表态方向相左：T011 说极端天气时 weather.com 会是「the 1st place I'll see it」，暗示希望第一时间获知；T055-T057 又明确「I usually prefer no notifications」「I just prefer it off」，把通知全关，只靠主动打开网站。可以解释为「关常规通知、保留极端预警」的分层策略，也可以解释为全靠主动查询；受访者未澄清，无法裁决，故记为不确定。",
+      "evidence_ids": [
+        "E0003",
+        "E0010"
+      ],
+      "conditions": [
+        "需人工确认：是否接受仅保留极端天气预警这一类通知；若确认，可改为 related 并写入条件。"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P031",
+      "a": "DOC014-G003",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G003 的对象是极端天气获知程度与建议（T011/T015），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P032",
+      "a": "DOC014-G003",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G003 的对象是极端天气获知程度与建议（T011/T015），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P033",
+      "a": "DOC014-G003",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G003 的对象是极端天气获知程度与建议（T011/T015），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P034",
+      "a": "DOC014-G004",
+      "b": "DOC014-G005",
+      "label": "related",
+      "rationale": "T019 把两者串成一条时间线：几周前先看大趋势，2–3 天前再据更准的预报做最终决定（「wait till the end and then decide」）；二者是同一决策过程的两个阶段。",
+      "evidence_ids": [
+        "E0004",
+        "E0005"
+      ],
+      "conditions": [
+        "长周期预报仅用于初筛，不作最终依据"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P035",
+      "a": "DOC014-G004",
+      "b": "DOC014-G006",
+      "label": "none",
+      "rationale": "DOC014-G004 的对象是旅行前数周看预报含云量（T017），DOC014-G006 的对象是雷达更细更多参数（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P036",
+      "a": "DOC014-G004",
+      "b": "DOC014-G007",
+      "label": "none",
+      "rationale": "DOC014-G004 的对象是旅行前数周看预报含云量（T017），DOC014-G007 的对象是减少广告（T037/T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P037",
+      "a": "DOC014-G004",
+      "b": "DOC014-G008",
+      "label": "none",
+      "rationale": "DOC014-G004 的对象是旅行前数周看预报含云量（T017），DOC014-G008 的对象是配色更素净（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P038",
+      "a": "DOC014-G004",
+      "b": "DOC014-G009",
+      "label": "related",
+      "rationale": "T067 说明需要具体地点的天气，场景正是旅行（山中酒店、徒步路线），与 G004 的出行前预判直接相连；但一个是空间粒度、一个是时间提前量。",
+      "evidence_ids": [
+        "E0009",
+        "E0004"
+      ],
+      "conditions": [
+        "仅在目的地非城市时凸显"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P039",
+      "a": "DOC014-G004",
+      "b": "DOC014-G010",
+      "label": "none",
+      "rationale": "DOC014-G004 的对象是旅行前数周看预报含云量（T017），DOC014-G010 的对象是默认不接收通知（T055/T057）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P040",
+      "a": "DOC014-G004",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G004 的对象是旅行前数周看预报含云量（T017），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P041",
+      "a": "DOC014-G004",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G004 的对象是旅行前数周看预报含云量（T017），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P042",
+      "a": "DOC014-G004",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G004 的对象是旅行前数周看预报含云量（T017），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P043",
+      "a": "DOC014-G005",
+      "b": "DOC014-G006",
+      "label": "none",
+      "rationale": "DOC014-G005 的对象是出发前 2–3 天最终确认（T019），DOC014-G006 的对象是雷达更细更多参数（T043）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P044",
+      "a": "DOC014-G005",
+      "b": "DOC014-G007",
+      "label": "none",
+      "rationale": "DOC014-G005 的对象是出发前 2–3 天最终确认（T019），DOC014-G007 的对象是减少广告（T037/T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P045",
+      "a": "DOC014-G005",
+      "b": "DOC014-G008",
+      "label": "none",
+      "rationale": "DOC014-G005 的对象是出发前 2–3 天最终确认（T019），DOC014-G008 的对象是配色更素净（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P046",
+      "a": "DOC014-G005",
+      "b": "DOC014-G009",
+      "label": "none",
+      "rationale": "DOC014-G005 的对象是出发前 2–3 天最终确认（T019），DOC014-G009 的对象是按具体地点查天气（T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P047",
+      "a": "DOC014-G005",
+      "b": "DOC014-G010",
+      "label": "none",
+      "rationale": "DOC014-G005 的对象是出发前 2–3 天最终确认（T019），DOC014-G010 的对象是默认不接收通知（T055/T057）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P048",
+      "a": "DOC014-G005",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G005 的对象是出发前 2–3 天最终确认（T019），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P049",
+      "a": "DOC014-G005",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G005 的对象是出发前 2–3 天最终确认（T019），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P050",
+      "a": "DOC014-G005",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G005 的对象是出发前 2–3 天最终确认（T019），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P051",
+      "a": "DOC014-G006",
+      "b": "DOC014-G007",
+      "label": "none",
+      "rationale": "DOC014-G006 的对象是雷达更细更多参数（T043），DOC014-G007 的对象是减少广告（T037/T069）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P052",
+      "a": "DOC014-G006",
+      "b": "DOC014-G008",
+      "label": "none",
+      "rationale": "DOC014-G006 的对象是雷达更细更多参数（T043），DOC014-G008 的对象是配色更素净（T035）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P053",
+      "a": "DOC014-G006",
+      "b": "DOC014-G009",
+      "label": "none",
+      "rationale": "DOC014-G006 的对象是雷达更细更多参数（T043），DOC014-G009 的对象是按具体地点查天气（T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P054",
+      "a": "DOC014-G006",
+      "b": "DOC014-G010",
+      "label": "none",
+      "rationale": "DOC014-G006 的对象是雷达更细更多参数（T043），DOC014-G010 的对象是默认不接收通知（T055/T057）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P055",
+      "a": "DOC014-G006",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G006 的对象是雷达更细更多参数（T043），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P056",
+      "a": "DOC014-G006",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G006 的对象是雷达更细更多参数（T043），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P057",
+      "a": "DOC014-G006",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G006 的对象是雷达更细更多参数（T043），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P058",
+      "a": "DOC014-G007",
+      "b": "DOC014-G008",
+      "label": "related",
+      "rationale": "T035 在同一句里并列两处界面不满（广告与暗蓝配色），T069 又说广告把内容割裂；二者都是界面干扰，但一个关乎商业内容、一个关乎视觉风格。",
+      "evidence_ids": [
+        "E0007",
+        "E0008"
+      ],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P059",
+      "a": "DOC014-G007",
+      "b": "DOC014-G009",
+      "label": "none",
+      "rationale": "DOC014-G007 的对象是减少广告（T037/T069），DOC014-G009 的对象是按具体地点查天气（T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P060",
+      "a": "DOC014-G007",
+      "b": "DOC014-G010",
+      "label": "none",
+      "rationale": "DOC014-G007 的对象是减少广告（T037/T069），DOC014-G010 的对象是默认不接收通知（T055/T057）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P061",
+      "a": "DOC014-G007",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G007 的对象是减少广告（T037/T069），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P062",
+      "a": "DOC014-G007",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G007 的对象是减少广告（T037/T069），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P063",
+      "a": "DOC014-G007",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G007 的对象是减少广告（T037/T069），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P064",
+      "a": "DOC014-G008",
+      "b": "DOC014-G009",
+      "label": "none",
+      "rationale": "DOC014-G008 的对象是配色更素净（T035），DOC014-G009 的对象是按具体地点查天气（T067）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P065",
+      "a": "DOC014-G008",
+      "b": "DOC014-G010",
+      "label": "none",
+      "rationale": "DOC014-G008 的对象是配色更素净（T035），DOC014-G010 的对象是默认不接收通知（T055/T057）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P066",
+      "a": "DOC014-G008",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G008 的对象是配色更素净（T035），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P067",
+      "a": "DOC014-G008",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G008 的对象是配色更素净（T035），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P068",
+      "a": "DOC014-G008",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G008 的对象是配色更素净（T035），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P069",
+      "a": "DOC014-G009",
+      "b": "DOC014-G010",
+      "label": "none",
+      "rationale": "DOC014-G009 的对象是按具体地点查天气（T067），DOC014-G010 的对象是默认不接收通知（T055/T057）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P070",
+      "a": "DOC014-G009",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G009 的对象是按具体地点查天气（T067），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P071",
+      "a": "DOC014-G009",
+      "b": "DOC014-G012",
+      "label": "related",
+      "rationale": "按具体地点查天气必然涉及更精确的位置上报，与位置数据的留存顾虑直接相关；但一个是功能诉求、一个是隐私边界。",
+      "evidence_ids": [
+        "E0009",
+        "E0012"
+      ],
+      "conditions": [
+        "地点粒度越细，隐私顾虑越强"
+      ],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P072",
+      "a": "DOC014-G009",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G009 的对象是按具体地点查天气（T067），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P073",
+      "a": "DOC014-G010",
+      "b": "DOC014-G011",
+      "label": "none",
+      "rationale": "DOC014-G010 的对象是默认不接收通知（T055/T057），DOC014-G011 的对象是看全球天气事件新闻（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P074",
+      "a": "DOC014-G010",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G010 的对象是默认不接收通知（T055/T057），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P075",
+      "a": "DOC014-G010",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G010 的对象是默认不接收通知（T055/T057），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P076",
+      "a": "DOC014-G011",
+      "b": "DOC014-G012",
+      "label": "none",
+      "rationale": "DOC014-G011 的对象是看全球天气事件新闻（T051），DOC014-G012 的对象是位置数据不留存不泄露（T061）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P077",
+      "a": "DOC014-G011",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G011 的对象是看全球天气事件新闻（T051），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    },
+    {
+      "pair_id": "P078",
+      "a": "DOC014-G012",
+      "b": "DOC014-G013",
+      "label": "none",
+      "rationale": "DOC014-G012 的对象是位置数据不留存不泄露（T061），DOC014-G013 的对象是个性化：收藏城市与温标（T045/T047/T071）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+      "evidence_ids": [],
+      "conditions": [],
+      "review_status": "pending",
+      "assessment_status": "assessed"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "R001",
+      "type": "related",
+      "decision_id": "P001",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC014-G001",
+      "b": "DOC014-G002"
+    },
+    {
+      "edge_id": "R002",
+      "type": "related",
+      "decision_id": "P034",
+      "conditions": [
+        "长周期预报仅用于初筛，不作最终依据"
+      ],
+      "review_status": "pending",
+      "a": "DOC014-G004",
+      "b": "DOC014-G005"
+    },
+    {
+      "edge_id": "R003",
+      "type": "related",
+      "decision_id": "P038",
+      "conditions": [
+        "仅在目的地非城市时凸显"
+      ],
+      "review_status": "pending",
+      "a": "DOC014-G004",
+      "b": "DOC014-G009"
+    },
+    {
+      "edge_id": "R004",
+      "type": "related",
+      "decision_id": "P058",
+      "conditions": [],
+      "review_status": "pending",
+      "a": "DOC014-G007",
+      "b": "DOC014-G008"
+    },
+    {
+      "edge_id": "R005",
+      "type": "related",
+      "decision_id": "P071",
+      "conditions": [
+        "地点粒度越细，隐私顾虑越强"
+      ],
+      "review_status": "pending",
+      "a": "DOC014-G009",
+      "b": "DOC014-G012"
+    }
+  ],
+  "evidence_index": [
+    {
+      "evidence_id": "E0001",
+      "source_id": "DOC014:S002",
+      "material_id": "M001",
+      "quote": "I can plan whether I should wear my thick coat or my light coat",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 372,
+      "end_char": 435,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S002",
+          "segment_start": 121,
+          "segment_end": 184,
+          "start_char": 372,
+          "end_char": 435
+        }
+      ],
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 251,
+        "end_char": 747
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0002",
+      "source_id": "DOC014:S002",
+      "material_id": "M001",
+      "quote": "I make sure I have my umbrella",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 669,
+      "end_char": 699,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S002",
+          "segment_start": 418,
+          "segment_end": 448,
+          "start_char": 669,
+          "end_char": 699
+        }
+      ],
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 251,
+        "end_char": 747
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0003",
+      "source_id": "DOC014:S002",
+      "material_id": "M001",
+      "quote": "I might skip going through bicycle and just go through the bus",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 475,
+      "end_char": 537,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S002",
+          "segment_start": 224,
+          "segment_end": 286,
+          "start_char": 475,
+          "end_char": 537
+        }
+      ],
+      "original_locator": {
+        "line_start": 2,
+        "line_end": 2,
+        "start_char": 251,
+        "end_char": 747
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0004",
+      "source_id": "DOC014:S006",
+      "material_id": "M001",
+      "quote": "it gives my gives me like an hour by hour detail",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1292,
+      "end_char": 1340,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S006",
+          "segment_start": 197,
+          "segment_end": 245,
+          "start_char": 1292,
+          "end_char": 1340
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 1095,
+        "end_char": 1695
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0005",
+      "source_id": "DOC014:S006",
+      "material_id": "M001",
+      "quote": "what's the what's the precipitation chances",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1515,
+      "end_char": 1558,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S006",
+          "segment_start": 420,
+          "segment_end": 463,
+          "start_char": 1515,
+          "end_char": 1558
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 1095,
+        "end_char": 1695
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0006",
+      "source_id": "DOC014:S006",
+      "material_id": "M001",
+      "quote": "if in in the morning time, you know, like before our classes, what what the temperature is around that time",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 1370,
+      "end_char": 1477,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S006",
+          "segment_start": 275,
+          "segment_end": 382,
+          "start_char": 1370,
+          "end_char": 1477
+        }
+      ],
+      "original_locator": {
+        "line_start": 6,
+        "line_end": 6,
+        "start_char": 1095,
+        "end_char": 1695
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0007",
+      "source_id": "DOC014:S016",
+      "material_id": "M001",
+      "quote": "I'll read for what they recommend",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4515,
+      "end_char": 4548,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S016",
+          "segment_start": 305,
+          "segment_end": 338,
+          "start_char": 4515,
+          "end_char": 4548
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 4210,
+        "end_char": 4811
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0008",
+      "source_id": "DOC014:S016",
+      "material_id": "M001",
+      "quote": "Should I evacuate the city? Should I just seek shelter, not go outside",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 4565,
+      "end_char": 4635,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S016",
+          "segment_start": 355,
+          "segment_end": 425,
+          "start_char": 4565,
+          "end_char": 4635
+        }
+      ],
+      "original_locator": {
+        "line_start": 16,
+        "line_end": 16,
+        "start_char": 4210,
+        "end_char": 4811
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0009",
+      "source_id": "DOC014:S012",
+      "material_id": "M001",
+      "quote": "weather.com would be a good spot that I'll 1st see it",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 2791,
+      "end_char": 2844,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S012",
+          "segment_start": 132,
+          "segment_end": 185,
+          "start_char": 2791,
+          "end_char": 2844
+        }
+      ],
+      "original_locator": {
+        "line_start": 12,
+        "line_end": 12,
+        "start_char": 2659,
+        "end_char": 3662
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0010",
+      "source_id": "DOC014:S018",
+      "material_id": "M001",
+      "quote": "I check for future weather focus because it gives you focus",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5666,
+      "end_char": 5725,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S018",
+          "segment_start": 340,
+          "segment_end": 399,
+          "start_char": 5666,
+          "end_char": 5725
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 5326,
+        "end_char": 6827
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0011",
+      "source_id": "DOC014:S018",
+      "material_id": "M001",
+      "quote": "not just like the temperature and precipitation. As I mentioned earlier, but also like the cloud coverage",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5869,
+      "end_char": 5974,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S018",
+          "segment_start": 543,
+          "segment_end": 648,
+          "start_char": 5869,
+          "end_char": 5974
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 5326,
+        "end_char": 6827
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0012",
+      "source_id": "DOC014:S018",
+      "material_id": "M001",
+      "quote": "if you're going for a beach vacation, let's say, and it's going to be super cloudy. Then, you know, you might need to reconsider",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 5982,
+      "end_char": 6110,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S018",
+          "segment_start": 656,
+          "segment_end": 784,
+          "start_char": 5982,
+          "end_char": 6110
+        }
+      ],
+      "original_locator": {
+        "line_start": 18,
+        "line_end": 18,
+        "start_char": 5326,
+        "end_char": 6827
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0013",
+      "source_id": "DOC014:S020",
+      "material_id": "M001",
+      "quote": "you should probably wait till the end and then then decide, based on what the final temperature is like",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7304,
+      "end_char": 7407,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S020",
+          "segment_start": 396,
+          "segment_end": 499,
+          "start_char": 7304,
+          "end_char": 7407
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 6908,
+        "end_char": 7431
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0014",
+      "source_id": "DOC014:S020",
+      "material_id": "M001",
+      "quote": "at least like 2 or 3 days before. It's it's like, usually right",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 7036,
+      "end_char": 7099,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S020",
+          "segment_start": 128,
+          "segment_end": 191,
+          "start_char": 7036,
+          "end_char": 7099
+        }
+      ],
+      "original_locator": {
+        "line_start": 20,
+        "line_end": 20,
+        "start_char": 6908,
+        "end_char": 7431
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0015",
+      "source_id": "DOC014:S044",
+      "material_id": "M001",
+      "quote": "the radar could be better",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14293,
+      "end_char": 14318,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S044",
+          "segment_start": 43,
+          "segment_end": 68,
+          "start_char": 14293,
+          "end_char": 14318
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 14250,
+        "end_char": 14832
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0016",
+      "source_id": "DOC014:S044",
+      "material_id": "M001",
+      "quote": "There are like multiple parameters that you you can see",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14497,
+      "end_char": 14552,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S044",
+          "segment_start": 247,
+          "segment_end": 302,
+          "start_char": 14497,
+          "end_char": 14552
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 14250,
+        "end_char": 14832
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0017",
+      "source_id": "DOC014:S044",
+      "material_id": "M001",
+      "quote": "which has like much detailed and like intuitive like radar map",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 14392,
+      "end_char": 14454,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S044",
+          "segment_start": 142,
+          "segment_end": 204,
+          "start_char": 14392,
+          "end_char": 14454
+        }
+      ],
+      "original_locator": {
+        "line_start": 44,
+        "line_end": 44,
+        "start_char": 14250,
+        "end_char": 14832
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0018",
+      "source_id": "DOC014:S038",
+      "material_id": "M001",
+      "quote": "there is 1, 2, 3, 4 ads",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12935,
+      "end_char": 12958,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S038",
+          "segment_start": 59,
+          "segment_end": 82,
+          "start_char": 12935,
+          "end_char": 12958
+        }
+      ],
+      "original_locator": {
+        "line_start": 38,
+        "line_end": 38,
+        "start_char": 12876,
+        "end_char": 13368
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0019",
+      "source_id": "DOC014:S038",
+      "material_id": "M001",
+      "quote": "if you have 4 or 5 ads and then couple of video ads. it's just too much",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 13152,
+      "end_char": 13223,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S038",
+          "segment_start": 276,
+          "segment_end": 347,
+          "start_char": 13152,
+          "end_char": 13223
+        }
+      ],
+      "original_locator": {
+        "line_start": 38,
+        "line_end": 38,
+        "start_char": 12876,
+        "end_char": 13368
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0020",
+      "source_id": "DOC014:S070",
+      "material_id": "M001",
+      "quote": "everything is separated by ads, like, when I click on from one tap to the next, like there is a big ad chunk between",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 22023,
+      "end_char": 22139,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S070",
+          "segment_start": 75,
+          "segment_end": 191,
+          "start_char": 22023,
+          "end_char": 22139
+        }
+      ],
+      "original_locator": {
+        "line_start": 70,
+        "line_end": 70,
+        "start_char": 21948,
+        "end_char": 22465
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0021",
+      "source_id": "DOC014:S036",
+      "material_id": "M001",
+      "quote": "the background, is like a dull blue, which I don't really like",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12566,
+      "end_char": 12628,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S036",
+          "segment_start": 93,
+          "segment_end": 155,
+          "start_char": 12566,
+          "end_char": 12628
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 12473,
+        "end_char": 12743
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0022",
+      "source_id": "DOC014:S036",
+      "material_id": "M001",
+      "quote": "they could just make it plain black or plain white",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 12640,
+      "end_char": 12690,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S036",
+          "segment_start": 167,
+          "segment_end": 217,
+          "start_char": 12640,
+          "end_char": 12690
+        }
+      ],
+      "original_locator": {
+        "line_start": 36,
+        "line_end": 36,
+        "start_char": 12473,
+        "end_char": 12743
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0023",
+      "source_id": "DOC014:S068",
+      "material_id": "M001",
+      "quote": "sometimes it's not necessarily like a city that you're going to, or a state that you're going to",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 20929,
+      "end_char": 21025,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S068",
+          "segment_start": 560,
+          "segment_end": 656,
+          "start_char": 20929,
+          "end_char": 21025
+        }
+      ],
+      "original_locator": {
+        "line_start": 68,
+        "line_end": 68,
+        "start_char": 20369,
+        "end_char": 21459
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0024",
+      "source_id": "DOC014:S068",
+      "material_id": "M001",
+      "quote": "having having that very local data would be definitely helpful",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21396,
+      "end_char": 21458,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S068",
+          "segment_start": 1027,
+          "segment_end": 1089,
+          "start_char": 21396,
+          "end_char": 21458
+        }
+      ],
+      "original_locator": {
+        "line_start": 68,
+        "line_end": 68,
+        "start_char": 20369,
+        "end_char": 21459
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0025",
+      "source_id": "DOC014:S068",
+      "material_id": "M001",
+      "quote": "You just want to like, see whether at this particular hotel that's in like middle of nowhere",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 21031,
+      "end_char": 21123,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S068",
+          "segment_start": 662,
+          "segment_end": 754,
+          "start_char": 21031,
+          "end_char": 21123
+        }
+      ],
+      "original_locator": {
+        "line_start": 68,
+        "line_end": 68,
+        "start_char": 20369,
+        "end_char": 21459
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0026",
+      "source_id": "DOC014:S056",
+      "material_id": "M001",
+      "quote": "I usually prefer no notifications",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17136,
+      "end_char": 17169,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S056",
+          "segment_start": 126,
+          "segment_end": 159,
+          "start_char": 17136,
+          "end_char": 17169
+        }
+      ],
+      "original_locator": {
+        "line_start": 56,
+        "line_end": 56,
+        "start_char": 17010,
+        "end_char": 17367
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0027",
+      "source_id": "DOC014:S058",
+      "material_id": "M001",
+      "quote": "I just prefer it off. So I've kept it off.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 17454,
+      "end_char": 17496,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S058",
+          "segment_start": 26,
+          "segment_end": 68,
+          "start_char": 17454,
+          "end_char": 17496
+        }
+      ],
+      "original_locator": {
+        "line_start": 58,
+        "line_end": 58,
+        "start_char": 17428,
+        "end_char": 17496
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0028",
+      "source_id": "DOC014:S052",
+      "material_id": "M001",
+      "quote": "it does have sections for like weather events, not necessarily in my city",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16342,
+      "end_char": 16415,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S052",
+          "segment_start": 54,
+          "segment_end": 127,
+          "start_char": 16342,
+          "end_char": 16415
+        }
+      ],
+      "original_locator": {
+        "line_start": 52,
+        "line_end": 52,
+        "start_char": 16288,
+        "end_char": 16581
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0029",
+      "source_id": "DOC014:S052",
+      "material_id": "M001",
+      "quote": "important weather events. Ha! Happening across the world",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 16436,
+      "end_char": 16492,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S052",
+          "segment_start": 148,
+          "segment_end": 204,
+          "start_char": 16436,
+          "end_char": 16492
+        }
+      ],
+      "original_locator": {
+        "line_start": 52,
+        "line_end": 52,
+        "start_char": 16288,
+        "end_char": 16581
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0030",
+      "source_id": "DOC014:S062",
+      "material_id": "M001",
+      "quote": "if it's in my local cache, you know, I can always just clear it from my cache, and the data is gone",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18694,
+      "end_char": 18793,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S062",
+          "segment_start": 289,
+          "segment_end": 388,
+          "start_char": 18694,
+          "end_char": 18793
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 18405,
+        "end_char": 19225
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0031",
+      "source_id": "DOC014:S062",
+      "material_id": "M001",
+      "quote": "If I am logged in, though, I might be a little worried",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 18855,
+      "end_char": 18909,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S062",
+          "segment_start": 450,
+          "segment_end": 504,
+          "start_char": 18855,
+          "end_char": 18909
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 18405,
+        "end_char": 19225
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0032",
+      "source_id": "DOC014:S062",
+      "material_id": "M001",
+      "quote": "a leak could be a little scary",
+      "evidence_role": "context",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 19118,
+      "end_char": 19148,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S062",
+          "segment_start": 713,
+          "segment_end": 743,
+          "start_char": 19118,
+          "end_char": 19148
+        }
+      ],
+      "original_locator": {
+        "line_start": 62,
+        "line_end": 62,
+        "start_char": 18405,
+        "end_char": 19225
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0033",
+      "source_id": "DOC014:S046",
+      "material_id": "M001",
+      "quote": "I do have my cities set. So it's usually my home city.",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15132,
+      "end_char": 15186,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S046",
+          "segment_start": 97,
+          "segment_end": 151,
+          "start_char": 15132,
+          "end_char": 15186
+        }
+      ],
+      "original_locator": {
+        "line_start": 46,
+        "line_end": 46,
+        "start_char": 15035,
+        "end_char": 15287
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0034",
+      "source_id": "DOC014:S048",
+      "material_id": "M001",
+      "quote": "it is Fahrenheit. There is a option to change it at the top",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 15571,
+      "end_char": 15630,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S048",
+          "segment_start": 63,
+          "segment_end": 122,
+          "start_char": 15571,
+          "end_char": 15630
+        }
+      ],
+      "original_locator": {
+        "line_start": 48,
+        "line_end": 48,
+        "start_char": 15508,
+        "end_char": 15833
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    },
+    {
+      "evidence_id": "E0035",
+      "source_id": "DOC014:S072",
+      "material_id": "M001",
+      "quote": "it does have the option to like star your favorite cities",
+      "evidence_role": "supporting",
+      "location_status": "exact",
+      "verification_scope": "full_text",
+      "start_char": 22657,
+      "end_char": 22714,
+      "candidate_locations": [
+        {
+          "source_id": "DOC014:S072",
+          "segment_start": 83,
+          "segment_end": 140,
+          "start_char": 22657,
+          "end_char": 22714
+        }
+      ],
+      "original_locator": {
+        "line_start": 72,
+        "line_end": 72,
+        "start_char": 22574,
+        "end_char": 22715
+      },
+      "recognition_status": "native_text",
+      "source_version_status": "verified",
+      "location_reason": "原文片段唯一精确命中；位置核验不代表语义支持。"
+    }
+  ],
+  "candidate_goal_mapping": [
+    {
+      "candidate_id": "DOC014-C001",
+      "goal_id": "DOC014-G001",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C002",
+      "goal_id": "DOC014-G002",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C003",
+      "goal_id": "DOC014-G003",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C004",
+      "goal_id": "DOC014-G004",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C005",
+      "goal_id": "DOC014-G005",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C006",
+      "goal_id": "DOC014-G006",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C007",
+      "goal_id": "DOC014-G007",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C008",
+      "goal_id": "DOC014-G008",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C009",
+      "goal_id": "DOC014-G009",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C010",
+      "goal_id": "DOC014-G010",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C011",
+      "goal_id": "DOC014-G011",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C012",
+      "goal_id": "DOC014-G012",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    },
+    {
+      "candidate_id": "DOC014-C013",
+      "goal_id": "DOC014-G013",
+      "action": "retained",
+      "reason": "保持来源映射；实质变化需重新追溯。"
+    }
+  ],
+  "diagnostics": [],
+  "relation_coverage": {
+    "strategy": "all_pairs",
+    "expected_pairs": 78,
+    "evaluated_pairs": 78
+  },
+  "issues": [
+    {
+      "code": "uncertain_relation",
+      "severity": "needs_review",
+      "target_ids": [
+        "DOC014-G003",
+        "DOC014-G010"
+      ],
+      "reason": "两处表态方向相左：T011 说极端天气时 weather.com 会是「the 1st place I'll see it」，暗示希望第一时间获知；T055-T057 又明确「I usually prefer no notifications」「I just prefer it off」，把通知全关，只靠主动打开网站。可以解释为「关常规通知、保留极端预警」的分层策略，也可以解释为全靠主动查询；受访者未澄清，无法裁决，故记为不确定。"
+    }
+  ],
+  "assumptions": [],
+  "validation": {
+    "structure_status": "not_run",
+    "semantic_status": "not_run",
+    "report_path": null
+  },
+  "review": {
+    "status": "pending",
+    "records": []
+  },
+  "changes": [],
+  "delivery": {
+    "mode": "assemble",
+    "readiness": "unchecked",
+    "limitations": [
+      "模型尚未经过 model-review；导出完整性检查不能替代模型质量审核。",
+      "当前会话助手的开发判断，非独立盲测；无人工采纳记录。"
+    ],
+    "files": []
+  }
+}

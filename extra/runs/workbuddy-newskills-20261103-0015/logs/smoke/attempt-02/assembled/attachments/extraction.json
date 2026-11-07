@@ -1,0 +1,279 @@
+{
+  "schema_version": "goalforge-extraction-3",
+  "document_id": "SYN001",
+  "document_hash": "7a21457b8dc968516aea7f7ac319e4e4ff707365aca72c27478c02d642453f69",
+  "status": "completed",
+  "materials": [
+    {
+      "material_id": "M001",
+      "file_name": "SYN001.json",
+      "media_type": "application/json",
+      "original_hash": "8c110ad163879ec9ab1dc8ce9ee4de5e76aadf080e21782737aa803a9c02ff98",
+      "id_origin": "provided",
+      "processing_status": "processed"
+    }
+  ],
+  "conversion": {
+    "canonical_text_path": "source.txt",
+    "method": "保留现有标准原文、轮次与偏移；JSON 仅投影源文字段",
+    "issues": []
+  },
+  "segments": [
+    {
+      "source_id": "SYN001:T000",
+      "material_id": "M001",
+      "text": "Tell me how you plan a weekend trip.",
+      "speaker": "Interviewer",
+      "recognition_status": "native_text",
+      "original_locator": {
+        "turn": "0",
+        "start_char": 20,
+        "end_char": 56
+      }
+    },
+    {
+      "source_id": "SYN001:T001",
+      "material_id": "M001",
+      "text": "I usually compare three hotels before booking, and I want the total price with breakfast visible.",
+      "speaker": "Stakeholder",
+      "recognition_status": "native_text",
+      "original_locator": {
+        "turn": "1",
+        "start_char": 77,
+        "end_char": 174
+      }
+    },
+    {
+      "source_id": "SYN001:T002",
+      "material_id": "M001",
+      "text": "Anything you want to avoid?",
+      "speaker": "Interviewer",
+      "recognition_status": "native_text",
+      "original_locator": {
+        "turn": "2",
+        "start_char": 195,
+        "end_char": 222
+      }
+    },
+    {
+      "source_id": "SYN001:T003",
+      "material_id": "M001",
+      "text": "Yes - I never want a booking confirmed without me seeing the cancellation deadline first.",
+      "speaker": "Stakeholder",
+      "recognition_status": "native_text",
+      "original_locator": {
+        "turn": "3",
+        "start_char": 243,
+        "end_char": 332
+      }
+    },
+    {
+      "source_id": "SYN001:T004",
+      "material_id": "M001",
+      "text": "Would you like the app to remember your filters?",
+      "speaker": "Interviewer",
+      "recognition_status": "native_text",
+      "original_locator": {
+        "turn": "4",
+        "start_char": 353,
+        "end_char": 401
+      }
+    },
+    {
+      "source_id": "SYN001:T005",
+      "material_id": "M001",
+      "text": "That would help, though I am not sure yet.",
+      "speaker": "Stakeholder",
+      "recognition_status": "native_text",
+      "original_locator": {
+        "turn": "5",
+        "start_char": 422,
+        "end_char": 464
+      }
+    },
+    {
+      "source_id": "SYN001:T006",
+      "material_id": "M001",
+      "text": "And after booking?",
+      "speaker": "Interviewer",
+      "recognition_status": "native_text",
+      "original_locator": {
+        "turn": "6",
+        "start_char": 485,
+        "end_char": 503
+      }
+    },
+    {
+      "source_id": "SYN001:T007",
+      "material_id": "M001",
+      "text": "I want the itinerary to stay readable offline, but only for trips I already booked.",
+      "speaker": "Stakeholder",
+      "recognition_status": "native_text",
+      "original_locator": {
+        "turn": "7",
+        "start_char": 524,
+        "end_char": 607
+      }
+    },
+    {
+      "source_id": "SYN001:T008",
+      "material_id": "M001",
+      "text": "Overall I want the whole booking process to stay predictable.",
+      "speaker": "Stakeholder",
+      "recognition_status": "native_text",
+      "original_locator": {
+        "turn": "8",
+        "start_char": 628,
+        "end_char": 689
+      }
+    }
+  ],
+  "coverage": {
+    "scope": "provided_material",
+    "source_ids": [
+      "SYN001:T000",
+      "SYN001:T001",
+      "SYN001:T002",
+      "SYN001:T003",
+      "SYN001:T004",
+      "SYN001:T005",
+      "SYN001:T006",
+      "SYN001:T007",
+      "SYN001:T008"
+    ],
+    "omissions": []
+  },
+  "candidates": [
+    {
+      "candidate_id": "G001",
+      "statement": "compare three hotels before booking",
+      "actor": "Stakeholder",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "SYN001:T001",
+          "quote": "I usually compare three hotels before booking",
+          "role": "basis",
+          "start_char": 77,
+          "end_char": 122
+        }
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "G002",
+      "statement": "show the total price with breakfast before booking",
+      "actor": "Stakeholder",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "SYN001:T001",
+          "quote": "I want the total price with breakfast visible",
+          "role": "basis",
+          "start_char": 128,
+          "end_char": 173
+        }
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "G003",
+      "statement": "avoid a booking being confirmed before the cancellation deadline is shown",
+      "actor": "Stakeholder",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "SYN001:T003",
+          "quote": "I never want a booking confirmed without me seeing the cancellation deadline first",
+          "role": "basis",
+          "start_char": 249,
+          "end_char": 331
+        }
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "G004",
+      "statement": "remember the traveller's previous filters",
+      "actor": "Stakeholder",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "SYN001:T005",
+          "quote": "That would help, though I am not sure yet",
+          "role": "basis",
+          "start_char": 422,
+          "end_char": 463
+        }
+      ],
+      "origin": "inferred",
+      "inference": {
+        "basis_candidate_ids": [
+          "G001",
+          "G002"
+        ],
+        "reason": "受访者称记住筛选条件有帮助，但同时说不确定；结合其反复比较多家酒店推断复用筛选条件有价值。",
+        "assumptions": [
+          "受访者会重复使用相同筛选条件"
+        ]
+      },
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "G005",
+      "statement": "keep the itinerary readable offline, only for trips already booked",
+      "actor": "Stakeholder",
+      "context": [
+        "仅限已经预订的行程"
+      ],
+      "evidence_candidates": [
+        {
+          "source_id": "SYN001:T007",
+          "quote": "I want the itinerary to stay readable offline, but only for trips I already booked",
+          "role": "basis",
+          "start_char": 524,
+          "end_char": 606
+        }
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "review_status": "pending"
+    },
+    {
+      "candidate_id": "G006",
+      "statement": "keep the whole booking process predictable",
+      "actor": "Stakeholder",
+      "context": [],
+      "evidence_candidates": [
+        {
+          "source_id": "SYN001:T008",
+          "quote": "Overall I want the whole booking process to stay predictable",
+          "role": "basis",
+          "start_char": 628,
+          "end_char": 688
+        }
+      ],
+      "origin": "explicit",
+      "inference": null,
+      "review_status": "pending"
+    }
+  ],
+  "review_questions": [
+    {
+      "candidate_ids": [
+        "G004"
+      ],
+      "question": "记住筛选条件是否确为需求，或仅为礼貌性回应？",
+      "reason": "回答含不确定语气"
+    }
+  ],
+  "limitations": [
+    "合成材料仅用于工具冒烟检查，不属于论文语料"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema_version": "goalforge-kaos-decisions-2",
+  "input_binding": {
+    "extraction_sha256": "a182851503c7414c45e5af7bc0f0b1a76a25f81421831538f895d3b4bd311646",
+    "judgments_sha256": "bb812ce36470d10e0692fab81d2bc63066b8421e3ee71d264db70bfefe4bcdaa"
+  },
+  "groups": [],
+  "questions": [
+    {
+      "target_type": "model",
+      "target_id": "DOC034-goal-model",
+      "message": "营销相关目标（G010 发布、G011 定时、G009 指标跟踪）看似可组成 G002 的 AND 精化，但原文没有说明三者共同足以实现'曝光优于其他渠道'（缺受众定向与内容策略），因此未建组；是否需要补充上层营销目标请人工判断。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G012",
+      "message": "G012 避免冷连接与 G013 查资料后再添加的关系未明：是否'先查过资料'即构成可添加的例外？原文只有 'maybe'，未说明判定条件。"
+    },
+    {
+      "target_type": "goal",
+      "target_id": "G003",
+      "message": "招聘渠道的取舍未明：G003 通过 LinkedIn 招聘，G014 称 Lara jobs 候选人更好，原文未说明两者的优先级或适用条件，两者是否为替代方案需确认。"
+    }
+  ],
+  "relations": [
+    {
+      "relation_id": "R1",
+      "source_id": "G010",
+      "target_id": "G002",
+      "type": "specialization",
+      "status": "supported",
+      "conditions": [
+        "情境为在为会议等具体事件发 awareness 贴"
+      ],
+      "assumptions": [
+        "发布营销贴属于'在 LinkedIn 做营销'的具体情境"
+      ],
+      "rationale": "G010 是具体情境中的发布行为（会议中的 awareness 贴），G002 是它所属的一般营销目的（获得优于其他渠道的曝光）；方向为具体→一般。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "So I think the task would probably be kind of posting, marketing information are posting like a marketing post just for awareness.",
+          "role": "basis"
+        },
+        {
+          "source_id": "DOC034:T003",
+          "quote": "So we focus a lot on marketing.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R2",
+      "source_id": "G011",
+      "target_id": "G010",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "受众主要在次日上午上班时段登录"
+      ],
+      "assumptions": [],
+      "rationale": "把发布定时到次日上午 9 点是为了在受众上班时获得更多 impressions，从而帮助 G010 的 awareness 发布取得曝光；原文同时给出时间选择与理由，属有帮助而非充分实现。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC034:T009",
+          "quote": "So I'm going to be posted at, you know. 9 Am. Tomorrow, when people 1st show up at the office, and I'll get a nice kind of boost in some of the impressions.",
+          "role": "basis"
+        }
+      ]
+    },
+    {
+      "relation_id": "R3",
+      "source_id": "G016",
+      "target_id": "G010",
+      "type": "contribution",
+      "status": "supported",
+      "conditions": [
+        "他处于有明确任务的状态（例如要发帖换取 impressions）"
+      ],
+      "assumptions": [
+        "减少界面杂物能让同一任务更专注"
+      ],
+      "rationale": "原文以'我有任务、要发帖换成 impressions'为参照，把其余界面信息称为 added noise；减少这些杂物服务于 G010 的发布任务，属于帮助关系，不等于充分精化。",
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC034:T017",
+          "quote": "But in certain cases, yeah, I'm there for a reason. I have a mission. I gotta post something. I want to turn that into, you know impressions, and having that, all of this other stuff is kind of just added noise.",
+          "role": "basis"
+        }
+      ]
+    }
+  ],
+  "reassessments": []
+}

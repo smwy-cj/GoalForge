@@ -1,0 +1,171 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "e49157c59626ace3ea5a7976fdc8bfe598c78a670e01ca394a77ee4d9ebeac21",
+    "input_sha256": "5369c74677b97aa987956b606e3e56d17dc8edb994b7b122759dc723ae7ae7e5"
+  },
+  "judgments": {
+    "DOC008-C001": {
+      "target_statement": "和朋友在线语音聊天，并能一边做别的事（如打游戏）。",
+      "label": "direct",
+      "rationale": "T005 直接回答主要目标：「primary goal is just to like talk to my friends online. And also, like voice calls」，并补充并行场景「while doing other things like playing games」。",
+      "supported_parts": [
+        "主目标：T005「primary goal is just to like talk to my friends online」",
+        "语音与并行：T005「voice calls. we can talk to each other, while doing other things like playing games」"
+      ],
+      "unsupported_parts": [
+        "未说明通话频率或群规模",
+        "「while doing other things」是使用场景，未说明对功能的具体要求（如低延迟、低占用）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取主目标陈述",
+        "2. 对象（朋友、语音）与场景一致",
+        "3. 无相反证据 → direct"
+      ]
+    },
+    "DOC008-C002": {
+      "target_statement": "当所用游戏或平台本身不支持语音时，用 Discord 作为备用通话场所。",
+      "label": "direct",
+      "rationale": "T013 说明备用平台的用法：「we use discord as like a secondary platform to host like the video call or whatnot」，并给出触发条件（对方平台不支持）。",
+      "supported_parts": [
+        "备用定位：T013「secondary platform to host like the video call」",
+        "触发条件：T013「the platform itself doesn't support it」"
+      ],
+      "unsupported_parts": [
+        "T013 原句有断裂（「people like don't want to talk to each other」），触发条件为按上下文还原",
+        "未说明该场景的发生频率"
+      ],
+      "assumptions": [
+        "把断裂句理解为「对方平台不支持语音通话」"
+      ],
+      "reasoning_steps": [
+        "1. 取备用定位句",
+        "2. 用前半句还原触发条件",
+        "3. → direct，并记录语义断裂"
+      ]
+    },
+    "DOC008-C003": {
+      "target_statement": "加入并浏览与自己兴趣相关的公开社区内容（游戏、机器学习等）。",
+      "label": "direct",
+      "rationale": "T021 说明可加入公开社区，T023 说明按主题划分并给出自己所在的例子，T031 说明围观式使用（「just joined to like just kind of snoop around」）。",
+      "supported_parts": [
+        "可加入公开社区：T021「a bunch of like public discords that you're allowed to join」",
+        "按主题划分：T024「different topics, like, I'm in one that's about a game called Genshin impact」",
+        "围观为主：T030「I like to read a lot of what other people are saying」"
+      ],
+      "unsupported_parts": [
+        "未说明是否需要按兴趣发现新社区（T017 明确说 Discord 没有推荐/探索功能）",
+        "未说明参与深度的期望"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 三处互证加入与浏览行为",
+        "2. T017 的「无推荐功能」说明发现依赖外部信息，不否定目标",
+        "3. → direct"
+      ]
+    },
+    "DOC008-C004": {
+      "target_statement": "把通知干扰降到可接受水平（静音大频道、常开免打扰、提示音不刺耳）。",
+      "label": "direct",
+      "rationale": "T047 直接评价「the notifications are a little overwhelming」，T049 说明已采取静音，T055 提出更换提示音的建议，构成一条完整的「降低打扰」诉求。",
+      "supported_parts": [
+        "总体评价：T047「the notifications are a little overwhelming」",
+        "静音大频道：T050「the bigger ones I have muted」",
+        "提示音诉求：T056「a more pleasing sound for the notification」"
+      ],
+      "unsupported_parts": [
+        "三项措施强度不同：前两项为已执行的规避，第三项才是产品诉求",
+        "未说明可接受的通知量或分类规则（如仅提及/仅私信）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 把三处合并为同一诉求（降低打扰）",
+        "2. 区分既有规避与新增诉求，转为人工问题",
+        "3. → direct"
+      ]
+    },
+    "DOC008-C005": {
+      "target_statement": "避免陌生人添加好友与被盗号的风险。",
+      "label": "direct",
+      "rationale": "T061 描述陌生账号频繁加好友并直接评价「Is quite concerning」，T063 补充听说他人账号被盗，两处共同构成安全类目标。",
+      "supported_parts": [
+        "陌生加好友：T061「random people that I don't know are trying to add me as friends」",
+        "担忧：T062「Is quite concerning」",
+        "盗号担忧：T064「I've seen a few of so few people get hacked」"
+      ],
+      "unsupported_parts": [
+        "未提出具体防护手段（如仅允许共同频道者添加）",
+        "盗号部分为听闻，非亲身经历",
+        "未说明隐私设置是否已调整"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 区分亲身经历与听闻",
+        "2. 两者均指向同一安全诉求",
+        "3. → direct"
+      ]
+    },
+    "DOC008-C006": {
+      "target_statement": "私信与添加联系人分成不同区域，菜单层级更易找到目标。",
+      "label": "direct",
+      "rationale": "T089 指出「some of the menus are... harder to navigate」，并以私信菜单为例说明其他应用「have a separation between your dms, and then like adding connections」，T091 补充「all of that is like slapped onto the same menu」。",
+      "supported_parts": [
+        "导航困难：T090「some of the menus are a bit more a bit harder to navigate」",
+        "对照做法：T090「a separation between your dms, and then like adding connections」",
+        "现状：T092「slapped onto the same menu」"
+      ],
+      "unsupported_parts": [
+        "未说明除了私信菜单还有哪些菜单需要调整",
+        "「更易导航」无量化标准"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题陈述与对照做法",
+        "2. 用户给出的解法即分区",
+        "3. → direct"
+      ]
+    },
+    "DOC008-C007": {
+      "target_statement": "语音通话保持稳定，不出现莫名断连。",
+      "label": "direct",
+      "rationale": "T071 描述通话断连且排除本地网络原因，T073 归因为「discord has some like connectivity issues」，为明确的可用性目标。",
+      "supported_parts": [
+        "现象：T072「the discord call just kept on like cutting out」",
+        "排除本地原因：T072「my Wi-fi connection. Everything else on my computer is working fine」",
+        "归因：T074「discord has some like connectivity issues」"
+      ],
+      "unsupported_parts": [
+        "未量化（断连频率、持续时长）",
+        "仅一次经历，是否长期问题不明"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 区分现象、排除条件与归因",
+        "2. 三者一致指向平台侧稳定性",
+        "3. → direct"
+      ]
+    },
+    "DOC008-C008": {
+      "target_statement": "保持应用精简，不堆叠多余功能。",
+      "label": "direct",
+      "rationale": "T037 明确把精简当作优点：「Discord overall is a pretty bare application. It doesn't have like too much fluff to it.」，属对现状的正面评价，即维持型目标。",
+      "supported_parts": [
+        "评价：T037「a pretty bare application」",
+        "理由：T037「doesn't have like too much fluff to it」"
+      ],
+      "unsupported_parts": [
+        "「fluff」无定义，与 C006 的菜单重组是否冲突未澄清",
+        "该评价出现在讨论内容互动功能时，适用范围可能有限"
+      ],
+      "assumptions": [
+        "把正面评价理解为希望保持精简"
+      ],
+      "reasoning_steps": [
+        "1. 定位正面评价",
+        "2. 与 C006 的改进诉求对照，发现潜在张力",
+        "3. → direct，并转为人工问题"
+      ]
+    }
+  }
+}

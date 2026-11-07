@@ -1,0 +1,42 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "74455c8cb8133155020342c75b4abd041e5b19705bfd434f6c6988d982929887",
+    "judgments_sha256": "c1ae18aaec0a6021692a6c580fcd09d56ed74c1a8508937aa50e7745df9369de"
+  },
+  "groups": [
+    {
+      "group_id": "F032-1",
+      "parent_id": "DOC032-G09",
+      "child_ids": [
+        "DOC032-G10",
+        "DOC032-G11",
+        "DOC032-G12"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "云存储、减轻换机负担与避免丢机丢消息是有关联的方式/结果，未涵盖离线访问、恢复认证及存储可靠性，不能宣称随时可用的完整充分组。",
+      "assumptions": [
+        "云存储是受访者选定方案，非证明其天然解决所有风险"
+      ],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC032:T071",
+          "quote": "I wanna keep all my messages available all the time",
+          "role": "basis",
+          "start_char": 14542,
+          "end_char": 14593
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "F032-1",
+      "message": "云存储候选组缺离线和恢复等条件，不是已成立的随时可用精化。"
+    }
+  ]
+}

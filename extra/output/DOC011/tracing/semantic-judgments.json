@@ -1,0 +1,228 @@
+{
+  "schema_version": "goalforge-semantic-judgments-1",
+  "input_binding": {
+    "data_sha256": "9c42860d53b508c660e1df02e6a7857b13c3b7c7b2d19efa69094edd9a9ccc8c",
+    "input_sha256": "b71600388d4a489e0023bb45d99a8f09b2acc3f174765d2d0249881a3ff9fe85"
+  },
+  "judgments": {
+    "DOC011-C001": {
+      "target_statement": "与队友异步协作修改同一份代码，完成课程与项目作业。",
+      "label": "direct",
+      "rationale": "T023 在回答「主要用 GitHub 做什么」时直接给出团队协作，并说明异步性质：「we are asynchronous collab, asynchronously collaborating on this code」。",
+      "supported_parts": [
+        "主要用途：T024「from my student perspective is like team collaboration」",
+        "异步协作：T024「asynchronously collaborating on this code」",
+        "共同写权限：T024「It's not just me who has access to update this online folder」"
+      ],
+      "unsupported_parts": [
+        "未说明团队规模与协作频率",
+        "「异步」的具体机制（时区、节奏）未说明"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取主用途陈述",
+        "2. 对象（队友、同一仓库）与条件（异步）一致",
+        "3. 无相反证据 → direct"
+      ]
+    },
+    "DOC011-C002": {
+      "target_statement": "代码合并进主分支前必须经他人审查，防止未审改动进入主干。",
+      "label": "direct",
+      "rationale": "T083 明确把 PR 的价值说成「make sure that the main repository stays safe from unknown code changes before they are reviewed by others」，T031-T033 补充审查标准与拒绝机制。",
+      "supported_parts": [
+        "目的：T084「stays safe from unknown code changes before they are reviewed」",
+        "标准：T032「up to standard of the team or their personal standard」",
+        "拒绝：T034「they can also be denied if they don't meet the standards」"
+      ],
+      "unsupported_parts": [
+        "未说明审查人数要求或超时规则",
+        "未说明紧急情况下是否允许绕过"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取 PR 价值陈述",
+        "2. 审查流程在 T029-T033 有具体描述",
+        "3. → direct"
+      ]
+    },
+    "DOC011-C003": {
+      "target_statement": "改动按小步增量提交，减少协作者每次要审查的内容量。",
+      "label": "direct",
+      "rationale": "T043 明确偏好并给出理由：「I personally prefer to do it incrementally, because it... provides less content for my collaborators to have to review」。",
+      "supported_parts": [
+        "偏好：T044「I personally prefer to do it incrementally」",
+        "理由：T044「provides less content for my collaborators to have to review」"
+      ],
+      "unsupported_parts": [
+        "有明确例外：独自开发时不用 PR、倾向大改动（T046）",
+        "未定义「增量」的粒度"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取偏好与理由",
+        "2. 记录例外条件",
+        "3. → direct，并转为人工问题"
+      ]
+    },
+    "DOC011-C004": {
+      "target_statement": "能回看仓库的变更历史，包括每次提交改了什么、由谁改。",
+      "label": "direct",
+      "rationale": "T083 说 PR「is also a very convenient way to track history」，并说明可看每次 PR 改了什么以及协作者的改动。",
+      "supported_parts": [
+        "历史追踪：T084「a very convenient way to track history」",
+        "内容：T084「what changes were made with this pull request」",
+        "协作者改动：T084「changes that were made by my collaborators」"
+      ],
+      "unsupported_parts": [
+        "现有历史为线性提交栈，分支结构不可见（T087 指出）",
+        "未说明需要筛选或导出"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取历史追踪陈述",
+        "2. 与 C010 的不足描述对照",
+        "3. → direct"
+      ]
+    },
+    "DOC011-C005": {
+      "target_statement": "代码安全保存在云端，本机损坏或丢失时可换机拉取继续。",
+      "label": "direct",
+      "rationale": "T075 明确云端保存的目的与场景：「having a convenient place to store my code in a in a in a safe manner」，本机故障时可「pull onto a different machine」。",
+      "supported_parts": [
+        "目的：T076「store my code in a in a in a safe manner」",
+        "恢复场景：T076「I would still have my work in a cloud environment」",
+        "换机继续：T076「pull onto a different machine and continue working」"
+      ],
+      "unsupported_parts": [
+        "未说明私有仓库的可见性与备份策略",
+        "未讨论误删恢复"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取目的与场景",
+        "2. 属维持型目标",
+        "3. → direct"
+      ]
+    },
+    "DOC011-C006": {
+      "target_statement": "检索并阅读他人公开仓库的代码。",
+      "label": "direct",
+      "rationale": "T081 说明平台开放性「public repositories are visible to anybody」，并描述搜索与筛选方式。",
+      "supported_parts": [
+        "开放性：T082「public repositories are visible to anybody」",
+        "检索范围：T082「search the entire Github database for public repositories」",
+        "语言筛选：T082「I can also filter based on language」"
+      ],
+      "unsupported_parts": [
+        "未说明检索用途（学习/复用/找工作）",
+        "未提及私有仓库边界"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取开放性陈述与检索描述",
+        "2. 用途未明但行为与目的清楚",
+        "3. → direct"
+      ]
+    },
+    "DOC011-C007": {
+      "target_statement": "用看板跟踪任务状态与分工（backlog → 待办 → 进行中）。",
+      "label": "direct",
+      "rationale": "T053 定义项目为「a tracking board... Kanban board where you're actually assigning tasks」，T059 描述 backlog 到待办的流转与分工会议。",
+      "supported_parts": [
+        "定义：T054「a project is essentially just a tracking board」",
+        "分工：T054「assigning tasks, and you can facilitate team management」",
+        "流转：T060「move those issues... from the backlog to another part of the combine board」"
+      ],
+      "unsupported_parts": [
+        "未说明看板列的具体定义（待办/进行中/完成）",
+        "未说明是否需要进度统计"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取定义与分工描述",
+        "2. 流转流程在 T060-T062 有描述",
+        "3. → direct"
+      ]
+    },
+    "DOC011-C008": {
+      "target_statement": "PR 与看板 issue 关联，合并后看板状态自动更新。",
+      "label": "direct",
+      "rationale": "T069 明确联动效果：「when that port request is merged, the Kanban board would automatically reflect that」，并说明通过 resolves 关键词关联。",
+      "supported_parts": [
+        "自动更新：T070「the Kanban board would automatically reflect that」",
+        "关联方式：T070「you can actually attach it to an issue in the Kanban board」"
+      ],
+      "unsupported_parts": [
+        "依赖项目已链接仓库（T068），未说明未链接时的行为",
+        "关键词的具体语法未完整给出"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取联动效果与关联方式",
+        "2. 前置条件已由受访者说明",
+        "3. → direct"
+      ]
+    },
+    "DOC011-C009": {
+      "target_statement": "GitHub Actions 的官方文档更易查，并提供讨论区或博客。",
+      "label": "direct",
+      "rationale": "T085 指出 Actions 文档难查「It's very difficult to find」，并直接提出改进形态（forum、blog、讨论区）。",
+      "supported_parts": [
+        "问题：T086「their documentation overall is a little broad」与「It's very difficult to find」",
+        "期望：T086「a forum or such, or like a a blog, tab forward discussions」",
+        "旁证：T086「most of the documentation, I find is from other external sources」"
+      ],
+      "unsupported_parts": [
+        "未说明期望的文档结构或示例数量",
+        "「broad」的含义（覆盖面广 vs 表述含糊）未澄清"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取问题陈述与期望形态",
+        "2. 二者同一段内直接相连",
+        "3. → direct"
+      ]
+    },
+    "DOC011-C010": {
+      "target_statement": "以可视化方式呈现分支创建与合并的历史，而不只是线性提交栈。",
+      "label": "direct",
+      "rationale": "T087 明确提出「a visual mapping of the repository history」，并说明现有提交栈不足、期望看到分支与合并位置。",
+      "supported_parts": [
+        "期望：T088「a visual mapping of the repository history」",
+        "内容：T088「where they were merged in」",
+        "现状不足：T088「doesn't give like a an exact history of the repository」"
+      ],
+      "unsupported_parts": [
+        "受访者自称「not an essential feature... Nice to have」，强度弱",
+        "未说明图形形态（有向图/时间轴）"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 取期望与现状对照",
+        "2. 记录弱强度",
+        "3. → direct"
+      ]
+    },
+    "DOC011-C011": {
+      "target_statement": "内置 AI 助手，辅助代码审查与操作引导，并帮用户用上平台已有的资源。",
+      "label": "direct",
+      "rationale": "T093 与 T097 两次提出 AI 集成：前者是「consult with it to have better to use all the resources available on Github」，后者具体到代码审查与操作引导。",
+      "supported_parts": [
+        "集成设想：T094「integrate such an assistant to allow users to consult with it」",
+        "审查辅助：T098「help me with code reviews, provide suggestions」",
+        "操作引导：T098「guide me through. maybe making a pull request」",
+        "动机：T098「I have another source of feedback」"
+      ],
+      "unsupported_parts": [
+        "未说明 AI 与人工审查的关系（替代还是补充）",
+        "未说明对 AI 建议的信任边界"
+      ],
+      "assumptions": [],
+      "reasoning_steps": [
+        "1. 两处互证",
+        "2. 用途覆盖审查与操作两类",
+        "3. → direct"
+      ]
+    }
+  }
+}

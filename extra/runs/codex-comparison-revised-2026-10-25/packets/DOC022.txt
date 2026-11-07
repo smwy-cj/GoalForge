@@ -1,0 +1,117 @@
+# DOC022
+## NEW
+G01 提高日常软件开发效率。 | conditions: 工具依场景选择；不是要求所有开发者统一使用Vim。 | origin: explicit | support: direct
+G02 在不同设备和仅有终端的服务器上都能开始工作及修改代码。 | conditions: 本人所述服务器场景没有图形界面；并非验证所有服务器都如此。 | origin: explicit | support: direct
+G03 保持编辑工具轻量并能快速打开。 | conditions: 本人偏重启动速度和较少资源消耗；关于各产品RAM/CPU表现是主观比较，未测量。 | origin: inferred | support: inferred
+G04 按个人工作流定制本地编辑器的插件、外观、快捷键和语法表现。 | conditions: 本地定制；配置文件方式为所选工作流，主题酷只是个人偏好。 | origin: explicit | support: direct
+G05 让个人编辑配置便于带到其他设备并保持熟悉的环境。 | conditions: 可通过复制配置或账户设置等；不要求仅使用配置文件；本人认为维护Vim配置有麻烦。 | origin: inferred | support: inferred
+G06 继续尽量只用键盘完成编辑和切换操作，以提高效率。 | conditions: 个人操作偏好；不用鼠标非所有任务不可让步规则；早期酷感重要性已降低。 | origin: explicit | support: direct
+G07 在大型项目中快速按文件名定位并打开所需文件。 | conditions: 利用模糊搜索与自定义快捷键；个人键位例子不强制为所有用户默认。 | origin: explicit | support: direct
+G08 能够跨项目文件搜索字符串并定位需要的内容。 | conditions: 本人描述的跨文件搜索用法；对模糊算法机制的解释未验证。 | origin: explicit | support: direct
+G09 继续方便地查看文件结构并切换已打开的文件。 | conditions: 通过文件树、缓冲区和快捷键的当前工作流；快捷键不必为全产品硬编码。 | origin: inferred | support: inferred
+G10 在终端内快速切换代码编辑与执行结果查看，发现错误后返回修改。 | conditions: 当前用Tmux分窗结合Vim；不要求删除其他工具。 | origin: inferred | support: inferred
+G11 设备意外关闭后能较快恢复此前终端工作会话。 | conditions: 本人报告通过保存Tmux过程恢复；未核验具体插件或恢复完整性。 | origin: inferred | support: inferred
+G12 降低熟悉编辑器和编写配置的学习负担。 | conditions: 早期曲线陡，现可借社区、视频和AI辅助；本人会接受逐渐形成肌肉记忆。 | origin: inferred | support: inferred
+G13 在使用VS Code时沿用熟悉的Vim操作方式和快捷键。 | conditions: 服务器上仍可用Vim；VS Code通过相应插件整合是本人理解。 | origin: explicit | support: direct
+G14 便于在同一编辑环境衔接开发、测试、代码审查、部署和监控。 | conditions: 本人正逐渐熟悉集成方式；扩展能力为其报告而非本次验证；并非要求全部场景禁止浏览器。 | origin: inferred | support: inferred
+G15 便于利用AI代码建议及所选代码、文件上下文辅助修改。 | conditions: 当前能力描述；AI建议不保证正确，不将其当自动执行授权。 | origin: inferred | support: inferred
+G16 编辑器必须支持插件或扩展，以适配开发需要。 | conditions: 本人对开发编辑器的要求；不是每项功能都须内置。 | origin: explicit | support: direct
+G17 选用有活跃使用者和开发者社区的编辑器，以便解决问题并看到持续改进。 | conditions: 社区可在Stack Overflow、Reddit、YouTube等出现；平台不是关键，规模和讨论活跃是价值。 | origin: explicit | support: direct
+G18 能方便地发现、了解并安装合适的编辑扩展。 | conditions: 看文档、讨论、评分及展示；市场式安装是其正面例子，未要求每项市场信息都必填。 | origin: inferred | support: inferred
+G19 根据当前场景选择合适工具，并熟悉多种方式而非固守单一编辑器。 | conditions: 仍喜欢终端；前端等场景可用其他工具；不是要求全部人同时掌握所有编辑器。 | origin: explicit | support: direct
+G20 编辑代码时能利用适合语言的缩进和语法高亮来理解代码结构。 | conditions: 开发编辑器一般性期望；具体语言作为例子，不推定对每种语言的完整支持范围。 | origin: explicit | support: direct
+## PAPER
+g0 Manage code easily.
+g1 Execute code and view results immediately.
+g2 Integrate features from various coding tools.
+g3 Provide a consistent experience across coding environments.
+g4 Start coding.
+g5 Build code.
+g6 Review code.
+g7 Edit and modify code.
+g8 Facilitate deployment of code to a system.
+g9 Push code to a version control system.
+g10 Provide tools and features customized for developers.
+g11 Emulate the practices of recommended and famous developers.
+g12 Allow flexibility in choosing tools based on the situation.
+g13 Ensure tools fit every requirement for the developer.
+g14 Easily manage work and projects.
+g15 Easily manage files.
+g16 Provide syntax highlighting for better readability and code comprehension.
+g17 Enable syntax tracking to assist in code development.
+g18 Differentiate code elements to facilitate understanding of code structure.
+g19 Provide options for customization of syntax highlighting.
+g20 Allow customization of indent distance for different scenarios.
+g21 Ensure code readability and comprehension through proper indentation.
+g22 Enable use on different machines and servers without dependency on personal tools.
+g23 Ensure the system can start up quickly and efficiently.
+g24 Synchronize and make settings portable across devices via a single account.
+g25 Monitor production environments using appropriate monitoring tools.
+g26 Work efficiently on any device by becoming familiar with various tools.
+g27 Allow customization and management of plugins or extensions through a configuration file.
+g28 Facilitate the installation and activation of plugins or extensions with minimal commands.
+g29 Enable customization of plugin or extension activation shortcuts.
+g30 Allow customization of plugin or extension appearance.
+g31 Support community-provided extensions to enhance editor features.
+g32 Enable code development and pushing to a repository through integrated extensions.
+g33 Allow users to customize the user interface to fit their preferences.
+g34 Ensure the system can perform text editing operations without requiring a graphical interface.
+g35 Allow text editing to be executed efficiently without excessive CPU or RAM usage.
+g36 Provide a user-friendly interface.
+g37 Allow flexibility in the choice of tools for users.
+g38 Allow customization through a configuration file.
+g39 Replicate customizations from local to server environments using configuration files.
+g40 Create a default configuration file in the user's home directory.
+g41 Facilitate easy modification of configuration files using AI tools.
+g42 Enable easy file management.
+g43 Integrate AI-driven code suggestion tools.
+g44 Support customization of code suggestions.
+g45 Enhance code suggestion capabilities.
+g46 Enable quick navigation to project files and directories.
+g47 Facilitate fast searching across files.
+g48 Enable users to find files by name using a search algorithm.
+g49 Allow users to search for specific strings across all files in a project.
+g50 Split the terminal window into command line and text editing views.
+g51 Switch seamlessly between command execution and editing.
+g52 Customize keyboard shortcuts for ease of use.
+g53 Enable keyboard-only navigation and management to improve efficiency.
+g54 Execute and review code results in a terminal environment.
+g55 Build and test code in a terminal environment.
+g56 Push code to the code base from a terminal environment.
+g57 Store and resume the workflow process in case of shutdown.
+g58 Integrate multiple services and workflows.
+g59 Trigger automated workflows such as deployment actions.
+g60 Develop muscle memory for efficient navigation and editing.
+g61 Enhance long-term memory retention for learned skills.
+g62 Access and participate in a community for support and solutions.
+g63 Facilitate discussion among users about the tool.
+g64 Enable users to find solutions to common issues with the tool.
+g65 Support the improvement of the tool based on community feedback.
+g66 Track the size and activity level of the user community.
+g67 Become proficient with tools that have a steep learning curve.
+g68 Gradually improve skills over time.
+g69 Adapt to new methods for important projects.
+g70 Adapt tools and methods to support modern development needs.
+g71 Become comfortable with complex development environments.
+g72 Achieve better efficiency in development processes.
+g73 Integrate the entire development pipeline.
+g74 Integrate with additional tools to maximize efficiency.
+g75 Adopt and learn new tools to enhance efficiency.
+g76 Combine different tools to leverage their strengths.
+g77 Combine and automate the code review, merging, and continuous integration/continuous deployment processes.
+g78 Enable code review and merging directly from the development environment.
+g79 Customize with a variety of extensions.
+g80 Facilitate searching for extensions.
+g81 Enable viewing of documentation related to extensions.
+g82 Display ratings for extensions.
+g83 Offer walkthroughs for extensions.
+g84 Ensure extensions integrate seamlessly into the system.
+g85 Integrate a testing framework.
+g86 Deploy code to a server.
+g87 Access cloud services to check machine status.
+g88 Access system monitoring and statistics tools.
+g89 Perform health checks on deployed systems.
+g90 Facilitate easy installation of extensions.
+g91 Provide users with access to documentation for extensions.
+g92 Allow users to search for extensions.
+g93 Enable users to view community discussions about extensions.

@@ -1,0 +1,672 @@
+{
+  "document_id": "DOC035",
+  "review_status": "first_pass_complete",
+  "local_goals": [
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G001",
+      "local_statement": "每隔一两天快速了解世界上发生了什么（先看头条）。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "频率：两天一次",
+        "路径：打开 Google News → 看头条 → 往下滚"
+      ],
+      "paper_ids": [
+        "g0",
+        "g6",
+        "g13"
+      ],
+      "paper_statements": [
+        "Display headline articles of top stories on a homepage.",
+        "Show headlines in time-constrained situations.",
+        "Ensure users receive relevant news information efficiently."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "每两天看头条用途明确，不等于只看头条。",
+      "evidence": [
+        {
+          "evidence_id": "E0001",
+          "quote": "I check the news through the news application once in 2 days",
+          "source_turn_ids": [
+            "T001"
+          ],
+          "start_char": 245,
+          "end_char": 305
+        },
+        {
+          "evidence_id": "E0002",
+          "quote": "the headlines that they have headline articles of the top stories",
+          "source_turn_ids": [
+            "T003"
+          ],
+          "start_char": 917,
+          "end_char": 982
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G002",
+      "local_statement": "只读与自己兴趣相关的新闻：科技、赛车与板球、印度与美国政治。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "三类主题：科技公司与 AI 模型、F1/板球、政治"
+      ],
+      "paper_ids": [
+        "g14",
+        "g15",
+        "g23",
+        "g24",
+        "g25",
+        "g26",
+        "g27"
+      ],
+      "paper_statements": [
+        "Provide articles tailored to user interests.",
+        "Prioritize articles based on user interests and relevance.",
+        "Provide news articles about technology developments, including new devices and AI models.",
+        "Provide news articles about company-related information and activities, such as layoffs in the technology sector.",
+        "Provide sports news related to Formula 1.",
+        "Provide sports news related to cricket.",
+        "Provide news content about Indian and American politics."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "科技体育政治不同兴趣整合。",
+      "evidence": [
+        {
+          "evidence_id": "E0003",
+          "quote": "some of the content that I'm interested is in technology",
+          "source_turn_ids": [
+            "T007"
+          ],
+          "start_char": 2405,
+          "end_char": 2461
+        },
+        {
+          "evidence_id": "E0004",
+          "quote": "another category of content that I'm interested in is in sports",
+          "source_turn_ids": [
+            "T007"
+          ],
+          "start_char": 2761,
+          "end_char": 2824
+        },
+        {
+          "evidence_id": "E0005",
+          "quote": "another major aspect of reading news is getting to know",
+          "source_turn_ids": [
+            "T007"
+          ],
+          "start_char": 3076,
+          "end_char": 3131
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G003",
+      "local_statement": "新闻要有时效：事件发生几天内就要看到。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "反面例子：F1 新闻提前两周看到没有意义",
+        "判断依据：「relevant」首先看时间"
+      ],
+      "paper_ids": [
+        "g1",
+        "g29",
+        "g30"
+      ],
+      "paper_statements": [
+        "Deliver timely news articles on fast-moving topics and personal interests.",
+        "Evaluate sources based on the speed of publication after events.",
+        "Provide all relevant information quickly."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "时效性与相关性，来源快慢只是判断方式。",
+      "evidence": [
+        {
+          "evidence_id": "E0006",
+          "quote": "the timing is a very important part for my own personal interests",
+          "source_turn_ids": [
+            "T009"
+          ],
+          "start_char": 3904,
+          "end_char": 3969
+        },
+        {
+          "evidence_id": "E0007",
+          "quote": "If an event has happened today, then I would like to get the news",
+          "source_turn_ids": [
+            "T009"
+          ],
+          "start_char": 4056,
+          "end_char": 4121
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G004",
+      "local_statement": "能看到新闻的来源与多源报道，并对比不同立场。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "Google News 会标出来源",
+        "他会把同一新闻再搜一遍看不同观点"
+      ],
+      "paper_ids": [
+        "g19",
+        "g28",
+        "g31",
+        "g32"
+      ],
+      "paper_statements": [
+        "Enable search functionality for events or topics.",
+        "Provide sources and citations to verify the credibility of information.",
+        "Retrieve news articles from various sources to present different perspectives.",
+        "Enable comparison of stances of different news sources on specific issues."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "来源核验与多立场对照，搜索是操作。",
+      "evidence": [
+        {
+          "evidence_id": "E0008",
+          "quote": "all of the sources are cited",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 4427,
+          "end_char": 4455
+        },
+        {
+          "evidence_id": "E0009",
+          "quote": "you tend to get what? From where the news is coming from",
+          "source_turn_ids": [
+            "T011"
+          ],
+          "start_char": 4626,
+          "end_char": 4682
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G005",
+      "local_statement": "通知少而准，不被刷屏，以免漏掉真正重要的消息。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "实例：演唱会开票日被大量推送淹没，错过购票"
+      ],
+      "paper_ids": [
+        "g3",
+        "g7",
+        "g8",
+        "g11",
+        "g33",
+        "g34"
+      ],
+      "paper_statements": [
+        "Send non-spammy and useful notifications about news articles.",
+        "Include the headline and an image in notifications.",
+        "Include a snippet of the preface in notifications.",
+        "Deliver news notifications to users based on their interests.",
+        "Curate notifications to prioritize important updates and prevent missing them.",
+        "Deliver notifications based on user behavior to enhance relevance and usefulness."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "少且准通知防漏重要消息，图片/摘要通知是额外格式。",
+      "evidence": [
+        {
+          "evidence_id": "E0010",
+          "quote": "they tend to spam a lot",
+          "source_turn_ids": [
+            "T013"
+          ],
+          "start_char": 5395,
+          "end_char": 5418
+        },
+        {
+          "evidence_id": "E0011",
+          "quote": "this might lead to missing a few important news",
+          "source_turn_ids": [
+            "T013"
+          ],
+          "start_char": 5461,
+          "end_char": 5508
+        },
+        {
+          "evidence_id": "E0012",
+          "quote": "notification should not be should not be spammed",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 8908,
+          "end_char": 8956
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G006",
+      "local_statement": "文章要短而全面，能在有限时间里读完并掌握要点。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：大媒体动辄上千词，读完效率低",
+        "期望：small but comprehensive"
+      ],
+      "paper_ids": [
+        "g2",
+        "g16",
+        "g18"
+      ],
+      "paper_statements": [
+        "Provide short and comprehensive articles covering every aspect of events.",
+        "Offer concise versions of articles for quick reading.",
+        "Provide articles of varying lengths to match user preferences."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "短且全面明确，允许长度多样不等价更短偏好。",
+      "evidence": [
+        {
+          "evidence_id": "E0013",
+          "quote": "the articles have a huge amount of content",
+          "source_turn_ids": [
+            "T013"
+          ],
+          "start_char": 5856,
+          "end_char": 5898
+        },
+        {
+          "evidence_id": "E0014",
+          "quote": "if the article is smaller but comprehensive",
+          "source_turn_ids": [
+            "T017"
+          ],
+          "start_char": 7611,
+          "end_char": 7654
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G007",
+      "local_statement": "阅读页不被广告遮挡，能顺畅读完正文。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "问题：广告甚至盖住正文"
+      ],
+      "paper_ids": [
+        "g4",
+        "g5",
+        "g20",
+        "g38"
+      ],
+      "paper_statements": [
+        "Ensure seamless navigation through news articles and sections.",
+        "Enhance the smoothness of the news reading experience.",
+        "Remove ads from news pages.",
+        "Ensure the interface is intuitive and user-friendly to facilitate easy navigation and actions."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "正文不被遮盖，不必要求所有网页广告彻底删除。",
+      "evidence": [
+        {
+          "evidence_id": "E0015",
+          "quote": "not hammered by unnecessary ads",
+          "source_turn_ids": [
+            "T017"
+          ],
+          "start_char": 7273,
+          "end_char": 7304
+        },
+        {
+          "evidence_id": "E0016",
+          "quote": "a lot of ads that even cover the content",
+          "source_turn_ids": [
+            "T017"
+          ],
+          "start_char": 7356,
+          "end_char": 7396
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G008",
+      "local_statement": "当天的重要突发新闻当天就能收到，不必等几天。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "自评重要性 9/10",
+        "底线：当天内送达"
+      ],
+      "paper_ids": [
+        "g9"
+      ],
+      "paper_statements": [
+        "Deliver breaking news alerts with high priority."
+      ],
+      "correspondence": "local_narrower",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "突发新闻至少当天，时限本地比一般高优先具体。",
+      "evidence": [
+        {
+          "evidence_id": "E0017",
+          "quote": "it should at least give me all the breaking news from the",
+          "source_turn_ids": [
+            "T037"
+          ],
+          "start_char": 14290,
+          "end_char": 14347
+        },
+        {
+          "evidence_id": "E0018",
+          "quote": "9 is my level for importance to see breaking news alerts",
+          "source_turn_ids": [
+            "T037"
+          ],
+          "start_char": 14157,
+          "end_char": 14213
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G009",
+      "local_statement": "能关掉不感兴趣的话题，但该话题的突发新闻仍要保留。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "类比 Instagram 的「减少此类内容」",
+        "例外：突发新闻仍要出现，只是不要深度分析"
+      ],
+      "paper_ids": [
+        "g21",
+        "g22"
+      ],
+      "paper_statements": [
+        "Allow users to disable topics they are not interested in.",
+        "Ensure breaking news is displayed for disabled topics, without detailed articles or analysis."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "禁用兴趣话题仍保留突发例外。",
+      "evidence": [
+        {
+          "evidence_id": "E0019",
+          "quote": "there should be a feature to disable that topic",
+          "source_turn_ids": [
+            "T041"
+          ],
+          "start_char": 16396,
+          "end_char": 16443
+        },
+        {
+          "evidence_id": "E0020",
+          "quote": "if there is a breaking news with that in that event that you're not interested in, it should still show you",
+          "source_turn_ids": [
+            "T041"
+          ],
+          "start_char": 16510,
+          "end_char": 16617
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G010",
+      "local_statement": "按自定义主题分桶保存文章，方便日后集中阅读。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "参照 Pinterest / Google Images 的 board",
+        "现状：只有 archive / bookmark"
+      ],
+      "paper_ids": [
+        "g17",
+        "g35",
+        "g36"
+      ],
+      "paper_statements": [
+        "Allow users to access and organize articles by topic for later reading.",
+        "Enable users to define their own topic buckets to organize news articles.",
+        "Allow users to add multiple news articles to a topic bucket."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "自定义主题桶与多篇归档。",
+      "evidence": [
+        {
+          "evidence_id": "E0021",
+          "quote": "defined topic buckets",
+          "source_turn_ids": [
+            "T027"
+          ],
+          "start_char": 10600,
+          "end_char": 10621
+        },
+        {
+          "evidence_id": "E0022",
+          "quote": "you can add multiple news articles to that topic bucket",
+          "source_turn_ids": [
+            "T027"
+          ],
+          "start_char": 10720,
+          "end_char": 10775
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G011",
+      "local_statement": "一键把文章分享到 WhatsApp 等聊天工具。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "现状：复制链接或直接调起 WhatsApp"
+      ],
+      "paper_ids": [
+        "g12"
+      ],
+      "paper_statements": [
+        "Allow users to share news articles by copying the link or through chat applications."
+      ],
+      "correspondence": "equivalent",
+      "split_merge": false,
+      "source_support_judgment": "supported",
+      "rationale": "链接/聊天工具分享。",
+      "evidence": [
+        {
+          "evidence_id": "E0023",
+          "quote": "just copy the link and share it on various chat applications",
+          "source_turn_ids": [
+            "T025"
+          ],
+          "start_char": 9893,
+          "end_char": 9953
+        },
+        {
+          "evidence_id": "E0024",
+          "quote": "if there is an option to share it directly via Whatsapp",
+          "source_turn_ids": [
+            "T025"
+          ],
+          "start_char": 10010,
+          "end_char": 10065
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G012",
+      "local_statement": "推荐贴合自己的行为与兴趣，不必每次主动搜。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "Google 搜索页的推荐、App 通知都按行为推送"
+      ],
+      "paper_ids": [
+        "g10",
+        "g11",
+        "g34",
+        "g37"
+      ],
+      "paper_statements": [
+        "Provide personalized news recommendations based on user behavior and interests.",
+        "Deliver news notifications to users based on their interests.",
+        "Deliver notifications based on user behavior to enhance relevance and usefulness.",
+        "Provide information and recommendations based on user's interests and habits."
+      ],
+      "correspondence": "partial_overlap",
+      "split_merge": true,
+      "source_support_judgment": "supported",
+      "rationale": "按兴趣行为推荐，通知仅是其中渠道。",
+      "evidence": [
+        {
+          "evidence_id": "E0025",
+          "quote": "it tracks my behavior",
+          "source_turn_ids": [
+            "T039"
+          ],
+          "start_char": 14884,
+          "end_char": 14905
+        },
+        {
+          "evidence_id": "E0026",
+          "quote": "curated to what you search and what you do on the Google App",
+          "source_turn_ids": [
+            "T021"
+          ],
+          "start_char": 8346,
+          "end_char": 8406
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    },
+    {
+      "document_id": "DOC035",
+      "local_id": "DOC035-G013",
+      "local_statement": "平台不得留存全部阅读数据，更不能借数据推送议程。",
+      "local_origin": "explicit",
+      "local_trace_status": "direct",
+      "local_context": [
+        "可接受的边界：仅用于推荐",
+        "担忧：媒体立场通过算法渗透"
+      ],
+      "paper_ids": [
+        "g39",
+        "g40"
+      ],
+      "paper_statements": [
+        "Ensure user data is not stored beyond what is necessary for providing recommendations.",
+        "Prevent companies from using user data to promote their own agendas or propaganda."
+      ],
+      "correspondence": "local_broader",
+      "split_merge": true,
+      "source_support_judgment": "supported_with_scope_note",
+      "rationale": "仅为推荐必要数据的边界需保留，不能解成绝不存任何数据。",
+      "evidence": [
+        {
+          "evidence_id": "E0027",
+          "quote": "the company should not be able to like store all of the data",
+          "source_turn_ids": [
+            "T047"
+          ],
+          "start_char": 18294,
+          "end_char": 18354
+        },
+        {
+          "evidence_id": "E0028",
+          "quote": "they might be able to push some agenda on me",
+          "source_turn_ids": [
+            "T029"
+          ],
+          "start_char": 11636,
+          "end_char": 11680
+        }
+      ],
+      "reviewer": "Codex automatic semantic review",
+      "review_scope": "attached source excerpts; focused context for selected issues",
+      "not_a_gold_label": true
+    }
+  ],
+  "paper_only": [],
+  "source_review_limits": "Local-goal correspondence is complete; paper-only support outside pilot is not exhaustively judged.",
+  "counts": {
+    "local_goals": 13,
+    "local_with_correspondence": 13,
+    "paper_goals": 41,
+    "paper_with_correspondence": 41,
+    "paper_only": 0,
+    "local_only": 0
+  },
+  "local_refinement_count": 0,
+  "eligible_paper_runs": 6,
+  "relation_semantic_reviews": [],
+  "rubric": {
+    "why_how_hierarchy": "insufficient_expression",
+    "kaos_refinement_groups": "not_expressed_in_old_schema",
+    "full_group_sufficiency": "not_assessed",
+    "alternatives_completeness": "not_assessed",
+    "source_locations": "supported_by_deterministic_checks",
+    "human_or_independent_review": "not_run"
+  }
+}

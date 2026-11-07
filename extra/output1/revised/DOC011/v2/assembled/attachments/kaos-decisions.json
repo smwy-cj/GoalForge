@@ -1,0 +1,41 @@
+{
+  "schema_version": "goalforge-kaos-decisions-1",
+  "input_binding": {
+    "extraction_sha256": "7f781aa3eab22e943eb73db02c5a7351cdb7bab15501697ba21d3410c50c3cc9",
+    "judgments_sha256": "213725d759c0e1154bbc856a696303272dc3564eb7294116f48e46305613a35e"
+  },
+  "groups": [
+    {
+      "group_id": "DOC011-F01",
+      "parent_id": "DOC011-G01",
+      "child_ids": [
+        "DOC011-G03",
+        "DOC011-G04",
+        "DOC011-G06",
+        "DOC011-G07"
+      ],
+      "kind": "and",
+      "status": "proposed",
+      "completeness": "partial",
+      "rationale": "真实项目说明看板、PR、互审帮助异步工作，但未证明这些子目标共同足以完成课程开发；还需实际实现代码、访问与课程条件。保留部分候选。",
+      "assumptions": [],
+      "evidence_ids": [],
+      "evidence_quotes": [
+        {
+          "source_id": "DOC011:T101",
+          "quote": "We set up our project boards to make issues to plan out the development process.",
+          "role": "basis",
+          "start_char": 22875,
+          "end_char": 22955
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "target_type": "group",
+      "target_id": "DOC011-F01",
+      "message": "实际案例证明贡献而未证明整组足以完成课程开发；候选保持partial。"
+    }
+  ]
+}

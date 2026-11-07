@@ -1,0 +1,663 @@
+[
+  {
+    "pair_id": "P001",
+    "a": "DOC022-G001",
+    "b": "DOC022-G002",
+    "label": "related",
+    "rationale": "T031 把配置可迁移直接服务于「换机器也能干活」：把同一份配置放到服务器，远端环境就与本地一致。但 G001 是能不能改，G002 是改得顺不顺手。",
+    "evidence_ids": [
+      "E0001",
+      "E0004"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P002",
+    "a": "DOC022-G001",
+    "b": "DOC022-G003",
+    "label": "related",
+    "rationale": "T015 说本地会装插件、改界面，但服务器上只能用裸 vim——定制被限制在本地，不能破坏服务器可用性。两者共存但边界明确，互不替代。",
+    "evidence_ids": [
+      "E0002",
+      "E0007"
+    ],
+    "conditions": [
+      "G003 的定制不得依赖图形界面，否则在服务器上失效"
+    ],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P003",
+    "a": "DOC022-G001",
+    "b": "DOC022-G004",
+    "label": "none",
+    "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G004 的对象是全键盘操作提效（T055/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P004",
+    "a": "DOC022-G001",
+    "b": "DOC022-G005",
+    "label": "none",
+    "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P005",
+    "a": "DOC022-G001",
+    "b": "DOC022-G006",
+    "label": "related",
+    "rationale": "T051 描述的工作流整体跑在终端里（tmux + vim + 命令行），终端正是 G001 访问服务器的方式。但 G001 是可达性、G006 是同一终端内的布局效率。",
+    "evidence_ids": [
+      "E0002",
+      "E0015"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P006",
+    "a": "DOC022-G001",
+    "b": "DOC022-G007",
+    "label": "none",
+    "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G007 的对象是全流程收在同一工具（T081/T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P007",
+    "a": "DOC022-G001",
+    "b": "DOC022-G008",
+    "label": "none",
+    "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P008",
+    "a": "DOC022-G001",
+    "b": "DOC022-G009",
+    "label": "none",
+    "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P009",
+    "a": "DOC022-G001",
+    "b": "DOC022-G010",
+    "label": "none",
+    "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P010",
+    "a": "DOC022-G001",
+    "b": "DOC022-G011",
+    "label": "none",
+    "rationale": "DOC022-G001 的对象是任意机器尤其服务器上改代码（T015/T021），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P011",
+    "a": "DOC022-G002",
+    "b": "DOC022-G003",
+    "label": "related",
+    "rationale": "定制的内容（插件、快捷键、主题）都写在配置文件里，配置可迁移就等于定制可迁移，两者是同一份文件的两面。但 G003 是内容、G002 是分发。",
+    "evidence_ids": [
+      "E0004",
+      "E0007"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P012",
+    "a": "DOC022-G002",
+    "b": "DOC022-G004",
+    "label": "none",
+    "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G004 的对象是全键盘操作提效（T055/T063）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P013",
+    "a": "DOC022-G002",
+    "b": "DOC022-G005",
+    "label": "none",
+    "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P014",
+    "a": "DOC022-G002",
+    "b": "DOC022-G006",
+    "label": "none",
+    "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G006 的对象是终端分屏编辑与执行（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P015",
+    "a": "DOC022-G002",
+    "b": "DOC022-G007",
+    "label": "related",
+    "rationale": "T069 直接对比了两种做法：vim 靠维护并搬移配置文件，VS Code 靠账号同步设置。目标相同——到哪台机器都是熟悉的环境；手段不同。",
+    "evidence_ids": [
+      "E0005",
+      "E0018"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P016",
+    "a": "DOC022-G002",
+    "b": "DOC022-G008",
+    "label": "none",
+    "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P017",
+    "a": "DOC022-G002",
+    "b": "DOC022-G009",
+    "label": "none",
+    "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P018",
+    "a": "DOC022-G002",
+    "b": "DOC022-G010",
+    "label": "none",
+    "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P019",
+    "a": "DOC022-G002",
+    "b": "DOC022-G011",
+    "label": "none",
+    "rationale": "DOC022-G002 的对象是配置带到每台机器（T031），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P020",
+    "a": "DOC022-G003",
+    "b": "DOC022-G004",
+    "label": "related",
+    "rationale": "T035–T051 的自定义核心就是键位（ctrl+P、ctrl+E、反斜杠+P），把常用动作绑到键盘，正是「手不离键盘」的实现方式。但 G003 还包含外观等与效率无关的部分。",
+    "evidence_ids": [
+      "E0008",
+      "E0010"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P021",
+    "a": "DOC022-G003",
+    "b": "DOC022-G005",
+    "label": "related",
+    "rationale": "T051 把模糊搜索绑到 ctrl+P，说明定位文件这个能力是通过自定义键位接入工作流的。但 G005 解决「找得到」、G003 解决「按我的习惯触发」。",
+    "evidence_ids": [
+      "E0009",
+      "E0012"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P022",
+    "a": "DOC022-G003",
+    "b": "DOC022-G006",
+    "label": "none",
+    "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G006 的对象是终端分屏编辑与执行（T051）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P023",
+    "a": "DOC022-G003",
+    "b": "DOC022-G007",
+    "label": "none",
+    "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G007 的对象是全流程收在同一工具（T081/T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P024",
+    "a": "DOC022-G003",
+    "b": "DOC022-G008",
+    "label": "none",
+    "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P025",
+    "a": "DOC022-G003",
+    "b": "DOC022-G009",
+    "label": "none",
+    "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P026",
+    "a": "DOC022-G003",
+    "b": "DOC022-G010",
+    "label": "none",
+    "rationale": "DOC022-G003 的对象是深度定制外观与快捷键（T015/T035），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P027",
+    "a": "DOC022-G003",
+    "b": "DOC022-G011",
+    "label": "related",
+    "rationale": "T035 提到语法高亮与配色也能在配置文件里自定义，说明 G011 的基础能力是 G003 的定制对象之一。但 G011 是标配能力，G003 是个性化。",
+    "evidence_ids": [
+      "E0008",
+      "E0026"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P028",
+    "a": "DOC022-G004",
+    "b": "DOC022-G005",
+    "label": "related",
+    "rationale": "模糊搜索被绑成快捷键后，找文件不再需要鼠标点文件树——G005 的效率红利正是靠 G004 的全键盘前提兑现的。",
+    "evidence_ids": [
+      "E0010",
+      "E0012"
+    ],
+    "conditions": [
+      "G005 的收益以 G004 的键位习惯为前提"
+    ],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P029",
+    "a": "DOC022-G004",
+    "b": "DOC022-G006",
+    "label": "related",
+    "rationale": "T051 的 tmux 切窗口、ctrl+P 开文件全在键盘上完成，分屏本身也靠键盘切换，两者共同构成「手不离键盘」的工作流。但 G006 是多窗口布局、G004 是输入方式。",
+    "evidence_ids": [
+      "E0010",
+      "E0015"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P030",
+    "a": "DOC022-G004",
+    "b": "DOC022-G007",
+    "label": "none",
+    "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G007 的对象是全流程收在同一工具（T081/T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P031",
+    "a": "DOC022-G004",
+    "b": "DOC022-G008",
+    "label": "none",
+    "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P032",
+    "a": "DOC022-G004",
+    "b": "DOC022-G009",
+    "label": "none",
+    "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P033",
+    "a": "DOC022-G004",
+    "b": "DOC022-G010",
+    "label": "none",
+    "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P034",
+    "a": "DOC022-G004",
+    "b": "DOC022-G011",
+    "label": "none",
+    "rationale": "DOC022-G004 的对象是全键盘操作提效（T055/T063），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P035",
+    "a": "DOC022-G005",
+    "b": "DOC022-G006",
+    "label": "related",
+    "rationale": "T051 的完整流程是：文件树或模糊搜索打开文件 → 编辑 → 切到旁边命令行执行。定位文件是分屏工作流的前半段。",
+    "evidence_ids": [
+      "E0013",
+      "E0015"
+    ],
+    "conditions": [
+      "G006 的编辑动作以 G005 已定位文件为前提"
+    ],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P036",
+    "a": "DOC022-G005",
+    "b": "DOC022-G007",
+    "label": "none",
+    "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G007 的对象是全流程收在同一工具（T081/T087）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P037",
+    "a": "DOC022-G005",
+    "b": "DOC022-G008",
+    "label": "none",
+    "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P038",
+    "a": "DOC022-G005",
+    "b": "DOC022-G009",
+    "label": "none",
+    "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P039",
+    "a": "DOC022-G005",
+    "b": "DOC022-G010",
+    "label": "none",
+    "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P040",
+    "a": "DOC022-G005",
+    "b": "DOC022-G011",
+    "label": "none",
+    "rationale": "DOC022-G005 的对象是项目内快速定位与全局搜索（T033/T041），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P041",
+    "a": "DOC022-G006",
+    "b": "DOC022-G007",
+    "label": "related",
+    "rationale": "T087 把两套流程逐项对照：终端工作流在改完代码后必须切到浏览器做评审、部署、监控；G007 正是要把这些步骤收回同一界面。但 G006 只覆盖编码与执行。",
+    "evidence_ids": [
+      "E0016",
+      "E0017"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P042",
+    "a": "DOC022-G006",
+    "b": "DOC022-G008",
+    "label": "none",
+    "rationale": "DOC022-G006 的对象是终端分屏编辑与执行（T051），DOC022-G008 的对象是支持插件扩展（T103）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P043",
+    "a": "DOC022-G006",
+    "b": "DOC022-G009",
+    "label": "none",
+    "rationale": "DOC022-G006 的对象是终端分屏编辑与执行（T051），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P044",
+    "a": "DOC022-G006",
+    "b": "DOC022-G010",
+    "label": "none",
+    "rationale": "DOC022-G006 的对象是终端分屏编辑与执行（T051），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P045",
+    "a": "DOC022-G006",
+    "b": "DOC022-G011",
+    "label": "none",
+    "rationale": "DOC022-G006 的对象是终端分屏编辑与执行（T051），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P046",
+    "a": "DOC022-G007",
+    "b": "DOC022-G008",
+    "label": "related",
+    "rationale": "T091 说明整条流水线是靠一个个扩展接进来的（GitHub、Actions、Azure、Datadog），G008 是 G007 的实现前提。但 G008 是能力开放，G007 是具体结果。",
+    "evidence_ids": [
+      "E0017",
+      "E0020"
+    ],
+    "conditions": [
+      "G007 依赖 G008 提供的扩展机制"
+    ],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P047",
+    "a": "DOC022-G007",
+    "b": "DOC022-G009",
+    "label": "none",
+    "rationale": "DOC022-G007 的对象是全流程收在同一工具（T081/T087），DOC022-G009 的对象是应用商店式装扩展（T097）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P048",
+    "a": "DOC022-G007",
+    "b": "DOC022-G010",
+    "label": "none",
+    "rationale": "DOC022-G007 的对象是全流程收在同一工具（T081/T087），DOC022-G010 的对象是活跃社区可查解法（T109）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P049",
+    "a": "DOC022-G007",
+    "b": "DOC022-G011",
+    "label": "none",
+    "rationale": "DOC022-G007 的对象是全流程收在同一工具（T081/T087），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P050",
+    "a": "DOC022-G008",
+    "b": "DOC022-G009",
+    "label": "related",
+    "rationale": "两者都关于扩展：G008 要求「能有扩展」，G009 要求「好找好评估好装」。前者是生态存在性、后者是获取体验；vim 有插件但安装体验差，正好说明二者可分离。",
+    "evidence_ids": [
+      "E0020",
+      "E0022"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P051",
+    "a": "DOC022-G008",
+    "b": "DOC022-G010",
+    "label": "related",
+    "rationale": "T103 把两者直接绑定：「有插件/扩展意味着有整个社区在支持它，没人想用一个没有社区的产品」。但 G008 是机制、G010 是人。",
+    "evidence_ids": [
+      "E0020",
+      "E0024"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P052",
+    "a": "DOC022-G008",
+    "b": "DOC022-G011",
+    "label": "none",
+    "rationale": "DOC022-G008 的对象是支持插件扩展（T103），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P053",
+    "a": "DOC022-G009",
+    "b": "DOC022-G010",
+    "label": "related",
+    "rationale": "T097 说商店里能看到文档、评分与讨论，正是社区信息在安装环节的呈现；G010 要的「能查别人怎么解决」在这个页面就能看到一部分。但 G010 还包括安装之后的长期求助。",
+    "evidence_ids": [
+      "E0022",
+      "E0024"
+    ],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P054",
+    "a": "DOC022-G009",
+    "b": "DOC022-G011",
+    "label": "none",
+    "rationale": "DOC022-G009 的对象是应用商店式装扩展（T097），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  },
+  {
+    "pair_id": "P055",
+    "a": "DOC022-G010",
+    "b": "DOC022-G011",
+    "label": "none",
+    "rationale": "DOC022-G010 的对象是活跃社区可查解法（T109），DOC022-G011 的对象是语法高亮与缩进（T009/T011）；两处分别出自不同话题段，原文未在二者之间建立因果、手段、评价或情境包含关系，本次评估口径内未建立可采用关系。",
+    "evidence_ids": [],
+    "conditions": [],
+    "review_status": "pending",
+    "assessment_status": "assessed"
+  }
+]

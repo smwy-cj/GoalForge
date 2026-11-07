@@ -1,0 +1,169 @@
+# DOC003
+## LOCAL
+G001 拿到当前可找到的最优票价（价格合理，且是认真比价后的结果）。 | context: 自述为主要目标之一; 价格判断依赖多年订票经验，无客观阈值; 比价会持续多次、跨数天进行
+  E0001 DOC003:S026 But my primary focus is to like get a really good deal when I'm actually booking my flights. So I keep on checking at regular intervals, just to make sure. Hey, am I getting a good deal?
+  E0002 DOC003:S116 I would do that in terms of finding a good itinerary and finding a good price that works for me.
+  E0003 DOC003:S026 I check like dozens of different websites to just make sure I'm having the best deal possible.
+G002 拿到行程本身合适（时间与衔接可行）的机票，而不只是便宜。 | context: 自述「best results」为物流/行程、价格与灵活性的组合，前两者为主; 行程是否合适取决于当时的个人处境，无法给出客观标准
+  E0004 DOC003:S108 Best results for me is a combination of the logistics in terms of the itinerary that I want the price and the flexibility.
+  E0005 DOC003:S130 It should give me a good itinerary in terms of times, and it should match my situations.
+  E0006 DOC003:S110 it is extremely situational, and I cannot give you like a concrete or objective criteria for that
+G003 中转停留时间不低于最短衔接时间（MCT）的 1.5 倍。 | context: MCT 为 IATA 定义的最短衔接时间（含行李转运与最远登机口移动）; 一般取 1.5× 或 2× 作为自设缓冲; 除非有签证限制，否则不介意中转次数本身
+  E0007 DOC003:S124 Unless I have visa issues, I generally don't care very much about it as long as the I am at least 1.5 x the Mct. For that airport.
+  E0008 DOC003:S124 I generally tend to at least go for 1.5 x or 2 x of that for a stopover.
+G004 航班起降时间能与后续接驳交通、以及要会面对象的日程衔接，避免长时间空等。 | context: 典型场景：落地后需转乘火车去另一城市; 判断标准包含是否需要在城市里空等约 20 小时
+  E0009 DOC003:S032 How does that connect with other modes of transport? So let's say I'm flying into a city, but then I have to travel to a different city by like a train
+  E0010 DOC003:S032 I try to plan out my travel, such that things fall into place, and I don't end up having to stay in a city for like 20Â h doing nothing.
+  E0011 DOC003:S120 is it matching up with the schedules of the other modes of transport I'm planning to.
+G005 避开耗时过长（40–60 小时）与红眼时段的航班，保证行程时长与睡眠。 | context: 国际航线的「最便宜」列表常被 40–60 小时行程占满; 对红眼航班不完全排斥，但更希望不牺牲夜间睡眠
+  E0012 DOC003:S074 the cheapest section ends up being filled with a lot of stuff that's like 40, 50, 60Â h that I would rather not indulge in.
+  E0013 DOC003:S120 I don't mind taking a red eye, but I would rather get my night's sleep.
+G006 对同一行程比较多个订票供应商的最终价格与可用折扣，再决定在哪下单。 | context: 比较项：价格、评分、折扣码、最终总价; 价格随时变动，折扣并非固定
+  E0014 DOC003:S078 I look at the price. I take a look at the rating, and I often visit multiple providers from this page.
+  E0015 DOC003:S078 you can compare prices. Sometimes prices increase, though that's pretty rare, and you can compare discounts on different providers. The final costs on different providers.
+  E0016 DOC003:S104 they allow me to find the best price for that itinerary. comparing all of the different booking options.
+G007 一次并行比较大量出发地/目的地/日期/舱位组合，而不是逐个查询。 | context: 自估组合规模约 11,760（20 个出发机场 × 49 个日期组合 × 2 个舱位）; 还需对里程票单独重复一轮; 现实中没有网站允许同时跑这么多查询
+  E0017 DOC003:S100 So I'd like to search for all possible airports, let's say, from the Us. All, the top 20 most popular airports from the Us. To the top 5 or 6 most popular airports in India.
+  E0018 DOC003:S100 So that works out to be 11,760 different combinations of flights, different combinations of dates and itineraries
+  E0019 DOC003:S096 you want to do around 500 searches at the same time, because you're doing combinations of city pairs, country pairs, dates. travelers, different classes
+G008 提前约 1–2 个月订票，以换取更好的价格。 | context: 理想为提前两个月以上；实际常拖到出发前 1–2 周，价格明显更高; 国际长途线曾提前约两个月订
+  E0020 DOC003:S016 Ideally, I like to do it at least a couple of months before.
+  E0021 DOC003:S016 Mostly I try to aim for at least one to 1.5 months out, just to get like a better price at a better deal.
+G009 搜索与比价时保持匿名、不登录，避免个人数据被共享或被追踪抬价。 | context: 手段：不登录、无痕窗口、屏蔽 cookie; 两个动机：避免按搜索行为抬价；不愿把数据交给不信任的第三方; 例外：用里程/积分订票必须登录航司账户
+  E0022 DOC003:S054 I generally am very privacy conscious. So I avoid logging in, and I try to keep myself as anonymized as possible.
+  E0023 DOC003:S054 if you end up booking flights or searching for specific flights pretty often they might increase the flight prices for you.
+  E0024 DOC003:S094 considering the way I specifically use skyscanner, I would probably never log in.
+  E0025 DOC003:S090 skyscanner is a Chinese company, and I generally don't want my data to be shared.
+G010 在陌生市场能判断票价相对水平（高于/低于中位），以便决定是否值得下单。 | context: 对熟悉市场凭经验判断，不需要该功能; 在美国等新市场需要外部参考价
+  E0026 DOC003:S110 I can use Google flights for it because it tells me if the price is above, below, or lower than the Median.
+  E0027 DOC003:S112 Sure. Yeah, it would help out for the times when I'm not familiar with the specific market.
+  E0028 DOC003:S112 I won't really need that feature. But yeah, it's it's nice to have.
+G011 对多条候选航线设置降价提醒，价格下探时及时获知并下单。 | context: 仅在必须成行、且价格暴涨的紧迫场景下使用过; 当时借用已登录的 Google 账号，回避新建账号
+  E0029 DOC003:S088 I needed a reminder on a few different routes, just to make sure that if any one of them goes down in price. I I book it
+  E0030 DOC003:S088 So that was the only time I set up an alert. And that was through Google flights.
+G012 在一个平台上集齐比价、行程与订票信息，不必往返十余个网站。 | context: 自估一次订票至少访问 10–12 个网站; 表述为当前最大的两个障碍之一
+  E0031 DOC003:S138 I don't get to have all of my information at one pace I end up having to visit at least 10 to 12 different sites at a mostly at a minimum.
+  E0032 DOC003:S096 and nobody's there to feed you all the different combinations.
+G013 输入全部参数后，由平台直接给出最优方案，不必自己逐轮迭代。 | context: 表述为当前最大的两个障碍之一; 受访者同时认为票价与个人处境的动态性使该设想难以实现（T086）
+  E0033 DOC003:S138 There's no one click platform where I can just give it all of my parameters, and it will find the best option for me.
+  E0034 DOC003:S138 I have to invest a lot of time into finding. What's the ideal option?
+  E0035 DOC003:S086 it's kind of hard for these websites to also sort of predict what I would do, and let me know at an ideal time where maybe the cost is low for the exact itinerary that I want to take.
+G014 把信用卡权益与机场休息室准入信息整合进比价流程，便于在中转时使用休息室。 | context: 持约 30 张信用卡，不同卡对不同休息室、不同时段与次数限制不同; 受访者认为第三方整合难以保持准确，倾向直接查发卡行; 愿望强度为 would be wonderful，但同时表示不愿深入讨论
+  E0036 DOC003:S126 it would be very nice if I could, input there would be a website that keeps everything updated about what I have and what that would grant me access to. and that would be integrated with skyscanner. That would be wonderful.
+  E0037 DOC003:S124 Oh, will the lounge at that airport be open at that point of time? Because I like to visit all sorts of different lounges in different countries.
+  E0038 DOC003:S126 I know a few apps that have tried that, but generally it doesn't update well, and it doesn't work well.
+## PAPER summarized goals
+g0 Plan itineraries.
+g1 Book itineraries at the best price.
+g2 Research and find flexible itinerary options.
+g3 Provide itinerary options accommodating situational needs.
+g4 Explore and compare options to find the best alternative in terms of price and seating.
+g5 Compare prices and discounts from different providers to ensure the best deal.
+g6 Allow users to monitor prices at regular intervals for better deals.
+g7 Research directly from providers for potential discounts.
+g8 Enable users to switch between viewing options categorized as 'cheapest' or 'best'.
+g9 Ensure affordability for users with budget constraints.
+g10 Help users discover tricks for getting cheaper prices, better pathways, and better deals.
+g11 Discover benefits and deals for flights.
+g12 Regularly check for the best flight deals.
+g13 Enable users to compare flight deals across multiple sources.
+g14 Allow flexible search for flight deals over different timeframes.
+g15 Select flights based on pricing, logistics, and user-specified criteria.
+g16 Provide sorting options for flight search results by best, cheapest, and fastest.
+g17 Show flight options that balance price and duration efficiently.
+g18 Allow users to personalize flight options and specify traveler details.
+g19 Ensure competitive and fair flight pricing.
+g20 Provide information necessary for deciding the suitability of a flight.
+g21 Book flights in advance to obtain a better price.
+g22 Help users save money by booking flights using discounts or vouchers.
+g23 Ensure users secure good deals when booking flights.
+g24 Offer incentives such as coupons for booking through the system.
+g25 Provide access to booking partners that offer discounts.
+g26 Maximize time in the air during travel.
+g27 Enable users to set a maximum duration for flight time.
+g28 Ensure stopover time is at least 1.5 times the minimum connection time to account for delays.
+g29 Experience different cities and lounges by selecting flights with multiple stops.
+g30 Provide filters for flight characteristics such as number of stops, departure and arrival times, airlines, alliances, and origin airports.
+g31 Enable filtering of flights based on environmental impact considerations.
+g32 Display layover duration at stopover airports.
+g33 Ensure selection of flights that depart at convenient times to avoid red-eye flights.
+g34 Check airport lounge availability during stopovers.
+g35 Identify suitable travel destinations based on search criteria.
+g36 Find suitable flights based on city pairs and country pairs.
+g37 Allow users to perform up to 500 simultaneous searches for travel options.
+g38 Facilitate searches for travel segments based on points.
+g39 Display optimal combinations of cities, dates, and times for travel.
+g40 Provide up-to-date information on lounge availability at airports.
+g41 Offer information about lounge access options globally.
+g42 Link lounge access information to individual credit card benefits and costs.
+g43 Support last-minute flight booking and provide stakeholders with the ability to review all available options in urgent booking situations.
+g44 Ensure accuracy and correctness of personal, travel, terminal, and logistics information before booking.
+g45 Enable users to make final bookings and award bookings directly on a booking provider's or airline's website.
+g46 Allow users to log into airline websites to check availability of award seats.
+g47 Provide notifications for limited quantity award seats availability.
+g48 Select the optimal booking provider for completing a booking by combining logistics, price, and flexibility.
+g49 Finalize and confirm itinerary details before proceeding to booking.
+g50 Support users in planning travel based on situational needs.
+g51 Allow users to specify the number of adults traveling.
+g52 Ensure transportation schedules align with other planned modes of transport.
+g53 Ensure transportation schedules align with the schedules of people being met.
+g54 Schedule transportation according to personal time-of-day preferences.
+g55 Avoid scheduling transportation during times that interfere with sleep.
+g56 Enable users to find and select travel deals based on preferred travel dates and holiday periods.
+g57 Allow users to input travel details such as origin, destination, dates, class of travel, and number of travelers.
+g58 Provide information and options for both outbound and return journeys, including possible routes.
+g59 Show travel times and durations in local time zones, including the day of arrival at the final destination.
+g60 Adapt alerts and notifications based on changing personal travel plans.
+g61 Plan travel to ensure timely connections between flights and other modes of transport.
+g62 Provide options that align with logistical needs, such as flights landing earlier to catch subsequent transportation.
+g63 Verify, display, and ensure accuracy of flight details, including departure and arrival times, locations, total duration, connections, and layover durations.
+g64 Provide and compare different flight options and itineraries based on specified inputs.
+g65 Check compatibility of itineraries with other schedules, such as transport modes and people visited.
+g66 Fill out and confirm necessary personal and travel details during the booking process.
+g67 Redirect users to booking pages with pre-filled itinerary details for final actions.
+g68 Facilitate price comparison by visiting provider pages with preloaded details.
+g69 Enter personal information and complete payment transactions.
+g70 Minimize travel costs.
+g71 Allow users to apply advanced techniques in their searches.
+g72 Reduce the time required for conducting travel searches.
+g73 Facilitate intuitive user navigation without active searching.
+g74 Reduce mental load during searches.
+g75 Enable users to discover and explore different options and combinations.
+g76 Automatically provide users with all possible routes and combinations.
+g77 Determine and display the cheapest option among available combinations.
+g78 Filter options based on specific criteria.
+g79 Aggregate information from multiple sources.
+g80 Provide a convenient interface for viewing aggregated information.
+g81 Consolidate all necessary information in one location to avoid visiting multiple sites.
+g82 Enable users to conduct comprehensive research and planning activities for travel options.
+g83 Allow users to browse anonymously and prevent user tracking to protect privacy.
+g84 Do not share user data with third parties.
+g85 Provide privacy protection options to users.
+g86 Ensure user trust through transparent practices.
+g87 Allow users to access the source code of the system.
+g88 Determine user access based on input of personal data and access rules.
+g89 Update users on their permissions and access rights.
+g90 Enable users to log in to manage their loyalty points.
+g91 Permit users to book travel using loyalty points.
+g92 Automatically determine the user's location to use as the starting point for travel.
+g93 Allow users to select a destination.
+g94 Enable users to input all travel parameters in one place and receive the best travel option.
+g95 Enable users to change the origin to multiple airports or locations including cities and countries.
+g96 Allow users to search for flights by selecting a destination country or region with multiple airports.
+g97 Enable users to search for flights from a specified country to a specified set of airports in another country.
+g98 Allow selection of specific departure and arrival airports or cities for flights.
+g99 Enable users to select specific departure and return dates.
+g100 Allow users to search for travel options within a date range.
+g101 Allow users to choose the class of service.
+g102 Provide options to search for different classes of service.
+g103 Notify users of flight price drops.
+g104 Send reminders for flight route price changes.
+g105 Allow users to research and compare different itineraries.
+g106 Enable users to find the best price by comparing various booking options.
+g107 Enable users to quickly obtain and search for information.
+g108 Facilitate faster research.
+g109 Ensure the user interface remains consistent.
+g110 Reduce the time needed to navigate the user interface.
+g111 Minimize the mental load when using the user interface.
+g112 Increase user familiarity with the interface for quick input and search.
+g113 Enhance the efficiency and accuracy of research activities.
